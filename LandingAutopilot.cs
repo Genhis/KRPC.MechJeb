@@ -79,5 +79,12 @@ namespace KRPC.MechJeb {
 		public void StopLanding() {
 			this.stopLanding.Invoke(this.instance, null);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.DeployChutes = false;
+			this.DeployGears = false;
+			this.RcsAdjustment = false;
+		}
 	}
 }

@@ -45,6 +45,8 @@ namespace KRPC.MechJeb {
 					usersRemove.Invoke(this.users, new object[] { this });
 			}
 		}
+		
+		public virtual void DisableAll() { }
 	}
 
 	public abstract class AutopilotModule : ComputerModule {

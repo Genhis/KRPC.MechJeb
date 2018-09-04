@@ -220,5 +220,14 @@ namespace KRPC.MechJeb {
 			get => EditableVariables.GetDouble(this.yawLimit);
 			set => EditableVariables.SetDouble(this.yawLimit, value);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.HeadingHoldEnabled = false;
+			this.AltitudeHoldEnabled = false;
+			this.RollHoldEnabled = false;
+			this.SpeedHoldEnabled = false;
+			this.VertSpeedHoldEnabled = false;
+		}
 	}
 }

@@ -24,5 +24,11 @@ namespace KRPC.MechJeb {
 			get => (bool)this.rcsForRotation.GetValue(this.instance);
 			set => this.rcsForRotation.SetValue(this.instance, value);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.RCSForRotation = false;
+			this.RCSThrottle = false;
+		}
 	}
 }

@@ -198,6 +198,18 @@ namespace KRPC.MechJeb {
 			get => EditableVariables.GetInt(this.warpCountDown);
 			set => EditableVariables.SetInt(this.warpCountDown, value);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			//TODO: thrust controller properties
+			this.AutoDeployAntennas = false;
+			this.AutodeploySolarPanels = false;
+			this.Autostage = false;
+			this.CorrectiveSteering = false;
+			this.ForceRoll = false;
+			this.LimitAoA = false;
+			this.SkipCircularization = false;
+		}
 	}
 
 	public abstract class AscentBase : ComputerModule {

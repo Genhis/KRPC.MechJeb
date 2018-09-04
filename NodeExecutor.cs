@@ -55,5 +55,10 @@ namespace KRPC.MechJeb {
 		public void Abort() {
 			this.abort.Invoke(this.instance, null);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.Autowarp = false;
+		}
 	}
 }

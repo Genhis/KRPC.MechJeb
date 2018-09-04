@@ -96,5 +96,10 @@ namespace KRPC.MechJeb {
 			get => EditableVariables.GetDouble(this.autoTurnEndAltitude);
 			set => EditableVariables.SetDouble(this.autoTurnEndAltitude, value);
 		}
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.AutoPath = false;
+		}
 	}
 }

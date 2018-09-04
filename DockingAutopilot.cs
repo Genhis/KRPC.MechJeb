@@ -80,5 +80,12 @@ namespace KRPC.MechJeb {
 
 		[KRPCProperty]
 		public float TargetSize => (float)this.targetSize.GetValue(this.instance);
+
+		[KRPCMethod]
+		public override void DisableAll() {
+			this.ForceRoll = false;
+			this.OverrideSafeDistance = false;
+			this.OverrideTargetSize = false;
+		}
 	}
 }
