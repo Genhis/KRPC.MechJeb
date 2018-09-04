@@ -101,6 +101,12 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
+		public bool CorrectiveSteering {
+			get => (bool)this.correctiveSteering.GetValue(this.instance);
+			set => this.correctiveSteering.SetValue(this.instance, value);
+		}
+
+		[KRPCProperty]
 		public double CorrectiveSteeringGain {
 			get => EditableVariables.GetDouble(this.correctiveSteeringGain);
 			set => EditableVariables.SetDouble(this.correctiveSteeringGain, value);
