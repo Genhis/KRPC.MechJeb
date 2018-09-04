@@ -3,6 +3,7 @@ using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
+using KRPC.SpaceCenter.Services;
 
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCException(Service = "MechJeb")]
@@ -37,14 +38,14 @@ namespace KRPC.MechJeb.Maneuver {
 		public string ErrorMessage => (string)errorMessage.Invoke(this.instance, null);
 
 		[KRPCMethod]
-		public void MakeNode() {
+		public Node MakeNode() {
 			try {
 				Vessel vessel = FlightGlobals.ActiveVessel;
 				object param = makeNodeImpl.Invoke(this.instance, new object[] { vessel.orbit, Planetarium.GetUniversalTime(), MechJeb.TargetController.instance });
 				//a warning may be stored in ErrorMessage property (if it's an error, we will throw an exception)
 
 				vessel.RemoveAllManeuverNodes(); //this implementation supports only one active ManeuverNode; removing the others to prevent bugs
-				vessel.PlaceManeuverNode(vessel.orbit, (Vector3d)ManeuverParameters.dV.GetValue(param), (double)ManeuverParameters.uT.GetValue(param));
+				return new Node(vessel, vessel.PlaceManeuverNode(vessel.orbit, (Vector3d)ManeuverParameters.dV.GetValue(param), (double)ManeuverParameters.uT.GetValue(param)));
 			}
 			catch(Exception ex) {
 				if(ex is TargetInvocationException)
