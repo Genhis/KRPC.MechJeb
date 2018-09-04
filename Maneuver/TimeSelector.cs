@@ -6,9 +6,9 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCEnum(Service = "MechJeb")]
 	public enum TimeReference {
-		COMPUTED, X_FROM_NOW, APOAPSIS, PERIAPSIS, ALTITUDE, EQ_ASCENDING, EQ_DESCENDING,
-		REL_ASCENDING, REL_DESCENDING, CLOSEST_APPROACH,
-		EQ_HIGHEST_AD, EQ_NEAREST_AD, REL_HIGHEST_AD, REL_NEAREST_AD
+		Computed, XFromNow, Apoapsis, Periapsis, Altitude, EqAscending, EqDescending,
+		RelAscending, RelDescending, ClosestApproach,
+		EqHighestAd, EqNearestAd, RelHighestAd, RelNearestAd
 	}
 
 	[KRPCClass(Service = "MechJeb")]
