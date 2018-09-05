@@ -10,7 +10,6 @@ namespace KRPC.MechJeb {
 	public static class MechJeb {
 		private static Type type;
 		private static MethodInfo getComputerModule;
-		private static object instance;
 
 		private static SimpleModule[] modules;
 
@@ -36,8 +35,8 @@ namespace KRPC.MechJeb {
 			APIReady = false;
 			modules = new SimpleModule[10];
 
-			instance = GetCoreInstance();
-			if(instance == null)
+			Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
+			if(Instance == null)
 				return false;
 
 			AssemblyLoader.loadedAssemblies.TypeOperation(t => Operation.InitInstance(t));
@@ -45,17 +44,11 @@ namespace KRPC.MechJeb {
 			return true;
 		}
 
-		private static object GetCoreInstance() {
-			foreach(Part part in FlightGlobals.ActiveVessel.Parts)
-				foreach(PartModule module in part.Modules)
-					if(module.GetType() == type)
-						return type.GetProperty("MasterMechJeb").GetValue(module, null);
-			return null;
+		internal static object GetComputerModule(string moduleType) {
+			return getComputerModule.Invoke(Instance, new object[] { "MechJebModule" + moduleType });
 		}
 
-		internal static object GetComputerModule(string moduleType) {
-			return getComputerModule.Invoke(instance, new object[] { "MechJebModule" + moduleType });
-		}
+		internal static PartModule Instance { get; private set; }
 
 		public static bool TypesLoaded => type != null;
 

@@ -14,7 +14,15 @@ namespace KRPC.MechJeb {
 		public void Start() {
 			if(MechJeb.TypesLoaded) {
 				Logger.Info("Initializing MechJeb instance...");
-				Logger.Info(MechJeb.InitInstance() ? "KRPC.MechJeb is ready!" : "MechJeb found but the instance initialization wasn't successful.");
+				Logger.Info(MechJeb.InitInstance() ? "KRPC.MechJeb is ready!" : "MechJeb found but the instance initialization wasn't successful. Maybe you don't have any MechJeb part attached to the vessel?");
+			}
+		}
+
+		public void FixedUpdate() {
+			// Needed to fix outdated MechJeb instance when focus changes or a flight is reverted to launch.
+			if(FlightGlobals.ActiveVessel != MechJeb.Instance.vessel) {
+				Logger.Info("MechJeb instance changed, resetting cache...");
+				this.Start();
 			}
 		}
 	}
