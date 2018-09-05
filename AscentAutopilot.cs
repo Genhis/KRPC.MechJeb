@@ -55,6 +55,10 @@ namespace KRPC.MechJeb {
 			this.AscentPathClassic = new AscentClassic();
 			this.AscentPathGT = new AscentGT();
 			this.AscentPathPEG = new AscentPEG();
+
+			// Retrieve the current path index set in mechjeb and enable the path representing that index.
+			// It fixes the issue with AscentAutopilot reporting empty status due to a disabled path.
+			this.AscentPathIndex = this.AscentPathIndex;
 		}
 
 		[KRPCProperty]
@@ -67,7 +71,8 @@ namespace KRPC.MechJeb {
 				if(value < 0 || value > 2)
 					return;
 
-				this.currentAscentPath.Enabled = false;
+				if(this.currentAscentPath != null)
+					this.currentAscentPath.Enabled = false;
 				this.ascentPathIdx.SetValue(this.instance, value);
 				switch(value) {
 					case 0:
