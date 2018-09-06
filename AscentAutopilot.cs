@@ -4,7 +4,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class AscentAutopilot : ComputerModule {
+	public class AscentAutopilot : KRPCComputerModule {
 		private readonly FieldInfo status;
 		private readonly FieldInfo ascentPathIdx;
 		private readonly FieldInfo ascentPath;

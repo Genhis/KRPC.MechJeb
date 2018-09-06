@@ -4,7 +4,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class DockingAutopilot : ComputerModule {
+	public class DockingAutopilot : KRPCComputerModule {
 		private readonly FieldInfo status;
 		private readonly object speedLimit;
 		private readonly FieldInfo forceRoll;

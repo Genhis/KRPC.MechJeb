@@ -24,6 +24,9 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
+		public override bool Enabled => base.Enabled;
+
+		[KRPCProperty]
 		public bool Autowarp {
 			get => (bool)this.autowarp.GetValue(this.instance);
 			set => this.autowarp.SetValue(this.instance, value);

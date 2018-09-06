@@ -35,8 +35,7 @@ namespace KRPC.MechJeb {
 			}
 		}
 
-		[KRPCProperty]
-		public bool Enabled {
+		public virtual bool Enabled {
 			get => (bool)enabled.GetValue(this.instance, null);
 			set {
 				if(value)
@@ -47,7 +46,17 @@ namespace KRPC.MechJeb {
 		}
 	}
 
-	public abstract class AutopilotModule : ComputerModule {
+	public abstract class KRPCComputerModule : ComputerModule {
+		public KRPCComputerModule(string moduleType) : base(moduleType) { }
+
+		[KRPCProperty]
+		public override bool Enabled {
+			get => base.Enabled;
+			set => base.Enabled = value;
+		}
+	}
+
+	public abstract class AutopilotModule : KRPCComputerModule {
 		internal static PropertyInfo status;
 
 		public AutopilotModule(string moduleType) : base(moduleType) { }

@@ -4,7 +4,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class RendezvousAutopilot : ComputerModule {
+	public class RendezvousAutopilot : KRPCComputerModule {
 		private readonly object desiredDistance;
 		private readonly object maxPhasingOrbits;
 		private readonly FieldInfo status;

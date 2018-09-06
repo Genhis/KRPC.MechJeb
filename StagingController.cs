@@ -2,7 +2,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class StagingController : ComputerModule {
+	public class StagingController : KRPCComputerModule {
 		private readonly object autostagePreDelay;
 		private readonly object autostagePostDelay;
 		private readonly object autostageLimit;
