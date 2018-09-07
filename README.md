@@ -26,6 +26,7 @@ relevant file in the release archive and link it with your project.
 - **DockingAutopilot**
 - **LandingAutopilot** (known as Landing Guidance)
 - **ManeuverPlanner** (supports all operations except `AdvancedTransfer`)
+- **RendezvousAutopilot**
 
 ## Controllers
 
