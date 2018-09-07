@@ -12,8 +12,8 @@ their amazing mods, and to the author of the original [krpcmj](https://github.co
 
 1. Download [latest release files](https://github.com/Genhis/KRPC.MechJeb/releases).
 2. Copy KRPC.MechJeb.dll to `Kerbal Space Program/GameData/kRPC` directory.
-3. If you are using Python, Lua or similar client libraries, you can start coding right away. For C++, C# and Java, find the
-relevant file in the release archive and link it with your project.
+3. If you are using Python, Lua or similar client libraries, you can start coding right away. For C-nano, C++, C# and Java,
+find the relevant file in the release archive and link it with your project.
 4. Happy coding!
 
 ## Modules
