@@ -32,6 +32,7 @@ find the relevant file in the release archive and link it with your project.
 ### Windows
 
 - **ManeuverPlanner** (supports all operations except `AdvancedTransfer`)
+- **SmartRCS**
 
 ### Controllers
 
@@ -50,7 +51,6 @@ find the relevant file in the release archive and link it with your project.
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`
 - Implement `SmartASS`
-- Implement `SmartRCS`? (partial support in RCSController)
 - Implement `SolarPanelController`
 - Implement `SpaceplaneAutopilot` (known as Aircraft Approach & Autoland)
 - Implement `Translation` module?

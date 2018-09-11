@@ -36,7 +36,7 @@ namespace KRPC.MechJeb {
 
 			APIReady = false;
 			modules = new object[5];
-			windows = new object[1];
+			windows = new object[2];
 			controllers = new object[5];
 
 			Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
@@ -80,6 +80,9 @@ namespace KRPC.MechJeb {
 
 		[KRPCProperty]
 		public static ManeuverPlanner ManeuverPlanner => GetComputerModule<ManeuverPlanner>(windows, 0);
+
+		[KRPCProperty]
+		public static SmartRCS SmartRCS => GetComputerModule<SmartRCS>(windows, 1);
 
 		// CONTROLLERS
 
