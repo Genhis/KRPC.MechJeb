@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 ### Added
+- **DeployableController** for antennas and solar panels
 - **SmartRCS** window
 - **ThrustController** containing most of the settings from the Utilities window
 - `LaunchToRendezvous()` and `LaunchToTargetPlane()` methods to AscentAutopilot

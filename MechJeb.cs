@@ -37,7 +37,7 @@ namespace KRPC.MechJeb {
 			APIReady = false;
 			modules = new object[5];
 			windows = new object[2];
-			controllers = new object[5];
+			controllers = new object[7];
 
 			Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
 			if(Instance == null)
@@ -87,6 +87,9 @@ namespace KRPC.MechJeb {
 		// CONTROLLERS
 
 		[KRPCProperty]
+		public static DeployableController AntennaController => GetComputerModule<DeployableController>(controllers, 5, "DeployableAntennaController");
+
+		[KRPCProperty]
 		public static NodeExecutor NodeExecutor => GetComputerModule<NodeExecutor>(controllers, 0);
 
 		[KRPCProperty]
@@ -96,14 +99,25 @@ namespace KRPC.MechJeb {
 		public static StagingController StagingController => GetComputerModule<StagingController>(controllers, 2);
 
 		[KRPCProperty]
+		public static DeployableController SolarPanelController => GetComputerModule<DeployableController>(controllers, 6, "SolarPanelController");
+
+		[KRPCProperty]
 		public static TargetController TargetController => GetComputerModule<TargetController>(controllers, 3);
 
 		[KRPCProperty]
 		public static ThrustController ThrustController => GetComputerModule<ThrustController>(controllers, 4);
 
 		private static T GetComputerModule<T>(object[] modules, int id) {
+			return GetComputerModule<T>(modules, id, (object[])null);
+		}
+
+		private static T GetComputerModule<T>(object[] modules, int id, string module) {
+			return GetComputerModule<T>(modules, id, new object[] { module });
+		}
+
+		private static T GetComputerModule<T>(object[] modules, int id, object[] args) {
 			if(modules[id] == null)
-				modules[id] = typeof(T).CreateInstance<T>();
+				modules[id] = typeof(T).CreateInstance<T>(args);
 			return (T)modules[id];
 		}
 	}

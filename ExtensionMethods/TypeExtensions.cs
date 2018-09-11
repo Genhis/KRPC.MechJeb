@@ -3,9 +3,9 @@ using System.Reflection;
 
 namespace KRPC.MechJeb.ExtensionMethods {
 	public static class TypeExtensions {
-		public static T CreateInstance<T>(this Type type) {
+		public static T CreateInstance<T>(this Type type, object[] args) {
 			try {
-				return (T)type.GetConstructor(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, Type.EmptyTypes, null).Invoke(null);
+				return (T)type.GetConstructor(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, Type.EmptyTypes, null).Invoke(args);
 			}
 			catch(Exception ex) {
 				Logger.Severe("Coudn't create an instance of " + type, ex);

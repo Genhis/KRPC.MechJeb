@@ -36,6 +36,7 @@ find the relevant file in the release archive and link it with your project.
 
 ### Controllers
 
+- **DeployableController** for antennas and solar panels
 - **NodeExecutor**
 - **RCSController**
 - **StagingController**
@@ -51,7 +52,6 @@ find the relevant file in the release archive and link it with your project.
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`
 - Implement `SmartASS`
-- Implement `SolarPanelController`
 - Implement `SpaceplaneAutopilot` (known as Aircraft Approach & Autoland)
 - Implement `Translation` module?
 

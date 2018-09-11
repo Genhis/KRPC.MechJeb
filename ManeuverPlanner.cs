@@ -59,7 +59,7 @@ namespace KRPC.MechJeb {
 
 		private T GetOperation<T>(int id) where T : Operation {
 			if(this.operations[id] == null)
-				this.operations[id] = typeof(T).CreateInstance<T>();
+				this.operations[id] = typeof(T).CreateInstance<T>(null);
 			return (T)this.operations[id];
 		}
 	}
