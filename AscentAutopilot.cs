@@ -106,6 +106,9 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
+		public ThrustController ThrustController => MechJeb.ThrustController;
+
+		[KRPCProperty]
 		public bool CorrectiveSteering {
 			get => (bool)this.correctiveSteering.GetValue(this.instance);
 			set => this.correctiveSteering.SetValue(this.instance, value);

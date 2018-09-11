@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- **ThrustController** containing most of the settings from the Utilities window
 
 ## [0.2.0] - 2018-09-07
 ### Added

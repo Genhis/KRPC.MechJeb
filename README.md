@@ -39,6 +39,7 @@ find the relevant file in the release archive and link it with your project.
 - **RCSController**
 - **StagingController**
 - **TargetController**
+- **ThrustController** (settings found in the Utilities window)
 
 ## TO-DO
 
@@ -57,6 +58,4 @@ find the relevant file in the release archive and link it with your project.
 ## Not implemented
 
 - **NodeEditor** (replacement in KRPC.SpaceCenter)
-- **ThrustController** (possible replacement in KRPC.SpaceCenter)
-- **Utilities** window
 - **WarpHelper**
