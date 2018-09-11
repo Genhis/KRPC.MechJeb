@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **SmartRCS** window
 - **ThrustController** containing most of the settings from the Utilities window
 - `LaunchToRendezvous()` and `LaunchToTargetPlane()` methods to AscentAutopilot
+- `AutostagingOnce` property to StagingController
 
 ## [0.2.0] - 2018-09-07
 ### Added
