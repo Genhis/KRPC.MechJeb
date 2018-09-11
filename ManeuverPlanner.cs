@@ -4,10 +4,8 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class ManeuverPlanner : SimpleModule {
+	public class ManeuverPlanner {
 		private Operation[] operations = new Operation[17];
-
-		public ManeuverPlanner() : base("ManeuverPlanner") { }
 
 		//TODO: OperationAdvancedTransfer
 

@@ -4,16 +4,27 @@ using System.Reflection;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
-	public abstract class ComputerModule : SimpleModule {
+	public abstract class ComputerModule {
 		private static PropertyInfo enabled;
 		private static FieldInfo usersField;
 
 		private static MethodInfo usersAdd;
 		private static MethodInfo usersRemove;
 
+		protected Type type;
+		protected internal readonly object instance;
+
 		private readonly object users;
 
-		public ComputerModule(string moduleType) : base(moduleType) {
+		public ComputerModule(string moduleType) {
+			string fullModuleName = "MuMech.MechJebModule" + moduleType;
+			AssemblyLoader.loadedAssemblies.TypeOperation(t => {
+				if(t.FullName == fullModuleName)
+					this.type = t;
+			});
+
+			this.instance = MechJeb.GetComputerModule(moduleType);
+
 			this.users = usersField.GetValue(this.instance);
 		}
 

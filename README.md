@@ -16,7 +16,9 @@ their amazing mods, and to the author of the original [krpcmj](https://github.co
 find the relevant file in the release archive and link it with your project.
 4. Happy coding!
 
-## Modules
+## Public API
+
+### Modules
 
 - **AirplaneAutopilot** (known as AircraftGuidance)
 - **AscentAutopilot** (known as AscentGuidance)
@@ -25,10 +27,13 @@ find the relevant file in the release archive and link it with your project.
   - **AscentPEG** (known as Powered Explicit Guidance (RSS/RO))
 - **DockingAutopilot**
 - **LandingAutopilot** (known as Landing Guidance)
-- **ManeuverPlanner** (supports all operations except `AdvancedTransfer`)
 - **RendezvousAutopilot**
 
-## Controllers
+### Windows
+
+- **ManeuverPlanner** (supports all operations except `AdvancedTransfer`)
+
+### Controllers
 
 - **NodeExecutor**
 - **RCSController**

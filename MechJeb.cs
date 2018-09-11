@@ -11,7 +11,9 @@ namespace KRPC.MechJeb {
 		private static Type type;
 		private static MethodInfo getComputerModule;
 
-		private static SimpleModule[] modules;
+		private static object[] modules;
+		private static object[] windows;
+		private static object[] controllers;
 
 		internal static bool InitTypes() {
 			AssemblyLoader.loadedAssemblies.TypeOperation(t => {
@@ -33,7 +35,9 @@ namespace KRPC.MechJeb {
 			//assume all MechJeb types are loaded
 
 			APIReady = false;
-			modules = new SimpleModule[10];
+			modules = new object[5];
+			windows = new object[1];
+			controllers = new object[4];
 
 			Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
 			if(Instance == null)
@@ -55,37 +59,43 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public static bool APIReady { get; private set; }
 
-		[KRPCProperty]
-		public static AirplaneAutopilot AirplaneAutopilot => GetComputerModule<AirplaneAutopilot>(0);
+		// MODULES
 
 		[KRPCProperty]
-		public static AscentAutopilot AscentAutopilot => GetComputerModule<AscentAutopilot>(1);
+		public static AirplaneAutopilot AirplaneAutopilot => GetComputerModule<AirplaneAutopilot>(modules, 0);
 
 		[KRPCProperty]
-		public static DockingAutopilot DockingAutopilot => GetComputerModule<DockingAutopilot>(2);
+		public static AscentAutopilot AscentAutopilot => GetComputerModule<AscentAutopilot>(modules, 1);
 
 		[KRPCProperty]
-		public static LandingAutopilot LandingAutopilot => GetComputerModule<LandingAutopilot>(3);
+		public static DockingAutopilot DockingAutopilot => GetComputerModule<DockingAutopilot>(modules, 2);
 
 		[KRPCProperty]
-		public static ManeuverPlanner ManeuverPlanner => GetComputerModule<ManeuverPlanner>(4);
+		public static LandingAutopilot LandingAutopilot => GetComputerModule<LandingAutopilot>(modules, 3);
 
 		[KRPCProperty]
-		public static NodeExecutor NodeExecutor => GetComputerModule<NodeExecutor>(5);
+		public static RendezvousAutopilot RendezvousAutopilot => GetComputerModule<RendezvousAutopilot>(modules, 4);
+
+		// WINDOWS
 
 		[KRPCProperty]
-		public static RCSController RCSController => GetComputerModule<RCSController>(6);
+		public static ManeuverPlanner ManeuverPlanner => GetComputerModule<ManeuverPlanner>(windows, 0);
+
+		// CONTROLLERS
 
 		[KRPCProperty]
-		public static RendezvousAutopilot RendezvousAutopilot => GetComputerModule<RendezvousAutopilot>(7);
+		public static NodeExecutor NodeExecutor => GetComputerModule<NodeExecutor>(controllers, 0);
 
 		[KRPCProperty]
-		public static StagingController StagingController => GetComputerModule<StagingController>(8);
+		public static RCSController RCSController => GetComputerModule<RCSController>(controllers, 1);
 
 		[KRPCProperty]
-		public static TargetController TargetController => GetComputerModule<TargetController>(9);
+		public static StagingController StagingController => GetComputerModule<StagingController>(controllers, 2);
 
-		private static T GetComputerModule<T>(int id) where T : SimpleModule {
+		[KRPCProperty]
+		public static TargetController TargetController => GetComputerModule<TargetController>(controllers, 3);
+
+		private static T GetComputerModule<T>(object[] modules, int id) {
 			if(modules[id] == null)
 				modules[id] = typeof(T).CreateInstance<T>();
 			return (T)modules[id];
