@@ -6,11 +6,14 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
+		private static FieldInfo desiredInclination;
+
+		private readonly object guiInstance;
+
 		private readonly FieldInfo status;
 		private readonly FieldInfo ascentPathIdx;
 		private readonly FieldInfo ascentPath;
 		private readonly object desiredOrbitAltitude;
-		private readonly FieldInfo desiredInclination;
 		private readonly FieldInfo autoThrottle;
 		private readonly FieldInfo correctiveSteering;
 		private readonly object correctiveSteeringGain;
@@ -33,11 +36,12 @@ namespace KRPC.MechJeb {
 		private AscentBase currentAscentPath;
 
 		public AscentAutopilot() : base("AscentAutopilot") {
+			this.guiInstance = MechJeb.GetComputerModule("AscentGuidance");
+
 			this.status = this.type.GetField("status");
 			this.ascentPathIdx = this.type.GetField("ascentPathIdx");
 			this.ascentPath = this.type.GetField("ascentPath");
 			this.desiredOrbitAltitude = this.type.GetField("desiredOrbitAltitude").GetValue(this.instance);
-			this.desiredInclination = this.type.GetField("desiredInclination");
 			this.autoThrottle = this.type.GetField("autoThrottle");
 			this.correctiveSteering = this.type.GetField("correctiveSteering");
 			this.correctiveSteeringGain = this.type.GetField("correctiveSteeringGain").GetValue(this.instance);
@@ -64,6 +68,16 @@ namespace KRPC.MechJeb {
 			// Retrieve the current path index set in mechjeb and enable the path representing that index.
 			// It fixes the issue with AscentAutopilot reporting empty status due to a disabled path.
 			this.AscentPathIndex = this.AscentPathIndex;
+		}
+
+		internal static new bool InitTypes(Type t) {
+			switch(t.FullName) {
+				case "MuMech.MechJebModuleAscentGuidance":
+					desiredInclination = t.GetField("desiredInclination");
+					return true;
+				default:
+					return false;
+			}
 		}
 
 		[KRPCProperty]
@@ -111,6 +125,13 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
+		public double DesiredInclination {
+			// We need to get desiredInclinationGUI value here because it may change over time.
+			get => EditableVariables.GetDouble(desiredInclination.GetValue(this.guiInstance));
+			set => EditableVariables.SetDouble(desiredInclination.GetValue(this.guiInstance), value);
+		}
+
+		[KRPCProperty]
 		public ThrustController ThrustController => MechJeb.ThrustController;
 
 		[KRPCProperty]
@@ -141,12 +162,6 @@ namespace KRPC.MechJeb {
 		public double TurnRoll {
 			get => EditableVariables.GetDouble(this.turnRoll);
 			set => EditableVariables.SetDouble(this.turnRoll, value);
-		}
-
-		[KRPCProperty]
-		public double DesiredInclination {
-			get => (double)this.desiredInclination.GetValue(this.instance);
-			set => this.desiredInclination.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]

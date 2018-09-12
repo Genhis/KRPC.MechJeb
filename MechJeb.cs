@@ -23,7 +23,7 @@ namespace KRPC.MechJeb {
 						getComputerModule = t.GetMethod("GetComputerModule", new Type[] { typeof(string) });
 						break;
 					default:
-						bool unused = EditableVariables.InitTypes(t) || VesselExtensions.InitTypes(t) || ComputerModule.InitTypes(t) || Operation.InitTypes(t) || TimeSelector.InitTypes(t);
+						bool unused = AscentAutopilot.InitTypes(t) || ComputerModule.InitTypes(t) || EditableVariables.InitTypes(t) || Operation.InitTypes(t) || TimeSelector.InitTypes(t) || VesselExtensions.InitTypes(t);
 						break;
 				}
 			});
