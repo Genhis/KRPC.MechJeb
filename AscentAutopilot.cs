@@ -4,6 +4,9 @@ using System.Reflection;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
+	/// <summary>
+	/// This module controls the Ascent Guidance in MechJeb 2.
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
 		private static FieldInfo desiredInclination;
@@ -80,9 +83,21 @@ namespace KRPC.MechJeb {
 			}
 		}
 
+		/// <summary>
+		/// The autopilot status; it depends on the selected ascent path.
+		/// </summary>
 		[KRPCProperty]
 		public string Status => this.status.GetValue(this.instance).ToString();
 
+		/// <summary>
+		/// The selected ascent path.
+		/// 
+		/// 0 = <see cref="AscentClassic" /> (Classic Ascent Profile)
+		/// 
+		/// 1 = <see cref="AscentGT" /> (Stock-style GravityTurn)
+		/// 
+		/// 2 = <see cref="AscentPEG" /> (Powered Explicit Guidance (RSS/RO))
+		/// </summary>
 		[KRPCProperty]
 		public int AscentPathIndex {
 			get => (int)this.ascentPathIdx.GetValue(this.instance);
@@ -109,21 +124,36 @@ namespace KRPC.MechJeb {
 			}
 		}
 
+		/// <summary>
+		/// Get Classic Ascent Profile settings.
+		/// </summary>
 		[KRPCProperty]
 		public AscentClassic AscentPathClassic { get; }
 
+		/// <summary>
+		/// Get Stock-style GravityTurn profile settings.
+		/// </summary>
 		[KRPCProperty]
 		public AscentGT AscentPathGT { get; }
 
+		/// <summary>
+		/// Get Powered Explicit Guidance (RSS/RO) profile settings.
+		/// </summary>
 		[KRPCProperty]
 		public AscentPEG AscentPathPEG { get; }
 
+		/// <summary>
+		/// The desired orbit altitude.
+		/// </summary>
 		[KRPCProperty]
 		public double DesiredOrbitAltitude {
 			get => EditableVariables.GetDouble(this.desiredOrbitAltitude);
 			set => EditableVariables.SetDouble(this.desiredOrbitAltitude, value);
 		}
 
+		/// <summary>
+		/// The desired inclination.
+		/// </summary>
 		[KRPCProperty]
 		public double DesiredInclination {
 			// We need to get desiredInclinationGUI value here because it may change over time.
@@ -131,78 +161,119 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(desiredInclination.GetValue(this.guiInstance), value);
 		}
 
+		/// <remarks>Equivalend to <see cref="MechJeb.ThrustController" />.</remarks>
 		[KRPCProperty]
 		public ThrustController ThrustController => MechJeb.ThrustController;
 
+		/// <summary>
+		/// The state of corrective steering.
+		/// </summary>
 		[KRPCProperty]
 		public bool CorrectiveSteering {
 			get => (bool)this.correctiveSteering.GetValue(this.instance);
 			set => this.correctiveSteering.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// The gain of corrective steering used by the autopilot.
+		/// </summary>
+		/// <remarks><see cref="CorrectiveSteering" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double CorrectiveSteeringGain {
 			get => EditableVariables.GetDouble(this.correctiveSteeringGain);
 			set => EditableVariables.SetDouble(this.correctiveSteeringGain, value);
 		}
 
+		/// <summary>
+		/// The state of force roll.
+		/// </summary>
 		[KRPCProperty]
 		public bool ForceRoll {
 			get => (bool)this.forceRoll.GetValue(this.instance);
 			set => this.forceRoll.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// The vertical/climb roll used by the autopilot.
+		/// </summary>
+		/// <remarks><see cref="ForceRoll" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double VerticalRoll {
 			get => EditableVariables.GetDouble(this.verticalRoll);
 			set => EditableVariables.SetDouble(this.verticalRoll, value);
 		}
 
+		/// <summary>
+		/// The turn roll used by the autopilot.
+		/// </summary>
+		/// <remarks><see cref="ForceRoll" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double TurnRoll {
 			get => EditableVariables.GetDouble(this.turnRoll);
 			set => EditableVariables.SetDouble(this.turnRoll, value);
 		}
 
+		/// <summary>
+		/// Whether to deploy solar panels automatically when the ascent finishes.
+		/// </summary>
 		[KRPCProperty]
 		public bool AutodeploySolarPanels {
 			get => (bool)this.autodeploySolarPanels.GetValue(this.instance);
 			set => this.autodeploySolarPanels.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Whether to deploy antennas automatically when the ascent finishes.
+		/// </summary>
 		[KRPCProperty]
 		public bool AutoDeployAntennas {
 			get => (bool)this.autoDeployAntennas.GetValue(this.instance);
 			set => this.autoDeployAntennas.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Whether to skip circularization burn and do only the ascent.
+		/// </summary>
 		[KRPCProperty]
 		public bool SkipCircularization {
 			get => (bool)this.skipCircularization.GetValue(this.instance);
 			set => this.skipCircularization.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Whether to enable autostaging. Paramethers can be set in <see cref="KRPC.MechJeb.StagingController" />.
+		/// </summary>
 		[KRPCProperty]
 		public bool Autostage {
 			get => (bool)this.autostage.GetValue(this.instance, null);
 			set => this.autostage.SetValue(this.instance, value, null);
 		}
 
+		/// <remarks>Equivalent to <see cref="MechJeb.StagingController" />.</remarks>
 		[KRPCProperty]
 		public StagingController StagingController => MechJeb.StagingController;
 
+		/// <summary>
+		/// Whether to limit angle of attack.
+		/// </summary>
 		[KRPCProperty]
 		public bool LimitAoA {
 			get => (bool)this.limitAoA.GetValue(this.instance);
 			set => this.limitAoA.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// The maximal angle of attack used by the autopilot.
+		/// </summary>
 		[KRPCProperty]
 		public double MaxAoA {
 			get => EditableVariables.GetDouble(this.maxAoA);
 			set => EditableVariables.SetDouble(this.maxAoA, value);
 		}
 
+		/// <summary>
+		/// The pressure value when AoA limit is automatically deactivated.
+		/// </summary>
 		[KRPCProperty]
 		public double AoALimitFadeoutPressure {
 			get => EditableVariables.GetDouble(this.aoALimitFadeoutPressure);
@@ -232,6 +303,9 @@ namespace KRPC.MechJeb {
 			this.startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchPhaseAngle) });
 		}
 
+		/// <summary>
+		/// Launch into the plane of the selected target.
+		/// </summary>
 		[KRPCMethod]
 		public void LaunchToTargetPlane() {
 			this.startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchLANDifference) });

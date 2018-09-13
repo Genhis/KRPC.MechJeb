@@ -3,6 +3,9 @@ using System.Reflection;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
+	/// <summary>
+	/// The Classic Ascent Profile.
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentClassic : AscentBase {
 		private readonly object turnStartAltitude;
@@ -31,48 +34,72 @@ namespace KRPC.MechJeb {
 			this.autoTurnEndAltitude = this.type.GetProperty("autoTurnEndAltitude");
 		}
 
+		/// <summary>
+		/// The turn starts when this altitude is reached.
+		/// </summary>
 		[KRPCProperty]
 		public double TurnStartAltitude {
 			get => EditableVariables.GetDouble(this.turnStartAltitude);
 			set => EditableVariables.SetDouble(this.turnStartAltitude, value);
 		}
 
+		/// <summary>
+		/// The turn starts when this velocity is reached.
+		/// </summary>
 		[KRPCProperty]
 		public double TurnStartVelocity {
 			get => EditableVariables.GetDouble(this.turnStartVelocity);
 			set => EditableVariables.SetDouble(this.turnStartVelocity, value);
 		}
 
+		/// <summary>
+		/// The turn ends when this altitude is reached.
+		/// </summary>
 		[KRPCProperty]
 		public double TurnEndAltitude {
 			get => EditableVariables.GetDouble(this.turnEndAltitude);
 			set => EditableVariables.SetDouble(this.turnEndAltitude, value);
 		}
 
+		/// <summary>
+		/// The final flight path angle.
+		/// </summary>
 		[KRPCProperty]
 		public double TurnEndAngle {
 			get => EditableVariables.GetDouble(this.turnEndAngle);
 			set => EditableVariables.SetDouble(this.turnEndAngle, value);
 		}
 
+		/// <summary>
+		/// A value between 0 - 1 describing how steep the turn is.
+		/// </summary>
 		[KRPCProperty]
 		public double TurnShapeExponent {
 			get => EditableVariables.GetDouble(this.turnShapeExponent);
 			set => EditableVariables.SetDouble(this.turnShapeExponent, value);
 		}
 
+		/// <summary>
+		/// Whether to enable automatic altitude turn.
+		/// </summary>
 		[KRPCProperty]
 		public bool AutoPath {
 			get => (bool)this.autoPath.GetValue(this.instance);
 			set => this.autoPath.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// A value between 0 and 1.
+		/// </summary>
 		[KRPCProperty]
 		public float AutoPathPerc {
 			get => (float)this.autoPathPerc.GetValue(this.instance);
 			set => this.autoPathPerc.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// A value between 0 and 1.
+		/// </summary>
 		[KRPCProperty]
 		public float AutoPathSpeedFactor {
 			get => (float)this.autoPathSpdFactor.GetValue(this.instance);

@@ -6,6 +6,9 @@ using KRPC.Service.Attributes;
 using KRPC.SpaceCenter.Services;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// This exception is thrown when there is something wrong with the operation (e.g. the target is not set when the operation needs it).
+	/// </summary>
 	[KRPCException(Service = "MechJeb")]
 	public class OperationException : Exception {
 		public OperationException(string message) : base(message) { }
@@ -34,9 +37,20 @@ namespace KRPC.MechJeb.Maneuver {
 				throw new MJServiceException("No such operation exists: " + operationType);
 		}
 
+		/// <summary>
+		/// A warning may be stored there during MakeNode() call.
+		/// </summary>
 		[KRPCProperty]
 		public string ErrorMessage => (string)errorMessage.Invoke(this.instance, null);
 
+		/// <summary>
+		/// Create a new maneuver node.
+		/// A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+		/// 
+		/// OperationException is thrown when there is something wrong with the operation.
+		/// MJServiceException - Internal service error.
+		/// </summary>
+		/// <returns></returns>
 		[KRPCMethod]
 		public Node MakeNode() {
 			try {

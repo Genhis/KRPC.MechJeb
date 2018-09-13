@@ -6,6 +6,9 @@ using KRPC.MechJeb.Maneuver;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
+	/// <summary>
+	/// This service provides functionality to interact with <a href="https://github.com/MuMech/MechJeb2">MechJeb 2</a>.
+	/// </summary>
 	[KRPCService(GameScene = Service.GameScene.Flight)]
 	public static class MechJeb {
 		private static Type type;
@@ -56,6 +59,9 @@ namespace KRPC.MechJeb {
 
 		public static bool TypesLoaded => type != null;
 
+		/// <summary>
+		/// A value indicating whether the service is available.
+		/// </summary>
 		[KRPCProperty]
 		public static bool APIReady { get; private set; }
 
@@ -122,6 +128,9 @@ namespace KRPC.MechJeb {
 		}
 	}
 
+	/// <summary>
+	/// General exception for errors in the service.
+	/// </summary>
 	[KRPCException(Service = "MechJeb")]
 	public class MJServiceException : Exception {
 		public MJServiceException(string message) : base(message) { }

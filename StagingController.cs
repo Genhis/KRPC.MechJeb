@@ -39,9 +39,9 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(this.autostagePostDelay, value);
 		}
 
-		/**
-		 * <summary>Stop at selected stage</summary>
-		 */
+		/// <summary>
+		/// Stop at the selected stage.
+		/// </summary>
 		[KRPCProperty]
 		public int AutostageLimit {
 			get => EditableVariables.GetInt(this.autostageLimit);
@@ -72,6 +72,10 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(this.fairingMaxAerothermalFlux, value);
 		}
 
+		/// <summary>
+		/// The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+		/// </summary>
+		/// <remarks>The controller needs to be enabled for this to work.</remarks>
 		[KRPCProperty]
 		public bool AutostagingOnce {
 			get => (bool)this.autostagingOnce.GetValue(this.instance);

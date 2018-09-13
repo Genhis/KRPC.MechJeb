@@ -54,6 +54,10 @@ namespace KRPC.MechJeb {
 			set => this.limitDynamicPressure.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Limit Q to this value in Pa.
+		/// </summary>
+		/// <remarks><see cref="LimitDynamicPressure" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxDynamicPressure {
 			get => EditableVariables.GetDouble(this.maxDynamicPressure);
@@ -72,6 +76,10 @@ namespace KRPC.MechJeb {
 			set => this.limitAcceleration.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Limit acceleration to this value in m/s^2.
+		/// </summary>
+		/// <remarks><see cref="LimitAcceleration" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxAcceleration {
 			get => EditableVariables.GetDouble(this.maxAcceleration);
@@ -84,6 +92,10 @@ namespace KRPC.MechJeb {
 			set => this.limitThrottle.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Limit throttle to this value between 0 and 1.
+		/// </summary>
+		/// <remarks><see cref="LimitThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxThrottle {
 			get => EditableVariables.GetDouble(this.maxThrottle);
@@ -96,6 +108,10 @@ namespace KRPC.MechJeb {
 			set => this.limiterMinThrottle.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Keep limited throttle over this value between 0 and 1.
+		/// </summary>
+		/// <remarks><see cref="LimiterMinThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MinThrottle {
 			get => EditableVariables.GetDouble(this.minThrottle);
@@ -120,6 +136,9 @@ namespace KRPC.MechJeb {
 			set => this.limitToPreventFlameout.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// The jet safety margin. A value between 0 and 1.
+		/// </summary>
 		[KRPCProperty]
 		public double FlameoutSafetyPct {
 			get => EditableVariables.GetDouble(this.flameoutSafetyPct);
@@ -147,12 +166,14 @@ namespace KRPC.MechJeb {
 			set => this.electricThrottle.SetValue(this.instance, value);
 		}
 
+		/// <remarks><see cref="ElectricThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double ElectricThrottleLo {
 			get => EditableVariables.GetDouble(this.electricThrottleLo);
 			set => EditableVariables.SetDouble(this.electricThrottleLo, value);
 		}
 
+		/// <remarks><see cref="ElectricThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double ElectricThrottleHi {
 			get => EditableVariables.GetDouble(this.electricThrottleHi);

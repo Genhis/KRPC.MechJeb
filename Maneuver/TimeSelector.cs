@@ -56,18 +56,18 @@ namespace KRPC.MechJeb.Maneuver {
 			throw new OperationException("This TimeReference is not allowed: " + timeRef);
 		}
 
-		/**
-		 * <summary>To be used with TimeReference.X_FROM_NOW</summary>
-		 */
+		/// <summary>
+		/// To be used with <see cref="TimeReference.XFromNow" />.
+		/// </summary>
 		[KRPCProperty]
 		public double LeadTime {
 			get => EditableVariables.GetDouble(this.leadTime);
 			set => EditableVariables.SetDouble(this.leadTime, value);
 		}
 
-		/**
-		 * <summary>To be used with TimeReference.ALTITUDE</summary>
-		 */
+		/// <summary>
+		/// To be used with <see cref="TimeReference.Altitude" />.
+		/// </summary>
 		[KRPCProperty]
 		public double CircularizeAltitude {
 			get => EditableVariables.GetDouble(this.circularizeAltitude);

@@ -1,0 +1,22 @@
+/* Copied from https://github.com/krpc/krpc/blob/master/doc/src/_static/custom.css */
+.clearer {
+    clear: both;
+}
+
+.rst-content code.literal {
+    color: #404040;
+}
+
+.rst-content dl:not(.docutils) .property {
+    display: inline;
+    padding-right: 0;
+}
+
+/* Add space after a link */
+a + .descname {
+	margin-left: 5px;
+}
+
+a + a + .descname {
+	margin-left: 0;
+}

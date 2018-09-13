@@ -1,6 +1,9 @@
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
+	/// <summary>
+	/// The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentPEG : AscentBase {
 		private readonly object pitchStartTime;
@@ -39,18 +42,27 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(this.pitchEndTime, value);
 		}
 
+		/// <summary>
+		/// The target apoapsis in meters.
+		/// </summary>
 		[KRPCProperty]
 		public double DesiredApoapsis {
 			get => EditableVariables.GetDouble(this.desiredApoapsis);
 			set => EditableVariables.SetDouble(this.desiredApoapsis, value);
 		}
 
+		/// <summary>
+		/// The terminal guidance period in seconds.
+		/// </summary>
 		[KRPCProperty]
 		public double TerminalGuidanceSecs {
 			get => EditableVariables.GetDouble(this.terminalGuidanceSecs);
 			set => EditableVariables.SetDouble(this.terminalGuidanceSecs, value);
 		}
 
+		/// <summary>
+		/// The minimum dV limit for a stage.
+		/// </summary>
 		[KRPCProperty]
 		public double StageLowDVLimit {
 			get => EditableVariables.GetDouble(this.stageLowDVLimit);
