@@ -1,0 +1,19 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+RCSController
+=============
+
+
+.. type:: public class RCSController
+
+
+
+   .. method:: boolean getRCSForRotation()
+
+   .. method:: void setRCSForRotation(boolean value)
+
+   .. method:: boolean getRCSThrottle()
+
+   .. method:: void setRCSThrottle(boolean value)

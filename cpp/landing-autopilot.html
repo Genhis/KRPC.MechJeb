@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LandingAutopilot &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RendezvousAutopilot" href="rendezvous-autopilot.html" />
+    <link rel="prev" title="DockingAutopilot" href="docking-autopilot.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#autopilots">Autopilots</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="airplane-autopilot.html">AirplaneAutopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ascent-autopilot.html">AscentAutopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docking-autopilot.html">DockingAutopilot</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LandingAutopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rendezvous-autopilot.html">RendezvousAutopilot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++</a> &raquo;</li>
+        
+      <li>LandingAutopilot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cpp/landing-autopilot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="landingautopilot">
+<h1>LandingAutopilot<a class="headerlink" href="#landingautopilot" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilotE">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilotE"></span><span id="krpc::services::MechJeb::LandingAutopilot"></span><em class="property">class </em><code class="descname">LandingAutopilot</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilotE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot7enabledEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot7enabledEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::enabled"></span>bool <code class="descname">enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot7enabledEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot11set_enabledEb">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot11set_enabledEb"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_enabled__b"></span>void <code class="descname">set_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot11set_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot6statusEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot6statusEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::status"></span>std::string <code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot6statusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot13deploy_chutesEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot13deploy_chutesEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::deploy_chutes"></span>bool <code class="descname">deploy_chutes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot13deploy_chutesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot17set_deploy_chutesEb">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot17set_deploy_chutesEb"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_deploy_chutes__b"></span>void <code class="descname">set_deploy_chutes</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot17set_deploy_chutesEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot12deploy_gearsEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot12deploy_gearsEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::deploy_gears"></span>bool <code class="descname">deploy_gears</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot12deploy_gearsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot16set_deploy_gearsEb">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot16set_deploy_gearsEb"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_deploy_gears__b"></span>void <code class="descname">set_deploy_gears</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot16set_deploy_gearsEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot23land_at_position_targetEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot23land_at_position_targetEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::land_at_position_target"></span>void <code class="descname">land_at_position_target</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot23land_at_position_targetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot15land_untargetedEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot15land_untargetedEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::land_untargeted"></span>void <code class="descname">land_untargeted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot15land_untargetedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot18limit_chutes_stageEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot18limit_chutes_stageEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::limit_chutes_stage"></span>int32_t <code class="descname">limit_chutes_stage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot18limit_chutes_stageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot22set_limit_chutes_stageE7int32_t">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot22set_limit_chutes_stageE7int32_t"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_limit_chutes_stage__int32_t"></span>void <code class="descname">set_limit_chutes_stage</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot22set_limit_chutes_stageE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot17limit_gears_stageEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot17limit_gears_stageEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::limit_gears_stage"></span>int32_t <code class="descname">limit_gears_stage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot17limit_gears_stageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot21set_limit_gears_stageE7int32_t">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot21set_limit_gears_stageE7int32_t"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_limit_gears_stage__int32_t"></span>void <code class="descname">set_limit_gears_stage</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot21set_limit_gears_stageE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot14rcs_adjustmentEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot14rcs_adjustmentEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::rcs_adjustment"></span>bool <code class="descname">rcs_adjustment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot14rcs_adjustmentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot18set_rcs_adjustmentEb">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot18set_rcs_adjustmentEb"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_rcs_adjustment__b"></span>void <code class="descname">set_rcs_adjustment</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot18set_rcs_adjustmentEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot12stop_landingEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot12stop_landingEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::stop_landing"></span>void <code class="descname">stop_landing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot12stop_landingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot15touchdown_speedEv">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot15touchdown_speedEv"></span><span id="krpc::services::MechJeb::LandingAutopilot::touchdown_speed"></span>double <code class="descname">touchdown_speed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot15touchdown_speedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16LandingAutopilot19set_touchdown_speedEd">
+<span id="_CPPv2N4krpc8services7MechJeb16LandingAutopilot19set_touchdown_speedEd"></span><span id="krpc::services::MechJeb::LandingAutopilot::set_touchdown_speed__double"></span>void <code class="descname">set_touchdown_speed</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16LandingAutopilot19set_touchdown_speedEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rendezvous-autopilot.html" class="btn btn-neutral float-right" title="RendezvousAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docking-autopilot.html" class="btn btn-neutral" title="DockingAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

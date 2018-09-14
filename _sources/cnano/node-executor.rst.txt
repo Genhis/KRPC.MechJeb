@@ -1,0 +1,28 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+NodeExecutor
+============
+
+
+.. type:: krpc_MechJeb_NodeExecutor_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Enabled(krpc_connection_t connection, bool * result)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Abort(krpc_connection_t connection)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Autowarp(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_NodeExecutor_set_Autowarp(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_ExecuteAllNodes(krpc_connection_t connection)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_ExecuteOneNode(krpc_connection_t connection)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_LeadTime(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_NodeExecutor_set_LeadTime(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Tolerance(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_NodeExecutor_set_Tolerance(double value)

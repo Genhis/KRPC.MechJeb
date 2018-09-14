@@ -1,0 +1,108 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+TargetController
+================
+
+
+.. class:: TargetController
+
+
+
+   .. attribute:: can_align
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: boolean
+
+   .. attribute:: distance
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: number
+
+   .. attribute:: docking_axis
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: Tuple of (number, number, number)
+
+   .. method:: get_position_target_position()
+
+
+
+      :rtype: Tuple of (number, number, number)
+
+   .. method:: get_position_target_string()
+
+
+
+      :rtype: string
+
+   .. attribute:: normal_target_exists
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: boolean
+
+   .. method:: pick_position_target_on_map()
+
+   .. attribute:: position
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: Tuple of (number, number, number)
+
+   .. attribute:: position_target_exists
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: boolean
+
+   .. attribute:: relative_position
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: Tuple of (number, number, number)
+
+   .. attribute:: relative_velocity
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: Tuple of (number, number, number)
+
+   .. method:: set_direction_target(name)
+
+
+
+      :param string name:
+
+   .. method:: set_position_target(body, latitude, longitude)
+
+
+
+      :param SpaceCenter.CelestialBody body:
+      :param number latitude:
+      :param number longitude:
+
+   .. attribute:: target_orbit
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`SpaceCenter.Orbit`
+
+   .. method:: update_direction_target(direction)
+
+
+
+      :param Tuple direction:

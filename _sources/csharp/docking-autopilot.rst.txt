@@ -1,0 +1,33 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+DockingAutopilot
+================
+
+
+.. class:: DockingAutopilot
+
+
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: string Status { get; }
+
+   .. property:: double SpeedLimit { get; set; }
+
+   .. property:: bool OverrideSafeDistance { get; set; }
+
+   .. property:: double OverridenSafeDistance { get; set; }
+
+   .. property:: bool OverrideTargetSize { get; set; }
+
+   .. property:: double OverridenTargetSize { get; set; }
+
+   .. property:: float SafeDistance { get; }
+
+   .. property:: float TargetSize { get; }
+
+   .. property:: bool ForceRoll { get; set; }
+
+   .. property:: double Roll { get; set; }

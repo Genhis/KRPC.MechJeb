@@ -1,0 +1,223 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+AscentAutopilot
+===============
+
+
+.. class:: AscentAutopilot
+
+   This module controls the Ascent Guidance in MechJeb 2.
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: string Status { get; }
+
+      The autopilot status; it depends on the selected ascent path.
+
+   .. property:: int AscentPathIndex { get; set; }
+
+      The selected ascent path.
+
+      0 = :type:`AscentClassic` (Classic Ascent Profile)
+
+      1 = :type:`AscentGT` (Stock-style GravityTurn)
+
+      2 = :type:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+
+   .. property:: AscentClassic AscentPathClassic { get; }
+
+      Get Classic Ascent Profile settings.
+
+   .. property:: AscentGT AscentPathGT { get; }
+
+      Get Stock-style GravityTurn profile settings.
+
+   .. property:: AscentPEG AscentPathPEG { get; }
+
+      Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+   .. property:: double DesiredInclination { get; set; }
+
+      The desired inclination.
+
+   .. property:: double DesiredOrbitAltitude { get; set; }
+
+      The desired orbit altitude.
+
+   .. property:: ThrustController ThrustController { get; }
+
+
+
+
+      .. note::
+
+         Equivalend to :prop:`MechJeb.ThrustController`.
+
+   .. property:: bool ForceRoll { get; set; }
+
+      The state of force roll.
+
+   .. property:: double TurnRoll { get; set; }
+
+      The turn roll used by the autopilot.
+
+   .. property:: double VerticalRoll { get; set; }
+
+      The vertical/climb roll used by the autopilot.
+
+   .. property:: bool LimitAoA { get; set; }
+
+      Whether to limit angle of attack.
+
+   .. property:: double MaxAoA { get; set; }
+
+      The maximal angle of attack used by the autopilot.
+
+   .. property:: double AoALimitFadeoutPressure { get; set; }
+
+      The pressure value when AoA limit is automatically deactivated.
+
+   .. property:: bool CorrectiveSteering { get; set; }
+
+      The state of corrective steering.
+
+   .. property:: double CorrectiveSteeringGain { get; set; }
+
+      The gain of corrective steering used by the autopilot.
+
+   .. property:: bool Autostage { get; set; }
+
+      Whether to enable autostaging. Paramethers can be set in :type:`StagingController`.
+
+   .. property:: StagingController StagingController { get; }
+
+
+
+
+      .. note::
+
+         Equivalent to :prop:`MechJeb.StagingController`.
+
+   .. property:: bool AutodeploySolarPanels { get; set; }
+
+      Whether to deploy solar panels automatically when the ascent finishes.
+
+   .. property:: bool AutoDeployAntennas { get; set; }
+
+      Whether to deploy antennas automatically when the ascent finishes.
+
+   .. property:: bool SkipCircularization { get; set; }
+
+      Whether to skip circularization burn and do only the ascent.
+
+   .. property:: int WarpCountDown { get; set; }
+
+   .. property:: double LaunchLANDifference { get; set; }
+
+   .. property:: double LaunchPhaseAngle { get; set; }
+
+   .. method:: void LaunchToRendezvous()
+
+   .. method:: void LaunchToTargetPlane()
+
+      Launch into the plane of the selected target.
+
+
+
+AscentClassic
+-------------
+
+
+.. class:: AscentClassic
+
+   The Classic Ascent Profile.
+
+   .. property:: bool AutoPath { get; set; }
+
+      Whether to enable automatic altitude turn.
+
+   .. property:: float AutoPathPerc { get; set; }
+
+      A value between 0 and 1.
+
+   .. property:: float AutoPathSpeedFactor { get; set; }
+
+      A value between 0 and 1.
+
+   .. property:: double AutoTurnStartAltitude { get; }
+
+   .. property:: double AutoTurnStartVelocity { get; }
+
+   .. property:: double AutoTurnEndAltitude { get; }
+
+   .. property:: double TurnStartAltitude { get; set; }
+
+      The turn starts when this altitude is reached.
+
+   .. property:: double TurnStartVelocity { get; set; }
+
+      The turn starts when this velocity is reached.
+
+   .. property:: double TurnEndAltitude { get; set; }
+
+      The turn ends when this altitude is reached.
+
+   .. property:: double TurnEndAngle { get; set; }
+
+      The final flight path angle.
+
+   .. property:: double TurnShapeExponent { get; set; }
+
+      A value between 0 - 1 describing how steep the turn is.
+
+
+
+AscentGT
+--------
+
+
+.. class:: AscentGT
+
+
+
+   .. property:: double HoldAPTime { get; set; }
+
+   .. property:: double IntermediateAltitude { get; set; }
+
+   .. property:: double TurnStartAltitude { get; set; }
+
+   .. property:: double TurnStartPitch { get; set; }
+
+   .. property:: double TurnStartVelocity { get; set; }
+
+
+
+AscentPEG
+---------
+
+
+.. class:: AscentPEG
+
+   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+
+   .. property:: double DesiredApoapsis { get; set; }
+
+      The target apoapsis in meters.
+
+   .. property:: double PitchStartTime { get; set; }
+
+   .. property:: double PitchRate { get; set; }
+
+   .. property:: double PitchEndTime { get; set; }
+
+   .. property:: double TerminalGuidanceSecs { get; set; }
+
+      The terminal guidance period in seconds.
+
+   .. property:: int EditNumStages { get; set; }
+
+   .. property:: double StageLowDVLimit { get; set; }
+
+      The minimum dV limit for a stage.

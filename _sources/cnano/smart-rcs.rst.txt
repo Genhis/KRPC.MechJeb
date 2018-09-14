@@ -1,0 +1,38 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+SmartRCS
+========
+
+
+.. type:: krpc_MechJeb_SmartRCS_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_SmartRCS_AutoDisableSmartRCS(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_SmartRCS_set_AutoDisableSmartRCS(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_SmartRCS_Mode(krpc_connection_t connection, krpc_MechJeb_SmartRCSMode_t * result)
+   .. function:: void krpc_MechJeb_SmartRCS_set_Mode(krpc_MechJeb_SmartRCSMode_t value)
+
+   .. function:: krpc_error_t krpc_MechJeb_SmartRCS_RCSController(krpc_connection_t connection, krpc_MechJeb_RCSController_t * result)
+
+
+
+.. type:: krpc_MechJeb_SmartRCSMode_t
+
+
+
+
+   .. macro:: KRPC_MECHJEB_SMARTRCSMODE_OFF
+
+
+
+
+   .. macro:: KRPC_MECHJEB_SMARTRCSMODE_ZERORELATIVEVELOCITY
+
+
+
+
+   .. macro:: KRPC_MECHJEB_SMARTRCSMODE_ZEROVELOCITY

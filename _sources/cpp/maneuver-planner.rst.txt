@@ -1,0 +1,574 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+ManeuverPlanner
+===============
+
+
+.. class:: ManeuverPlanner
+
+
+
+   .. function:: OperationApoapsis operation_apoapsis()
+
+   .. function:: OperationCircularize operation_circularize()
+
+   .. function:: OperationCourseCorrection operation_course_correction()
+
+   .. function:: OperationEllipticize operation_ellipticize()
+
+   .. function:: OperationInclination operation_inclination()
+
+   .. function:: OperationInterplanetaryTransfer operation_interplanetary_transfer()
+
+   .. function:: OperationKillRelVel operation_kill_rel_vel()
+
+   .. function:: OperationLambert operation_lambert()
+
+   .. function:: OperationLan operation_lan()
+
+   .. function:: OperationLongitude operation_longitude()
+
+   .. function:: OperationMoonReturn operation_moon_return()
+
+   .. function:: OperationPeriapsis operation_periapsis()
+
+   .. function:: OperationPlane operation_plane()
+
+   .. function:: OperationResonantOrbit operation_resonant_orbit()
+
+   .. function:: OperationSemiMajor operation_semi_major()
+
+   .. function:: OperationTransfer operation_transfer()
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. class:: OperationException
+
+   This exception is thrown when there is something wrong with the operation (e.g. the target is not set when the operation needs it).
+
+
+
+TimeSelector
+------------
+
+
+.. class:: TimeSelector
+
+
+
+   .. function:: double circularize_altitude()
+   .. function:: void set_circularize_altitude(double value)
+
+      To be used with :enumerator:`TimeReference::altitude`.
+
+   .. function:: double lead_time()
+   .. function:: void set_lead_time(double value)
+
+      To be used with :enumerator:`TimeReference::x_from_now`.
+
+   .. function:: TimeReference time_reference()
+   .. function:: void set_time_reference(TimeReference value)
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: TimeReference
+
+
+
+
+   .. enumerator:: altitude
+
+
+
+
+   .. enumerator:: apoapsis
+
+
+
+
+   .. enumerator:: closest_approach
+
+
+
+
+   .. enumerator:: computed
+
+
+
+
+   .. enumerator:: eq_ascending
+
+
+
+
+   .. enumerator:: eq_descending
+
+
+
+
+   .. enumerator:: eq_highest_ad
+
+
+
+
+   .. enumerator:: eq_nearest_ad
+
+
+
+
+   .. enumerator:: periapsis
+
+
+
+
+   .. enumerator:: rel_ascending
+
+
+
+
+   .. enumerator:: rel_descending
+
+
+
+
+   .. enumerator:: rel_highest_ad
+
+
+
+
+   .. enumerator:: rel_nearest_ad
+
+
+
+
+   .. enumerator:: x_from_now
+
+
+
+
+
+Operations
+----------
+
+OperationApoapsis
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationApoapsis
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_apoapsis()
+   .. function:: void set_new_apoapsis(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationCircularize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCircularize
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationCourseCorrection
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCourseCorrection
+
+
+
+   .. function:: double course_correct_final_pe_a()
+   .. function:: void set_course_correct_final_pe_a(double value)
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: double intercept_distance()
+   .. function:: void set_intercept_distance(double value)
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+
+OperationEllipticize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationEllipticize
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_apoapsis()
+   .. function:: void set_new_apoapsis(double value)
+
+   .. function:: double new_periapsis()
+   .. function:: void set_new_periapsis(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationInclination
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInclination
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_inclination()
+   .. function:: void set_new_inclination(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationInterplanetaryTransfer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInterplanetaryTransfer
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: bool wait_for_phase_angle()
+   .. function:: void set_wait_for_phase_angle(bool value)
+
+
+
+OperationKillRelVel
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationKillRelVel
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationLambert
+^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLambert
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: double intercept_interval()
+   .. function:: void set_intercept_interval(double value)
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationLan
+^^^^^^^^^^^^
+
+
+.. class:: OperationLan
+
+   Change longitude of ascending node
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_lan()
+   .. function:: void set_new_lan(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationLongitude
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLongitude
+
+   Change longitude of ascending node
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_surface_longitude()
+   .. function:: void set_new_surface_longitude(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationMoonReturn
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationMoonReturn
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double moon_return_altitude()
+   .. function:: void set_moon_return_altitude(double value)
+
+
+
+OperationPeriapsis
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationPeriapsis
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_periapsis()
+   .. function:: void set_new_periapsis(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationPlane
+^^^^^^^^^^^^^^
+
+
+.. class:: OperationPlane
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationResonantOrbit
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationResonantOrbit
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: int32_t resonance_denominator()
+   .. function:: void set_resonance_denominator(int32_t value)
+
+   .. function:: int32_t resonance_numerator()
+   .. function:: void set_resonance_numerator(int32_t value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationSemiMajor
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationSemiMajor
+
+
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. function:: double new_semi_major_axis()
+   .. function:: void set_new_semi_major_axis(double value)
+
+   .. function:: TimeSelector time_selector()
+
+
+
+OperationTransfer
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationTransfer
+
+   Hohmann transfer to target
+
+   .. function:: std::string error_message()
+
+      A warning may be stored there during MakeNode() call.
+
+   .. function:: SpaceCenter::Node make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.

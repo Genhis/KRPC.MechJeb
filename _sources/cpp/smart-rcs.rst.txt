@@ -1,0 +1,39 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+SmartRCS
+========
+
+
+.. class:: SmartRCS
+
+
+
+   .. function:: bool auto_disable_smart_rcs()
+   .. function:: void set_auto_disable_smart_rcs(bool value)
+
+   .. function:: SmartRCSMode mode()
+   .. function:: void set_mode(SmartRCSMode value)
+
+   .. function:: RCSController rcs_controller()
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: SmartRCSMode
+
+
+
+
+   .. enumerator:: off
+
+
+
+
+   .. enumerator:: zero_relative_velocity
+
+
+
+
+   .. enumerator:: zero_velocity

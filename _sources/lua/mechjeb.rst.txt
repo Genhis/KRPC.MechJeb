@@ -1,0 +1,167 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+MechJeb service
+===============
+
+
+.. module:: MechJeb
+
+This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
+
+
+.. attribute:: api_ready
+
+   A value indicating whether the service is available.
+
+   :Attribute: Read-only, cannot be set
+   :rtype: boolean
+
+
+
+
+.. attribute:: airplane_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.AirplaneAutopilot`
+
+
+
+
+.. attribute:: antenna_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.DeployableController`
+
+
+
+
+.. attribute:: ascent_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.AscentAutopilot`
+
+
+
+
+.. attribute:: docking_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.DockingAutopilot`
+
+
+
+
+.. attribute:: landing_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.LandingAutopilot`
+
+
+
+
+.. attribute:: maneuver_planner
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.ManeuverPlanner`
+
+
+
+
+.. attribute:: node_executor
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.NodeExecutor`
+
+
+
+
+.. attribute:: rcs_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.RCSController`
+
+
+
+
+.. attribute:: rendezvous_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.RendezvousAutopilot`
+
+
+
+
+.. attribute:: smart_rcs
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.SmartRCS`
+
+
+
+
+.. attribute:: solar_panel_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.DeployableController`
+
+
+
+
+.. attribute:: staging_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.StagingController`
+
+
+
+
+.. attribute:: target_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.TargetController`
+
+
+
+
+.. attribute:: thrust_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.ThrustController`
+
+
+
+
+
+.. class:: MJServiceException
+
+   General exception for errors in the service.

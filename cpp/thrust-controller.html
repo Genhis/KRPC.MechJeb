@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ThrustController &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Java" href="../java/index.html" />
+    <link rel="prev" title="TargetController" href="target-controller.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C++</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#autopilots">Autopilots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#windows">Windows</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#controllers">Controllers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="node-executor.html">NodeExecutor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rcs-controller.html">RCSController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="staging-controller.html">StagingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="target-controller.html">TargetController</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ThrustController</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C++</a> &raquo;</li>
+        
+      <li>ThrustController</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cpp/thrust-controller.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="thrustcontroller">
+<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustControllerE">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustControllerE"></span><span id="krpc::services::MechJeb::ThrustController"></span><em class="property">class </em><code class="descname">ThrustController</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustControllerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController21differential_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController21differential_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::differential_throttle"></span>bool <code class="descname">differential_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController21differential_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController25set_differential_throttleEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController25set_differential_throttleEb"></span><span id="krpc::services::MechJeb::ThrustController::set_differential_throttle__b"></span>void <code class="descname">set_differential_throttle</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController25set_differential_throttleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController28differential_throttle_statusEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController28differential_throttle_statusEv"></span><span id="krpc::services::MechJeb::ThrustController::differential_throttle_status"></span><a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatusE" title="krpc::services::MechJeb::DifferentialThrottleStatus">DifferentialThrottleStatus</a> <code class="descname">differential_throttle_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController28differential_throttle_statusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController17electric_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController17electric_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::electric_throttle"></span>bool <code class="descname">electric_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController17electric_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController21set_electric_throttleEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController21set_electric_throttleEb"></span><span id="krpc::services::MechJeb::ThrustController::set_electric_throttle__b"></span>void <code class="descname">set_electric_throttle</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController21set_electric_throttleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController20electric_throttle_hiEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController20electric_throttle_hiEv"></span><span id="krpc::services::MechJeb::ThrustController::electric_throttle_hi"></span>double <code class="descname">electric_throttle_hi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController20electric_throttle_hiEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController24set_electric_throttle_hiEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController24set_electric_throttle_hiEd"></span><span id="krpc::services::MechJeb::ThrustController::set_electric_throttle_hi__double"></span>void <code class="descname">set_electric_throttle_hi</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController24set_electric_throttle_hiEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController20electric_throttle_loEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController20electric_throttle_loEv"></span><span id="krpc::services::MechJeb::ThrustController::electric_throttle_lo"></span>double <code class="descname">electric_throttle_lo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController20electric_throttle_loEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController24set_electric_throttle_loEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController24set_electric_throttle_loEd"></span><span id="krpc::services::MechJeb::ThrustController::set_electric_throttle_lo__double"></span>void <code class="descname">set_electric_throttle_lo</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController24set_electric_throttle_loEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController19flameout_safety_pctEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController19flameout_safety_pctEv"></span><span id="krpc::services::MechJeb::ThrustController::flameout_safety_pct"></span>double <code class="descname">flameout_safety_pct</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController19flameout_safety_pctEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController23set_flameout_safety_pctEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController23set_flameout_safety_pctEd"></span><span id="krpc::services::MechJeb::ThrustController::set_flameout_safety_pct__double"></span>void <code class="descname">set_flameout_safety_pct</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController23set_flameout_safety_pctEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The jet safety margin. A value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController18limit_accelerationEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController18limit_accelerationEv"></span><span id="krpc::services::MechJeb::ThrustController::limit_acceleration"></span>bool <code class="descname">limit_acceleration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController18limit_accelerationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController22set_limit_accelerationEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController22set_limit_accelerationEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limit_acceleration__b"></span>void <code class="descname">set_limit_acceleration</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController22set_limit_accelerationEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController22limit_dynamic_pressureEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController22limit_dynamic_pressureEv"></span><span id="krpc::services::MechJeb::ThrustController::limit_dynamic_pressure"></span>bool <code class="descname">limit_dynamic_pressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController22limit_dynamic_pressureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController26set_limit_dynamic_pressureEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController26set_limit_dynamic_pressureEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limit_dynamic_pressure__b"></span>void <code class="descname">set_limit_dynamic_pressure</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController26set_limit_dynamic_pressureEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController14limit_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController14limit_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::limit_throttle"></span>bool <code class="descname">limit_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController14limit_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController18set_limit_throttleEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController18set_limit_throttleEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limit_throttle__b"></span>void <code class="descname">set_limit_throttle</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController18set_limit_throttleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController25limit_to_prevent_flameoutEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController25limit_to_prevent_flameoutEv"></span><span id="krpc::services::MechJeb::ThrustController::limit_to_prevent_flameout"></span>bool <code class="descname">limit_to_prevent_flameout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController25limit_to_prevent_flameoutEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController29set_limit_to_prevent_flameoutEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController29set_limit_to_prevent_flameoutEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limit_to_prevent_flameout__b"></span>void <code class="descname">set_limit_to_prevent_flameout</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController29set_limit_to_prevent_flameoutEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController26limit_to_prevent_overheatsEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController26limit_to_prevent_overheatsEv"></span><span id="krpc::services::MechJeb::ThrustController::limit_to_prevent_overheats"></span>bool <code class="descname">limit_to_prevent_overheats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController26limit_to_prevent_overheatsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController30set_limit_to_prevent_overheatsEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController30set_limit_to_prevent_overheatsEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limit_to_prevent_overheats__b"></span>void <code class="descname">set_limit_to_prevent_overheats</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController30set_limit_to_prevent_overheatsEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController20limiter_min_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController20limiter_min_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::limiter_min_throttle"></span>bool <code class="descname">limiter_min_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController20limiter_min_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController24set_limiter_min_throttleEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController24set_limiter_min_throttleEb"></span><span id="krpc::services::MechJeb::ThrustController::set_limiter_min_throttle__b"></span>void <code class="descname">set_limiter_min_throttle</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController24set_limiter_min_throttleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController14manage_intakesEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController14manage_intakesEv"></span><span id="krpc::services::MechJeb::ThrustController::manage_intakes"></span>bool <code class="descname">manage_intakes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController14manage_intakesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController18set_manage_intakesEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController18set_manage_intakesEb"></span><span id="krpc::services::MechJeb::ThrustController::set_manage_intakes__b"></span>void <code class="descname">set_manage_intakes</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController18set_manage_intakesEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController16max_accelerationEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController16max_accelerationEv"></span><span id="krpc::services::MechJeb::ThrustController::max_acceleration"></span>double <code class="descname">max_acceleration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController16max_accelerationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController20set_max_accelerationEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController20set_max_accelerationEd"></span><span id="krpc::services::MechJeb::ThrustController::set_max_acceleration__double"></span>void <code class="descname">set_max_acceleration</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController20set_max_accelerationEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Limit acceleration to this value in m/s^2.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController20max_dynamic_pressureEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController20max_dynamic_pressureEv"></span><span id="krpc::services::MechJeb::ThrustController::max_dynamic_pressure"></span>double <code class="descname">max_dynamic_pressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController20max_dynamic_pressureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController24set_max_dynamic_pressureEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController24set_max_dynamic_pressureEd"></span><span id="krpc::services::MechJeb::ThrustController::set_max_dynamic_pressure__double"></span>void <code class="descname">set_max_dynamic_pressure</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController24set_max_dynamic_pressureEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Limit Q to this value in Pa.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController12max_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController12max_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::max_throttle"></span>double <code class="descname">max_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController12max_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController16set_max_throttleEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController16set_max_throttleEd"></span><span id="krpc::services::MechJeb::ThrustController::set_max_throttle__double"></span>void <code class="descname">set_max_throttle</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController16set_max_throttleEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Limit throttle to this value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController12min_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController12min_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::min_throttle"></span>double <code class="descname">min_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController12min_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController16set_min_throttleEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController16set_min_throttleEd"></span><span id="krpc::services::MechJeb::ThrustController::set_min_throttle__double"></span>void <code class="descname">set_min_throttle</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController16set_min_throttleEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Keep limited throttle over this value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController15smooth_throttleEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController15smooth_throttleEv"></span><span id="krpc::services::MechJeb::ThrustController::smooth_throttle"></span>bool <code class="descname">smooth_throttle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController15smooth_throttleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController19set_smooth_throttleEb">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController19set_smooth_throttleEb"></span><span id="krpc::services::MechJeb::ThrustController::set_smooth_throttle__b"></span>void <code class="descname">set_smooth_throttle</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController19set_smooth_throttleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController23throttle_smoothing_timeEv">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController23throttle_smoothing_timeEv"></span><span id="krpc::services::MechJeb::ThrustController::throttle_smoothing_time"></span>double <code class="descname">throttle_smoothing_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController23throttle_smoothing_timeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb16ThrustController27set_throttle_smoothing_timeEd">
+<span id="_CPPv2N4krpc8services7MechJeb16ThrustController27set_throttle_smoothing_timeEd"></span><span id="krpc::services::MechJeb::ThrustController::set_throttle_smoothing_time__double"></span>void <code class="descname">set_throttle_smoothing_time</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ThrustController27set_throttle_smoothing_timeEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="enum-struct">
+<dt id="_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatusE">
+<span id="_CPPv2N4krpc8services7MechJeb26DifferentialThrottleStatusE"></span><em class="property">enum struct </em><code class="descname">DifferentialThrottleStatus</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="enumerator">
+<dt id="_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus15all_engines_offE">
+<span id="_CPPv2N4krpc8services7MechJeb26DifferentialThrottleStatus15all_engines_offE"></span><em class="property">enumerator </em><code class="descname">all_engines_off</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus15all_engines_offE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus21more_engines_requiredE">
+<span id="_CPPv2N4krpc8services7MechJeb26DifferentialThrottleStatus21more_engines_requiredE"></span><em class="property">enumerator </em><code class="descname">more_engines_required</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus21more_engines_requiredE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus13solver_failedE">
+<span id="_CPPv2N4krpc8services7MechJeb26DifferentialThrottleStatus13solver_failedE"></span><em class="property">enumerator </em><code class="descname">solver_failed</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus13solver_failedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus7successE">
+<span id="_CPPv2N4krpc8services7MechJeb26DifferentialThrottleStatus7successE"></span><em class="property">enumerator </em><code class="descname">success</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb26DifferentialThrottleStatus7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../java/index.html" class="btn btn-neutral float-right" title="Java" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="target-controller.html" class="btn btn-neutral" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+MechJeb service
+===============
+
+
+.. class:: MechJeb
+
+   This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
+
+   .. property:: bool APIReady { get; }
+
+      A value indicating whether the service is available.
+
+   .. property:: AirplaneAutopilot AirplaneAutopilot { get; }
+
+   .. property:: DeployableController AntennaController { get; }
+
+   .. property:: AscentAutopilot AscentAutopilot { get; }
+
+   .. property:: DockingAutopilot DockingAutopilot { get; }
+
+   .. property:: LandingAutopilot LandingAutopilot { get; }
+
+   .. property:: ManeuverPlanner ManeuverPlanner { get; }
+
+   .. property:: NodeExecutor NodeExecutor { get; }
+
+   .. property:: RCSController RCSController { get; }
+
+   .. property:: RendezvousAutopilot RendezvousAutopilot { get; }
+
+   .. property:: SmartRCS SmartRCS { get; }
+
+   .. property:: DeployableController SolarPanelController { get; }
+
+   .. property:: StagingController StagingController { get; }
+
+   .. property:: TargetController TargetController { get; }
+
+   .. property:: ThrustController ThrustController { get; }
+
+
+
+.. class:: MJServiceException
+
+   General exception for errors in the service.

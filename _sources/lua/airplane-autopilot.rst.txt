@@ -1,0 +1,193 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+AirplaneAutopilot
+=================
+
+
+.. class:: AirplaneAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: altitude_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: altitude_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: heading_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: heading_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: roll_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: roll_max
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: roll_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: speed_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: speed_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: vert_speed_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: vert_speed_max
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: vert_speed_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: acc_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: acc_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: acc_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: rol_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: rol_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: rol_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: ver_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: ver_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: ver_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: yaw_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: yaw_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: yaw_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: yaw_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

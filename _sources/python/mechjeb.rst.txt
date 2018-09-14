@@ -1,0 +1,167 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+MechJeb service
+===============
+
+
+.. module:: MechJeb
+
+This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
+
+
+.. attribute:: api_ready
+
+   A value indicating whether the service is available.
+
+   :Attribute: Read-only, cannot be set
+   :rtype: bool
+
+
+
+
+.. attribute:: airplane_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`AirplaneAutopilot`
+
+
+
+
+.. attribute:: antenna_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`DeployableController`
+
+
+
+
+.. attribute:: ascent_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`AscentAutopilot`
+
+
+
+
+.. attribute:: docking_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`DockingAutopilot`
+
+
+
+
+.. attribute:: landing_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`LandingAutopilot`
+
+
+
+
+.. attribute:: maneuver_planner
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`ManeuverPlanner`
+
+
+
+
+.. attribute:: node_executor
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`NodeExecutor`
+
+
+
+
+.. attribute:: rcs_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`RCSController`
+
+
+
+
+.. attribute:: rendezvous_autopilot
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`RendezvousAutopilot`
+
+
+
+
+.. attribute:: smart_rcs
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`SmartRCS`
+
+
+
+
+.. attribute:: solar_panel_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`DeployableController`
+
+
+
+
+.. attribute:: staging_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`StagingController`
+
+
+
+
+.. attribute:: target_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`TargetController`
+
+
+
+
+.. attribute:: thrust_controller
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`ThrustController`
+
+
+
+
+
+.. class:: MJServiceException
+
+   General exception for errors in the service.

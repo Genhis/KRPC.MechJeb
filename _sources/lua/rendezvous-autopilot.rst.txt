@@ -1,0 +1,39 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+RendezvousAutopilot
+===================
+
+
+.. class:: RendezvousAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. attribute:: desired_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: max_phasing_orbits
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

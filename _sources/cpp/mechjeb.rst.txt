@@ -1,0 +1,55 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+MechJeb service
+===============
+
+
+.. namespace:: krpc::services
+.. class:: MechJeb : public krpc::Service
+
+   This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
+
+   .. function:: MechJeb(krpc::Client* client)
+
+      Construct an instance of this service.
+
+   .. function:: bool api_ready()
+
+      A value indicating whether the service is available.
+
+   .. function:: AirplaneAutopilot airplane_autopilot()
+
+   .. function:: DeployableController antenna_controller()
+
+   .. function:: AscentAutopilot ascent_autopilot()
+
+   .. function:: DockingAutopilot docking_autopilot()
+
+   .. function:: LandingAutopilot landing_autopilot()
+
+   .. function:: ManeuverPlanner maneuver_planner()
+
+   .. function:: NodeExecutor node_executor()
+
+   .. function:: RCSController rcs_controller()
+
+   .. function:: RendezvousAutopilot rendezvous_autopilot()
+
+   .. function:: SmartRCS smart_rcs()
+
+   .. function:: DeployableController solar_panel_controller()
+
+   .. function:: StagingController staging_controller()
+
+   .. function:: TargetController target_controller()
+
+   .. function:: ThrustController thrust_controller()
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. class:: MJServiceException
+
+   General exception for errors in the service.

@@ -1,0 +1,40 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+LandingAutopilot
+================
+
+
+.. class:: LandingAutopilot
+
+
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: std::string status()
+
+   .. function:: bool deploy_chutes()
+   .. function:: void set_deploy_chutes(bool value)
+
+   .. function:: bool deploy_gears()
+   .. function:: void set_deploy_gears(bool value)
+
+   .. function:: void land_at_position_target()
+
+   .. function:: void land_untargeted()
+
+   .. function:: int32_t limit_chutes_stage()
+   .. function:: void set_limit_chutes_stage(int32_t value)
+
+   .. function:: int32_t limit_gears_stage()
+   .. function:: void set_limit_gears_stage(int32_t value)
+
+   .. function:: bool rcs_adjustment()
+   .. function:: void set_rcs_adjustment(bool value)
+
+   .. function:: void stop_landing()
+
+   .. function:: double touchdown_speed()
+   .. function:: void set_touchdown_speed(double value)

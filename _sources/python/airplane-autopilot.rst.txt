@@ -1,0 +1,193 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+AirplaneAutopilot
+=================
+
+
+.. class:: AirplaneAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: altitude_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: altitude_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: heading_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: heading_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: roll_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: roll_max
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: roll_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: speed_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: speed_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: vert_speed_hold_enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: vert_speed_max
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: vert_speed_target
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: acc_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: acc_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: acc_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: rol_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: rol_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: rol_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: ver_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: ver_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: ver_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: yaw_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: yaw_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: yaw_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: yaw_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double

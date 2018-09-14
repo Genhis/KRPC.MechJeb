@@ -1,0 +1,88 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+DockingAutopilot
+================
+
+
+.. class:: DockingAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: str
+
+   .. attribute:: speed_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: override_safe_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: overriden_safe_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: override_target_size
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: overriden_target_size
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: safe_distance
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: float
+
+   .. attribute:: target_size
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: float
+
+   .. attribute:: force_roll
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: roll
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double

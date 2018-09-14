@@ -1,0 +1,33 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+LandingAutopilot
+================
+
+
+.. class:: LandingAutopilot
+
+
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: string Status { get; }
+
+   .. property:: bool DeployChutes { get; set; }
+
+   .. property:: bool DeployGears { get; set; }
+
+   .. method:: void LandAtPositionTarget()
+
+   .. method:: void LandUntargeted()
+
+   .. property:: int LimitChutesStage { get; set; }
+
+   .. property:: int LimitGearsStage { get; set; }
+
+   .. property:: bool RcsAdjustment { get; set; }
+
+   .. method:: void StopLanding()
+
+   .. property:: double TouchdownSpeed { get; set; }

@@ -1,0 +1,15 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+RCSController
+=============
+
+
+.. class:: RCSController
+
+
+
+   .. property:: bool RCSForRotation { get; set; }
+
+   .. property:: bool RCSThrottle { get; set; }

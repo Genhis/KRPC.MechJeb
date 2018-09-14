@@ -1,0 +1,41 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+DockingAutopilot
+================
+
+
+.. class:: DockingAutopilot
+
+
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: std::string status()
+
+   .. function:: double speed_limit()
+   .. function:: void set_speed_limit(double value)
+
+   .. function:: bool override_safe_distance()
+   .. function:: void set_override_safe_distance(bool value)
+
+   .. function:: double overriden_safe_distance()
+   .. function:: void set_overriden_safe_distance(double value)
+
+   .. function:: bool override_target_size()
+   .. function:: void set_override_target_size(bool value)
+
+   .. function:: double overriden_target_size()
+   .. function:: void set_overriden_target_size(double value)
+
+   .. function:: float safe_distance()
+
+   .. function:: float target_size()
+
+   .. function:: bool force_roll()
+   .. function:: void set_force_roll(bool value)
+
+   .. function:: double roll()
+   .. function:: void set_roll(double value)

@@ -1,0 +1,17 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+RCSController
+=============
+
+
+.. type:: krpc_MechJeb_RCSController_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_RCSController_RCSForRotation(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_RCSController_set_RCSForRotation(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_RCSController_RCSThrottle(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_RCSController_set_RCSThrottle(bool value)

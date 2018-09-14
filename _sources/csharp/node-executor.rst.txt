@@ -1,0 +1,25 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+NodeExecutor
+============
+
+
+.. class:: NodeExecutor
+
+
+
+   .. property:: bool Enabled { get; }
+
+   .. method:: void Abort()
+
+   .. property:: bool Autowarp { get; set; }
+
+   .. method:: void ExecuteAllNodes()
+
+   .. method:: void ExecuteOneNode()
+
+   .. property:: double LeadTime { get; set; }
+
+   .. property:: double Tolerance { get; set; }

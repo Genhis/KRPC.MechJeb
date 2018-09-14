@@ -1,0 +1,38 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+StagingController
+=================
+
+
+.. class:: StagingController
+
+
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: bool AutostagingOnce { get; set; }
+
+      The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+
+      .. note::
+
+         The controller needs to be enabled for this to work.
+
+   .. property:: int AutostageLimit { get; set; }
+
+      Stop at the selected stage.
+
+   .. property:: double AutostagePostDelay { get; set; }
+
+   .. property:: double AutostagePreDelay { get; set; }
+
+   .. property:: double ClampAutoStageThrustPct { get; set; }
+
+   .. property:: double FairingMaxAerothermalFlux { get; set; }
+
+   .. property:: double FairingMaxDynamicPressure { get; set; }
+
+   .. property:: double FairingMinAltitude { get; set; }

@@ -1,0 +1,73 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+LandingAutopilot
+================
+
+
+.. class:: LandingAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. attribute:: deploy_chutes
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: deploy_gears
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. method:: land_at_position_target()
+
+   .. method:: land_untargeted()
+
+   .. attribute:: limit_chutes_stage
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: limit_gears_stage
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: rcs_adjustment
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. method:: stop_landing()
+
+   .. attribute:: touchdown_speed
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

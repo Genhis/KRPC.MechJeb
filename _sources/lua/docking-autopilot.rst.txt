@@ -1,0 +1,88 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+DockingAutopilot
+================
+
+
+.. class:: DockingAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. attribute:: speed_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: override_safe_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: overriden_safe_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: override_target_size
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: overriden_target_size
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: safe_distance
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: number
+
+   .. attribute:: target_size
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: number
+
+   .. attribute:: force_roll
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: roll
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

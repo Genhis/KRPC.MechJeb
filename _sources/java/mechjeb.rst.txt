@@ -1,0 +1,50 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+MechJeb service
+===============
+
+
+.. type:: public class MechJeb
+
+   This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
+
+   .. method:: boolean getAPIReady()
+
+
+      A value indicating whether the service is available.
+
+   .. method:: AirplaneAutopilot getAirplaneAutopilot()
+
+   .. method:: DeployableController getAntennaController()
+
+   .. method:: AscentAutopilot getAscentAutopilot()
+
+   .. method:: DockingAutopilot getDockingAutopilot()
+
+   .. method:: LandingAutopilot getLandingAutopilot()
+
+   .. method:: ManeuverPlanner getManeuverPlanner()
+
+   .. method:: NodeExecutor getNodeExecutor()
+
+   .. method:: RCSController getRCSController()
+
+   .. method:: RendezvousAutopilot getRendezvousAutopilot()
+
+   .. method:: SmartRCS getSmartRCS()
+
+   .. method:: DeployableController getSolarPanelController()
+
+   .. method:: StagingController getStagingController()
+
+   .. method:: TargetController getTargetController()
+
+   .. method:: ThrustController getThrustController()
+
+
+
+.. type:: public class MJServiceException
+
+   General exception for errors in the service.

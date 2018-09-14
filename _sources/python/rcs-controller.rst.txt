@@ -1,0 +1,25 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+RCSController
+=============
+
+
+.. class:: RCSController
+
+
+
+   .. attribute:: rcs_for_rotation
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: rcs_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool

@@ -1,0 +1,28 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+NodeExecutor
+============
+
+
+.. class:: NodeExecutor
+
+
+
+   .. function:: bool enabled()
+
+   .. function:: void abort()
+
+   .. function:: bool autowarp()
+   .. function:: void set_autowarp(bool value)
+
+   .. function:: void execute_all_nodes()
+
+   .. function:: void execute_one_node()
+
+   .. function:: double lead_time()
+   .. function:: void set_lead_time(double value)
+
+   .. function:: double tolerance()
+   .. function:: void set_tolerance(double value)

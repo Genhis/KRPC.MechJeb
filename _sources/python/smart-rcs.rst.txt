@@ -1,0 +1,51 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+SmartRCS
+========
+
+
+.. class:: SmartRCS
+
+
+
+   .. attribute:: auto_disable_smart_rcs
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: mode
+
+
+
+      :Attribute: Can be read or written
+      :rtype: :class:`SmartRCSMode`
+
+   .. attribute:: rcs_controller
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`RCSController`
+
+
+
+.. class:: SmartRCSMode
+
+
+
+
+   .. data:: off
+
+
+
+
+   .. data:: zero_relative_velocity
+
+
+
+
+   .. data:: zero_velocity

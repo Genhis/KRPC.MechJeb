@@ -1,0 +1,25 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+RCSController
+=============
+
+
+.. class:: RCSController
+
+
+
+   .. attribute:: rcs_for_rotation
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: rcs_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean

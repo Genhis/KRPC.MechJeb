@@ -1,0 +1,1043 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SmartRCS" href="smart-rcs.html" />
+    <link rel="prev" title="RendezvousAutopilot" href="rendezvous-autopilot.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Java</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#autopilots">Autopilots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#windows">Windows</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ManeuverPlanner</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#timeselector">TimeSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operations">Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="smart-rcs.html">SmartRCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Java</a> &raquo;</li>
+        
+      <li>ManeuverPlanner</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/java/maneuver-planner.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="package-krpc.client.services.MechJeb"></span><div class="section" id="maneuverplanner">
+<h1>ManeuverPlanner<a class="headerlink" href="#maneuverplanner" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner">
+public class <code class="descname">ManeuverPlanner</code><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationApoapsis()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationApoapsis" title="krpc.client.services.MechJeb.OperationApoapsis">OperationApoapsis</a> <code class="descname">getOperationApoapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationApoapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationCircularize()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationCircularize" title="krpc.client.services.MechJeb.OperationCircularize">OperationCircularize</a> <code class="descname">getOperationCircularize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationCircularize()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationCourseCorrection()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationCourseCorrection" title="krpc.client.services.MechJeb.OperationCourseCorrection">OperationCourseCorrection</a> <code class="descname">getOperationCourseCorrection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationCourseCorrection()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationEllipticize()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationEllipticize" title="krpc.client.services.MechJeb.OperationEllipticize">OperationEllipticize</a> <code class="descname">getOperationEllipticize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationEllipticize()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationInclination()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationInclination" title="krpc.client.services.MechJeb.OperationInclination">OperationInclination</a> <code class="descname">getOperationInclination</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationInclination()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationInterplanetaryTransfer()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer" title="krpc.client.services.MechJeb.OperationInterplanetaryTransfer">OperationInterplanetaryTransfer</a> <code class="descname">getOperationInterplanetaryTransfer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationInterplanetaryTransfer()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationKillRelVel()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationKillRelVel" title="krpc.client.services.MechJeb.OperationKillRelVel">OperationKillRelVel</a> <code class="descname">getOperationKillRelVel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationKillRelVel()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationLambert()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationLambert" title="krpc.client.services.MechJeb.OperationLambert">OperationLambert</a> <code class="descname">getOperationLambert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationLambert()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationLan()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationLan" title="krpc.client.services.MechJeb.OperationLan">OperationLan</a> <code class="descname">getOperationLan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationLan()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationLongitude()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationLongitude" title="krpc.client.services.MechJeb.OperationLongitude">OperationLongitude</a> <code class="descname">getOperationLongitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationLongitude()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationMoonReturn()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationMoonReturn" title="krpc.client.services.MechJeb.OperationMoonReturn">OperationMoonReturn</a> <code class="descname">getOperationMoonReturn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationMoonReturn()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationPeriapsis()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationPeriapsis" title="krpc.client.services.MechJeb.OperationPeriapsis">OperationPeriapsis</a> <code class="descname">getOperationPeriapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationPeriapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationPlane()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationPlane" title="krpc.client.services.MechJeb.OperationPlane">OperationPlane</a> <code class="descname">getOperationPlane</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationPlane()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationResonantOrbit()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationResonantOrbit" title="krpc.client.services.MechJeb.OperationResonantOrbit">OperationResonantOrbit</a> <code class="descname">getOperationResonantOrbit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationResonantOrbit()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationSemiMajor()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationSemiMajor" title="krpc.client.services.MechJeb.OperationSemiMajor">OperationSemiMajor</a> <code class="descname">getOperationSemiMajor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationSemiMajor()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.ManeuverPlanner.getOperationTransfer()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.OperationTransfer" title="krpc.client.services.MechJeb.OperationTransfer">OperationTransfer</a> <code class="descname">getOperationTransfer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.ManeuverPlanner.getOperationTransfer()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationException">
+public class <code class="descname">OperationException</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationException" title="Permalink to this definition">¶</a></dt>
+<dd><p>This exception is thrown when there is something wrong with the operation (e.g. the target is not set when the operation needs it).</p>
+</dd></dl>
+
+<div class="section" id="timeselector">
+<h2>TimeSelector<a class="headerlink" href="#timeselector" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.TimeSelector">
+public class <code class="descname">TimeSelector</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.getCircularizeAltitude()">
+ double <code class="descname">getCircularizeAltitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.getCircularizeAltitude()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.setCircularizeAltitude(double)">
+ void <code class="descname">setCircularizeAltitude</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.setCircularizeAltitude(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>To be used with <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference.ALTITUDE" title="krpc.client.services.MechJeb.TimeReference.ALTITUDE"><code class="xref java java-meth docutils literal notranslate"><span class="pre">TimeReference.ALTITUDE</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.getLeadTime()">
+ double <code class="descname">getLeadTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.getLeadTime()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.setLeadTime(double)">
+ void <code class="descname">setLeadTime</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.setLeadTime(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>To be used with <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference.X_FROM_NOW" title="krpc.client.services.MechJeb.TimeReference.X_FROM_NOW"><code class="xref java java-meth docutils literal notranslate"><span class="pre">TimeReference.X_FROM_NOW</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.getTimeReference()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">getTimeReference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.getTimeReference()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.TimeSelector.setTimeReference(TimeReference)">
+ void <code class="descname">setTimeReference</code><span class="sig-paren">(</span><a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a><em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TimeSelector.setTimeReference(TimeReference)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.TimeReference">
+public enum <code class="descname">TimeReference</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.ALTITUDE">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">ALTITUDE</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.ALTITUDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.APOAPSIS">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">APOAPSIS</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.APOAPSIS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.CLOSEST_APPROACH">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">CLOSEST_APPROACH</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.CLOSEST_APPROACH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.COMPUTED">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">COMPUTED</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.COMPUTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.EQ_ASCENDING">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">EQ_ASCENDING</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.EQ_ASCENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.EQ_DESCENDING">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">EQ_DESCENDING</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.EQ_DESCENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.EQ_HIGHEST_AD">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">EQ_HIGHEST_AD</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.EQ_HIGHEST_AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.EQ_NEAREST_AD">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">EQ_NEAREST_AD</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.EQ_NEAREST_AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.PERIAPSIS">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">PERIAPSIS</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.PERIAPSIS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.REL_ASCENDING">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">REL_ASCENDING</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.REL_ASCENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.REL_DESCENDING">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">REL_DESCENDING</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.REL_DESCENDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.REL_HIGHEST_AD">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">REL_HIGHEST_AD</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.REL_HIGHEST_AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.REL_NEAREST_AD">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">REL_NEAREST_AD</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.REL_NEAREST_AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TimeReference.X_FROM_NOW">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TimeReference" title="krpc.client.services.MechJeb.TimeReference">TimeReference</a> <code class="descname">X_FROM_NOW</code><a class="headerlink" href="#krpc.client.services.MechJeb.TimeReference.X_FROM_NOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operations">
+<h2>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="operationapoapsis">
+<h3>OperationApoapsis<a class="headerlink" href="#operationapoapsis" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis">
+public class <code class="descname">OperationApoapsis</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.getNewApoapsis()">
+ double <code class="descname">getNewApoapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.getNewApoapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.setNewApoapsis(double)">
+ void <code class="descname">setNewApoapsis</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.setNewApoapsis(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationcircularize">
+<h3>OperationCircularize<a class="headerlink" href="#operationcircularize" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationCircularize">
+public class <code class="descname">OperationCircularize</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCircularize.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCircularize.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCircularize.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationcoursecorrection">
+<h3>OperationCourseCorrection<a class="headerlink" href="#operationcoursecorrection" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection">
+public class <code class="descname">OperationCourseCorrection</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.getCourseCorrectFinalPeA()">
+ double <code class="descname">getCourseCorrectFinalPeA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.getCourseCorrectFinalPeA()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.setCourseCorrectFinalPeA(double)">
+ void <code class="descname">setCourseCorrectFinalPeA</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.setCourseCorrectFinalPeA(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.getInterceptDistance()">
+ double <code class="descname">getInterceptDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.getInterceptDistance()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.setInterceptDistance(double)">
+ void <code class="descname">setInterceptDistance</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.setInterceptDistance(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationellipticize">
+<h3>OperationEllipticize<a class="headerlink" href="#operationellipticize" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize">
+public class <code class="descname">OperationEllipticize</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.getNewApoapsis()">
+ double <code class="descname">getNewApoapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.getNewApoapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.setNewApoapsis(double)">
+ void <code class="descname">setNewApoapsis</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.setNewApoapsis(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.getNewPeriapsis()">
+ double <code class="descname">getNewPeriapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.getNewPeriapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.setNewPeriapsis(double)">
+ void <code class="descname">setNewPeriapsis</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.setNewPeriapsis(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationinclination">
+<h3>OperationInclination<a class="headerlink" href="#operationinclination" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationInclination">
+public class <code class="descname">OperationInclination</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.getNewInclination()">
+ double <code class="descname">getNewInclination</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.getNewInclination()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.setNewInclination(double)">
+ void <code class="descname">setNewInclination</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.setNewInclination(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationinterplanetarytransfer">
+<h3>OperationInterplanetaryTransfer<a class="headerlink" href="#operationinterplanetarytransfer" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer">
+public class <code class="descname">OperationInterplanetaryTransfer</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.getWaitForPhaseAngle()">
+ boolean <code class="descname">getWaitForPhaseAngle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.getWaitForPhaseAngle()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.setWaitForPhaseAngle(boolean)">
+ void <code class="descname">setWaitForPhaseAngle</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.setWaitForPhaseAngle(boolean)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationkillrelvel">
+<h3>OperationKillRelVel<a class="headerlink" href="#operationkillrelvel" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationKillRelVel">
+public class <code class="descname">OperationKillRelVel</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationKillRelVel.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationKillRelVel.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationKillRelVel.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationlambert">
+<h3>OperationLambert<a class="headerlink" href="#operationlambert" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationLambert">
+public class <code class="descname">OperationLambert</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.getInterceptInterval()">
+ double <code class="descname">getInterceptInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.getInterceptInterval()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.setInterceptInterval(double)">
+ void <code class="descname">setInterceptInterval</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.setInterceptInterval(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationlan">
+<h3>OperationLan<a class="headerlink" href="#operationlan" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationLan">
+public class <code class="descname">OperationLan</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change longitude of ascending node</p>
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.getNewLAN()">
+ double <code class="descname">getNewLAN</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.getNewLAN()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.setNewLAN(double)">
+ void <code class="descname">setNewLAN</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.setNewLAN(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationlongitude">
+<h3>OperationLongitude<a class="headerlink" href="#operationlongitude" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationLongitude">
+public class <code class="descname">OperationLongitude</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change longitude of ascending node</p>
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.getNewSurfaceLongitude()">
+ double <code class="descname">getNewSurfaceLongitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.getNewSurfaceLongitude()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.setNewSurfaceLongitude(double)">
+ void <code class="descname">setNewSurfaceLongitude</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.setNewSurfaceLongitude(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationmoonreturn">
+<h3>OperationMoonReturn<a class="headerlink" href="#operationmoonreturn" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn">
+public class <code class="descname">OperationMoonReturn</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn.getMoonReturnAltitude()">
+ double <code class="descname">getMoonReturnAltitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.getMoonReturnAltitude()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn.setMoonReturnAltitude(double)">
+ void <code class="descname">setMoonReturnAltitude</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.setMoonReturnAltitude(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationperiapsis">
+<h3>OperationPeriapsis<a class="headerlink" href="#operationperiapsis" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis">
+public class <code class="descname">OperationPeriapsis</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.getNewPeriapsis()">
+ double <code class="descname">getNewPeriapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.getNewPeriapsis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.setNewPeriapsis(double)">
+ void <code class="descname">setNewPeriapsis</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.setNewPeriapsis(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationplane">
+<h3>OperationPlane<a class="headerlink" href="#operationplane" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationPlane">
+public class <code class="descname">OperationPlane</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPlane.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPlane.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPlane.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationresonantorbit">
+<h3>OperationResonantOrbit<a class="headerlink" href="#operationresonantorbit" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit">
+public class <code class="descname">OperationResonantOrbit</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.getResonanceDenominator()">
+ int <code class="descname">getResonanceDenominator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.getResonanceDenominator()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.setResonanceDenominator(int)">
+ void <code class="descname">setResonanceDenominator</code><span class="sig-paren">(</span>int<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.setResonanceDenominator(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.getResonanceNumerator()">
+ int <code class="descname">getResonanceNumerator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.getResonanceNumerator()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.setResonanceNumerator(int)">
+ void <code class="descname">setResonanceNumerator</code><span class="sig-paren">(</span>int<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.setResonanceNumerator(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationsemimajor">
+<h3>OperationSemiMajor<a class="headerlink" href="#operationsemimajor" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor">
+public class <code class="descname">OperationSemiMajor</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.getNewSemiMajorAxis()">
+ double <code class="descname">getNewSemiMajorAxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.getNewSemiMajorAxis()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.setNewSemiMajorAxis(double)">
+ void <code class="descname">setNewSemiMajorAxis</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.setNewSemiMajorAxis(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.getTimeSelector()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TimeSelector" title="krpc.client.services.MechJeb.TimeSelector">TimeSelector</a> <code class="descname">getTimeSelector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.getTimeSelector()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="operationtransfer">
+<h3>OperationTransfer<a class="headerlink" href="#operationtransfer" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.OperationTransfer">
+public class <code class="descname">OperationTransfer</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationTransfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hohmann transfer to target</p>
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationTransfer.getErrorMessage()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationTransfer.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
+<dd><p>A warning may be stored there during MakeNode() call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationTransfer.makeNode()">
+ SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationTransfer.makeNode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new maneuver node.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rendezvous-autopilot.html" class="btn btn-neutral" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

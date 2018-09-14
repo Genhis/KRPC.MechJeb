@@ -1,0 +1,115 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+AirplaneAutopilot
+=================
+
+
+.. type:: public class AirplaneAutopilot
+
+
+
+   .. method:: boolean getEnabled()
+
+   .. method:: void setEnabled(boolean value)
+
+   .. method:: boolean getAltitudeHoldEnabled()
+
+   .. method:: void setAltitudeHoldEnabled(boolean value)
+
+   .. method:: double getAltitudeTarget()
+
+   .. method:: void setAltitudeTarget(double value)
+
+   .. method:: boolean getHeadingHoldEnabled()
+
+   .. method:: void setHeadingHoldEnabled(boolean value)
+
+   .. method:: double getHeadingTarget()
+
+   .. method:: void setHeadingTarget(double value)
+
+   .. method:: boolean getRollHoldEnabled()
+
+   .. method:: void setRollHoldEnabled(boolean value)
+
+   .. method:: double getRollMax()
+
+   .. method:: void setRollMax(double value)
+
+   .. method:: double getRollTarget()
+
+   .. method:: void setRollTarget(double value)
+
+   .. method:: boolean getSpeedHoldEnabled()
+
+   .. method:: void setSpeedHoldEnabled(boolean value)
+
+   .. method:: double getSpeedTarget()
+
+   .. method:: void setSpeedTarget(double value)
+
+   .. method:: boolean getVertSpeedHoldEnabled()
+
+   .. method:: void setVertSpeedHoldEnabled(boolean value)
+
+   .. method:: double getVertSpeedMax()
+
+   .. method:: void setVertSpeedMax(double value)
+
+   .. method:: double getVertSpeedTarget()
+
+   .. method:: void setVertSpeedTarget(double value)
+
+   .. method:: double getAccKd()
+
+   .. method:: void setAccKd(double value)
+
+   .. method:: double getAccKi()
+
+   .. method:: void setAccKi(double value)
+
+   .. method:: double getAccKp()
+
+   .. method:: void setAccKp(double value)
+
+   .. method:: double getRolKd()
+
+   .. method:: void setRolKd(double value)
+
+   .. method:: double getRolKi()
+
+   .. method:: void setRolKi(double value)
+
+   .. method:: double getRolKp()
+
+   .. method:: void setRolKp(double value)
+
+   .. method:: double getVerKd()
+
+   .. method:: void setVerKd(double value)
+
+   .. method:: double getVerKi()
+
+   .. method:: void setVerKi(double value)
+
+   .. method:: double getVerKp()
+
+   .. method:: void setVerKp(double value)
+
+   .. method:: double getYawKd()
+
+   .. method:: void setYawKd(double value)
+
+   .. method:: double getYawKi()
+
+   .. method:: void setYawKi(double value)
+
+   .. method:: double getYawKp()
+
+   .. method:: void setYawKp(double value)
+
+   .. method:: double getYawLimit()
+
+   .. method:: void setYawLimit(double value)

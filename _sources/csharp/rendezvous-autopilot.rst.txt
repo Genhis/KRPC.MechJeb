@@ -1,0 +1,19 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+RendezvousAutopilot
+===================
+
+
+.. class:: RendezvousAutopilot
+
+
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: string Status { get; }
+
+   .. property:: double DesiredDistance { get; set; }
+
+   .. property:: double MaxPhasingOrbits { get; set; }

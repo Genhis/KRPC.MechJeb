@@ -1,0 +1,168 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+ThrustController
+================
+
+
+.. class:: ThrustController
+
+
+
+   .. attribute:: differential_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: differential_throttle_status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.DifferentialThrottleStatus`
+
+   .. attribute:: electric_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: electric_throttle_hi
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: electric_throttle_lo
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: flameout_safety_pct
+
+      The jet safety margin. A value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: limit_acceleration
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: limit_dynamic_pressure
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: limit_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: limit_to_prevent_flameout
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: limit_to_prevent_overheats
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: limiter_min_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: manage_intakes
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: max_acceleration
+
+      Limit acceleration to this value in m/s^2.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: max_dynamic_pressure
+
+      Limit Q to this value in Pa.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: max_throttle
+
+      Limit throttle to this value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: min_throttle
+
+      Keep limited throttle over this value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: smooth_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: throttle_smoothing_time
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+
+
+.. class:: DifferentialThrottleStatus
+
+
+
+
+   .. data:: all_engines_off
+
+
+
+
+   .. data:: more_engines_required
+
+
+
+
+   .. data:: solver_failed
+
+
+
+
+   .. data:: success

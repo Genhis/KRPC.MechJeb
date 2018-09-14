@@ -1,0 +1,307 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+AscentAutopilot
+===============
+
+
+.. type:: public class AscentAutopilot
+
+   This module controls the Ascent Guidance in MechJeb 2.
+
+   .. method:: boolean getEnabled()
+
+   .. method:: void setEnabled(boolean value)
+
+   .. method:: String getStatus()
+
+
+      The autopilot status; it depends on the selected ascent path.
+
+   .. method:: int getAscentPathIndex()
+
+   .. method:: void setAscentPathIndex(int value)
+
+      The selected ascent path.
+
+      0 = :type:`AscentClassic` (Classic Ascent Profile)
+
+      1 = :type:`AscentGT` (Stock-style GravityTurn)
+
+      2 = :type:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+
+   .. method:: AscentClassic getAscentPathClassic()
+
+
+      Get Classic Ascent Profile settings.
+
+   .. method:: AscentGT getAscentPathGT()
+
+
+      Get Stock-style GravityTurn profile settings.
+
+   .. method:: AscentPEG getAscentPathPEG()
+
+
+      Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+   .. method:: double getDesiredInclination()
+
+   .. method:: void setDesiredInclination(double value)
+
+      The desired inclination.
+
+   .. method:: double getDesiredOrbitAltitude()
+
+   .. method:: void setDesiredOrbitAltitude(double value)
+
+      The desired orbit altitude.
+
+   .. method:: ThrustController getThrustController()
+
+
+
+
+
+      .. note::
+
+         Equivalend to :meth:`getThrustController()`.
+
+   .. method:: boolean getForceRoll()
+
+   .. method:: void setForceRoll(boolean value)
+
+      The state of force roll.
+
+   .. method:: double getTurnRoll()
+
+   .. method:: void setTurnRoll(double value)
+
+      The turn roll used by the autopilot.
+
+   .. method:: double getVerticalRoll()
+
+   .. method:: void setVerticalRoll(double value)
+
+      The vertical/climb roll used by the autopilot.
+
+   .. method:: boolean getLimitAoA()
+
+   .. method:: void setLimitAoA(boolean value)
+
+      Whether to limit angle of attack.
+
+   .. method:: double getMaxAoA()
+
+   .. method:: void setMaxAoA(double value)
+
+      The maximal angle of attack used by the autopilot.
+
+   .. method:: double getAoALimitFadeoutPressure()
+
+   .. method:: void setAoALimitFadeoutPressure(double value)
+
+      The pressure value when AoA limit is automatically deactivated.
+
+   .. method:: boolean getCorrectiveSteering()
+
+   .. method:: void setCorrectiveSteering(boolean value)
+
+      The state of corrective steering.
+
+   .. method:: double getCorrectiveSteeringGain()
+
+   .. method:: void setCorrectiveSteeringGain(double value)
+
+      The gain of corrective steering used by the autopilot.
+
+   .. method:: boolean getAutostage()
+
+   .. method:: void setAutostage(boolean value)
+
+      Whether to enable autostaging. Paramethers can be set in :type:`StagingController`.
+
+   .. method:: StagingController getStagingController()
+
+
+
+
+
+      .. note::
+
+         Equivalent to :meth:`getStagingController()`.
+
+   .. method:: boolean getAutodeploySolarPanels()
+
+   .. method:: void setAutodeploySolarPanels(boolean value)
+
+      Whether to deploy solar panels automatically when the ascent finishes.
+
+   .. method:: boolean getAutoDeployAntennas()
+
+   .. method:: void setAutoDeployAntennas(boolean value)
+
+      Whether to deploy antennas automatically when the ascent finishes.
+
+   .. method:: boolean getSkipCircularization()
+
+   .. method:: void setSkipCircularization(boolean value)
+
+      Whether to skip circularization burn and do only the ascent.
+
+   .. method:: int getWarpCountDown()
+
+   .. method:: void setWarpCountDown(int value)
+
+   .. method:: double getLaunchLANDifference()
+
+   .. method:: void setLaunchLANDifference(double value)
+
+   .. method:: double getLaunchPhaseAngle()
+
+   .. method:: void setLaunchPhaseAngle(double value)
+
+   .. method:: void launchToRendezvous()
+
+   .. method:: void launchToTargetPlane()
+
+      Launch into the plane of the selected target.
+
+
+
+AscentClassic
+-------------
+
+
+.. type:: public class AscentClassic
+
+   The Classic Ascent Profile.
+
+   .. method:: boolean getAutoPath()
+
+   .. method:: void setAutoPath(boolean value)
+
+      Whether to enable automatic altitude turn.
+
+   .. method:: float getAutoPathPerc()
+
+   .. method:: void setAutoPathPerc(float value)
+
+      A value between 0 and 1.
+
+   .. method:: float getAutoPathSpeedFactor()
+
+   .. method:: void setAutoPathSpeedFactor(float value)
+
+      A value between 0 and 1.
+
+   .. method:: double getAutoTurnStartAltitude()
+
+   .. method:: double getAutoTurnStartVelocity()
+
+   .. method:: double getAutoTurnEndAltitude()
+
+   .. method:: double getTurnStartAltitude()
+
+   .. method:: void setTurnStartAltitude(double value)
+
+      The turn starts when this altitude is reached.
+
+   .. method:: double getTurnStartVelocity()
+
+   .. method:: void setTurnStartVelocity(double value)
+
+      The turn starts when this velocity is reached.
+
+   .. method:: double getTurnEndAltitude()
+
+   .. method:: void setTurnEndAltitude(double value)
+
+      The turn ends when this altitude is reached.
+
+   .. method:: double getTurnEndAngle()
+
+   .. method:: void setTurnEndAngle(double value)
+
+      The final flight path angle.
+
+   .. method:: double getTurnShapeExponent()
+
+   .. method:: void setTurnShapeExponent(double value)
+
+      A value between 0 - 1 describing how steep the turn is.
+
+
+
+AscentGT
+--------
+
+
+.. type:: public class AscentGT
+
+
+
+   .. method:: double getHoldAPTime()
+
+   .. method:: void setHoldAPTime(double value)
+
+   .. method:: double getIntermediateAltitude()
+
+   .. method:: void setIntermediateAltitude(double value)
+
+   .. method:: double getTurnStartAltitude()
+
+   .. method:: void setTurnStartAltitude(double value)
+
+   .. method:: double getTurnStartPitch()
+
+   .. method:: void setTurnStartPitch(double value)
+
+   .. method:: double getTurnStartVelocity()
+
+   .. method:: void setTurnStartVelocity(double value)
+
+
+
+AscentPEG
+---------
+
+
+.. type:: public class AscentPEG
+
+   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+
+   .. method:: double getDesiredApoapsis()
+
+   .. method:: void setDesiredApoapsis(double value)
+
+      The target apoapsis in meters.
+
+   .. method:: double getPitchStartTime()
+
+   .. method:: void setPitchStartTime(double value)
+
+   .. method:: double getPitchRate()
+
+   .. method:: void setPitchRate(double value)
+
+   .. method:: double getPitchEndTime()
+
+   .. method:: void setPitchEndTime(double value)
+
+   .. method:: double getTerminalGuidanceSecs()
+
+   .. method:: void setTerminalGuidanceSecs(double value)
+
+      The terminal guidance period in seconds.
+
+   .. method:: int getEditNumStages()
+
+   .. method:: void setEditNumStages(int value)
+
+   .. method:: double getStageLowDVLimit()
+
+   .. method:: void setStageLowDVLimit(double value)
+
+      The minimum dV limit for a stage.

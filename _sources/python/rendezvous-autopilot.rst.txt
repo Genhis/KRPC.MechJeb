@@ -1,0 +1,39 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+RendezvousAutopilot
+===================
+
+
+.. class:: RendezvousAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: str
+
+   .. attribute:: desired_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: max_phasing_orbits
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double

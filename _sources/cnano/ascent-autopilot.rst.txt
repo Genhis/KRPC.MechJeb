@@ -1,0 +1,262 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+AscentAutopilot
+===============
+
+
+.. type:: krpc_MechJeb_AscentAutopilot_t
+
+   This module controls the Ascent Guidance in MechJeb 2.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_Enabled(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_Enabled(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_Status(krpc_connection_t connection, char * * result)
+
+      The autopilot status; it depends on the selected ascent path.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AscentPathIndex(krpc_connection_t connection, int32_t * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_AscentPathIndex(int32_t value)
+
+      The selected ascent path.
+
+      0 = :type:`krpc_MechJeb_AscentClassic_t` (Classic Ascent Profile)
+
+      1 = :type:`krpc_MechJeb_AscentGT_t` (Stock-style GravityTurn)
+
+      2 = :type:`krpc_MechJeb_AscentPEG_t` (Powered Explicit Guidance (RSS/RO))
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AscentPathClassic(krpc_connection_t connection, krpc_MechJeb_AscentClassic_t * result)
+
+      Get Classic Ascent Profile settings.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AscentPathGT(krpc_connection_t connection, krpc_MechJeb_AscentGT_t * result)
+
+      Get Stock-style GravityTurn profile settings.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AscentPathPEG(krpc_connection_t connection, krpc_MechJeb_AscentPEG_t * result)
+
+      Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_DesiredInclination(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_DesiredInclination(double value)
+
+      The desired inclination.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude(double value)
+
+      The desired orbit altitude.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_ThrustController(krpc_connection_t connection, krpc_MechJeb_ThrustController_t * result)
+
+
+
+
+      .. note::
+
+         Equivalend to :func:`krpc_MechJeb_ThrustController`.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_ForceRoll(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_ForceRoll(bool value)
+
+      The state of force roll.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_TurnRoll(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_TurnRoll(double value)
+
+      The turn roll used by the autopilot.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_VerticalRoll(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_VerticalRoll(double value)
+
+      The vertical/climb roll used by the autopilot.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LimitAoA(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_LimitAoA(bool value)
+
+      Whether to limit angle of attack.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_MaxAoA(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_MaxAoA(double value)
+
+      The maximal angle of attack used by the autopilot.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure(double value)
+
+      The pressure value when AoA limit is automatically deactivated.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_CorrectiveSteering(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering(bool value)
+
+      The state of corrective steering.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain(double value)
+
+      The gain of corrective steering used by the autopilot.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_Autostage(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_Autostage(bool value)
+
+      Whether to enable autostaging. Paramethers can be set in :type:`krpc_MechJeb_StagingController_t`.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_StagingController(krpc_connection_t connection, krpc_MechJeb_StagingController_t * result)
+
+
+
+
+      .. note::
+
+         Equivalent to :func:`krpc_MechJeb_StagingController`.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels(bool value)
+
+      Whether to deploy solar panels automatically when the ascent finishes.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AutoDeployAntennas(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas(bool value)
+
+      Whether to deploy antennas automatically when the ascent finishes.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_SkipCircularization(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_SkipCircularization(bool value)
+
+      Whether to skip circularization burn and do only the ascent.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_WarpCountDown(krpc_connection_t connection, int32_t * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_WarpCountDown(int32_t value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchLANDifference(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchToRendezvous(krpc_connection_t connection)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane(krpc_connection_t connection)
+
+      Launch into the plane of the selected target.
+
+
+
+AscentClassic
+-------------
+
+
+.. type:: krpc_MechJeb_AscentClassic_t
+
+   The Classic Ascent Profile.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoPath(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_AutoPath(bool value)
+
+      Whether to enable automatic altitude turn.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoPathPerc(krpc_connection_t connection, float * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_AutoPathPerc(float value)
+
+      A value between 0 and 1.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoPathSpeedFactor(krpc_connection_t connection, float * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_AutoPathSpeedFactor(float value)
+
+      A value between 0 and 1.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoTurnStartAltitude(krpc_connection_t connection, double * result)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoTurnStartVelocity(krpc_connection_t connection, double * result)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoTurnEndAltitude(krpc_connection_t connection, double * result)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_TurnStartAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_TurnStartAltitude(double value)
+
+      The turn starts when this altitude is reached.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_TurnStartVelocity(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_TurnStartVelocity(double value)
+
+      The turn starts when this velocity is reached.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_TurnEndAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_TurnEndAltitude(double value)
+
+      The turn ends when this altitude is reached.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_TurnEndAngle(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_TurnEndAngle(double value)
+
+      The final flight path angle.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_TurnShapeExponent(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_TurnShapeExponent(double value)
+
+      A value between 0 - 1 describing how steep the turn is.
+
+
+
+AscentGT
+--------
+
+
+.. type:: krpc_MechJeb_AscentGT_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentGT_HoldAPTime(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentGT_set_HoldAPTime(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentGT_IntermediateAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentGT_set_IntermediateAltitude(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentGT_set_TurnStartAltitude(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartPitch(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentGT_set_TurnStartPitch(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartVelocity(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentGT_set_TurnStartVelocity(double value)
+
+
+
+AscentPEG
+---------
+
+
+.. type:: krpc_MechJeb_AscentPEG_t
+
+   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_DesiredApoapsis(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_DesiredApoapsis(double value)
+
+      The target apoapsis in meters.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_PitchStartTime(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_PitchStartTime(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_PitchRate(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_PitchRate(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_PitchEndTime(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_PitchEndTime(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_TerminalGuidanceSecs(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_TerminalGuidanceSecs(double value)
+
+      The terminal guidance period in seconds.
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_EditNumStages(krpc_connection_t connection, int32_t * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_EditNumStages(int32_t value)
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPEG_StageLowDVLimit(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPEG_set_StageLowDVLimit(double value)
+
+      The minimum dV limit for a stage.

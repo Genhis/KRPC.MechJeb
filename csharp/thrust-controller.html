@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ThrustController &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C++" href="../cpp/index.html" />
+    <link rel="prev" title="TargetController" href="target-controller.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#autopilots">Autopilots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#windows">Windows</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#controllers">Controllers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="node-executor.html">NodeExecutor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rcs-controller.html">RCSController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="staging-controller.html">StagingController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="target-controller.html">TargetController</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ThrustController</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C#</a> &raquo;</li>
+        
+      <li>ThrustController</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/csharp/thrust-controller.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="thrustcontroller">
+<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="class-KRPC.Client.Services.MechJeb.ThrustController">
+<code class="descname">class ThrustController</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.ThrustController" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.DifferentialThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">DifferentialThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.DifferentialThrottle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.DifferentialThrottleStatus">
+<a class="reference internal" href="#enum-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus" title="KRPC.Client.Services.MechJeb.DifferentialThrottleStatus enum">DifferentialThrottleStatus</a> <code class="descname">DifferentialThrottleStatus</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.DifferentialThrottleStatus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ElectricThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottleHi">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">ElectricThrottleHi</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottleHi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottleLo">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">ElectricThrottleLo</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.ElectricThrottleLo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.FlameoutSafetyPct">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">FlameoutSafetyPct</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.FlameoutSafetyPct" title="Permalink to this definition">¶</a></dt>
+<dd><p>The jet safety margin. A value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimitAcceleration">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitAcceleration</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimitAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimitDynamicPressure">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitDynamicPressure</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimitDynamicPressure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimitThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimitThrottle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimitToPreventFlameout">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitToPreventFlameout</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimitToPreventFlameout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimitToPreventOverheats">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitToPreventOverheats</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimitToPreventOverheats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.LimiterMinThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimiterMinThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.LimiterMinThrottle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.ManageIntakes">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ManageIntakes</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.ManageIntakes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.MaxAcceleration">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MaxAcceleration</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.MaxAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limit acceleration to this value in m/s^2.</p>
+</dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.MaxDynamicPressure">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MaxDynamicPressure</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.MaxDynamicPressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limit Q to this value in Pa.</p>
+</dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.MaxThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MaxThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.MaxThrottle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limit throttle to this value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.MinThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MinThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.MinThrottle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep limited throttle over this value between 0 and 1.</p>
+</dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.SmoothThrottle">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">SmoothThrottle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.SmoothThrottle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="property">
+<dt id="property-KRPC.Client.Services.MechJeb.ThrustController.ThrottleSmoothingTime">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">ThrottleSmoothingTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.ThrustController.ThrottleSmoothingTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="enum">
+<dt id="enum-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus">
+<code class="descname">enum DifferentialThrottleStatus</code><a class="headerlink" href="#enum-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="value">
+<dt id="value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.AllEnginesOff">
+<code class="descname">AllEnginesOff</code><a class="headerlink" href="#value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.AllEnginesOff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="value">
+<dt id="value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.MoreEnginesRequired">
+<code class="descname">MoreEnginesRequired</code><a class="headerlink" href="#value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.MoreEnginesRequired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="value">
+<dt id="value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.SolverFailed">
+<code class="descname">SolverFailed</code><a class="headerlink" href="#value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.SolverFailed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="value">
+<dt id="value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.Success">
+<code class="descname">Success</code><a class="headerlink" href="#value-KRPC.Client.Services.MechJeb.DifferentialThrottleStatus.Success" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cpp/index.html" class="btn btn-neutral float-right" title="C++" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="target-controller.html" class="btn btn-neutral" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

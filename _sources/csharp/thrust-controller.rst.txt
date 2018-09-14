@@ -1,0 +1,83 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+ThrustController
+================
+
+
+.. class:: ThrustController
+
+
+
+   .. property:: bool DifferentialThrottle { get; set; }
+
+   .. property:: DifferentialThrottleStatus DifferentialThrottleStatus { get; }
+
+   .. property:: bool ElectricThrottle { get; set; }
+
+   .. property:: double ElectricThrottleHi { get; set; }
+
+   .. property:: double ElectricThrottleLo { get; set; }
+
+   .. property:: double FlameoutSafetyPct { get; set; }
+
+      The jet safety margin. A value between 0 and 1.
+
+   .. property:: bool LimitAcceleration { get; set; }
+
+   .. property:: bool LimitDynamicPressure { get; set; }
+
+   .. property:: bool LimitThrottle { get; set; }
+
+   .. property:: bool LimitToPreventFlameout { get; set; }
+
+   .. property:: bool LimitToPreventOverheats { get; set; }
+
+   .. property:: bool LimiterMinThrottle { get; set; }
+
+   .. property:: bool ManageIntakes { get; set; }
+
+   .. property:: double MaxAcceleration { get; set; }
+
+      Limit acceleration to this value in m/s^2.
+
+   .. property:: double MaxDynamicPressure { get; set; }
+
+      Limit Q to this value in Pa.
+
+   .. property:: double MaxThrottle { get; set; }
+
+      Limit throttle to this value between 0 and 1.
+
+   .. property:: double MinThrottle { get; set; }
+
+      Keep limited throttle over this value between 0 and 1.
+
+   .. property:: bool SmoothThrottle { get; set; }
+
+   .. property:: double ThrottleSmoothingTime { get; set; }
+
+
+
+.. enum:: DifferentialThrottleStatus
+
+
+
+
+   .. value:: AllEnginesOff
+
+
+
+
+   .. value:: MoreEnginesRequired
+
+
+
+
+   .. value:: SolverFailed
+
+
+
+
+   .. value:: Success

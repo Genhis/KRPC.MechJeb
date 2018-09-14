@@ -1,0 +1,53 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+TargetController
+================
+
+
+.. class:: TargetController
+
+
+
+   .. function:: bool can_align()
+
+   .. function:: float distance()
+
+   .. function:: std::tuple<double, double, double> docking_axis()
+
+   .. function:: std::tuple<double, double, double> get_position_target_position()
+
+   .. function:: std::string get_position_target_string()
+
+   .. function:: bool normal_target_exists()
+
+   .. function:: void pick_position_target_on_map()
+
+   .. function:: std::tuple<double, double, double> position()
+
+   .. function:: bool position_target_exists()
+
+   .. function:: std::tuple<double, double, double> relative_position()
+
+   .. function:: std::tuple<double, double, double> relative_velocity()
+
+   .. function:: void set_direction_target(std::string name)
+
+
+
+      :Parameters:
+
+   .. function:: void set_position_target(SpaceCenter::CelestialBody body, double latitude, double longitude)
+
+
+
+      :Parameters:
+
+   .. function:: SpaceCenter::Orbit target_orbit()
+
+   .. function:: void update_direction_target(std::tuple<double, double, double> direction)
+
+
+
+      :Parameters:

@@ -1,0 +1,22 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+RendezvousAutopilot
+===================
+
+
+.. class:: RendezvousAutopilot
+
+
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: std::string status()
+
+   .. function:: double desired_distance()
+   .. function:: void set_desired_distance(double value)
+
+   .. function:: double max_phasing_orbits()
+   .. function:: void set_max_phasing_orbits(double value)

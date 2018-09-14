@@ -1,0 +1,47 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+LandingAutopilot
+================
+
+
+.. type:: public class LandingAutopilot
+
+
+
+   .. method:: boolean getEnabled()
+
+   .. method:: void setEnabled(boolean value)
+
+   .. method:: String getStatus()
+
+   .. method:: boolean getDeployChutes()
+
+   .. method:: void setDeployChutes(boolean value)
+
+   .. method:: boolean getDeployGears()
+
+   .. method:: void setDeployGears(boolean value)
+
+   .. method:: void landAtPositionTarget()
+
+   .. method:: void landUntargeted()
+
+   .. method:: int getLimitChutesStage()
+
+   .. method:: void setLimitChutesStage(int value)
+
+   .. method:: int getLimitGearsStage()
+
+   .. method:: void setLimitGearsStage(int value)
+
+   .. method:: boolean getRcsAdjustment()
+
+   .. method:: void setRcsAdjustment(boolean value)
+
+   .. method:: void stopLanding()
+
+   .. method:: double getTouchdownSpeed()
+
+   .. method:: void setTouchdownSpeed(double value)

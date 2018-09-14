@@ -1,0 +1,262 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+AscentAutopilot
+===============
+
+
+.. class:: AscentAutopilot
+
+   This module controls the Ascent Guidance in MechJeb 2.
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: std::string status()
+
+      The autopilot status; it depends on the selected ascent path.
+
+   .. function:: int32_t ascent_path_index()
+   .. function:: void set_ascent_path_index(int32_t value)
+
+      The selected ascent path.
+
+      0 = :class:`AscentClassic` (Classic Ascent Profile)
+
+      1 = :class:`AscentGT` (Stock-style GravityTurn)
+
+      2 = :class:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+
+   .. function:: AscentClassic ascent_path_classic()
+
+      Get Classic Ascent Profile settings.
+
+   .. function:: AscentGT ascent_path_gt()
+
+      Get Stock-style GravityTurn profile settings.
+
+   .. function:: AscentPEG ascent_path_peg()
+
+      Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+   .. function:: double desired_inclination()
+   .. function:: void set_desired_inclination(double value)
+
+      The desired inclination.
+
+   .. function:: double desired_orbit_altitude()
+   .. function:: void set_desired_orbit_altitude(double value)
+
+      The desired orbit altitude.
+
+   .. function:: ThrustController thrust_controller()
+
+
+
+
+      .. note::
+
+         Equivalend to :func:`thrust_controller`.
+
+   .. function:: bool force_roll()
+   .. function:: void set_force_roll(bool value)
+
+      The state of force roll.
+
+   .. function:: double turn_roll()
+   .. function:: void set_turn_roll(double value)
+
+      The turn roll used by the autopilot.
+
+   .. function:: double vertical_roll()
+   .. function:: void set_vertical_roll(double value)
+
+      The vertical/climb roll used by the autopilot.
+
+   .. function:: bool limit_ao_a()
+   .. function:: void set_limit_ao_a(bool value)
+
+      Whether to limit angle of attack.
+
+   .. function:: double max_ao_a()
+   .. function:: void set_max_ao_a(double value)
+
+      The maximal angle of attack used by the autopilot.
+
+   .. function:: double ao_a_limit_fadeout_pressure()
+   .. function:: void set_ao_a_limit_fadeout_pressure(double value)
+
+      The pressure value when AoA limit is automatically deactivated.
+
+   .. function:: bool corrective_steering()
+   .. function:: void set_corrective_steering(bool value)
+
+      The state of corrective steering.
+
+   .. function:: double corrective_steering_gain()
+   .. function:: void set_corrective_steering_gain(double value)
+
+      The gain of corrective steering used by the autopilot.
+
+   .. function:: bool autostage()
+   .. function:: void set_autostage(bool value)
+
+      Whether to enable autostaging. Paramethers can be set in :class:`StagingController`.
+
+   .. function:: StagingController staging_controller()
+
+
+
+
+      .. note::
+
+         Equivalent to :func:`staging_controller`.
+
+   .. function:: bool autodeploy_solar_panels()
+   .. function:: void set_autodeploy_solar_panels(bool value)
+
+      Whether to deploy solar panels automatically when the ascent finishes.
+
+   .. function:: bool auto_deploy_antennas()
+   .. function:: void set_auto_deploy_antennas(bool value)
+
+      Whether to deploy antennas automatically when the ascent finishes.
+
+   .. function:: bool skip_circularization()
+   .. function:: void set_skip_circularization(bool value)
+
+      Whether to skip circularization burn and do only the ascent.
+
+   .. function:: int32_t warp_count_down()
+   .. function:: void set_warp_count_down(int32_t value)
+
+   .. function:: double launch_lan_difference()
+   .. function:: void set_launch_lan_difference(double value)
+
+   .. function:: double launch_phase_angle()
+   .. function:: void set_launch_phase_angle(double value)
+
+   .. function:: void launch_to_rendezvous()
+
+   .. function:: void launch_to_target_plane()
+
+      Launch into the plane of the selected target.
+
+
+
+AscentClassic
+-------------
+
+
+.. class:: AscentClassic
+
+   The Classic Ascent Profile.
+
+   .. function:: bool auto_path()
+   .. function:: void set_auto_path(bool value)
+
+      Whether to enable automatic altitude turn.
+
+   .. function:: float auto_path_perc()
+   .. function:: void set_auto_path_perc(float value)
+
+      A value between 0 and 1.
+
+   .. function:: float auto_path_speed_factor()
+   .. function:: void set_auto_path_speed_factor(float value)
+
+      A value between 0 and 1.
+
+   .. function:: double auto_turn_start_altitude()
+
+   .. function:: double auto_turn_start_velocity()
+
+   .. function:: double auto_turn_end_altitude()
+
+   .. function:: double turn_start_altitude()
+   .. function:: void set_turn_start_altitude(double value)
+
+      The turn starts when this altitude is reached.
+
+   .. function:: double turn_start_velocity()
+   .. function:: void set_turn_start_velocity(double value)
+
+      The turn starts when this velocity is reached.
+
+   .. function:: double turn_end_altitude()
+   .. function:: void set_turn_end_altitude(double value)
+
+      The turn ends when this altitude is reached.
+
+   .. function:: double turn_end_angle()
+   .. function:: void set_turn_end_angle(double value)
+
+      The final flight path angle.
+
+   .. function:: double turn_shape_exponent()
+   .. function:: void set_turn_shape_exponent(double value)
+
+      A value between 0 - 1 describing how steep the turn is.
+
+
+
+AscentGT
+--------
+
+
+.. class:: AscentGT
+
+
+
+   .. function:: double hold_ap_time()
+   .. function:: void set_hold_ap_time(double value)
+
+   .. function:: double intermediate_altitude()
+   .. function:: void set_intermediate_altitude(double value)
+
+   .. function:: double turn_start_altitude()
+   .. function:: void set_turn_start_altitude(double value)
+
+   .. function:: double turn_start_pitch()
+   .. function:: void set_turn_start_pitch(double value)
+
+   .. function:: double turn_start_velocity()
+   .. function:: void set_turn_start_velocity(double value)
+
+
+
+AscentPEG
+---------
+
+
+.. class:: AscentPEG
+
+   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+
+   .. function:: double desired_apoapsis()
+   .. function:: void set_desired_apoapsis(double value)
+
+      The target apoapsis in meters.
+
+   .. function:: double pitch_start_time()
+   .. function:: void set_pitch_start_time(double value)
+
+   .. function:: double pitch_rate()
+   .. function:: void set_pitch_rate(double value)
+
+   .. function:: double pitch_end_time()
+   .. function:: void set_pitch_end_time(double value)
+
+   .. function:: double terminal_guidance_secs()
+   .. function:: void set_terminal_guidance_secs(double value)
+
+      The terminal guidance period in seconds.
+
+   .. function:: int32_t edit_num_stages()
+   .. function:: void set_edit_num_stages(int32_t value)
+
+   .. function:: double stage_low_dv_limit()
+   .. function:: void set_stage_low_dv_limit(double value)
+
+      The minimum dV limit for a stage.

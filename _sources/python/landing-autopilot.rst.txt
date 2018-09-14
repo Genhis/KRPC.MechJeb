@@ -1,0 +1,73 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+LandingAutopilot
+================
+
+
+.. class:: LandingAutopilot
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: str
+
+   .. attribute:: deploy_chutes
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: deploy_gears
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. method:: land_at_position_target()
+
+   .. method:: land_untargeted()
+
+   .. attribute:: limit_chutes_stage
+
+
+
+      :Attribute: Can be read or written
+      :rtype: int
+
+   .. attribute:: limit_gears_stage
+
+
+
+      :Attribute: Can be read or written
+      :rtype: int
+
+   .. attribute:: rcs_adjustment
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. method:: stop_landing()
+
+   .. attribute:: touchdown_speed
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double

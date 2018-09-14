@@ -1,0 +1,55 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+TargetController
+================
+
+
+.. type:: public class TargetController
+
+
+
+   .. method:: boolean getCanAlign()
+
+   .. method:: float getDistance()
+
+   .. method:: org.javatuples.Triplet<Double,Double,Double> getDockingAxis()
+
+   .. method:: org.javatuples.Triplet<Double,Double,Double> getPositionTargetPosition()
+
+   .. method:: String getPositionTargetString()
+
+   .. method:: boolean getNormalTargetExists()
+
+   .. method:: void pickPositionTargetOnMap()
+
+   .. method:: org.javatuples.Triplet<Double,Double,Double> getPosition()
+
+   .. method:: boolean getPositionTargetExists()
+
+   .. method:: org.javatuples.Triplet<Double,Double,Double> getRelativePosition()
+
+   .. method:: org.javatuples.Triplet<Double,Double,Double> getRelativeVelocity()
+
+   .. method:: void setDirectionTarget(String name)
+
+
+
+      :param String name:
+
+   .. method:: void setPositionTarget(SpaceCenter.CelestialBody body, double latitude, double longitude)
+
+
+
+      :param SpaceCenter.CelestialBody body:
+      :param double latitude:
+      :param double longitude:
+
+   .. method:: SpaceCenter.Orbit getTargetOrbit()
+
+   .. method:: void updateDirectionTarget(org.javatuples.Triplet<Double,Double,Double> direction)
+
+
+
+      :param org.javatuples.Triplet<Double,Double,Double> direction:

@@ -1,0 +1,47 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+StagingController
+=================
+
+
+.. type:: krpc_MechJeb_StagingController_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_Enabled(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_StagingController_set_Enabled(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagingOnce(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_StagingController_set_AutostagingOnce(bool value)
+
+      The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+
+      .. note::
+
+         The controller needs to be enabled for this to work.
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostageLimit(krpc_connection_t connection, int32_t * result)
+   .. function:: void krpc_MechJeb_StagingController_set_AutostageLimit(int32_t value)
+
+      Stop at the selected stage.
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagePostDelay(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_AutostagePostDelay(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagePreDelay(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_AutostagePreDelay(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_ClampAutoStageThrustPct(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_ClampAutoStageThrustPct(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMaxAerothermalFlux(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_FairingMaxAerothermalFlux(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMaxDynamicPressure(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_FairingMaxDynamicPressure(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMinAltitude(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_FairingMinAltitude(double value)

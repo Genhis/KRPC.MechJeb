@@ -1,0 +1,89 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+AirplaneAutopilot
+=================
+
+
+.. class:: AirplaneAutopilot
+
+
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: bool altitude_hold_enabled()
+   .. function:: void set_altitude_hold_enabled(bool value)
+
+   .. function:: double altitude_target()
+   .. function:: void set_altitude_target(double value)
+
+   .. function:: bool heading_hold_enabled()
+   .. function:: void set_heading_hold_enabled(bool value)
+
+   .. function:: double heading_target()
+   .. function:: void set_heading_target(double value)
+
+   .. function:: bool roll_hold_enabled()
+   .. function:: void set_roll_hold_enabled(bool value)
+
+   .. function:: double roll_max()
+   .. function:: void set_roll_max(double value)
+
+   .. function:: double roll_target()
+   .. function:: void set_roll_target(double value)
+
+   .. function:: bool speed_hold_enabled()
+   .. function:: void set_speed_hold_enabled(bool value)
+
+   .. function:: double speed_target()
+   .. function:: void set_speed_target(double value)
+
+   .. function:: bool vert_speed_hold_enabled()
+   .. function:: void set_vert_speed_hold_enabled(bool value)
+
+   .. function:: double vert_speed_max()
+   .. function:: void set_vert_speed_max(double value)
+
+   .. function:: double vert_speed_target()
+   .. function:: void set_vert_speed_target(double value)
+
+   .. function:: double acc_kd()
+   .. function:: void set_acc_kd(double value)
+
+   .. function:: double acc_ki()
+   .. function:: void set_acc_ki(double value)
+
+   .. function:: double acc_kp()
+   .. function:: void set_acc_kp(double value)
+
+   .. function:: double rol_kd()
+   .. function:: void set_rol_kd(double value)
+
+   .. function:: double rol_ki()
+   .. function:: void set_rol_ki(double value)
+
+   .. function:: double rol_kp()
+   .. function:: void set_rol_kp(double value)
+
+   .. function:: double ver_kd()
+   .. function:: void set_ver_kd(double value)
+
+   .. function:: double ver_ki()
+   .. function:: void set_ver_ki(double value)
+
+   .. function:: double ver_kp()
+   .. function:: void set_ver_kp(double value)
+
+   .. function:: double yaw_kd()
+   .. function:: void set_yaw_kd(double value)
+
+   .. function:: double yaw_ki()
+   .. function:: void set_yaw_ki(double value)
+
+   .. function:: double yaw_kp()
+   .. function:: void set_yaw_kp(double value)
+
+   .. function:: double yaw_limit()
+   .. function:: void set_yaw_limit(double value)

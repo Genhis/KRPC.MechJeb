@@ -1,0 +1,17 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+RCSController
+=============
+
+
+.. class:: RCSController
+
+
+
+   .. function:: bool rcs_for_rotation()
+   .. function:: void set_rcs_for_rotation(bool value)
+
+   .. function:: bool rcs_throttle()
+   .. function:: void set_rcs_throttle(bool value)

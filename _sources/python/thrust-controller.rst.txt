@@ -1,0 +1,168 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+ThrustController
+================
+
+
+.. class:: ThrustController
+
+
+
+   .. attribute:: differential_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: differential_throttle_status
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`DifferentialThrottleStatus`
+
+   .. attribute:: electric_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: electric_throttle_hi
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: electric_throttle_lo
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: flameout_safety_pct
+
+      The jet safety margin. A value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: limit_acceleration
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: limit_dynamic_pressure
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: limit_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: limit_to_prevent_flameout
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: limit_to_prevent_overheats
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: limiter_min_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: manage_intakes
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: max_acceleration
+
+      Limit acceleration to this value in m/s^2.
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: max_dynamic_pressure
+
+      Limit Q to this value in Pa.
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: max_throttle
+
+      Limit throttle to this value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: min_throttle
+
+      Keep limited throttle over this value between 0 and 1.
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: smooth_throttle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: throttle_smoothing_time
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+
+
+.. class:: DifferentialThrottleStatus
+
+
+
+
+   .. data:: all_engines_off
+
+
+
+
+   .. data:: more_engines_required
+
+
+
+
+   .. data:: solver_failed
+
+
+
+
+   .. data:: success

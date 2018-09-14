@@ -1,0 +1,1061 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DockingAutopilot" href="docking-autopilot.html" />
+    <link rel="prev" title="AirplaneAutopilot" href="airplane-autopilot.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">Java</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Lua</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#autopilots">Autopilots</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="airplane-autopilot.html">AirplaneAutopilot</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AscentAutopilot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ascentclassic">AscentClassic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ascentgt">AscentGT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ascentpeg">AscentPEG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docking-autopilot.html">DockingAutopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="landing-autopilot.html">LandingAutopilot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rendezvous-autopilot.html">RendezvousAutopilot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Lua</a> &raquo;</li>
+        
+      <li>AscentAutopilot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lua/ascent-autopilot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ascentautopilot">
+<h1>AscentAutopilot<a class="headerlink" href="#ascentautopilot" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="MechJeb.AscentAutopilot">
+<em class="property">class </em><code class="descname">AscentAutopilot</code><a class="headerlink" href="#MechJeb.AscentAutopilot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This module controls the Ascent Guidance in MechJeb 2.</p>
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.enabled">
+<code class="descname">enabled</code><a class="headerlink" href="#MechJeb.AscentAutopilot.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.status">
+<code class="descname">status</code><a class="headerlink" href="#MechJeb.AscentAutopilot.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autopilot status; it depends on the selected ascent path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.ascent_path_index">
+<code class="descname">ascent_path_index</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected ascent path.</p>
+<p>0 = <a class="reference internal" href="#MechJeb.AscentClassic" title="MechJeb.AscentClassic"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentClassic</span></code></a> (Classic Ascent Profile)</p>
+<p>1 = <a class="reference internal" href="#MechJeb.AscentGT" title="MechJeb.AscentGT"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentGT</span></code></a> (Stock-style GravityTurn)</p>
+<p>2 = <a class="reference internal" href="#MechJeb.AscentPEG" title="MechJeb.AscentPEG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPEG</span></code></a> (Powered Explicit Guidance (RSS/RO))</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.ascent_path_classic">
+<code class="descname">ascent_path_classic</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_classic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Classic Ascent Profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AscentClassic" title="MechJeb.AscentClassic"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentClassic</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.ascent_path_gt">
+<code class="descname">ascent_path_gt</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_gt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Stock-style GravityTurn profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AscentGT" title="MechJeb.AscentGT"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentGT</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.ascent_path_peg">
+<code class="descname">ascent_path_peg</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_peg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Powered Explicit Guidance (RSS/RO) profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AscentPEG" title="MechJeb.AscentPEG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPEG</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.desired_inclination">
+<code class="descname">desired_inclination</code><a class="headerlink" href="#MechJeb.AscentAutopilot.desired_inclination" title="Permalink to this definition">¶</a></dt>
+<dd><p>The desired inclination.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.desired_orbit_altitude">
+<code class="descname">desired_orbit_altitude</code><a class="headerlink" href="#MechJeb.AscentAutopilot.desired_orbit_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>The desired orbit altitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.thrust_controller">
+<code class="descname">thrust_controller</code><a class="headerlink" href="#MechJeb.AscentAutopilot.thrust_controller" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="thrust-controller.html#MechJeb.ThrustController" title="MechJeb.ThrustController"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.ThrustController</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Equivalend to <a class="reference internal" href="mechjeb.html#MechJeb.thrust_controller" title="MechJeb.thrust_controller"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.thrust_controller</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.force_roll">
+<code class="descname">force_roll</code><a class="headerlink" href="#MechJeb.AscentAutopilot.force_roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of force roll.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.turn_roll">
+<code class="descname">turn_roll</code><a class="headerlink" href="#MechJeb.AscentAutopilot.turn_roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>The turn roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.vertical_roll">
+<code class="descname">vertical_roll</code><a class="headerlink" href="#MechJeb.AscentAutopilot.vertical_roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>The vertical/climb roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.limit_ao_a">
+<code class="descname">limit_ao_a</code><a class="headerlink" href="#MechJeb.AscentAutopilot.limit_ao_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to limit angle of attack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.max_ao_a">
+<code class="descname">max_ao_a</code><a class="headerlink" href="#MechJeb.AscentAutopilot.max_ao_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximal angle of attack used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.ao_a_limit_fadeout_pressure">
+<code class="descname">ao_a_limit_fadeout_pressure</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ao_a_limit_fadeout_pressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pressure value when AoA limit is automatically deactivated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.corrective_steering">
+<code class="descname">corrective_steering</code><a class="headerlink" href="#MechJeb.AscentAutopilot.corrective_steering" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of corrective steering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.corrective_steering_gain">
+<code class="descname">corrective_steering_gain</code><a class="headerlink" href="#MechJeb.AscentAutopilot.corrective_steering_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gain of corrective steering used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.autostage">
+<code class="descname">autostage</code><a class="headerlink" href="#MechJeb.AscentAutopilot.autostage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to enable autostaging. Paramethers can be set in <a class="reference internal" href="staging-controller.html#MechJeb.StagingController" title="MechJeb.StagingController"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.StagingController</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.staging_controller">
+<code class="descname">staging_controller</code><a class="headerlink" href="#MechJeb.AscentAutopilot.staging_controller" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="staging-controller.html#MechJeb.StagingController" title="MechJeb.StagingController"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.StagingController</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Equivalent to <a class="reference internal" href="mechjeb.html#MechJeb.staging_controller" title="MechJeb.staging_controller"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.staging_controller</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.autodeploy_solar_panels">
+<code class="descname">autodeploy_solar_panels</code><a class="headerlink" href="#MechJeb.AscentAutopilot.autodeploy_solar_panels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to deploy solar panels automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.auto_deploy_antennas">
+<code class="descname">auto_deploy_antennas</code><a class="headerlink" href="#MechJeb.AscentAutopilot.auto_deploy_antennas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to deploy antennas automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.skip_circularization">
+<code class="descname">skip_circularization</code><a class="headerlink" href="#MechJeb.AscentAutopilot.skip_circularization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to skip circularization burn and do only the ascent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.warp_count_down">
+<code class="descname">warp_count_down</code><a class="headerlink" href="#MechJeb.AscentAutopilot.warp_count_down" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.launch_lan_difference">
+<code class="descname">launch_lan_difference</code><a class="headerlink" href="#MechJeb.AscentAutopilot.launch_lan_difference" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentAutopilot.launch_phase_angle">
+<code class="descname">launch_phase_angle</code><a class="headerlink" href="#MechJeb.AscentAutopilot.launch_phase_angle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.AscentAutopilot.launch_to_rendezvous">
+<code class="descname">launch_to_rendezvous</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.AscentAutopilot.launch_to_rendezvous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.AscentAutopilot.launch_to_target_plane">
+<code class="descname">launch_to_target_plane</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.AscentAutopilot.launch_to_target_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch into the plane of the selected target.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="ascentclassic">
+<h2>AscentClassic<a class="headerlink" href="#ascentclassic" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MechJeb.AscentClassic">
+<em class="property">class </em><code class="descname">AscentClassic</code><a class="headerlink" href="#MechJeb.AscentClassic" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Classic Ascent Profile.</p>
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_path">
+<code class="descname">auto_path</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to enable automatic altitude turn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_path_perc">
+<code class="descname">auto_path_perc</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_path_perc" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_path_speed_factor">
+<code class="descname">auto_path_speed_factor</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_path_speed_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_turn_start_altitude">
+<code class="descname">auto_turn_start_altitude</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_turn_start_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_turn_start_velocity">
+<code class="descname">auto_turn_start_velocity</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_turn_start_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.auto_turn_end_altitude">
+<code class="descname">auto_turn_end_altitude</code><a class="headerlink" href="#MechJeb.AscentClassic.auto_turn_end_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.turn_start_altitude">
+<code class="descname">turn_start_altitude</code><a class="headerlink" href="#MechJeb.AscentClassic.turn_start_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>The turn starts when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.turn_start_velocity">
+<code class="descname">turn_start_velocity</code><a class="headerlink" href="#MechJeb.AscentClassic.turn_start_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The turn starts when this velocity is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.turn_end_altitude">
+<code class="descname">turn_end_altitude</code><a class="headerlink" href="#MechJeb.AscentClassic.turn_end_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>The turn ends when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.turn_end_angle">
+<code class="descname">turn_end_angle</code><a class="headerlink" href="#MechJeb.AscentClassic.turn_end_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The final flight path angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentClassic.turn_shape_exponent">
+<code class="descname">turn_shape_exponent</code><a class="headerlink" href="#MechJeb.AscentClassic.turn_shape_exponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value between 0 - 1 describing how steep the turn is.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="ascentgt">
+<h2>AscentGT<a class="headerlink" href="#ascentgt" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MechJeb.AscentGT">
+<em class="property">class </em><code class="descname">AscentGT</code><a class="headerlink" href="#MechJeb.AscentGT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="MechJeb.AscentGT.hold_ap_time">
+<code class="descname">hold_ap_time</code><a class="headerlink" href="#MechJeb.AscentGT.hold_ap_time" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentGT.intermediate_altitude">
+<code class="descname">intermediate_altitude</code><a class="headerlink" href="#MechJeb.AscentGT.intermediate_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentGT.turn_start_altitude">
+<code class="descname">turn_start_altitude</code><a class="headerlink" href="#MechJeb.AscentGT.turn_start_altitude" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentGT.turn_start_pitch">
+<code class="descname">turn_start_pitch</code><a class="headerlink" href="#MechJeb.AscentGT.turn_start_pitch" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentGT.turn_start_velocity">
+<code class="descname">turn_start_velocity</code><a class="headerlink" href="#MechJeb.AscentGT.turn_start_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="ascentpeg">
+<h2>AscentPEG<a class="headerlink" href="#ascentpeg" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MechJeb.AscentPEG">
+<em class="property">class </em><code class="descname">AscentPEG</code><a class="headerlink" href="#MechJeb.AscentPEG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).</p>
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.desired_apoapsis">
+<code class="descname">desired_apoapsis</code><a class="headerlink" href="#MechJeb.AscentPEG.desired_apoapsis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target apoapsis in meters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.pitch_start_time">
+<code class="descname">pitch_start_time</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_start_time" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.pitch_rate">
+<code class="descname">pitch_rate</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_rate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.pitch_end_time">
+<code class="descname">pitch_end_time</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_end_time" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.terminal_guidance_secs">
+<code class="descname">terminal_guidance_secs</code><a class="headerlink" href="#MechJeb.AscentPEG.terminal_guidance_secs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The terminal guidance period in seconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.edit_num_stages">
+<code class="descname">edit_num_stages</code><a class="headerlink" href="#MechJeb.AscentPEG.edit_num_stages" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.AscentPEG.stage_low_dv_limit">
+<code class="descname">stage_low_dv_limit</code><a class="headerlink" href="#MechJeb.AscentPEG.stage_low_dv_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum dV limit for a stage.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docking-autopilot.html" class="btn btn-neutral float-right" title="DockingAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="airplane-autopilot.html" class="btn btn-neutral" title="AirplaneAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

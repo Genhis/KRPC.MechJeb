@@ -1,0 +1,51 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+SmartRCS
+========
+
+
+.. class:: SmartRCS
+
+
+
+   .. attribute:: auto_disable_smart_rcs
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: mode
+
+
+
+      :Attribute: Can be read or written
+      :rtype: :class:`MechJeb.SmartRCSMode`
+
+   .. attribute:: rcs_controller
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.RCSController`
+
+
+
+.. class:: SmartRCSMode
+
+
+
+
+   .. data:: off
+
+
+
+
+   .. data:: zero_relative_velocity
+
+
+
+
+   .. data:: zero_velocity

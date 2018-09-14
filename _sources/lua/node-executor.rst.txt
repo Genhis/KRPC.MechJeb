@@ -1,0 +1,45 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+NodeExecutor
+============
+
+
+.. class:: NodeExecutor
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: boolean
+
+   .. method:: abort()
+
+   .. attribute:: autowarp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. method:: execute_all_nodes()
+
+   .. method:: execute_one_node()
+
+   .. attribute:: lead_time
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: tolerance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

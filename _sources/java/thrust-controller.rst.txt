@@ -1,0 +1,119 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+ThrustController
+================
+
+
+.. type:: public class ThrustController
+
+
+
+   .. method:: boolean getDifferentialThrottle()
+
+   .. method:: void setDifferentialThrottle(boolean value)
+
+   .. method:: DifferentialThrottleStatus getDifferentialThrottleStatus()
+
+   .. method:: boolean getElectricThrottle()
+
+   .. method:: void setElectricThrottle(boolean value)
+
+   .. method:: double getElectricThrottleHi()
+
+   .. method:: void setElectricThrottleHi(double value)
+
+   .. method:: double getElectricThrottleLo()
+
+   .. method:: void setElectricThrottleLo(double value)
+
+   .. method:: double getFlameoutSafetyPct()
+
+   .. method:: void setFlameoutSafetyPct(double value)
+
+      The jet safety margin. A value between 0 and 1.
+
+   .. method:: boolean getLimitAcceleration()
+
+   .. method:: void setLimitAcceleration(boolean value)
+
+   .. method:: boolean getLimitDynamicPressure()
+
+   .. method:: void setLimitDynamicPressure(boolean value)
+
+   .. method:: boolean getLimitThrottle()
+
+   .. method:: void setLimitThrottle(boolean value)
+
+   .. method:: boolean getLimitToPreventFlameout()
+
+   .. method:: void setLimitToPreventFlameout(boolean value)
+
+   .. method:: boolean getLimitToPreventOverheats()
+
+   .. method:: void setLimitToPreventOverheats(boolean value)
+
+   .. method:: boolean getLimiterMinThrottle()
+
+   .. method:: void setLimiterMinThrottle(boolean value)
+
+   .. method:: boolean getManageIntakes()
+
+   .. method:: void setManageIntakes(boolean value)
+
+   .. method:: double getMaxAcceleration()
+
+   .. method:: void setMaxAcceleration(double value)
+
+      Limit acceleration to this value in m/s^2.
+
+   .. method:: double getMaxDynamicPressure()
+
+   .. method:: void setMaxDynamicPressure(double value)
+
+      Limit Q to this value in Pa.
+
+   .. method:: double getMaxThrottle()
+
+   .. method:: void setMaxThrottle(double value)
+
+      Limit throttle to this value between 0 and 1.
+
+   .. method:: double getMinThrottle()
+
+   .. method:: void setMinThrottle(double value)
+
+      Keep limited throttle over this value between 0 and 1.
+
+   .. method:: boolean getSmoothThrottle()
+
+   .. method:: void setSmoothThrottle(boolean value)
+
+   .. method:: double getThrottleSmoothingTime()
+
+   .. method:: void setThrottleSmoothingTime(double value)
+
+
+
+.. type:: public enum DifferentialThrottleStatus
+
+
+
+
+   .. field:: public DifferentialThrottleStatus ALL_ENGINES_OFF
+
+
+
+
+   .. field:: public DifferentialThrottleStatus MORE_ENGINES_REQUIRED
+
+
+
+
+   .. field:: public DifferentialThrottleStatus SOLVER_FAILED
+
+
+
+
+   .. field:: public DifferentialThrottleStatus SUCCESS

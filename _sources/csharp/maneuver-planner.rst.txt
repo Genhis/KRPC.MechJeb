@@ -1,0 +1,554 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+ManeuverPlanner
+===============
+
+
+.. class:: ManeuverPlanner
+
+
+
+   .. property:: OperationApoapsis OperationApoapsis { get; }
+
+   .. property:: OperationCircularize OperationCircularize { get; }
+
+   .. property:: OperationCourseCorrection OperationCourseCorrection { get; }
+
+   .. property:: OperationEllipticize OperationEllipticize { get; }
+
+   .. property:: OperationInclination OperationInclination { get; }
+
+   .. property:: OperationInterplanetaryTransfer OperationInterplanetaryTransfer { get; }
+
+   .. property:: OperationKillRelVel OperationKillRelVel { get; }
+
+   .. property:: OperationLambert OperationLambert { get; }
+
+   .. property:: OperationLan OperationLan { get; }
+
+   .. property:: OperationLongitude OperationLongitude { get; }
+
+   .. property:: OperationMoonReturn OperationMoonReturn { get; }
+
+   .. property:: OperationPeriapsis OperationPeriapsis { get; }
+
+   .. property:: OperationPlane OperationPlane { get; }
+
+   .. property:: OperationResonantOrbit OperationResonantOrbit { get; }
+
+   .. property:: OperationSemiMajor OperationSemiMajor { get; }
+
+   .. property:: OperationTransfer OperationTransfer { get; }
+
+
+
+.. class:: OperationException
+
+   This exception is thrown when there is something wrong with the operation (e.g. the target is not set when the operation needs it).
+
+
+
+TimeSelector
+------------
+
+
+.. class:: TimeSelector
+
+
+
+   .. property:: double CircularizeAltitude { get; set; }
+
+      To be used with :enum:`TimeReference.Altitude`.
+
+   .. property:: double LeadTime { get; set; }
+
+      To be used with :enum:`TimeReference.XFromNow`.
+
+   .. property:: TimeReference TimeReference { get; set; }
+
+
+
+.. enum:: TimeReference
+
+
+
+
+   .. value:: Altitude
+
+
+
+
+   .. value:: Apoapsis
+
+
+
+
+   .. value:: ClosestApproach
+
+
+
+
+   .. value:: Computed
+
+
+
+
+   .. value:: EqAscending
+
+
+
+
+   .. value:: EqDescending
+
+
+
+
+   .. value:: EqHighestAd
+
+
+
+
+   .. value:: EqNearestAd
+
+
+
+
+   .. value:: Periapsis
+
+
+
+
+   .. value:: RelAscending
+
+
+
+
+   .. value:: RelDescending
+
+
+
+
+   .. value:: RelHighestAd
+
+
+
+
+   .. value:: RelNearestAd
+
+
+
+
+   .. value:: XFromNow
+
+
+
+
+
+Operations
+----------
+
+OperationApoapsis
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationApoapsis
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewApoapsis { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationCircularize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCircularize
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationCourseCorrection
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCourseCorrection
+
+
+
+   .. property:: double CourseCorrectFinalPeA { get; set; }
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. property:: double InterceptDistance { get; set; }
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+
+OperationEllipticize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationEllipticize
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewApoapsis { get; set; }
+
+   .. property:: double NewPeriapsis { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationInclination
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInclination
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewInclination { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationInterplanetaryTransfer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInterplanetaryTransfer
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: bool WaitForPhaseAngle { get; set; }
+
+
+
+OperationKillRelVel
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationKillRelVel
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationLambert
+^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLambert
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. property:: double InterceptInterval { get; set; }
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationLan
+^^^^^^^^^^^^
+
+
+.. class:: OperationLan
+
+   Change longitude of ascending node
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewLAN { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationLongitude
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLongitude
+
+   Change longitude of ascending node
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewSurfaceLongitude { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationMoonReturn
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationMoonReturn
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double MoonReturnAltitude { get; set; }
+
+
+
+OperationPeriapsis
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationPeriapsis
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewPeriapsis { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationPlane
+^^^^^^^^^^^^^^
+
+
+.. class:: OperationPlane
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationResonantOrbit
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationResonantOrbit
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: int ResonanceDenominator { get; set; }
+
+   .. property:: int ResonanceNumerator { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationSemiMajor
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationSemiMajor
+
+
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+   .. property:: double NewSemiMajorAxis { get; set; }
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+OperationTransfer
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationTransfer
+
+   Hohmann transfer to target
+
+   .. property:: string ErrorMessage { get; }
+
+      A warning may be stored there during MakeNode() call.
+
+   .. method:: SpaceCenter.Node MakeNode()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.

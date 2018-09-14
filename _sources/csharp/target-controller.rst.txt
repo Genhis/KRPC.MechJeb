@@ -1,0 +1,53 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+TargetController
+================
+
+
+.. class:: TargetController
+
+
+
+   .. property:: bool CanAlign { get; }
+
+   .. property:: float Distance { get; }
+
+   .. property:: System.Tuple<double,double,double> DockingAxis { get; }
+
+   .. method:: System.Tuple<double,double,double> GetPositionTargetPosition()
+
+   .. method:: string GetPositionTargetString()
+
+   .. property:: bool NormalTargetExists { get; }
+
+   .. method:: void PickPositionTargetOnMap()
+
+   .. property:: System.Tuple<double,double,double> Position { get; }
+
+   .. property:: bool PositionTargetExists { get; }
+
+   .. property:: System.Tuple<double,double,double> RelativePosition { get; }
+
+   .. property:: System.Tuple<double,double,double> RelativeVelocity { get; }
+
+   .. method:: void SetDirectionTarget(string name)
+
+
+
+      :parameters:
+
+   .. method:: void SetPositionTarget(SpaceCenter.CelestialBody body, double latitude, double longitude)
+
+
+
+      :parameters:
+
+   .. property:: SpaceCenter.Orbit TargetOrbit { get; }
+
+   .. method:: void UpdateDirectionTarget(System.Tuple<double,double,double> direction)
+
+
+
+      :parameters:

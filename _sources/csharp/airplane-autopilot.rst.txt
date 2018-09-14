@@ -1,0 +1,63 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+AirplaneAutopilot
+=================
+
+
+.. class:: AirplaneAutopilot
+
+
+
+   .. property:: bool Enabled { get; set; }
+
+   .. property:: bool AltitudeHoldEnabled { get; set; }
+
+   .. property:: double AltitudeTarget { get; set; }
+
+   .. property:: bool HeadingHoldEnabled { get; set; }
+
+   .. property:: double HeadingTarget { get; set; }
+
+   .. property:: bool RollHoldEnabled { get; set; }
+
+   .. property:: double RollMax { get; set; }
+
+   .. property:: double RollTarget { get; set; }
+
+   .. property:: bool SpeedHoldEnabled { get; set; }
+
+   .. property:: double SpeedTarget { get; set; }
+
+   .. property:: bool VertSpeedHoldEnabled { get; set; }
+
+   .. property:: double VertSpeedMax { get; set; }
+
+   .. property:: double VertSpeedTarget { get; set; }
+
+   .. property:: double AccKd { get; set; }
+
+   .. property:: double AccKi { get; set; }
+
+   .. property:: double AccKp { get; set; }
+
+   .. property:: double RolKd { get; set; }
+
+   .. property:: double RolKi { get; set; }
+
+   .. property:: double RolKp { get; set; }
+
+   .. property:: double VerKd { get; set; }
+
+   .. property:: double VerKi { get; set; }
+
+   .. property:: double VerKp { get; set; }
+
+   .. property:: double YawKd { get; set; }
+
+   .. property:: double YawKi { get; set; }
+
+   .. property:: double YawKp { get; set; }
+
+   .. property:: double YawLimit { get; set; }

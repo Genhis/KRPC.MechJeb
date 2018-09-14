@@ -1,0 +1,108 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+TargetController
+================
+
+
+.. class:: TargetController
+
+
+
+   .. attribute:: can_align
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: bool
+
+   .. attribute:: distance
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: float
+
+   .. attribute:: docking_axis
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: tuple(double, double, double)
+
+   .. method:: get_position_target_position()
+
+
+
+      :rtype: tuple(double, double, double)
+
+   .. method:: get_position_target_string()
+
+
+
+      :rtype: str
+
+   .. attribute:: normal_target_exists
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: bool
+
+   .. method:: pick_position_target_on_map()
+
+   .. attribute:: position
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: tuple(double, double, double)
+
+   .. attribute:: position_target_exists
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: bool
+
+   .. attribute:: relative_position
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: tuple(double, double, double)
+
+   .. attribute:: relative_velocity
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: tuple(double, double, double)
+
+   .. method:: set_direction_target(name)
+
+
+
+      :param str name:
+
+   .. method:: set_position_target(body, latitude, longitude)
+
+
+
+      :param SpaceCenter.CelestialBody body:
+      :param double latitude:
+      :param double longitude:
+
+   .. attribute:: target_orbit
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`SpaceCenter.Orbit`
+
+   .. method:: update_direction_target(direction)
+
+
+
+      :param tuple direction:

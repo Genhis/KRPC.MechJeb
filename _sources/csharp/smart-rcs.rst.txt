@@ -1,0 +1,36 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+SmartRCS
+========
+
+
+.. class:: SmartRCS
+
+
+
+   .. property:: bool AutoDisableSmartRCS { get; set; }
+
+   .. property:: SmartRCSMode Mode { get; set; }
+
+   .. property:: RCSController RCSController { get; }
+
+
+
+.. enum:: SmartRCSMode
+
+
+
+
+   .. value:: Off
+
+
+
+
+   .. value:: ZeroRelativeVelocity
+
+
+
+
+   .. value:: ZeroVelocity

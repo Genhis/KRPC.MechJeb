@@ -1,0 +1,78 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+StagingController
+=================
+
+
+.. class:: StagingController
+
+
+
+   .. attribute:: enabled
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+   .. attribute:: autostaging_once
+
+      The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+      :Attribute: Can be read or written
+      :rtype: bool
+
+      .. note::
+
+         The controller needs to be enabled for this to work.
+
+   .. attribute:: autostage_limit
+
+      Stop at the selected stage.
+
+      :Attribute: Can be read or written
+      :rtype: int
+
+   .. attribute:: autostage_post_delay
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: autostage_pre_delay
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: clamp_auto_stage_thrust_pct
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: fairing_max_aerothermal_flux
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: fairing_max_dynamic_pressure
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+
+   .. attribute:: fairing_min_altitude
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double

@@ -1,0 +1,860 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+ManeuverPlanner
+===============
+
+
+.. class:: ManeuverPlanner
+
+
+
+   .. attribute:: operation_apoapsis
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationApoapsis`
+
+   .. attribute:: operation_circularize
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationCircularize`
+
+   .. attribute:: operation_course_correction
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationCourseCorrection`
+
+   .. attribute:: operation_ellipticize
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationEllipticize`
+
+   .. attribute:: operation_inclination
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationInclination`
+
+   .. attribute:: operation_interplanetary_transfer
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationInterplanetaryTransfer`
+
+   .. attribute:: operation_kill_rel_vel
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationKillRelVel`
+
+   .. attribute:: operation_lambert
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationLambert`
+
+   .. attribute:: operation_lan
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationLan`
+
+   .. attribute:: operation_longitude
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationLongitude`
+
+   .. attribute:: operation_moon_return
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationMoonReturn`
+
+   .. attribute:: operation_periapsis
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationPeriapsis`
+
+   .. attribute:: operation_plane
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationPlane`
+
+   .. attribute:: operation_resonant_orbit
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationResonantOrbit`
+
+   .. attribute:: operation_semi_major
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationSemiMajor`
+
+   .. attribute:: operation_transfer
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.OperationTransfer`
+
+
+
+.. class:: OperationException
+
+   This exception is thrown when there is something wrong with the operation (e.g. the target is not set when the operation needs it).
+
+
+
+TimeSelector
+------------
+
+
+.. class:: TimeSelector
+
+
+
+   .. attribute:: circularize_altitude
+
+      To be used with :attr:`MechJeb.TimeReference.altitude`.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: lead_time
+
+      To be used with :attr:`MechJeb.TimeReference.x_from_now`.
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_reference
+
+
+
+      :Attribute: Can be read or written
+      :rtype: :class:`MechJeb.TimeReference`
+
+
+
+.. class:: TimeReference
+
+
+
+
+   .. data:: altitude
+
+
+
+
+   .. data:: apoapsis
+
+
+
+
+   .. data:: closest_approach
+
+
+
+
+   .. data:: computed
+
+
+
+
+   .. data:: eq_ascending
+
+
+
+
+   .. data:: eq_descending
+
+
+
+
+   .. data:: eq_highest_ad
+
+
+
+
+   .. data:: eq_nearest_ad
+
+
+
+
+   .. data:: periapsis
+
+
+
+
+   .. data:: rel_ascending
+
+
+
+
+   .. data:: rel_descending
+
+
+
+
+   .. data:: rel_highest_ad
+
+
+
+
+   .. data:: rel_nearest_ad
+
+
+
+
+   .. data:: x_from_now
+
+
+
+
+
+Operations
+----------
+
+OperationApoapsis
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationApoapsis
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_apoapsis
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationCircularize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCircularize
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationCourseCorrection
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationCourseCorrection
+
+
+
+   .. attribute:: course_correct_final_pe_a
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. attribute:: intercept_distance
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+
+
+OperationEllipticize
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationEllipticize
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_apoapsis
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: new_periapsis
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationInclination
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInclination
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_inclination
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationInterplanetaryTransfer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationInterplanetaryTransfer
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: wait_for_phase_angle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+
+
+OperationKillRelVel
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationKillRelVel
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationLambert
+^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLambert
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. attribute:: intercept_interval
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationLan
+^^^^^^^^^^^^
+
+
+.. class:: OperationLan
+
+   Change longitude of ascending node
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_lan
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationLongitude
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationLongitude
+
+   Change longitude of ascending node
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_surface_longitude
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationMoonReturn
+^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationMoonReturn
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: moon_return_altitude
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+
+
+OperationPeriapsis
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationPeriapsis
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_periapsis
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationPlane
+^^^^^^^^^^^^^^
+
+
+.. class:: OperationPlane
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationResonantOrbit
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationResonantOrbit
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: resonance_denominator
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: resonance_numerator
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationSemiMajor
+^^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationSemiMajor
+
+
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: new_semi_major_axis
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`
+
+
+
+OperationTransfer
+^^^^^^^^^^^^^^^^^
+
+
+.. class:: OperationTransfer
+
+   Hohmann transfer to target
+
+   .. attribute:: error_message
+
+      A warning may be stored there during MakeNode() call.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: string
+
+   .. method:: make_node()
+
+      Create a new maneuver node.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :rtype: :class:`SpaceCenter.Node`

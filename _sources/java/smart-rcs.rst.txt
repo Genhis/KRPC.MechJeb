@@ -1,0 +1,40 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+SmartRCS
+========
+
+
+.. type:: public class SmartRCS
+
+
+
+   .. method:: boolean getAutoDisableSmartRCS()
+
+   .. method:: void setAutoDisableSmartRCS(boolean value)
+
+   .. method:: SmartRCSMode getMode()
+
+   .. method:: void setMode(SmartRCSMode value)
+
+   .. method:: RCSController getRCSController()
+
+
+
+.. type:: public enum SmartRCSMode
+
+
+
+
+   .. field:: public SmartRCSMode OFF
+
+
+
+
+   .. field:: public SmartRCSMode ZERO_RELATIVE_VELOCITY
+
+
+
+
+   .. field:: public SmartRCSMode ZERO_VELOCITY

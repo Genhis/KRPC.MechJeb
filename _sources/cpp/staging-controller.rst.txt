@@ -1,0 +1,47 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+StagingController
+=================
+
+
+.. class:: StagingController
+
+
+
+   .. function:: bool enabled()
+   .. function:: void set_enabled(bool value)
+
+   .. function:: bool autostaging_once()
+   .. function:: void set_autostaging_once(bool value)
+
+      The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+
+      .. note::
+
+         The controller needs to be enabled for this to work.
+
+   .. function:: int32_t autostage_limit()
+   .. function:: void set_autostage_limit(int32_t value)
+
+      Stop at the selected stage.
+
+   .. function:: double autostage_post_delay()
+   .. function:: void set_autostage_post_delay(double value)
+
+   .. function:: double autostage_pre_delay()
+   .. function:: void set_autostage_pre_delay(double value)
+
+   .. function:: double clamp_auto_stage_thrust_pct()
+   .. function:: void set_clamp_auto_stage_thrust_pct(double value)
+
+   .. function:: double fairing_max_aerothermal_flux()
+   .. function:: void set_fairing_max_aerothermal_flux(double value)
+
+   .. function:: double fairing_max_dynamic_pressure()
+   .. function:: void set_fairing_max_dynamic_pressure(double value)
+
+   .. function:: double fairing_min_altitude()
+   .. function:: void set_fairing_min_altitude(double value)

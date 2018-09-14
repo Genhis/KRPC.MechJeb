@@ -1,0 +1,22 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+RendezvousAutopilot
+===================
+
+
+.. type:: krpc_MechJeb_RendezvousAutopilot_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_Enabled(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_RendezvousAutopilot_set_Enabled(bool value)
+
+   .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_Status(krpc_connection_t connection, char * * result)
+
+   .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_DesiredDistance(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_RendezvousAutopilot_set_DesiredDistance(double value)
+
+   .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_MaxPhasingOrbits(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_RendezvousAutopilot_set_MaxPhasingOrbits(double value)

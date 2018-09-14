@@ -1,0 +1,49 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+DockingAutopilot
+================
+
+
+.. type:: public class DockingAutopilot
+
+
+
+   .. method:: boolean getEnabled()
+
+   .. method:: void setEnabled(boolean value)
+
+   .. method:: String getStatus()
+
+   .. method:: double getSpeedLimit()
+
+   .. method:: void setSpeedLimit(double value)
+
+   .. method:: boolean getOverrideSafeDistance()
+
+   .. method:: void setOverrideSafeDistance(boolean value)
+
+   .. method:: double getOverridenSafeDistance()
+
+   .. method:: void setOverridenSafeDistance(double value)
+
+   .. method:: boolean getOverrideTargetSize()
+
+   .. method:: void setOverrideTargetSize(boolean value)
+
+   .. method:: double getOverridenTargetSize()
+
+   .. method:: void setOverridenTargetSize(double value)
+
+   .. method:: float getSafeDistance()
+
+   .. method:: float getTargetSize()
+
+   .. method:: boolean getForceRoll()
+
+   .. method:: void setForceRoll(boolean value)
+
+   .. method:: double getRoll()
+
+   .. method:: void setRoll(double value)

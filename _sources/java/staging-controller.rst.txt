@@ -1,0 +1,56 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+StagingController
+=================
+
+
+.. type:: public class StagingController
+
+
+
+   .. method:: boolean getEnabled()
+
+   .. method:: void setEnabled(boolean value)
+
+   .. method:: boolean getAutostagingOnce()
+
+   .. method:: void setAutostagingOnce(boolean value)
+
+      The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+
+      .. note::
+
+         The controller needs to be enabled for this to work.
+
+   .. method:: int getAutostageLimit()
+
+   .. method:: void setAutostageLimit(int value)
+
+      Stop at the selected stage.
+
+   .. method:: double getAutostagePostDelay()
+
+   .. method:: void setAutostagePostDelay(double value)
+
+   .. method:: double getAutostagePreDelay()
+
+   .. method:: void setAutostagePreDelay(double value)
+
+   .. method:: double getClampAutoStageThrustPct()
+
+   .. method:: void setClampAutoStageThrustPct(double value)
+
+   .. method:: double getFairingMaxAerothermalFlux()
+
+   .. method:: void setFairingMaxAerothermalFlux(double value)
+
+   .. method:: double getFairingMaxDynamicPressure()
+
+   .. method:: void setFairingMaxDynamicPressure(double value)
+
+   .. method:: double getFairingMinAltitude()
+
+   .. method:: void setFairingMinAltitude(double value)
