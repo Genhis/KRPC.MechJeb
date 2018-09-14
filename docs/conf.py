@@ -3,7 +3,7 @@ project = "kRPC.MechJeb"
 copyright = "2018, Genhis"
 author = "Genhis"
 
-version = "0.2.0"
+version = "0.3.0"
 release = version
 
 master_doc = "index"
