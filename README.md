@@ -26,11 +26,11 @@ find the relevant file in the release archive and link it with your project.
 [Java](https://genhis.github.io/KRPC.MechJeb/java/),
 [Lua](https://genhis.github.io/KRPC.MechJeb/lua/),
 [Python](https://genhis.github.io/KRPC.MechJeb/python/)
+- [Tutorials and Examples](https://genhis.github.io/KRPC.MechJeb/tutorials.html)
 
 ## TO-DO
 
 - Add logging statements for debugging
-- Add code examples
 - Implement `AdvancedTransfer` maneuver operation
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`

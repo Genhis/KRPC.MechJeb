@@ -13,6 +13,7 @@ Huge thanks to the authors of `KRPC <https://krpc.github.io/krpc>`_ and `MechJeb
    :caption: Getting started
 
    installation
+   tutorials
 
 .. _clients:
 
