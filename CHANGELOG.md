@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 properties should be read-only
 ### Fixed
 - `AscentAutopilot#DesiredInclination` property didn't do anything
+- If ascent path editor was open while changing `AscentPathIndex`, the old window would not close and would report null
+ascent path
 
 ## [0.2.0] - 2018-09-07
 ### Added

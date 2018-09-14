@@ -10,12 +10,12 @@ namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
 		private static FieldInfo desiredInclination;
+		private static MethodInfo enablePathModule;
 
 		private readonly object guiInstance;
 
 		private readonly FieldInfo status;
 		private readonly FieldInfo ascentPathIdx;
-		private readonly FieldInfo ascentPath;
 		private readonly object desiredOrbitAltitude;
 		private readonly FieldInfo autoThrottle;
 		private readonly FieldInfo correctiveSteering;
@@ -36,14 +36,11 @@ namespace KRPC.MechJeb {
 
 		private readonly MethodInfo startCountdown;
 
-		private AscentBase currentAscentPath;
-
 		public AscentAutopilot() : base("AscentAutopilot") {
 			this.guiInstance = MechJeb.GetComputerModule("AscentGuidance");
 
 			this.status = this.type.GetField("status");
 			this.ascentPathIdx = this.type.GetField("ascentPathIdx");
-			this.ascentPath = this.type.GetField("ascentPath");
 			this.desiredOrbitAltitude = this.type.GetField("desiredOrbitAltitude").GetValue(this.instance);
 			this.autoThrottle = this.type.GetField("autoThrottle");
 			this.correctiveSteering = this.type.GetField("correctiveSteering");
@@ -77,6 +74,7 @@ namespace KRPC.MechJeb {
 			switch(t.FullName) {
 				case "MuMech.MechJebModuleAscentGuidance":
 					desiredInclination = t.GetField("desiredInclination");
+					enablePathModule = t.GetMethod("enable_path_module", BindingFlags.NonPublic | BindingFlags.Instance);
 					return true;
 				default:
 					return false;
@@ -105,22 +103,8 @@ namespace KRPC.MechJeb {
 				if(value < 0 || value > 2)
 					return;
 
-				if(this.currentAscentPath != null)
-					this.currentAscentPath.Enabled = false;
 				this.ascentPathIdx.SetValue(this.instance, value);
-				switch(value) {
-					case 0:
-						this.currentAscentPath = this.AscentPathClassic;
-						break;
-					case 1:
-						this.currentAscentPath = this.AscentPathGT;
-						break;
-					case 2:
-						this.currentAscentPath = this.AscentPathPEG;
-						break;
-				}
-				this.ascentPath.SetValue(this.instance, this.currentAscentPath.instance);
-				this.currentAscentPath.Enabled = true;
+				enablePathModule.Invoke(this.guiInstance, new object[] { value });
 			}
 		}
 
