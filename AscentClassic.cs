@@ -107,21 +107,12 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
-		public double AutoTurnStartAltitude {
-			get => EditableVariables.GetDouble(this.autoTurnStartAltitude);
-			set => EditableVariables.SetDouble(this.autoTurnStartAltitude, value);
-		}
+		public double AutoTurnStartAltitude => EditableVariables.GetDouble(this.autoTurnStartAltitude);
 
 		[KRPCProperty]
-		public double AutoTurnStartVelocity {
-			get => EditableVariables.GetDouble(this.autoTurnStartVelocity);
-			set => EditableVariables.SetDouble(this.autoTurnStartVelocity, value);
-		}
+		public double AutoTurnStartVelocity => EditableVariables.GetDouble(this.autoTurnStartVelocity);
 
 		[KRPCProperty]
-		public double AutoTurnEndAltitude {
-			get => EditableVariables.GetDouble(this.autoTurnEndAltitude);
-			set => EditableVariables.SetDouble(this.autoTurnEndAltitude, value);
-		}
+		public double AutoTurnEndAltitude => EditableVariables.GetDouble(this.autoTurnEndAltitude);
 	}
 }
