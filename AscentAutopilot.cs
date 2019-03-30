@@ -10,12 +10,11 @@ namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
 		private static FieldInfo desiredInclination;
-		private static MethodInfo enablePathModule;
 
 		private readonly object guiInstance;
 
 		private readonly FieldInfo status;
-		private readonly FieldInfo ascentPathIdx;
+		private readonly PropertyInfo ascentPathIdx;
 		private readonly object desiredOrbitAltitude;
 		private readonly FieldInfo autoThrottle;
 		private readonly FieldInfo correctiveSteering;
@@ -40,7 +39,7 @@ namespace KRPC.MechJeb {
 			this.guiInstance = MechJeb.GetComputerModule("AscentGuidance");
 
 			this.status = this.type.GetField("status");
-			this.ascentPathIdx = this.type.GetField("ascentPathIdx");
+			this.ascentPathIdx = this.type.GetProperty("ascentPathIdxPublic");
 			this.desiredOrbitAltitude = this.type.GetField("desiredOrbitAltitude").GetValue(this.instance);
 			this.autoThrottle = this.type.GetField("autoThrottle");
 			this.correctiveSteering = this.type.GetField("correctiveSteering");
@@ -63,7 +62,7 @@ namespace KRPC.MechJeb {
 
 			this.AscentPathClassic = new AscentClassic();
 			this.AscentPathGT = new AscentGT();
-			this.AscentPathPEG = new AscentPEG();
+			this.AscentPathPVG = new AscentPVG();
 
 			// Retrieve the current path index set in mechjeb and enable the path representing that index.
 			// It fixes the issue with AscentAutopilot reporting empty status due to a disabled path.
@@ -74,7 +73,6 @@ namespace KRPC.MechJeb {
 			switch(t.FullName) {
 				case "MuMech.MechJebModuleAscentGuidance":
 					desiredInclination = t.GetField("desiredInclination");
-					enablePathModule = t.GetMethod("enable_path_module", BindingFlags.NonPublic | BindingFlags.Instance);
 					return true;
 				default:
 					return false;
@@ -94,17 +92,16 @@ namespace KRPC.MechJeb {
 		/// 
 		/// 1 = <see cref="AscentGT" /> (Stock-style GravityTurn)
 		/// 
-		/// 2 = <see cref="AscentPEG" /> (Powered Explicit Guidance (RSS/RO))
+		/// 2 = <see cref="AscentPVG" /> (Primer Vector Guidance (RSS/RO))
 		/// </summary>
 		[KRPCProperty]
 		public int AscentPathIndex {
-			get => (int)this.ascentPathIdx.GetValue(this.instance);
+			get => (int)this.ascentPathIdx.GetValue(this.instance, null);
 			set {
 				if(value < 0 || value > 2)
 					return;
 
-				this.ascentPathIdx.SetValue(this.instance, value);
-				enablePathModule.Invoke(this.guiInstance, new object[] { value });
+				this.ascentPathIdx.SetValue(this.instance, value, null);
 			}
 		}
 
@@ -124,7 +121,7 @@ namespace KRPC.MechJeb {
 		/// Get Powered Explicit Guidance (RSS/RO) profile settings.
 		/// </summary>
 		[KRPCProperty]
-		public AscentPEG AscentPathPEG { get; }
+		public AscentPVG AscentPathPVG { get; }
 
 		/// <summary>
 		/// The desired orbit altitude.

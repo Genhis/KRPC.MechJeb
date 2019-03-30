@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- **AscentPEG** module overhaul (renamed to **AscentPVG**)
+### Fixed
+- AscentAutopilot raised an exception during initialization phase (#1) due to AscentPEG being renamed to AscentPVG
+(https://github.com/MuMech/MechJeb2/commit/61c0adae6bea4f2f4e9b02b86534d4f1993b9e8)
 
 ## [0.3.0] - 2018-09-15
 ### Added

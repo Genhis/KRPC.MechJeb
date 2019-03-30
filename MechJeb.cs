@@ -52,7 +52,11 @@ namespace KRPC.MechJeb {
 		}
 
 		internal static object GetComputerModule(string moduleType) {
-			return getComputerModule.Invoke(Instance, new object[] { "MechJebModule" + moduleType });
+			object module = getComputerModule.Invoke(Instance, new object[] { "MechJebModule" + moduleType });
+			if(module == null)
+				Logger.Severe("No instance of " + moduleType + " found");
+
+			return module;
 		}
 
 		internal static PartModule Instance { get; private set; }
