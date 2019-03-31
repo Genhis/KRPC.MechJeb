@@ -41,9 +41,6 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(this.desiredApoapsis, value);
 		}
 
-		/// <summary>
-		/// The terminal guidance period in seconds.
-		/// </summary>
 		[KRPCProperty]
 		public bool OmitCoast {
 			get => (bool)this.omitCoast.GetValue(this.instance);
