@@ -17,6 +17,9 @@ their amazing mods, and to the author of the original [krpcmj](https://github.co
 find the relevant file in the release archive and link it with your project.
 4. Happy coding!
 
+Although all examples have been tested using **kRPC v0.4.8** and **MechJeb v2.8.3.0**, I do support upcoming versions,
+so please create a new issue if something doesn't work for you.
+
 ## Getting started
 
 - Documentation for
