@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TargetController &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  <title>TargetController &mdash; kRPC.MechJeb 0.4.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.3.0
+                0.4.0
               </div>
             
           
@@ -195,6 +195,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -209,6 +211,8 @@
 <tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -225,6 +229,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(double, double, double)</td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -238,6 +244,8 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple(double, double, double)</td>
 </tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -250,6 +258,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -266,6 +276,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -273,7 +285,15 @@
 <dl class="method">
 <dt id="MechJeb.TargetController.pick_position_target_on_map">
 <code class="descname">pick_position_target_on_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.TargetController.pick_position_target_on_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="MechJeb.TargetController.position">
@@ -285,6 +305,8 @@
 <tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(double, double, double)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -301,6 +323,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -315,6 +339,8 @@
 <tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(double, double, double)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -331,6 +357,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple(double, double, double)</td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -344,6 +372,8 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – </td>
 </tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -355,11 +385,14 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>body</strong> (<em>SpaceCenter.CelestialBody</em>) – </li>
 <li><strong>latitude</strong> (<em>double</em>) – </li>
 <li><strong>longitude</strong> (<em>double</em>) – </li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body"><p class="first last">Flight</p>
 </td>
 </tr>
 </tbody>
@@ -377,6 +410,8 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Orbit</span></code></td>
 </tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
 </tbody>
 </table>
 </dd></dl>
@@ -389,6 +424,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>direction</strong> (<em>tuple</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -418,7 +455,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Genhis.
+        &copy; Copyright 2018-2019, Genhis.
 
     </p>
   </div>
@@ -440,7 +477,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.3.0',
+            VERSION:'0.4.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

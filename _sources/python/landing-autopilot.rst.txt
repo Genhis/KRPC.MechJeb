@@ -16,6 +16,7 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: status
 
@@ -23,6 +24,7 @@ LandingAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. attribute:: deploy_chutes
 
@@ -30,6 +32,7 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: deploy_gears
 
@@ -37,10 +40,19 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. method:: land_at_position_target()
 
+
+
+      :Game Scenes: Flight
+
    .. method:: land_untargeted()
+
+
+
+      :Game Scenes: Flight
 
    .. attribute:: limit_chutes_stage
 
@@ -48,6 +60,7 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: limit_gears_stage
 
@@ -55,6 +68,7 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: rcs_adjustment
 
@@ -62,8 +76,13 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. method:: stop_landing()
+
+
+
+      :Game Scenes: Flight
 
    .. attribute:: touchdown_speed
 
@@ -71,3 +90,4 @@ LandingAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight

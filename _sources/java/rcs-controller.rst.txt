@@ -14,6 +14,14 @@ RCSController
 
    .. method:: void setRCSForRotation(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getRCSThrottle()
 
    .. method:: void setRCSThrottle(boolean value)
+
+
+
+      :Game Scenes: Flight

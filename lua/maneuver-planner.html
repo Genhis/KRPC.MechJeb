@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.4.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.3.0
+                0.4.0
               </div>
             
           
@@ -1592,7 +1592,7 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationTransfer">
 <em class="property">class </em><code class="descname">OperationTransfer</code><a class="headerlink" href="#MechJeb.OperationTransfer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Hohmann transfer to target</p>
+<dd><p>Bi-impulsive (Hohmann) transfer to target</p>
 <dl class="attribute">
 <dt id="MechJeb.OperationTransfer.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationTransfer.error_message" title="Permalink to this definition">¶</a></dt>
@@ -1626,6 +1626,73 @@ MJServiceException - Internal service error.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="MechJeb.OperationTransfer.intercept_only">
+<code class="descname">intercept_only</code><a class="headerlink" href="#MechJeb.OperationTransfer.intercept_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intercept only, no capture burn (impact/flyby)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.OperationTransfer.period_offset">
+<code class="descname">period_offset</code><a class="headerlink" href="#MechJeb.OperationTransfer.period_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fractional target period offset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.OperationTransfer.simple_transfer">
+<code class="descname">simple_transfer</code><a class="headerlink" href="#MechJeb.OperationTransfer.simple_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple coplanar Hohmann transfer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If set to true, TimeSelector property is ignored.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MechJeb.OperationTransfer.time_selector">
+<code class="descname">time_selector</code><a class="headerlink" href="#MechJeb.OperationTransfer.time_selector" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.TimeSelector" title="MechJeb.TimeSelector"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.TimeSelector</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -1652,7 +1719,7 @@ MJServiceException - Internal service error.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Genhis.
+        &copy; Copyright 2018-2019, Genhis.
 
     </p>
   </div>
@@ -1674,7 +1741,7 @@ MJServiceException - Internal service error.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.3.0',
+            VERSION:'0.4.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

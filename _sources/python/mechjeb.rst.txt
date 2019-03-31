@@ -17,6 +17,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: bool
+   :Game Scenes: Flight
+
 
 
 
@@ -27,6 +29,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`AirplaneAutopilot`
+   :Game Scenes: Flight
+
 
 
 
@@ -37,6 +41,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`DeployableController`
+   :Game Scenes: Flight
+
 
 
 
@@ -47,6 +53,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`AscentAutopilot`
+   :Game Scenes: Flight
+
 
 
 
@@ -57,6 +65,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`DockingAutopilot`
+   :Game Scenes: Flight
+
 
 
 
@@ -67,6 +77,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`LandingAutopilot`
+   :Game Scenes: Flight
+
 
 
 
@@ -77,6 +89,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`ManeuverPlanner`
+   :Game Scenes: Flight
+
 
 
 
@@ -87,6 +101,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`NodeExecutor`
+   :Game Scenes: Flight
+
 
 
 
@@ -97,6 +113,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`RCSController`
+   :Game Scenes: Flight
+
 
 
 
@@ -107,6 +125,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`RendezvousAutopilot`
+   :Game Scenes: Flight
+
 
 
 
@@ -117,6 +137,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`SmartRCS`
+   :Game Scenes: Flight
+
 
 
 
@@ -127,6 +149,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`DeployableController`
+   :Game Scenes: Flight
+
 
 
 
@@ -137,6 +161,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`StagingController`
+   :Game Scenes: Flight
+
 
 
 
@@ -147,6 +173,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`TargetController`
+   :Game Scenes: Flight
+
 
 
 
@@ -157,6 +185,8 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`ThrustController`
+   :Game Scenes: Flight
+
 
 
 

@@ -12,35 +12,99 @@ ManeuverPlanner
 
    .. function:: OperationApoapsis operation_apoapsis()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationCircularize operation_circularize()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationCourseCorrection operation_course_correction()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationEllipticize operation_ellipticize()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationInclination operation_inclination()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationInterplanetaryTransfer operation_interplanetary_transfer()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationKillRelVel operation_kill_rel_vel()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationLambert operation_lambert()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationLan operation_lan()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationLongitude operation_longitude()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationMoonReturn operation_moon_return()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationPeriapsis operation_periapsis()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationPlane operation_plane()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationResonantOrbit operation_resonant_orbit()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: OperationSemiMajor operation_semi_major()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: OperationTransfer operation_transfer()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -64,13 +128,21 @@ TimeSelector
 
       To be used with :enumerator:`TimeReference::altitude`.
 
+      :Game Scenes: Flight
+
    .. function:: double lead_time()
    .. function:: void set_lead_time(double value)
 
       To be used with :enumerator:`TimeReference::x_from_now`.
 
+      :Game Scenes: Flight
+
    .. function:: TimeReference time_reference()
    .. function:: void set_time_reference(TimeReference value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -166,6 +238,8 @@ OperationApoapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -174,10 +248,21 @@ OperationApoapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_apoapsis()
    .. function:: void set_new_apoapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -193,6 +278,8 @@ OperationCircularize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -201,7 +288,14 @@ OperationCircularize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -216,12 +310,22 @@ OperationCourseCorrection
    .. function:: double course_correct_final_pe_a()
    .. function:: void set_course_correct_final_pe_a(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::string error_message()
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: double intercept_distance()
    .. function:: void set_intercept_distance(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: SpaceCenter::Node make_node()
 
@@ -230,6 +334,9 @@ OperationCourseCorrection
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
 
 
 
@@ -245,6 +352,8 @@ OperationEllipticize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -253,13 +362,28 @@ OperationEllipticize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_apoapsis()
    .. function:: void set_new_apoapsis(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double new_periapsis()
    .. function:: void set_new_periapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -275,6 +399,8 @@ OperationInclination
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -283,10 +409,21 @@ OperationInclination
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_inclination()
    .. function:: void set_new_inclination(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -302,6 +439,8 @@ OperationInterplanetaryTransfer
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -310,8 +449,15 @@ OperationInterplanetaryTransfer
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: bool wait_for_phase_angle()
    .. function:: void set_wait_for_phase_angle(bool value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -327,6 +473,8 @@ OperationKillRelVel
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -335,7 +483,14 @@ OperationKillRelVel
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -351,8 +506,14 @@ OperationLambert
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: double intercept_interval()
    .. function:: void set_intercept_interval(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: SpaceCenter::Node make_node()
 
@@ -362,7 +523,14 @@ OperationLambert
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -378,6 +546,8 @@ OperationLan
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -386,10 +556,21 @@ OperationLan
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_lan()
    .. function:: void set_new_lan(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -405,6 +586,8 @@ OperationLongitude
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -413,10 +596,21 @@ OperationLongitude
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_surface_longitude()
    .. function:: void set_new_surface_longitude(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -432,6 +626,8 @@ OperationMoonReturn
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -440,8 +636,15 @@ OperationMoonReturn
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double moon_return_altitude()
    .. function:: void set_moon_return_altitude(double value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -457,6 +660,8 @@ OperationPeriapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -465,10 +670,21 @@ OperationPeriapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_periapsis()
    .. function:: void set_new_periapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -484,6 +700,8 @@ OperationPlane
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -492,7 +710,14 @@ OperationPlane
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -508,6 +733,8 @@ OperationResonantOrbit
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -516,13 +743,28 @@ OperationResonantOrbit
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: int32_t resonance_denominator()
    .. function:: void set_resonance_denominator(int32_t value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: int32_t resonance_numerator()
    .. function:: void set_resonance_numerator(int32_t value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -538,6 +780,8 @@ OperationSemiMajor
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Node make_node()
 
       Create a new maneuver node.
@@ -546,10 +790,21 @@ OperationSemiMajor
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: double new_semi_major_axis()
    .. function:: void set_new_semi_major_axis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -559,11 +814,13 @@ OperationTransfer
 
 .. class:: OperationTransfer
 
-   Hohmann transfer to target
+   Bi-impulsive (Hohmann) transfer to target
 
    .. function:: std::string error_message()
 
       A warning may be stored there during MakeNode() call.
+
+      :Game Scenes: Flight
 
    .. function:: SpaceCenter::Node make_node()
 
@@ -572,3 +829,38 @@ OperationTransfer
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
+
+   .. function:: bool intercept_only()
+   .. function:: void set_intercept_only(bool value)
+
+      Intercept only, no capture burn (impact/flyby)
+
+      :Game Scenes: Flight
+
+   .. function:: double period_offset()
+   .. function:: void set_period_offset(double value)
+
+      Fractional target period offset
+
+      :Game Scenes: Flight
+
+   .. function:: bool simple_transfer()
+   .. function:: void set_simple_transfer(bool value)
+
+      Simple coplanar Hohmann transfer
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         If set to true, TimeSelector property is ignored.
+
+   .. function:: TimeSelector time_selector()
+
+
+
+      :Game Scenes: Flight

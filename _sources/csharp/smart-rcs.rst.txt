@@ -12,9 +12,21 @@ SmartRCS
 
    .. property:: bool AutoDisableSmartRCS { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: SmartRCSMode Mode { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: RCSController RCSController { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 

@@ -12,17 +12,48 @@ NodeExecutor
 
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Enabled(krpc_connection_t connection, bool * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Abort(krpc_connection_t connection)
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Autowarp(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_NodeExecutor_set_Autowarp(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_ExecuteAllNodes(krpc_connection_t connection)
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_ExecuteOneNode(krpc_connection_t connection)
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_LeadTime(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_NodeExecutor_set_LeadTime(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor_Tolerance(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_NodeExecutor_set_Tolerance(double value)
+
+
+
+      :Game Scenes: Flight

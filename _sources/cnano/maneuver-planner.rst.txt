@@ -12,35 +12,99 @@ ManeuverPlanner
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationApoapsis(krpc_connection_t connection, krpc_MechJeb_OperationApoapsis_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationCircularize(krpc_connection_t connection, krpc_MechJeb_OperationCircularize_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationCourseCorrection(krpc_connection_t connection, krpc_MechJeb_OperationCourseCorrection_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationEllipticize(krpc_connection_t connection, krpc_MechJeb_OperationEllipticize_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationInclination(krpc_connection_t connection, krpc_MechJeb_OperationInclination_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationInterplanetaryTransfer(krpc_connection_t connection, krpc_MechJeb_OperationInterplanetaryTransfer_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationKillRelVel(krpc_connection_t connection, krpc_MechJeb_OperationKillRelVel_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationLambert(krpc_connection_t connection, krpc_MechJeb_OperationLambert_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationLan(krpc_connection_t connection, krpc_MechJeb_OperationLan_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationLongitude(krpc_connection_t connection, krpc_MechJeb_OperationLongitude_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationMoonReturn(krpc_connection_t connection, krpc_MechJeb_OperationMoonReturn_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationPeriapsis(krpc_connection_t connection, krpc_MechJeb_OperationPeriapsis_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationPlane(krpc_connection_t connection, krpc_MechJeb_OperationPlane_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationResonantOrbit(krpc_connection_t connection, krpc_MechJeb_OperationResonantOrbit_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationSemiMajor(krpc_connection_t connection, krpc_MechJeb_OperationSemiMajor_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner_OperationTransfer(krpc_connection_t connection, krpc_MechJeb_OperationTransfer_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -63,13 +127,21 @@ TimeSelector
 
       To be used with :macro:`KRPC_MECHJEB_TIMEREFERENCE_ALTITUDE`.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_TimeSelector_LeadTime(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_TimeSelector_set_LeadTime(double value)
 
       To be used with :macro:`KRPC_MECHJEB_TIMEREFERENCE_XFROMNOW`.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_TimeSelector_TimeReference(krpc_connection_t connection, krpc_MechJeb_TimeReference_t * result)
    .. function:: void krpc_MechJeb_TimeSelector_set_TimeReference(krpc_MechJeb_TimeReference_t value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -164,6 +236,8 @@ OperationApoapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -172,10 +246,21 @@ OperationApoapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_NewApoapsis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationApoapsis_set_NewApoapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -191,6 +276,8 @@ OperationCircularize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -199,7 +286,14 @@ OperationCircularize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -214,12 +308,22 @@ OperationCourseCorrection
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_CourseCorrectFinalPeA(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationCourseCorrection_set_CourseCorrectFinalPeA(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_ErrorMessage(krpc_connection_t connection, char * * result)
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_InterceptDistance(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationCourseCorrection_set_InterceptDistance(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
@@ -228,6 +332,9 @@ OperationCourseCorrection
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
 
 
 
@@ -243,6 +350,8 @@ OperationEllipticize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -251,13 +360,28 @@ OperationEllipticize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_NewApoapsis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationEllipticize_set_NewApoapsis(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_NewPeriapsis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationEllipticize_set_NewPeriapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -273,6 +397,8 @@ OperationInclination
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -281,10 +407,21 @@ OperationInclination
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_NewInclination(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationInclination_set_NewInclination(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -300,6 +437,8 @@ OperationInterplanetaryTransfer
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -308,8 +447,15 @@ OperationInterplanetaryTransfer
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_WaitForPhaseAngle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_OperationInterplanetaryTransfer_set_WaitForPhaseAngle(bool value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -325,6 +471,8 @@ OperationKillRelVel
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -333,7 +481,14 @@ OperationKillRelVel
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -349,8 +504,14 @@ OperationLambert
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_InterceptInterval(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationLambert_set_InterceptInterval(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
@@ -360,7 +521,14 @@ OperationLambert
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -376,6 +544,8 @@ OperationLan
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLan_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -384,10 +554,21 @@ OperationLan
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLan_NewLAN(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationLan_set_NewLAN(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLan_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -403,6 +584,8 @@ OperationLongitude
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -411,10 +594,21 @@ OperationLongitude
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_NewSurfaceLongitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationLongitude_set_NewSurfaceLongitude(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -430,6 +624,8 @@ OperationMoonReturn
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -438,8 +634,15 @@ OperationMoonReturn
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_MoonReturnAltitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationMoonReturn_set_MoonReturnAltitude(double value)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -455,6 +658,8 @@ OperationPeriapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -463,10 +668,21 @@ OperationPeriapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_NewPeriapsis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationPeriapsis_set_NewPeriapsis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -482,6 +698,8 @@ OperationPlane
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationPlane_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -490,7 +708,14 @@ OperationPlane
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationPlane_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -506,6 +731,8 @@ OperationResonantOrbit
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -514,13 +741,28 @@ OperationResonantOrbit
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_ResonanceDenominator(krpc_connection_t connection, int32_t * result)
    .. function:: void krpc_MechJeb_OperationResonantOrbit_set_ResonanceDenominator(int32_t value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_ResonanceNumerator(krpc_connection_t connection, int32_t * result)
    .. function:: void krpc_MechJeb_OperationResonantOrbit_set_ResonanceNumerator(int32_t value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -536,6 +778,8 @@ OperationSemiMajor
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
       Create a new maneuver node.
@@ -544,10 +788,21 @@ OperationSemiMajor
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_NewSemiMajorAxis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationSemiMajor_set_NewSemiMajorAxis(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -557,11 +812,13 @@ OperationTransfer
 
 .. type:: krpc_MechJeb_OperationTransfer_t
 
-   Hohmann transfer to target
+   Bi-impulsive (Hohmann) transfer to target
 
    .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_ErrorMessage(krpc_connection_t connection, char * * result)
 
       A warning may be stored there during MakeNode() call.
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
@@ -570,3 +827,38 @@ OperationTransfer
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_InterceptOnly(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_OperationTransfer_set_InterceptOnly(bool value)
+
+      Intercept only, no capture burn (impact/flyby)
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_PeriodOffset(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_OperationTransfer_set_PeriodOffset(double value)
+
+      Fractional target period offset
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_SimpleTransfer(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_OperationTransfer_set_SimpleTransfer(bool value)
+
+      Simple coplanar Hohmann transfer
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         If set to true, TimeSelector property is ignored.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
+
+
+
+      :Game Scenes: Flight

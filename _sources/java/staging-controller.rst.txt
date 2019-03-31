@@ -14,11 +14,17 @@ StagingController
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getAutostagingOnce()
 
    .. method:: void setAutostagingOnce(boolean value)
 
       The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -31,26 +37,68 @@ StagingController
 
       Stop at the selected stage.
 
+      :Game Scenes: Flight
+
    .. method:: double getAutostagePostDelay()
 
    .. method:: void setAutostagePostDelay(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getAutostagePreDelay()
 
    .. method:: void setAutostagePreDelay(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getClampAutoStageThrustPct()
 
    .. method:: void setClampAutoStageThrustPct(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getFairingMaxAerothermalFlux()
 
    .. method:: void setFairingMaxAerothermalFlux(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getFairingMaxDynamicPressure()
 
    .. method:: void setFairingMaxDynamicPressure(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getFairingMinAltitude()
 
    .. method:: void setFairingMinAltitude(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getHotStaging()
+
+   .. method:: void setHotStaging(boolean value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getHotStagingLeadTime()
+
+   .. method:: void setHotStagingLeadTime(double value)
+
+
+
+      :Game Scenes: Flight

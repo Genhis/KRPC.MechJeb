@@ -14,34 +14,79 @@ LandingAutopilot
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: String getStatus()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getDeployChutes()
 
    .. method:: void setDeployChutes(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getDeployGears()
 
    .. method:: void setDeployGears(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void landAtPositionTarget()
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void landUntargeted()
+
+
+
+      :Game Scenes: Flight
 
    .. method:: int getLimitChutesStage()
 
    .. method:: void setLimitChutesStage(int value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: int getLimitGearsStage()
 
    .. method:: void setLimitGearsStage(int value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getRcsAdjustment()
 
    .. method:: void setRcsAdjustment(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void stopLanding()
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getTouchdownSpeed()
 
    .. method:: void setTouchdownSpeed(double value)
+
+
+
+      :Game Scenes: Flight

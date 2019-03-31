@@ -13,29 +13,73 @@ DockingAutopilot
    .. function:: bool enabled()
    .. function:: void set_enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::string status()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double speed_limit()
    .. function:: void set_speed_limit(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool override_safe_distance()
    .. function:: void set_override_safe_distance(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double overriden_safe_distance()
    .. function:: void set_overriden_safe_distance(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool override_target_size()
    .. function:: void set_override_target_size(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double overriden_target_size()
    .. function:: void set_overriden_target_size(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: float safe_distance()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: float target_size()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool force_roll()
    .. function:: void set_force_roll(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double roll()
    .. function:: void set_roll(double value)
+
+
+
+      :Game Scenes: Flight

@@ -19,33 +19,91 @@ MechJeb service
 
       A value indicating whether the service is available.
 
+      :Game Scenes: Flight
+
    .. function:: AirplaneAutopilot airplane_autopilot()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: DeployableController antenna_controller()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: AscentAutopilot ascent_autopilot()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: DockingAutopilot docking_autopilot()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: LandingAutopilot landing_autopilot()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: ManeuverPlanner maneuver_planner()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: NodeExecutor node_executor()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: RCSController rcs_controller()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: RendezvousAutopilot rendezvous_autopilot()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: SmartRCS smart_rcs()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: DeployableController solar_panel_controller()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: StagingController staging_controller()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: TargetController target_controller()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: ThrustController thrust_controller()
+
+
+
+      :Game Scenes: Flight
 
 
 

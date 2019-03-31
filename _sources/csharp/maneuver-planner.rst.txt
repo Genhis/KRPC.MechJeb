@@ -12,35 +12,99 @@ ManeuverPlanner
 
    .. property:: OperationApoapsis OperationApoapsis { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationCircularize OperationCircularize { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationCourseCorrection OperationCourseCorrection { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationEllipticize OperationEllipticize { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationInclination OperationInclination { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationInterplanetaryTransfer OperationInterplanetaryTransfer { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationKillRelVel OperationKillRelVel { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationLambert OperationLambert { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationLan OperationLan { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationLongitude OperationLongitude { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationMoonReturn OperationMoonReturn { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationPeriapsis OperationPeriapsis { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationPlane OperationPlane { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationResonantOrbit OperationResonantOrbit { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: OperationSemiMajor OperationSemiMajor { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: OperationTransfer OperationTransfer { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -62,11 +126,19 @@ TimeSelector
 
       To be used with :enum:`TimeReference.Altitude`.
 
+      :Game Scenes: Flight
+
    .. property:: double LeadTime { get; set; }
 
       To be used with :enum:`TimeReference.XFromNow`.
 
+      :Game Scenes: Flight
+
    .. property:: TimeReference TimeReference { get; set; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -161,6 +233,8 @@ OperationApoapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -169,9 +243,20 @@ OperationApoapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewApoapsis { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -187,6 +272,8 @@ OperationCircularize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -195,7 +282,14 @@ OperationCircularize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -209,11 +303,21 @@ OperationCourseCorrection
 
    .. property:: double CourseCorrectFinalPeA { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: string ErrorMessage { get; }
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. property:: double InterceptDistance { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: SpaceCenter.Node MakeNode()
 
@@ -222,6 +326,9 @@ OperationCourseCorrection
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
 
 
 
@@ -237,6 +344,8 @@ OperationEllipticize
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -245,11 +354,26 @@ OperationEllipticize
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewApoapsis { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double NewPeriapsis { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -265,6 +389,8 @@ OperationInclination
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -273,9 +399,20 @@ OperationInclination
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewInclination { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -291,6 +428,8 @@ OperationInterplanetaryTransfer
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -299,7 +438,14 @@ OperationInterplanetaryTransfer
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: bool WaitForPhaseAngle { get; set; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -315,6 +461,8 @@ OperationKillRelVel
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -323,7 +471,14 @@ OperationKillRelVel
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -339,7 +494,13 @@ OperationLambert
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. property:: double InterceptInterval { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: SpaceCenter.Node MakeNode()
 
@@ -349,7 +510,14 @@ OperationLambert
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -365,6 +533,8 @@ OperationLan
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -373,9 +543,20 @@ OperationLan
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewLAN { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -391,6 +572,8 @@ OperationLongitude
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -399,9 +582,20 @@ OperationLongitude
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewSurfaceLongitude { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -417,6 +611,8 @@ OperationMoonReturn
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -425,7 +621,14 @@ OperationMoonReturn
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double MoonReturnAltitude { get; set; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -441,6 +644,8 @@ OperationPeriapsis
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -449,9 +654,20 @@ OperationPeriapsis
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewPeriapsis { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -467,6 +683,8 @@ OperationPlane
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -475,7 +693,14 @@ OperationPlane
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -491,6 +716,8 @@ OperationResonantOrbit
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -499,11 +726,26 @@ OperationResonantOrbit
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: int ResonanceDenominator { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: int ResonanceNumerator { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -519,6 +761,8 @@ OperationSemiMajor
 
       A warning may be stored there during MakeNode() call.
 
+      :Game Scenes: Flight
+
    .. method:: SpaceCenter.Node MakeNode()
 
       Create a new maneuver node.
@@ -527,9 +771,20 @@ OperationSemiMajor
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+
+      :Game Scenes: Flight
+
    .. property:: double NewSemiMajorAxis { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 
@@ -539,11 +794,13 @@ OperationTransfer
 
 .. class:: OperationTransfer
 
-   Hohmann transfer to target
+   Bi-impulsive (Hohmann) transfer to target
 
    .. property:: string ErrorMessage { get; }
 
       A warning may be stored there during MakeNode() call.
+
+      :Game Scenes: Flight
 
    .. method:: SpaceCenter.Node MakeNode()
 
@@ -552,3 +809,35 @@ OperationTransfer
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
+
+
+      :Game Scenes: Flight
+
+   .. property:: bool InterceptOnly { get; set; }
+
+      Intercept only, no capture burn (impact/flyby)
+
+      :Game Scenes: Flight
+
+   .. property:: double PeriodOffset { get; set; }
+
+      Fractional target period offset
+
+      :Game Scenes: Flight
+
+   .. property:: bool SimpleTransfer { get; set; }
+
+      Simple coplanar Hohmann transfer
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         If set to true, TimeSelector property is ignored.
+
+   .. property:: TimeSelector TimeSelector { get; }
+
+
+
+      :Game Scenes: Flight

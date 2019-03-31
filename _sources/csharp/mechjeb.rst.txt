@@ -14,33 +14,91 @@ MechJeb service
 
       A value indicating whether the service is available.
 
+      :Game Scenes: Flight
+
    .. property:: AirplaneAutopilot AirplaneAutopilot { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: DeployableController AntennaController { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: AscentAutopilot AscentAutopilot { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: DockingAutopilot DockingAutopilot { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: LandingAutopilot LandingAutopilot { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: ManeuverPlanner ManeuverPlanner { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: NodeExecutor NodeExecutor { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: RCSController RCSController { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: RendezvousAutopilot RendezvousAutopilot { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: SmartRCS SmartRCS { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: DeployableController SolarPanelController { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: StagingController StagingController { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: TargetController TargetController { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: ThrustController ThrustController { get; }
+
+
+
+      :Game Scenes: Flight
 
 
 

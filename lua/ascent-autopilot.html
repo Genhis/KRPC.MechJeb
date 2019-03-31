@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.4.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.3.0
+                0.4.0
               </div>
             
           
@@ -101,7 +101,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">AscentAutopilot</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ascentclassic">AscentClassic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ascentgt">AscentGT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ascentpeg">AscentPEG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ascentpvg">AscentPVG</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="docking-autopilot.html">DockingAutopilot</a></li>
@@ -227,7 +227,7 @@
 <dd><p>The selected ascent path.</p>
 <p>0 = <a class="reference internal" href="#MechJeb.AscentClassic" title="MechJeb.AscentClassic"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentClassic</span></code></a> (Classic Ascent Profile)</p>
 <p>1 = <a class="reference internal" href="#MechJeb.AscentGT" title="MechJeb.AscentGT"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentGT</span></code></a> (Stock-style GravityTurn)</p>
-<p>2 = <a class="reference internal" href="#MechJeb.AscentPEG" title="MechJeb.AscentPEG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPEG</span></code></a> (Powered Explicit Guidance (RSS/RO))</p>
+<p>2 = <a class="reference internal" href="#MechJeb.AscentPVG" title="MechJeb.AscentPVG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPVG</span></code></a> (Primer Vector Guidance (RSS/RO))</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -273,8 +273,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="MechJeb.AscentAutopilot.ascent_path_peg">
-<code class="descname">ascent_path_peg</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_peg" title="Permalink to this definition">¶</a></dt>
+<dt id="MechJeb.AscentAutopilot.ascent_path_pvg">
+<code class="descname">ascent_path_pvg</code><a class="headerlink" href="#MechJeb.AscentAutopilot.ascent_path_pvg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Powered Explicit Guidance (RSS/RO) profile settings.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -282,7 +282,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AscentPEG" title="MechJeb.AscentPEG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPEG</span></code></a></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AscentPVG" title="MechJeb.AscentPVG"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AscentPVG</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -873,15 +873,15 @@
 </dd></dl>
 
 </div>
-<div class="section" id="ascentpeg">
-<h2>AscentPEG<a class="headerlink" href="#ascentpeg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ascentpvg">
+<h2>AscentPVG<a class="headerlink" href="#ascentpvg" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="MechJeb.AscentPEG">
-<em class="property">class </em><code class="descname">AscentPEG</code><a class="headerlink" href="#MechJeb.AscentPEG" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).</p>
+<dt id="MechJeb.AscentPVG">
+<em class="property">class </em><code class="descname">AscentPVG</code><a class="headerlink" href="#MechJeb.AscentPVG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Primer Vector Guidance (RSS/RO) profile.</p>
 <dl class="attribute">
-<dt id="MechJeb.AscentPEG.desired_apoapsis">
-<code class="descname">desired_apoapsis</code><a class="headerlink" href="#MechJeb.AscentPEG.desired_apoapsis" title="Permalink to this definition">¶</a></dt>
+<dt id="MechJeb.AscentPVG.desired_apoapsis">
+<code class="descname">desired_apoapsis</code><a class="headerlink" href="#MechJeb.AscentPVG.desired_apoapsis" title="Permalink to this definition">¶</a></dt>
 <dd><p>The target apoapsis in meters.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -896,8 +896,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="MechJeb.AscentPEG.pitch_start_time">
-<code class="descname">pitch_start_time</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_start_time" title="Permalink to this definition">¶</a></dt>
+<dt id="MechJeb.AscentPVG.pitch_start_velocity">
+<code class="descname">pitch_start_velocity</code><a class="headerlink" href="#MechJeb.AscentPVG.pitch_start_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -911,8 +911,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="MechJeb.AscentPEG.pitch_rate">
-<code class="descname">pitch_rate</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_rate" title="Permalink to this definition">¶</a></dt>
+<dt id="MechJeb.AscentPVG.pitch_rate">
+<code class="descname">pitch_rate</code><a class="headerlink" href="#MechJeb.AscentPVG.pitch_rate" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -926,62 +926,15 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="MechJeb.AscentPEG.pitch_end_time">
-<code class="descname">pitch_end_time</code><a class="headerlink" href="#MechJeb.AscentPEG.pitch_end_time" title="Permalink to this definition">¶</a></dt>
+<dt id="MechJeb.AscentPVG.omit_coast">
+<code class="descname">omit_coast</code><a class="headerlink" href="#MechJeb.AscentPVG.omit_coast" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="MechJeb.AscentPEG.terminal_guidance_secs">
-<code class="descname">terminal_guidance_secs</code><a class="headerlink" href="#MechJeb.AscentPEG.terminal_guidance_secs" title="Permalink to this definition">¶</a></dt>
-<dd><p>The terminal guidance period in seconds.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="MechJeb.AscentPEG.edit_num_stages">
-<code class="descname">edit_num_stages</code><a class="headerlink" href="#MechJeb.AscentPEG.edit_num_stages" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="MechJeb.AscentPEG.stage_low_dv_limit">
-<code class="descname">stage_low_dv_limit</code><a class="headerlink" href="#MechJeb.AscentPEG.stage_low_dv_limit" title="Permalink to this definition">¶</a></dt>
-<dd><p>The minimum dV limit for a stage.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
 </tr>
 </tbody>
 </table>
@@ -1012,7 +965,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Genhis.
+        &copy; Copyright 2018-2019, Genhis.
 
     </p>
   </div>
@@ -1034,7 +987,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.3.0',
+            VERSION:'0.4.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -13,10 +13,26 @@ RendezvousAutopilot
    .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_RendezvousAutopilot_set_Enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_Status(krpc_connection_t connection, char * * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_DesiredDistance(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_RendezvousAutopilot_set_DesiredDistance(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot_MaxPhasingOrbits(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_RendezvousAutopilot_set_MaxPhasingOrbits(double value)
+
+
+
+      :Game Scenes: Flight

@@ -13,10 +13,16 @@ StagingController
    .. function:: bool enabled()
    .. function:: void set_enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool autostaging_once()
    .. function:: void set_autostaging_once(bool value)
 
       The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -28,20 +34,60 @@ StagingController
 
       Stop at the selected stage.
 
+      :Game Scenes: Flight
+
    .. function:: double autostage_post_delay()
    .. function:: void set_autostage_post_delay(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double autostage_pre_delay()
    .. function:: void set_autostage_pre_delay(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double clamp_auto_stage_thrust_pct()
    .. function:: void set_clamp_auto_stage_thrust_pct(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double fairing_max_aerothermal_flux()
    .. function:: void set_fairing_max_aerothermal_flux(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double fairing_max_dynamic_pressure()
    .. function:: void set_fairing_max_dynamic_pressure(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double fairing_min_altitude()
    .. function:: void set_fairing_min_altitude(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: bool hot_staging()
+   .. function:: void set_hot_staging(bool value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double hot_staging_lead_time()
+   .. function:: void set_hot_staging_lead_time(double value)
+
+
+
+      :Game Scenes: Flight

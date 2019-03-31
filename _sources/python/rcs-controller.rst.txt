@@ -16,6 +16,7 @@ RCSController
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: rcs_throttle
 
@@ -23,3 +24,4 @@ RCSController
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight

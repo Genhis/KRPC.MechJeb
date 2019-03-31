@@ -14,102 +14,206 @@ AirplaneAutopilot
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getAltitudeHoldEnabled()
 
    .. method:: void setAltitudeHoldEnabled(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getAltitudeTarget()
 
    .. method:: void setAltitudeTarget(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getHeadingHoldEnabled()
 
    .. method:: void setHeadingHoldEnabled(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getHeadingTarget()
 
    .. method:: void setHeadingTarget(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getRollHoldEnabled()
 
    .. method:: void setRollHoldEnabled(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getRollMax()
 
    .. method:: void setRollMax(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getRollTarget()
 
    .. method:: void setRollTarget(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getSpeedHoldEnabled()
 
    .. method:: void setSpeedHoldEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getSpeedTarget()
 
    .. method:: void setSpeedTarget(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getVertSpeedHoldEnabled()
 
    .. method:: void setVertSpeedHoldEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getVertSpeedMax()
 
    .. method:: void setVertSpeedMax(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getVertSpeedTarget()
 
    .. method:: void setVertSpeedTarget(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getAccKd()
 
    .. method:: void setAccKd(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getAccKi()
 
    .. method:: void setAccKi(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getAccKp()
 
    .. method:: void setAccKp(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getRolKd()
 
    .. method:: void setRolKd(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getRolKi()
 
    .. method:: void setRolKi(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getRolKp()
 
    .. method:: void setRolKp(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getVerKd()
 
    .. method:: void setVerKd(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getVerKi()
 
    .. method:: void setVerKi(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getVerKp()
 
    .. method:: void setVerKp(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getYawKd()
 
    .. method:: void setYawKd(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getYawKi()
 
    .. method:: void setYawKi(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getYawKp()
 
    .. method:: void setYawKp(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getYawLimit()
 
    .. method:: void setYawLimit(double value)
+
+
+
+      :Game Scenes: Flight

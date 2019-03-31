@@ -13,29 +13,73 @@ DockingAutopilot
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_Enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_Status(krpc_connection_t connection, char * * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_SpeedLimit(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_SpeedLimit(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_OverrideSafeDistance(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_OverrideSafeDistance(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_OverridenSafeDistance(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_OverridenSafeDistance(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_OverrideTargetSize(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_OverrideTargetSize(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_OverridenTargetSize(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_OverridenTargetSize(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_SafeDistance(krpc_connection_t connection, float * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_TargetSize(krpc_connection_t connection, float * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_ForceRoll(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_ForceRoll(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot_Roll(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_DockingAutopilot_set_Roll(double value)
+
+
+
+      :Game Scenes: Flight

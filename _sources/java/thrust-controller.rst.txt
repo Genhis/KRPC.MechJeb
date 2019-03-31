@@ -14,19 +14,40 @@ ThrustController
 
    .. method:: void setDifferentialThrottle(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: DifferentialThrottleStatus getDifferentialThrottleStatus()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getElectricThrottle()
 
    .. method:: void setElectricThrottle(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getElectricThrottleHi()
 
    .. method:: void setElectricThrottleHi(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getElectricThrottleLo()
 
    .. method:: void setElectricThrottleLo(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getFlameoutSafetyPct()
 
@@ -34,33 +55,63 @@ ThrustController
 
       The jet safety margin. A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. method:: boolean getLimitAcceleration()
 
    .. method:: void setLimitAcceleration(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getLimitDynamicPressure()
 
    .. method:: void setLimitDynamicPressure(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getLimitThrottle()
 
    .. method:: void setLimitThrottle(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getLimitToPreventFlameout()
 
    .. method:: void setLimitToPreventFlameout(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getLimitToPreventOverheats()
 
    .. method:: void setLimitToPreventOverheats(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getLimiterMinThrottle()
 
    .. method:: void setLimiterMinThrottle(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getManageIntakes()
 
    .. method:: void setManageIntakes(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getMaxAcceleration()
 
@@ -68,11 +119,15 @@ ThrustController
 
       Limit acceleration to this value in m/s^2.
 
+      :Game Scenes: Flight
+
    .. method:: double getMaxDynamicPressure()
 
    .. method:: void setMaxDynamicPressure(double value)
 
       Limit Q to this value in Pa.
+
+      :Game Scenes: Flight
 
    .. method:: double getMaxThrottle()
 
@@ -80,19 +135,31 @@ ThrustController
 
       Limit throttle to this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. method:: double getMinThrottle()
 
    .. method:: void setMinThrottle(double value)
 
       Keep limited throttle over this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. method:: boolean getSmoothThrottle()
 
    .. method:: void setSmoothThrottle(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getThrottleSmoothingTime()
 
    .. method:: void setThrottleSmoothingTime(double value)
+
+
+
+      :Game Scenes: Flight
 
 
 

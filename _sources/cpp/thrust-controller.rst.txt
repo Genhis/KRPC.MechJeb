@@ -13,68 +13,134 @@ ThrustController
    .. function:: bool differential_throttle()
    .. function:: void set_differential_throttle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: DifferentialThrottleStatus differential_throttle_status()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool electric_throttle()
    .. function:: void set_electric_throttle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double electric_throttle_hi()
    .. function:: void set_electric_throttle_hi(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double electric_throttle_lo()
    .. function:: void set_electric_throttle_lo(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double flameout_safety_pct()
    .. function:: void set_flameout_safety_pct(double value)
 
       The jet safety margin. A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: bool limit_acceleration()
    .. function:: void set_limit_acceleration(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool limit_dynamic_pressure()
    .. function:: void set_limit_dynamic_pressure(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool limit_throttle()
    .. function:: void set_limit_throttle(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool limit_to_prevent_flameout()
    .. function:: void set_limit_to_prevent_flameout(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool limit_to_prevent_overheats()
    .. function:: void set_limit_to_prevent_overheats(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool limiter_min_throttle()
    .. function:: void set_limiter_min_throttle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool manage_intakes()
    .. function:: void set_manage_intakes(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double max_acceleration()
    .. function:: void set_max_acceleration(double value)
 
       Limit acceleration to this value in m/s^2.
 
+      :Game Scenes: Flight
+
    .. function:: double max_dynamic_pressure()
    .. function:: void set_max_dynamic_pressure(double value)
 
       Limit Q to this value in Pa.
+
+      :Game Scenes: Flight
 
    .. function:: double max_throttle()
    .. function:: void set_max_throttle(double value)
 
       Limit throttle to this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: double min_throttle()
    .. function:: void set_min_throttle(double value)
 
       Keep limited throttle over this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: bool smooth_throttle()
    .. function:: void set_smooth_throttle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double throttle_smoothing_time()
    .. function:: void set_throttle_smoothing_time(double value)
+
+
+
+      :Game Scenes: Flight
 
 
 

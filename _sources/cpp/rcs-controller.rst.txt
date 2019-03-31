@@ -13,5 +13,13 @@ RCSController
    .. function:: bool rcs_for_rotation()
    .. function:: void set_rcs_for_rotation(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool rcs_throttle()
    .. function:: void set_rcs_throttle(bool value)
+
+
+
+      :Game Scenes: Flight

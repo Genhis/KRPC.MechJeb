@@ -12,25 +12,72 @@ TargetController
 
    .. function:: bool can_align()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: float distance()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: std::tuple<double, double, double> docking_axis()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::tuple<double, double, double> get_position_target_position()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: std::string get_position_target_string()
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: bool normal_target_exists()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: void pick_position_target_on_map()
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: std::tuple<double, double, double> position()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool position_target_exists()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::tuple<double, double, double> relative_position()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::tuple<double, double, double> relative_velocity()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: void set_direction_target(std::string name)
 
@@ -38,16 +85,34 @@ TargetController
 
       :Parameters:
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void set_position_target(SpaceCenter::CelestialBody body, double latitude, double longitude)
 
 
 
       :Parameters:
 
+
+
+
+
+      :Game Scenes: Flight
+
    .. function:: SpaceCenter::Orbit target_orbit()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: void update_direction_target(std::tuple<double, double, double> direction)
 
 
 
       :Parameters:
+
+
+
+      :Game Scenes: Flight

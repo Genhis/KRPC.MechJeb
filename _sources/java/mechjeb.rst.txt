@@ -15,33 +15,105 @@ MechJeb service
 
       A value indicating whether the service is available.
 
+      :Game Scenes: Flight
+
    .. method:: AirplaneAutopilot getAirplaneAutopilot()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: DeployableController getAntennaController()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: AscentAutopilot getAscentAutopilot()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: DockingAutopilot getDockingAutopilot()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: LandingAutopilot getLandingAutopilot()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: ManeuverPlanner getManeuverPlanner()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: NodeExecutor getNodeExecutor()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: RCSController getRCSController()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: RendezvousAutopilot getRendezvousAutopilot()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: SmartRCS getSmartRCS()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: DeployableController getSolarPanelController()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: StagingController getStagingController()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: TargetController getTargetController()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: ThrustController getThrustController()
+
+
+
+
+      :Game Scenes: Flight
 
 
 

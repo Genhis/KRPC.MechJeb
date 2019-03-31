@@ -16,6 +16,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationApoapsis`
+      :Game Scenes: Flight
 
    .. attribute:: operation_circularize
 
@@ -23,6 +24,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationCircularize`
+      :Game Scenes: Flight
 
    .. attribute:: operation_course_correction
 
@@ -30,6 +32,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationCourseCorrection`
+      :Game Scenes: Flight
 
    .. attribute:: operation_ellipticize
 
@@ -37,6 +40,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationEllipticize`
+      :Game Scenes: Flight
 
    .. attribute:: operation_inclination
 
@@ -44,6 +48,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationInclination`
+      :Game Scenes: Flight
 
    .. attribute:: operation_interplanetary_transfer
 
@@ -51,6 +56,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationInterplanetaryTransfer`
+      :Game Scenes: Flight
 
    .. attribute:: operation_kill_rel_vel
 
@@ -58,6 +64,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationKillRelVel`
+      :Game Scenes: Flight
 
    .. attribute:: operation_lambert
 
@@ -65,6 +72,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationLambert`
+      :Game Scenes: Flight
 
    .. attribute:: operation_lan
 
@@ -72,6 +80,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationLan`
+      :Game Scenes: Flight
 
    .. attribute:: operation_longitude
 
@@ -79,6 +88,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationLongitude`
+      :Game Scenes: Flight
 
    .. attribute:: operation_moon_return
 
@@ -86,6 +96,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationMoonReturn`
+      :Game Scenes: Flight
 
    .. attribute:: operation_periapsis
 
@@ -93,6 +104,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationPeriapsis`
+      :Game Scenes: Flight
 
    .. attribute:: operation_plane
 
@@ -100,6 +112,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationPlane`
+      :Game Scenes: Flight
 
    .. attribute:: operation_resonant_orbit
 
@@ -107,6 +120,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationResonantOrbit`
+      :Game Scenes: Flight
 
    .. attribute:: operation_semi_major
 
@@ -114,6 +128,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationSemiMajor`
+      :Game Scenes: Flight
 
    .. attribute:: operation_transfer
 
@@ -121,6 +136,7 @@ ManeuverPlanner
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`OperationTransfer`
+      :Game Scenes: Flight
 
 
 
@@ -144,6 +160,7 @@ TimeSelector
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: lead_time
 
@@ -151,6 +168,7 @@ TimeSelector
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_reference
 
@@ -158,6 +176,7 @@ TimeSelector
 
       :Attribute: Can be read or written
       :rtype: :class:`TimeReference`
+      :Game Scenes: Flight
 
 
 
@@ -254,6 +273,7 @@ OperationApoapsis
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -264,6 +284,7 @@ OperationApoapsis
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_apoapsis
 
@@ -271,6 +292,7 @@ OperationApoapsis
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -278,6 +300,7 @@ OperationApoapsis
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -295,6 +318,7 @@ OperationCircularize
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -305,6 +329,7 @@ OperationCircularize
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -312,6 +337,7 @@ OperationCircularize
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -329,6 +355,7 @@ OperationCourseCorrection
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: error_message
 
@@ -336,6 +363,7 @@ OperationCourseCorrection
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. attribute:: intercept_distance
 
@@ -343,6 +371,7 @@ OperationCourseCorrection
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -353,6 +382,7 @@ OperationCourseCorrection
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
 
 
@@ -370,6 +400,7 @@ OperationEllipticize
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -380,6 +411,7 @@ OperationEllipticize
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_apoapsis
 
@@ -387,6 +419,7 @@ OperationEllipticize
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: new_periapsis
 
@@ -394,6 +427,7 @@ OperationEllipticize
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -401,6 +435,7 @@ OperationEllipticize
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -418,6 +453,7 @@ OperationInclination
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -428,6 +464,7 @@ OperationInclination
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_inclination
 
@@ -435,6 +472,7 @@ OperationInclination
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -442,6 +480,7 @@ OperationInclination
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -459,6 +498,7 @@ OperationInterplanetaryTransfer
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -469,6 +509,7 @@ OperationInterplanetaryTransfer
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: wait_for_phase_angle
 
@@ -476,6 +517,7 @@ OperationInterplanetaryTransfer
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
 
 
@@ -493,6 +535,7 @@ OperationKillRelVel
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -503,6 +546,7 @@ OperationKillRelVel
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -510,6 +554,7 @@ OperationKillRelVel
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -527,6 +572,7 @@ OperationLambert
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. attribute:: intercept_interval
 
@@ -534,6 +580,7 @@ OperationLambert
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -544,6 +591,7 @@ OperationLambert
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -551,6 +599,7 @@ OperationLambert
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -568,6 +617,7 @@ OperationLan
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -578,6 +628,7 @@ OperationLan
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_lan
 
@@ -585,6 +636,7 @@ OperationLan
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -592,6 +644,7 @@ OperationLan
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -609,6 +662,7 @@ OperationLongitude
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -619,6 +673,7 @@ OperationLongitude
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_surface_longitude
 
@@ -626,6 +681,7 @@ OperationLongitude
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -633,6 +689,7 @@ OperationLongitude
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -650,6 +707,7 @@ OperationMoonReturn
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -660,6 +718,7 @@ OperationMoonReturn
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: moon_return_altitude
 
@@ -667,6 +726,7 @@ OperationMoonReturn
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
 
 
@@ -684,6 +744,7 @@ OperationPeriapsis
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -694,6 +755,7 @@ OperationPeriapsis
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_periapsis
 
@@ -701,6 +763,7 @@ OperationPeriapsis
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -708,6 +771,7 @@ OperationPeriapsis
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -725,6 +789,7 @@ OperationPlane
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -735,6 +800,7 @@ OperationPlane
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -742,6 +808,7 @@ OperationPlane
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -759,6 +826,7 @@ OperationResonantOrbit
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -769,6 +837,7 @@ OperationResonantOrbit
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: resonance_denominator
 
@@ -776,6 +845,7 @@ OperationResonantOrbit
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: resonance_numerator
 
@@ -783,6 +853,7 @@ OperationResonantOrbit
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -790,6 +861,7 @@ OperationResonantOrbit
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -807,6 +879,7 @@ OperationSemiMajor
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -817,6 +890,7 @@ OperationSemiMajor
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
 
    .. attribute:: new_semi_major_axis
 
@@ -824,6 +898,7 @@ OperationSemiMajor
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: time_selector
 
@@ -831,6 +906,7 @@ OperationSemiMajor
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight
 
 
 
@@ -840,7 +916,7 @@ OperationTransfer
 
 .. class:: OperationTransfer
 
-   Hohmann transfer to target
+   Bi-impulsive (Hohmann) transfer to target
 
    .. attribute:: error_message
 
@@ -848,6 +924,7 @@ OperationTransfer
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. method:: make_node()
 
@@ -858,3 +935,41 @@ OperationTransfer
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+      :Game Scenes: Flight
+
+   .. attribute:: intercept_only
+
+      Intercept only, no capture burn (impact/flyby)
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: period_offset
+
+      Fractional target period offset
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+   .. attribute:: simple_transfer
+
+      Simple coplanar Hohmann transfer
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         If set to true, TimeSelector property is ignored.
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`TimeSelector`
+      :Game Scenes: Flight

@@ -13,10 +13,22 @@ SmartRCS
    .. function:: bool auto_disable_smart_rcs()
    .. function:: void set_auto_disable_smart_rcs(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: SmartRCSMode mode()
    .. function:: void set_mode(SmartRCSMode value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: RCSController rcs_controller()
+
+
+
+      :Game Scenes: Flight
 
 
 

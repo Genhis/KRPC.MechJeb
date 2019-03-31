@@ -76,3 +76,17 @@ StagingController
 
       :Attribute: Can be read or written
       :rtype: number
+
+   .. attribute:: hot_staging
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: hot_staging_lead_time
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number

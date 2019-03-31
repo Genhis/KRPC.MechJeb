@@ -16,6 +16,7 @@ SmartRCS
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: mode
 
@@ -23,6 +24,7 @@ SmartRCS
 
       :Attribute: Can be read or written
       :rtype: :class:`SmartRCSMode`
+      :Game Scenes: Flight
 
    .. attribute:: rcs_controller
 
@@ -30,6 +32,7 @@ SmartRCS
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`RCSController`
+      :Game Scenes: Flight
 
 
 

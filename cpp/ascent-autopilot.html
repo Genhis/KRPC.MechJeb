@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.4.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.3.0
+                0.4.0
               </div>
             
           
@@ -99,7 +99,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">AscentAutopilot</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ascentclassic">AscentClassic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ascentgt">AscentGT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ascentpeg">AscentPEG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ascentpvg">AscentPVG</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="docking-autopilot.html">DockingAutopilot</a></li>
@@ -198,12 +198,28 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot11set_enabledEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot11set_enabledEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_enabled__b"></span>void <code class="descname">set_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot11set_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot6statusEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot6statusEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::status"></span>std::string <code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot6statusEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The autopilot status; it depends on the selected ascent path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -217,25 +233,57 @@
 <dd><p>The selected ascent path.</p>
 <p>0 = <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb13AscentClassicE" title="krpc::services::MechJeb::AscentClassic"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AscentClassic</span></code></a> (Classic Ascent Profile)</p>
 <p>1 = <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb8AscentGTE" title="krpc::services::MechJeb::AscentGT"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AscentGT</span></code></a> (Stock-style GravityTurn)</p>
-<p>2 = <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb9AscentPEGE" title="krpc::services::MechJeb::AscentPEG"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AscentPEG</span></code></a> (Powered Explicit Guidance (RSS/RO))</p>
+<p>2 = <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb9AscentPVGE" title="krpc::services::MechJeb::AscentPVG"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AscentPVG</span></code></a> (Primer Vector Guidance (RSS/RO))</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot19ascent_path_classicEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot19ascent_path_classicEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::ascent_path_classic"></span><a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb13AscentClassicE" title="krpc::services::MechJeb::AscentClassic">AscentClassic</a> <code class="descname">ascent_path_classic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot19ascent_path_classicEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get Classic Ascent Profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot14ascent_path_gtEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot14ascent_path_gtEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::ascent_path_gt"></span><a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb8AscentGTE" title="krpc::services::MechJeb::AscentGT">AscentGT</a> <code class="descname">ascent_path_gt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot14ascent_path_gtEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get Stock-style GravityTurn profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pegEv">
-<span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pegEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::ascent_path_peg"></span><a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb9AscentPEGE" title="krpc::services::MechJeb::AscentPEG">AscentPEG</a> <code class="descname">ascent_path_peg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pegEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pvgEv">
+<span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pvgEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::ascent_path_pvg"></span><a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb9AscentPVGE" title="krpc::services::MechJeb::AscentPVG">AscentPVG</a> <code class="descname">ascent_path_pvg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot15ascent_path_pvgEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get Powered Explicit Guidance (RSS/RO) profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -247,6 +295,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot23set_desired_inclinationEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot23set_desired_inclinationEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_desired_inclination__double"></span>void <code class="descname">set_desired_inclination</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot23set_desired_inclinationEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The desired inclination.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -258,12 +314,28 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot26set_desired_orbit_altitudeEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot26set_desired_orbit_altitudeEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_desired_orbit_altitude__double"></span>void <code class="descname">set_desired_orbit_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot26set_desired_orbit_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The desired orbit altitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot17thrust_controllerEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot17thrust_controllerEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::thrust_controller"></span><a class="reference internal" href="thrust-controller.html#_CPPv3N4krpc8services7MechJeb16ThrustControllerE" title="krpc::services::MechJeb::ThrustController">ThrustController</a> <code class="descname">thrust_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot17thrust_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="admonition note">
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Equivalend to <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot17thrust_controllerEv" title="krpc::services::MechJeb::AscentAutopilot::thrust_controller"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">thrust_controller()</span></code></a>.</p>
 </div>
@@ -278,6 +350,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot14set_force_rollEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot14set_force_rollEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_force_roll__b"></span>void <code class="descname">set_force_roll</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot14set_force_rollEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The state of force roll.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -289,6 +369,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot13set_turn_rollEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot13set_turn_rollEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_turn_roll__double"></span>void <code class="descname">set_turn_roll</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot13set_turn_rollEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The turn roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -300,6 +388,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot17set_vertical_rollEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot17set_vertical_rollEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_vertical_roll__double"></span>void <code class="descname">set_vertical_roll</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot17set_vertical_rollEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The vertical/climb roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -311,6 +407,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot14set_limit_ao_aEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot14set_limit_ao_aEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_limit_ao_a__b"></span>void <code class="descname">set_limit_ao_a</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot14set_limit_ao_aEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to limit angle of attack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -322,6 +426,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot12set_max_ao_aEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot12set_max_ao_aEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_max_ao_a__double"></span>void <code class="descname">set_max_ao_a</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot12set_max_ao_aEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The maximal angle of attack used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -333,6 +445,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot31set_ao_a_limit_fadeout_pressureEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot31set_ao_a_limit_fadeout_pressureEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_ao_a_limit_fadeout_pressure__double"></span>void <code class="descname">set_ao_a_limit_fadeout_pressure</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot31set_ao_a_limit_fadeout_pressureEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The pressure value when AoA limit is automatically deactivated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -344,6 +464,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot23set_corrective_steeringEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot23set_corrective_steeringEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_corrective_steering__b"></span>void <code class="descname">set_corrective_steering</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot23set_corrective_steeringEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The state of corrective steering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -355,6 +483,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot28set_corrective_steering_gainEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot28set_corrective_steering_gainEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_corrective_steering_gain__double"></span>void <code class="descname">set_corrective_steering_gain</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot28set_corrective_steering_gainEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The gain of corrective steering used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -366,12 +502,28 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot13set_autostageEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot13set_autostageEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_autostage__b"></span>void <code class="descname">set_autostage</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot13set_autostageEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to enable autostaging. Paramethers can be set in <a class="reference internal" href="staging-controller.html#_CPPv3N4krpc8services7MechJeb17StagingControllerE" title="krpc::services::MechJeb::StagingController"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">StagingController</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot18staging_controllerEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot18staging_controllerEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::staging_controller"></span><a class="reference internal" href="staging-controller.html#_CPPv3N4krpc8services7MechJeb17StagingControllerE" title="krpc::services::MechJeb::StagingController">StagingController</a> <code class="descname">staging_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot18staging_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="admonition note">
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Equivalent to <a class="reference internal" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot18staging_controllerEv" title="krpc::services::MechJeb::AscentAutopilot::staging_controller"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">staging_controller()</span></code></a>.</p>
 </div>
@@ -386,6 +538,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot27set_autodeploy_solar_panelsEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot27set_autodeploy_solar_panelsEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_autodeploy_solar_panels__b"></span>void <code class="descname">set_autodeploy_solar_panels</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot27set_autodeploy_solar_panelsEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to deploy solar panels automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -397,6 +557,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot24set_auto_deploy_antennasEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot24set_auto_deploy_antennasEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_auto_deploy_antennas__b"></span>void <code class="descname">set_auto_deploy_antennas</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot24set_auto_deploy_antennasEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to deploy antennas automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -408,6 +576,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot24set_skip_circularizationEb">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot24set_skip_circularizationEb"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_skip_circularization__b"></span>void <code class="descname">set_skip_circularization</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot24set_skip_circularizationEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to skip circularization burn and do only the ascent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -418,7 +594,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot19set_warp_count_downE7int32_t">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot19set_warp_count_downE7int32_t"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_warp_count_down__int32_t"></span>void <code class="descname">set_warp_count_down</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot19set_warp_count_downE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot21launch_lan_differenceEv">
@@ -428,7 +612,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot25set_launch_lan_differenceEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot25set_launch_lan_differenceEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_launch_lan_difference__double"></span>void <code class="descname">set_launch_lan_difference</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot25set_launch_lan_differenceEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot18launch_phase_angleEv">
@@ -438,17 +630,41 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot22set_launch_phase_angleEd">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot22set_launch_phase_angleEd"></span><span id="krpc::services::MechJeb::AscentAutopilot::set_launch_phase_angle__double"></span>void <code class="descname">set_launch_phase_angle</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot22set_launch_phase_angleEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot20launch_to_rendezvousEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot20launch_to_rendezvousEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::launch_to_rendezvous"></span>void <code class="descname">launch_to_rendezvous</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot20launch_to_rendezvousEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb15AscentAutopilot22launch_to_target_planeEv">
 <span id="_CPPv2N4krpc8services7MechJeb15AscentAutopilot22launch_to_target_planeEv"></span><span id="krpc::services::MechJeb::AscentAutopilot::launch_to_target_plane"></span>void <code class="descname">launch_to_target_plane</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb15AscentAutopilot22launch_to_target_planeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Launch into the plane of the selected target.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -468,6 +684,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic13set_auto_pathEb">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic13set_auto_pathEb"></span><span id="krpc::services::MechJeb::AscentClassic::set_auto_path__b"></span>void <code class="descname">set_auto_path</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic13set_auto_pathEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Whether to enable automatic altitude turn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -479,6 +703,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic18set_auto_path_percEf">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic18set_auto_path_percEf"></span><span id="krpc::services::MechJeb::AscentClassic::set_auto_path_perc__float"></span>void <code class="descname">set_auto_path_perc</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic18set_auto_path_percEf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -490,22 +722,54 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic26set_auto_path_speed_factorEf">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic26set_auto_path_speed_factorEf"></span><span id="krpc::services::MechJeb::AscentClassic::set_auto_path_speed_factor__float"></span>void <code class="descname">set_auto_path_speed_factor</code><span class="sig-paren">(</span>float <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic26set_auto_path_speed_factorEf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic24auto_turn_start_altitudeEv">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic24auto_turn_start_altitudeEv"></span><span id="krpc::services::MechJeb::AscentClassic::auto_turn_start_altitude"></span>double <code class="descname">auto_turn_start_altitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic24auto_turn_start_altitudeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic24auto_turn_start_velocityEv">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic24auto_turn_start_velocityEv"></span><span id="krpc::services::MechJeb::AscentClassic::auto_turn_start_velocity"></span>double <code class="descname">auto_turn_start_velocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic24auto_turn_start_velocityEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic22auto_turn_end_altitudeEv">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic22auto_turn_end_altitudeEv"></span><span id="krpc::services::MechJeb::AscentClassic::auto_turn_end_altitude"></span>double <code class="descname">auto_turn_end_altitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic22auto_turn_end_altitudeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic19turn_start_altitudeEv">
@@ -516,6 +780,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_start_altitudeEd">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic23set_turn_start_altitudeEd"></span><span id="krpc::services::MechJeb::AscentClassic::set_turn_start_altitude__double"></span>void <code class="descname">set_turn_start_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_start_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The turn starts when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -527,6 +799,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_start_velocityEd">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic23set_turn_start_velocityEd"></span><span id="krpc::services::MechJeb::AscentClassic::set_turn_start_velocity__double"></span>void <code class="descname">set_turn_start_velocity</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_start_velocityEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The turn starts when this velocity is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -538,6 +818,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic21set_turn_end_altitudeEd">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic21set_turn_end_altitudeEd"></span><span id="krpc::services::MechJeb::AscentClassic::set_turn_end_altitude__double"></span>void <code class="descname">set_turn_end_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic21set_turn_end_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The turn ends when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -549,6 +837,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic18set_turn_end_angleEd">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic18set_turn_end_angleEd"></span><span id="krpc::services::MechJeb::AscentClassic::set_turn_end_angle__double"></span>void <code class="descname">set_turn_end_angle</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic18set_turn_end_angleEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The final flight path angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -560,6 +856,14 @@
 <dt id="_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_shape_exponentEd">
 <span id="_CPPv2N4krpc8services7MechJeb13AscentClassic23set_turn_shape_exponentEd"></span><span id="krpc::services::MechJeb::AscentClassic::set_turn_shape_exponent__double"></span>void <code class="descname">set_turn_shape_exponent</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13AscentClassic23set_turn_shape_exponentEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A value between 0 - 1 describing how steep the turn is.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -578,7 +882,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT16set_hold_ap_timeEd">
 <span id="_CPPv2N4krpc8services7MechJeb8AscentGT16set_hold_ap_timeEd"></span><span id="krpc::services::MechJeb::AscentGT::set_hold_ap_time__double"></span>void <code class="descname">set_hold_ap_time</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb8AscentGT16set_hold_ap_timeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT21intermediate_altitudeEv">
@@ -588,7 +900,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT25set_intermediate_altitudeEd">
 <span id="_CPPv2N4krpc8services7MechJeb8AscentGT25set_intermediate_altitudeEd"></span><span id="krpc::services::MechJeb::AscentGT::set_intermediate_altitude__double"></span>void <code class="descname">set_intermediate_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb8AscentGT25set_intermediate_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT19turn_start_altitudeEv">
@@ -598,7 +918,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT23set_turn_start_altitudeEd">
 <span id="_CPPv2N4krpc8services7MechJeb8AscentGT23set_turn_start_altitudeEd"></span><span id="krpc::services::MechJeb::AscentGT::set_turn_start_altitude__double"></span>void <code class="descname">set_turn_start_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb8AscentGT23set_turn_start_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT16turn_start_pitchEv">
@@ -608,7 +936,15 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT20set_turn_start_pitchEd">
 <span id="_CPPv2N4krpc8services7MechJeb8AscentGT20set_turn_start_pitchEd"></span><span id="krpc::services::MechJeb::AscentGT::set_turn_start_pitch__double"></span>void <code class="descname">set_turn_start_pitch</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb8AscentGT20set_turn_start_pitchEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT19turn_start_velocityEv">
@@ -618,88 +954,96 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb8AscentGT23set_turn_start_velocityEd">
 <span id="_CPPv2N4krpc8services7MechJeb8AscentGT23set_turn_start_velocityEd"></span><span id="krpc::services::MechJeb::AscentGT::set_turn_start_velocity__double"></span>void <code class="descname">set_turn_start_velocity</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb8AscentGT23set_turn_start_velocityEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="ascentpeg">
-<h2>AscentPEG<a class="headerlink" href="#ascentpeg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ascentpvg">
+<h2>AscentPVG<a class="headerlink" href="#ascentpvg" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEGE">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEGE"></span><span id="krpc::services::MechJeb::AscentPEG"></span><em class="property">class </em><code class="descname">AscentPEG</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).</p>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVGE">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVGE"></span><span id="krpc::services::MechJeb::AscentPVG"></span><em class="property">class </em><code class="descname">AscentPVG</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Primer Vector Guidance (RSS/RO) profile.</p>
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG16desired_apoapsisEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG16desired_apoapsisEv"></span><span id="krpc::services::MechJeb::AscentPEG::desired_apoapsis"></span>double <code class="descname">desired_apoapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG16desired_apoapsisEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG16desired_apoapsisEv">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG16desired_apoapsisEv"></span><span id="krpc::services::MechJeb::AscentPVG::desired_apoapsis"></span>double <code class="descname">desired_apoapsis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG16desired_apoapsisEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG20set_desired_apoapsisEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG20set_desired_apoapsisEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_desired_apoapsis__double"></span>void <code class="descname">set_desired_apoapsis</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG20set_desired_apoapsisEd" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG20set_desired_apoapsisEd">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG20set_desired_apoapsisEd"></span><span id="krpc::services::MechJeb::AscentPVG::set_desired_apoapsis__double"></span>void <code class="descname">set_desired_apoapsis</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG20set_desired_apoapsisEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The target apoapsis in meters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG16pitch_start_timeEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG16pitch_start_timeEv"></span><span id="krpc::services::MechJeb::AscentPEG::pitch_start_time"></span>double <code class="descname">pitch_start_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG16pitch_start_timeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG20pitch_start_velocityEv">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG20pitch_start_velocityEv"></span><span id="krpc::services::MechJeb::AscentPVG::pitch_start_velocity"></span>double <code class="descname">pitch_start_velocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG20pitch_start_velocityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG20set_pitch_start_timeEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG20set_pitch_start_timeEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_pitch_start_time__double"></span>void <code class="descname">set_pitch_start_time</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG20set_pitch_start_timeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG10pitch_rateEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG10pitch_rateEv"></span><span id="krpc::services::MechJeb::AscentPEG::pitch_rate"></span>double <code class="descname">pitch_rate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG10pitch_rateEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG14set_pitch_rateEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG14set_pitch_rateEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_pitch_rate__double"></span>void <code class="descname">set_pitch_rate</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG14set_pitch_rateEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG14pitch_end_timeEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG14pitch_end_timeEv"></span><span id="krpc::services::MechJeb::AscentPEG::pitch_end_time"></span>double <code class="descname">pitch_end_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG14pitch_end_timeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG18set_pitch_end_timeEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG18set_pitch_end_timeEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_pitch_end_time__double"></span>void <code class="descname">set_pitch_end_time</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG18set_pitch_end_timeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG22terminal_guidance_secsEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG22terminal_guidance_secsEv"></span><span id="krpc::services::MechJeb::AscentPEG::terminal_guidance_secs"></span>double <code class="descname">terminal_guidance_secs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG22terminal_guidance_secsEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG26set_terminal_guidance_secsEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG26set_terminal_guidance_secsEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_terminal_guidance_secs__double"></span>void <code class="descname">set_terminal_guidance_secs</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG26set_terminal_guidance_secsEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The terminal guidance period in seconds.</p>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG24set_pitch_start_velocityEd">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG24set_pitch_start_velocityEd"></span><span id="krpc::services::MechJeb::AscentPVG::set_pitch_start_velocity__double"></span>void <code class="descname">set_pitch_start_velocity</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG24set_pitch_start_velocityEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG15edit_num_stagesEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG15edit_num_stagesEv"></span><span id="krpc::services::MechJeb::AscentPEG::edit_num_stages"></span>int32_t <code class="descname">edit_num_stages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG15edit_num_stagesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG10pitch_rateEv">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG10pitch_rateEv"></span><span id="krpc::services::MechJeb::AscentPVG::pitch_rate"></span>double <code class="descname">pitch_rate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG10pitch_rateEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG19set_edit_num_stagesE7int32_t">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG19set_edit_num_stagesE7int32_t"></span><span id="krpc::services::MechJeb::AscentPEG::set_edit_num_stages__int32_t"></span>void <code class="descname">set_edit_num_stages</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG19set_edit_num_stagesE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG14set_pitch_rateEd">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG14set_pitch_rateEd"></span><span id="krpc::services::MechJeb::AscentPVG::set_pitch_rate__double"></span>void <code class="descname">set_pitch_rate</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG14set_pitch_rateEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG10omit_coastEv">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG10omit_coastEv"></span><span id="krpc::services::MechJeb::AscentPVG::omit_coast"></span>bool <code class="descname">omit_coast</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG10omit_coastEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG18stage_low_dv_limitEv">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG18stage_low_dv_limitEv"></span><span id="krpc::services::MechJeb::AscentPEG::stage_low_dv_limit"></span>double <code class="descname">stage_low_dv_limit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG18stage_low_dv_limitEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9AscentPEG22set_stage_low_dv_limitEd">
-<span id="_CPPv2N4krpc8services7MechJeb9AscentPEG22set_stage_low_dv_limitEd"></span><span id="krpc::services::MechJeb::AscentPEG::set_stage_low_dv_limit__double"></span>void <code class="descname">set_stage_low_dv_limit</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPEG22set_stage_low_dv_limitEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The minimum dV limit for a stage.</p>
+<dt id="_CPPv3N4krpc8services7MechJeb9AscentPVG14set_omit_coastEb">
+<span id="_CPPv2N4krpc8services7MechJeb9AscentPVG14set_omit_coastEb"></span><span id="krpc::services::MechJeb::AscentPVG::set_omit_coast__b"></span>void <code class="descname">set_omit_coast</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9AscentPVG14set_omit_coastEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -727,7 +1071,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Genhis.
+        &copy; Copyright 2018-2019, Genhis.
 
     </p>
   </div>
@@ -749,7 +1093,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.3.0',
+            VERSION:'0.4.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -16,6 +16,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: altitude_hold_enabled
 
@@ -23,6 +24,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: altitude_target
 
@@ -30,6 +32,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: heading_hold_enabled
 
@@ -37,6 +40,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: heading_target
 
@@ -44,6 +48,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: roll_hold_enabled
 
@@ -51,6 +56,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: roll_max
 
@@ -58,6 +64,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: roll_target
 
@@ -65,6 +72,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: speed_hold_enabled
 
@@ -72,6 +80,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: speed_target
 
@@ -79,6 +88,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: vert_speed_hold_enabled
 
@@ -86,6 +96,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: vert_speed_max
 
@@ -93,6 +104,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: vert_speed_target
 
@@ -100,6 +112,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: acc_kd
 
@@ -107,6 +120,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: acc_ki
 
@@ -114,6 +128,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: acc_kp
 
@@ -121,6 +136,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: rol_kd
 
@@ -128,6 +144,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: rol_ki
 
@@ -135,6 +152,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: rol_kp
 
@@ -142,6 +160,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: ver_kd
 
@@ -149,6 +168,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: ver_ki
 
@@ -156,6 +176,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: ver_kp
 
@@ -163,6 +184,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: yaw_kd
 
@@ -170,6 +192,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: yaw_ki
 
@@ -177,6 +200,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: yaw_kp
 
@@ -184,6 +208,7 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: yaw_limit
 
@@ -191,3 +216,4 @@ AirplaneAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight

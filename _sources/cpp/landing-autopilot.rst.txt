@@ -13,28 +13,75 @@ LandingAutopilot
    .. function:: bool enabled()
    .. function:: void set_enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::string status()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool deploy_chutes()
    .. function:: void set_deploy_chutes(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: bool deploy_gears()
    .. function:: void set_deploy_gears(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void land_at_position_target()
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: void land_untargeted()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: int32_t limit_chutes_stage()
    .. function:: void set_limit_chutes_stage(int32_t value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: int32_t limit_gears_stage()
    .. function:: void set_limit_gears_stage(int32_t value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool rcs_adjustment()
    .. function:: void set_rcs_adjustment(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void stop_landing()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double touchdown_speed()
    .. function:: void set_touchdown_speed(double value)
+
+
+
+      :Game Scenes: Flight

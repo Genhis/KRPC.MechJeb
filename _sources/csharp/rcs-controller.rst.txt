@@ -12,4 +12,12 @@ RCSController
 
    .. property:: bool RCSForRotation { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool RCSThrottle { get; set; }
+
+
+
+      :Game Scenes: Flight

@@ -13,5 +13,13 @@ RCSController
    .. function:: krpc_error_t krpc_MechJeb_RCSController_RCSForRotation(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_RCSController_set_RCSForRotation(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_RCSController_RCSThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_RCSController_set_RCSThrottle(bool value)
+
+
+
+      :Game Scenes: Flight

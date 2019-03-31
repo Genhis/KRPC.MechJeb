@@ -12,14 +12,45 @@ NodeExecutor
 
    .. property:: bool Enabled { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void Abort()
+
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool Autowarp { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void ExecuteAllNodes()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void ExecuteOneNode()
 
+
+
+
+      :Game Scenes: Flight
+
    .. property:: double LeadTime { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double Tolerance { get; set; }
+
+
+
+      :Game Scenes: Flight

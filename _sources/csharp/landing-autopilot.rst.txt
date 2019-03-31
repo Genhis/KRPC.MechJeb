@@ -12,22 +12,69 @@ LandingAutopilot
 
    .. property:: bool Enabled { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: string Status { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool DeployChutes { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool DeployGears { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void LandAtPositionTarget()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: void LandUntargeted()
+
+
+
+
+      :Game Scenes: Flight
 
    .. property:: int LimitChutesStage { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: int LimitGearsStage { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool RcsAdjustment { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void StopLanding()
 
+
+
+
+      :Game Scenes: Flight
+
    .. property:: double TouchdownSpeed { get; set; }
+
+
+
+      :Game Scenes: Flight

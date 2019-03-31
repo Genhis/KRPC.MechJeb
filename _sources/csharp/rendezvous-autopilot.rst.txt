@@ -12,8 +12,24 @@ RendezvousAutopilot
 
    .. property:: bool Enabled { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: string Status { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double DesiredDistance { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double MaxPhasingOrbits { get; set; }
+
+
+
+      :Game Scenes: Flight

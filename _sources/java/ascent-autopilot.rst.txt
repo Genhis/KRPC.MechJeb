@@ -14,10 +14,16 @@ AscentAutopilot
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: String getStatus()
 
 
       The autopilot status; it depends on the selected ascent path.
+
+      :Game Scenes: Flight
 
    .. method:: int getAscentPathIndex()
 
@@ -29,22 +35,30 @@ AscentAutopilot
 
       1 = :type:`AscentGT` (Stock-style GravityTurn)
 
-      2 = :type:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+      2 = :type:`AscentPVG` (Primer Vector Guidance (RSS/RO))
+
+      :Game Scenes: Flight
 
    .. method:: AscentClassic getAscentPathClassic()
 
 
       Get Classic Ascent Profile settings.
 
+      :Game Scenes: Flight
+
    .. method:: AscentGT getAscentPathGT()
 
 
       Get Stock-style GravityTurn profile settings.
 
-   .. method:: AscentPEG getAscentPathPEG()
+      :Game Scenes: Flight
+
+   .. method:: AscentPVG getAscentPathPVG()
 
 
       Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+      :Game Scenes: Flight
 
    .. method:: double getDesiredInclination()
 
@@ -52,16 +66,22 @@ AscentAutopilot
 
       The desired inclination.
 
+      :Game Scenes: Flight
+
    .. method:: double getDesiredOrbitAltitude()
 
    .. method:: void setDesiredOrbitAltitude(double value)
 
       The desired orbit altitude.
 
+      :Game Scenes: Flight
+
    .. method:: ThrustController getThrustController()
 
 
 
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -74,11 +94,15 @@ AscentAutopilot
 
       The state of force roll.
 
+      :Game Scenes: Flight
+
    .. method:: double getTurnRoll()
 
    .. method:: void setTurnRoll(double value)
 
       The turn roll used by the autopilot.
+
+      :Game Scenes: Flight
 
    .. method:: double getVerticalRoll()
 
@@ -86,11 +110,15 @@ AscentAutopilot
 
       The vertical/climb roll used by the autopilot.
 
+      :Game Scenes: Flight
+
    .. method:: boolean getLimitAoA()
 
    .. method:: void setLimitAoA(boolean value)
 
       Whether to limit angle of attack.
+
+      :Game Scenes: Flight
 
    .. method:: double getMaxAoA()
 
@@ -98,11 +126,15 @@ AscentAutopilot
 
       The maximal angle of attack used by the autopilot.
 
+      :Game Scenes: Flight
+
    .. method:: double getAoALimitFadeoutPressure()
 
    .. method:: void setAoALimitFadeoutPressure(double value)
 
       The pressure value when AoA limit is automatically deactivated.
+
+      :Game Scenes: Flight
 
    .. method:: boolean getCorrectiveSteering()
 
@@ -110,11 +142,15 @@ AscentAutopilot
 
       The state of corrective steering.
 
+      :Game Scenes: Flight
+
    .. method:: double getCorrectiveSteeringGain()
 
    .. method:: void setCorrectiveSteeringGain(double value)
 
       The gain of corrective steering used by the autopilot.
+
+      :Game Scenes: Flight
 
    .. method:: boolean getAutostage()
 
@@ -122,10 +158,14 @@ AscentAutopilot
 
       Whether to enable autostaging. Paramethers can be set in :type:`StagingController`.
 
+      :Game Scenes: Flight
+
    .. method:: StagingController getStagingController()
 
 
 
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -138,11 +178,15 @@ AscentAutopilot
 
       Whether to deploy solar panels automatically when the ascent finishes.
 
+      :Game Scenes: Flight
+
    .. method:: boolean getAutoDeployAntennas()
 
    .. method:: void setAutoDeployAntennas(boolean value)
 
       Whether to deploy antennas automatically when the ascent finishes.
+
+      :Game Scenes: Flight
 
    .. method:: boolean getSkipCircularization()
 
@@ -150,23 +194,43 @@ AscentAutopilot
 
       Whether to skip circularization burn and do only the ascent.
 
+      :Game Scenes: Flight
+
    .. method:: int getWarpCountDown()
 
    .. method:: void setWarpCountDown(int value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getLaunchLANDifference()
 
    .. method:: void setLaunchLANDifference(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getLaunchPhaseAngle()
 
    .. method:: void setLaunchPhaseAngle(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void launchToRendezvous()
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void launchToTargetPlane()
 
       Launch into the plane of the selected target.
+
+      :Game Scenes: Flight
 
 
 
@@ -184,11 +248,15 @@ AscentClassic
 
       Whether to enable automatic altitude turn.
 
+      :Game Scenes: Flight
+
    .. method:: float getAutoPathPerc()
 
    .. method:: void setAutoPathPerc(float value)
 
       A value between 0 and 1.
+
+      :Game Scenes: Flight
 
    .. method:: float getAutoPathSpeedFactor()
 
@@ -196,11 +264,28 @@ AscentClassic
 
       A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. method:: double getAutoTurnStartAltitude()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getAutoTurnStartVelocity()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: double getAutoTurnEndAltitude()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getTurnStartAltitude()
 
@@ -208,11 +293,15 @@ AscentClassic
 
       The turn starts when this altitude is reached.
 
+      :Game Scenes: Flight
+
    .. method:: double getTurnStartVelocity()
 
    .. method:: void setTurnStartVelocity(double value)
 
       The turn starts when this velocity is reached.
+
+      :Game Scenes: Flight
 
    .. method:: double getTurnEndAltitude()
 
@@ -220,17 +309,23 @@ AscentClassic
 
       The turn ends when this altitude is reached.
 
+      :Game Scenes: Flight
+
    .. method:: double getTurnEndAngle()
 
    .. method:: void setTurnEndAngle(double value)
 
       The final flight path angle.
 
+      :Game Scenes: Flight
+
    .. method:: double getTurnShapeExponent()
 
    .. method:: void setTurnShapeExponent(double value)
 
       A value between 0 - 1 describing how steep the turn is.
+
+      :Game Scenes: Flight
 
 
 
@@ -246,17 +341,33 @@ AscentGT
 
    .. method:: void setHoldAPTime(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getIntermediateAltitude()
 
    .. method:: void setIntermediateAltitude(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getTurnStartAltitude()
 
    .. method:: void setTurnStartAltitude(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getTurnStartPitch()
 
    .. method:: void setTurnStartPitch(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getTurnStartVelocity()
 
@@ -264,13 +375,17 @@ AscentGT
 
 
 
-AscentPEG
+      :Game Scenes: Flight
+
+
+
+AscentPVG
 ---------
 
 
-.. type:: public class AscentPEG
+.. type:: public class AscentPVG
 
-   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+   The Primer Vector Guidance (RSS/RO) profile.
 
    .. method:: double getDesiredApoapsis()
 
@@ -278,30 +393,28 @@ AscentPEG
 
       The target apoapsis in meters.
 
-   .. method:: double getPitchStartTime()
+      :Game Scenes: Flight
 
-   .. method:: void setPitchStartTime(double value)
+   .. method:: double getPitchStartVelocity()
+
+   .. method:: void setPitchStartVelocity(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getPitchRate()
 
    .. method:: void setPitchRate(double value)
 
-   .. method:: double getPitchEndTime()
 
-   .. method:: void setPitchEndTime(double value)
 
-   .. method:: double getTerminalGuidanceSecs()
+      :Game Scenes: Flight
 
-   .. method:: void setTerminalGuidanceSecs(double value)
+   .. method:: boolean getOmitCoast()
 
-      The terminal guidance period in seconds.
+   .. method:: void setOmitCoast(boolean value)
 
-   .. method:: int getEditNumStages()
 
-   .. method:: void setEditNumStages(int value)
 
-   .. method:: double getStageLowDVLimit()
-
-   .. method:: void setStageLowDVLimit(double value)
-
-      The minimum dV limit for a stage.
+      :Game Scenes: Flight

@@ -14,11 +14,24 @@ SmartRCS
 
    .. method:: void setAutoDisableSmartRCS(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: SmartRCSMode getMode()
 
    .. method:: void setMode(SmartRCSMode value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: RCSController getRCSController()
+
+
+
+
+      :Game Scenes: Flight
 
 
 

@@ -13,9 +13,15 @@ AscentAutopilot
    .. function:: bool enabled()
    .. function:: void set_enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: std::string status()
 
       The autopilot status; it depends on the selected ascent path.
+
+      :Game Scenes: Flight
 
    .. function:: int32_t ascent_path_index()
    .. function:: void set_ascent_path_index(int32_t value)
@@ -26,33 +32,47 @@ AscentAutopilot
 
       1 = :class:`AscentGT` (Stock-style GravityTurn)
 
-      2 = :class:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+      2 = :class:`AscentPVG` (Primer Vector Guidance (RSS/RO))
+
+      :Game Scenes: Flight
 
    .. function:: AscentClassic ascent_path_classic()
 
       Get Classic Ascent Profile settings.
 
+      :Game Scenes: Flight
+
    .. function:: AscentGT ascent_path_gt()
 
       Get Stock-style GravityTurn profile settings.
 
-   .. function:: AscentPEG ascent_path_peg()
+      :Game Scenes: Flight
+
+   .. function:: AscentPVG ascent_path_pvg()
 
       Get Powered Explicit Guidance (RSS/RO) profile settings.
+
+      :Game Scenes: Flight
 
    .. function:: double desired_inclination()
    .. function:: void set_desired_inclination(double value)
 
       The desired inclination.
 
+      :Game Scenes: Flight
+
    .. function:: double desired_orbit_altitude()
    .. function:: void set_desired_orbit_altitude(double value)
 
       The desired orbit altitude.
 
+      :Game Scenes: Flight
+
    .. function:: ThrustController thrust_controller()
 
 
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -64,49 +84,69 @@ AscentAutopilot
 
       The state of force roll.
 
+      :Game Scenes: Flight
+
    .. function:: double turn_roll()
    .. function:: void set_turn_roll(double value)
 
       The turn roll used by the autopilot.
+
+      :Game Scenes: Flight
 
    .. function:: double vertical_roll()
    .. function:: void set_vertical_roll(double value)
 
       The vertical/climb roll used by the autopilot.
 
+      :Game Scenes: Flight
+
    .. function:: bool limit_ao_a()
    .. function:: void set_limit_ao_a(bool value)
 
       Whether to limit angle of attack.
+
+      :Game Scenes: Flight
 
    .. function:: double max_ao_a()
    .. function:: void set_max_ao_a(double value)
 
       The maximal angle of attack used by the autopilot.
 
+      :Game Scenes: Flight
+
    .. function:: double ao_a_limit_fadeout_pressure()
    .. function:: void set_ao_a_limit_fadeout_pressure(double value)
 
       The pressure value when AoA limit is automatically deactivated.
+
+      :Game Scenes: Flight
 
    .. function:: bool corrective_steering()
    .. function:: void set_corrective_steering(bool value)
 
       The state of corrective steering.
 
+      :Game Scenes: Flight
+
    .. function:: double corrective_steering_gain()
    .. function:: void set_corrective_steering_gain(double value)
 
       The gain of corrective steering used by the autopilot.
+
+      :Game Scenes: Flight
 
    .. function:: bool autostage()
    .. function:: void set_autostage(bool value)
 
       Whether to enable autostaging. Paramethers can be set in :class:`StagingController`.
 
+      :Game Scenes: Flight
+
    .. function:: StagingController staging_controller()
 
 
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -118,30 +158,56 @@ AscentAutopilot
 
       Whether to deploy solar panels automatically when the ascent finishes.
 
+      :Game Scenes: Flight
+
    .. function:: bool auto_deploy_antennas()
    .. function:: void set_auto_deploy_antennas(bool value)
 
       Whether to deploy antennas automatically when the ascent finishes.
+
+      :Game Scenes: Flight
 
    .. function:: bool skip_circularization()
    .. function:: void set_skip_circularization(bool value)
 
       Whether to skip circularization burn and do only the ascent.
 
+      :Game Scenes: Flight
+
    .. function:: int32_t warp_count_down()
    .. function:: void set_warp_count_down(int32_t value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double launch_lan_difference()
    .. function:: void set_launch_lan_difference(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double launch_phase_angle()
    .. function:: void set_launch_phase_angle(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void launch_to_rendezvous()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: void launch_to_target_plane()
 
       Launch into the plane of the selected target.
+
+
+      :Game Scenes: Flight
 
 
 
@@ -158,46 +224,74 @@ AscentClassic
 
       Whether to enable automatic altitude turn.
 
+      :Game Scenes: Flight
+
    .. function:: float auto_path_perc()
    .. function:: void set_auto_path_perc(float value)
 
       A value between 0 and 1.
+
+      :Game Scenes: Flight
 
    .. function:: float auto_path_speed_factor()
    .. function:: void set_auto_path_speed_factor(float value)
 
       A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: double auto_turn_start_altitude()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double auto_turn_start_velocity()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double auto_turn_end_altitude()
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double turn_start_altitude()
    .. function:: void set_turn_start_altitude(double value)
 
       The turn starts when this altitude is reached.
 
+      :Game Scenes: Flight
+
    .. function:: double turn_start_velocity()
    .. function:: void set_turn_start_velocity(double value)
 
       The turn starts when this velocity is reached.
+
+      :Game Scenes: Flight
 
    .. function:: double turn_end_altitude()
    .. function:: void set_turn_end_altitude(double value)
 
       The turn ends when this altitude is reached.
 
+      :Game Scenes: Flight
+
    .. function:: double turn_end_angle()
    .. function:: void set_turn_end_angle(double value)
 
       The final flight path angle.
 
+      :Game Scenes: Flight
+
    .. function:: double turn_shape_exponent()
    .. function:: void set_turn_shape_exponent(double value)
 
       A value between 0 - 1 describing how steep the turn is.
+
+      :Game Scenes: Flight
 
 
 
@@ -212,51 +306,72 @@ AscentGT
    .. function:: double hold_ap_time()
    .. function:: void set_hold_ap_time(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double intermediate_altitude()
    .. function:: void set_intermediate_altitude(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double turn_start_altitude()
    .. function:: void set_turn_start_altitude(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double turn_start_pitch()
    .. function:: void set_turn_start_pitch(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double turn_start_velocity()
    .. function:: void set_turn_start_velocity(double value)
 
 
 
-AscentPEG
+      :Game Scenes: Flight
+
+
+
+AscentPVG
 ---------
 
 
-.. class:: AscentPEG
+.. class:: AscentPVG
 
-   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+   The Primer Vector Guidance (RSS/RO) profile.
 
    .. function:: double desired_apoapsis()
    .. function:: void set_desired_apoapsis(double value)
 
       The target apoapsis in meters.
 
-   .. function:: double pitch_start_time()
-   .. function:: void set_pitch_start_time(double value)
+      :Game Scenes: Flight
+
+   .. function:: double pitch_start_velocity()
+   .. function:: void set_pitch_start_velocity(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double pitch_rate()
    .. function:: void set_pitch_rate(double value)
 
-   .. function:: double pitch_end_time()
-   .. function:: void set_pitch_end_time(double value)
 
-   .. function:: double terminal_guidance_secs()
-   .. function:: void set_terminal_guidance_secs(double value)
 
-      The terminal guidance period in seconds.
+      :Game Scenes: Flight
 
-   .. function:: int32_t edit_num_stages()
-   .. function:: void set_edit_num_stages(int32_t value)
+   .. function:: bool omit_coast()
+   .. function:: void set_omit_coast(bool value)
 
-   .. function:: double stage_low_dv_limit()
-   .. function:: void set_stage_low_dv_limit(double value)
 
-      The minimum dV limit for a stage.
+
+      :Game Scenes: Flight

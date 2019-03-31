@@ -32,7 +32,7 @@ AscentAutopilot
 
       1 = :class:`MechJeb.AscentGT` (Stock-style GravityTurn)
 
-      2 = :class:`MechJeb.AscentPEG` (Powered Explicit Guidance (RSS/RO))
+      2 = :class:`MechJeb.AscentPVG` (Primer Vector Guidance (RSS/RO))
 
       :Attribute: Can be read or written
       :rtype: number
@@ -51,12 +51,12 @@ AscentAutopilot
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.AscentGT`
 
-   .. attribute:: ascent_path_peg
+   .. attribute:: ascent_path_pvg
 
       Get Powered Explicit Guidance (RSS/RO) profile settings.
 
       :Attribute: Read-only, cannot be set
-      :rtype: :class:`MechJeb.AscentPEG`
+      :rtype: :class:`MechJeb.AscentPVG`
 
    .. attribute:: desired_inclination
 
@@ -339,13 +339,13 @@ AscentGT
 
 
 
-AscentPEG
+AscentPVG
 ---------
 
 
-.. class:: AscentPEG
+.. class:: AscentPVG
 
-   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+   The Primer Vector Guidance (RSS/RO) profile.
 
    .. attribute:: desired_apoapsis
 
@@ -354,7 +354,7 @@ AscentPEG
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: pitch_start_time
+   .. attribute:: pitch_start_velocity
 
 
 
@@ -368,30 +368,9 @@ AscentPEG
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: pitch_end_time
+   .. attribute:: omit_coast
 
 
 
       :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: terminal_guidance_secs
-
-      The terminal guidance period in seconds.
-
-      :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: edit_num_stages
-
-
-
-      :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: stage_low_dv_limit
-
-      The minimum dV limit for a stage.
-
-      :Attribute: Can be read or written
-      :rtype: number
+      :rtype: boolean

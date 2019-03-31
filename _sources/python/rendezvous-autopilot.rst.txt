@@ -16,6 +16,7 @@ RendezvousAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: status
 
@@ -23,6 +24,7 @@ RendezvousAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. attribute:: desired_distance
 
@@ -30,6 +32,7 @@ RendezvousAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: max_phasing_orbits
 
@@ -37,3 +40,4 @@ RendezvousAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight

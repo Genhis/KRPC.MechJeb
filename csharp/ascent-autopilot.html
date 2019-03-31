@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.3.0 documentation</title>
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.4.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.3.0
+                0.4.0
               </div>
             
           
@@ -98,7 +98,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">AscentAutopilot</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ascentclassic">AscentClassic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ascentgt">AscentGT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ascentpeg">AscentPEG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ascentpvg">AscentPVG</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="docking-autopilot.html">DockingAutopilot</a></li>
@@ -193,12 +193,28 @@
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.Enabled">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">Enabled</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.Enabled" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.Status">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">Status</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.Status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The autopilot status; it depends on the selected ascent path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
@@ -207,43 +223,99 @@
 <dd><p>The selected ascent path.</p>
 <p>0 = <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentClassic" title="KRPC.Client.Services.MechJeb.AscentClassic class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">AscentClassic</span></code></a> (Classic Ascent Profile)</p>
 <p>1 = <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentGT" title="KRPC.Client.Services.MechJeb.AscentGT class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">AscentGT</span></code></a> (Stock-style GravityTurn)</p>
-<p>2 = <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentPEG" title="KRPC.Client.Services.MechJeb.AscentPEG class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">AscentPEG</span></code></a> (Powered Explicit Guidance (RSS/RO))</p>
+<p>2 = <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentPVG" title="KRPC.Client.Services.MechJeb.AscentPVG class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">AscentPVG</span></code></a> (Primer Vector Guidance (RSS/RO))</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathClassic">
 <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentClassic" title="KRPC.Client.Services.MechJeb.AscentClassic class">AscentClassic</a> <code class="descname">AscentPathClassic</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathClassic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Classic Ascent Profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathGT">
 <a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentGT" title="KRPC.Client.Services.MechJeb.AscentGT class">AscentGT</a> <code class="descname">AscentPathGT</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathGT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Stock-style GravityTurn profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathPEG">
-<a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentPEG" title="KRPC.Client.Services.MechJeb.AscentPEG class">AscentPEG</a> <code class="descname">AscentPathPEG</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathPEG" title="Permalink to this definition">¶</a></dt>
+<dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathPVG">
+<a class="reference internal" href="#class-KRPC.Client.Services.MechJeb.AscentPVG" title="KRPC.Client.Services.MechJeb.AscentPVG class">AscentPVG</a> <code class="descname">AscentPathPVG</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AscentPathPVG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Powered Explicit Guidance (RSS/RO) profile settings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.DesiredInclination">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">DesiredInclination</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.DesiredInclination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired inclination.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.DesiredOrbitAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">DesiredOrbitAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.DesiredOrbitAltitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired orbit altitude.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.ThrustController">
 <a class="reference internal" href="thrust-controller.html#class-KRPC.Client.Services.MechJeb.ThrustController" title="KRPC.Client.Services.MechJeb.ThrustController class">ThrustController</a> <code class="descname">ThrustController</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.ThrustController" title="Permalink to this definition">¶</a></dt>
-<dd><div class="admonition note">
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Equivalend to <a class="reference internal" href="mechjeb.html#property-KRPC.Client.Services.MechJeb.MechJeb.ThrustController" title="KRPC.Client.Services.MechJeb.MechJeb.ThrustController property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">MechJeb.ThrustController</span></code></a>.</p>
 </div>
@@ -253,60 +325,140 @@
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.ForceRoll">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ForceRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.ForceRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>The state of force roll.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.TurnRoll">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.TurnRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>The turn roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.VerticalRoll">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">VerticalRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.VerticalRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>The vertical/climb roll used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.LimitAoA">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">LimitAoA</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.LimitAoA" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to limit angle of attack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.MaxAoA">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MaxAoA</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.MaxAoA" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximal angle of attack used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AoALimitFadeoutPressure">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">AoALimitFadeoutPressure</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AoALimitFadeoutPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>The pressure value when AoA limit is automatically deactivated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.CorrectiveSteering">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">CorrectiveSteering</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.CorrectiveSteering" title="Permalink to this definition">¶</a></dt>
 <dd><p>The state of corrective steering.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.CorrectiveSteeringGain">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">CorrectiveSteeringGain</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.CorrectiveSteeringGain" title="Permalink to this definition">¶</a></dt>
 <dd><p>The gain of corrective steering used by the autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.Autostage">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">Autostage</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.Autostage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable autostaging. Paramethers can be set in <a class="reference internal" href="staging-controller.html#class-KRPC.Client.Services.MechJeb.StagingController" title="KRPC.Client.Services.MechJeb.StagingController class"><code class="xref csharp csharp-type docutils literal notranslate"><span class="pre">StagingController</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.StagingController">
 <a class="reference internal" href="staging-controller.html#class-KRPC.Client.Services.MechJeb.StagingController" title="KRPC.Client.Services.MechJeb.StagingController class">StagingController</a> <code class="descname">StagingController</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.StagingController" title="Permalink to this definition">¶</a></dt>
-<dd><div class="admonition note">
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Equivalent to <a class="reference internal" href="mechjeb.html#property-KRPC.Client.Services.MechJeb.MechJeb.StagingController" title="KRPC.Client.Services.MechJeb.MechJeb.StagingController property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">MechJeb.StagingController</span></code></a>.</p>
 </div>
@@ -316,44 +468,108 @@
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AutodeploySolarPanels">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">AutodeploySolarPanels</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AutodeploySolarPanels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to deploy solar panels automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.AutoDeployAntennas">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">AutoDeployAntennas</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.AutoDeployAntennas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to deploy antennas automatically when the ascent finishes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.SkipCircularization">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">SkipCircularization</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.SkipCircularization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to skip circularization burn and do only the ascent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.WarpCountDown">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="descname">WarpCountDown</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.WarpCountDown" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchLANDifference">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">LaunchLANDifference</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchLANDifference" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchPhaseAngle">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">LaunchPhaseAngle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchPhaseAngle" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchToRendezvous">
 void <code class="descname">LaunchToRendezvous</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchToRendezvous" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchToTargetPlane">
 void <code class="descname">LaunchToTargetPlane</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.AscentAutopilot.LaunchToTargetPlane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Launch into the plane of the selected target.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -368,63 +584,151 @@ void <code class="descname">LaunchToTargetPlane</code> <span class="sig-paren">(
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPath">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">AutoPath</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable automatic altitude turn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPathPerc">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="descname">AutoPathPerc</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPathPerc" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPathSpeedFactor">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.single.aspx" title="System.Single">Single</a> <code class="descname">AutoPathSpeedFactor</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoPathSpeedFactor" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between 0 and 1.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnStartAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">AutoTurnStartAltitude</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnStartAltitude" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnStartVelocity">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">AutoTurnStartVelocity</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnStartVelocity" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnEndAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">AutoTurnEndAltitude</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.AutoTurnEndAltitude" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.TurnStartAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnStartAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>The turn starts when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.TurnStartVelocity">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnStartVelocity</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The turn starts when this velocity is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.TurnEndAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnEndAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.TurnEndAltitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>The turn ends when this altitude is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.TurnEndAngle">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnEndAngle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.TurnEndAngle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The final flight path angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentClassic.TurnShapeExponent">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnShapeExponent</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentClassic.TurnShapeExponent" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between 0 - 1 describing how steep the turn is.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -438,73 +742,128 @@ void <code class="descname">LaunchToTargetPlane</code> <span class="sig-paren">(
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentGT.HoldAPTime">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">HoldAPTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentGT.HoldAPTime" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentGT.IntermediateAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">IntermediateAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentGT.IntermediateAltitude" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartAltitude">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnStartAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartPitch">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnStartPitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartPitch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartVelocity">
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TurnStartVelocity</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentGT.TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="ascentpeg">
-<h2>AscentPEG<a class="headerlink" href="#ascentpeg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ascentpvg">
+<h2>AscentPVG<a class="headerlink" href="#ascentpvg" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="class-KRPC.Client.Services.MechJeb.AscentPEG">
-<code class="descname">class AscentPEG</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.AscentPEG" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).</p>
+<dt id="class-KRPC.Client.Services.MechJeb.AscentPVG">
+<code class="descname">class AscentPVG</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.AscentPVG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Primer Vector Guidance (RSS/RO) profile.</p>
 <dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.DesiredApoapsis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">DesiredApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.DesiredApoapsis" title="Permalink to this definition">¶</a></dt>
+<dt id="property-KRPC.Client.Services.MechJeb.AscentPVG.DesiredApoapsis">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">DesiredApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPVG.DesiredApoapsis" title="Permalink to this definition">¶</a></dt>
 <dd><p>The target apoapsis in meters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.PitchStartTime">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PitchStartTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.PitchStartTime" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.PitchRate">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PitchRate</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.PitchRate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.PitchEndTime">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PitchEndTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.PitchEndTime" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.TerminalGuidanceSecs">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">TerminalGuidanceSecs</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.TerminalGuidanceSecs" title="Permalink to this definition">¶</a></dt>
-<dd><p>The terminal guidance period in seconds.</p>
+<dt id="property-KRPC.Client.Services.MechJeb.AscentPVG.PitchStartVelocity">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PitchStartVelocity</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPVG.PitchStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.EditNumStages">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="descname">EditNumStages</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.EditNumStages" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="property-KRPC.Client.Services.MechJeb.AscentPVG.PitchRate">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PitchRate</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPVG.PitchRate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="property">
-<dt id="property-KRPC.Client.Services.MechJeb.AscentPEG.StageLowDVLimit">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">StageLowDVLimit</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPEG.StageLowDVLimit" title="Permalink to this definition">¶</a></dt>
-<dd><p>The minimum dV limit for a stage.</p>
+<dt id="property-KRPC.Client.Services.MechJeb.AscentPVG.OmitCoast">
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">OmitCoast</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.AscentPVG.OmitCoast" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -532,7 +891,7 @@ void <code class="descname">LaunchToTargetPlane</code> <span class="sig-paren">(
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Genhis.
+        &copy; Copyright 2018-2019, Genhis.
 
     </p>
   </div>
@@ -554,7 +913,7 @@ void <code class="descname">LaunchToTargetPlane</code> <span class="sig-paren">(
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.3.0',
+            VERSION:'0.4.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

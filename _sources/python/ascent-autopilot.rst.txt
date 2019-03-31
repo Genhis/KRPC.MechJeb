@@ -16,6 +16,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: status
 
@@ -23,6 +24,7 @@ AscentAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: str
+      :Game Scenes: Flight
 
    .. attribute:: ascent_path_index
 
@@ -32,10 +34,11 @@ AscentAutopilot
 
       1 = :class:`AscentGT` (Stock-style GravityTurn)
 
-      2 = :class:`AscentPEG` (Powered Explicit Guidance (RSS/RO))
+      2 = :class:`AscentPVG` (Primer Vector Guidance (RSS/RO))
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: ascent_path_classic
 
@@ -43,6 +46,7 @@ AscentAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`AscentClassic`
+      :Game Scenes: Flight
 
    .. attribute:: ascent_path_gt
 
@@ -50,13 +54,15 @@ AscentAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`AscentGT`
+      :Game Scenes: Flight
 
-   .. attribute:: ascent_path_peg
+   .. attribute:: ascent_path_pvg
 
       Get Powered Explicit Guidance (RSS/RO) profile settings.
 
       :Attribute: Read-only, cannot be set
-      :rtype: :class:`AscentPEG`
+      :rtype: :class:`AscentPVG`
+      :Game Scenes: Flight
 
    .. attribute:: desired_inclination
 
@@ -64,6 +70,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: desired_orbit_altitude
 
@@ -71,6 +78,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: thrust_controller
 
@@ -78,6 +86,8 @@ AscentAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`ThrustController`
+      :Game Scenes: Flight
+
 
       .. note::
 
@@ -89,6 +99,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: turn_roll
 
@@ -96,6 +107,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: vertical_roll
 
@@ -103,6 +115,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: limit_ao_a
 
@@ -110,6 +123,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: max_ao_a
 
@@ -117,6 +131,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: ao_a_limit_fadeout_pressure
 
@@ -124,6 +139,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: corrective_steering
 
@@ -131,6 +147,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: corrective_steering_gain
 
@@ -138,6 +155,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: autostage
 
@@ -145,6 +163,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: staging_controller
 
@@ -152,6 +171,8 @@ AscentAutopilot
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`StagingController`
+      :Game Scenes: Flight
+
 
       .. note::
 
@@ -163,6 +184,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: auto_deploy_antennas
 
@@ -170,6 +192,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: skip_circularization
 
@@ -177,6 +200,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: warp_count_down
 
@@ -184,6 +208,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: int
+      :Game Scenes: Flight
 
    .. attribute:: launch_lan_difference
 
@@ -191,6 +216,7 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: launch_phase_angle
 
@@ -198,12 +224,19 @@ AscentAutopilot
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. method:: launch_to_rendezvous()
+
+
+
+      :Game Scenes: Flight
 
    .. method:: launch_to_target_plane()
 
       Launch into the plane of the selected target.
+
+      :Game Scenes: Flight
 
 
 
@@ -221,6 +254,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: bool
+      :Game Scenes: Flight
 
    .. attribute:: auto_path_perc
 
@@ -228,6 +262,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: float
+      :Game Scenes: Flight
 
    .. attribute:: auto_path_speed_factor
 
@@ -235,6 +270,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: float
+      :Game Scenes: Flight
 
    .. attribute:: auto_turn_start_altitude
 
@@ -242,6 +278,7 @@ AscentClassic
 
       :Attribute: Read-only, cannot be set
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: auto_turn_start_velocity
 
@@ -249,6 +286,7 @@ AscentClassic
 
       :Attribute: Read-only, cannot be set
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: auto_turn_end_altitude
 
@@ -256,6 +294,7 @@ AscentClassic
 
       :Attribute: Read-only, cannot be set
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_start_altitude
 
@@ -263,6 +302,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_start_velocity
 
@@ -270,6 +310,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_end_altitude
 
@@ -277,6 +318,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_end_angle
 
@@ -284,6 +326,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_shape_exponent
 
@@ -291,6 +334,7 @@ AscentClassic
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
 
 
@@ -308,6 +352,7 @@ AscentGT
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: intermediate_altitude
 
@@ -315,6 +360,7 @@ AscentGT
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_start_altitude
 
@@ -322,6 +368,7 @@ AscentGT
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_start_pitch
 
@@ -329,6 +376,7 @@ AscentGT
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: turn_start_velocity
 
@@ -336,16 +384,17 @@ AscentGT
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
 
 
-AscentPEG
+AscentPVG
 ---------
 
 
-.. class:: AscentPEG
+.. class:: AscentPVG
 
-   The Powered Explicit Guidance (RSS/RO) profile (Atlas/Centaur PEG Pitch Program).
+   The Primer Vector Guidance (RSS/RO) profile.
 
    .. attribute:: desired_apoapsis
 
@@ -353,13 +402,15 @@ AscentPEG
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
-   .. attribute:: pitch_start_time
+   .. attribute:: pitch_start_velocity
 
 
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
    .. attribute:: pitch_rate
 
@@ -367,31 +418,12 @@ AscentPEG
 
       :Attribute: Can be read or written
       :rtype: double
+      :Game Scenes: Flight
 
-   .. attribute:: pitch_end_time
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
-
-   .. attribute:: terminal_guidance_secs
-
-      The terminal guidance period in seconds.
-
-      :Attribute: Can be read or written
-      :rtype: double
-
-   .. attribute:: edit_num_stages
+   .. attribute:: omit_coast
 
 
 
       :Attribute: Can be read or written
-      :rtype: int
-
-   .. attribute:: stage_low_dv_limit
-
-      The minimum dV limit for a stage.
-
-      :Attribute: Can be read or written
-      :rtype: double
+      :rtype: bool
+      :Game Scenes: Flight

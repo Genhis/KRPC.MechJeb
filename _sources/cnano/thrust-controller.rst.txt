@@ -13,68 +13,134 @@ ThrustController
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_DifferentialThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_DifferentialThrottle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_DifferentialThrottleStatus(krpc_connection_t connection, krpc_MechJeb_DifferentialThrottleStatus_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_ElectricThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_ElectricThrottle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_ElectricThrottleHi(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_ElectricThrottleHi(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_ElectricThrottleLo(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_ElectricThrottleLo(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_FlameoutSafetyPct(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_FlameoutSafetyPct(double value)
 
       The jet safety margin. A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitAcceleration(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitAcceleration(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitDynamicPressure(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitDynamicPressure(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitThrottle(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitToPreventFlameout(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitToPreventFlameout(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitToPreventOverheats(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitToPreventOverheats(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimiterMinThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimiterMinThrottle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_ManageIntakes(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_ManageIntakes(bool value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxAcceleration(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxAcceleration(double value)
 
       Limit acceleration to this value in m/s^2.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxDynamicPressure(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxDynamicPressure(double value)
 
       Limit Q to this value in Pa.
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxThrottle(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxThrottle(double value)
 
       Limit throttle to this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MinThrottle(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MinThrottle(double value)
 
       Keep limited throttle over this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_SmoothThrottle(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_SmoothThrottle(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_ThrottleSmoothingTime(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime(double value)
+
+
+
+      :Game Scenes: Flight
 
 
 

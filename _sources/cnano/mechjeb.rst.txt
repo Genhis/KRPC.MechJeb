@@ -14,33 +14,91 @@ Service MechJeb
 
       A value indicating whether the service is available.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot(krpc_connection_t connection, krpc_MechJeb_AirplaneAutopilot_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AntennaController(krpc_connection_t connection, krpc_MechJeb_DeployableController_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot(krpc_connection_t connection, krpc_MechJeb_AscentAutopilot_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_DockingAutopilot(krpc_connection_t connection, krpc_MechJeb_DockingAutopilot_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot(krpc_connection_t connection, krpc_MechJeb_LandingAutopilot_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ManeuverPlanner(krpc_connection_t connection, krpc_MechJeb_ManeuverPlanner_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_NodeExecutor(krpc_connection_t connection, krpc_MechJeb_NodeExecutor_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_RCSController(krpc_connection_t connection, krpc_MechJeb_RCSController_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_RendezvousAutopilot(krpc_connection_t connection, krpc_MechJeb_RendezvousAutopilot_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_SmartRCS(krpc_connection_t connection, krpc_MechJeb_SmartRCS_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_SolarPanelController(krpc_connection_t connection, krpc_MechJeb_DeployableController_t * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_StagingController(krpc_connection_t connection, krpc_MechJeb_StagingController_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_TargetController(krpc_connection_t connection, krpc_MechJeb_TargetController_t * result)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_ThrustController(krpc_connection_t connection, krpc_MechJeb_ThrustController_t * result)
+
+
+
+      :Game Scenes: Flight
 
 
 

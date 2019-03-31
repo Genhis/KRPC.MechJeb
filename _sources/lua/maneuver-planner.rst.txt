@@ -840,7 +840,7 @@ OperationTransfer
 
 .. class:: OperationTransfer
 
-   Hohmann transfer to target
+   Bi-impulsive (Hohmann) transfer to target
 
    .. attribute:: error_message
 
@@ -858,3 +858,35 @@ OperationTransfer
       MJServiceException - Internal service error.
 
       :rtype: :class:`SpaceCenter.Node`
+
+   .. attribute:: intercept_only
+
+      Intercept only, no capture burn (impact/flyby)
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: period_offset
+
+      Fractional target period offset
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: simple_transfer
+
+      Simple coplanar Hohmann transfer
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+      .. note::
+
+         If set to true, TimeSelector property is ignored.
+
+   .. attribute:: time_selector
+
+
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`MechJeb.TimeSelector`

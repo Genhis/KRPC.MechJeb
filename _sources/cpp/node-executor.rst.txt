@@ -12,17 +12,48 @@ NodeExecutor
 
    .. function:: bool enabled()
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void abort()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: bool autowarp()
    .. function:: void set_autowarp(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: void execute_all_nodes()
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: void execute_one_node()
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: double lead_time()
    .. function:: void set_lead_time(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: double tolerance()
    .. function:: void set_tolerance(double value)
+
+
+
+      :Game Scenes: Flight

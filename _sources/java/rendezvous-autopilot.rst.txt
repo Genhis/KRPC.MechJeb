@@ -14,12 +14,29 @@ RendezvousAutopilot
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: String getStatus()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getDesiredDistance()
 
    .. method:: void setDesiredDistance(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getMaxPhasingOrbits()
 
    .. method:: void setMaxPhasingOrbits(double value)
+
+
+
+      :Game Scenes: Flight

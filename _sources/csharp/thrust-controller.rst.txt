@@ -12,51 +12,117 @@ ThrustController
 
    .. property:: bool DifferentialThrottle { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: DifferentialThrottleStatus DifferentialThrottleStatus { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool ElectricThrottle { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double ElectricThrottleHi { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double ElectricThrottleLo { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double FlameoutSafetyPct { get; set; }
 
       The jet safety margin. A value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. property:: bool LimitAcceleration { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool LimitDynamicPressure { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool LimitThrottle { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool LimitToPreventFlameout { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool LimitToPreventOverheats { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool LimiterMinThrottle { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool ManageIntakes { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double MaxAcceleration { get; set; }
 
       Limit acceleration to this value in m/s^2.
 
+      :Game Scenes: Flight
+
    .. property:: double MaxDynamicPressure { get; set; }
 
       Limit Q to this value in Pa.
+
+      :Game Scenes: Flight
 
    .. property:: double MaxThrottle { get; set; }
 
       Limit throttle to this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. property:: double MinThrottle { get; set; }
 
       Keep limited throttle over this value between 0 and 1.
 
+      :Game Scenes: Flight
+
    .. property:: bool SmoothThrottle { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double ThrottleSmoothingTime { get; set; }
+
+
+
+      :Game Scenes: Flight
 
 
 

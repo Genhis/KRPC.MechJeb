@@ -13,10 +13,16 @@ StagingController
    .. function:: krpc_error_t krpc_MechJeb_StagingController_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_StagingController_set_Enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagingOnce(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_StagingController_set_AutostagingOnce(bool value)
 
       The autostaging mode. If set to true, it will automatically disable itself after one staging action.
+
+      :Game Scenes: Flight
 
 
       .. note::
@@ -28,20 +34,60 @@ StagingController
 
       Stop at the selected stage.
 
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagePostDelay(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_AutostagePostDelay(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_StagingController_AutostagePreDelay(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_AutostagePreDelay(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_StagingController_ClampAutoStageThrustPct(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_ClampAutoStageThrustPct(double value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMaxAerothermalFlux(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_FairingMaxAerothermalFlux(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMaxDynamicPressure(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_FairingMaxDynamicPressure(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_StagingController_FairingMinAltitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_StagingController_set_FairingMinAltitude(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_HotStaging(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_StagingController_set_HotStaging(bool value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_StagingController_HotStagingLeadTime(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_StagingController_set_HotStagingLeadTime(double value)
+
+
+
+      :Game Scenes: Flight

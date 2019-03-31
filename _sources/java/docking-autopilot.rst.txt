@@ -14,36 +14,83 @@ DockingAutopilot
 
    .. method:: void setEnabled(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: String getStatus()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getSpeedLimit()
 
    .. method:: void setSpeedLimit(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getOverrideSafeDistance()
 
    .. method:: void setOverrideSafeDistance(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getOverridenSafeDistance()
 
    .. method:: void setOverridenSafeDistance(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getOverrideTargetSize()
 
    .. method:: void setOverrideTargetSize(boolean value)
+
+
+
+      :Game Scenes: Flight
 
    .. method:: double getOverridenTargetSize()
 
    .. method:: void setOverridenTargetSize(double value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: float getSafeDistance()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: float getTargetSize()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getForceRoll()
 
    .. method:: void setForceRoll(boolean value)
 
+
+
+      :Game Scenes: Flight
+
    .. method:: double getRoll()
 
    .. method:: void setRoll(double value)
+
+
+
+      :Game Scenes: Flight

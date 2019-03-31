@@ -12,22 +12,66 @@ DockingAutopilot
 
    .. property:: bool Enabled { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: string Status { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double SpeedLimit { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool OverrideSafeDistance { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double OverridenSafeDistance { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool OverrideTargetSize { get; set; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: double OverridenTargetSize { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: float SafeDistance { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: float TargetSize { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: bool ForceRoll { get; set; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: double Roll { get; set; }
+
+
+
+      :Game Scenes: Flight

@@ -12,31 +12,84 @@ TargetController
 
    .. method:: boolean getCanAlign()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: float getDistance()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: org.javatuples.Triplet<Double,Double,Double> getDockingAxis()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: org.javatuples.Triplet<Double,Double,Double> getPositionTargetPosition()
+
+
+
+      :Game Scenes: Flight
 
    .. method:: String getPositionTargetString()
 
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getNormalTargetExists()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void pickPositionTargetOnMap()
 
+
+
+      :Game Scenes: Flight
+
    .. method:: org.javatuples.Triplet<Double,Double,Double> getPosition()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: boolean getPositionTargetExists()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: org.javatuples.Triplet<Double,Double,Double> getRelativePosition()
 
+
+
+
+      :Game Scenes: Flight
+
    .. method:: org.javatuples.Triplet<Double,Double,Double> getRelativeVelocity()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void setDirectionTarget(String name)
 
 
 
       :param String name:
+      :Game Scenes: Flight
 
    .. method:: void setPositionTarget(SpaceCenter.CelestialBody body, double latitude, double longitude)
 
@@ -45,11 +98,18 @@ TargetController
       :param SpaceCenter.CelestialBody body:
       :param double latitude:
       :param double longitude:
+      :Game Scenes: Flight
 
    .. method:: SpaceCenter.Orbit getTargetOrbit()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void updateDirectionTarget(org.javatuples.Triplet<Double,Double,Double> direction)
 
 
 
       :param org.javatuples.Triplet<Double,Double,Double> direction:
+      :Game Scenes: Flight

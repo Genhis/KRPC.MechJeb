@@ -13,28 +13,75 @@ LandingAutopilot
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_Enabled(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_Status(krpc_connection_t connection, char * * result)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_DeployChutes(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_DeployChutes(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_DeployGears(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_DeployGears(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_LandAtPositionTarget(krpc_connection_t connection)
 
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_LandUntargeted(krpc_connection_t connection)
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_LimitChutesStage(krpc_connection_t connection, int32_t * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_LimitChutesStage(int32_t value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_LimitGearsStage(krpc_connection_t connection, int32_t * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_LimitGearsStage(int32_t value)
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_RcsAdjustment(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_RcsAdjustment(bool value)
 
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_StopLanding(krpc_connection_t connection)
+
+
+
+
+      :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_TouchdownSpeed(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_TouchdownSpeed(double value)
+
+
+
+      :Game Scenes: Flight

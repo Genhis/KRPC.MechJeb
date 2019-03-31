@@ -12,25 +12,72 @@ TargetController
 
    .. property:: bool CanAlign { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: float Distance { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: System.Tuple<double,double,double> DockingAxis { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. method:: System.Tuple<double,double,double> GetPositionTargetPosition()
+
+
+
+
+      :Game Scenes: Flight
 
    .. method:: string GetPositionTargetString()
 
+
+
+
+      :Game Scenes: Flight
+
    .. property:: bool NormalTargetExists { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void PickPositionTargetOnMap()
 
+
+
+
+      :Game Scenes: Flight
+
    .. property:: System.Tuple<double,double,double> Position { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. property:: bool PositionTargetExists { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: System.Tuple<double,double,double> RelativePosition { get; }
 
+
+
+      :Game Scenes: Flight
+
    .. property:: System.Tuple<double,double,double> RelativeVelocity { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void SetDirectionTarget(string name)
 
@@ -38,16 +85,34 @@ TargetController
 
       :parameters:
 
+
+
+      :Game Scenes: Flight
+
    .. method:: void SetPositionTarget(SpaceCenter.CelestialBody body, double latitude, double longitude)
 
 
 
       :parameters:
 
+
+
+
+
+      :Game Scenes: Flight
+
    .. property:: SpaceCenter.Orbit TargetOrbit { get; }
+
+
+
+      :Game Scenes: Flight
 
    .. method:: void UpdateDirectionTarget(System.Tuple<double,double,double> direction)
 
 
 
       :parameters:
+
+
+
+      :Game Scenes: Flight
