@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - AscentAutopilot raised an exception during initialization phase (#1) due to AscentPEG being renamed to AscentPVG
 (MuMech/MechJeb2@61c0adae6bea4f2f4e9b02b86534d4f1993b9e8)
+- DeployableController raised an exception during initialization phase
 
 ## [0.3.0] - 2018-09-15
 ### Added
