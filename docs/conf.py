@@ -1,9 +1,9 @@
 # Copied from https://github.com/krpc/krpc/blob/master/doc/conf.py.tmpl and modified.
 project = "kRPC.MechJeb"
-copyright = "2018, Genhis"
+copyright = "2018-2019, Genhis"
 author = "Genhis"
 
-version = "0.3.0"
+version = "0.4.0"
 release = version
 
 master_doc = "index"

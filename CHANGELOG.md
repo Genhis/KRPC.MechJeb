@@ -5,13 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.4.0] - 2019-03-31
 ### Added
 - Auto-hotstaging support in StageController
 ### Changed
 - **AscentPEG** module overhaul (renamed to **AscentPVG**)
 ### Fixed
-- AscentAutopilot raised an exception during initialization phase (#1) due to AscentPEG being renamed to AscentPVG
-(MuMech/MechJeb2@61c0adae6bea4f2f4e9b02b86534d4f1993b9e8)
+- AscentAutopilot raised an exception during initialization phase ([#1](https://github.com/Genhis/KRPC.MechJeb/issues/1))
+due to AscentPEG being renamed to AscentPVG
+([MuMech/MechJeb2@61c0ada](https://github.com/MuMech/MechJeb2/commit/61c0adae6bea4f2f4e9b02b86534d4f1993b9e8))
 - DeployableController raised an exception during initialization phase
 
 ## [0.3.0] - 2018-09-15
@@ -80,7 +83,8 @@ proximity or reverting a flight to launch
 - **StagingController**
 - **TargetController** to get information about the current target
 
-[Unreleased]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Genhis/KRPC.MechJeb/commit/6fafaaa41df39a60933d75cfd9c765c5aa8691f7
