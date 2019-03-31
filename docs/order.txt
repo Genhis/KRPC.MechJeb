@@ -47,7 +47,7 @@ MechJeb.AscentAutopilot.Status
 MechJeb.AscentAutopilot.AscentPathIndex
 MechJeb.AscentAutopilot.AscentPathClassic
 MechJeb.AscentAutopilot.AscentPathGT
-MechJeb.AscentAutopilot.AscentPathPEG
+MechJeb.AscentAutopilot.AscentPathPVG
 MechJeb.AscentAutopilot.DesiredInclination
 MechJeb.AscentAutopilot.DesiredOrbitAltitude
 MechJeb.AscentAutopilot.ThrustController
@@ -88,13 +88,10 @@ MechJeb.AscentGT.TurnStartAltitude
 MechJeb.AscentGT.TurnStartPitch
 MechJeb.AscentGT.TurnStartVelocity
 
-MechJeb.AscentPEG.DesiredApoapsis
-MechJeb.AscentPEG.PitchStartTime
-MechJeb.AscentPEG.PitchRate
-MechJeb.AscentPEG.PitchEndTime
-MechJeb.AscentPEG.TerminalGuidanceSecs
-MechJeb.AscentPEG.EditNumStages
-MechJeb.AscentPEG.StageLowDVLimit
+MechJeb.AscentPVG.DesiredApoapsis
+MechJeb.AscentPVG.PitchStartVelocity
+MechJeb.AscentPVG.PitchRate
+MechJeb.AscentPVG.OmitCoast
 
 MechJeb.DeployableController.AllRetracted
 MechJeb.DeployableController.AutoDeploy
