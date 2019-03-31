@@ -252,6 +252,8 @@ MechJeb.StagingController.ClampAutoStageThrustPct
 MechJeb.StagingController.FairingMaxAerothermalFlux
 MechJeb.StagingController.FairingMaxDynamicPressure
 MechJeb.StagingController.FairingMinAltitude
+MechJeb.StagingController.HotStaging
+MechJeb.StagingController.HotStagingLeadTime
 
 MechJeb.TargetController.CanAlign
 MechJeb.TargetController.Distance

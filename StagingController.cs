@@ -13,6 +13,9 @@ namespace KRPC.MechJeb {
 		private readonly object clampAutoStageThrustPct;
 		private readonly object fairingMaxAerothermalFlux;
 
+		private readonly FieldInfo hotStaging;
+		private readonly object hotStagingLeadTime;
+
 		private readonly FieldInfo autostagingOnce;
 
 		public StagingController() : base("StagingController") {
@@ -23,6 +26,9 @@ namespace KRPC.MechJeb {
 			this.fairingMinAltitude = this.type.GetField("fairingMinAltitude").GetValue(this.instance);
 			this.clampAutoStageThrustPct = this.type.GetField("clampAutoStageThrustPct").GetValue(this.instance);
 			this.fairingMaxAerothermalFlux = this.type.GetField("fairingMaxAerothermalFlux").GetValue(this.instance);
+
+			this.hotStaging = this.type.GetField("hotStaging");
+			this.hotStagingLeadTime = this.type.GetField("hotStagingLeadTime").GetValue(this.instance);
 
 			this.autostagingOnce = this.type.GetField("autostagingOnce");
 		}
@@ -70,6 +76,18 @@ namespace KRPC.MechJeb {
 		public double FairingMaxAerothermalFlux {
 			get => EditableVariables.GetDouble(this.fairingMaxAerothermalFlux);
 			set => EditableVariables.SetDouble(this.fairingMaxAerothermalFlux, value);
+		}
+
+		[KRPCProperty]
+		public bool HotStaging {
+			get => (bool)this.hotStaging.GetValue(this.instance);
+			set => this.hotStaging.SetValue(this.instance, value);
+		}
+
+		[KRPCProperty]
+		public double HotStagingLeadTime {
+			get => EditableVariables.GetDouble(this.hotStagingLeadTime);
+			set => EditableVariables.SetDouble(this.hotStagingLeadTime, value);
 		}
 
 		/// <summary>
