@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Auto-hotstaging support in StageController
 ### Changed
 - **AscentPEG** module overhaul (renamed to **AscentPVG**)
+- **OperationTransfer** changed from Hohmann to Bi-impulsive transfer
 ### Fixed
 - AscentAutopilot raised an exception during initialization phase ([#1](https://github.com/Genhis/KRPC.MechJeb/issues/1))
 due to AscentPEG being renamed to AscentPVG
