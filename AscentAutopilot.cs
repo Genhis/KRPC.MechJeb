@@ -138,8 +138,8 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public double DesiredInclination {
 			// We need to get desiredInclinationGUI value here because it may change over time.
-			get => EditableVariables.GetDouble(desiredInclination.GetValue(this.guiInstance));
-			set => EditableVariables.SetDouble(desiredInclination.GetValue(this.guiInstance), value);
+			get => EditableVariables.GetDouble(desiredInclination, this.guiInstance);
+			set => EditableVariables.SetDouble(desiredInclination, this.guiInstance, value);
 		}
 
 		/// <remarks>Equivalend to <see cref="MechJeb.ThrustController" />.</remarks>
