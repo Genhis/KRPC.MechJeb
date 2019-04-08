@@ -14,6 +14,7 @@ Huge thanks to the authors of `KRPC <https://krpc.github.io/krpc>`_ and `MechJeb
 
    installation
    tutorials
+   Report a bug <https://github.com/Genhis/KRPC.MechJeb/issues/>
 
 .. _clients:
 
