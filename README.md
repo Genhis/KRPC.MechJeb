@@ -37,7 +37,6 @@ so please create a new issue if something doesn't work for you.
 - Implement `AdvancedTransfer` maneuver operation
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`
-- Implement `SmartASS`
 - Implement `SpaceplaneAutopilot` (known as Aircraft Approach & Autoland)
 - Implement `Translation` module?
 
