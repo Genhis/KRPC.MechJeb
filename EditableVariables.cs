@@ -5,6 +5,7 @@ namespace KRPC.MechJeb {
 	public static class EditableVariables {
 		private static PropertyInfo editableDoubleVal;
 		private static FieldInfo editableIntVal;
+		private static FieldInfo editableIntText;
 
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
@@ -19,6 +20,7 @@ namespace KRPC.MechJeb {
 					return true;
 				case "MuMech.EditableInt":
 					editableIntVal = t.GetField("val");
+					editableIntText = t.GetField("_text");
 					return true;
 				default:
 					return false;
@@ -31,6 +33,7 @@ namespace KRPC.MechJeb {
 
 		public static void SetInt(object instance, int value) {
 			editableIntVal.SetValue(instance, value);
+			editableIntText.SetValue(instance, value.ToString());
 		}
 
 		public static double GetDouble(object instance) {
