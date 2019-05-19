@@ -38,7 +38,7 @@ namespace KRPC.MechJeb {
 			//assume all MechJeb types are loaded
 
 			APIReady = false;
-			modules = new object[5];
+			modules = new object[6];
 			windows = new object[2];
 			controllers = new object[7];
 
@@ -85,6 +85,9 @@ namespace KRPC.MechJeb {
 
 		[KRPCProperty]
 		public static RendezvousAutopilot RendezvousAutopilot => GetComputerModule<RendezvousAutopilot>(modules, 4);
+
+        [KRPCProperty]
+        public static SmartASS SmartASS => GetComputerModule<SmartASS>(modules, 5);
 
 		// WINDOWS
 
