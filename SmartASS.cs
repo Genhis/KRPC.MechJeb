@@ -61,7 +61,7 @@ namespace KRPC.MechJeb {
 				if(value == SmartASSInterfaceMode.Automatic)
 					throw new MJServiceException("Cannot set SmartASSInterfaceMode to Automatic");
 
-				this.mode.SetValue(this.instance, value);
+				this.mode.SetValue(this.instance, (int)value);
 			}
 		}
 
@@ -75,7 +75,7 @@ namespace KRPC.MechJeb {
 				if(value == SmartASSAutopilotMode.Automatic)
 					throw new MJServiceException("Cannot set SmartASSAutopilotMode to Automatic");
 
-				this.target.SetValue(this.instance, value);
+				this.target.SetValue(this.instance, (int)value);
 			}
 		}
 
@@ -167,14 +167,14 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public AttitudeReference AdvancedReference {
 			get => (AttitudeReference)this.advReference.GetValue(this.instance);
-			set => this.advReference.SetValue(this.instance, value);
+			set => this.advReference.SetValue(this.instance, (int)value);
 		}
 
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Advanced" /> mode.</remarks>
 		[KRPCProperty]
 		public Vector6.Direction AdvancedDirection {
 			get => (Vector6.Direction)this.advDirection.GetValue(this.instance);
-			set => this.advDirection.SetValue(this.instance, value);
+			set => this.advDirection.SetValue(this.instance, (int)value);
 		}
 
 		/// <summary>
