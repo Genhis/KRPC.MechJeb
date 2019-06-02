@@ -105,13 +105,13 @@ namespace KRPC.MechJeb
             KeepVertical,
 
             /// <summary>
-			/// Internal mode, do not set.
-			/// </summary>
+            /// Internal mode, do not set.
+            /// </summary>
             KeepRelative,
 
             /// <summary>
-			/// Internal mode, do not set.
-			/// </summary>
+            /// Internal mode, do not set.
+            /// </summary>
             Direct
         }
     }
