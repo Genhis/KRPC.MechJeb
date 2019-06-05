@@ -97,8 +97,8 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public static SmartRCS SmartRCS => GetComputerModule<SmartRCS>(windows, 1);
 
-        [KRPCProperty]
-        public static Translatron Translatron => GetComputerModule<Translatron>(windows, 3);
+		[KRPCProperty]
+		public static Translatron Translatron => GetComputerModule<Translatron>(windows, 3);
 
 		// CONTROLLERS
 

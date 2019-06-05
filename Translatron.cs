@@ -1,8 +1,8 @@
-﻿using KRPC.Service.Attributes;
 using System.Reflection;
 
-namespace KRPC.MechJeb
-{
+using KRPC.Service.Attributes;
+
+namespace KRPC.MechJeb {
 	/// <summary>
 	/// The Translatron module controls the vessel's throttle/velocity.
 	/// </summary>
@@ -56,7 +56,6 @@ namespace KRPC.MechJeb
 		/// <summary>
 		/// Sets translatron mode
 		/// </summary>
-		/// <param name="tmode">TranslatronMode you want to use <see cref="TranslatronMode"/></param>
 		[KRPCProperty]
 		public TranslatronMode Mode {
 			get => (TranslatronMode)this.tMode.GetValue(this.thrustInstance);
