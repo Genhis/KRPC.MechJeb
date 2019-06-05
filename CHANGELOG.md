@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 ### Added
 - **SmartASS** window
+- **Translatron** window
 ### Fixed
 - ValueError when setting enum properties
 ([#4](https://github.com/Genhis/KRPC.MechJeb/pull/4))

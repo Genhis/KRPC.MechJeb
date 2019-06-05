@@ -38,7 +38,6 @@ so please create a new issue if something doesn't work for you.
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`
 - Implement `SpaceplaneAutopilot` (known as Aircraft Approach & Autoland)
-- Implement `Translation` module?
 
 ## Not implemented
 
