@@ -11,7 +11,7 @@ namespace KRPC.MechJeb {
 		private static MethodInfo usersAdd;
 		private static MethodInfo usersRemove;
 
-		protected Type type;
+		protected internal Type type;
 		protected internal readonly object instance;
 
 		private readonly object users;
