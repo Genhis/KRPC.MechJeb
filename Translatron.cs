@@ -21,8 +21,8 @@ namespace KRPC.MechJeb {
 		public Translatron() : base("Translatron") {
 			this.thrustInstance = MechJeb.ThrustController.instance;
 			var thrustType = MechJeb.ThrustController.type;
+
 			this.tMode = thrustType.GetField("tmode");
-			
 			this.transSpdAct = thrustType.GetField("trans_spd_act");
 			this.transKillH = thrustType.GetField("trans_kill_h");
 
@@ -59,7 +59,12 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public TranslatronMode Mode {
 			get => (TranslatronMode)this.tMode.GetValue(this.thrustInstance);
-			set => this.setMode.Invoke(this.instance, new object[] { (int)value });
+			set {
+				if(value == TranslatronMode.KeepRelative || value == TranslatronMode.Direct)
+					throw new MJServiceException("Cannot set TranslatronMode to internal values");
+
+				this.setMode.Invoke(this.instance, new object[] { (int)value });
+			}
 		}
 
 		/// <summary>
