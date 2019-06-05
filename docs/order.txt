@@ -15,6 +15,7 @@ MechJeb.SolarPanelController
 MechJeb.StagingController
 MechJeb.TargetController
 MechJeb.ThrustController
+MechJeb.Translatron
 
 MechJeb.AirplaneAutopilot.Enabled
 MechJeb.AirplaneAutopilot.AltitudeHoldEnabled
@@ -378,3 +379,15 @@ MechJeb.ThrustController.MaxThrottle
 MechJeb.ThrustController.MinThrottle
 MechJeb.ThrustController.SmoothThrottle
 MechJeb.ThrustController.ThrottleSmoothingTime
+
+MechJeb.Translatron.Mode
+MechJeb.Translatron.TranslationSpeed
+MechJeb.Translatron.KillHorizontalSpeed
+MechJeb.Translatron.PanicSwitch
+
+MechJeb.TranslatronMode.Off
+MechJeb.TranslatronMode.KeepOrbital
+MechJeb.TranslatronMode.KeepSurface
+MechJeb.TranslatronMode.KeepVertical
+MechJeb.TranslatronMode.KeepRelative
+MechJeb.TranslatronMode.Direct
