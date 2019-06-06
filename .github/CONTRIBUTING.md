@@ -14,9 +14,9 @@ The following is a set of guidelines which you should read to make a great contr
 If you encounter any problems with kRPC.MechJeb, please [open a new issue](https://github.com/Genhis/KRPC.MechJeb/issues/new/choose) and follow guidelines in the given template. Please make sure you have an up-to-date version of kRPC.MechJeb, older versions are not supported.
 
 ## Creating pull requests
-New features are developed in the [dev](https://github.com/Genhis/KRPC.MechJeb/tree/dev) branch, and later merged to master and released. Please check if the branch hasn't already got the feature you want to implement, so that you wouldn't waste your time with implementing it again.
+New features are developed in separate branches, and later merged to master and released. Please check if the feature you want to implement isn't already in one of the branchews, so that you wouldn't waste your time implementing it again.
 
-Pull requests are merged with squashing or rebasing to keep commit history clean. It is therefore recommended to **create a new branch for each pull request** and not to use `dev` or `master` branches. It is up to you how you name your new branch (e.g. `issue-4`, `smart-rcs`, etc.).
+Pull requests are merged with squashing or rebasing to keep commit history clean. It is therefore recommended to **create a new branch for each pull request** and not to use `master` branch. It is up to you how you name your new branch (e.g. `issue-4`, `smart-rcs`, etc.).
 
 Before you start coding, please read our [coding conventions](#coding-conventions). After you make changes to the code or add a new functionality, add an entry to the changelog file stating what has been changed with your pull request ID in brackets. If your pull request fixes an existing issue, use the issue ID instead.
 
