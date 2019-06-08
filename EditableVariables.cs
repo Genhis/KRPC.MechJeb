@@ -27,8 +27,16 @@ namespace KRPC.MechJeb {
 			}
 		}
 
+		public static double GetDouble(object instance) {
+			return (double)editableDoubleVal.GetValue(instance, null);
+		}
+
 		public static void SetDouble(object instance, double value) {
 			editableDoubleVal.SetValue(instance, value, null);
+		}
+
+		public static int GetInt(object instance) {
+			return (int)editableIntVal.GetValue(instance);
 		}
 
 		public static void SetInt(object instance, int value) {
@@ -36,12 +44,13 @@ namespace KRPC.MechJeb {
 			editableIntText.SetValue(instance, value.ToString());
 		}
 
-		public static double GetDouble(object instance) {
-			return (double)editableDoubleVal.GetValue(instance, null);
+		// Helper methods for fields which create a new object every time they are changed in GUI
+		public static double GetDouble(FieldInfo field, object instance) {
+			return GetDouble(field.GetValue(instance));
 		}
 
-		public static int GetInt(object instance) {
-			return (int)editableIntVal.GetValue(instance);
+		public static void SetDouble(FieldInfo field, object instance, double value) {
+			SetDouble(field.GetValue(instance), value);
 		}
 	}
 }

@@ -14,6 +14,7 @@ Are you tired of manually giving commands to your rockets? Do you want to automa
    tutorials
    third-party-scripts
    Contributing <https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md>
+   Report a bug <https://github.com/Genhis/KRPC.MechJeb/issues/>
 
 .. _clients:
 

@@ -36,9 +36,7 @@ All contributions to this mod are welcome. If you are interested in contributing
 - Implement `AdvancedTransfer` maneuver operation
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`
-- Implement `SmartASS`
 - Implement `SpaceplaneAutopilot` (known as Aircraft Approach & Autoland)
-- Implement `Translation` module?
 
 ## Not implemented
 

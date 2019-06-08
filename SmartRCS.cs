@@ -27,7 +27,7 @@ namespace KRPC.MechJeb {
 		public SmartRCSMode Mode {
 			get => (SmartRCSMode)this.target.GetValue(this.instance);
 			set {
-				this.target.SetValue(this.instance, value);
+				this.target.SetValue(this.instance, (int)value);
 				this.engage.Invoke(this.instance, null);
 			}
 		}

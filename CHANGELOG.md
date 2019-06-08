@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- **SmartASS** window
+- **Translatron** window ([#5](https://github.com/Genhis/KRPC.MechJeb/pull/5))
+### Fixed
+- ValueError when setting enum properties
+([#4](https://github.com/Genhis/KRPC.MechJeb/pull/4))
 
 ## [0.4.1] - 2019-05-11
 ### Fixed
