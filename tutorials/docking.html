@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Docking with a Target &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>Docking with a Target &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C-nano" href="../cnano/index.html" />
+    <link rel="next" title="Third-party scripts" href="../third-party-scripts.html" />
     <link rel="prev" title="Rendezvous with a Target" href="rendezvous.html" /> 
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -97,6 +97,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Docking with a Target</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul>
@@ -200,14 +203,12 @@ Python</div>
 17
 18
 19
-20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">RPCException</span><span class="o">,</span> <span class="n">StreamException</span> <span class="o">{</span>
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">RPCException</span><span class="o">,</span> <span class="n">StreamException</span> <span class="o">{</span>
         <span class="c1">//This script assumes the vessel is next to the target and the target is a ship.</span>
-        <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Docking with a target&quot;</span><span class="o">);</span>
-
-        <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-        <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-        <span class="n">Vessel</span> <span class="n">active</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">getActiveVessel</span><span class="o">();</span>
+        <span class="k">try</span><span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Docking with a target&quot;</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+            <span class="n">Vessel</span> <span class="n">active</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">getActiveVessel</span><span class="o">();</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -250,17 +251,15 @@ Python</div>
 28
 29
 30
-31
-32</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Setting the first docking port as the controlling part&quot;</span><span class="o">);</span>
-        <span class="n">Parts</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">active</span><span class="o">.</span><span class="na">getParts</span><span class="o">();</span>
-        <span class="n">parts</span><span class="o">.</span><span class="na">setControlling</span><span class="o">(</span><span class="n">parts</span><span class="o">.</span><span class="na">getDockingPorts</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getPart</span><span class="o">());</span>
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">Parts</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">active</span><span class="o">.</span><span class="na">getParts</span><span class="o">();</span>
+            <span class="n">parts</span><span class="o">.</span><span class="na">setControlling</span><span class="o">(</span><span class="n">parts</span><span class="o">.</span><span class="na">getDockingPorts</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getPart</span><span class="o">());</span>
 
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Looking for a free docking port attached to the target vessel&quot;</span><span class="o">);</span>
-        <span class="k">for</span><span class="o">(</span><span class="n">DockingPort</span> <span class="n">dp</span> <span class="o">:</span> <span class="n">sc</span><span class="o">.</span><span class="na">getTargetVessel</span><span class="o">().</span><span class="na">getParts</span><span class="o">().</span><span class="na">getDockingPorts</span><span class="o">())</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">.</span><span class="na">getDockedPart</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">sc</span><span class="o">.</span><span class="na">setTargetDockingPort</span><span class="o">(</span><span class="n">dp</span><span class="o">);</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="o">}</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Looking for a free docking port attached to the target vessel&quot;</span><span class="o">);</span>
+            <span class="k">for</span><span class="o">(</span><span class="n">DockingPort</span> <span class="n">dp</span> <span class="o">:</span> <span class="n">sc</span><span class="o">.</span><span class="na">getTargetVessel</span><span class="o">().</span><span class="na">getParts</span><span class="o">().</span><span class="na">getDockingPorts</span><span class="o">())</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">.</span><span class="na">getDockedPart</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sc</span><span class="o">.</span><span class="na">setTargetDockingPort</span><span class="o">(</span><span class="n">dp</span><span class="o">);</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="o">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -313,21 +312,21 @@ Python</div>
 45
 46
 47
-48</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Starting the docking process&quot;</span><span class="o">);</span>
-        <span class="n">DockingAutopilot</span> <span class="n">docking</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getDockingAutopilot</span><span class="o">();</span>
-        <span class="n">docking</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+48</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">DockingAutopilot</span> <span class="n">docking</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getDockingAutopilot</span><span class="o">();</span>
+            <span class="n">docking</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
 
-        <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">docking</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
-        <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
-            <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
-                <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
+            <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">docking</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
+            <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
+            <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
+                    <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
+            <span class="o">}</span>
+            <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Docking complete!&quot;</span><span class="o">);</span>
         <span class="o">}</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
-
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Docking complete!&quot;</span><span class="o">);</span>
-        <span class="n">conn</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -370,7 +369,7 @@ Python</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cnano/index.html" class="btn btn-neutral float-right" title="C-nano" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../third-party-scripts.html" class="btn btn-neutral float-right" title="Third-party scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="rendezvous.html" class="btn btn-neutral" title="Rendezvous with a Target" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -404,7 +403,7 @@ Python</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

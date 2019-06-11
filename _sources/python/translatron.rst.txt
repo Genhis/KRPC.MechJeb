@@ -1,0 +1,77 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+Translatron
+===========
+
+
+.. class:: Translatron
+
+   The Translatron module controls the vessel's throttle/velocity.
+
+   .. attribute:: mode
+
+      Current translatron mode.
+
+      :Attribute: Can be read or written
+      :rtype: :class:`TranslatronMode`
+      :Game Scenes: Flight
+
+   .. attribute:: translation_speed
+
+      Speed which trasnlatron will hold
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+   .. attribute:: kill_horizontal_speed
+
+      Kill horizontal speed
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. method:: panic_switch()
+
+      Abort mission by seperating all but the last stage and activating landing autopilot.
+
+      :Game Scenes: Flight
+
+
+
+.. class:: TranslatronMode
+
+
+
+
+   .. data:: off
+
+      Switch off Translatron.
+
+
+   .. data:: keep_orbital
+
+      Keep orbital velocity.
+
+
+   .. data:: keep_surface
+
+      Keep surface velocity.
+
+
+   .. data:: keep_vertical
+
+      Keep vertical velocity (climb/descent speed).
+
+
+   .. data:: keep_relative
+
+      Internal mode, do not set.
+
+
+   .. data:: direct
+
+      Internal mode, do not set.

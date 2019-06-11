@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Advanced Launch into Orbit &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>Advanced Launch into Orbit &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -97,6 +97,9 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html">Docking with a Target</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul>
@@ -201,16 +204,12 @@ Python</div>
 30
 31
 32
-33
-34
-35</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="n">ascent</span><span class="o">.</span><span class="na">setAscentPathIndex</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//use AscentClassic as the ascent path</span>
-
-        <span class="n">AscentClassic</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ascent</span><span class="o">.</span><span class="na">getAscentPathClassic</span><span class="o">();</span>
-        <span class="n">path</span><span class="o">.</span><span class="na">setTurnShapeExponent</span><span class="o">(</span><span class="mf">0.5</span><span class="o">);</span> <span class="c1">//set the turn shape to 50%</span>
-        <span class="n">path</span><span class="o">.</span><span class="na">setAutoPath</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">//don&#39;t use autopath</span>
-        <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartAltitude</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
-        <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartVelocity</span><span class="o">(</span><span class="mi">120</span><span class="o">);</span>
-        <span class="n">path</span><span class="o">.</span><span class="na">setTurnEndAltitude</span><span class="o">(</span><span class="mi">65000</span><span class="o">);</span>
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">AscentClassic</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ascent</span><span class="o">.</span><span class="na">getAscentPathClassic</span><span class="o">();</span>
+            <span class="n">path</span><span class="o">.</span><span class="na">setTurnShapeExponent</span><span class="o">(</span><span class="mf">0.5</span><span class="o">);</span> <span class="c1">//set the turn shape to 50%</span>
+            <span class="n">path</span><span class="o">.</span><span class="na">setAutoPath</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">//don&#39;t use autopath</span>
+            <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartAltitude</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
+            <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartVelocity</span><span class="o">(</span><span class="mi">120</span><span class="o">);</span>
+            <span class="n">path</span><span class="o">.</span><span class="na">setTurnEndAltitude</span><span class="o">(</span><span class="mi">65000</span><span class="o">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -278,7 +277,7 @@ Python</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

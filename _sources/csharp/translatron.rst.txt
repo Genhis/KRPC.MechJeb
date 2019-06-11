@@ -1,0 +1,72 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+Translatron
+===========
+
+
+.. class:: Translatron
+
+   The Translatron module controls the vessel's throttle/velocity.
+
+   .. property:: TranslatronMode Mode { get; set; }
+
+      Current translatron mode.
+
+      :Game Scenes: Flight
+
+   .. property:: double TranslationSpeed { get; set; }
+
+      Speed which trasnlatron will hold
+
+      :Game Scenes: Flight
+
+   .. property:: bool KillHorizontalSpeed { get; set; }
+
+      Kill horizontal speed
+
+      :Game Scenes: Flight
+
+   .. method:: void PanicSwitch()
+
+      Abort mission by seperating all but the last stage and activating landing autopilot.
+
+
+      :Game Scenes: Flight
+
+
+
+.. enum:: TranslatronMode
+
+
+
+
+   .. value:: Off
+
+      Switch off Translatron.
+
+
+   .. value:: KeepOrbital
+
+      Keep orbital velocity.
+
+
+   .. value:: KeepSurface
+
+      Keep surface velocity.
+
+
+   .. value:: KeepVertical
+
+      Keep vertical velocity (climb/descent speed).
+
+
+   .. value:: KeepRelative
+
+      Internal mode, do not set.
+
+
+   .. value:: Direct
+
+      Internal mode, do not set.

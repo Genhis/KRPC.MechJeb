@@ -8,7 +8,7 @@ LandingAutopilot
 
 .. class:: LandingAutopilot
 
-
+   The Landing Guidance module provides targeted and non-targeted landing autopilot.
 
    .. property:: bool Enabled { get; set; }
 

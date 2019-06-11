@@ -8,7 +8,7 @@ LandingAutopilot
 
 .. type:: krpc_MechJeb_LandingAutopilot_t
 
-
+   The Landing Guidance module provides targeted and non-targeted landing autopilot.
 
    .. function:: krpc_error_t krpc_MechJeb_LandingAutopilot_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_LandingAutopilot_set_Enabled(bool value)

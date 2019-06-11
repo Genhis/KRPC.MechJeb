@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ThrustController &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>ThrustController &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -87,6 +87,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul class="current">
@@ -368,7 +371,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitToPrevent
 <dl class="function">
 <dt id="c.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats">
 void <code class="descname">krpc_MechJeb_ThrustController_set_LimitToPreventOverheats</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Limits the throttle to prevent parts from overheating.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -422,7 +426,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxAcceleratio
 <dl class="function">
 <dt id="c.krpc_MechJeb_ThrustController_set_MaxAcceleration">
 void <code class="descname">krpc_MechJeb_ThrustController_set_MaxAcceleration</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit acceleration to this value in m/s^2.</p>
+<dd><p>Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -441,7 +445,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxDynamicPres
 <dl class="function">
 <dt id="c.krpc_MechJeb_ThrustController_set_MaxDynamicPressure">
 void <code class="descname">krpc_MechJeb_ThrustController_set_MaxDynamicPressure</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxDynamicPressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit Q to this value in Pa.</p>
+<dd><p>Limit the maximal dynamic pressure in Pa.
+This avoids that pieces break off during launch because of atmospheric pressure.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -460,7 +465,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxThrottle</c
 <dl class="function">
 <dt id="c.krpc_MechJeb_ThrustController_set_MaxThrottle">
 void <code class="descname">krpc_MechJeb_ThrustController_set_MaxThrottle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit throttle to this value between 0 and 1.</p>
+<dd><p>Never exceed the percentage of the throttle during ascent (value between 0 and 1).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -479,7 +484,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MinThrottle</c
 <dl class="function">
 <dt id="c.krpc_MechJeb_ThrustController_set_MinThrottle">
 void <code class="descname">krpc_MechJeb_ThrustController_set_MinThrottle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MinThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Keep limited throttle over this value between 0 and 1.</p>
+<dd><p>Never go below the percentage of the throttle during ascent (value between 0 and 1).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -597,7 +602,7 @@ void <code class="descname">krpc_MechJeb_ThrustController_set_ThrottleSmoothingT
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

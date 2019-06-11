@@ -33,7 +33,7 @@ StagingController
 
    .. attribute:: autostage_limit
 
-      Stop at the selected stage.
+      Stop at the selected stage - staging will not occur beyond this stage number.
 
       :Attribute: Can be read or written
       :rtype: int
@@ -41,7 +41,7 @@ StagingController
 
    .. attribute:: autostage_post_delay
 
-
+      The autopilot will pause the actual staging after ? seconds for each stage.
 
       :Attribute: Can be read or written
       :rtype: double
@@ -49,7 +49,7 @@ StagingController
 
    .. attribute:: autostage_pre_delay
 
-
+      The autopilot will pause the actual staging before ? seconds for each stage.
 
       :Attribute: Can be read or written
       :rtype: double

@@ -82,7 +82,7 @@ ThrustController
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_LimitToPreventOverheats(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_ThrustController_set_LimitToPreventOverheats(bool value)
 
-
+      Limits the throttle to prevent parts from overheating.
 
       :Game Scenes: Flight
 
@@ -103,28 +103,29 @@ ThrustController
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxAcceleration(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxAcceleration(double value)
 
-      Limit acceleration to this value in m/s^2.
+      Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxDynamicPressure(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxDynamicPressure(double value)
 
-      Limit Q to this value in Pa.
+      Limit the maximal dynamic pressure in Pa.
+      This avoids that pieces break off during launch because of atmospheric pressure.
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MaxThrottle(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MaxThrottle(double value)
 
-      Limit throttle to this value between 0 and 1.
+      Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController_MinThrottle(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_ThrustController_set_MinThrottle(double value)
 
-      Keep limited throttle over this value between 0 and 1.
+      Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 

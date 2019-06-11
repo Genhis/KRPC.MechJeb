@@ -1,0 +1,409 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+SmartASS
+========
+
+
+.. type:: public class SmartASS
+
+   The Smart A.S.S. module provides aids for vessel pitch control.
+
+   .. method:: SmartASSInterfaceMode getInterfaceMode()
+
+   .. method:: void setInterfaceMode(SmartASSInterfaceMode value)
+
+      GUI mode; doesn't do anything except changing SmartASS GUI buttons to a specified mode.
+
+      :Game Scenes: Flight
+
+   .. method:: SmartASSAutopilotMode getAutopilotMode()
+
+   .. method:: void setAutopilotMode(SmartASSAutopilotMode value)
+
+      Current autopilot mode.
+
+      :Game Scenes: Flight
+
+   .. method:: void update(boolean resetPID)
+
+      Update SmartASS position to use new values.
+
+      :param boolean resetPID: False most of the time, use true only if it doesn't work.
+      :Game Scenes: Flight
+
+   .. method:: boolean getForceYaw()
+
+   .. method:: void setForceYaw(boolean value)
+
+      Enable yaw control for :meth:`SmartASS.getSurfaceHeading()`, :meth:`SmartASSAutopilotMode.SURFACE_PROGRADE` and :meth:`SmartASSAutopilotMode.SURFACE_RETROGRADE`.
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getForcePitch()
+
+   .. method:: void setForcePitch(boolean value)
+
+      Enable pitch control for :meth:`SmartASS.getSurfacePitch()`, :meth:`SmartASSAutopilotMode.SURFACE_PROGRADE` and :meth:`SmartASSAutopilotMode.SURFACE_RETROGRADE`.
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getForceRoll()
+
+   .. method:: void setForceRoll(boolean value)
+
+      Enable roll control.
+
+      :Game Scenes: Flight
+
+   .. method:: double getSurfaceHeading()
+
+   .. method:: void setSurfaceHeading(double value)
+
+      Heading; Also called or azimuth, or the direction where you want to go.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE` mode.
+
+   .. method:: double getSurfacePitch()
+
+   .. method:: void setSurfacePitch(double value)
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE` mode.
+
+   .. method:: double getSurfaceRoll()
+
+   .. method:: void setSurfaceRoll(double value)
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE` mode.
+
+   .. method:: double getSurfaceVelYaw()
+
+   .. method:: void setSurfaceVelYaw(double value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE_PROGRADE` and :meth:`SmartASSAutopilotMode.SURFACE_RETROGRADE` mode.
+
+   .. method:: double getSurfaceVelPitch()
+
+   .. method:: void setSurfaceVelPitch(double value)
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE_PROGRADE` and :meth:`SmartASSAutopilotMode.SURFACE_RETROGRADE` mode.
+
+   .. method:: double getSurfaceVelRoll()
+
+   .. method:: void setSurfaceVelRoll(double value)
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.SURFACE_PROGRADE` and :meth:`SmartASSAutopilotMode.SURFACE_RETROGRADE` mode.
+
+   .. method:: AttitudeReference getAdvancedReference()
+
+   .. method:: void setAdvancedReference(AttitudeReference value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.ADVANCED` mode.
+
+   .. method:: Direction getAdvancedDirection()
+
+   .. method:: void setAdvancedDirection(Direction value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :meth:`SmartASSAutopilotMode.ADVANCED` mode.
+
+
+
+.. type:: public enum SmartASSInterfaceMode
+
+
+
+
+   .. field:: public SmartASSInterfaceMode ORBITAL
+
+
+
+
+   .. field:: public SmartASSInterfaceMode SURFACE
+
+
+
+
+   .. field:: public SmartASSInterfaceMode TARGET
+
+
+
+
+   .. field:: public SmartASSInterfaceMode ADVANCED
+
+
+
+
+   .. field:: public SmartASSInterfaceMode AUTOMATIC
+
+      Internal mode, do not set.
+
+
+
+.. type:: public enum SmartASSAutopilotMode
+
+
+
+
+   .. field:: public SmartASSAutopilotMode OFF
+
+      Switch off Smart A.S.S.
+
+
+   .. field:: public SmartASSAutopilotMode KILL_ROT
+
+      "Kill" the spacecraft's rotation (counters rotation/tumbling).
+
+
+   .. field:: public SmartASSAutopilotMode NODE
+
+      Point the vessel to a maneuver node.
+
+
+   .. field:: public SmartASSAutopilotMode ADVANCED
+
+      Advanced mode.
+
+
+   .. field:: public SmartASSAutopilotMode AUTOMATIC
+
+      Automatic mode (internal mode, only for getting status).
+
+
+   .. field:: public SmartASSAutopilotMode PROGRADE
+
+      ORBIT: Orient to orbital prograde.
+
+
+   .. field:: public SmartASSAutopilotMode RETROGRADE
+
+      ORBIT: Orient to orbital retrograde.
+
+
+   .. field:: public SmartASSAutopilotMode NORMAL_PLUS
+
+      ORBIT: Orient to orbital normal (change inclination).
+
+
+   .. field:: public SmartASSAutopilotMode NORMAL_MINUS
+
+      ORBIT: Orient to orbital anti-normal (change inclination).
+
+
+   .. field:: public SmartASSAutopilotMode RADIAL_PLUS
+
+      ORBIT: Orient to radial outward (away from SOI).
+
+
+   .. field:: public SmartASSAutopilotMode RADIAL_MINUS
+
+      ORBIT: Orient to radial inward (towards SOI).
+
+
+   .. field:: public SmartASSAutopilotMode SURFACE_PROGRADE
+
+      SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don't have fins or are otherwise instable.
+
+
+   .. field:: public SmartASSAutopilotMode SURFACE_RETROGRADE
+
+      SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.
+
+
+   .. field:: public SmartASSAutopilotMode HORIZONTAL_PLUS
+
+      SURFACE: Orient in the direction of horizontal movement relative to the ground.
+
+
+   .. field:: public SmartASSAutopilotMode HORIZONTAL_MINUS
+
+      SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.
+
+
+   .. field:: public SmartASSAutopilotMode SURFACE
+
+      SURFACE: Orient the vessel in specific direction relative to surface.
+
+
+   .. field:: public SmartASSAutopilotMode VERTICAL_PLUS
+
+      SURFACE: Orient "up", perpendicular to the surface.
+
+
+   .. field:: public SmartASSAutopilotMode TARGET_PLUS
+
+      TARGET: Orient towards the target.
+
+
+   .. field:: public SmartASSAutopilotMode TARGET_MINUS
+
+      TARGET: Orient away from the target.
+
+
+   .. field:: public SmartASSAutopilotMode RELATIVE_PLUS
+
+      TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.
+
+
+   .. field:: public SmartASSAutopilotMode RELATIVE_MINUS
+
+      TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.
+
+
+   .. field:: public SmartASSAutopilotMode PARALLEL_PLUS
+
+      TARGET: Orient parallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.
+
+
+   .. field:: public SmartASSAutopilotMode PARALLEL_MINUS
+
+      TARGET: Orient antiparallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.
+
+
+
+.. type:: public enum AttitudeReference
+
+
+
+
+   .. field:: public AttitudeReference INERTIAL
+
+      World coordinate system.
+
+
+   .. field:: public AttitudeReference ORBIT
+
+      forward = prograde, left = normal plus, up = radial plus
+
+
+   .. field:: public AttitudeReference ORBIT_HORIZONTAL
+
+      forward = surface projection of orbit velocity, up = surface normal
+
+
+   .. field:: public AttitudeReference SURFACE_NORTH
+
+      forward = north, left = west, up = surface normal
+
+
+   .. field:: public AttitudeReference SURFACE_VELOCITY
+
+      forward = surface frame vessel velocity, up = perpendicular component of surface normal
+
+
+   .. field:: public AttitudeReference TARGET
+
+      forward = toward target, up = perpendicular component of vessel heading
+
+
+   .. field:: public AttitudeReference RELATIVE_VELOCITY
+
+      forward = toward relative velocity direction, up = tbd
+
+
+   .. field:: public AttitudeReference TARGET_ORIENTATION
+
+      forward = direction target is facing, up = target up
+
+
+   .. field:: public AttitudeReference MANEUVER_NODE
+
+      forward = next maneuver node direction, up = tbd
+
+
+   .. field:: public AttitudeReference SUN
+
+      forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit
+
+
+   .. field:: public AttitudeReference SURFACE_HORIZONTAL
+
+      forward = surface velocity horizontal component, up = surface normal
+
+
+
+.. type:: public enum Direction
+
+
+
+
+   .. field:: public Direction FORWARD
+
+
+
+
+   .. field:: public Direction BACK
+
+
+
+
+   .. field:: public Direction UP
+
+
+
+
+   .. field:: public Direction DOWN
+
+
+
+
+   .. field:: public Direction RIGHT
+
+
+
+
+   .. field:: public Direction LEFT

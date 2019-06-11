@@ -70,6 +70,12 @@ Service MechJeb
 
       :Game Scenes: Flight
 
+   .. function:: krpc_error_t krpc_MechJeb_SmartASS(krpc_connection_t connection, krpc_MechJeb_SmartASS_t * result)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_SmartRCS(krpc_connection_t connection, krpc_MechJeb_SmartRCS_t * result)
 
 
@@ -95,6 +101,12 @@ Service MechJeb
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_ThrustController(krpc_connection_t connection, krpc_MechJeb_ThrustController_t * result)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_Translatron(krpc_connection_t connection, krpc_MechJeb_Translatron_t * result)
 
 
 

@@ -29,19 +29,19 @@ StagingController
 
    .. property:: int AutostageLimit { get; set; }
 
-      Stop at the selected stage.
+      Stop at the selected stage - staging will not occur beyond this stage number.
 
       :Game Scenes: Flight
 
    .. property:: double AutostagePostDelay { get; set; }
 
-
+      The autopilot will pause the actual staging after ? seconds for each stage.
 
       :Game Scenes: Flight
 
    .. property:: double AutostagePreDelay { get; set; }
 
-
+      The autopilot will pause the actual staging before ? seconds for each stage.
 
       :Game Scenes: Flight
 

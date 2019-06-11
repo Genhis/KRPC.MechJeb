@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>StagingController &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>StagingController &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -87,6 +87,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul class="current">
@@ -233,7 +236,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_StagingController_AutostageLimi
 <dl class="function">
 <dt id="c.krpc_MechJeb_StagingController_set_AutostageLimit">
 void <code class="descname">krpc_MechJeb_StagingController_set_AutostageLimit</code><span class="sig-paren">(</span>int32_t<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_StagingController_set_AutostageLimit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop at the selected stage.</p>
+<dd><p>Stop at the selected stage - staging will not occur beyond this stage number.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -252,7 +255,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_StagingController_AutostagePost
 <dl class="function">
 <dt id="c.krpc_MechJeb_StagingController_set_AutostagePostDelay">
 void <code class="descname">krpc_MechJeb_StagingController_set_AutostagePostDelay</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_StagingController_set_AutostagePostDelay" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>The autopilot will pause the actual staging after ? seconds for each stage.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -270,7 +274,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_StagingController_AutostagePreD
 <dl class="function">
 <dt id="c.krpc_MechJeb_StagingController_set_AutostagePreDelay">
 void <code class="descname">krpc_MechJeb_StagingController_set_AutostagePreDelay</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_StagingController_set_AutostagePreDelay" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>The autopilot will pause the actual staging before ? seconds for each stage.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -434,7 +439,7 @@ void <code class="descname">krpc_MechJeb_StagingController_set_HotStagingLeadTim
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

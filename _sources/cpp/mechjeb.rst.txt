@@ -75,6 +75,12 @@ MechJeb service
 
       :Game Scenes: Flight
 
+   .. function:: SmartASS smart_ass()
+
+
+
+      :Game Scenes: Flight
+
    .. function:: SmartRCS smart_rcs()
 
 
@@ -100,6 +106,12 @@ MechJeb service
       :Game Scenes: Flight
 
    .. function:: ThrustController thrust_controller()
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: Translatron translatron()
 
 
 

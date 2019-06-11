@@ -8,7 +8,7 @@ LandingAutopilot
 
 .. type:: public class LandingAutopilot
 
-
+   The Landing Guidance module provides targeted and non-targeted landing autopilot.
 
    .. method:: boolean getEnabled()
 

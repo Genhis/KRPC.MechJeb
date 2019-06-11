@@ -10,6 +10,10 @@ AscentAutopilot
 
    This module controls the Ascent Guidance in MechJeb 2.
 
+   .. note::
+
+      See `MechJeb2 wiki <https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues>`_ for more guidance on how to optimally set up this autopilot.
+
    .. attribute:: enabled
 
 
@@ -60,14 +64,14 @@ AscentAutopilot
 
    .. attribute:: desired_inclination
 
-      The desired inclination.
+      The desired inclination in degrees for the final circular orbit.
 
       :Attribute: Can be read or written
       :rtype: number
 
    .. attribute:: desired_orbit_altitude
 
-      The desired orbit altitude.
+      The desired altitude in kilometres for the final circular orbit.
 
       :Attribute: Can be read or written
       :rtype: number
@@ -81,7 +85,7 @@ AscentAutopilot
 
       .. note::
 
-         Equivalend to :attr:`MechJeb.thrust_controller`.
+         Equivalent to :attr:`MechJeb.thrust_controller`.
 
    .. attribute:: force_roll
 
@@ -127,7 +131,7 @@ AscentAutopilot
 
    .. attribute:: corrective_steering
 
-      The state of corrective steering.
+      Will cause the craft to steer based on the more accurate velocity vector rather than positional vector (large craft may actually perform better with this box unchecked).
 
       :Attribute: Can be read or written
       :rtype: boolean
@@ -141,7 +145,8 @@ AscentAutopilot
 
    .. attribute:: autostage
 
-      Whether to enable autostaging. Paramethers can be set in :class:`MechJeb.StagingController`.
+      The autopilot will automatically stage when the current stage has run out of fuel.
+      Paramethers can be set in :class:`MechJeb.StagingController`.
 
       :Attribute: Can be read or written
       :rtype: boolean
@@ -300,39 +305,46 @@ AscentGT
 
 .. class:: AscentGT
 
+   This profile is similar to the gravity turn mod. It is a 3-burn to orbit style of launch that can get to orbit with about 2800 dV on stock Kerbin.
+   If you want to have fun make a rocket that is basically a nose cone, a jumbo-64 a mainsail and some fairly big fins, have the pitch program flip it over aggressively (uncheck the AoA limiter, set the values to like 0.5 / 50 / 40 / 45 / 1) and let it rip.
 
+   .. note::
+
+      It's not precisely the GT mod algorithm and it does not do any pitch-up during the intermediate burn right now, so it won't handle low TWR upper stages.
 
    .. attribute:: hold_ap_time
 
-
+      At the intermediate altitude with this much time-to-apoapsis left the engine will start burning prograde to lift the apoapsis.
+      The engine will throttle down in order to burn closer to the apoapsis.
+      This is very similar to the lead-time of a maneuver node in concept, but with throttling down in the case where the player has initiated the burn too early (the corollary is that if you see lots of throttling down at the start, you likely need less HoldAP time).
 
       :Attribute: Can be read or written
       :rtype: number
 
    .. attribute:: intermediate_altitude
 
-
+      Intermediate apoapsis altitude to coast to and then raise the apoapsis up to the eventual final target. May be set to equal the final target in order to skip the intermediate phase.
 
       :Attribute: Can be read or written
       :rtype: number
 
    .. attribute:: turn_start_altitude
 
-
+      Altitude in km to pitch over and initiate the Gravity Turn (higher values for lower-TWR rockets).
 
       :Attribute: Can be read or written
       :rtype: number
 
    .. attribute:: turn_start_pitch
 
-
+      Pitch that the pitch program immediately applies.
 
       :Attribute: Can be read or written
       :rtype: number
 
    .. attribute:: turn_start_velocity
 
-
+      Velocity in m/s which triggers pitch over and initiates the Gravity Turn (higher values for lower-TWR rockets).
 
       :Attribute: Can be read or written
       :rtype: number

@@ -1,0 +1,409 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+SmartASS
+========
+
+
+.. class:: SmartASS
+
+   The Smart A.S.S. module provides aids for vessel pitch control.
+
+   .. attribute:: interface_mode
+
+      GUI mode; doesn't do anything except changing SmartASS GUI buttons to a specified mode.
+
+      :Attribute: Can be read or written
+      :rtype: :class:`SmartASSInterfaceMode`
+      :Game Scenes: Flight
+
+   .. attribute:: autopilot_mode
+
+      Current autopilot mode.
+
+      :Attribute: Can be read or written
+      :rtype: :class:`SmartASSAutopilotMode`
+      :Game Scenes: Flight
+
+   .. method:: update(reset_pid)
+
+      Update SmartASS position to use new values.
+
+      :param bool reset_pid: False most of the time, use true only if it doesn't work.
+      :Game Scenes: Flight
+
+   .. attribute:: force_yaw
+
+      Enable yaw control for :attr:`SmartASS.surface_heading`, :attr:`SmartASSAutopilotMode.surface_prograde` and :attr:`SmartASSAutopilotMode.surface_retrograde`.
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: force_pitch
+
+      Enable pitch control for :attr:`SmartASS.surface_pitch`, :attr:`SmartASSAutopilotMode.surface_prograde` and :attr:`SmartASSAutopilotMode.surface_retrograde`.
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: force_roll
+
+      Enable roll control.
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: surface_heading
+
+      Heading; Also called or azimuth, or the direction where you want to go.
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface` mode.
+
+   .. attribute:: surface_pitch
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface` mode.
+
+   .. attribute:: surface_roll
+
+      Roll; 0 is top side up.
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface` mode.
+
+   .. attribute:: surface_vel_yaw
+
+
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface_prograde` and :attr:`SmartASSAutopilotMode.surface_retrograde` mode.
+
+   .. attribute:: surface_vel_pitch
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface_prograde` and :attr:`SmartASSAutopilotMode.surface_retrograde` mode.
+
+   .. attribute:: surface_vel_roll
+
+      Roll; 0 is top side up.
+
+      :Attribute: Can be read or written
+      :rtype: double
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.surface_prograde` and :attr:`SmartASSAutopilotMode.surface_retrograde` mode.
+
+   .. attribute:: advanced_reference
+
+
+
+      :Attribute: Can be read or written
+      :rtype: :class:`AttitudeReference`
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.advanced` mode.
+
+   .. attribute:: advanced_direction
+
+
+
+      :Attribute: Can be read or written
+      :rtype: :class:`Direction`
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :attr:`SmartASSAutopilotMode.advanced` mode.
+
+
+
+.. class:: SmartASSInterfaceMode
+
+
+
+
+   .. data:: orbital
+
+
+
+
+   .. data:: surface
+
+
+
+
+   .. data:: target
+
+
+
+
+   .. data:: advanced
+
+
+
+
+   .. data:: automatic
+
+      Internal mode, do not set.
+
+
+
+.. class:: SmartASSAutopilotMode
+
+
+
+
+   .. data:: off
+
+      Switch off Smart A.S.S.
+
+
+   .. data:: kill_rot
+
+      "Kill" the spacecraft's rotation (counters rotation/tumbling).
+
+
+   .. data:: node
+
+      Point the vessel to a maneuver node.
+
+
+   .. data:: advanced
+
+      Advanced mode.
+
+
+   .. data:: automatic
+
+      Automatic mode (internal mode, only for getting status).
+
+
+   .. data:: prograde
+
+      ORBIT: Orient to orbital prograde.
+
+
+   .. data:: retrograde
+
+      ORBIT: Orient to orbital retrograde.
+
+
+   .. data:: normal_plus
+
+      ORBIT: Orient to orbital normal (change inclination).
+
+
+   .. data:: normal_minus
+
+      ORBIT: Orient to orbital anti-normal (change inclination).
+
+
+   .. data:: radial_plus
+
+      ORBIT: Orient to radial outward (away from SOI).
+
+
+   .. data:: radial_minus
+
+      ORBIT: Orient to radial inward (towards SOI).
+
+
+   .. data:: surface_prograde
+
+      SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don't have fins or are otherwise instable.
+
+
+   .. data:: surface_retrograde
+
+      SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.
+
+
+   .. data:: horizontal_plus
+
+      SURFACE: Orient in the direction of horizontal movement relative to the ground.
+
+
+   .. data:: horizontal_minus
+
+      SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.
+
+
+   .. data:: surface
+
+      SURFACE: Orient the vessel in specific direction relative to surface.
+
+
+   .. data:: vertical_plus
+
+      SURFACE: Orient "up", perpendicular to the surface.
+
+
+   .. data:: target_plus
+
+      TARGET: Orient towards the target.
+
+
+   .. data:: target_minus
+
+      TARGET: Orient away from the target.
+
+
+   .. data:: relative_plus
+
+      TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.
+
+
+   .. data:: relative_minus
+
+      TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.
+
+
+   .. data:: parallel_plus
+
+      TARGET: Orient parallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.
+
+
+   .. data:: parallel_minus
+
+      TARGET: Orient antiparallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.
+
+
+
+.. class:: AttitudeReference
+
+
+
+
+   .. data:: inertial
+
+      World coordinate system.
+
+
+   .. data:: orbit
+
+      forward = prograde, left = normal plus, up = radial plus
+
+
+   .. data:: orbit_horizontal
+
+      forward = surface projection of orbit velocity, up = surface normal
+
+
+   .. data:: surface_north
+
+      forward = north, left = west, up = surface normal
+
+
+   .. data:: surface_velocity
+
+      forward = surface frame vessel velocity, up = perpendicular component of surface normal
+
+
+   .. data:: target
+
+      forward = toward target, up = perpendicular component of vessel heading
+
+
+   .. data:: relative_velocity
+
+      forward = toward relative velocity direction, up = tbd
+
+
+   .. data:: target_orientation
+
+      forward = direction target is facing, up = target up
+
+
+   .. data:: maneuver_node
+
+      forward = next maneuver node direction, up = tbd
+
+
+   .. data:: sun
+
+      forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit
+
+
+   .. data:: surface_horizontal
+
+      forward = surface velocity horizontal component, up = surface normal
+
+
+
+.. class:: Direction
+
+
+
+
+   .. data:: forward
+
+
+
+
+   .. data:: back
+
+
+
+
+   .. data:: up
+
+
+
+
+   .. data:: down
+
+
+
+
+   .. data:: right
+
+
+
+
+   .. data:: left

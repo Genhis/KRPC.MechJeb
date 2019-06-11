@@ -1,0 +1,836 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SmartASS &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SmartRCS" href="smart-rcs.html" />
+    <link rel="prev" title="ManeuverPlanner" href="maneuver-planner.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C-nano</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#autopilots">Autopilots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#windows">Windows</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="maneuver-planner.html">ManeuverPlanner</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SmartASS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart-rcs.html">SmartRCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translatron.html">Translatron</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">C-nano</a> &raquo;</li>
+        
+      <li>SmartASS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/cnano/smart-ass.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="smartass">
+<h1>SmartASS<a class="headerlink" href="#smartass" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="c.krpc_MechJeb_SmartASS_t">
+<code class="descname">krpc_MechJeb_SmartASS_t</code><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Smart A.S.S. module provides aids for vessel pitch control.</p>
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_InterfaceMode">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_InterfaceMode</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_SmartASSInterfaceMode_t" title="krpc_MechJeb_SmartASSInterfaceMode_t">krpc_MechJeb_SmartASSInterfaceMode_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_InterfaceMode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_InterfaceMode">
+void <code class="descname">krpc_MechJeb_SmartASS_set_InterfaceMode</code><span class="sig-paren">(</span><a class="reference internal" href="#c.krpc_MechJeb_SmartASSInterfaceMode_t" title="krpc_MechJeb_SmartASSInterfaceMode_t">krpc_MechJeb_SmartASSInterfaceMode_t</a><em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_InterfaceMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>GUI mode; doesn’t do anything except changing SmartASS GUI buttons to a specified mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_AutopilotMode">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_AutopilotMode</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_SmartASSAutopilotMode_t" title="krpc_MechJeb_SmartASSAutopilotMode_t">krpc_MechJeb_SmartASSAutopilotMode_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_AutopilotMode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_AutopilotMode">
+void <code class="descname">krpc_MechJeb_SmartASS_set_AutopilotMode</code><span class="sig-paren">(</span><a class="reference internal" href="#c.krpc_MechJeb_SmartASSAutopilotMode_t" title="krpc_MechJeb_SmartASSAutopilotMode_t">krpc_MechJeb_SmartASSAutopilotMode_t</a><em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_AutopilotMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current autopilot mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_Update">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_Update</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool<em>&nbsp;resetPID</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update SmartASS position to use new values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resetPID</strong> – False most of the time, use true only if it doesn’t work.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body"><p class="first last">Flight</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_ForceYaw">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_ForceYaw</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_ForceYaw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_ForceYaw">
+void <code class="descname">krpc_MechJeb_SmartASS_set_ForceYaw</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_ForceYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable yaw control for <a class="reference internal" href="#c.krpc_MechJeb_SmartASS_SurfaceHeading" title="krpc_MechJeb_SmartASS_SurfaceHeading"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_SmartASS_SurfaceHeading()</span></code></a>, <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</span></code></a> and <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_ForcePitch">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_ForcePitch</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_ForcePitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_ForcePitch">
+void <code class="descname">krpc_MechJeb_SmartASS_set_ForcePitch</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_ForcePitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable pitch control for <a class="reference internal" href="#c.krpc_MechJeb_SmartASS_SurfacePitch" title="krpc_MechJeb_SmartASS_SurfacePitch"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_SmartASS_SurfacePitch()</span></code></a>, <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</span></code></a> and <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_ForceRoll">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_ForceRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_ForceRoll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_ForceRoll">
+void <code class="descname">krpc_MechJeb_SmartASS_set_ForceRoll</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_ForceRoll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable roll control.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfaceHeading">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfaceHeading</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfaceHeading" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfaceHeading">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfaceHeading</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfaceHeading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heading; Also called or azimuth, or the direction where you want to go.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfacePitch">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfacePitch</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfacePitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfacePitch">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfacePitch</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfacePitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfaceRoll">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfaceRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfaceRoll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfaceRoll">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfaceRoll</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfaceRoll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Roll; 0 is top side up.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfaceVelYaw">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfaceVelYaw</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfaceVelYaw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfaceVelYaw">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfaceVelYaw</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfaceVelYaw" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</span></code></a> and <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfaceVelPitch">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfaceVelPitch</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfaceVelPitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfaceVelPitch">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfaceVelPitch</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfaceVelPitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</span></code></a> and <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_SurfaceVelRoll">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_SurfaceVelRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_SurfaceVelRoll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_SurfaceVelRoll">
+void <code class="descname">krpc_MechJeb_SmartASS_set_SurfaceVelRoll</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_SurfaceVelRoll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Roll; 0 is top side up.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</span></code></a> and <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_AdvancedReference">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_AdvancedReference</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_AttitudeReference_t" title="krpc_MechJeb_AttitudeReference_t">krpc_MechJeb_AttitudeReference_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_AdvancedReference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_AdvancedReference">
+void <code class="descname">krpc_MechJeb_SmartASS_set_AdvancedReference</code><span class="sig-paren">(</span><a class="reference internal" href="#c.krpc_MechJeb_AttitudeReference_t" title="krpc_MechJeb_AttitudeReference_t">krpc_MechJeb_AttitudeReference_t</a><em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_AdvancedReference" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_AdvancedDirection">
+krpc_error_t <code class="descname">krpc_MechJeb_SmartASS_AdvancedDirection</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_Direction_t" title="krpc_MechJeb_Direction_t">krpc_MechJeb_Direction_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_AdvancedDirection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="c.krpc_MechJeb_SmartASS_set_AdvancedDirection">
+void <code class="descname">krpc_MechJeb_SmartASS_set_AdvancedDirection</code><span class="sig-paren">(</span><a class="reference internal" href="#c.krpc_MechJeb_Direction_t" title="krpc_MechJeb_Direction_t">krpc_MechJeb_Direction_t</a><em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_SmartASS_set_AdvancedDirection" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Works only in <a class="reference internal" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED" title="KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED</span></code></a> mode.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="c.krpc_MechJeb_SmartASSInterfaceMode_t">
+<code class="descname">krpc_MechJeb_SmartASSInterfaceMode_t</code><a class="headerlink" href="#c.krpc_MechJeb_SmartASSInterfaceMode_t" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_ORBITAL">
+<code class="descname">KRPC_MECHJEB_SMARTASSINTERFACEMODE_ORBITAL</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_ORBITAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_SURFACE">
+<code class="descname">KRPC_MECHJEB_SMARTASSINTERFACEMODE_SURFACE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_SURFACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_TARGET">
+<code class="descname">KRPC_MECHJEB_SMARTASSINTERFACEMODE_TARGET</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_TARGET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_ADVANCED">
+<code class="descname">KRPC_MECHJEB_SMARTASSINTERFACEMODE_ADVANCED</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_ADVANCED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_AUTOMATIC">
+<code class="descname">KRPC_MECHJEB_SMARTASSINTERFACEMODE_AUTOMATIC</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSINTERFACEMODE_AUTOMATIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal mode, do not set.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="c.krpc_MechJeb_SmartASSAutopilotMode_t">
+<code class="descname">krpc_MechJeb_SmartASSAutopilotMode_t</code><a class="headerlink" href="#c.krpc_MechJeb_SmartASSAutopilotMode_t" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_OFF">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_OFF</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_OFF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch off Smart A.S.S.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_KILLROT">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_KILLROT</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_KILLROT" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Kill” the spacecraft’s rotation (counters rotation/tumbling).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NODE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NODE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point the vessel to a maneuver node.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_ADVANCED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced mode.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_AUTOMATIC">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_AUTOMATIC</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_AUTOMATIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatic mode (internal mode, only for getting status).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PROGRADE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PROGRADE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PROGRADE" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to orbital prograde.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RETROGRADE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RETROGRADE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RETROGRADE" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to orbital retrograde.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to orbital normal (change inclination).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_NORMALMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to orbital anti-normal (change inclination).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to radial outward (away from SOI).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RADIALMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>ORBIT: Orient to radial inward (towards SOI).</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACEPROGRADE" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don’t have fins or are otherwise instable.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACERETROGRADE" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient in the direction of horizontal movement relative to the ground.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_HORIZONTALMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_SURFACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient the vessel in specific direction relative to surface.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_VERTICALPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_VERTICALPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_VERTICALPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>SURFACE: Orient “up”, perpendicular to the surface.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient towards the target.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_TARGETMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient away from the target.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_RELATIVEMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELPLUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELPLUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELPLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient parallel to the target’s orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELMINUS">
+<code class="descname">KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELMINUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_SMARTASSAUTOPILOTMODE_PARALLELMINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>TARGET: Orient antiparallel to the target’s orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="c.krpc_MechJeb_AttitudeReference_t">
+<code class="descname">krpc_MechJeb_AttitudeReference_t</code><a class="headerlink" href="#c.krpc_MechJeb_AttitudeReference_t" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_INERTIAL">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_INERTIAL</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_INERTIAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>World coordinate system.</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_ORBIT">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_ORBIT</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_ORBIT" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = prograde, left = normal plus, up = radial plus</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_ORBITHORIZONTAL">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_ORBITHORIZONTAL</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_ORBITHORIZONTAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = surface projection of orbit velocity, up = surface normal</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACENORTH">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACENORTH</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACENORTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = north, left = west, up = surface normal</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEVELOCITY">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEVELOCITY</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEVELOCITY" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = surface frame vessel velocity, up = perpendicular component of surface normal</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGET">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_TARGET</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGET" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = toward target, up = perpendicular component of vessel heading</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_RELATIVEVELOCITY">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_RELATIVEVELOCITY</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_RELATIVEVELOCITY" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = toward relative velocity direction, up = tbd</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGETORIENTATION">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_TARGETORIENTATION</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGETORIENTATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = direction target is facing, up = target up</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_MANEUVERNODE">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_MANEUVERNODE</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_MANEUVERNODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = next maneuver node direction, up = tbd</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_SUN">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_SUN</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_SUN" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit</p>
+</dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEHORIZONTAL">
+<code class="descname">KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEHORIZONTAL</code><a class="headerlink" href="#c.KRPC_MECHJEB_ATTITUDEREFERENCE_SURFACEHORIZONTAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>forward = surface velocity horizontal component, up = surface normal</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="c.krpc_MechJeb_Direction_t">
+<code class="descname">krpc_MechJeb_Direction_t</code><a class="headerlink" href="#c.krpc_MechJeb_Direction_t" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_FORWARD">
+<code class="descname">KRPC_MECHJEB_DIRECTION_FORWARD</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_BACK">
+<code class="descname">KRPC_MECHJEB_DIRECTION_BACK</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_BACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_UP">
+<code class="descname">KRPC_MECHJEB_DIRECTION_UP</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_DOWN">
+<code class="descname">KRPC_MECHJEB_DIRECTION_DOWN</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_RIGHT">
+<code class="descname">KRPC_MECHJEB_DIRECTION_RIGHT</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.KRPC_MECHJEB_DIRECTION_LEFT">
+<code class="descname">KRPC_MECHJEB_DIRECTION_LEFT</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIRECTION_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="maneuver-planner.html" class="btn btn-neutral" title="ManeuverPlanner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The First Launch &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>The First Launch &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -97,6 +97,9 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html">Docking with a Target</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul>
@@ -211,21 +214,21 @@ Python</div>
 25
 26
 27</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">RPCException</span><span class="o">,</span> <span class="n">StreamException</span> <span class="o">{</span>
-        <span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Launch into orbit&quot;</span><span class="o">);</span>
+        <span class="k">try</span><span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Launch into orbit&quot;</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+            <span class="n">AscentAutopilot</span> <span class="n">ascent</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getAscentAutopilot</span><span class="o">();</span>
 
-        <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-        <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-        <span class="n">AscentAutopilot</span> <span class="n">ascent</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getAscentAutopilot</span><span class="o">();</span>
+            <span class="c1">//All of these options will be filled directly into AscentGuidance window and can be modified manually during flight.</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredOrbitAltitude</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredInclination</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
 
-        <span class="c1">//All of these options will be filled directly into AscentGuidance window and can be modified manually during flight.</span>
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredOrbitAltitude</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredInclination</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setForceRoll</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setVerticalRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setTurnRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
 
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setForceRoll</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setVerticalRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setTurnRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
-
-        <span class="n">ascent</span><span class="o">.</span><span class="na">setAutostage</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setAutostage</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -299,20 +302,20 @@ Python</div>
 38
 39
 40
-41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>        <span class="n">ascent</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-        <span class="n">sc</span><span class="o">.</span><span class="na">getActiveVessel</span><span class="o">().</span><span class="na">getControl</span><span class="o">().</span><span class="na">activateNextStage</span><span class="o">();</span> <span class="c1">//launch the vessel</span>
+41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">sc</span><span class="o">.</span><span class="na">getActiveVessel</span><span class="o">().</span><span class="na">getControl</span><span class="o">().</span><span class="na">activateNextStage</span><span class="o">();</span> <span class="c1">//launch the vessel</span>
 
-        <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">ascent</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
-        <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
-            <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
-                <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
+            <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">ascent</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
+            <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
+            <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
+                    <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
+            <span class="o">}</span>
+            <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Launch complete!&quot;</span><span class="o">);</span>
         <span class="o">}</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
-
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Launch complete!&quot;</span><span class="o">);</span>
-        <span class="n">conn</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -387,7 +390,7 @@ Python</div>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

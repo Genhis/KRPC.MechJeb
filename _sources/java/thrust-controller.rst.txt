@@ -93,7 +93,7 @@ ThrustController
 
    .. method:: void setLimitToPreventOverheats(boolean value)
 
-
+      Limits the throttle to prevent parts from overheating.
 
       :Game Scenes: Flight
 
@@ -117,7 +117,7 @@ ThrustController
 
    .. method:: void setMaxAcceleration(double value)
 
-      Limit acceleration to this value in m/s^2.
+      Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Game Scenes: Flight
 
@@ -125,7 +125,8 @@ ThrustController
 
    .. method:: void setMaxDynamicPressure(double value)
 
-      Limit Q to this value in Pa.
+      Limit the maximal dynamic pressure in Pa.
+      This avoids that pieces break off during launch because of atmospheric pressure.
 
       :Game Scenes: Flight
 
@@ -133,7 +134,7 @@ ThrustController
 
    .. method:: void setMaxThrottle(double value)
 
-      Limit throttle to this value between 0 and 1.
+      Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 
@@ -141,7 +142,7 @@ ThrustController
 
    .. method:: void setMinThrottle(double value)
 
-      Keep limited throttle over this value between 0 and 1.
+      Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 

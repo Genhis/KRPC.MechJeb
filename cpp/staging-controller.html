@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>StagingController &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>StagingController &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -87,6 +87,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul class="current">
@@ -233,7 +236,7 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t">
 <span id="_CPPv2N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_limit__int32_t"></span>void <code class="descname">set_autostage_limit</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Stop at the selected stage.</p>
+<dd><p>Stop at the selected stage - staging will not occur beyond this stage number.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -252,7 +255,8 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd">
 <span id="_CPPv2N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_post_delay__double"></span>void <code class="descname">set_autostage_post_delay</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>The autopilot will pause the actual staging after ? seconds for each stage.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -270,7 +274,8 @@
 <dl class="function">
 <dt id="_CPPv3N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd">
 <span id="_CPPv2N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_pre_delay__double"></span>void <code class="descname">set_autostage_pre_delay</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>The autopilot will pause the actual staging before ? seconds for each stage.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -434,7 +439,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

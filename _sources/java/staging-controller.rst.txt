@@ -35,7 +35,7 @@ StagingController
 
    .. method:: void setAutostageLimit(int value)
 
-      Stop at the selected stage.
+      Stop at the selected stage - staging will not occur beyond this stage number.
 
       :Game Scenes: Flight
 
@@ -43,7 +43,7 @@ StagingController
 
    .. method:: void setAutostagePostDelay(double value)
 
-
+      The autopilot will pause the actual staging after ? seconds for each stage.
 
       :Game Scenes: Flight
 
@@ -51,7 +51,7 @@ StagingController
 
    .. method:: void setAutostagePreDelay(double value)
 
-
+      The autopilot will pause the actual staging before ? seconds for each stage.
 
       :Game Scenes: Flight
 

@@ -1,0 +1,76 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+Translatron
+===========
+
+
+.. class:: Translatron
+
+   The Translatron module controls the vessel's throttle/velocity.
+
+   .. function:: TranslatronMode mode()
+   .. function:: void set_mode(TranslatronMode value)
+
+      Current translatron mode.
+
+      :Game Scenes: Flight
+
+   .. function:: double translation_speed()
+   .. function:: void set_translation_speed(double value)
+
+      Speed which trasnlatron will hold
+
+      :Game Scenes: Flight
+
+   .. function:: bool kill_horizontal_speed()
+   .. function:: void set_kill_horizontal_speed(bool value)
+
+      Kill horizontal speed
+
+      :Game Scenes: Flight
+
+   .. function:: void panic_switch()
+
+      Abort mission by seperating all but the last stage and activating landing autopilot.
+
+
+      :Game Scenes: Flight
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: TranslatronMode
+
+
+
+
+   .. enumerator:: off
+
+      Switch off Translatron.
+
+
+   .. enumerator:: keep_orbital
+
+      Keep orbital velocity.
+
+
+   .. enumerator:: keep_surface
+
+      Keep surface velocity.
+
+
+   .. enumerator:: keep_vertical
+
+      Keep vertical velocity (climb/descent speed).
+
+
+   .. enumerator:: keep_relative
+
+      Internal mode, do not set.
+
+
+   .. enumerator:: direct
+
+      Internal mode, do not set.

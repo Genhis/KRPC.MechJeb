@@ -70,6 +70,12 @@ MechJeb service
 
       :Game Scenes: Flight
 
+   .. property:: SmartASS SmartASS { get; }
+
+
+
+      :Game Scenes: Flight
+
    .. property:: SmartRCS SmartRCS { get; }
 
 
@@ -95,6 +101,12 @@ MechJeb service
       :Game Scenes: Flight
 
    .. property:: ThrustController ThrustController { get; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: Translatron Translatron { get; }
 
 
 

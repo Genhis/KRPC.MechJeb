@@ -287,7 +287,8 @@ OperationCircularize
 
 .. class:: OperationCircularize
 
-
+   This mode creates a manevuer to match your apoapsis to periapsis.
+   To match apoapsis to periapsis, set the time to :attr:`MechJeb.TimeReference.periapsis`; to match periapsis to apoapsis, set the time to :attr:`MechJeb.TimeReference.apoapsis`. Theese are the most efficient, but it can also create node at specific height or after specific time.
 
    .. attribute:: error_message
 
@@ -485,7 +486,7 @@ OperationKillRelVel
 
 .. class:: OperationKillRelVel
 
-
+   Kill relative velocity to a given target.
 
    .. attribute:: error_message
 
@@ -663,7 +664,7 @@ OperationMoonReturn
 
    .. attribute:: moon_return_altitude
 
-
+      Approximate return altitude from a moon (from an orbiting body to the parent body).
 
       :Attribute: Can be read or written
       :rtype: number
@@ -751,7 +752,8 @@ OperationResonantOrbit
 
 .. class:: OperationResonantOrbit
 
-
+   Resonant orbit is useful for placing satellites to a constellation. This mode should be used starting from a orbit in the desired orbital plane. Important parameter to this mode is the desired orbital ratio, which is the ratio between period of your current orbit and the new orbit.
+   To deploy satellites, set the denominator to number of satellites you want to have in the constellation. Setting the nominator to one less than denominator is the most efficient, but not necessary the fastest. To successfully deploy all satellites, make sure the numbers are incommensurable.
 
    .. attribute:: error_message
 
@@ -840,7 +842,10 @@ OperationTransfer
 
 .. class:: OperationTransfer
 
-   Bi-impulsive (Hohmann) transfer to target
+   Bi-impulsive (Hohmann) transfer to target.
+
+   This option is used to plan transfer to target in single sphere of influence. It is suitable for rendezvous with other vessels or moons.
+   Contrary to the name, the transfer is often uni-impulsive. You can select when you want the manevuer to happen or select optimum time.
 
    .. attribute:: error_message
 
@@ -875,7 +880,8 @@ OperationTransfer
 
    .. attribute:: simple_transfer
 
-      Simple coplanar Hohmann transfer
+      Simple coplanar Hohmann transfer.
+      Set it to true if you are used to the old version of transfer maneuver.
 
       :Attribute: Can be read or written
       :rtype: boolean

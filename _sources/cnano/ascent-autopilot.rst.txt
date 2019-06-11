@@ -10,6 +10,10 @@ AscentAutopilot
 
    This module controls the Ascent Guidance in MechJeb 2.
 
+   .. note::
+
+      See `MechJeb2 wiki <https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues>`_ for more guidance on how to optimally set up this autopilot.
+
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_Enabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_Enabled(bool value)
 
@@ -57,14 +61,14 @@ AscentAutopilot
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_DesiredInclination(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_DesiredInclination(double value)
 
-      The desired inclination.
+      The desired inclination in degrees for the final circular orbit.
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude(double value)
 
-      The desired orbit altitude.
+      The desired altitude in kilometres for the final circular orbit.
 
       :Game Scenes: Flight
 
@@ -77,7 +81,7 @@ AscentAutopilot
 
       .. note::
 
-         Equivalend to :func:`krpc_MechJeb_ThrustController`.
+         Equivalent to :func:`krpc_MechJeb_ThrustController`.
 
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_ForceRoll(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_ForceRoll(bool value)
@@ -124,7 +128,7 @@ AscentAutopilot
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_CorrectiveSteering(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering(bool value)
 
-      The state of corrective steering.
+      Will cause the craft to steer based on the more accurate velocity vector rather than positional vector (large craft may actually perform better with this box unchecked).
 
       :Game Scenes: Flight
 
@@ -138,7 +142,8 @@ AscentAutopilot
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_Autostage(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AscentAutopilot_set_Autostage(bool value)
 
-      Whether to enable autostaging. Paramethers can be set in :type:`krpc_MechJeb_StagingController_t`.
+      The autopilot will automatically stage when the current stage has run out of fuel.
+      Paramethers can be set in :type:`krpc_MechJeb_StagingController_t`.
 
       :Game Scenes: Flight
 
@@ -301,40 +306,47 @@ AscentGT
 
 .. type:: krpc_MechJeb_AscentGT_t
 
+   This profile is similar to the gravity turn mod. It is a 3-burn to orbit style of launch that can get to orbit with about 2800 dV on stock Kerbin.
+   If you want to have fun make a rocket that is basically a nose cone, a jumbo-64 a mainsail and some fairly big fins, have the pitch program flip it over aggressively (uncheck the AoA limiter, set the values to like 0.5 / 50 / 40 / 45 / 1) and let it rip.
 
+   .. note::
+
+      It's not precisely the GT mod algorithm and it does not do any pitch-up during the intermediate burn right now, so it won't handle low TWR upper stages.
 
    .. function:: krpc_error_t krpc_MechJeb_AscentGT_HoldAPTime(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentGT_set_HoldAPTime(double value)
 
-
+      At the intermediate altitude with this much time-to-apoapsis left the engine will start burning prograde to lift the apoapsis.
+      The engine will throttle down in order to burn closer to the apoapsis.
+      This is very similar to the lead-time of a maneuver node in concept, but with throttling down in the case where the player has initiated the burn too early (the corollary is that if you see lots of throttling down at the start, you likely need less HoldAP time).
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AscentGT_IntermediateAltitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentGT_set_IntermediateAltitude(double value)
 
-
+      Intermediate apoapsis altitude to coast to and then raise the apoapsis up to the eventual final target. May be set to equal the final target in order to skip the intermediate phase.
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartAltitude(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentGT_set_TurnStartAltitude(double value)
 
-
+      Altitude in km to pitch over and initiate the Gravity Turn (higher values for lower-TWR rockets).
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartPitch(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentGT_set_TurnStartPitch(double value)
 
-
+      Pitch that the pitch program immediately applies.
 
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_AscentGT_TurnStartVelocity(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentGT_set_TurnStartVelocity(double value)
 
-
+      Velocity in m/s which triggers pitch over and initiates the Gravity Turn (higher values for lower-TWR rockets).
 
       :Game Scenes: Flight
 

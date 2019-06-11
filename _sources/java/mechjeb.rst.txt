@@ -80,6 +80,13 @@ MechJeb service
 
       :Game Scenes: Flight
 
+   .. method:: SmartASS getSmartASS()
+
+
+
+
+      :Game Scenes: Flight
+
    .. method:: SmartRCS getSmartRCS()
 
 
@@ -109,6 +116,13 @@ MechJeb service
       :Game Scenes: Flight
 
    .. method:: ThrustController getThrustController()
+
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: Translatron getTranslatron()
 
 
 

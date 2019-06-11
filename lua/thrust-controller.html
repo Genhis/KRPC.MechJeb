@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ThrustController &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>ThrustController &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -87,6 +87,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul class="current">
@@ -338,7 +341,8 @@
 <dl class="attribute">
 <dt id="MechJeb.ThrustController.limit_to_prevent_overheats">
 <code class="descname">limit_to_prevent_overheats</code><a class="headerlink" href="#MechJeb.ThrustController.limit_to_prevent_overheats" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Limits the throttle to prevent parts from overheating.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -383,7 +387,7 @@
 <dl class="attribute">
 <dt id="MechJeb.ThrustController.max_acceleration">
 <code class="descname">max_acceleration</code><a class="headerlink" href="#MechJeb.ThrustController.max_acceleration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit acceleration to this value in m/s^2.</p>
+<dd><p>Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -399,7 +403,8 @@
 <dl class="attribute">
 <dt id="MechJeb.ThrustController.max_dynamic_pressure">
 <code class="descname">max_dynamic_pressure</code><a class="headerlink" href="#MechJeb.ThrustController.max_dynamic_pressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit Q to this value in Pa.</p>
+<dd><p>Limit the maximal dynamic pressure in Pa.
+This avoids that pieces break off during launch because of atmospheric pressure.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -415,7 +420,7 @@
 <dl class="attribute">
 <dt id="MechJeb.ThrustController.max_throttle">
 <code class="descname">max_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.max_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Limit throttle to this value between 0 and 1.</p>
+<dd><p>Never exceed the percentage of the throttle during ascent (value between 0 and 1).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -431,7 +436,7 @@
 <dl class="attribute">
 <dt id="MechJeb.ThrustController.min_throttle">
 <code class="descname">min_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.min_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Keep limited throttle over this value between 0 and 1.</p>
+<dd><p>Never go below the percentage of the throttle during ascent (value between 0 and 1).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -545,7 +550,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

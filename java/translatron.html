@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Translatron &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NodeExecutor" href="node-executor.html" />
+    <link rel="prev" title="SmartRCS" href="smart-rcs.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Client documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/index.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Java</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#autopilots">Autopilots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#windows">Windows</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="maneuver-planner.html">ManeuverPlanner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart-ass.html">SmartASS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="smart-rcs.html">SmartRCS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Translatron</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">External resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">kRPC.MechJeb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Java</a> &raquo;</li>
+        
+      <li>Translatron</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/java/translatron.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="package-krpc.client.services.MechJeb"></span><div class="section" id="translatron">
+<h1>Translatron<a class="headerlink" href="#translatron" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.Translatron">
+public class <code class="descname">Translatron</code><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Translatron module controls the vessel’s throttle/velocity.</p>
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.getMode()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">getMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.getMode()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.setMode(TranslatronMode)">
+ void <code class="descname">setMode</code><span class="sig-paren">(</span><a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a><em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.setMode(TranslatronMode)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current translatron mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.getTranslationSpeed()">
+ double <code class="descname">getTranslationSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.getTranslationSpeed()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.setTranslationSpeed(double)">
+ void <code class="descname">setTranslationSpeed</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.setTranslationSpeed(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Speed which trasnlatron will hold</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.getKillHorizontalSpeed()">
+ boolean <code class="descname">getKillHorizontalSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.getKillHorizontalSpeed()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.setKillHorizontalSpeed(boolean)">
+ void <code class="descname">setKillHorizontalSpeed</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.setKillHorizontalSpeed(boolean)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kill horizontal speed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.Translatron.panicSwitch()">
+ void <code class="descname">panicSwitch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.Translatron.panicSwitch()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort mission by seperating all but the last stage and activating landing autopilot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.TranslatronMode">
+public enum <code class="descname">TranslatronMode</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.OFF">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">OFF</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.OFF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch off Translatron.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.KEEP_ORBITAL">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">KEEP_ORBITAL</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.KEEP_ORBITAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep orbital velocity.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.KEEP_SURFACE">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">KEEP_SURFACE</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.KEEP_SURFACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep surface velocity.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.KEEP_VERTICAL">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">KEEP_VERTICAL</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.KEEP_VERTICAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep vertical velocity (climb/descent speed).</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.KEEP_RELATIVE">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">KEEP_RELATIVE</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.KEEP_RELATIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal mode, do not set.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.TranslatronMode.DIRECT">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.TranslatronMode" title="krpc.client.services.MechJeb.TranslatronMode">TranslatronMode</a> <code class="descname">DIRECT</code><a class="headerlink" href="#krpc.client.services.MechJeb.TranslatronMode.DIRECT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal mode, do not set.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="node-executor.html" class="btn btn-neutral float-right" title="NodeExecutor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="smart-rcs.html" class="btn btn-neutral" title="SmartRCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Genhis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

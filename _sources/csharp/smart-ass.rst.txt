@@ -1,0 +1,386 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+SmartASS
+========
+
+
+.. class:: SmartASS
+
+   The Smart A.S.S. module provides aids for vessel pitch control.
+
+   .. property:: SmartASSInterfaceMode InterfaceMode { get; set; }
+
+      GUI mode; doesn't do anything except changing SmartASS GUI buttons to a specified mode.
+
+      :Game Scenes: Flight
+
+   .. property:: SmartASSAutopilotMode AutopilotMode { get; set; }
+
+      Current autopilot mode.
+
+      :Game Scenes: Flight
+
+   .. method:: void Update(bool resetPID)
+
+      Update SmartASS position to use new values.
+
+      :parameters:
+
+       * **resetPID** -- False most of the time, use true only if it doesn't work.
+
+      :Game Scenes: Flight
+
+   .. property:: bool ForceYaw { get; set; }
+
+      Enable yaw control for :prop:`SmartASS.SurfaceHeading`, :enum:`SmartASSAutopilotMode.SurfacePrograde` and :enum:`SmartASSAutopilotMode.SurfaceRetrograde`.
+
+      :Game Scenes: Flight
+
+   .. property:: bool ForcePitch { get; set; }
+
+      Enable pitch control for :prop:`SmartASS.SurfacePitch`, :enum:`SmartASSAutopilotMode.SurfacePrograde` and :enum:`SmartASSAutopilotMode.SurfaceRetrograde`.
+
+      :Game Scenes: Flight
+
+   .. property:: bool ForceRoll { get; set; }
+
+      Enable roll control.
+
+      :Game Scenes: Flight
+
+   .. property:: double SurfaceHeading { get; set; }
+
+      Heading; Also called or azimuth, or the direction where you want to go.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.Surface` mode.
+
+   .. property:: double SurfacePitch { get; set; }
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.Surface` mode.
+
+   .. property:: double SurfaceRoll { get; set; }
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.Surface` mode.
+
+   .. property:: double SurfaceVelYaw { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.SurfacePrograde` and :enum:`SmartASSAutopilotMode.SurfaceRetrograde` mode.
+
+   .. property:: double SurfaceVelPitch { get; set; }
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.SurfacePrograde` and :enum:`SmartASSAutopilotMode.SurfaceRetrograde` mode.
+
+   .. property:: double SurfaceVelRoll { get; set; }
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.SurfacePrograde` and :enum:`SmartASSAutopilotMode.SurfaceRetrograde` mode.
+
+   .. property:: AttitudeReference AdvancedReference { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.Advanced` mode.
+
+   .. property:: Direction AdvancedDirection { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enum:`SmartASSAutopilotMode.Advanced` mode.
+
+
+
+.. enum:: SmartASSInterfaceMode
+
+
+
+
+   .. value:: Orbital
+
+
+
+
+   .. value:: Surface
+
+
+
+
+   .. value:: Target
+
+
+
+
+   .. value:: Advanced
+
+
+
+
+   .. value:: Automatic
+
+      Internal mode, do not set.
+
+
+
+.. enum:: SmartASSAutopilotMode
+
+
+
+
+   .. value:: Off
+
+      Switch off Smart A.S.S.
+
+
+   .. value:: KillRot
+
+      "Kill" the spacecraft's rotation (counters rotation/tumbling).
+
+
+   .. value:: Node
+
+      Point the vessel to a maneuver node.
+
+
+   .. value:: Advanced
+
+      Advanced mode.
+
+
+   .. value:: Automatic
+
+      Automatic mode (internal mode, only for getting status).
+
+
+   .. value:: Prograde
+
+      ORBIT: Orient to orbital prograde.
+
+
+   .. value:: Retrograde
+
+      ORBIT: Orient to orbital retrograde.
+
+
+   .. value:: NormalPlus
+
+      ORBIT: Orient to orbital normal (change inclination).
+
+
+   .. value:: NormalMinus
+
+      ORBIT: Orient to orbital anti-normal (change inclination).
+
+
+   .. value:: RadialPlus
+
+      ORBIT: Orient to radial outward (away from SOI).
+
+
+   .. value:: RadialMinus
+
+      ORBIT: Orient to radial inward (towards SOI).
+
+
+   .. value:: SurfacePrograde
+
+      SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don't have fins or are otherwise instable.
+
+
+   .. value:: SurfaceRetrograde
+
+      SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.
+
+
+   .. value:: HorizontalPlus
+
+      SURFACE: Orient in the direction of horizontal movement relative to the ground.
+
+
+   .. value:: HorizontalMinus
+
+      SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.
+
+
+   .. value:: Surface
+
+      SURFACE: Orient the vessel in specific direction relative to surface.
+
+
+   .. value:: VerticalPlus
+
+      SURFACE: Orient "up", perpendicular to the surface.
+
+
+   .. value:: TargetPlus
+
+      TARGET: Orient towards the target.
+
+
+   .. value:: TargetMinus
+
+      TARGET: Orient away from the target.
+
+
+   .. value:: RelativePlus
+
+      TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.
+
+
+   .. value:: RelativeMinus
+
+      TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.
+
+
+   .. value:: ParallelPlus
+
+      TARGET: Orient parallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.
+
+
+   .. value:: ParallelMinus
+
+      TARGET: Orient antiparallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.
+
+
+
+.. enum:: AttitudeReference
+
+
+
+
+   .. value:: Inertial
+
+      World coordinate system.
+
+
+   .. value:: Orbit
+
+      forward = prograde, left = normal plus, up = radial plus
+
+
+   .. value:: OrbitHorizontal
+
+      forward = surface projection of orbit velocity, up = surface normal
+
+
+   .. value:: SurfaceNorth
+
+      forward = north, left = west, up = surface normal
+
+
+   .. value:: SurfaceVelocity
+
+      forward = surface frame vessel velocity, up = perpendicular component of surface normal
+
+
+   .. value:: Target
+
+      forward = toward target, up = perpendicular component of vessel heading
+
+
+   .. value:: RelativeVelocity
+
+      forward = toward relative velocity direction, up = tbd
+
+
+   .. value:: TargetOrientation
+
+      forward = direction target is facing, up = target up
+
+
+   .. value:: ManeuverNode
+
+      forward = next maneuver node direction, up = tbd
+
+
+   .. value:: Sun
+
+      forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit
+
+
+   .. value:: SurfaceHorizontal
+
+      forward = surface velocity horizontal component, up = surface normal
+
+
+
+.. enum:: Direction
+
+
+
+
+   .. value:: Forward
+
+
+
+
+   .. value:: Back
+
+
+
+
+   .. value:: Up
+
+
+
+
+   .. value:: Down
+
+
+
+
+   .. value:: Right
+
+
+
+
+   .. value:: Left

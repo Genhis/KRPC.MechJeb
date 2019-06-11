@@ -1,0 +1,77 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+Translatron
+===========
+
+
+.. type:: public class Translatron
+
+   The Translatron module controls the vessel's throttle/velocity.
+
+   .. method:: TranslatronMode getMode()
+
+   .. method:: void setMode(TranslatronMode value)
+
+      Current translatron mode.
+
+      :Game Scenes: Flight
+
+   .. method:: double getTranslationSpeed()
+
+   .. method:: void setTranslationSpeed(double value)
+
+      Speed which trasnlatron will hold
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getKillHorizontalSpeed()
+
+   .. method:: void setKillHorizontalSpeed(boolean value)
+
+      Kill horizontal speed
+
+      :Game Scenes: Flight
+
+   .. method:: void panicSwitch()
+
+      Abort mission by seperating all but the last stage and activating landing autopilot.
+
+      :Game Scenes: Flight
+
+
+
+.. type:: public enum TranslatronMode
+
+
+
+
+   .. field:: public TranslatronMode OFF
+
+      Switch off Translatron.
+
+
+   .. field:: public TranslatronMode KEEP_ORBITAL
+
+      Keep orbital velocity.
+
+
+   .. field:: public TranslatronMode KEEP_SURFACE
+
+      Keep surface velocity.
+
+
+   .. field:: public TranslatronMode KEEP_VERTICAL
+
+      Keep vertical velocity (climb/descent speed).
+
+
+   .. field:: public TranslatronMode KEEP_RELATIVE
+
+      Internal mode, do not set.
+
+
+   .. field:: public TranslatronMode DIRECT
+
+      Internal mode, do not set.

@@ -111,6 +111,16 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
+.. attribute:: smart_ass
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.SmartASS`
+
+
+
+
 .. attribute:: smart_rcs
 
 
@@ -157,6 +167,16 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
    :Attribute: Read-only, cannot be set
    :rtype: :class:`MechJeb.ThrustController`
+
+
+
+
+.. attribute:: translatron
+
+
+
+   :Attribute: Read-only, cannot be set
+   :rtype: :class:`MechJeb.Translatron`
 
 
 

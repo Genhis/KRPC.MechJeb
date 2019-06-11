@@ -3,7 +3,9 @@
 
 
 C#
-======
+==================================
+
+**Note:** Credit goes to `MechJeb2 wiki <https://github.com/MuMech/MechJeb2/wiki/>`_ for most of the method description.
 
 .. toctree::
    mechjeb
@@ -23,7 +25,9 @@ Windows
 
 .. toctree::
    maneuver-planner
+   smart-ass
    smart-rcs
+   translatron
 
 Controllers
 -----------

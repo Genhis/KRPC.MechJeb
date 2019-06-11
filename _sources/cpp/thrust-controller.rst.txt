@@ -82,7 +82,7 @@ ThrustController
    .. function:: bool limit_to_prevent_overheats()
    .. function:: void set_limit_to_prevent_overheats(bool value)
 
-
+      Limits the throttle to prevent parts from overheating.
 
       :Game Scenes: Flight
 
@@ -103,28 +103,29 @@ ThrustController
    .. function:: double max_acceleration()
    .. function:: void set_max_acceleration(double value)
 
-      Limit acceleration to this value in m/s^2.
+      Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Game Scenes: Flight
 
    .. function:: double max_dynamic_pressure()
    .. function:: void set_max_dynamic_pressure(double value)
 
-      Limit Q to this value in Pa.
+      Limit the maximal dynamic pressure in Pa.
+      This avoids that pieces break off during launch because of atmospheric pressure.
 
       :Game Scenes: Flight
 
    .. function:: double max_throttle()
    .. function:: void set_max_throttle(double value)
 
-      Limit throttle to this value between 0 and 1.
+      Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 
    .. function:: double min_throttle()
    .. function:: void set_min_throttle(double value)
 
-      Keep limited throttle over this value between 0 and 1.
+      Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Game Scenes: Flight
 

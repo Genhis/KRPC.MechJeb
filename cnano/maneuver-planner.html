@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.4.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.5.0 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SmartRCS" href="smart-rcs.html" />
+    <link rel="next" title="SmartASS" href="smart-ass.html" />
     <link rel="prev" title="RendezvousAutopilot" href="rendezvous-autopilot.html" /> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.4.0
+                0.5.0
               </div>
             
           
@@ -87,6 +87,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Client documentation</span></p>
 <ul class="current">
@@ -99,7 +102,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#operations">Operations</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="smart-ass.html">SmartASS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smart-rcs.html">SmartRCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translatron.html">Translatron</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#controllers">Controllers</a></li>
@@ -614,7 +619,9 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationApoapsis_TimeSelector<
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationCircularize_t">
 <code class="descname">krpc_MechJeb_OperationCircularize_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationCircularize_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>This mode creates a manevuer to match your apoapsis to periapsis.
+To match apoapsis to periapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS</span></code></a>. Theese are the most efficient, but it can also create node at specific height or after specific time.</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationCircularize_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationCircularize_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationCircularize_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -956,7 +963,8 @@ void <code class="descname">krpc_MechJeb_OperationInterplanetaryTransfer_set_Wai
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationKillRelVel_t">
 <code class="descname">krpc_MechJeb_OperationKillRelVel_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationKillRelVel_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Kill relative velocity to a given target.</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationKillRelVel_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationKillRelVel_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationKillRelVel_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1259,7 +1267,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationMoonReturn_MoonReturnA
 <dl class="function">
 <dt id="c.krpc_MechJeb_OperationMoonReturn_set_MoonReturnAltitude">
 void <code class="descname">krpc_MechJeb_OperationMoonReturn_set_MoonReturnAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationMoonReturn_set_MoonReturnAltitude" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Approximate return altitude from a moon (from an orbiting body to the parent body).</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1399,7 +1408,9 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationPlane_TimeSelector</co
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationResonantOrbit_t">
 <code class="descname">krpc_MechJeb_OperationResonantOrbit_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationResonantOrbit_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Resonant orbit is useful for placing satellites to a constellation. This mode should be used starting from a orbit in the desired orbital plane. Important parameter to this mode is the desired orbital ratio, which is the ratio between period of your current orbit and the new orbit.
+To deploy satellites, set the denominator to number of satellites you want to have in the constellation. Setting the nominator to one less than denominator is the most efficient, but not necessary the fastest. To successfully deploy all satellites, make sure the numbers are incommensurable.</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationResonantOrbit_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationResonantOrbit_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationResonantOrbit_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1557,7 +1568,9 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationSemiMajor_TimeSelector
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationTransfer_t">
 <code class="descname">krpc_MechJeb_OperationTransfer_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationTransfer_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bi-impulsive (Hohmann) transfer to target</p>
+<dd><p>Bi-impulsive (Hohmann) transfer to target.</p>
+<p>This option is used to plan transfer to target in single sphere of influence. It is suitable for rendezvous with other vessels or moons.
+Contrary to the name, the transfer is often uni-impulsive. You can select when you want the manevuer to happen or select optimum time.</p>
 <dl class="function">
 <dt id="c.krpc_MechJeb_OperationTransfer_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationTransfer_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationTransfer_ErrorMessage" title="Permalink to this definition">¶</a></dt>
@@ -1635,7 +1648,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationTransfer_SimpleTransfe
 <dl class="function">
 <dt id="c.krpc_MechJeb_OperationTransfer_set_SimpleTransfer">
 void <code class="descname">krpc_MechJeb_OperationTransfer_set_SimpleTransfer</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationTransfer_set_SimpleTransfer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simple coplanar Hohmann transfer</p>
+<dd><p>Simple coplanar Hohmann transfer.
+Set it to true if you are used to the old version of transfer maneuver.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1677,7 +1691,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationTransfer_TimeSelector<
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="smart-ass.html" class="btn btn-neutral float-right" title="SmartASS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="rendezvous-autopilot.html" class="btn btn-neutral" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1711,7 +1725,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationTransfer_TimeSelector<
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.4.0',
+            VERSION:'0.5.0',
             LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

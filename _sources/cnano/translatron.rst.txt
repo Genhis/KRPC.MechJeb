@@ -1,0 +1,75 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+Translatron
+===========
+
+
+.. type:: krpc_MechJeb_Translatron_t
+
+   The Translatron module controls the vessel's throttle/velocity.
+
+   .. function:: krpc_error_t krpc_MechJeb_Translatron_Mode(krpc_connection_t connection, krpc_MechJeb_TranslatronMode_t * result)
+   .. function:: void krpc_MechJeb_Translatron_set_Mode(krpc_MechJeb_TranslatronMode_t value)
+
+      Current translatron mode.
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_Translatron_TranslationSpeed(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_Translatron_set_TranslationSpeed(double value)
+
+      Speed which trasnlatron will hold
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_Translatron_KillHorizontalSpeed(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_Translatron_set_KillHorizontalSpeed(bool value)
+
+      Kill horizontal speed
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_Translatron_PanicSwitch(krpc_connection_t connection)
+
+      Abort mission by seperating all but the last stage and activating landing autopilot.
+
+
+      :Game Scenes: Flight
+
+
+
+.. type:: krpc_MechJeb_TranslatronMode_t
+
+
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_OFF
+
+      Switch off Translatron.
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_KEEPORBITAL
+
+      Keep orbital velocity.
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_KEEPSURFACE
+
+      Keep surface velocity.
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_KEEPVERTICAL
+
+      Keep vertical velocity (climb/descent speed).
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_KEEPRELATIVE
+
+      Internal mode, do not set.
+
+
+   .. macro:: KRPC_MECHJEB_TRANSLATRONMODE_DIRECT
+
+      Internal mode, do not set.

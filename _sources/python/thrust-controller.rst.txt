@@ -92,7 +92,7 @@ ThrustController
 
    .. attribute:: limit_to_prevent_overheats
 
-
+      Limits the throttle to prevent parts from overheating.
 
       :Attribute: Can be read or written
       :rtype: bool
@@ -116,7 +116,7 @@ ThrustController
 
    .. attribute:: max_acceleration
 
-      Limit acceleration to this value in m/s^2.
+      Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Attribute: Can be read or written
       :rtype: double
@@ -124,7 +124,8 @@ ThrustController
 
    .. attribute:: max_dynamic_pressure
 
-      Limit Q to this value in Pa.
+      Limit the maximal dynamic pressure in Pa.
+      This avoids that pieces break off during launch because of atmospheric pressure.
 
       :Attribute: Can be read or written
       :rtype: double
@@ -132,7 +133,7 @@ ThrustController
 
    .. attribute:: max_throttle
 
-      Limit throttle to this value between 0 and 1.
+      Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
       :rtype: double
@@ -140,7 +141,7 @@ ThrustController
 
    .. attribute:: min_throttle
 
-      Keep limited throttle over this value between 0 and 1.
+      Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
       :rtype: double

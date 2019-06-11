@@ -1,0 +1,403 @@
+.. default-domain:: cpp
+.. highlight:: cpp
+.. namespace:: krpc::services::MechJeb
+
+SmartASS
+========
+
+
+.. class:: SmartASS
+
+   The Smart A.S.S. module provides aids for vessel pitch control.
+
+   .. function:: SmartASSInterfaceMode interface_mode()
+   .. function:: void set_interface_mode(SmartASSInterfaceMode value)
+
+      GUI mode; doesn't do anything except changing SmartASS GUI buttons to a specified mode.
+
+      :Game Scenes: Flight
+
+   .. function:: SmartASSAutopilotMode autopilot_mode()
+   .. function:: void set_autopilot_mode(SmartASSAutopilotMode value)
+
+      Current autopilot mode.
+
+      :Game Scenes: Flight
+
+   .. function:: void update(bool reset_pid)
+
+      Update SmartASS position to use new values.
+
+      :Parameters:
+
+       * **reset_pid** -- False most of the time, use true only if it doesn't work.
+
+      :Game Scenes: Flight
+
+   .. function:: bool force_yaw()
+   .. function:: void set_force_yaw(bool value)
+
+      Enable yaw control for :func:`SmartASS::surface_heading`, :enumerator:`SmartASSAutopilotMode::surface_prograde` and :enumerator:`SmartASSAutopilotMode::surface_retrograde`.
+
+      :Game Scenes: Flight
+
+   .. function:: bool force_pitch()
+   .. function:: void set_force_pitch(bool value)
+
+      Enable pitch control for :func:`SmartASS::surface_pitch`, :enumerator:`SmartASSAutopilotMode::surface_prograde` and :enumerator:`SmartASSAutopilotMode::surface_retrograde`.
+
+      :Game Scenes: Flight
+
+   .. function:: bool force_roll()
+   .. function:: void set_force_roll(bool value)
+
+      Enable roll control.
+
+      :Game Scenes: Flight
+
+   .. function:: double surface_heading()
+   .. function:: void set_surface_heading(double value)
+
+      Heading; Also called or azimuth, or the direction where you want to go.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface` mode.
+
+   .. function:: double surface_pitch()
+   .. function:: void set_surface_pitch(double value)
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface` mode.
+
+   .. function:: double surface_roll()
+   .. function:: void set_surface_roll(double value)
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface` mode.
+
+   .. function:: double surface_vel_yaw()
+   .. function:: void set_surface_vel_yaw(double value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface_prograde` and :enumerator:`SmartASSAutopilotMode::surface_retrograde` mode.
+
+   .. function:: double surface_vel_pitch()
+   .. function:: void set_surface_vel_pitch(double value)
+
+      Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface_prograde` and :enumerator:`SmartASSAutopilotMode::surface_retrograde` mode.
+
+   .. function:: double surface_vel_roll()
+   .. function:: void set_surface_vel_roll(double value)
+
+      Roll; 0 is top side up.
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::surface_prograde` and :enumerator:`SmartASSAutopilotMode::surface_retrograde` mode.
+
+   .. function:: AttitudeReference advanced_reference()
+   .. function:: void set_advanced_reference(AttitudeReference value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::advanced` mode.
+
+   .. function:: Direction advanced_direction()
+   .. function:: void set_advanced_direction(Direction value)
+
+
+
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         Works only in :enumerator:`SmartASSAutopilotMode::advanced` mode.
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: SmartASSInterfaceMode
+
+
+
+
+   .. enumerator:: orbital
+
+
+
+
+   .. enumerator:: surface
+
+
+
+
+   .. enumerator:: target
+
+
+
+
+   .. enumerator:: advanced
+
+
+
+
+   .. enumerator:: automatic
+
+      Internal mode, do not set.
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: SmartASSAutopilotMode
+
+
+
+
+   .. enumerator:: off
+
+      Switch off Smart A.S.S.
+
+
+   .. enumerator:: kill_rot
+
+      "Kill" the spacecraft's rotation (counters rotation/tumbling).
+
+
+   .. enumerator:: node
+
+      Point the vessel to a maneuver node.
+
+
+   .. enumerator:: advanced
+
+      Advanced mode.
+
+
+   .. enumerator:: automatic
+
+      Automatic mode (internal mode, only for getting status).
+
+
+   .. enumerator:: prograde
+
+      ORBIT: Orient to orbital prograde.
+
+
+   .. enumerator:: retrograde
+
+      ORBIT: Orient to orbital retrograde.
+
+
+   .. enumerator:: normal_plus
+
+      ORBIT: Orient to orbital normal (change inclination).
+
+
+   .. enumerator:: normal_minus
+
+      ORBIT: Orient to orbital anti-normal (change inclination).
+
+
+   .. enumerator:: radial_plus
+
+      ORBIT: Orient to radial outward (away from SOI).
+
+
+   .. enumerator:: radial_minus
+
+      ORBIT: Orient to radial inward (towards SOI).
+
+
+   .. enumerator:: surface_prograde
+
+      SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don't have fins or are otherwise instable.
+
+
+   .. enumerator:: surface_retrograde
+
+      SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.
+
+
+   .. enumerator:: horizontal_plus
+
+      SURFACE: Orient in the direction of horizontal movement relative to the ground.
+
+
+   .. enumerator:: horizontal_minus
+
+      SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.
+
+
+   .. enumerator:: surface
+
+      SURFACE: Orient the vessel in specific direction relative to surface.
+
+
+   .. enumerator:: vertical_plus
+
+      SURFACE: Orient "up", perpendicular to the surface.
+
+
+   .. enumerator:: target_plus
+
+      TARGET: Orient towards the target.
+
+
+   .. enumerator:: target_minus
+
+      TARGET: Orient away from the target.
+
+
+   .. enumerator:: relative_plus
+
+      TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.
+
+
+   .. enumerator:: relative_minus
+
+      TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.
+
+
+   .. enumerator:: parallel_plus
+
+      TARGET: Orient parallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.
+
+
+   .. enumerator:: parallel_minus
+
+      TARGET: Orient antiparallel to the target's orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: AttitudeReference
+
+
+
+
+   .. enumerator:: inertial
+
+      World coordinate system.
+
+
+   .. enumerator:: orbit
+
+      forward = prograde, left = normal plus, up = radial plus
+
+
+   .. enumerator:: orbit_horizontal
+
+      forward = surface projection of orbit velocity, up = surface normal
+
+
+   .. enumerator:: surface_north
+
+      forward = north, left = west, up = surface normal
+
+
+   .. enumerator:: surface_velocity
+
+      forward = surface frame vessel velocity, up = perpendicular component of surface normal
+
+
+   .. enumerator:: target
+
+      forward = toward target, up = perpendicular component of vessel heading
+
+
+   .. enumerator:: relative_velocity
+
+      forward = toward relative velocity direction, up = tbd
+
+
+   .. enumerator:: target_orientation
+
+      forward = direction target is facing, up = target up
+
+
+   .. enumerator:: maneuver_node
+
+      forward = next maneuver node direction, up = tbd
+
+
+   .. enumerator:: sun
+
+      forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit
+
+
+   .. enumerator:: surface_horizontal
+
+      forward = surface velocity horizontal component, up = surface normal
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: Direction
+
+
+
+
+   .. enumerator:: forward
+
+
+
+
+   .. enumerator:: back
+
+
+
+
+   .. enumerator:: up
+
+
+
+
+   .. enumerator:: down
+
+
+
+
+   .. enumerator:: right
+
+
+
+
+   .. enumerator:: left
