@@ -95,6 +95,18 @@ MechJeb.AscentPVG.PitchStartVelocity
 MechJeb.AscentPVG.PitchRate
 MechJeb.AscentPVG.OmitCoast
 
+MechJeb.AttitudeReference.Inertial
+MechJeb.AttitudeReference.Orbit
+MechJeb.AttitudeReference.OrbitHorizontal
+MechJeb.AttitudeReference.SurfaceNorth
+MechJeb.AttitudeReference.SurfaceVelocity
+MechJeb.AttitudeReference.Target
+MechJeb.AttitudeReference.RelativeVelocity
+MechJeb.AttitudeReference.TargetOrientation
+MechJeb.AttitudeReference.ManeuverNode
+MechJeb.AttitudeReference.Sun
+MechJeb.AttitudeReference.SurfaceHorizontal
+
 MechJeb.DeployableController.AllRetracted
 MechJeb.DeployableController.AutoDeploy
 MechJeb.DeployableController.ExtendAll
@@ -104,6 +116,13 @@ MechJeb.DifferentialThrottleStatus.AllEnginesOff
 MechJeb.DifferentialThrottleStatus.MoreEnginesRequired
 MechJeb.DifferentialThrottleStatus.SolverFailed
 MechJeb.DifferentialThrottleStatus.Success
+
+MechJeb.Direction.Forward
+MechJeb.Direction.Back
+MechJeb.Direction.Up
+MechJeb.Direction.Down
+MechJeb.Direction.Right
+MechJeb.Direction.Left
 
 MechJeb.DockingAutopilot.Enabled
 MechJeb.DockingAutopilot.Status
@@ -256,12 +275,6 @@ MechJeb.SmartASS.SurfaceVelRoll
 MechJeb.SmartASS.AdvancedReference
 MechJeb.SmartASS.AdvancedDirection
 
-MechJeb.SmartASSInterfaceMode.Orbital
-MechJeb.SmartASSInterfaceMode.Surface
-MechJeb.SmartASSInterfaceMode.Target
-MechJeb.SmartASSInterfaceMode.Advanced
-MechJeb.SmartASSInterfaceMode.Automatic
-
 MechJeb.SmartASSAutopilotMode.Off
 MechJeb.SmartASSAutopilotMode.KillRot
 MechJeb.SmartASSAutopilotMode.Node
@@ -286,24 +299,11 @@ MechJeb.SmartASSAutopilotMode.RelativeMinus
 MechJeb.SmartASSAutopilotMode.ParallelPlus
 MechJeb.SmartASSAutopilotMode.ParallelMinus
 
-MechJeb.AttitudeReference.Inertial
-MechJeb.AttitudeReference.Orbit
-MechJeb.AttitudeReference.OrbitHorizontal
-MechJeb.AttitudeReference.SurfaceNorth
-MechJeb.AttitudeReference.SurfaceVelocity
-MechJeb.AttitudeReference.Target
-MechJeb.AttitudeReference.RelativeVelocity
-MechJeb.AttitudeReference.TargetOrientation
-MechJeb.AttitudeReference.ManeuverNode
-MechJeb.AttitudeReference.Sun
-MechJeb.AttitudeReference.SurfaceHorizontal
-
-MechJeb.Direction.Forward
-MechJeb.Direction.Back
-MechJeb.Direction.Up
-MechJeb.Direction.Down
-MechJeb.Direction.Right
-MechJeb.Direction.Left
+MechJeb.SmartASSInterfaceMode.Orbital
+MechJeb.SmartASSInterfaceMode.Surface
+MechJeb.SmartASSInterfaceMode.Target
+MechJeb.SmartASSInterfaceMode.Advanced
+MechJeb.SmartASSInterfaceMode.Automatic
 
 MechJeb.SmartRCS.AutoDisableSmartRCS
 MechJeb.SmartRCS.Mode

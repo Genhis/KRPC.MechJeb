@@ -1,9 +1,11 @@
-# Contributing guidelines
+# Contribution guidelines
+
 Thank you for taking your time to contribute to this project!
 
 The following is a set of guidelines which you should read to make a great contribution. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 #### Table of contents
+
 - [Reporting issues](#reporting-issues)
 - [Creating pull requests](#creating-pull-requests)
   - [Fixing bugs](#fixing-bugs)
@@ -11,10 +13,12 @@ The following is a set of guidelines which you should read to make a great contr
 - [Coding conventions](#coding-conventions)
 
 ## Reporting issues
+
 If you encounter any problems with kRPC.MechJeb, please [open a new issue](https://github.com/Genhis/KRPC.MechJeb/issues/new/choose) and follow guidelines in the given template. Please make sure you have an up-to-date version of kRPC.MechJeb, older versions are not supported.
 
 ## Creating pull requests
-New features are developed in separate branches, and later merged to master and released. Please check if the feature you want to implement isn't already in one of the branchews, so that you wouldn't waste your time implementing it again.
+
+New features are developed in separate branches, and later merged to master and released. Please check if the feature you want to implement isn't already in one of the branches, so that you wouldn't waste your time implementing it again.
 
 Pull requests are merged with squashing or rebasing to keep commit history clean. It is therefore recommended to **create a new branch for each pull request** and not to use `master` branch. It is up to you how you name your new branch (e.g. `issue-4`, `smart-rcs`, etc.).
 
@@ -27,9 +31,11 @@ Sample changelog entry for PR #4:
 ```
 
 ### Fixing bugs
+
 When your pull request fixes a bug, **please attach a code snippet** (ideally in Python) which can reproduce the bug.
 
 ### Adding new features
+
 **All added or removed kRPC properties and methods must be reflected in `docs/order.txt` file.** Classes in this file are alphabetically ordered and separated with a blank line. Properties and methods in each class are ordered as they appear in MechJeb windows in the game.
 
 **For new MechJeb modules, please create a new `.tmpl`** (template, formatted as reStructuredText) file in `docs` directory named after the module class (e.g. for `SmartRCS` the name would be `smart-rcs.tmpl`) with the following content (it may need to be adjusted to your module):
@@ -50,6 +56,7 @@ SmartRCS
 Then, add your module to `index.tmpl` file to a suitable category.  Again, entries are alphabetically ordered.
 
 ## Coding conventions
+
 These coding conventions are used throughout the project. Please be consistent with existing code and use them in your pull requests.
 
 For your convenience, we created a `.editorconfig` file which takes care of the automatic formatting in Visual Studio. Here are some conventions enforced or suggested by the config file:
