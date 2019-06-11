@@ -30,6 +30,8 @@ Although all examples have been tested using **kRPC v0.4.8** and **MechJeb v2.8.
 
 All contributions to this mod are welcome. If you are interested in contributing, please read our [Contribution guidelines](https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md) and [Code of conduct](https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CODE_OF_CONDUCT.md).
 
+See [Working from source](https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md#working-from-source) for more details how to set up the project.
+
 ## TO-DO
 
 - Add logging statements for debugging

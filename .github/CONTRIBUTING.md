@@ -7,6 +7,7 @@ The following is a set of guidelines which you should read to make a great contr
 #### Table of contents
 
 - [Reporting issues](#reporting-issues)
+- [Working from source](#working-from-source)
 - [Creating pull requests](#creating-pull-requests)
   - [Fixing bugs](#fixing-bugs)
   - [Adding new features](#adding-new-features)
@@ -15,6 +16,12 @@ The following is a set of guidelines which you should read to make a great contr
 ## Reporting issues
 
 If you encounter any problems with kRPC.MechJeb, please [open a new issue](https://github.com/Genhis/KRPC.MechJeb/issues/new/choose) and follow guidelines in the given template. Please make sure you have an up-to-date version of kRPC.MechJeb, older versions are not supported.
+
+## Working from source
+
+Besides general Visual Studio setup, you need to create lib folder in the root project directory and copy there four DLLs:
+- **Assembly-CSharp.dll** and **UnityEngine.dll** (found in `Kerbal Space Program\KSP_x64_Data\Managed`)
+- **KRPC.dll** and **KRPC.SpaceCenter.dll** (found in kRPC distribution package or `Kerbal Space Program\GameData\kRPC` if you have the mod installed)
 
 ## Creating pull requests
 
