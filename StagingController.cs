@@ -33,12 +33,18 @@ namespace KRPC.MechJeb {
 			this.autostagingOnce = this.type.GetField("autostagingOnce");
 		}
 
+		/// <summary>
+		/// The autopilot will pause the actual staging before ? seconds for each stage.
+		/// </summary>
 		[KRPCProperty]
 		public double AutostagePreDelay {
 			get => EditableVariables.GetDouble(this.autostagePreDelay);
 			set => EditableVariables.SetDouble(this.autostagePreDelay, value);
 		}
 
+		/// <summary>
+		/// The autopilot will pause the actual staging after ? seconds for each stage.
+		/// </summary>
 		[KRPCProperty]
 		public double AutostagePostDelay {
 			get => EditableVariables.GetDouble(this.autostagePostDelay);
@@ -46,7 +52,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Stop at the selected stage.
+		/// Stop at the selected stage - staging will not occur beyond this stage number.
 		/// </summary>
 		[KRPCProperty]
 		public int AutostageLimit {

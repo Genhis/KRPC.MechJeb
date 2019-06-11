@@ -3,6 +3,9 @@ using System.Reflection;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
+	/// <summary>
+	/// The Landing Guidance module provides targeted and non-targeted landing autopilot.
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class LandingAutopilot : AutopilotModule {
 		private readonly object touchdownSpeed;

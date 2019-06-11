@@ -7,6 +7,9 @@ namespace KRPC.MechJeb {
 	/// <summary>
 	/// This module controls the Ascent Guidance in MechJeb 2.
 	/// </summary>
+	/// <remarks>
+	/// See <a href="https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues">MechJeb2 wiki</a> for more guidance on how to optimally set up this autopilot.
+	/// </remarks>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
 		private static FieldInfo desiredInclination;
@@ -124,7 +127,7 @@ namespace KRPC.MechJeb {
 		public AscentPVG AscentPathPVG { get; }
 
 		/// <summary>
-		/// The desired orbit altitude.
+		/// The desired altitude in kilometres for the final circular orbit.
 		/// </summary>
 		[KRPCProperty]
 		public double DesiredOrbitAltitude {
@@ -133,7 +136,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// The desired inclination.
+		/// The desired inclination in degrees for the final circular orbit.
 		/// </summary>
 		[KRPCProperty]
 		public double DesiredInclination {
@@ -142,12 +145,12 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(desiredInclination, this.guiInstance, value);
 		}
 
-		/// <remarks>Equivalend to <see cref="MechJeb.ThrustController" />.</remarks>
+		/// <remarks>Equivalent to <see cref="MechJeb.ThrustController" />.</remarks>
 		[KRPCProperty]
 		public ThrustController ThrustController => MechJeb.ThrustController;
 
 		/// <summary>
-		/// The state of corrective steering.
+		/// Will cause the craft to steer based on the more accurate velocity vector rather than positional vector (large craft may actually perform better with this box unchecked).
 		/// </summary>
 		[KRPCProperty]
 		public bool CorrectiveSteering {
@@ -222,7 +225,8 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Whether to enable autostaging. Paramethers can be set in <see cref="KRPC.MechJeb.StagingController" />.
+		/// The autopilot will automatically stage when the current stage has run out of fuel.
+		/// Paramethers can be set in <see cref="KRPC.MechJeb.StagingController" />.
 		/// </summary>
 		[KRPCProperty]
 		public bool Autostage {
@@ -246,6 +250,7 @@ namespace KRPC.MechJeb {
 		/// <summary>
 		/// The maximal angle of attack used by the autopilot.
 		/// </summary>
+		/// <remarks><see cref="LimitAoA" /> needs to be enabled</remarks>
 		[KRPCProperty]
 		public double MaxAoA {
 			get => EditableVariables.GetDouble(this.maxAoA);
@@ -255,6 +260,7 @@ namespace KRPC.MechJeb {
 		/// <summary>
 		/// The pressure value when AoA limit is automatically deactivated.
 		/// </summary>
+		/// <remarks><see cref="LimitAoA" /> needs to be enabled</remarks>
 		[KRPCProperty]
 		public double AoALimitFadeoutPressure {
 			get => EditableVariables.GetDouble(this.aoALimitFadeoutPressure);

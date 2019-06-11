@@ -47,7 +47,7 @@ namespace KRPC.MechJeb {
 			this.electricThrottleLo = this.type.GetField("electricThrottleLo").GetValue(this.instance);
 			this.electricThrottleHi = this.type.GetField("electricThrottleHi").GetValue(this.instance);
 		}
-
+		
 		[KRPCProperty]
 		public bool LimitDynamicPressure {
 			get => (bool)this.limitDynamicPressure.GetValue(this.instance);
@@ -55,7 +55,8 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Limit Q to this value in Pa.
+		/// Limit the maximal dynamic pressure in Pa.
+		/// This avoids that pieces break off during launch because of atmospheric pressure.
 		/// </summary>
 		/// <remarks><see cref="LimitDynamicPressure" /> needs to be enabled.</remarks>
 		[KRPCProperty]
@@ -64,12 +65,15 @@ namespace KRPC.MechJeb {
 			set => EditableVariables.SetDouble(this.maxDynamicPressure, value);
 		}
 
+		/// <summary>
+		/// Limits the throttle to prevent parts from overheating.
+		/// </summary>
 		[KRPCProperty]
 		public bool LimitToPreventOverheats {
 			get => (bool)this.limitToPreventOverheats.GetValue(this.instance);
 			set => this.limitToPreventOverheats.SetValue(this.instance, value);
 		}
-
+		
 		[KRPCProperty]
 		public bool LimitAcceleration {
 			get => (bool)this.limitAcceleration.GetValue(this.instance);
@@ -77,7 +81,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Limit acceleration to this value in m/s^2.
+		/// Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 		/// </summary>
 		/// <remarks><see cref="LimitAcceleration" /> needs to be enabled.</remarks>
 		[KRPCProperty]
@@ -85,7 +89,7 @@ namespace KRPC.MechJeb {
 			get => EditableVariables.GetDouble(this.maxAcceleration);
 			set => EditableVariables.SetDouble(this.maxAcceleration, value);
 		}
-
+		
 		[KRPCProperty]
 		public bool LimitThrottle {
 			get => (bool)this.limitThrottle.GetValue(this.instance);
@@ -93,7 +97,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Limit throttle to this value between 0 and 1.
+		/// Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 		/// </summary>
 		/// <remarks><see cref="LimitThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
@@ -109,7 +113,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Keep limited throttle over this value between 0 and 1.
+		/// Never go below the percentage of the throttle during ascent (value between 0 and 1).
 		/// </summary>
 		/// <remarks><see cref="LimiterMinThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]

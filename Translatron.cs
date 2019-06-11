@@ -54,7 +54,7 @@ namespace KRPC.MechJeb {
 		}
 
 		/// <summary>
-		/// Sets translatron mode
+		/// Current translatron mode.
 		/// </summary>
 		[KRPCProperty]
 		public TranslatronMode Mode {

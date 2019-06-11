@@ -9,6 +9,9 @@ namespace KRPC.MechJeb.Maneuver {
 			this.moonReturnAltitude = this.type.GetField("moonReturnAltitude").GetValue(this.instance);
 		}
 
+		/// <summary>
+		/// Approximate return altitude from a moon (from an orbiting body to the parent body).
+		/// </summary>
 		[KRPCProperty]
 		public double MoonReturnAltitude {
 			get => EditableVariables.GetDouble(this.moonReturnAltitude);

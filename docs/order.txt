@@ -260,13 +260,13 @@ MechJeb.SmartASSInterfaceMode.Orbital
 MechJeb.SmartASSInterfaceMode.Surface
 MechJeb.SmartASSInterfaceMode.Target
 MechJeb.SmartASSInterfaceMode.Advanced
-MechJeb.SmartASSInterfaceMode.Auto
+MechJeb.SmartASSInterfaceMode.Automatic
 
 MechJeb.SmartASSAutopilotMode.Off
 MechJeb.SmartASSAutopilotMode.KillRot
 MechJeb.SmartASSAutopilotMode.Node
 MechJeb.SmartASSAutopilotMode.Advanced
-MechJeb.SmartASSAutopilotMode.Auto
+MechJeb.SmartASSAutopilotMode.Automatic
 MechJeb.SmartASSAutopilotMode.Prograde
 MechJeb.SmartASSAutopilotMode.Retrograde
 MechJeb.SmartASSAutopilotMode.NormalPlus
