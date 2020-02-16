@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -6,7 +7,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object newPeA;
 
 		public OperationPeriapsis() : base("OperationPeriapsis") {
-			this.newPeA = this.type.GetField("newPeA").GetValue(this.instance);
+			this.newPeA = this.type.GetCheckedField("newPeA").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

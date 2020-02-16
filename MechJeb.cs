@@ -23,7 +23,7 @@ namespace KRPC.MechJeb {
 				switch(t.FullName) {
 					case "MuMech.MechJebCore":
 						type = t;
-						getComputerModule = t.GetMethod("GetComputerModule", new Type[] { typeof(string) });
+						getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
 						break;
 					default:
 						bool unused = AscentAutopilot.InitTypes(t) || ComputerModule.InitTypes(t) || EditableVariables.InitTypes(t) || Operation.InitTypes(t) || TimeSelector.InitTypes(t) || VesselExtensions.InitTypes(t);

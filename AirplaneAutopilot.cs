@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -38,37 +39,37 @@ namespace KRPC.MechJeb {
 		private readonly object yawLimit;
 
 		public AirplaneAutopilot() : base("AirplaneAutopilot") {
-			this.headingHoldEnabled = this.type.GetField("HeadingHoldEnabled");
-			this.altitudeHoldEnabled = this.type.GetField("AltitudeHoldEnabled");
-			this.vertSpeedHoldEnabled = this.type.GetField("VertSpeedHoldEnabled");
-			this.rollHoldEnabled = this.type.GetField("RollHoldEnabled");
-			this.speedHoldEnabled = this.type.GetField("SpeedHoldEnabled");
+			this.headingHoldEnabled = this.type.GetCheckedField("HeadingHoldEnabled");
+			this.altitudeHoldEnabled = this.type.GetCheckedField("AltitudeHoldEnabled");
+			this.vertSpeedHoldEnabled = this.type.GetCheckedField("VertSpeedHoldEnabled");
+			this.rollHoldEnabled = this.type.GetCheckedField("RollHoldEnabled");
+			this.speedHoldEnabled = this.type.GetCheckedField("SpeedHoldEnabled");
 
-			this.altitudeTarget = this.type.GetField("AltitudeTarget");
-			this.headingTarget = this.type.GetField("HeadingTarget");
-			this.rollTarget = this.type.GetField("RollTarget");
-			this.speedTarget = this.type.GetField("SpeedTarget");
-			this.vertSpeedTarget = this.type.GetField("VertSpeedTarget");
-			this.vertSpeedMax = this.type.GetField("VertSpeedMax");
-			this.rollMax = this.type.GetField("RollMax");
+			this.altitudeTarget = this.type.GetCheckedField("AltitudeTarget");
+			this.headingTarget = this.type.GetCheckedField("HeadingTarget");
+			this.rollTarget = this.type.GetCheckedField("RollTarget");
+			this.speedTarget = this.type.GetCheckedField("SpeedTarget");
+			this.vertSpeedTarget = this.type.GetCheckedField("VertSpeedTarget");
+			this.vertSpeedMax = this.type.GetCheckedField("VertSpeedMax");
+			this.rollMax = this.type.GetCheckedField("RollMax");
 
-			this.accKp = this.type.GetField("AccKp").GetValue(this.instance);
-			this.accKi = this.type.GetField("AccKi").GetValue(this.instance);
-			this.accKd = this.type.GetField("AccKd").GetValue(this.instance);
+			this.accKp = this.type.GetCheckedField("AccKp").GetValue(this.instance);
+			this.accKi = this.type.GetCheckedField("AccKi").GetValue(this.instance);
+			this.accKd = this.type.GetCheckedField("AccKd").GetValue(this.instance);
 
-			this.verKp = this.type.GetField("VerKp").GetValue(this.instance);
-			this.verKi = this.type.GetField("VerKi").GetValue(this.instance);
-			this.verKd = this.type.GetField("VerKd").GetValue(this.instance);
+			this.verKp = this.type.GetCheckedField("VerKp").GetValue(this.instance);
+			this.verKi = this.type.GetCheckedField("VerKi").GetValue(this.instance);
+			this.verKd = this.type.GetCheckedField("VerKd").GetValue(this.instance);
 
-			this.rolKp = this.type.GetField("RolKp").GetValue(this.instance);
-			this.rolKi = this.type.GetField("RolKi").GetValue(this.instance);
-			this.rolKd = this.type.GetField("RolKd").GetValue(this.instance);
+			this.rolKp = this.type.GetCheckedField("RolKp").GetValue(this.instance);
+			this.rolKi = this.type.GetCheckedField("RolKi").GetValue(this.instance);
+			this.rolKd = this.type.GetCheckedField("RolKd").GetValue(this.instance);
 
-			this.yawKp = this.type.GetField("YawKp").GetValue(this.instance);
-			this.yawKi = this.type.GetField("YawKi").GetValue(this.instance);
-			this.yawKd = this.type.GetField("YawKd").GetValue(this.instance);
+			this.yawKp = this.type.GetCheckedField("YawKp").GetValue(this.instance);
+			this.yawKi = this.type.GetCheckedField("YawKi").GetValue(this.instance);
+			this.yawKd = this.type.GetCheckedField("YawKd").GetValue(this.instance);
 
-			this.yawLimit = this.type.GetField("YawLimit").GetValue(this.instance);
+			this.yawLimit = this.type.GetCheckedField("YawLimit").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

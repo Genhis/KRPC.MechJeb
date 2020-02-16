@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -10,9 +11,9 @@ namespace KRPC.MechJeb {
 		private readonly FieldInfo status;
 
 		public RendezvousAutopilot() : base("RendezvousAutopilot") {
-			this.desiredDistance = this.type.GetField("desiredDistance").GetValue(this.instance);
-			this.maxPhasingOrbits = this.type.GetField("maxPhasingOrbits").GetValue(this.instance);
-			this.status = this.type.GetField("status");
+			this.desiredDistance = this.type.GetCheckedField("desiredDistance").GetValue(this.instance);
+			this.maxPhasingOrbits = this.type.GetCheckedField("maxPhasingOrbits").GetValue(this.instance);
+			this.status = this.type.GetCheckedField("status");
 		}
 
 		[KRPCProperty]

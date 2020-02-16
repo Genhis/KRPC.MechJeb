@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.MechJeb.Util;
 using KRPC.Service.Attributes;
 
@@ -30,25 +31,25 @@ namespace KRPC.MechJeb {
 		private readonly MethodInfo engage;
 
 		public SmartASS() : base("SmartASS") {
-			this.mode = this.type.GetField("mode");
-			this.target = this.type.GetField("target");
+			this.mode = this.type.GetCheckedField("mode");
+			this.target = this.type.GetCheckedField("target");
 
-			this.forceRol = this.type.GetField("forceRol");
-			this.forcePitch = this.type.GetField("forcePitch");
-			this.forceYaw = this.type.GetField("forceYaw");
+			this.forceRol = this.type.GetCheckedField("forceRol");
+			this.forcePitch = this.type.GetCheckedField("forcePitch");
+			this.forceYaw = this.type.GetCheckedField("forceYaw");
 
-			this.srfHdg = this.type.GetField("srfHdg");
-			this.srfPit = this.type.GetField("srfPit");
-			this.srfRol = this.type.GetField("srfRol");
+			this.srfHdg = this.type.GetCheckedField("srfHdg");
+			this.srfPit = this.type.GetCheckedField("srfPit");
+			this.srfRol = this.type.GetCheckedField("srfRol");
 
-			this.srfVelYaw = this.type.GetField("srfVelYaw");
-			this.srfVelPit = this.type.GetField("srfVelPit");
-			this.srfVelRol = this.type.GetField("srfVelRol");
+			this.srfVelYaw = this.type.GetCheckedField("srfVelYaw");
+			this.srfVelPit = this.type.GetCheckedField("srfVelPit");
+			this.srfVelRol = this.type.GetCheckedField("srfVelRol");
 
-			this.advReference = this.type.GetField("advReference");
-			this.advDirection = this.type.GetField("advDirection");
+			this.advReference = this.type.GetCheckedField("advReference");
+			this.advDirection = this.type.GetCheckedField("advDirection");
 
-			this.engage = this.type.GetMethod("Engage");
+			this.engage = this.type.GetCheckedMethod("Engage");
 		}
 
 		/// <summary>

@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -17,11 +18,11 @@ namespace KRPC.MechJeb {
 		private readonly object holdAPTime;
 
 		public AscentGT() : base("AscentGT") {
-			this.turnStartAltitude = this.type.GetField("turnStartAltitude").GetValue(this.instance);
-			this.turnStartVelocity = this.type.GetField("turnStartVelocity").GetValue(this.instance);
-			this.turnStartPitch = this.type.GetField("turnStartPitch").GetValue(this.instance);
-			this.intermediateAltitude = this.type.GetField("intermediateAltitude").GetValue(this.instance);
-			this.holdAPTime = this.type.GetField("holdAPTime").GetValue(this.instance);
+			this.turnStartAltitude = this.type.GetCheckedField("turnStartAltitude").GetValue(this.instance);
+			this.turnStartVelocity = this.type.GetCheckedField("turnStartVelocity").GetValue(this.instance);
+			this.turnStartPitch = this.type.GetCheckedField("turnStartPitch").GetValue(this.instance);
+			this.intermediateAltitude = this.type.GetCheckedField("intermediateAltitude").GetValue(this.instance);
+			this.holdAPTime = this.type.GetCheckedField("holdAPTime").GetValue(this.instance);
 		}
 
 		/// <summary>

@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -7,8 +8,8 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object interceptDistance;
 
 		public OperationCourseCorrection() : base("OperationCourseCorrection") {
-			this.courseCorrectFinalPeA = this.type.GetField("courseCorrectFinalPeA").GetValue(this.instance);
-			this.interceptDistance = this.type.GetField("interceptDistance").GetValue(this.instance);
+			this.courseCorrectFinalPeA = this.type.GetCheckedField("courseCorrectFinalPeA").GetValue(this.instance);
+			this.interceptDistance = this.type.GetCheckedField("interceptDistance").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

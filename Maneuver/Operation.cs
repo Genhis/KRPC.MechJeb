@@ -76,12 +76,12 @@ namespace KRPC.MechJeb.Maneuver {
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
 				case "MuMech.ManeuverParameters":
-					ManeuverParameters.dV = t.GetField("dV");
-					ManeuverParameters.uT = t.GetField("UT");
+					ManeuverParameters.dV = t.GetCheckedField("dV");
+					ManeuverParameters.uT = t.GetCheckedField("UT");
 					return true;
 				case "MuMech.Operation":
-					errorMessage = t.GetMethod("getErrorMessage");
-					makeNodeImpl = t.GetMethod("MakeNodeImpl");
+					errorMessage = t.GetCheckedMethod("getErrorMessage");
+					makeNodeImpl = t.GetCheckedMethod("MakeNodeImpl");
 					return true;
 				case "MuMech.OperationException":
 					operationException = t;
@@ -94,7 +94,7 @@ namespace KRPC.MechJeb.Maneuver {
 		internal static bool InitInstance(Type t) {
 			switch(t.FullName) {
 				case "MuMech.MechJebModuleManeuverPlanner":
-					operations = (object[])t.GetField("operation", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(MechJeb.GetComputerModule("ManeuverPlanner"));
+					operations = (object[])t.GetCheckedField("operation", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(MechJeb.GetComputerModule("ManeuverPlanner"));
 					return true;
 				default:
 					return false;
@@ -109,7 +109,7 @@ namespace KRPC.MechJeb.Maneuver {
 
 	public abstract class TimedOperation : Operation {
 		public TimedOperation(string operationName) : base(operationName) {
-			this.TimeSelector = new TimeSelector(this.type.GetField("timeSelector", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this.instance));
+			this.TimeSelector = new TimeSelector(this.type.GetCheckedField("timeSelector", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this.instance));
 		}
 
 		[KRPCProperty]

@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -12,11 +13,11 @@ namespace KRPC.MechJeb {
 		private readonly MethodInfo allRetracted;
 
 		public DeployableController(string moduleType) : base(moduleType) {
-			this.autoDeploy = this.type.GetField("autoDeploy");
+			this.autoDeploy = this.type.GetCheckedField("autoDeploy");
 
-			this.extendAll = this.type.GetMethod("ExtendAll");
-			this.retractAll = this.type.GetMethod("RetractAll");
-			this.allRetracted = this.type.GetMethod("AllRetracted");
+			this.extendAll = this.type.GetCheckedMethod("ExtendAll");
+			this.retractAll = this.type.GetCheckedMethod("RetractAll");
+			this.allRetracted = this.type.GetCheckedMethod("AllRetracted");
 		}
 
 		[KRPCProperty]

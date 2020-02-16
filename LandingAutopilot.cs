@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -20,15 +21,15 @@ namespace KRPC.MechJeb {
 		private readonly MethodInfo stopLanding;
 
 		public LandingAutopilot() : base("LandingAutopilot") {
-			this.touchdownSpeed = this.type.GetField("touchdownSpeed").GetValue(this.instance);
-			this.deployGears = this.type.GetField("deployGears");
-			this.limitGearsStage = this.type.GetField("limitGearsStage").GetValue(this.instance);
-			this.deployChutes = this.type.GetField("deployChutes");
-			this.limitChutesStage = this.type.GetField("limitChutesStage").GetValue(this.instance);
-			this.rcsAdjustment = this.type.GetField("rcsAdjustment");
+			this.touchdownSpeed = this.type.GetCheckedField("touchdownSpeed").GetValue(this.instance);
+			this.deployGears = this.type.GetCheckedField("deployGears");
+			this.limitGearsStage = this.type.GetCheckedField("limitGearsStage").GetValue(this.instance);
+			this.deployChutes = this.type.GetCheckedField("deployChutes");
+			this.limitChutesStage = this.type.GetCheckedField("limitChutesStage").GetValue(this.instance);
+			this.rcsAdjustment = this.type.GetCheckedField("rcsAdjustment");
 
-			this.landAtPositionTarget = this.type.GetMethod("LandAtPositionTarget");
-			this.landUntargeted = this.type.GetMethod("LandUntargeted");
+			this.landAtPositionTarget = this.type.GetCheckedMethod("LandAtPositionTarget");
+			this.landUntargeted = this.type.GetCheckedMethod("LandUntargeted");
 			this.stopLanding = this.type.GetMethod("StopLanding");
 		}
 

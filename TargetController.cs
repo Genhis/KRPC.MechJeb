@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 using KRPC.SpaceCenter.ExtensionMethods;
 
@@ -30,24 +31,24 @@ namespace KRPC.MechJeb {
 		private readonly PropertyInfo dockingAxis;
 
 		public TargetController() : base("TargetController") {
-			this.setPositionTarget = this.type.GetMethod("SetPositionTarget");
-			this.getPositionTargetString = this.type.GetMethod("GetPositionTargetString");
-			this.getPositionTargetPosition = this.type.GetMethod("GetPositionTargetPosition");
-			this.setDirectionTarget = this.type.GetMethod("SetDirectionTarget");
-			this.pickPositionTargetOnMap = this.type.GetMethod("PickPositionTargetOnMap");
-			this.updateDirectionTarget = this.type.GetMethod("UpdateDirectionTarget");
+			this.setPositionTarget = this.type.GetCheckedMethod("SetPositionTarget");
+			this.getPositionTargetString = this.type.GetCheckedMethod("GetPositionTargetString");
+			this.getPositionTargetPosition = this.type.GetCheckedMethod("GetPositionTargetPosition");
+			this.setDirectionTarget = this.type.GetCheckedMethod("SetDirectionTarget");
+			this.pickPositionTargetOnMap = this.type.GetCheckedMethod("PickPositionTargetOnMap");
+			this.updateDirectionTarget = this.type.GetCheckedMethod("UpdateDirectionTarget");
 
-			this.normalTargetExists = this.type.GetProperty("NormalTargetExists");
-			this.positionTargetExists = this.type.GetProperty("PositionTargetExists");
-			this.canAlign = this.type.GetProperty("CanAlign");
+			this.normalTargetExists = this.type.GetCheckedProperty("NormalTargetExists");
+			this.positionTargetExists = this.type.GetCheckedProperty("PositionTargetExists");
+			this.canAlign = this.type.GetCheckedProperty("CanAlign");
 			//this.target = this.type.GetProperty("Target");
-			this.targetOrbit = this.type.GetProperty("TargetOrbit");
-			this.position = this.type.GetProperty("Position");
-			this.distance = this.type.GetProperty("Distance");
-			this.relativeVelocity = this.type.GetProperty("RelativeVelocity");
-			this.relativePosition = this.type.GetProperty("RelativePosition");
+			this.targetOrbit = this.type.GetCheckedProperty("TargetOrbit");
+			this.position = this.type.GetCheckedProperty("Position");
+			this.distance = this.type.GetCheckedProperty("Distance");
+			this.relativeVelocity = this.type.GetCheckedProperty("RelativeVelocity");
+			this.relativePosition = this.type.GetCheckedProperty("RelativePosition");
 			//this.transform = this.type.GetProperty("Transform");
-			this.dockingAxis = this.type.GetProperty("DockingAxis");
+			this.dockingAxis = this.type.GetCheckedProperty("DockingAxis");
 		}
 
 		[KRPCMethod]

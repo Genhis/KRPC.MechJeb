@@ -19,5 +19,38 @@ namespace KRPC.MechJeb.ExtensionMethods {
 				throw new MJServiceException(ex.ToString());
 			}
 		}
+
+		public static FieldInfo GetCheckedField(this Type type, string name) {
+			return type.GetField(name).CheckIfExists(type, name);
+		}
+
+		public static FieldInfo GetCheckedField(this Type type, string name, BindingFlags bindingAttr) {
+			return type.GetField(name, bindingAttr).CheckIfExists(type, name);
+		}
+
+		public static PropertyInfo GetCheckedProperty(this Type type, string name) {
+			return type.GetProperty(name).CheckIfExists(type, name);
+		}
+
+		public static MethodInfo GetCheckedMethod(this Type type, string name) {
+			return type.GetMethod(name).CheckIfExists(type, name + "()");
+		}
+
+		public static MethodInfo GetCheckedMethod(this Type type, string name, Type[] types) {
+			return type.GetMethod(name, types).CheckIfExists(type, name + "()");
+		}
+
+		public static MethodInfo GetCheckedMethod(this Type type, string name, BindingFlags bindingAttr) {
+			return type.GetMethod(name, bindingAttr).CheckIfExists(type, name + "()");
+		}
+
+		private static T CheckIfExists<T>(this T obj, Type type, string name) {
+			if(obj == null)
+				Logger.Severe(type + "." + name + " not found");
+			else
+				Logger.Info(type + "." + name + " found");
+
+			return obj;
+		}
 	}
 }

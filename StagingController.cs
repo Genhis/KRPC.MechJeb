@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -19,18 +20,18 @@ namespace KRPC.MechJeb {
 		private readonly FieldInfo autostagingOnce;
 
 		public StagingController() : base("StagingController") {
-			this.autostagePreDelay = this.type.GetField("autostagePreDelay").GetValue(this.instance);
-			this.autostagePostDelay = this.type.GetField("autostagePostDelay").GetValue(this.instance);
-			this.autostageLimit = this.type.GetField("autostageLimit").GetValue(this.instance);
-			this.fairingMaxDynamicPressure = this.type.GetField("fairingMaxDynamicPressure").GetValue(this.instance);
-			this.fairingMinAltitude = this.type.GetField("fairingMinAltitude").GetValue(this.instance);
-			this.clampAutoStageThrustPct = this.type.GetField("clampAutoStageThrustPct").GetValue(this.instance);
-			this.fairingMaxAerothermalFlux = this.type.GetField("fairingMaxAerothermalFlux").GetValue(this.instance);
+			this.autostagePreDelay = this.type.GetCheckedField("autostagePreDelay").GetValue(this.instance);
+			this.autostagePostDelay = this.type.GetCheckedField("autostagePostDelay").GetValue(this.instance);
+			this.autostageLimit = this.type.GetCheckedField("autostageLimit").GetValue(this.instance);
+			this.fairingMaxDynamicPressure = this.type.GetCheckedField("fairingMaxDynamicPressure").GetValue(this.instance);
+			this.fairingMinAltitude = this.type.GetCheckedField("fairingMinAltitude").GetValue(this.instance);
+			this.clampAutoStageThrustPct = this.type.GetCheckedField("clampAutoStageThrustPct").GetValue(this.instance);
+			this.fairingMaxAerothermalFlux = this.type.GetCheckedField("fairingMaxAerothermalFlux").GetValue(this.instance);
 
-			this.hotStaging = this.type.GetField("hotStaging");
-			this.hotStagingLeadTime = this.type.GetField("hotStagingLeadTime").GetValue(this.instance);
+			this.hotStaging = this.type.GetCheckedField("hotStaging");
+			this.hotStagingLeadTime = this.type.GetCheckedField("hotStagingLeadTime").GetValue(this.instance);
 
-			this.autostagingOnce = this.type.GetField("autostagingOnce");
+			this.autostagingOnce = this.type.GetCheckedField("autostagingOnce");
 		}
 
 		/// <summary>

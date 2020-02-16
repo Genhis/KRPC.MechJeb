@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -6,7 +7,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object newSMA;
 
 		public OperationSemiMajor() : base("OperationSemiMajor") {
-			this.newSMA = this.type.GetField("newSMA").GetValue(this.instance);
+			this.newSMA = this.type.GetCheckedField("newSMA").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

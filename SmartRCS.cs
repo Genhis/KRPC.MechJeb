@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -11,10 +12,10 @@ namespace KRPC.MechJeb {
 		private readonly MethodInfo engage;
 
 		public SmartRCS() : base("SmartRcs") {
-			this.target = this.type.GetField("target");
-			this.autoDisableSmartRCS = this.type.GetField("autoDisableSmartRCS");
+			this.target = this.type.GetCheckedField("target");
+			this.autoDisableSmartRCS = this.type.GetCheckedField("autoDisableSmartRCS");
 
-			this.engage = this.type.GetMethod("Engage");
+			this.engage = this.type.GetCheckedMethod("Engage");
 		}
 
 		[KRPCProperty]

@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -11,8 +12,8 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object resonanceDenominator;
 
 		public OperationResonantOrbit() : base("OperationResonantOrbit") {
-			this.resonanceNumerator = this.type.GetField("resonanceNumerator").GetValue(this.instance);
-			this.resonanceDenominator = this.type.GetField("resonanceDenominator").GetValue(this.instance);
+			this.resonanceNumerator = this.type.GetCheckedField("resonanceNumerator").GetValue(this.instance);
+			this.resonanceDenominator = this.type.GetCheckedField("resonanceDenominator").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

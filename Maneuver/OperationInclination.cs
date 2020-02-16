@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -6,7 +7,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object newInc;
 
 		public OperationInclination() : base("OperationInclination") {
-			this.newInc = this.type.GetField("newInc").GetValue(this.instance);
+			this.newInc = this.type.GetCheckedField("newInc").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

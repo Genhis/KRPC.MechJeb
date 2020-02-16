@@ -10,9 +10,9 @@ namespace KRPC.MechJeb.ExtensionMethods {
 		public static bool InitTypes(Type t) {
 			switch(t.FullName) {
 				case "MuMech.VesselExtensions":
-					getMasterMechJeb = t.GetMethod("GetMasterMechJeb", BindingFlags.Public | BindingFlags.Static);
-					placeManeuverNode = t.GetMethod("PlaceManeuverNode", BindingFlags.Public | BindingFlags.Static);
-					removeAllManeuverNodes = t.GetMethod("RemoveAllManeuverNodes", BindingFlags.Public | BindingFlags.Static);
+					getMasterMechJeb = t.GetCheckedMethod("GetMasterMechJeb", BindingFlags.Public | BindingFlags.Static);
+					placeManeuverNode = t.GetCheckedMethod("PlaceManeuverNode", BindingFlags.Public | BindingFlags.Static);
+					removeAllManeuverNodes = t.GetCheckedMethod("RemoveAllManeuverNodes", BindingFlags.Public | BindingFlags.Static);
 					return true;
 				default:
 					return false;

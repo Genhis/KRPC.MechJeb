@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -33,10 +34,10 @@ namespace KRPC.MechJeb.Maneuver {
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
 				case "MuMech.TimeSelector":
-					allowedTimeRefField = t.GetField("allowedTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
-					currentTimeRef = t.GetField("currentTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
-					leadTimeField = t.GetField("leadTime");
-					circularizeAltitudeField = t.GetField("circularizeAltitude");
+					allowedTimeRefField = t.GetCheckedField("allowedTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
+					currentTimeRef = t.GetCheckedField("currentTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
+					leadTimeField = t.GetCheckedField("leadTime");
+					circularizeAltitudeField = t.GetCheckedField("circularizeAltitude");
 					return true;
 				default:
 					return false;

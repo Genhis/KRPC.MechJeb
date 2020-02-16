@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -21,17 +22,17 @@ namespace KRPC.MechJeb {
 		private readonly PropertyInfo autoTurnEndAltitude;
 
 		public AscentClassic() : base("AscentClassic") {
-			this.turnStartAltitude = this.type.GetField("turnStartAltitude").GetValue(this.instance);
-			this.turnStartVelocity = this.type.GetField("turnStartVelocity").GetValue(this.instance);
-			this.turnEndAltitude = this.type.GetField("turnEndAltitude").GetValue(this.instance);
-			this.turnEndAngle = this.type.GetField("turnEndAngle").GetValue(this.instance);
-			this.turnShapeExponent = this.type.GetField("turnShapeExponent").GetValue(this.instance);
-			this.autoPath = this.type.GetField("autoPath");
-			this.autoPathPerc = this.type.GetField("autoPathPerc");
-			this.autoPathSpdFactor = this.type.GetField("autoPathSpdFactor");
-			this.autoTurnStartAltitude = this.type.GetProperty("autoTurnStartAltitude");
-			this.autoTurnStartVelocity = this.type.GetProperty("autoTurnStartVelocity");
-			this.autoTurnEndAltitude = this.type.GetProperty("autoTurnEndAltitude");
+			this.turnStartAltitude = this.type.GetCheckedField("turnStartAltitude").GetValue(this.instance);
+			this.turnStartVelocity = this.type.GetCheckedField("turnStartVelocity").GetValue(this.instance);
+			this.turnEndAltitude = this.type.GetCheckedField("turnEndAltitude").GetValue(this.instance);
+			this.turnEndAngle = this.type.GetCheckedField("turnEndAngle").GetValue(this.instance);
+			this.turnShapeExponent = this.type.GetCheckedField("turnShapeExponent").GetValue(this.instance);
+			this.autoPath = this.type.GetCheckedField("autoPath");
+			this.autoPathPerc = this.type.GetCheckedField("autoPathPerc");
+			this.autoPathSpdFactor = this.type.GetCheckedField("autoPathSpdFactor");
+			this.autoTurnStartAltitude = this.type.GetCheckedProperty("autoTurnStartAltitude");
+			this.autoTurnStartVelocity = this.type.GetCheckedProperty("autoTurnStartVelocity");
+			this.autoTurnEndAltitude = this.type.GetCheckedProperty("autoTurnEndAltitude");
 		}
 
 		/// <summary>

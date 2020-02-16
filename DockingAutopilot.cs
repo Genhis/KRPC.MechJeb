@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -18,16 +19,16 @@ namespace KRPC.MechJeb {
 		private readonly FieldInfo targetSize;
 
 		public DockingAutopilot() : base("DockingAutopilot") {
-			this.status = this.type.GetField("status");
-			this.speedLimit = this.type.GetField("speedLimit").GetValue(this.instance);
-			this.forceRoll = this.type.GetField("forceRol");
-			this.roll = this.type.GetField("rol").GetValue(this.instance);
-			this.overrideSafeDistance = this.type.GetField("overrideSafeDistance");
-			this.overridenSafeDistance = this.type.GetField("overridenSafeDistance").GetValue(this.instance);
-			this.overrideTargetSize = this.type.GetField("overrideTargetSize");
-			this.overridenTargetSize = this.type.GetField("overridenTargetSize").GetValue(this.instance);
-			this.safeDistance = this.type.GetField("safeDistance");
-			this.targetSize = this.type.GetField("targetSize");
+			this.status = this.type.GetCheckedField("status");
+			this.speedLimit = this.type.GetCheckedField("speedLimit").GetValue(this.instance);
+			this.forceRoll = this.type.GetCheckedField("forceRol");
+			this.roll = this.type.GetCheckedField("rol").GetValue(this.instance);
+			this.overrideSafeDistance = this.type.GetCheckedField("overrideSafeDistance");
+			this.overridenSafeDistance = this.type.GetCheckedField("overridenSafeDistance").GetValue(this.instance);
+			this.overrideTargetSize = this.type.GetCheckedField("overrideTargetSize");
+			this.overridenTargetSize = this.type.GetCheckedField("overridenTargetSize").GetValue(this.instance);
+			this.safeDistance = this.type.GetCheckedField("safeDistance");
+			this.targetSize = this.type.GetCheckedField("targetSize");
 		}
 
 		[KRPCProperty]

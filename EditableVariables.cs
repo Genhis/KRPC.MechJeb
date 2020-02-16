@@ -1,6 +1,8 @@
 using System;
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
+
 namespace KRPC.MechJeb {
 	public static class EditableVariables {
 		private static PropertyInfo editableDoubleVal;
@@ -16,11 +18,11 @@ namespace KRPC.MechJeb {
 					EditableAngle.negative = t.GetField("negative");
 					return true;*/
 				case "MuMech.EditableDoubleMult":
-					editableDoubleVal = t.GetProperty("val");
+					editableDoubleVal = t.GetCheckedProperty("val");
 					return true;
 				case "MuMech.EditableInt":
-					editableIntVal = t.GetField("val");
-					editableIntText = t.GetField("_text");
+					editableIntVal = t.GetCheckedField("val");
+					editableIntText = t.GetCheckedField("_text");
 					return true;
 				default:
 					return false;

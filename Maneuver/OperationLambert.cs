@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -6,7 +7,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object interceptInterval;
 
 		public OperationLambert() : base("OperationLambert") {
-			this.interceptInterval = this.type.GetField("interceptInterval").GetValue(this.instance);
+			this.interceptInterval = this.type.GetCheckedField("interceptInterval").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

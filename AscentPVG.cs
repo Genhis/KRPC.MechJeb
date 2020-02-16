@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -14,10 +15,10 @@ namespace KRPC.MechJeb {
 		private readonly FieldInfo omitCoast;
 
 		public AscentPVG() : base("AscentPVG") {
-			this.pitchStartVelocity = this.type.GetField("pitchStartVelocity").GetValue(this.instance);
-			this.pitchRate = this.type.GetField("pitchRate").GetValue(this.instance);
-			this.desiredApoapsis = this.type.GetField("desiredApoapsis").GetValue(this.instance);
-			this.omitCoast = this.type.GetField("omitCoast");
+			this.pitchStartVelocity = this.type.GetCheckedField("pitchStartVelocity").GetValue(this.instance);
+			this.pitchRate = this.type.GetCheckedField("pitchRate").GetValue(this.instance);
+			this.desiredApoapsis = this.type.GetCheckedField("desiredApoapsis").GetValue(this.instance);
+			this.omitCoast = this.type.GetCheckedField("omitCoast");
 		}
 
 		[KRPCProperty]

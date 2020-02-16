@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -22,14 +23,14 @@ namespace KRPC.MechJeb {
 			this.thrustInstance = MechJeb.ThrustController.instance;
 			var thrustType = MechJeb.ThrustController.type;
 
-			this.tMode = thrustType.GetField("tmode");
-			this.transSpdAct = thrustType.GetField("trans_spd_act");
-			this.transKillH = thrustType.GetField("trans_kill_h");
+			this.tMode = thrustType.GetCheckedField("tmode");
+			this.transSpdAct = thrustType.GetCheckedField("trans_spd_act");
+			this.transKillH = thrustType.GetCheckedField("trans_kill_h");
 
-			this.transSpd = this.type.GetField("trans_spd");
+			this.transSpd = this.type.GetCheckedField("trans_spd");
 
-			this.setMode = this.type.GetMethod("SetMode");
-			this.panicSwitch = this.type.GetMethod("PanicSwitch");
+			this.setMode = this.type.GetCheckedMethod("SetMode");
+			this.panicSwitch = this.type.GetCheckedMethod("PanicSwitch");
 		}
 
 		/// <summary>

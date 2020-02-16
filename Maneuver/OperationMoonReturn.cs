@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -6,7 +7,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object moonReturnAltitude;
 
 		public OperationMoonReturn() : base("OperationMoonReturn") {
-			this.moonReturnAltitude = this.type.GetField("moonReturnAltitude").GetValue(this.instance);
+			this.moonReturnAltitude = this.type.GetCheckedField("moonReturnAltitude").GetValue(this.instance);
 		}
 
 		/// <summary>

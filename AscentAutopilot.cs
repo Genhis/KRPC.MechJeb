@@ -44,27 +44,27 @@ namespace KRPC.MechJeb {
 		public AscentAutopilot() : base("AscentAutopilot") {
 			this.guiInstance = MechJeb.GetComputerModule("AscentGuidance");
 
-			this.status = this.type.GetField("status");
-			this.ascentPathIdx = this.type.GetProperty("ascentPathIdxPublic");
-			this.desiredOrbitAltitude = this.type.GetField("desiredOrbitAltitude").GetValue(this.instance);
-			this.autoThrottle = this.type.GetField("autoThrottle");
-			this.correctiveSteering = this.type.GetField("correctiveSteering");
-			this.correctiveSteeringGain = this.type.GetField("correctiveSteeringGain").GetValue(this.instance);
-			this.forceRoll = this.type.GetField("forceRoll");
-			this.verticalRoll = this.type.GetField("verticalRoll").GetValue(this.instance);
-			this.turnRoll = this.type.GetField("turnRoll").GetValue(this.instance);
-			this.autodeploySolarPanels = this.type.GetField("autodeploySolarPanels");
-			this.autoDeployAntennas = this.type.GetField("autoDeployAntennas");
-			this.skipCircularization = this.type.GetField("skipCircularization");
-			this.autostage = this.type.GetProperty("autostage");
-			this.limitAoA = this.type.GetField("limitAoA");
-			this.maxAoA = this.type.GetField("maxAoA").GetValue(this.instance);
-			this.aoALimitFadeoutPressure = this.type.GetField("aoALimitFadeoutPressure").GetValue(this.instance);
-			this.launchPhaseAngle = this.type.GetField("launchPhaseAngle").GetValue(this.instance);
-			this.launchLANDifference = this.type.GetField("launchLANDifference").GetValue(this.instance);
-			this.warpCountDown = this.type.GetField("warpCountDown").GetValue(this.instance);
+			this.status = this.type.GetCheckedField("status");
+			this.ascentPathIdx = this.type.GetCheckedProperty("ascentPathIdxPublic");
+			this.desiredOrbitAltitude = this.type.GetCheckedField("desiredOrbitAltitude").GetValue(this.instance);
+			this.autoThrottle = this.type.GetCheckedField("autoThrottle");
+			this.correctiveSteering = this.type.GetCheckedField("correctiveSteering");
+			this.correctiveSteeringGain = this.type.GetCheckedField("correctiveSteeringGain").GetValue(this.instance);
+			this.forceRoll = this.type.GetCheckedField("forceRoll");
+			this.verticalRoll = this.type.GetCheckedField("verticalRoll").GetValue(this.instance);
+			this.turnRoll = this.type.GetCheckedField("turnRoll").GetValue(this.instance);
+			this.autodeploySolarPanels = this.type.GetCheckedField("autodeploySolarPanels");
+			this.autoDeployAntennas = this.type.GetCheckedField("autoDeployAntennas");
+			this.skipCircularization = this.type.GetCheckedField("skipCircularization");
+			this.autostage = this.type.GetCheckedProperty("autostage");
+			this.limitAoA = this.type.GetCheckedField("limitAoA");
+			this.maxAoA = this.type.GetCheckedField("maxAoA").GetValue(this.instance);
+			this.aoALimitFadeoutPressure = this.type.GetCheckedField("aoALimitFadeoutPressure").GetValue(this.instance);
+			this.launchPhaseAngle = this.type.GetCheckedField("launchPhaseAngle").GetValue(this.instance);
+			this.launchLANDifference = this.type.GetCheckedField("launchLANDifference").GetValue(this.instance);
+			this.warpCountDown = this.type.GetCheckedField("warpCountDown").GetValue(this.instance);
 
-			this.startCountdown = this.type.GetMethod("StartCountdown");
+			this.startCountdown = this.type.GetCheckedMethod("StartCountdown");
 
 			this.AscentPathClassic = new AscentClassic();
 			this.AscentPathGT = new AscentGT();
@@ -324,8 +324,8 @@ namespace KRPC.MechJeb {
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
 				case "MuMech.LaunchTiming":
-					timeToPhaseAngle = t.GetMethod("TimeToPhaseAngle");
-					timeToPlane = t.GetMethod("TimeToPlane");
+					timeToPhaseAngle = t.GetCheckedMethod("TimeToPhaseAngle");
+					timeToPlane = t.GetCheckedMethod("TimeToPlane");
 					return true;
 				default:
 					return false;

@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -8,7 +9,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly FieldInfo waitForPhaseAngle;
 
 		public OperationInterplanetaryTransfer() : base("OperationInterplanetaryTransfer") {
-			this.waitForPhaseAngle = this.type.GetField("waitForPhaseAngle", BindingFlags.NonPublic | BindingFlags.Instance);
+			this.waitForPhaseAngle = this.type.GetCheckedField("waitForPhaseAngle", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		[KRPCProperty]

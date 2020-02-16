@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -16,9 +17,9 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly FieldInfo simpleTransfer;
 
 		public OperationTransfer() : base("OperationGeneric") {
-			this.interceptOnly = this.type.GetField("intercept_only");
-			this.periodOffset = this.type.GetField("periodOffset").GetValue(this.instance);
-			this.simpleTransfer = this.type.GetField("simpleTransfer");
+			this.interceptOnly = this.type.GetCheckedField("intercept_only");
+			this.periodOffset = this.type.GetCheckedField("periodOffset").GetValue(this.instance);
+			this.simpleTransfer = this.type.GetCheckedField("simpleTransfer");
 		}
 
 		/// <summary>

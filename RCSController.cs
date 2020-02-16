@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -9,8 +10,8 @@ namespace KRPC.MechJeb {
 		private readonly FieldInfo rcsForRotation;
 
 		public RCSController() : base("RCSController") {
-			this.rcsThrottle = this.type.GetField("rcsThrottle");
-			this.rcsForRotation = this.type.GetField("rcsForRotation");
+			this.rcsThrottle = this.type.GetCheckedField("rcsThrottle");
+			this.rcsForRotation = this.type.GetCheckedField("rcsForRotation");
 		}
 
 		[KRPCProperty]

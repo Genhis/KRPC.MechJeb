@@ -1,3 +1,4 @@
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
@@ -9,7 +10,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private readonly object newLAN;
 
 		public OperationLongitude() : base("OperationLongitude") {
-			this.newLAN = this.type.GetField("newLAN").GetValue(this.instance);
+			this.newLAN = this.type.GetCheckedField("newLAN").GetValue(this.instance);
 		}
 
 		[KRPCProperty]

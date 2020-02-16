@@ -1,5 +1,6 @@
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -14,13 +15,13 @@ namespace KRPC.MechJeb {
 		private readonly MethodInfo abort;
 
 		public NodeExecutor() : base("NodeExecutor") {
-			this.autowarp = this.type.GetField("autowarp");
-			this.leadTime = this.type.GetField("leadTime").GetValue(this.instance);
-			this.tolerance = this.type.GetField("tolerance").GetValue(this.instance);
+			this.autowarp = this.type.GetCheckedField("autowarp");
+			this.leadTime = this.type.GetCheckedField("leadTime").GetValue(this.instance);
+			this.tolerance = this.type.GetCheckedField("tolerance").GetValue(this.instance);
 
-			this.executeOneNode = this.type.GetMethod("ExecuteOneNode");
-			this.executeAllNodes = this.type.GetMethod("ExecuteAllNodes");
-			this.abort = this.type.GetMethod("Abort");
+			this.executeOneNode = this.type.GetCheckedMethod("ExecuteOneNode");
+			this.executeAllNodes = this.type.GetCheckedMethod("ExecuteAllNodes");
+			this.abort = this.type.GetCheckedMethod("Abort");
 		}
 
 		[KRPCProperty]

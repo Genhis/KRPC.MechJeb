@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -31,15 +32,15 @@ namespace KRPC.MechJeb {
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
 				case "MuMech.AutopilotModule":
-					AutopilotModule.status = t.GetProperty("status");
+					AutopilotModule.status = t.GetCheckedProperty("status");
 					return true;
 				case "MuMech.ComputerModule":
-					enabled = t.GetProperty("enabled");
-					usersField = t.GetField("users");
+					enabled = t.GetCheckedProperty("enabled");
+					usersField = t.GetCheckedField("users");
 					return true;
 				case "MuMech.UserPool":
-					usersAdd = t.GetMethod("Add");
-					usersRemove = t.GetMethod("Remove");
+					usersAdd = t.GetCheckedMethod("Add");
+					usersRemove = t.GetCheckedMethod("Remove");
 					return true;
 				default:
 					return false;

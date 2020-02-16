@@ -1,4 +1,6 @@
 using System.Reflection;
+
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -27,25 +29,25 @@ namespace KRPC.MechJeb {
 		private readonly object electricThrottleHi;
 
 		public ThrustController() : base("ThrustController") {
-			this.limitDynamicPressure = this.type.GetField("limitDynamicPressure");
-			this.maxDynamicPressure = this.type.GetField("maxDynamicPressure").GetValue(this.instance);
-			this.limitToPreventOverheats = this.type.GetField("limitToPreventOverheats");
-			this.smoothThrottle = this.type.GetField("smoothThrottle");
-			this.throttleSmoothingTime = this.type.GetField("throttleSmoothingTime");
-			this.limitToPreventFlameout = this.type.GetField("limitToPreventFlameout");
-			this.flameoutSafetyPct = this.type.GetField("flameoutSafetyPct").GetValue(this.instance);
-			this.manageIntakes = this.type.GetField("manageIntakes");
-			this.limitAcceleration = this.type.GetField("limitAcceleration");
-			this.maxAcceleration = this.type.GetField("maxAcceleration").GetValue(this.instance);
-			this.limitThrottle = this.type.GetField("limitThrottle");
-			this.maxThrottle = this.type.GetField("maxThrottle").GetValue(this.instance);
-			this.limiterMinThrottle = this.type.GetField("limiterMinThrottle");
-			this.minThrottle = this.type.GetField("minThrottle").GetValue(this.instance);
-			this.differentialThrottle = this.type.GetField("differentialThrottle");
-			this.differentialThrottleSuccess = this.type.GetField("differentialThrottleSuccess");
-			this.electricThrottle = this.type.GetField("electricThrottle");
-			this.electricThrottleLo = this.type.GetField("electricThrottleLo").GetValue(this.instance);
-			this.electricThrottleHi = this.type.GetField("electricThrottleHi").GetValue(this.instance);
+			this.limitDynamicPressure = this.type.GetCheckedField("limitDynamicPressure");
+			this.maxDynamicPressure = this.type.GetCheckedField("maxDynamicPressure").GetValue(this.instance);
+			this.limitToPreventOverheats = this.type.GetCheckedField("limitToPreventOverheats");
+			this.smoothThrottle = this.type.GetCheckedField("smoothThrottle");
+			this.throttleSmoothingTime = this.type.GetCheckedField("throttleSmoothingTime");
+			this.limitToPreventFlameout = this.type.GetCheckedField("limitToPreventFlameout");
+			this.flameoutSafetyPct = this.type.GetCheckedField("flameoutSafetyPct").GetValue(this.instance);
+			this.manageIntakes = this.type.GetCheckedField("manageIntakes");
+			this.limitAcceleration = this.type.GetCheckedField("limitAcceleration");
+			this.maxAcceleration = this.type.GetCheckedField("maxAcceleration").GetValue(this.instance);
+			this.limitThrottle = this.type.GetCheckedField("limitThrottle");
+			this.maxThrottle = this.type.GetCheckedField("maxThrottle").GetValue(this.instance);
+			this.limiterMinThrottle = this.type.GetCheckedField("limiterMinThrottle");
+			this.minThrottle = this.type.GetCheckedField("minThrottle").GetValue(this.instance);
+			this.differentialThrottle = this.type.GetCheckedField("differentialThrottle");
+			this.differentialThrottleSuccess = this.type.GetCheckedField("differentialThrottleSuccess");
+			this.electricThrottle = this.type.GetCheckedField("electricThrottle");
+			this.electricThrottleLo = this.type.GetCheckedField("electricThrottleLo").GetValue(this.instance);
+			this.electricThrottleHi = this.type.GetCheckedField("electricThrottleHi").GetValue(this.instance);
 		}
 		
 		[KRPCProperty]
