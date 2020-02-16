@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 
+using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -13,6 +14,8 @@ namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
 		private static FieldInfo desiredInclination;
+		private static FieldInfo launchingToPlane;
+		private static FieldInfo launchingToRendezvous;
 
 		private readonly object guiInstance;
 
@@ -76,9 +79,11 @@ namespace KRPC.MechJeb {
 			switch(t.FullName) {
 				case "MuMech.MechJebModuleAscentGuidance":
 					desiredInclination = t.GetField("desiredInclination");
+					launchingToPlane = t.GetField("launchingToPlane");
+					launchingToRendezvous = t.GetField("launchingToRendezvous");
 					return true;
 				default:
-					return false;
+					return LaunchTiming.InitTypes(t);
 			}
 		}
 
@@ -287,6 +292,8 @@ namespace KRPC.MechJeb {
 
 		[KRPCMethod]
 		public void LaunchToRendezvous() {
+			this.AbortLaunch();
+			launchingToRendezvous.SetValue(this.guiInstance, true);
 			this.startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchPhaseAngle) });
 		}
 
@@ -295,7 +302,14 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCMethod]
 		public void LaunchToTargetPlane() {
+			this.AbortLaunch();
+			launchingToPlane.SetValue(this.guiInstance, true);
 			this.startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchLANDifference) });
+		}
+
+		private void AbortLaunch() {
+			launchingToPlane.SetValue(this.guiInstance, false);
+			launchingToRendezvous.SetValue(this.guiInstance, false);
 		}
 	}
 
@@ -309,7 +323,7 @@ namespace KRPC.MechJeb {
 
 		internal static bool InitTypes(Type t) {
 			switch(t.FullName) {
-				case "MuMech.MechJebModuleAscentAutopilot.LaunchTiming":
+				case "MuMech.LaunchTiming":
 					timeToPhaseAngle = t.GetMethod("TimeToPhaseAngle");
 					timeToPlane = t.GetMethod("TimeToPlane");
 					return true;
@@ -319,13 +333,13 @@ namespace KRPC.MechJeb {
 		}
 
 		public static double TimeToPhaseAngle(double launchPhaseAngle) {
-			return (double)timeToPhaseAngle.Invoke(null, new object[] { launchPhaseAngle, FlightGlobals.ActiveVessel.mainBody, getLongtitude(), MechJeb.TargetController.TargetOrbit });
+			return (double)timeToPhaseAngle.Invoke(null, new object[] { launchPhaseAngle, FlightGlobals.ActiveVessel.mainBody, getLongtitude(), MechJeb.TargetController.TargetOrbit.InternalOrbit });
 		}
 
 		public static double TimeToPlane(double launchLANDifference) {
 			Vessel vessel = FlightGlobals.ActiveVessel;
 			CelestialBody body = vessel.mainBody;
-			return (double)timeToPlane.Invoke(null, new object[] { launchLANDifference, body, body.GetLatitude(vessel.CoMD), getLongtitude(), MechJeb.TargetController.TargetOrbit });
+			return (double)timeToPlane.Invoke(null, new object[] { launchLANDifference, body, body.GetLatitude(vessel.CoMD), getLongtitude(), MechJeb.TargetController.TargetOrbit.InternalOrbit });
 		}
 
 		private static double getLongtitude() {
