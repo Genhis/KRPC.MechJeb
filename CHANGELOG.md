@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [0.5.0] - 2020-02-16
+## [0.5.1] - 2020-02-16
 ### Fixed
 - `LaunchToRendezvous()` and `LaunchToTargetPlane()` methods in AscentAutopilot ([#8](https://github.com/Genhis/KRPC.MechJeb/issues/8))
 
