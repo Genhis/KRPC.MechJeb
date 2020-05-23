@@ -45,8 +45,11 @@ namespace KRPC.MechJeb.ExtensionMethods {
 		}
 
 		private static T CheckIfExists<T>(this T obj, Type type, string name) {
-			if(obj == null)
-				Logger.Severe(type + "." + name + " not found");
+			if(obj == null) {
+				string error = type + "." + name + " not found";
+				Logger.Severe(error);
+				MechJeb.errors.Add(error);
+			}
 			else
 				Logger.Info(type + "." + name + " found");
 

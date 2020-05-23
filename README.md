@@ -36,7 +36,6 @@ See [Working from source](https://github.com/Genhis/KRPC.MechJeb/blob/master/.gi
 
 ## TO-DO
 
-- Add logging statements for debugging
 - Implement `AdvancedTransfer` maneuver operation
 - Implement `AttitudeAdjustment` controller
 - Implement `RoverAutopilot`

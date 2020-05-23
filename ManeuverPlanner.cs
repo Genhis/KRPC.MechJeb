@@ -50,8 +50,11 @@ namespace KRPC.MechJeb {
 					p.Value.InitInstance(null);
 				else if(operations.TryGetValue(operationType, out object operationInstance))
 					p.Value.InitInstance(operationInstance);
-				else
-					Logger.Severe("Operation " + p.Value.GetType().Name + " cannot be initialized: " + operationType + " not found");
+				else {
+					string error = "Operation " + p.Value.GetType().Name + " cannot be initialized";
+					Logger.Severe(error + ": " + operationType + " not found");
+					MechJeb.errors.Add(error);
+				}
 			}
 		}
 
