@@ -3,7 +3,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	/**
-	 * <summary>Change longitude of ascending node</summary>
+	 * <summary>Change surface longitude of apsis</summary>
 	 */
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationLongitude : TimedOperation {
