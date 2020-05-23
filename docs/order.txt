@@ -73,8 +73,8 @@ MechJeb.AscentAutopilot.LaunchToRendezvous
 MechJeb.AscentAutopilot.LaunchToTargetPlane
 
 MechJeb.AscentClassic.AutoPath
-MechJeb.AscentClassic.AutoPathPerc
-MechJeb.AscentClassic.AutoPathSpeedFactor
+MechJeb.AscentClassic.AutoTurnPercent
+MechJeb.AscentClassic.AutoTurnSpeedFactor
 MechJeb.AscentClassic.AutoTurnStartAltitude
 MechJeb.AscentClassic.AutoTurnStartVelocity
 MechJeb.AscentClassic.AutoTurnEndAltitude

@@ -19,8 +19,8 @@ namespace KRPC.MechJeb {
 		private static FieldInfo turnEndAngleField;
 		private static FieldInfo turnShapeExponentField;
 		private static FieldInfo autoPath;
-		private static FieldInfo autoPathPerc;
-		private static FieldInfo autoPathSpdFactor;
+		private static FieldInfo autoTurnPerc;
+		private static FieldInfo autoTurnSpdFactor;
 		private static PropertyInfo autoTurnStartAltitude;
 		private static PropertyInfo autoTurnStartVelocity;
 		private static PropertyInfo autoTurnEndAltitude;
@@ -39,8 +39,8 @@ namespace KRPC.MechJeb {
 			turnEndAngleField = type.GetCheckedField("turnEndAngle");
 			turnShapeExponentField = type.GetCheckedField("turnShapeExponent");
 			autoPath = type.GetCheckedField("autoPath");
-			autoPathPerc = type.GetCheckedField("autoPathPerc");
-			autoPathSpdFactor = type.GetCheckedField("autoPathSpdFactor");
+			autoTurnPerc = type.GetCheckedField("autoTurnPerc");
+			autoTurnSpdFactor = type.GetCheckedField("autoTurnSpdFactor");
 			autoTurnStartAltitude = type.GetCheckedProperty("autoTurnStartAltitude");
 			autoTurnStartVelocity = type.GetCheckedProperty("autoTurnStartVelocity");
 			autoTurnEndAltitude = type.GetCheckedProperty("autoTurnEndAltitude");
@@ -114,18 +114,18 @@ namespace KRPC.MechJeb {
 		/// A value between 0 and 1.
 		/// </summary>
 		[KRPCProperty]
-		public float AutoPathPerc {
-			get => (float)autoPathPerc.GetValue(this.instance);
-			set => autoPathPerc.SetValue(this.instance, value);
+		public float AutoTurnPercent {
+			get => (float)autoTurnPerc.GetValue(this.instance);
+			set => autoTurnPerc.SetValue(this.instance, value);
 		}
 
 		/// <summary>
 		/// A value between 0 and 1.
 		/// </summary>
 		[KRPCProperty]
-		public float AutoPathSpeedFactor {
-			get => (float)autoPathSpdFactor.GetValue(this.instance);
-			set => autoPathSpdFactor.SetValue(this.instance, value);
+		public float AutoTurnSpeedFactor {
+			get => (float)autoTurnSpdFactor.GetValue(this.instance);
+			set => autoTurnSpdFactor.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
