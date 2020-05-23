@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,24 +7,27 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class RCSController : ComputerModule {
-		private readonly FieldInfo rcsThrottle;
-		private readonly FieldInfo rcsForRotation;
+		internal new const string MechJebType = "MuMech.MechJebModuleRCSController";
 
-		public RCSController() : base("RCSController") {
-			this.rcsThrottle = this.type.GetCheckedField("rcsThrottle");
-			this.rcsForRotation = this.type.GetCheckedField("rcsForRotation");
+		// Fields and methods
+		private static FieldInfo rcsThrottle;
+		private static FieldInfo rcsForRotation;
+
+		internal static new void InitType(Type type) {
+			rcsThrottle = type.GetCheckedField("rcsThrottle");
+			rcsForRotation = type.GetCheckedField("rcsForRotation");
 		}
 
 		[KRPCProperty]
 		public bool RCSThrottle {
-			get => (bool)this.rcsThrottle.GetValue(this.instance);
-			set => this.rcsThrottle.SetValue(this.instance, value);
+			get => (bool)rcsThrottle.GetValue(this.instance);
+			set => rcsThrottle.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public bool RCSForRotation {
-			get => (bool)this.rcsForRotation.GetValue(this.instance);
-			set => this.rcsForRotation.SetValue(this.instance, value);
+			get => (bool)rcsForRotation.GetValue(this.instance);
+			set => rcsForRotation.SetValue(this.instance, value);
 		}
 	}
 }

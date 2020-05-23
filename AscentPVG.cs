@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -9,28 +10,44 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentPVG : AscentBase {
-		private readonly object pitchStartVelocity;
-		private readonly object pitchRate;
-		private readonly object desiredApoapsis;
-		private readonly FieldInfo omitCoast;
+		internal new const string MechJebType = "MuMech.MechJebModuleAscentPVG";
 
-		public AscentPVG() : base("AscentPVG") {
-			this.pitchStartVelocity = this.type.GetCheckedField("pitchStartVelocity").GetValue(this.instance);
-			this.pitchRate = this.type.GetCheckedField("pitchRate").GetValue(this.instance);
-			this.desiredApoapsis = this.type.GetCheckedField("desiredApoapsis").GetValue(this.instance);
-			this.omitCoast = this.type.GetCheckedField("omitCoast");
+		// Fields and methods
+		private static FieldInfo pitchStartVelocityField;
+		private static FieldInfo pitchRateField;
+		private static FieldInfo desiredApoapsisField;
+		private static FieldInfo omitCoast;
+
+		// Instance objects
+		private object pitchStartVelocity;
+		private object pitchRate;
+		private object desiredApoapsis;
+
+		internal static new void InitType(Type type) {
+			pitchStartVelocityField = type.GetCheckedField("pitchStartVelocity");
+			pitchRateField = type.GetCheckedField("pitchRate");
+			desiredApoapsisField = type.GetCheckedField("desiredApoapsis");
+			omitCoast = type.GetCheckedField("omitCoast");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.pitchStartVelocity = pitchStartVelocityField.GetInstanceValue(instance);
+			this.pitchRate = pitchRateField.GetInstanceValue(instance);
+			this.desiredApoapsis = desiredApoapsisField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
 		public double PitchStartVelocity {
-			get => EditableVariables.GetDouble(this.pitchStartVelocity);
-			set => EditableVariables.SetDouble(this.pitchStartVelocity, value);
+			get => EditableDouble.Get(this.pitchStartVelocity);
+			set => EditableDouble.Set(this.pitchStartVelocity, value);
 		}
 
 		[KRPCProperty]
 		public double PitchRate {
-			get => EditableVariables.GetDouble(this.pitchRate);
-			set => EditableVariables.SetDouble(this.pitchRate, value);
+			get => EditableDouble.Get(this.pitchRate);
+			set => EditableDouble.Set(this.pitchRate, value);
 		}
 
 		/// <summary>
@@ -38,14 +55,14 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double DesiredApoapsis {
-			get => EditableVariables.GetDouble(this.desiredApoapsis);
-			set => EditableVariables.SetDouble(this.desiredApoapsis, value);
+			get => EditableDouble.Get(this.desiredApoapsis);
+			set => EditableDouble.Set(this.desiredApoapsis, value);
 		}
 
 		[KRPCProperty]
 		public bool OmitCoast {
-			get => (bool)this.omitCoast.GetValue(this.instance);
-			set => this.omitCoast.SetValue(this.instance, value);
+			get => (bool)omitCoast.GetValue(this.instance);
+			set => omitCoast.SetValue(this.instance, value);
 		}
 	}
 }

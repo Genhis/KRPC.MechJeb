@@ -1,66 +1,108 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.MechJeb.Maneuver;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
-	public class ManeuverPlanner {
-		private Operation[] operations = new Operation[17];
+	public class ManeuverPlanner : Module {
+		internal const string MechJebType = "MuMech.MechJebModuleManeuverPlanner";
+
+		// Fields and methods
+		private static FieldInfo operationsField;
+
+		// Instance objects
+		private readonly Dictionary<string, Operation> operations = new Dictionary<string, Operation>();
+
+		public ManeuverPlanner() {
+			this.operations.Add("OperationApoapsis", new OperationApoapsis());
+			this.operations.Add("OperationCircularize", new OperationCircularize());
+			this.operations.Add("OperationCourseCorrection", new OperationCourseCorrection());
+			this.operations.Add("OperationEllipticize", new OperationEllipticize());
+			this.operations.Add("OperationInclination", new OperationInclination());
+			this.operations.Add("OperationInterplanetaryTransfer", new OperationInterplanetaryTransfer());
+			this.operations.Add("OperationKillRelVel", new OperationKillRelVel());
+			this.operations.Add("OperationLambert", new OperationLambert());
+			this.operations.Add("OperationLan", new OperationLan());
+			this.operations.Add("OperationLongitude", new OperationLongitude());
+			this.operations.Add("OperationMoonReturn", new OperationMoonReturn());
+			this.operations.Add("OperationPeriapsis", new OperationPeriapsis());
+			this.operations.Add("OperationPlane", new OperationPlane());
+			this.operations.Add("OperationResonantOrbit", new OperationResonantOrbit());
+			this.operations.Add("OperationSemiMajor", new OperationSemiMajor());
+			this.operations.Add("OperationGeneric", new OperationTransfer());
+		}
+
+		internal static void InitType(Type type) {
+			operationsField = type.GetCheckedField("operation", BindingFlags.NonPublic | BindingFlags.Instance);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			Dictionary<string, object> operations = instance != null ? ((object[])operationsField.GetValue(instance)).ToDictionary(el => el.GetType().FullName, el => el) : new Dictionary<string, object>();
+
+			foreach(KeyValuePair<string, Operation> p in this.operations) {
+				string operationType = "MuMech." + p.Key;
+				if(instance == null)
+					p.Value.InitInstance(null);
+				else if(operations.TryGetValue(operationType, out object operationInstance))
+					p.Value.InitInstance(operationInstance);
+				else
+					Logger.Severe("Operation " + p.Value.GetType().Name + " cannot be initialized: " + operationType + " not found");
+			}
+		}
 
 		//TODO: OperationAdvancedTransfer
 
 		[KRPCProperty]
-		public OperationApoapsis OperationApoapsis => this.GetOperation<OperationApoapsis>(1);
+		public OperationApoapsis OperationApoapsis => (OperationApoapsis)this.operations["OperationApoapsis"];
 
 		[KRPCProperty]
-		public OperationCircularize OperationCircularize => this.GetOperation<OperationCircularize>(2);
+		public OperationCircularize OperationCircularize => (OperationCircularize)this.operations["OperationCircularize"];
 
 		[KRPCProperty]
-		public OperationCourseCorrection OperationCourseCorrection => this.GetOperation<OperationCourseCorrection>(3);
+		public OperationCourseCorrection OperationCourseCorrection => (OperationCourseCorrection)this.operations["OperationCourseCorrection"];
 
 		[KRPCProperty]
-		public OperationEllipticize OperationEllipticize => this.GetOperation<OperationEllipticize>(4);
+		public OperationEllipticize OperationEllipticize => (OperationEllipticize)this.operations["OperationEllipticize"];
 
 		[KRPCProperty]
-		public OperationInclination OperationInclination => this.GetOperation<OperationInclination>(5);
+		public OperationInclination OperationInclination => (OperationInclination)this.operations["OperationInclination"];
 
 		[KRPCProperty]
-		public OperationInterplanetaryTransfer OperationInterplanetaryTransfer => this.GetOperation<OperationInterplanetaryTransfer>(6);
+		public OperationInterplanetaryTransfer OperationInterplanetaryTransfer => (OperationInterplanetaryTransfer)this.operations["OperationInterplanetaryTransfer"];
 
 		[KRPCProperty]
-		public OperationKillRelVel OperationKillRelVel => this.GetOperation<OperationKillRelVel>(7);
+		public OperationKillRelVel OperationKillRelVel => (OperationKillRelVel)this.operations["OperationKillRelVel"];
 
 		[KRPCProperty]
-		public OperationLambert OperationLambert => this.GetOperation<OperationLambert>(8);
+		public OperationLambert OperationLambert => (OperationLambert)this.operations["OperationLambert"];
 
 		[KRPCProperty]
-		public OperationLan OperationLan => this.GetOperation<OperationLan>(9);
+		public OperationLan OperationLan => (OperationLan)this.operations["OperationLan"];
 
 		[KRPCProperty]
-		public OperationLongitude OperationLongitude => this.GetOperation<OperationLongitude>(10);
+		public OperationLongitude OperationLongitude => (OperationLongitude)this.operations["OperationLongitude"];
 
 		[KRPCProperty]
-		public OperationMoonReturn OperationMoonReturn => this.GetOperation<OperationMoonReturn>(11);
+		public OperationMoonReturn OperationMoonReturn => (OperationMoonReturn)this.operations["OperationMoonReturn"];
 
 		[KRPCProperty]
-		public OperationPeriapsis OperationPeriapsis => this.GetOperation<OperationPeriapsis>(12);
+		public OperationPeriapsis OperationPeriapsis => (OperationPeriapsis)this.operations["OperationPeriapsis"];
 
 		[KRPCProperty]
-		public OperationPlane OperationPlane => this.GetOperation<OperationPlane>(13);
+		public OperationPlane OperationPlane => (OperationPlane)this.operations["OperationPlane"];
 
 		[KRPCProperty]
-		public OperationResonantOrbit OperationResonantOrbit => this.GetOperation<OperationResonantOrbit>(14);
+		public OperationResonantOrbit OperationResonantOrbit => (OperationResonantOrbit)this.operations["OperationResonantOrbit"];
 
 		[KRPCProperty]
-		public OperationSemiMajor OperationSemiMajor => this.GetOperation<OperationSemiMajor>(15);
+		public OperationSemiMajor OperationSemiMajor => (OperationSemiMajor)this.operations["OperationSemiMajor"];
 
 		[KRPCProperty]
-		public OperationTransfer OperationTransfer => this.GetOperation<OperationTransfer>(16);
-
-		private T GetOperation<T>(int id) where T : Operation {
-			if(this.operations[id] == null)
-				this.operations[id] = typeof(T).CreateInstance<T>(null);
-			return (T)this.operations[id];
-		}
+		public OperationTransfer OperationTransfer => (OperationTransfer)this.operations["OperationGeneric"];
 	}
 }

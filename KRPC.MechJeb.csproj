@@ -55,7 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtensionMethods\TypeExtensions.cs" />
+    <Compile Include="ExtensionMethods\ReflectionExtensions.cs" />
     <Compile Include="ExtensionMethods\VesselExtensions.cs" />
     <Compile Include="Maneuver\Operation.cs" />
     <Compile Include="Maneuver\OperationApoapsis.cs" />
@@ -84,7 +84,6 @@
     <Compile Include="AscentPVG.cs" />
     <Compile Include="ComputerModule.cs" />
     <Compile Include="DeployableController.cs" />
-    <Compile Include="DisplayModule.cs" />
     <Compile Include="DockingAutopilot.cs" />
     <Compile Include="EditableVariables.cs" />
     <Compile Include="KSPAddon.cs" />

@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -10,46 +11,49 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class SmartASS : DisplayModule {
-		private readonly FieldInfo mode;
-		private readonly FieldInfo target;
+		internal new const string MechJebType = "MuMech.MechJebModuleSmartASS";
 
-		private readonly FieldInfo forceRol;
-		private readonly FieldInfo forcePitch;
-		private readonly FieldInfo forceYaw;
+		// Fields and methods
+		private static FieldInfo mode;
+		private static FieldInfo target;
 
-		private readonly FieldInfo srfHdg;
-		private readonly FieldInfo srfPit;
-		private readonly FieldInfo srfRol;
+		private static FieldInfo forceRol;
+		private static FieldInfo forcePitch;
+		private static FieldInfo forceYaw;
 
-		private readonly FieldInfo srfVelYaw;
-		private readonly FieldInfo srfVelPit;
-		private readonly FieldInfo srfVelRol;
+		private static FieldInfo srfHdg;
+		private static FieldInfo srfPit;
+		private static FieldInfo srfRol;
 
-		private readonly FieldInfo advReference;
-		private readonly FieldInfo advDirection;
+		private static FieldInfo srfVelYaw;
+		private static FieldInfo srfVelPit;
+		private static FieldInfo srfVelRol;
 
-		private readonly MethodInfo engage;
+		private static FieldInfo advReference;
+		private static FieldInfo advDirection;
 
-		public SmartASS() : base("SmartASS") {
-			this.mode = this.type.GetCheckedField("mode");
-			this.target = this.type.GetCheckedField("target");
+		private static MethodInfo engage;
 
-			this.forceRol = this.type.GetCheckedField("forceRol");
-			this.forcePitch = this.type.GetCheckedField("forcePitch");
-			this.forceYaw = this.type.GetCheckedField("forceYaw");
+		internal static new void InitType(Type type) {
+			mode = type.GetCheckedField("mode");
+			target = type.GetCheckedField("target");
 
-			this.srfHdg = this.type.GetCheckedField("srfHdg");
-			this.srfPit = this.type.GetCheckedField("srfPit");
-			this.srfRol = this.type.GetCheckedField("srfRol");
+			forceRol = type.GetCheckedField("forceRol");
+			forcePitch = type.GetCheckedField("forcePitch");
+			forceYaw = type.GetCheckedField("forceYaw");
 
-			this.srfVelYaw = this.type.GetCheckedField("srfVelYaw");
-			this.srfVelPit = this.type.GetCheckedField("srfVelPit");
-			this.srfVelRol = this.type.GetCheckedField("srfVelRol");
+			srfHdg = type.GetCheckedField("srfHdg");
+			srfPit = type.GetCheckedField("srfPit");
+			srfRol = type.GetCheckedField("srfRol");
 
-			this.advReference = this.type.GetCheckedField("advReference");
-			this.advDirection = this.type.GetCheckedField("advDirection");
+			srfVelYaw = type.GetCheckedField("srfVelYaw");
+			srfVelPit = type.GetCheckedField("srfVelPit");
+			srfVelRol = type.GetCheckedField("srfVelRol");
 
-			this.engage = this.type.GetCheckedMethod("Engage");
+			advReference = type.GetCheckedField("advReference");
+			advDirection = type.GetCheckedField("advDirection");
+
+			engage = type.GetCheckedMethod("Engage");
 		}
 
 		/// <summary>
@@ -57,12 +61,12 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public SmartASSInterfaceMode InterfaceMode {
-			get => (SmartASSInterfaceMode)this.mode.GetValue(this.instance);
+			get => (SmartASSInterfaceMode)mode.GetValue(this.instance);
 			set {
 				if(value == SmartASSInterfaceMode.Automatic)
 					throw new MJServiceException("Cannot set SmartASSInterfaceMode to Automatic");
 
-				this.mode.SetValue(this.instance, (int)value);
+				mode.SetValue(this.instance, (int)value);
 			}
 		}
 
@@ -71,12 +75,12 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public SmartASSAutopilotMode AutopilotMode {
-			get => (SmartASSAutopilotMode)this.target.GetValue(this.instance);
+			get => (SmartASSAutopilotMode)target.GetValue(this.instance);
 			set {
 				if(value == SmartASSAutopilotMode.Automatic)
 					throw new MJServiceException("Cannot set SmartASSAutopilotMode to Automatic");
 
-				this.target.SetValue(this.instance, (int)value);
+				target.SetValue(this.instance, (int)value);
 			}
 		}
 
@@ -85,8 +89,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool ForceYaw {
-			get => (bool)this.forceYaw.GetValue(this.instance);
-			set => this.forceYaw.SetValue(this.instance, value);
+			get => (bool)forceYaw.GetValue(this.instance);
+			set => forceYaw.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -94,8 +98,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool ForcePitch {
-			get => (bool)this.forcePitch.GetValue(this.instance);
-			set => this.forcePitch.SetValue(this.instance, value);
+			get => (bool)forcePitch.GetValue(this.instance);
+			set => forcePitch.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -103,8 +107,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool ForceRoll {
-			get => (bool)this.forceRol.GetValue(this.instance);
-			set => this.forceRol.SetValue(this.instance, value);
+			get => (bool)forceRol.GetValue(this.instance);
+			set => forceRol.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -113,8 +117,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Surface" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceHeading {
-			get => EditableVariables.GetDouble(this.srfHdg, this.instance);
-			set => EditableVariables.SetDouble(this.srfHdg, this.instance, value);
+			get => EditableDouble.Get(srfHdg, this.instance);
+			set => EditableDouble.Set(srfHdg, this.instance, value);
 		}
 
 		/// <summary>
@@ -123,8 +127,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Surface" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfacePitch {
-			get => EditableVariables.GetDouble(this.srfPit, this.instance);
-			set => EditableVariables.SetDouble(this.srfPit, this.instance, value);
+			get => EditableDouble.Get(srfPit, this.instance);
+			set => EditableDouble.Set(srfPit, this.instance, value);
 		}
 
 		/// <summary>
@@ -133,15 +137,15 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Surface" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceRoll {
-			get => EditableVariables.GetDouble(this.srfRol, this.instance);
-			set => EditableVariables.SetDouble(this.srfRol, this.instance, value);
+			get => EditableDouble.Get(srfRol, this.instance);
+			set => EditableDouble.Set(srfRol, this.instance, value);
 		}
-		
+
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.SurfacePrograde" /> and <see cref="SmartASSAutopilotMode.SurfaceRetrograde" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceVelYaw {
-			get => EditableVariables.GetDouble(this.srfVelYaw, this.instance);
-			set => EditableVariables.SetDouble(this.srfVelYaw, this.instance, value);
+			get => EditableDouble.Get(srfVelYaw, this.instance);
+			set => EditableDouble.Set(srfVelYaw, this.instance, value);
 		}
 
 		/// <summary>
@@ -150,8 +154,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.SurfacePrograde" /> and <see cref="SmartASSAutopilotMode.SurfaceRetrograde" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceVelPitch {
-			get => EditableVariables.GetDouble(this.srfPit, this.instance);
-			set => EditableVariables.SetDouble(this.srfPit, this.instance, value);
+			get => EditableDouble.Get(srfPit, this.instance);
+			set => EditableDouble.Set(srfPit, this.instance, value);
 		}
 
 		/// <summary>
@@ -160,22 +164,22 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.SurfacePrograde" /> and <see cref="SmartASSAutopilotMode.SurfaceRetrograde" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceVelRoll {
-			get => EditableVariables.GetDouble(this.srfRol, this.instance);
-			set => EditableVariables.SetDouble(this.srfRol, this.instance, value);
+			get => EditableDouble.Get(srfRol, this.instance);
+			set => EditableDouble.Set(srfRol, this.instance, value);
 		}
 
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Advanced" /> mode.</remarks>
 		[KRPCProperty]
 		public AttitudeReference AdvancedReference {
-			get => (AttitudeReference)this.advReference.GetValue(this.instance);
-			set => this.advReference.SetValue(this.instance, (int)value);
+			get => (AttitudeReference)advReference.GetValue(this.instance);
+			set => advReference.SetValue(this.instance, (int)value);
 		}
 
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Advanced" /> mode.</remarks>
 		[KRPCProperty]
 		public Vector6.Direction AdvancedDirection {
-			get => (Vector6.Direction)this.advDirection.GetValue(this.instance);
-			set => this.advDirection.SetValue(this.instance, (int)value);
+			get => (Vector6.Direction)advDirection.GetValue(this.instance);
+			set => advDirection.SetValue(this.instance, (int)value);
 		}
 
 		/// <summary>
@@ -184,9 +188,9 @@ namespace KRPC.MechJeb {
 		/// <param name="resetPID">False most of the time, use true only if it doesn't work.</param>
 		[KRPCMethod]
 		public void Update(bool resetPID) {
-			this.engage.Invoke(this.instance, new object[] { resetPID });
+			engage.Invoke(this.instance, new object[] { resetPID });
 		}
-		
+
 		[KRPCEnum(Service = "MechJeb")]
 		public enum SmartASSInterfaceMode {
 			Orbital,

@@ -1,19 +1,37 @@
+using System;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationApoapsis : TimedOperation {
-		private readonly object newApA;
+		internal new const string MechJebType = "MuMech.OperationApoapsis";
 
-		public OperationApoapsis() : base("OperationApoapsis") {
-			this.newApA = this.type.GetCheckedField("newApA").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo newApAField;
+		private static FieldInfo timeSelector;
+
+		// Instance objects
+		private object newApA;
+
+		internal static new void InitType(Type type) {
+			newApAField = type.GetCheckedField("newApA");
+			timeSelector = GetTimeSelectorField(type);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.newApA = newApAField.GetInstanceValue(instance);
+			this.InitTimeSelector(timeSelector);
 		}
 
 		[KRPCProperty]
 		public double NewApoapsis {
-			get => EditableVariables.GetDouble(this.newApA);
-			set => EditableVariables.SetDouble(this.newApA, value);
+			get => EditableDouble.Get(this.newApA);
+			set => EditableDouble.Set(this.newApA, value);
 		}
 	}
 }

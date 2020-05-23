@@ -1,27 +1,47 @@
+using System;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationEllipticize : TimedOperation {
-		private readonly object newApA;
-		private readonly object newPeA;
+		internal new const string MechJebType = "MuMech.OperationEllipticize";
 
-		public OperationEllipticize() : base("OperationEllipticize") {
-			this.newApA = this.type.GetCheckedField("newApA").GetValue(this.instance);
-			this.newPeA = this.type.GetCheckedField("newPeA").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo newApAField;
+		private static FieldInfo newPeAField;
+		private static FieldInfo timeSelector;
+
+		// Instance objects
+		private object newApA;
+		private object newPeA;
+
+		internal static new void InitType(Type type) {
+			newApAField = type.GetCheckedField("newApA");
+			newPeAField = type.GetCheckedField("newPeA");
+			timeSelector = GetTimeSelectorField(type);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.newApA = newApAField.GetInstanceValue(instance);
+			this.newPeA = newPeAField.GetInstanceValue(instance);
+			this.InitTimeSelector(timeSelector);
 		}
 
 		[KRPCProperty]
 		public double NewApoapsis {
-			get => EditableVariables.GetDouble(this.newApA);
-			set => EditableVariables.SetDouble(this.newApA, value);
+			get => EditableDouble.Get(this.newApA);
+			set => EditableDouble.Set(this.newApA, value);
 		}
 
 		[KRPCProperty]
 		public double NewPeriapsis {
-			get => EditableVariables.GetDouble(this.newPeA);
-			set => EditableVariables.SetDouble(this.newPeA, value);
+			get => EditableDouble.Get(this.newPeA);
+			set => EditableDouble.Set(this.newPeA, value);
 		}
 	}
 }

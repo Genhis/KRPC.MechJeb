@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,29 +7,43 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class RendezvousAutopilot : KRPCComputerModule {
-		private readonly object desiredDistance;
-		private readonly object maxPhasingOrbits;
-		private readonly FieldInfo status;
+		internal new const string MechJebType = "MuMech.MechJebModuleRendezvousAutopilot";
 
-		public RendezvousAutopilot() : base("RendezvousAutopilot") {
-			this.desiredDistance = this.type.GetCheckedField("desiredDistance").GetValue(this.instance);
-			this.maxPhasingOrbits = this.type.GetCheckedField("maxPhasingOrbits").GetValue(this.instance);
-			this.status = this.type.GetCheckedField("status");
+		// Fields and methods
+		private static FieldInfo desiredDistanceField;
+		private static FieldInfo maxPhasingOrbitsField;
+		private static FieldInfo status;
+
+		// Instance objects
+		private object desiredDistance;
+		private object maxPhasingOrbits;
+
+		internal static new void InitType(Type type) {
+			desiredDistanceField = type.GetCheckedField("desiredDistance");
+			maxPhasingOrbitsField = type.GetCheckedField("maxPhasingOrbits");
+			status = type.GetCheckedField("status");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.desiredDistance = desiredDistanceField.GetInstanceValue(instance);
+			this.maxPhasingOrbits = maxPhasingOrbitsField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
 		public double DesiredDistance {
-			get => EditableVariables.GetDouble(this.desiredDistance);
-			set => EditableVariables.SetDouble(this.desiredDistance, value);
+			get => EditableDouble.Get(this.desiredDistance);
+			set => EditableDouble.Set(this.desiredDistance, value);
 		}
 
 		[KRPCProperty]
 		public double MaxPhasingOrbits {
-			get => EditableVariables.GetDouble(this.maxPhasingOrbits);
-			set => EditableVariables.SetDouble(this.maxPhasingOrbits, value);
+			get => EditableDouble.Get(this.maxPhasingOrbits);
+			set => EditableDouble.Set(this.maxPhasingOrbits, value);
 		}
 
 		[KRPCProperty]
-		public string Status => this.status.GetValue(this.instance).ToString();
+		public string Status => status.GetValue(this.instance).ToString();
 	}
 }

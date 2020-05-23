@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
@@ -11,18 +14,37 @@ namespace KRPC.MechJeb {
 	/// </remarks>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentGT : AscentBase {
-		private readonly object turnStartAltitude;
-		private readonly object turnStartVelocity;
-		private readonly object turnStartPitch;
-		private readonly object intermediateAltitude;
-		private readonly object holdAPTime;
+		internal new const string MechJebType = "MuMech.MechJebModuleAscentGT";
 
-		public AscentGT() : base("AscentGT") {
-			this.turnStartAltitude = this.type.GetCheckedField("turnStartAltitude").GetValue(this.instance);
-			this.turnStartVelocity = this.type.GetCheckedField("turnStartVelocity").GetValue(this.instance);
-			this.turnStartPitch = this.type.GetCheckedField("turnStartPitch").GetValue(this.instance);
-			this.intermediateAltitude = this.type.GetCheckedField("intermediateAltitude").GetValue(this.instance);
-			this.holdAPTime = this.type.GetCheckedField("holdAPTime").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo turnStartAltitudeField;
+		private static FieldInfo turnStartVelocityField;
+		private static FieldInfo turnStartPitchField;
+		private static FieldInfo intermediateAltitudeField;
+		private static FieldInfo holdAPTimeField;
+
+		// Instance objects
+		private object turnStartAltitude;
+		private object turnStartVelocity;
+		private object turnStartPitch;
+		private object intermediateAltitude;
+		private object holdAPTime;
+
+		internal static new void InitType(Type type) {
+			turnStartAltitudeField = type.GetCheckedField("turnStartAltitude");
+			turnStartVelocityField = type.GetCheckedField("turnStartVelocity");
+			turnStartPitchField = type.GetCheckedField("turnStartPitch");
+			intermediateAltitudeField = type.GetCheckedField("intermediateAltitude");
+			holdAPTimeField = type.GetCheckedField("holdAPTime");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+			this.turnStartAltitude = turnStartAltitudeField.GetInstanceValue(instance);
+			this.turnStartVelocity = turnStartVelocityField.GetInstanceValue(instance);
+			this.turnStartPitch = turnStartPitchField.GetInstanceValue(instance);
+			this.intermediateAltitude = intermediateAltitudeField.GetInstanceValue(instance);
+			this.holdAPTime = holdAPTimeField.GetInstanceValue(instance);
 		}
 
 		/// <summary>
@@ -30,8 +52,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnStartAltitude {
-			get => EditableVariables.GetDouble(this.turnStartAltitude);
-			set => EditableVariables.SetDouble(this.turnStartAltitude, value);
+			get => EditableDouble.Get(this.turnStartAltitude);
+			set => EditableDouble.Set(this.turnStartAltitude, value);
 		}
 
 		/// <summary>
@@ -39,8 +61,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnStartVelocity {
-			get => EditableVariables.GetDouble(this.turnStartVelocity);
-			set => EditableVariables.SetDouble(this.turnStartVelocity, value);
+			get => EditableDouble.Get(this.turnStartVelocity);
+			set => EditableDouble.Set(this.turnStartVelocity, value);
 		}
 
 		/// <summary>
@@ -48,8 +70,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnStartPitch {
-			get => EditableVariables.GetDouble(this.turnStartPitch);
-			set => EditableVariables.SetDouble(this.turnStartPitch, value);
+			get => EditableDouble.Get(this.turnStartPitch);
+			set => EditableDouble.Set(this.turnStartPitch, value);
 		}
 
 		/// <summary>
@@ -57,8 +79,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double IntermediateAltitude {
-			get => EditableVariables.GetDouble(this.intermediateAltitude);
-			set => EditableVariables.SetDouble(this.intermediateAltitude, value);
+			get => EditableDouble.Get(this.intermediateAltitude);
+			set => EditableDouble.Set(this.intermediateAltitude, value);
 		}
 
 		/// <summary>
@@ -68,8 +90,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double HoldAPTime {
-			get => EditableVariables.GetDouble(this.holdAPTime);
-			set => EditableVariables.SetDouble(this.holdAPTime, value);
+			get => EditableDouble.Get(this.holdAPTime);
+			set => EditableDouble.Set(this.holdAPTime, value);
 		}
 	}
 }

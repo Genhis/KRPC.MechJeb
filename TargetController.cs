@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -11,101 +12,104 @@ using Tuple3 = KRPC.Utils.Tuple<double, double, double>;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class TargetController : ComputerModule {
-		private readonly MethodInfo setPositionTarget;
-		private readonly MethodInfo getPositionTargetString;
-		private readonly MethodInfo getPositionTargetPosition;
-		private readonly MethodInfo setDirectionTarget;
-		private readonly MethodInfo pickPositionTargetOnMap;
-		private readonly MethodInfo updateDirectionTarget;
+		internal new const string MechJebType = "MuMech.MechJebModuleTargetController";
 
-		private readonly PropertyInfo normalTargetExists;
-		private readonly PropertyInfo positionTargetExists;
-		private readonly PropertyInfo canAlign;
-		//private readonly PropertyInfo target;
-		private readonly PropertyInfo targetOrbit;
-		private readonly PropertyInfo position;
-		private readonly PropertyInfo distance;
-		private readonly PropertyInfo relativeVelocity;
-		private readonly PropertyInfo relativePosition;
-		//private readonly PropertyInfo transform;
-		private readonly PropertyInfo dockingAxis;
+		// Fields and methods
+		private static MethodInfo setPositionTarget;
+		private static MethodInfo getPositionTargetString;
+		private static MethodInfo getPositionTargetPosition;
+		private static MethodInfo setDirectionTarget;
+		private static MethodInfo pickPositionTargetOnMap;
+		private static MethodInfo updateDirectionTarget;
 
-		public TargetController() : base("TargetController") {
-			this.setPositionTarget = this.type.GetCheckedMethod("SetPositionTarget");
-			this.getPositionTargetString = this.type.GetCheckedMethod("GetPositionTargetString");
-			this.getPositionTargetPosition = this.type.GetCheckedMethod("GetPositionTargetPosition");
-			this.setDirectionTarget = this.type.GetCheckedMethod("SetDirectionTarget");
-			this.pickPositionTargetOnMap = this.type.GetCheckedMethod("PickPositionTargetOnMap");
-			this.updateDirectionTarget = this.type.GetCheckedMethod("UpdateDirectionTarget");
+		private static PropertyInfo normalTargetExists;
+		private static PropertyInfo positionTargetExists;
+		private static PropertyInfo canAlign;
+		//private static PropertyInfo target;
+		private static PropertyInfo targetOrbit;
+		private static PropertyInfo position;
+		private static PropertyInfo distance;
+		private static PropertyInfo relativeVelocity;
+		private static PropertyInfo relativePosition;
+		//private static PropertyInfo transform;
+		private static PropertyInfo dockingAxis;
 
-			this.normalTargetExists = this.type.GetCheckedProperty("NormalTargetExists");
-			this.positionTargetExists = this.type.GetCheckedProperty("PositionTargetExists");
-			this.canAlign = this.type.GetCheckedProperty("CanAlign");
-			//this.target = this.type.GetProperty("Target");
-			this.targetOrbit = this.type.GetCheckedProperty("TargetOrbit");
-			this.position = this.type.GetCheckedProperty("Position");
-			this.distance = this.type.GetCheckedProperty("Distance");
-			this.relativeVelocity = this.type.GetCheckedProperty("RelativeVelocity");
-			this.relativePosition = this.type.GetCheckedProperty("RelativePosition");
-			//this.transform = this.type.GetProperty("Transform");
-			this.dockingAxis = this.type.GetCheckedProperty("DockingAxis");
+		internal static new void InitType(Type type) {
+			setPositionTarget = type.GetCheckedMethod("SetPositionTarget");
+			getPositionTargetString = type.GetCheckedMethod("GetPositionTargetString");
+			getPositionTargetPosition = type.GetCheckedMethod("GetPositionTargetPosition");
+			setDirectionTarget = type.GetCheckedMethod("SetDirectionTarget");
+			pickPositionTargetOnMap = type.GetCheckedMethod("PickPositionTargetOnMap");
+			updateDirectionTarget = type.GetCheckedMethod("UpdateDirectionTarget");
+
+			normalTargetExists = type.GetCheckedProperty("NormalTargetExists");
+			positionTargetExists = type.GetCheckedProperty("PositionTargetExists");
+			canAlign = type.GetCheckedProperty("CanAlign");
+			//target = type.GetProperty("Target");
+			targetOrbit = type.GetCheckedProperty("TargetOrbit");
+			position = type.GetCheckedProperty("Position");
+			distance = type.GetCheckedProperty("Distance");
+			relativeVelocity = type.GetCheckedProperty("RelativeVelocity");
+			relativePosition = type.GetCheckedProperty("RelativePosition");
+			//transform = type.GetProperty("Transform");
+			dockingAxis = type.GetCheckedProperty("DockingAxis");
 		}
 
 		[KRPCMethod]
 		public void SetPositionTarget(SpaceCenter.Services.CelestialBody body, double latitude, double longitude) {
-			this.setPositionTarget.Invoke(this.instance, new object[] { body.InternalBody, latitude, longitude });
+			setPositionTarget.Invoke(this.instance, new object[] { body.InternalBody, latitude, longitude });
 		}
 
 		[KRPCMethod]
 		public string GetPositionTargetString() {
-			return this.getPositionTargetString.Invoke(this.instance, null).ToString();
+			return getPositionTargetString.Invoke(this.instance, null).ToString();
 		}
 
 		[KRPCMethod]
 		public Tuple3 GetPositionTargetPosition() {
-			return ((Vector3d)this.getPositionTargetPosition.Invoke(this.instance, null)).ToTuple();
+			return ((Vector3d)getPositionTargetPosition.Invoke(this.instance, null)).ToTuple();
 		}
 
 		[KRPCMethod]
 		public void SetDirectionTarget(string name) {
-			this.setDirectionTarget.Invoke(this.instance, new object[] { name });
+			setDirectionTarget.Invoke(this.instance, new object[] { name });
 		}
 
 		[KRPCMethod]
 		public void PickPositionTargetOnMap() {
-			this.pickPositionTargetOnMap.Invoke(this.instance, null);
+			pickPositionTargetOnMap.Invoke(this.instance, null);
 		}
 
 		[KRPCMethod]
 		public void UpdateDirectionTarget(Tuple3 direction) {
-			this.updateDirectionTarget.Invoke(this.instance, new object[] { direction.ToVector() });
+			updateDirectionTarget.Invoke(this.instance, new object[] { direction.ToVector() });
 		}
 
 		[KRPCProperty]
-		public bool NormalTargetExists => (bool)this.normalTargetExists.GetValue(this.instance, null);
+		public bool NormalTargetExists => (bool)normalTargetExists.GetValue(this.instance, null);
 
 		[KRPCProperty]
-		public bool PositionTargetExists => (bool)this.positionTargetExists.GetValue(this.instance, null);
+		public bool PositionTargetExists => (bool)positionTargetExists.GetValue(this.instance, null);
 
 		[KRPCProperty]
-		public bool CanAlign => (bool)this.canAlign.GetValue(this.instance, null);
+		public bool CanAlign => (bool)canAlign.GetValue(this.instance, null);
 
 		[KRPCProperty]
-		public SpaceCenter.Services.Orbit TargetOrbit => new SpaceCenter.Services.Orbit((Orbit)this.targetOrbit.GetValue(this.instance, null));
+		public SpaceCenter.Services.Orbit TargetOrbit => new SpaceCenter.Services.Orbit((Orbit)targetOrbit.GetValue(this.instance, null));
 
 		[KRPCProperty]
-		public Tuple3 Position => ((Vector3)this.position.GetValue(this.instance, null)).ToTuple();
+		public Tuple3 Position => ((Vector3)position.GetValue(this.instance, null)).ToTuple();
 
 		[KRPCProperty]
-		public float Distance => (float)this.distance.GetValue(this.instance, null);
+		public float Distance => (float)distance.GetValue(this.instance, null);
 
 		[KRPCProperty]
-		public Tuple3 RelativeVelocity => ((Vector3)this.relativeVelocity.GetValue(this.instance, null)).ToTuple();
+		public Tuple3 RelativeVelocity => ((Vector3)relativeVelocity.GetValue(this.instance, null)).ToTuple();
 
 		[KRPCProperty]
-		public Tuple3 RelativePosition => ((Vector3)this.relativePosition.GetValue(this.instance, null)).ToTuple();
+		public Tuple3 RelativePosition => ((Vector3)relativePosition.GetValue(this.instance, null)).ToTuple();
 
 		[KRPCProperty]
-		public Tuple3 DockingAxis => ((Vector3)this.dockingAxis.GetValue(this.instance, null)).ToTuple();
+		public Tuple3 DockingAxis => ((Vector3)dockingAxis.GetValue(this.instance, null)).ToTuple();
 	}
 }

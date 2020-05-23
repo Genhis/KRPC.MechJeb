@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -12,14 +13,29 @@ namespace KRPC.MechJeb.Maneuver {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationTransfer : TimedOperation {
-		private readonly FieldInfo interceptOnly;
-		private readonly object periodOffset;
-		private readonly FieldInfo simpleTransfer;
+		internal new const string MechJebType = "MuMech.OperationGeneric";
 
-		public OperationTransfer() : base("OperationGeneric") {
-			this.interceptOnly = this.type.GetCheckedField("intercept_only");
-			this.periodOffset = this.type.GetCheckedField("periodOffset").GetValue(this.instance);
-			this.simpleTransfer = this.type.GetCheckedField("simpleTransfer");
+		// Fields and methods
+		private static FieldInfo interceptOnly;
+		private static FieldInfo periodOffsetField;
+		private static FieldInfo simpleTransfer;
+		private static FieldInfo timeSelector;
+
+		// Instance objects
+		private object periodOffset;
+
+		internal static new void InitType(Type type) {
+			interceptOnly = type.GetCheckedField("intercept_only");
+			periodOffsetField = type.GetCheckedField("periodOffset");
+			simpleTransfer = type.GetCheckedField("simpleTransfer");
+			timeSelector = GetTimeSelectorField(type);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.periodOffset = periodOffsetField.GetInstanceValue(instance);
+			this.InitTimeSelector(timeSelector);
 		}
 
 		/// <summary>
@@ -27,8 +43,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		[KRPCProperty]
 		public bool InterceptOnly {
-			get => (bool)this.interceptOnly.GetValue(this.instance);
-			set => this.interceptOnly.SetValue(this.instance, value);
+			get => (bool)interceptOnly.GetValue(this.instance);
+			set => interceptOnly.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -36,8 +52,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		[KRPCProperty]
 		public double PeriodOffset {
-			get => EditableVariables.GetDouble(this.periodOffset);
-			set => EditableVariables.SetDouble(this.periodOffset, value);
+			get => EditableDouble.Get(this.periodOffset);
+			set => EditableDouble.Set(this.periodOffset, value);
 		}
 
 		/// <summary>
@@ -47,8 +63,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// <remarks>If set to true, TimeSelector property is ignored.</remarks>
 		[KRPCProperty]
 		public bool SimpleTransfer {
-			get => (bool)this.simpleTransfer.GetValue(this.instance);
-			set => this.simpleTransfer.SetValue(this.instance, value);
+			get => (bool)simpleTransfer.GetValue(this.instance);
+			set => simpleTransfer.SetValue(this.instance, value);
 		}
 	}
 }

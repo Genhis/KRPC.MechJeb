@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,39 +7,42 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class DeployableController : ComputerModule {
-		private readonly FieldInfo autoDeploy;
+		internal new const string MechJebType = "MuMech.MechJebModuleDeployableController";
 
-		private readonly MethodInfo extendAll;
-		private readonly MethodInfo retractAll;
-		private readonly MethodInfo allRetracted;
+		// Fields and methods
+		private static FieldInfo autoDeploy;
 
-		public DeployableController(string moduleType) : base(moduleType) {
-			this.autoDeploy = this.type.GetCheckedField("autoDeploy");
+		private static MethodInfo extendAll;
+		private static MethodInfo retractAll;
+		private static MethodInfo allRetracted;
 
-			this.extendAll = this.type.GetCheckedMethod("ExtendAll");
-			this.retractAll = this.type.GetCheckedMethod("RetractAll");
-			this.allRetracted = this.type.GetCheckedMethod("AllRetracted");
+		internal static new void InitType(Type type) {
+			autoDeploy = type.GetCheckedField("autoDeploy");
+
+			extendAll = type.GetCheckedMethod("ExtendAll");
+			retractAll = type.GetCheckedMethod("RetractAll");
+			allRetracted = type.GetCheckedMethod("AllRetracted");
 		}
 
 		[KRPCProperty]
 		public bool AutoDeploy {
-			get => (bool)this.autoDeploy.GetValue(this.instance);
-			set => this.autoDeploy.SetValue(this.instance, value);
+			get => (bool)autoDeploy.GetValue(this.instance);
+			set => autoDeploy.SetValue(this.instance, value);
 		}
 
 		[KRPCMethod]
 		public void ExtendAll() {
-			this.extendAll.Invoke(this.instance, null);
+			extendAll.Invoke(this.instance, null);
 		}
 
 		[KRPCMethod]
 		public void RetractAll() {
-			this.retractAll.Invoke(this.instance, null);
+			retractAll.Invoke(this.instance, null);
 		}
 
 		[KRPCMethod]
 		public bool AllRetracted() {
-			return (bool)this.allRetracted.Invoke(this.instance, null);
+			return (bool)allRetracted.Invoke(this.instance, null);
 		}
 	}
 }

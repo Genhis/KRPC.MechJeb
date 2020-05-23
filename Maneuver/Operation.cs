@@ -11,30 +11,34 @@ namespace KRPC.MechJeb.Maneuver {
 	/// </summary>
 	[KRPCException(Service = "MechJeb")]
 	public class OperationException : Exception {
+		internal const string MechJebType = "MuMech.OperationException";
+
+		internal static Type type;
+
 		public OperationException(string message) : base(message) { }
+
+		internal static void InitType(Type t) {
+			type = t;
+		}
 	}
 
 	public abstract class Operation {
-		private static Type operationException;
+		internal const string MechJebType = "MuMech.Operation";
+
+		// Fields and methods
 		private static MethodInfo errorMessage;
 		private static MethodInfo makeNodeImpl;
 
-		private static object[] operations;
+		// Instance objects
+		protected internal object instance;
 
-		protected readonly Type type;
-		protected internal readonly object instance;
+		internal static void InitType(Type type) {
+			errorMessage = type.GetCheckedMethod("getErrorMessage");
+			makeNodeImpl = type.GetCheckedMethod("MakeNodeImpl");
+		}
 
-		public Operation(string operationType) {
-			string operationFullName = "MuMech." + operationType;
-			foreach(object operation in operations)
-				if(operation.GetType().FullName == operationFullName) {
-					this.type = operation.GetType();
-					this.instance = operation;
-					break;
-				}
-
-			if(this.type == null)
-				throw new MJServiceException("No such operation exists: " + operationType);
+		protected internal virtual void InitInstance(object instance) {
+			this.instance = instance;
 		}
 
 		/// <summary>
@@ -65,7 +69,7 @@ namespace KRPC.MechJeb.Maneuver {
 				if(ex is TargetInvocationException)
 					ex = ex.InnerException;
 
-				if(ex.GetType() == operationException)
+				if(ex.GetType() == OperationException.type)
 					throw new OperationException(ex.Message);
 
 				Logger.Severe("An error occured while creating a new ManeuverNode", ex);
@@ -73,43 +77,32 @@ namespace KRPC.MechJeb.Maneuver {
 			}
 		}
 
-		internal static bool InitTypes(Type t) {
-			switch(t.FullName) {
-				case "MuMech.ManeuverParameters":
-					ManeuverParameters.dV = t.GetCheckedField("dV");
-					ManeuverParameters.uT = t.GetCheckedField("UT");
-					return true;
-				case "MuMech.Operation":
-					errorMessage = t.GetCheckedMethod("getErrorMessage");
-					makeNodeImpl = t.GetCheckedMethod("MakeNodeImpl");
-					return true;
-				case "MuMech.OperationException":
-					operationException = t;
-					return true;
-				default:
-					return false;
-			}
-		}
-
-		internal static bool InitInstance(Type t) {
-			switch(t.FullName) {
-				case "MuMech.MechJebModuleManeuverPlanner":
-					operations = (object[])t.GetCheckedField("operation", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(MechJeb.GetComputerModule("ManeuverPlanner"));
-					return true;
-				default:
-					return false;
-			}
-		}
-
 		private static class ManeuverParameters {
+			internal const string MechJebType = "MuMech.ManeuverParameters";
+
+			// Fields and methods
 			internal static FieldInfo dV;
 			internal static FieldInfo uT;
+
+			internal static void InitType(Type type) {
+				dV = type.GetCheckedField("dV");
+				uT = type.GetCheckedField("UT");
+			}
 		}
 	}
 
 	public abstract class TimedOperation : Operation {
-		public TimedOperation(string operationName) : base(operationName) {
-			this.TimeSelector = new TimeSelector(this.type.GetCheckedField("timeSelector", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this.instance));
+		protected TimedOperation() {
+			this.TimeSelector = new TimeSelector();
+		}
+
+		protected static FieldInfo GetTimeSelectorField(Type type) {
+			// Need to do it this way because MechJeb does not have a separate TimedOperation class. Instead, the field is duplicated where needed.
+			return type.GetCheckedField("timeSelector", BindingFlags.NonPublic | BindingFlags.Instance);
+		}
+
+		protected void InitTimeSelector(FieldInfo timeSelector) {
+			this.TimeSelector.InitInstance(timeSelector.GetInstanceValue(this.instance));
 		}
 
 		[KRPCProperty]

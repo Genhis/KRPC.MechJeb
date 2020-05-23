@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -9,28 +10,19 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class Translatron : DisplayModule {
-		private readonly object thrustInstance;
-		private readonly FieldInfo transSpdAct;
-		private readonly FieldInfo transKillH;
-		private readonly FieldInfo tMode;
+		internal new const string MechJebType = "MuMech.MechJebModuleTranslatron";
 
-		private readonly FieldInfo transSpd;
+		// Fields and methods
+		private static FieldInfo transSpd;
 
-		private readonly MethodInfo setMode;
-		private readonly MethodInfo panicSwitch;
+		private static MethodInfo setMode;
+		private static MethodInfo panicSwitch;
 
-		public Translatron() : base("Translatron") {
-			this.thrustInstance = MechJeb.ThrustController.instance;
-			var thrustType = MechJeb.ThrustController.type;
+		internal static new void InitType(Type type) {
+			transSpd = type.GetCheckedField("trans_spd");
 
-			this.tMode = thrustType.GetCheckedField("tmode");
-			this.transSpdAct = thrustType.GetCheckedField("trans_spd_act");
-			this.transKillH = thrustType.GetCheckedField("trans_kill_h");
-
-			this.transSpd = this.type.GetCheckedField("trans_spd");
-
-			this.setMode = this.type.GetCheckedMethod("SetMode");
-			this.panicSwitch = this.type.GetCheckedMethod("PanicSwitch");
+			setMode = type.GetCheckedMethod("SetMode");
+			panicSwitch = type.GetCheckedMethod("PanicSwitch");
 		}
 
 		/// <summary>
@@ -38,10 +30,10 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TranslationSpeed {
-			get => EditableVariables.GetDouble(this.transSpd, this.instance);
+			get => EditableDouble.Get(transSpd, this.instance);
 			set {
-				EditableVariables.SetDouble(this.transSpd, this.instance, value);
-				this.transSpdAct.SetValue(this.thrustInstance, (float)value);
+				EditableDouble.Set(transSpd, this.instance, value);
+				ThrustController.transSpdAct.SetValue(MechJeb.ThrustController.instance, (float)value);
 			}
 		}
 
@@ -50,8 +42,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool KillHorizontalSpeed {
-			get => (bool)this.transKillH.GetValue(this.thrustInstance);
-			set => this.transKillH.SetValue(this.thrustInstance, value);
+			get => (bool)ThrustController.transKillH.GetValue(MechJeb.ThrustController.instance);
+			set => ThrustController.transKillH.SetValue(MechJeb.ThrustController.instance, value);
 		}
 
 		/// <summary>
@@ -59,12 +51,12 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public TranslatronMode Mode {
-			get => (TranslatronMode)this.tMode.GetValue(this.thrustInstance);
+			get => (TranslatronMode)ThrustController.tMode.GetValue(MechJeb.ThrustController.instance);
 			set {
 				if(value == TranslatronMode.KeepRelative || value == TranslatronMode.Direct)
 					throw new MJServiceException("Cannot set TranslatronMode to internal values");
 
-				this.setMode.Invoke(this.instance, new object[] { (int)value });
+				setMode.Invoke(this.instance, new object[] { (int)value });
 			}
 		}
 
@@ -73,7 +65,7 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCMethod]
 		public void PanicSwitch() {
-			this.panicSwitch.Invoke(this.instance, null);
+			panicSwitch.Invoke(this.instance, null);
 		}
 
 		[KRPCEnum(Service = "MechJeb")]

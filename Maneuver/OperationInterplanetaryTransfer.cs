@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,16 +7,19 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationInterplanetaryTransfer : Operation {
-		private readonly FieldInfo waitForPhaseAngle;
+		internal new const string MechJebType = "MuMech.OperationInterplanetaryTransfer";
 
-		public OperationInterplanetaryTransfer() : base("OperationInterplanetaryTransfer") {
-			this.waitForPhaseAngle = this.type.GetCheckedField("waitForPhaseAngle", BindingFlags.NonPublic | BindingFlags.Instance);
+		// Fields and methods
+		private static FieldInfo waitForPhaseAngle;
+
+		internal static new void InitType(Type type) {
+			waitForPhaseAngle = type.GetCheckedField("waitForPhaseAngle", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		[KRPCProperty]
 		public bool WaitForPhaseAngle {
-			get => (bool)this.waitForPhaseAngle.GetValue(this.instance);
-			set => this.waitForPhaseAngle.SetValue(this.instance, value);
+			get => (bool)waitForPhaseAngle.GetValue(this.instance);
+			set => waitForPhaseAngle.SetValue(this.instance, value);
 		}
 	}
 }

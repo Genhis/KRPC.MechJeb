@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,54 +7,88 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class ThrustController : ComputerModule {
-		private readonly FieldInfo limitDynamicPressure;
-		private readonly object maxDynamicPressure;
-		private readonly FieldInfo limitToPreventOverheats;
-		private readonly FieldInfo smoothThrottle;
-		private readonly FieldInfo throttleSmoothingTime;
-		private readonly FieldInfo limitToPreventFlameout;
-		//private readonly FieldInfo limitToPreventUnstableIgnition;
-		//private readonly FieldInfo autoRCSUllaging;
-		private readonly object flameoutSafetyPct;
-		private readonly FieldInfo manageIntakes;
-		private readonly FieldInfo limitAcceleration;
-		private readonly object maxAcceleration;
-		private readonly FieldInfo limitThrottle;
-		private readonly object maxThrottle;
-		private readonly FieldInfo limiterMinThrottle;
-		private readonly object minThrottle;
-		private readonly FieldInfo differentialThrottle;
-		private readonly FieldInfo differentialThrottleSuccess;
-		private readonly FieldInfo electricThrottle;
-		private readonly object electricThrottleLo;
-		private readonly object electricThrottleHi;
+		internal new const string MechJebType = "MuMech.MechJebModuleThrustController";
 
-		public ThrustController() : base("ThrustController") {
-			this.limitDynamicPressure = this.type.GetCheckedField("limitDynamicPressure");
-			this.maxDynamicPressure = this.type.GetCheckedField("maxDynamicPressure").GetValue(this.instance);
-			this.limitToPreventOverheats = this.type.GetCheckedField("limitToPreventOverheats");
-			this.smoothThrottle = this.type.GetCheckedField("smoothThrottle");
-			this.throttleSmoothingTime = this.type.GetCheckedField("throttleSmoothingTime");
-			this.limitToPreventFlameout = this.type.GetCheckedField("limitToPreventFlameout");
-			this.flameoutSafetyPct = this.type.GetCheckedField("flameoutSafetyPct").GetValue(this.instance);
-			this.manageIntakes = this.type.GetCheckedField("manageIntakes");
-			this.limitAcceleration = this.type.GetCheckedField("limitAcceleration");
-			this.maxAcceleration = this.type.GetCheckedField("maxAcceleration").GetValue(this.instance);
-			this.limitThrottle = this.type.GetCheckedField("limitThrottle");
-			this.maxThrottle = this.type.GetCheckedField("maxThrottle").GetValue(this.instance);
-			this.limiterMinThrottle = this.type.GetCheckedField("limiterMinThrottle");
-			this.minThrottle = this.type.GetCheckedField("minThrottle").GetValue(this.instance);
-			this.differentialThrottle = this.type.GetCheckedField("differentialThrottle");
-			this.differentialThrottleSuccess = this.type.GetCheckedField("differentialThrottleSuccess");
-			this.electricThrottle = this.type.GetCheckedField("electricThrottle");
-			this.electricThrottleLo = this.type.GetCheckedField("electricThrottleLo").GetValue(this.instance);
-			this.electricThrottleHi = this.type.GetCheckedField("electricThrottleHi").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo limitDynamicPressure;
+		private static FieldInfo maxDynamicPressureField;
+		private static FieldInfo limitToPreventOverheats;
+		private static FieldInfo smoothThrottle;
+		private static FieldInfo throttleSmoothingTime;
+		private static FieldInfo limitToPreventFlameout;
+		//private static FieldInfo limitToPreventUnstableIgnition;
+		//private static FieldInfo autoRCSUllaging;
+		private static FieldInfo flameoutSafetyPctField;
+		private static FieldInfo manageIntakes;
+		private static FieldInfo limitAcceleration;
+		private static FieldInfo maxAccelerationField;
+		private static FieldInfo limitThrottle;
+		private static FieldInfo maxThrottleField;
+		private static FieldInfo limiterMinThrottle;
+		private static FieldInfo minThrottleField;
+		private static FieldInfo differentialThrottle;
+		private static FieldInfo differentialThrottleSuccess;
+		private static FieldInfo electricThrottle;
+		private static FieldInfo electricThrottleLoField;
+		private static FieldInfo electricThrottleHiField;
+
+		// Translatron fields
+		internal static FieldInfo transSpdAct;
+		internal static FieldInfo transKillH;
+		internal static FieldInfo tMode;
+
+		// Instance objects
+		private object maxDynamicPressure;
+		private object flameoutSafetyPct;
+		private object maxAcceleration;
+		private object maxThrottle;
+		private object minThrottle;
+		private object electricThrottleLo;
+		private object electricThrottleHi;
+
+		internal static new void InitType(Type type) {
+			limitDynamicPressure = type.GetCheckedField("limitDynamicPressure");
+			maxDynamicPressureField = type.GetCheckedField("maxDynamicPressure");
+			limitToPreventOverheats = type.GetCheckedField("limitToPreventOverheats");
+			smoothThrottle = type.GetCheckedField("smoothThrottle");
+			throttleSmoothingTime = type.GetCheckedField("throttleSmoothingTime");
+			limitToPreventFlameout = type.GetCheckedField("limitToPreventFlameout");
+			flameoutSafetyPctField = type.GetCheckedField("flameoutSafetyPct");
+			manageIntakes = type.GetCheckedField("manageIntakes");
+			limitAcceleration = type.GetCheckedField("limitAcceleration");
+			maxAccelerationField = type.GetCheckedField("maxAcceleration");
+			limitThrottle = type.GetCheckedField("limitThrottle");
+			maxThrottleField = type.GetCheckedField("maxThrottle");
+			limiterMinThrottle = type.GetCheckedField("limiterMinThrottle");
+			minThrottleField = type.GetCheckedField("minThrottle");
+			differentialThrottle = type.GetCheckedField("differentialThrottle");
+			differentialThrottleSuccess = type.GetCheckedField("differentialThrottleSuccess");
+			electricThrottle = type.GetCheckedField("electricThrottle");
+			electricThrottleLoField = type.GetCheckedField("electricThrottleLo");
+			electricThrottleHiField = type.GetCheckedField("electricThrottleHi");
+
+			// Translatron fields
+			tMode = type.GetCheckedField("tmode");
+			transSpdAct = type.GetCheckedField("trans_spd_act");
+			transKillH = type.GetCheckedField("trans_kill_h");
 		}
-		
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.maxDynamicPressure = maxDynamicPressureField.GetInstanceValue(instance);
+			this.flameoutSafetyPct = flameoutSafetyPctField.GetInstanceValue(instance);
+			this.maxAcceleration = maxAccelerationField.GetInstanceValue(instance);
+			this.maxThrottle = maxThrottleField.GetInstanceValue(instance);
+			this.minThrottle = minThrottleField.GetInstanceValue(instance);
+			this.electricThrottleLo = electricThrottleLoField.GetInstanceValue(instance);
+			this.electricThrottleHi = electricThrottleHiField.GetInstanceValue(instance);
+		}
+
 		[KRPCProperty]
 		public bool LimitDynamicPressure {
-			get => (bool)this.limitDynamicPressure.GetValue(this.instance);
-			set => this.limitDynamicPressure.SetValue(this.instance, value);
+			get => (bool)limitDynamicPressure.GetValue(this.instance);
+			set => limitDynamicPressure.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -63,8 +98,8 @@ namespace KRPC.MechJeb {
 		/// <remarks><see cref="LimitDynamicPressure" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxDynamicPressure {
-			get => EditableVariables.GetDouble(this.maxDynamicPressure);
-			set => EditableVariables.SetDouble(this.maxDynamicPressure, value);
+			get => EditableDouble.Get(this.maxDynamicPressure);
+			set => EditableDouble.Set(this.maxDynamicPressure, value);
 		}
 
 		/// <summary>
@@ -72,14 +107,14 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool LimitToPreventOverheats {
-			get => (bool)this.limitToPreventOverheats.GetValue(this.instance);
-			set => this.limitToPreventOverheats.SetValue(this.instance, value);
+			get => (bool)limitToPreventOverheats.GetValue(this.instance);
+			set => limitToPreventOverheats.SetValue(this.instance, value);
 		}
-		
+
 		[KRPCProperty]
 		public bool LimitAcceleration {
-			get => (bool)this.limitAcceleration.GetValue(this.instance);
-			set => this.limitAcceleration.SetValue(this.instance, value);
+			get => (bool)limitAcceleration.GetValue(this.instance);
+			set => limitAcceleration.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -88,14 +123,14 @@ namespace KRPC.MechJeb {
 		/// <remarks><see cref="LimitAcceleration" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxAcceleration {
-			get => EditableVariables.GetDouble(this.maxAcceleration);
-			set => EditableVariables.SetDouble(this.maxAcceleration, value);
+			get => EditableDouble.Get(this.maxAcceleration);
+			set => EditableDouble.Set(this.maxAcceleration, value);
 		}
-		
+
 		[KRPCProperty]
 		public bool LimitThrottle {
-			get => (bool)this.limitThrottle.GetValue(this.instance);
-			set => this.limitThrottle.SetValue(this.instance, value);
+			get => (bool)limitThrottle.GetValue(this.instance);
+			set => limitThrottle.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -104,14 +139,14 @@ namespace KRPC.MechJeb {
 		/// <remarks><see cref="LimitThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MaxThrottle {
-			get => EditableVariables.GetDouble(this.maxThrottle);
-			set => EditableVariables.SetDouble(this.maxThrottle, value);
+			get => EditableDouble.Get(this.maxThrottle);
+			set => EditableDouble.Set(this.maxThrottle, value);
 		}
 
 		[KRPCProperty]
 		public bool LimiterMinThrottle {
-			get => (bool)this.limiterMinThrottle.GetValue(this.instance);
-			set => this.limiterMinThrottle.SetValue(this.instance, value);
+			get => (bool)limiterMinThrottle.GetValue(this.instance);
+			set => limiterMinThrottle.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -120,26 +155,26 @@ namespace KRPC.MechJeb {
 		/// <remarks><see cref="LimiterMinThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double MinThrottle {
-			get => EditableVariables.GetDouble(this.minThrottle);
-			set => EditableVariables.SetDouble(this.minThrottle, value);
+			get => EditableDouble.Get(this.minThrottle);
+			set => EditableDouble.Set(this.minThrottle, value);
 		}
 
 		[KRPCProperty]
 		public bool SmoothThrottle {
-			get => (bool)this.smoothThrottle.GetValue(this.instance);
-			set => this.smoothThrottle.SetValue(this.instance, value);
+			get => (bool)smoothThrottle.GetValue(this.instance);
+			set => smoothThrottle.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public double ThrottleSmoothingTime {
-			get => (double)this.throttleSmoothingTime.GetValue(this.instance);
-			set => this.throttleSmoothingTime.SetValue(this.instance, value);
+			get => (double)throttleSmoothingTime.GetValue(this.instance);
+			set => throttleSmoothingTime.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public bool LimitToPreventFlameout {
-			get => (bool)this.limitToPreventFlameout.GetValue(this.instance);
-			set => this.limitToPreventFlameout.SetValue(this.instance, value);
+			get => (bool)limitToPreventFlameout.GetValue(this.instance);
+			set => limitToPreventFlameout.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -147,43 +182,43 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double FlameoutSafetyPct {
-			get => EditableVariables.GetDouble(this.flameoutSafetyPct);
-			set => EditableVariables.SetDouble(this.flameoutSafetyPct, value);
+			get => EditableDouble.Get(this.flameoutSafetyPct);
+			set => EditableDouble.Set(this.flameoutSafetyPct, value);
 		}
 
 		[KRPCProperty]
 		public bool ManageIntakes {
-			get => (bool)this.manageIntakes.GetValue(this.instance);
-			set => this.manageIntakes.SetValue(this.instance, value);
+			get => (bool)manageIntakes.GetValue(this.instance);
+			set => manageIntakes.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public bool DifferentialThrottle {
-			get => (bool)this.differentialThrottle.GetValue(this.instance);
-			set => this.differentialThrottle.SetValue(this.instance, value);
+			get => (bool)differentialThrottle.GetValue(this.instance);
+			set => differentialThrottle.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
-		public DifferentialThrottleStatus DifferentialThrottleStatus => (DifferentialThrottleStatus)this.differentialThrottleSuccess.GetValue(this.instance);
+		public DifferentialThrottleStatus DifferentialThrottleStatus => (DifferentialThrottleStatus)differentialThrottleSuccess.GetValue(this.instance);
 
 		[KRPCProperty]
 		public bool ElectricThrottle {
-			get => (bool)this.electricThrottle.GetValue(this.instance);
-			set => this.electricThrottle.SetValue(this.instance, value);
+			get => (bool)electricThrottle.GetValue(this.instance);
+			set => electricThrottle.SetValue(this.instance, value);
 		}
 
 		/// <remarks><see cref="ElectricThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double ElectricThrottleLo {
-			get => EditableVariables.GetDouble(this.electricThrottleLo);
-			set => EditableVariables.SetDouble(this.electricThrottleLo, value);
+			get => EditableDouble.Get(this.electricThrottleLo);
+			set => EditableDouble.Set(this.electricThrottleLo, value);
 		}
 
 		/// <remarks><see cref="ElectricThrottle" /> needs to be enabled.</remarks>
 		[KRPCProperty]
 		public double ElectricThrottleHi {
-			get => EditableVariables.GetDouble(this.electricThrottleHi);
-			set => EditableVariables.SetDouble(this.electricThrottleHi, value);
+			get => EditableDouble.Get(this.electricThrottleHi);
+			set => EditableDouble.Set(this.electricThrottleHi, value);
 		}
 	}
 

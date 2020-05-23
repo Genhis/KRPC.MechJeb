@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -9,79 +10,95 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class LandingAutopilot : AutopilotModule {
-		private readonly object touchdownSpeed;
-		private readonly FieldInfo deployGears;
-		private readonly object limitGearsStage;
-		private readonly FieldInfo deployChutes;
-		private readonly object limitChutesStage;
-		private readonly FieldInfo rcsAdjustment;
+		internal new const string MechJebType = "MuMech.MechJebModuleLandingAutopilot";
 
-		private readonly MethodInfo landAtPositionTarget;
-		private readonly MethodInfo landUntargeted;
-		private readonly MethodInfo stopLanding;
+		// Fields and methods
+		private static FieldInfo touchdownSpeedField;
+		private static FieldInfo deployGears;
+		private static FieldInfo limitGearsStageField;
+		private static FieldInfo deployChutes;
+		private static FieldInfo limitChutesStageField;
+		private static FieldInfo rcsAdjustment;
 
-		public LandingAutopilot() : base("LandingAutopilot") {
-			this.touchdownSpeed = this.type.GetCheckedField("touchdownSpeed").GetValue(this.instance);
-			this.deployGears = this.type.GetCheckedField("deployGears");
-			this.limitGearsStage = this.type.GetCheckedField("limitGearsStage").GetValue(this.instance);
-			this.deployChutes = this.type.GetCheckedField("deployChutes");
-			this.limitChutesStage = this.type.GetCheckedField("limitChutesStage").GetValue(this.instance);
-			this.rcsAdjustment = this.type.GetCheckedField("rcsAdjustment");
+		private static MethodInfo landAtPositionTarget;
+		private static MethodInfo landUntargeted;
+		private static MethodInfo stopLanding;
 
-			this.landAtPositionTarget = this.type.GetCheckedMethod("LandAtPositionTarget");
-			this.landUntargeted = this.type.GetCheckedMethod("LandUntargeted");
-			this.stopLanding = this.type.GetMethod("StopLanding");
+		// Instance objects
+		private object touchdownSpeed;
+		private object limitGearsStage;
+		private object limitChutesStage;
+
+		internal static new void InitType(Type type) {
+			touchdownSpeedField = type.GetCheckedField("touchdownSpeed");
+			deployGears = type.GetCheckedField("deployGears");
+			limitGearsStageField = type.GetCheckedField("limitGearsStage");
+			deployChutes = type.GetCheckedField("deployChutes");
+			limitChutesStageField = type.GetCheckedField("limitChutesStage");
+			rcsAdjustment = type.GetCheckedField("rcsAdjustment");
+
+			landAtPositionTarget = type.GetCheckedMethod("LandAtPositionTarget");
+			landUntargeted = type.GetCheckedMethod("LandUntargeted");
+			stopLanding = type.GetCheckedMethod("StopLanding");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.touchdownSpeed = touchdownSpeedField.GetInstanceValue(instance);
+			this.limitGearsStage = limitGearsStageField.GetInstanceValue(instance);
+			this.limitChutesStage = limitChutesStageField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
 		public double TouchdownSpeed {
-			get => EditableVariables.GetDouble(this.touchdownSpeed);
-			set => EditableVariables.SetDouble(this.touchdownSpeed, value);
+			get => EditableDouble.Get(this.touchdownSpeed);
+			set => EditableDouble.Set(this.touchdownSpeed, value);
 		}
 
 		[KRPCProperty]
 		public bool DeployGears {
-			get => (bool)this.deployGears.GetValue(this.instance);
-			set => this.deployGears.SetValue(this.instance, value);
+			get => (bool)deployGears.GetValue(this.instance);
+			set => deployGears.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public int LimitGearsStage {
-			get => EditableVariables.GetInt(this.limitGearsStage);
-			set => EditableVariables.SetInt(this.limitGearsStage, value);
+			get => EditableInt.Get(this.limitGearsStage);
+			set => EditableInt.Set(this.limitGearsStage, value);
 		}
 
 		[KRPCProperty]
 		public bool DeployChutes {
-			get => (bool)this.deployChutes.GetValue(this.instance);
-			set => this.deployChutes.SetValue(this.instance, value);
+			get => (bool)deployChutes.GetValue(this.instance);
+			set => deployChutes.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public int LimitChutesStage {
-			get => EditableVariables.GetInt(this.limitChutesStage);
-			set => EditableVariables.SetInt(this.limitChutesStage, value);
+			get => EditableInt.Get(this.limitChutesStage);
+			set => EditableInt.Set(this.limitChutesStage, value);
 		}
 
 		[KRPCProperty]
 		public bool RcsAdjustment {
-			get => (bool)this.rcsAdjustment.GetValue(this.instance);
-			set => this.rcsAdjustment.SetValue(this.instance, value);
+			get => (bool)rcsAdjustment.GetValue(this.instance);
+			set => rcsAdjustment.SetValue(this.instance, value);
 		}
 
 		[KRPCMethod]
 		public void LandAtPositionTarget() {
-			this.landAtPositionTarget.Invoke(this.instance, new object[] { this });
+			landAtPositionTarget.Invoke(this.instance, new object[] { this });
 		}
 
 		[KRPCMethod]
 		public void LandUntargeted() {
-			this.landUntargeted.Invoke(this.instance, new object[] { this });
+			landUntargeted.Invoke(this.instance, new object[] { this });
 		}
 
 		[KRPCMethod]
 		public void StopLanding() {
-			this.stopLanding.Invoke(this.instance, null);
+			stopLanding.Invoke(this.instance, null);
 		}
 	}
 }

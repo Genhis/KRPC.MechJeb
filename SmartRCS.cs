@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,30 +7,33 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class SmartRCS : DisplayModule {
-		private readonly FieldInfo target;
-		private readonly FieldInfo autoDisableSmartRCS;
+		internal const string MechJebType = "MuMech.MechJebModuleSmartRcs";
 
-		private readonly MethodInfo engage;
+		// Fields and methods
+		private static FieldInfo target;
+		private static FieldInfo autoDisableSmartRCS;
 
-		public SmartRCS() : base("SmartRcs") {
-			this.target = this.type.GetCheckedField("target");
-			this.autoDisableSmartRCS = this.type.GetCheckedField("autoDisableSmartRCS");
+		private static MethodInfo engage;
 
-			this.engage = this.type.GetCheckedMethod("Engage");
+		internal static new void InitType(Type type) {
+			target = type.GetCheckedField("target");
+			autoDisableSmartRCS = type.GetCheckedField("autoDisableSmartRCS");
+
+			engage = type.GetCheckedMethod("Engage");
 		}
 
 		[KRPCProperty]
 		public bool AutoDisableSmartRCS {
-			get => (bool)this.autoDisableSmartRCS.GetValue(this.instance);
-			set => this.autoDisableSmartRCS.SetValue(this.instance, value);
+			get => (bool)autoDisableSmartRCS.GetValue(this.instance);
+			set => autoDisableSmartRCS.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public SmartRCSMode Mode {
-			get => (SmartRCSMode)this.target.GetValue(this.instance);
+			get => (SmartRCSMode)target.GetValue(this.instance);
 			set {
-				this.target.SetValue(this.instance, (int)value);
-				this.engage.Invoke(this.instance, null);
+				target.SetValue(this.instance, (int)value);
+				engage.Invoke(this.instance, null);
 			}
 		}
 

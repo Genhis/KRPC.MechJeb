@@ -1,19 +1,37 @@
+using System;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationLambert : TimedOperation {
-		private readonly object interceptInterval;
+		internal new const string MechJebType = "MuMech.OperationLambert";
 
-		public OperationLambert() : base("OperationLambert") {
-			this.interceptInterval = this.type.GetCheckedField("interceptInterval").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo interceptIntervalField;
+		private static FieldInfo timeSelector;
+
+		// Instance objects
+		private object interceptInterval;
+
+		internal static new void InitType(Type type) {
+			interceptIntervalField = type.GetCheckedField("interceptInterval");
+			timeSelector = GetTimeSelectorField(type);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.interceptInterval = interceptIntervalField.GetInstanceValue(instance);
+			this.InitTimeSelector(timeSelector);
 		}
 
 		[KRPCProperty]
 		public double InterceptInterval {
-			get => EditableVariables.GetDouble(this.interceptInterval);
-			set => EditableVariables.SetDouble(this.interceptInterval, value);
+			get => EditableDouble.Get(this.interceptInterval);
+			set => EditableDouble.Set(this.interceptInterval, value);
 		}
 	}
 }

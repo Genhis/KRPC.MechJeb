@@ -1,13 +1,27 @@
+using System;
+using System.Reflection;
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationMoonReturn : Operation {
-		private readonly object moonReturnAltitude;
+		internal new const string MechJebType = "MuMech.OperationMoonReturn";
 
-		public OperationMoonReturn() : base("OperationMoonReturn") {
-			this.moonReturnAltitude = this.type.GetCheckedField("moonReturnAltitude").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo moonReturnAltitudeField;
+
+		// Instance objects
+		private object moonReturnAltitude;
+
+		internal static new void InitType(Type type) {
+			moonReturnAltitudeField = type.GetCheckedField("moonReturnAltitude");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.moonReturnAltitude = moonReturnAltitudeField.GetInstanceValue(instance);
 		}
 
 		/// <summary>
@@ -15,8 +29,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		[KRPCProperty]
 		public double MoonReturnAltitude {
-			get => EditableVariables.GetDouble(this.moonReturnAltitude);
-			set => EditableVariables.SetDouble(this.moonReturnAltitude, value);
+			get => EditableDouble.Get(this.moonReturnAltitude);
+			set => EditableDouble.Set(this.moonReturnAltitude, value);
 		}
 	}
 }

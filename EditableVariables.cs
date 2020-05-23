@@ -4,55 +4,53 @@ using System.Reflection;
 using KRPC.MechJeb.ExtensionMethods;
 
 namespace KRPC.MechJeb {
-	public static class EditableVariables {
-		private static PropertyInfo editableDoubleVal;
-		private static FieldInfo editableIntVal;
-		private static FieldInfo editableIntText;
+	public static class EditableDouble {
+		internal const string MechJebType = "MuMech.EditableDoubleMult";
 
-		internal static bool InitTypes(Type t) {
-			switch(t.FullName) {
-				/*case "MuMech.EditableAngle":
-					EditableAngle.degreesField = t.GetField("degrees");
-					EditableAngle.minutesField = t.GetField("minutes");
-					EditableAngle.secondsField = t.GetField("seconds");
-					EditableAngle.negative = t.GetField("negative");
-					return true;*/
-				case "MuMech.EditableDoubleMult":
-					editableDoubleVal = t.GetCheckedProperty("val");
-					return true;
-				case "MuMech.EditableInt":
-					editableIntVal = t.GetCheckedField("val");
-					editableIntText = t.GetCheckedField("_text");
-					return true;
-				default:
-					return false;
-			}
+		// Fields and methods
+		private static PropertyInfo value;
+
+		internal static void InitType(Type type) {
+			value = type.GetCheckedProperty("val");
 		}
 
-		public static double GetDouble(object instance) {
-			return (double)editableDoubleVal.GetValue(instance, null);
+		public static double Get(object instance) {
+			return (double)value.GetValue(instance, null);
 		}
 
-		public static void SetDouble(object instance, double value) {
-			editableDoubleVal.SetValue(instance, value, null);
-		}
-
-		public static int GetInt(object instance) {
-			return (int)editableIntVal.GetValue(instance);
-		}
-
-		public static void SetInt(object instance, int value) {
-			editableIntVal.SetValue(instance, value);
-			editableIntText.SetValue(instance, value.ToString());
+		public static void Set(object instance, double value) {
+			EditableDouble.value.SetValue(instance, value, null);
 		}
 
 		// Helper methods for fields which create a new object every time they are changed in GUI
-		public static double GetDouble(FieldInfo field, object instance) {
-			return GetDouble(field.GetValue(instance));
+		public static double Get(FieldInfo field, object instance) {
+			return Get(field.GetValue(instance));
 		}
 
-		public static void SetDouble(FieldInfo field, object instance, double value) {
-			SetDouble(field.GetValue(instance), value);
+		public static void Set(FieldInfo field, object instance, double value) {
+			Set(field.GetValue(instance), value);
+		}
+	}
+
+	public static class EditableInt {
+		internal const string MechJebType = "MuMech.EditableInt";
+
+		// Fields and methods
+		private static FieldInfo value;
+		private static FieldInfo text;
+
+		internal static void InitType(Type type) {
+			value = type.GetCheckedField("val");
+			text = type.GetCheckedField("_text");
+		}
+
+		public static int Get(object instance) {
+			return (int)value.GetValue(instance);
+		}
+
+		public static void Set(object instance, int value) {
+			EditableInt.value.SetValue(instance, value);
+			text.SetValue(instance, value.ToString());
 		}
 	}
 }

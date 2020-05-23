@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,22 +7,36 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class NodeExecutor : ComputerModule {
-		private readonly FieldInfo autowarp;
-		private readonly object leadTime;
-		private readonly object tolerance;
+		internal new const string MechJebType = "MuMech.MechJebModuleNodeExecutor";
 
-		private readonly MethodInfo executeOneNode;
-		private readonly MethodInfo executeAllNodes;
-		private readonly MethodInfo abort;
+		// Fields and methods
+		private static FieldInfo autowarp;
+		private static FieldInfo leadTimeField;
+		private static FieldInfo toleranceField;
 
-		public NodeExecutor() : base("NodeExecutor") {
-			this.autowarp = this.type.GetCheckedField("autowarp");
-			this.leadTime = this.type.GetCheckedField("leadTime").GetValue(this.instance);
-			this.tolerance = this.type.GetCheckedField("tolerance").GetValue(this.instance);
+		private static MethodInfo executeOneNode;
+		private static MethodInfo executeAllNodes;
+		private static MethodInfo abort;
 
-			this.executeOneNode = this.type.GetCheckedMethod("ExecuteOneNode");
-			this.executeAllNodes = this.type.GetCheckedMethod("ExecuteAllNodes");
-			this.abort = this.type.GetCheckedMethod("Abort");
+		// Instance objects
+		private object leadTime;
+		private object tolerance;
+
+		internal static new void InitType(Type type) {
+			autowarp = type.GetCheckedField("autowarp");
+			leadTimeField = type.GetCheckedField("leadTime");
+			toleranceField = type.GetCheckedField("tolerance");
+
+			executeOneNode = type.GetCheckedMethod("ExecuteOneNode");
+			executeAllNodes = type.GetCheckedMethod("ExecuteAllNodes");
+			abort = type.GetCheckedMethod("Abort");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.leadTime = leadTimeField.GetInstanceValue(instance);
+			this.tolerance = toleranceField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
@@ -29,35 +44,35 @@ namespace KRPC.MechJeb {
 
 		[KRPCProperty]
 		public bool Autowarp {
-			get => (bool)this.autowarp.GetValue(this.instance);
-			set => this.autowarp.SetValue(this.instance, value);
+			get => (bool)autowarp.GetValue(this.instance);
+			set => autowarp.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public double LeadTime {
-			get => EditableVariables.GetDouble(this.leadTime);
-			set => EditableVariables.SetDouble(this.leadTime, value);
+			get => EditableDouble.Get(this.leadTime);
+			set => EditableDouble.Set(this.leadTime, value);
 		}
 
 		[KRPCProperty]
 		public double Tolerance {
-			get => EditableVariables.GetDouble(this.tolerance);
-			set => EditableVariables.SetDouble(this.tolerance, value);
+			get => EditableDouble.Get(this.tolerance);
+			set => EditableDouble.Set(this.tolerance, value);
 		}
 
 		[KRPCMethod]
 		public void ExecuteOneNode() {
-			this.executeOneNode.Invoke(this.instance, new object[] { this });
+			executeOneNode.Invoke(this.instance, new object[] { this });
 		}
 
 		[KRPCMethod]
 		public void ExecuteAllNodes() {
-			this.executeAllNodes.Invoke(this.instance, new object[] { this });
+			executeAllNodes.Invoke(this.instance, new object[] { this });
 		}
 
 		[KRPCMethod]
 		public void Abort() {
-			this.abort.Invoke(this.instance, null);
+			abort.Invoke(this.instance, null);
 		}
 	}
 }

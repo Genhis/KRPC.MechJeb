@@ -5,62 +5,57 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
-	public abstract class ComputerModule {
+	public abstract class Module {
+		protected internal abstract void InitInstance(object instance);
+	}
+
+	public abstract class ComputerModule : Module {
+		internal const string MechJebType = "MuMech.ComputerModule";
+
+		// Fields and methods
 		private static PropertyInfo enabled;
 		private static FieldInfo usersField;
 
-		private static MethodInfo usersAdd;
-		private static MethodInfo usersRemove;
+		// Instance objects
+		protected internal object instance;
 
-		protected internal Type type;
-		protected internal readonly object instance;
+		private object users;
 
-		private readonly object users;
-
-		public ComputerModule(string moduleType) {
-			string fullModuleName = "MuMech.MechJebModule" + moduleType;
-			AssemblyLoader.loadedAssemblies.TypeOperation(t => {
-				if(t.FullName == fullModuleName)
-					this.type = t;
-			});
-
-			this.instance = MechJeb.GetComputerModule(moduleType);
-
-			this.users = usersField.GetValue(this.instance);
+		internal static void InitType(Type type) {
+			enabled = type.GetCheckedProperty("enabled");
+			usersField = type.GetCheckedField("users");
 		}
 
-		internal static bool InitTypes(Type t) {
-			switch(t.FullName) {
-				case "MuMech.AutopilotModule":
-					AutopilotModule.status = t.GetCheckedProperty("status");
-					return true;
-				case "MuMech.ComputerModule":
-					enabled = t.GetCheckedProperty("enabled");
-					usersField = t.GetCheckedField("users");
-					return true;
-				case "MuMech.UserPool":
-					usersAdd = t.GetCheckedMethod("Add");
-					usersRemove = t.GetCheckedMethod("Remove");
-					return true;
-				default:
-					return false;
-			}
+		protected internal override void InitInstance(object instance) {
+			this.instance = instance;
+
+			this.users = usersField.GetInstanceValue(instance);
 		}
 
 		public virtual bool Enabled {
 			get => (bool)enabled.GetValue(this.instance, null);
 			set {
 				if(value)
-					usersAdd.Invoke(this.users, new object[] { this });
+					UserPool.usersAdd.Invoke(this.users, new object[] { this });
 				else
-					usersRemove.Invoke(this.users, new object[] { this });
+					UserPool.usersRemove.Invoke(this.users, new object[] { this });
+			}
+		}
+
+		private static class UserPool {
+			internal const string MechJebType = "MuMech.UserPool";
+
+			internal static MethodInfo usersAdd;
+			internal static MethodInfo usersRemove;
+
+			internal static void InitType(Type type) {
+				usersAdd = type.GetCheckedMethod("Add");
+				usersRemove = type.GetCheckedMethod("Remove");
 			}
 		}
 	}
 
 	public abstract class KRPCComputerModule : ComputerModule {
-		public KRPCComputerModule(string moduleType) : base(moduleType) { }
-
 		[KRPCProperty]
 		public override bool Enabled {
 			get => base.Enabled;
@@ -69,11 +64,18 @@ namespace KRPC.MechJeb {
 	}
 
 	public abstract class AutopilotModule : KRPCComputerModule {
-		internal static PropertyInfo status;
+		internal new const string MechJebType = "MuMech.AutopilotModule";
 
-		public AutopilotModule(string moduleType) : base(moduleType) { }
+		// Fields and methods
+		internal static PropertyInfo status;
 
 		[KRPCProperty]
 		public string Status => (string)status.GetValue(this.instance, null);
+
+		internal static new void InitType(Type type) {
+			status = type.GetCheckedProperty("status");
+		}
 	}
+
+	public abstract class DisplayModule : ComputerModule { }
 }

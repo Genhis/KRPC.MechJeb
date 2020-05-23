@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -6,32 +7,60 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb {
 	[KRPCClass(Service = "MechJeb")]
 	public class StagingController : KRPCComputerModule {
-		private readonly object autostagePreDelay;
-		private readonly object autostagePostDelay;
-		private readonly object autostageLimit;
-		private readonly object fairingMaxDynamicPressure;
-		private readonly object fairingMinAltitude;
-		private readonly object clampAutoStageThrustPct;
-		private readonly object fairingMaxAerothermalFlux;
+		internal new const string MechJebType = "MuMech.MechJebModuleStagingController";
 
-		private readonly FieldInfo hotStaging;
-		private readonly object hotStagingLeadTime;
+		// Fields and methods
+		private static FieldInfo autostagePreDelayField;
+		private static FieldInfo autostagePostDelayField;
+		private static FieldInfo autostageLimitField;
+		private static FieldInfo fairingMaxDynamicPressureField;
+		private static FieldInfo fairingMinAltitudeField;
+		private static FieldInfo clampAutoStageThrustPctField;
+		private static FieldInfo fairingMaxAerothermalFluxField;
 
-		private readonly FieldInfo autostagingOnce;
+		private static FieldInfo hotStaging;
+		private static FieldInfo hotStagingLeadTimeField;
 
-		public StagingController() : base("StagingController") {
-			this.autostagePreDelay = this.type.GetCheckedField("autostagePreDelay").GetValue(this.instance);
-			this.autostagePostDelay = this.type.GetCheckedField("autostagePostDelay").GetValue(this.instance);
-			this.autostageLimit = this.type.GetCheckedField("autostageLimit").GetValue(this.instance);
-			this.fairingMaxDynamicPressure = this.type.GetCheckedField("fairingMaxDynamicPressure").GetValue(this.instance);
-			this.fairingMinAltitude = this.type.GetCheckedField("fairingMinAltitude").GetValue(this.instance);
-			this.clampAutoStageThrustPct = this.type.GetCheckedField("clampAutoStageThrustPct").GetValue(this.instance);
-			this.fairingMaxAerothermalFlux = this.type.GetCheckedField("fairingMaxAerothermalFlux").GetValue(this.instance);
+		private static FieldInfo autostagingOnce;
 
-			this.hotStaging = this.type.GetCheckedField("hotStaging");
-			this.hotStagingLeadTime = this.type.GetCheckedField("hotStagingLeadTime").GetValue(this.instance);
+		// Instance objects
+		private object autostagePreDelay;
+		private object autostagePostDelay;
+		private object autostageLimit;
+		private object fairingMaxDynamicPressure;
+		private object fairingMinAltitude;
+		private object clampAutoStageThrustPct;
+		private object fairingMaxAerothermalFlux;
 
-			this.autostagingOnce = this.type.GetCheckedField("autostagingOnce");
+		private object hotStagingLeadTime;
+
+		internal static new void InitType(Type type) {
+			autostagePreDelayField = type.GetCheckedField("autostagePreDelay");
+			autostagePostDelayField = type.GetCheckedField("autostagePostDelay");
+			autostageLimitField = type.GetCheckedField("autostageLimit");
+			fairingMaxDynamicPressureField = type.GetCheckedField("fairingMaxDynamicPressure");
+			fairingMinAltitudeField = type.GetCheckedField("fairingMinAltitude");
+			clampAutoStageThrustPctField = type.GetCheckedField("clampAutoStageThrustPct");
+			fairingMaxAerothermalFluxField = type.GetCheckedField("fairingMaxAerothermalFlux");
+
+			hotStaging = type.GetCheckedField("hotStaging");
+			hotStagingLeadTimeField = type.GetCheckedField("hotStagingLeadTime");
+
+			autostagingOnce = type.GetCheckedField("autostagingOnce");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.autostagePreDelay = autostagePreDelayField.GetInstanceValue(instance);
+			this.autostagePostDelay = autostagePostDelayField.GetInstanceValue(instance);
+			this.autostageLimit = autostageLimitField.GetInstanceValue(instance);
+			this.fairingMaxDynamicPressure = fairingMaxDynamicPressureField.GetInstanceValue(instance);
+			this.fairingMinAltitude = fairingMinAltitudeField.GetInstanceValue(instance);
+			this.clampAutoStageThrustPct = clampAutoStageThrustPctField.GetInstanceValue(instance);
+			this.fairingMaxAerothermalFlux = fairingMaxAerothermalFluxField.GetInstanceValue(instance);
+
+			this.hotStagingLeadTime = hotStagingLeadTimeField.GetInstanceValue(instance);
 		}
 
 		/// <summary>
@@ -39,8 +68,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double AutostagePreDelay {
-			get => EditableVariables.GetDouble(this.autostagePreDelay);
-			set => EditableVariables.SetDouble(this.autostagePreDelay, value);
+			get => EditableDouble.Get(this.autostagePreDelay);
+			set => EditableDouble.Set(this.autostagePreDelay, value);
 		}
 
 		/// <summary>
@@ -48,8 +77,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double AutostagePostDelay {
-			get => EditableVariables.GetDouble(this.autostagePostDelay);
-			set => EditableVariables.SetDouble(this.autostagePostDelay, value);
+			get => EditableDouble.Get(this.autostagePostDelay);
+			set => EditableDouble.Set(this.autostagePostDelay, value);
 		}
 
 		/// <summary>
@@ -57,44 +86,44 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public int AutostageLimit {
-			get => EditableVariables.GetInt(this.autostageLimit);
-			set => EditableVariables.SetInt(this.autostageLimit, value);
+			get => EditableInt.Get(this.autostageLimit);
+			set => EditableInt.Set(this.autostageLimit, value);
 		}
 
 		[KRPCProperty]
 		public double FairingMaxDynamicPressure {
-			get => EditableVariables.GetDouble(this.fairingMaxDynamicPressure);
-			set => EditableVariables.SetDouble(this.fairingMaxDynamicPressure, value);
+			get => EditableDouble.Get(this.fairingMaxDynamicPressure);
+			set => EditableDouble.Set(this.fairingMaxDynamicPressure, value);
 		}
 
 		[KRPCProperty]
 		public double FairingMinAltitude {
-			get => EditableVariables.GetDouble(this.fairingMinAltitude);
-			set => EditableVariables.SetDouble(this.fairingMinAltitude, value);
+			get => EditableDouble.Get(this.fairingMinAltitude);
+			set => EditableDouble.Set(this.fairingMinAltitude, value);
 		}
 
 		[KRPCProperty]
 		public double ClampAutoStageThrustPct {
-			get => EditableVariables.GetDouble(this.clampAutoStageThrustPct);
-			set => EditableVariables.SetDouble(this.clampAutoStageThrustPct, value);
+			get => EditableDouble.Get(this.clampAutoStageThrustPct);
+			set => EditableDouble.Set(this.clampAutoStageThrustPct, value);
 		}
 
 		[KRPCProperty]
 		public double FairingMaxAerothermalFlux {
-			get => EditableVariables.GetDouble(this.fairingMaxAerothermalFlux);
-			set => EditableVariables.SetDouble(this.fairingMaxAerothermalFlux, value);
+			get => EditableDouble.Get(this.fairingMaxAerothermalFlux);
+			set => EditableDouble.Set(this.fairingMaxAerothermalFlux, value);
 		}
 
 		[KRPCProperty]
 		public bool HotStaging {
-			get => (bool)this.hotStaging.GetValue(this.instance);
-			set => this.hotStaging.SetValue(this.instance, value);
+			get => (bool)hotStaging.GetValue(this.instance);
+			set => hotStaging.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
 		public double HotStagingLeadTime {
-			get => EditableVariables.GetDouble(this.hotStagingLeadTime);
-			set => EditableVariables.SetDouble(this.hotStagingLeadTime, value);
+			get => EditableDouble.Get(this.hotStagingLeadTime);
+			set => EditableDouble.Set(this.hotStagingLeadTime, value);
 		}
 
 		/// <summary>
@@ -103,8 +132,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>The controller needs to be enabled for this to work.</remarks>
 		[KRPCProperty]
 		public bool AutostagingOnce {
-			get => (bool)this.autostagingOnce.GetValue(this.instance);
-			set => this.autostagingOnce.SetValue(this.instance, value);
+			get => (bool)autostagingOnce.GetValue(this.instance);
+			set => autostagingOnce.SetValue(this.instance, value);
 		}
 	}
 }

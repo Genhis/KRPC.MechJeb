@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 
 namespace KRPC.MechJeb.ExtensionMethods {
-	public static class TypeExtensions {
+	public static class ReflectionExtensions {
 		public static T CreateInstance<T>(this Type type, object[] args) {
 			try {
 				Type[] types = Type.EmptyTypes;
@@ -51,6 +51,10 @@ namespace KRPC.MechJeb.ExtensionMethods {
 				Logger.Info(type + "." + name + " found");
 
 			return obj;
+		}
+
+		public static object GetInstanceValue(this FieldInfo field, object instance) {
+			return instance != null ? field.GetValue(instance) : null;
 		}
 	}
 }

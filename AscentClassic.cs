@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -9,30 +10,50 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentClassic : AscentBase {
-		private readonly object turnStartAltitude;
-		private readonly object turnStartVelocity;
-		private readonly object turnEndAltitude;
-		private readonly object turnEndAngle;
-		private readonly object turnShapeExponent;
-		private readonly FieldInfo autoPath;
-		private readonly FieldInfo autoPathPerc;
-		private readonly FieldInfo autoPathSpdFactor;
-		private readonly PropertyInfo autoTurnStartAltitude;
-		private readonly PropertyInfo autoTurnStartVelocity;
-		private readonly PropertyInfo autoTurnEndAltitude;
+		internal new const string MechJebType = "MuMech.MechJebModuleAscentClassic";
 
-		public AscentClassic() : base("AscentClassic") {
-			this.turnStartAltitude = this.type.GetCheckedField("turnStartAltitude").GetValue(this.instance);
-			this.turnStartVelocity = this.type.GetCheckedField("turnStartVelocity").GetValue(this.instance);
-			this.turnEndAltitude = this.type.GetCheckedField("turnEndAltitude").GetValue(this.instance);
-			this.turnEndAngle = this.type.GetCheckedField("turnEndAngle").GetValue(this.instance);
-			this.turnShapeExponent = this.type.GetCheckedField("turnShapeExponent").GetValue(this.instance);
-			this.autoPath = this.type.GetCheckedField("autoPath");
-			this.autoPathPerc = this.type.GetCheckedField("autoPathPerc");
-			this.autoPathSpdFactor = this.type.GetCheckedField("autoPathSpdFactor");
-			this.autoTurnStartAltitude = this.type.GetCheckedProperty("autoTurnStartAltitude");
-			this.autoTurnStartVelocity = this.type.GetCheckedProperty("autoTurnStartVelocity");
-			this.autoTurnEndAltitude = this.type.GetCheckedProperty("autoTurnEndAltitude");
+		// Fields and methods
+		private static FieldInfo turnStartAltitudeField;
+		private static FieldInfo turnStartVelocityField;
+		private static FieldInfo turnEndAltitudeField;
+		private static FieldInfo turnEndAngleField;
+		private static FieldInfo turnShapeExponentField;
+		private static FieldInfo autoPath;
+		private static FieldInfo autoPathPerc;
+		private static FieldInfo autoPathSpdFactor;
+		private static PropertyInfo autoTurnStartAltitude;
+		private static PropertyInfo autoTurnStartVelocity;
+		private static PropertyInfo autoTurnEndAltitude;
+
+		// Instance objects
+		private object turnStartAltitude;
+		private object turnStartVelocity;
+		private object turnEndAltitude;
+		private object turnEndAngle;
+		private object turnShapeExponent;
+
+		internal static new void InitType(Type type) {
+			turnStartAltitudeField = type.GetCheckedField("turnStartAltitude");
+			turnStartVelocityField = type.GetCheckedField("turnStartVelocity");
+			turnEndAltitudeField = type.GetCheckedField("turnEndAltitude");
+			turnEndAngleField = type.GetCheckedField("turnEndAngle");
+			turnShapeExponentField = type.GetCheckedField("turnShapeExponent");
+			autoPath = type.GetCheckedField("autoPath");
+			autoPathPerc = type.GetCheckedField("autoPathPerc");
+			autoPathSpdFactor = type.GetCheckedField("autoPathSpdFactor");
+			autoTurnStartAltitude = type.GetCheckedProperty("autoTurnStartAltitude");
+			autoTurnStartVelocity = type.GetCheckedProperty("autoTurnStartVelocity");
+			autoTurnEndAltitude = type.GetCheckedProperty("autoTurnEndAltitude");
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.turnStartAltitude = turnStartAltitudeField.GetInstanceValue(instance);
+			this.turnStartVelocity = turnStartVelocityField.GetInstanceValue(instance);
+			this.turnEndAltitude = turnEndAltitudeField.GetInstanceValue(instance);
+			this.turnEndAngle = turnEndAngleField.GetInstanceValue(instance);
+			this.turnShapeExponent = turnShapeExponentField.GetInstanceValue(instance);
 		}
 
 		/// <summary>
@@ -40,8 +61,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnStartAltitude {
-			get => EditableVariables.GetDouble(this.turnStartAltitude);
-			set => EditableVariables.SetDouble(this.turnStartAltitude, value);
+			get => EditableDouble.Get(this.turnStartAltitude);
+			set => EditableDouble.Set(this.turnStartAltitude, value);
 		}
 
 		/// <summary>
@@ -49,8 +70,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnStartVelocity {
-			get => EditableVariables.GetDouble(this.turnStartVelocity);
-			set => EditableVariables.SetDouble(this.turnStartVelocity, value);
+			get => EditableDouble.Get(this.turnStartVelocity);
+			set => EditableDouble.Set(this.turnStartVelocity, value);
 		}
 
 		/// <summary>
@@ -58,8 +79,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnEndAltitude {
-			get => EditableVariables.GetDouble(this.turnEndAltitude);
-			set => EditableVariables.SetDouble(this.turnEndAltitude, value);
+			get => EditableDouble.Get(this.turnEndAltitude);
+			set => EditableDouble.Set(this.turnEndAltitude, value);
 		}
 
 		/// <summary>
@@ -67,8 +88,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnEndAngle {
-			get => EditableVariables.GetDouble(this.turnEndAngle);
-			set => EditableVariables.SetDouble(this.turnEndAngle, value);
+			get => EditableDouble.Get(this.turnEndAngle);
+			set => EditableDouble.Set(this.turnEndAngle, value);
 		}
 
 		/// <summary>
@@ -76,8 +97,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public double TurnShapeExponent {
-			get => EditableVariables.GetDouble(this.turnShapeExponent);
-			set => EditableVariables.SetDouble(this.turnShapeExponent, value);
+			get => EditableDouble.Get(this.turnShapeExponent);
+			set => EditableDouble.Set(this.turnShapeExponent, value);
 		}
 
 		/// <summary>
@@ -85,8 +106,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public bool AutoPath {
-			get => (bool)this.autoPath.GetValue(this.instance);
-			set => this.autoPath.SetValue(this.instance, value);
+			get => (bool)autoPath.GetValue(this.instance);
+			set => autoPath.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -94,8 +115,8 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public float AutoPathPerc {
-			get => (float)this.autoPathPerc.GetValue(this.instance);
-			set => this.autoPathPerc.SetValue(this.instance, value);
+			get => (float)autoPathPerc.GetValue(this.instance);
+			set => autoPathPerc.SetValue(this.instance, value);
 		}
 
 		/// <summary>
@@ -103,17 +124,17 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public float AutoPathSpeedFactor {
-			get => (float)this.autoPathSpdFactor.GetValue(this.instance);
-			set => this.autoPathSpdFactor.SetValue(this.instance, value);
+			get => (float)autoPathSpdFactor.GetValue(this.instance);
+			set => autoPathSpdFactor.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
-		public double AutoTurnStartAltitude => EditableVariables.GetDouble(this.autoTurnStartAltitude);
+		public double AutoTurnStartAltitude => EditableDouble.Get(autoTurnStartAltitude);
 
 		[KRPCProperty]
-		public double AutoTurnStartVelocity => EditableVariables.GetDouble(this.autoTurnStartVelocity);
+		public double AutoTurnStartVelocity => EditableDouble.Get(autoTurnStartVelocity);
 
 		[KRPCProperty]
-		public double AutoTurnEndAltitude => EditableVariables.GetDouble(this.autoTurnEndAltitude);
+		public double AutoTurnEndAltitude => EditableDouble.Get(autoTurnEndAltitude);
 	}
 }

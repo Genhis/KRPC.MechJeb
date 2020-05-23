@@ -1,8 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
-using KRPC.MechJeb.Maneuver;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -11,42 +11,81 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCService(GameScene = Service.GameScene.Flight)]
 	public static class MechJeb {
+		internal const string MechJebType = "MuMech.MechJebCore";
+
 		private static Type type;
 		private static MethodInfo getComputerModule;
 
-		private static object[] modules;
-		private static object[] windows;
-		private static object[] controllers;
+		private static readonly Dictionary<string, Module> modules = new Dictionary<string, Module>();
 
 		internal static bool InitTypes() {
-			AssemblyLoader.loadedAssemblies.TypeOperation(t => {
-				switch(t.FullName) {
-					case "MuMech.MechJebCore":
-						type = t;
-						getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
-						break;
-					default:
-						bool unused = AscentAutopilot.InitTypes(t) || ComputerModule.InitTypes(t) || EditableVariables.InitTypes(t) || Operation.InitTypes(t) || TimeSelector.InitTypes(t) || VesselExtensions.InitTypes(t);
-						break;
+			// Scan the project assembly for MechJeb 2 reflection classes
+			Dictionary<string, Type> mechjebTypes = new Dictionary<string, Type>();
+			foreach(Type t in Assembly.GetExecutingAssembly().GetTypes()) {
+				FieldInfo mechjebTypeField = t.GetField("MechJebType", BindingFlags.NonPublic | BindingFlags.Static);
+				if(mechjebTypeField != null) {
+					string mechjebType = (string)mechjebTypeField.GetValue(null);
+					Logger.Info("Found class " + t.Name + " wanting to use " + mechjebType);
+					mechjebTypes.Add(mechjebType, t);
+				}
+			}
+
+			// Scan all assemblies to match kRPC classes to MechJeb 2
+			AssemblyLoader.loadedAssemblies.TypeOperation(mechjebType => {
+				if(mechjebTypes.TryGetValue(mechjebType.FullName, out Type internalType)) {
+					Logger.Info("Loading class " + internalType.Name + " using " + mechjebType.FullName);
+					internalType.GetMethod("InitType", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { mechjebType });
+					mechjebTypes.Remove(mechjebType.FullName);
 				}
 			});
 
+			// Check if all classes have been initialized
+			foreach(KeyValuePair<string, Type> p in mechjebTypes)
+				Logger.Severe("Cannot initialize class " + p.Value.Name + " because " + p.Key + " was not found");
+
 			return type != null;
+		}
+
+		internal static void InitType(Type t) {
+			type = t;
+			getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
+
+			// MechJeb found, create module instances
+			modules.Add("AirplaneAutopilot", new AirplaneAutopilot());
+			modules.Add("AscentAutopilot", new AscentAutopilot());
+			modules.Add("DockingAutopilot", new DockingAutopilot());
+			modules.Add("LandingAutopilot", new LandingAutopilot());
+			modules.Add("RendezvousAutopilot", new RendezvousAutopilot());
+
+			modules.Add("ManeuverPlanner", new ManeuverPlanner());
+			modules.Add("SmartASS", new SmartASS());
+			modules.Add("SmartRCS", new SmartRCS());
+			modules.Add("Translatron", new Translatron());
+
+			modules.Add("DeployableAntennaController", new DeployableController());
+			modules.Add("NodeExecutor", new NodeExecutor());
+			modules.Add("RCSController", new RCSController());
+			modules.Add("StagingController", new StagingController());
+			modules.Add("SolarPanelController", new DeployableController());
+			modules.Add("TargetController", new TargetController());
+			modules.Add("ThrustController", new ThrustController());
 		}
 
 		internal static bool InitInstance() {
 			//assume all MechJeb types are loaded
 
 			APIReady = false;
-			modules = new object[5];
-			windows = new object[4];
-			controllers = new object[7];
-
 			Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
 			if(Instance == null)
 				return false;
 
-			AssemblyLoader.loadedAssemblies.TypeOperation(t => Operation.InitInstance(t));
+			// Set module instances to MechJeb objects
+			foreach(KeyValuePair<string, Module> p in modules) {
+				object moduleInstance = GetComputerModule(p.Key);
+				if(moduleInstance != null)
+					p.Value.InitInstance(moduleInstance);
+			}
+
 			APIReady = true;
 			return true;
 		}
@@ -54,7 +93,7 @@ namespace KRPC.MechJeb {
 		internal static object GetComputerModule(string moduleType) {
 			object module = getComputerModule.Invoke(Instance, new object[] { "MechJebModule" + moduleType });
 			if(module == null)
-				Logger.Severe("No instance of " + moduleType + " found");
+				Logger.Severe("MechJeb module " + moduleType + " not found");
 
 			return module;
 		}
@@ -72,70 +111,56 @@ namespace KRPC.MechJeb {
 		// MODULES
 
 		[KRPCProperty]
-		public static AirplaneAutopilot AirplaneAutopilot => GetComputerModule<AirplaneAutopilot>(modules, 0);
+		public static AirplaneAutopilot AirplaneAutopilot => (AirplaneAutopilot)modules["AirplaneAutopilot"];
 
 		[KRPCProperty]
-		public static AscentAutopilot AscentAutopilot => GetComputerModule<AscentAutopilot>(modules, 1);
+		public static AscentAutopilot AscentAutopilot => (AscentAutopilot)modules["AscentAutopilot"];
 
 		[KRPCProperty]
-		public static DockingAutopilot DockingAutopilot => GetComputerModule<DockingAutopilot>(modules, 2);
+		public static DockingAutopilot DockingAutopilot => (DockingAutopilot)modules["DockingAutopilot"];
 
 		[KRPCProperty]
-		public static LandingAutopilot LandingAutopilot => GetComputerModule<LandingAutopilot>(modules, 3);
+		public static LandingAutopilot LandingAutopilot => (LandingAutopilot)modules["LandingAutopilot"];
 
 		[KRPCProperty]
-		public static RendezvousAutopilot RendezvousAutopilot => GetComputerModule<RendezvousAutopilot>(modules, 4);
+		public static RendezvousAutopilot RendezvousAutopilot => (RendezvousAutopilot)modules["RendezvousAutopilot"];
 
 		// WINDOWS
 
 		[KRPCProperty]
-		public static ManeuverPlanner ManeuverPlanner => GetComputerModule<ManeuverPlanner>(windows, 0);
+		public static ManeuverPlanner ManeuverPlanner => (ManeuverPlanner)modules["ManeuverPlanner"];
 
 		[KRPCProperty]
-		public static SmartASS SmartASS => GetComputerModule<SmartASS>(windows, 2);
+		public static SmartASS SmartASS => (SmartASS)modules["SmartASS"];
 
 		[KRPCProperty]
-		public static SmartRCS SmartRCS => GetComputerModule<SmartRCS>(windows, 1);
+		public static SmartRCS SmartRCS => (SmartRCS)modules["SmartRCS"];
 
 		[KRPCProperty]
-		public static Translatron Translatron => GetComputerModule<Translatron>(windows, 3);
+		public static Translatron Translatron => (Translatron)modules["Translatron"];
 
 		// CONTROLLERS
 
 		[KRPCProperty]
-		public static DeployableController AntennaController => GetComputerModule<DeployableController>(controllers, 5, "DeployableAntennaController");
+		public static DeployableController AntennaController => (DeployableController)modules["AntennaController"];
 
 		[KRPCProperty]
-		public static NodeExecutor NodeExecutor => GetComputerModule<NodeExecutor>(controllers, 0);
+		public static NodeExecutor NodeExecutor => (NodeExecutor)modules["NodeExecutor"];
 
 		[KRPCProperty]
-		public static RCSController RCSController => GetComputerModule<RCSController>(controllers, 1);
+		public static RCSController RCSController => (RCSController)modules["RCSController"];
 
 		[KRPCProperty]
-		public static StagingController StagingController => GetComputerModule<StagingController>(controllers, 2);
+		public static StagingController StagingController => (StagingController)modules["StagingController"];
 
 		[KRPCProperty]
-		public static DeployableController SolarPanelController => GetComputerModule<DeployableController>(controllers, 6, "SolarPanelController");
+		public static DeployableController SolarPanelController => (DeployableController)modules["SolarPanelController"];
 
 		[KRPCProperty]
-		public static TargetController TargetController => GetComputerModule<TargetController>(controllers, 3);
+		public static TargetController TargetController => (TargetController)modules["TargetController"];
 
 		[KRPCProperty]
-		public static ThrustController ThrustController => GetComputerModule<ThrustController>(controllers, 4);
-
-		private static T GetComputerModule<T>(object[] modules, int id) {
-			return GetComputerModule<T>(modules, id, (object[])null);
-		}
-
-		private static T GetComputerModule<T>(object[] modules, int id, string module) {
-			return GetComputerModule<T>(modules, id, new object[] { module });
-		}
-
-		private static T GetComputerModule<T>(object[] modules, int id, object[] args) {
-			if(modules[id] == null)
-				modules[id] = typeof(T).CreateInstance<T>(args);
-			return (T)modules[id];
-		}
+		public static ThrustController ThrustController => (ThrustController)modules["ThrustController"];
 	}
 
 	/// <summary>

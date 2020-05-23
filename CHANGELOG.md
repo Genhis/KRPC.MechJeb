@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- **All object instances** (modules, windows, controllers and operations) **are now permanent** until you reset KSP, so you can cache them and reuse them for multiple flights which may be useful if your program switches between vessels
 
 ## [0.5.1] - 2020-02-16
 ### Fixed

@@ -26,6 +26,8 @@ Although all examples have been tested using **kRPC v0.4.8** and **MechJeb v2.8.
 - [Tutorials and Examples](https://genhis.github.io/KRPC.MechJeb/tutorials.html)
 - [Third-party scripts](https://genhis.github.io/KRPC.MechJeb/third-party-scripts.html)
 
+When you enter the flight scene or switch between vessels, it is **recommended to check whether the API is ready** before you call other operations. Otherwise, it may throw an exception.
+
 ## Contributing
 
 All contributions to this mod are welcome. If you are interested in contributing, please read our [Contribution guidelines](https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md) and [Code of conduct](https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CODE_OF_CONDUCT.md).

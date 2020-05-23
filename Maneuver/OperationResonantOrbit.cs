@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
@@ -8,24 +11,41 @@ namespace KRPC.MechJeb.Maneuver {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationResonantOrbit : TimedOperation {
-		private readonly object resonanceNumerator;
-		private readonly object resonanceDenominator;
+		internal new const string MechJebType = "MuMech.OperationResonantOrbit";
 
-		public OperationResonantOrbit() : base("OperationResonantOrbit") {
-			this.resonanceNumerator = this.type.GetCheckedField("resonanceNumerator").GetValue(this.instance);
-			this.resonanceDenominator = this.type.GetCheckedField("resonanceDenominator").GetValue(this.instance);
+		// Fields and methods
+		private static FieldInfo resonanceNumeratorField;
+		private static FieldInfo resonanceDenominatorField;
+		private static FieldInfo timeSelector;
+
+		// Instance objects
+		private object resonanceNumerator;
+		private object resonanceDenominator;
+
+		internal static new void InitType(Type type) {
+			resonanceNumeratorField = type.GetCheckedField("resonanceNumerator");
+			resonanceDenominatorField = type.GetCheckedField("resonanceDenominator");
+			timeSelector = GetTimeSelectorField(type);
+		}
+
+		protected internal override void InitInstance(object instance) {
+			base.InitInstance(instance);
+
+			this.resonanceNumerator = resonanceNumeratorField.GetInstanceValue(instance);
+			this.resonanceDenominator = resonanceDenominatorField.GetInstanceValue(instance);
+			this.InitTimeSelector(timeSelector);
 		}
 
 		[KRPCProperty]
 		public int ResonanceNumerator {
-			get => EditableVariables.GetInt(this.resonanceNumerator);
-			set => EditableVariables.SetInt(this.resonanceNumerator, value);
+			get => EditableInt.Get(this.resonanceNumerator);
+			set => EditableInt.Set(this.resonanceNumerator, value);
 		}
 
 		[KRPCProperty]
 		public int ResonanceDenominator {
-			get => EditableVariables.GetInt(this.resonanceDenominator);
-			set => EditableVariables.SetInt(this.resonanceDenominator, value);
+			get => EditableInt.Get(this.resonanceDenominator);
+			set => EditableInt.Set(this.resonanceDenominator, value);
 		}
 	}
 }

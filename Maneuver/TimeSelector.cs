@@ -14,34 +14,34 @@ namespace KRPC.MechJeb.Maneuver {
 
 	[KRPCClass(Service = "MechJeb")]
 	public class TimeSelector {
+		internal const string MechJebType = "MuMech.TimeSelector";
+
+		// Fields and methods
 		private static FieldInfo allowedTimeRefField;
 		private static FieldInfo currentTimeRef;
 		private static FieldInfo leadTimeField;
 		private static FieldInfo circularizeAltitudeField;
 
-		internal readonly object instance;
-		private readonly int[] allowedTimeRef; //MuMech.TimeReference enum
-		private readonly object leadTime;
-		private readonly object circularizeAltitude;
+		// Instance objects
+		internal object instance;
 
-		public TimeSelector(object instance) {
-			this.instance = instance;
-			this.allowedTimeRef = (int[])allowedTimeRefField.GetValue(instance);
-			this.leadTime = leadTimeField.GetValue(instance);
-			this.circularizeAltitude = circularizeAltitudeField.GetValue(instance);
+		private int[] allowedTimeRef; //MuMech.TimeReference enum
+		private object leadTime;
+		private object circularizeAltitude;
+
+		internal static void InitType(Type type) {
+			allowedTimeRefField = type.GetCheckedField("allowedTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
+			currentTimeRef = type.GetCheckedField("currentTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
+			leadTimeField = type.GetCheckedField("leadTime");
+			circularizeAltitudeField = type.GetCheckedField("circularizeAltitude");
 		}
 
-		internal static bool InitTypes(Type t) {
-			switch(t.FullName) {
-				case "MuMech.TimeSelector":
-					allowedTimeRefField = t.GetCheckedField("allowedTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
-					currentTimeRef = t.GetCheckedField("currentTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
-					leadTimeField = t.GetCheckedField("leadTime");
-					circularizeAltitudeField = t.GetCheckedField("circularizeAltitude");
-					return true;
-				default:
-					return false;
-			}
+		protected internal void InitInstance(object instance) {
+			this.instance = instance;
+
+			this.allowedTimeRef = (int[])allowedTimeRefField.GetInstanceValue(instance);
+			this.leadTime = leadTimeField.GetInstanceValue(instance);
+			this.circularizeAltitude = circularizeAltitudeField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
@@ -62,8 +62,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		[KRPCProperty]
 		public double LeadTime {
-			get => EditableVariables.GetDouble(this.leadTime);
-			set => EditableVariables.SetDouble(this.leadTime, value);
+			get => EditableDouble.Get(this.leadTime);
+			set => EditableDouble.Set(this.leadTime, value);
 		}
 
 		/// <summary>
@@ -71,8 +71,8 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		[KRPCProperty]
 		public double CircularizeAltitude {
-			get => EditableVariables.GetDouble(this.circularizeAltitude);
-			set => EditableVariables.SetDouble(this.circularizeAltitude, value);
+			get => EditableDouble.Get(this.circularizeAltitude);
+			set => EditableDouble.Set(this.circularizeAltitude, value);
 		}
 	}
 }
