@@ -33,9 +33,9 @@ namespace KRPC.MechJeb {
 		private static FieldInfo electricThrottleHiField;
 
 		// Translatron fields
+		internal static PropertyInfo tMode;
 		internal static FieldInfo transSpdAct;
 		internal static FieldInfo transKillH;
-		internal static FieldInfo tMode;
 
 		// Instance objects
 		private object maxDynamicPressure;
@@ -68,7 +68,7 @@ namespace KRPC.MechJeb {
 			electricThrottleHiField = type.GetCheckedField("electricThrottleHi");
 
 			// Translatron fields
-			tMode = type.GetCheckedField("tmode");
+			tMode = type.GetCheckedProperty("tmode");
 			transSpdAct = type.GetCheckedField("trans_spd_act");
 			transKillH = type.GetCheckedField("trans_kill_h");
 		}
