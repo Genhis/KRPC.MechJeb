@@ -5,13 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 ### Added
+- **`MakeNodes()` method to ManeuverPlanner operations** returning a list of nodes
 - Popup windows in main menu and flight screens showing initialization errors and unavailable API methods
 ### Changed
 - AscentClassic property `AutoPathPerc` was renamed to `AutoTurnPercent`
 - AscentClassic property `AutoPathSpeedFactor` was renamed to `AutoTurnSpeedFactor`
 - **All object instances** (modules, windows, controllers and operations) **are now permanent** until you reset KSP, so you can cache them and reuse them for multiple flights which may be useful if your program switches between vessels
+### Deprecated
+- `MakeNode()` in ManeuverPlanner operations was replaced with `MakeNodes()`
 ### Fixed
 - AscentClassic properties - `AutoPathPerc` and `AutoPathSpeedFactor`
+- ManeuverPlanner operations were not working in MechJeb v2.9.2.0+ ([#10](https://github.com/Genhis/KRPC.MechJeb/issues/10))
 - Translatron mode getter raised an exception
 
 ## [0.5.1] - 2020-02-16

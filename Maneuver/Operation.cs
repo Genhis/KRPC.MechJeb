@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
@@ -27,14 +28,14 @@ namespace KRPC.MechJeb.Maneuver {
 
 		// Fields and methods
 		private static MethodInfo errorMessage;
-		private static MethodInfo makeNodeImpl;
+		private static MethodInfo makeNodesImpl;
 
 		// Instance objects
 		protected internal object instance;
 
 		internal static void InitType(Type type) {
 			errorMessage = type.GetCheckedMethod("getErrorMessage");
-			makeNodeImpl = type.GetCheckedMethod("MakeNodeImpl");
+			makeNodesImpl = type.GetCheckedMethod("MakeNodesImpl");
 		}
 
 		protected internal virtual void InitInstance(object instance) {
@@ -48,22 +49,40 @@ namespace KRPC.MechJeb.Maneuver {
 		public string ErrorMessage => (string)errorMessage.Invoke(this.instance, null);
 
 		/// <summary>
-		/// Create a new maneuver node.
+		/// Execute the operation and create appropriate maneuver nodes.
 		/// A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 		/// 
 		/// OperationException is thrown when there is something wrong with the operation.
 		/// MJServiceException - Internal service error.
 		/// </summary>
-		/// <returns></returns>
-		[KRPCMethod]
+		/// <returns>The first maneuver node necessary to perform this operation.</returns>
+		/// <remarks>This method is deprecated, use MakeNodes instead.</remarks>
+		[KRPCMethod, Obsolete("Replaced with MakeNodes")]
 		public Node MakeNode() {
+			return this.MakeNodes()[0];
+		}
+
+		/// <summary>
+		/// Execute the operation and create appropriate maneuver nodes.
+		/// A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+		/// 
+		/// OperationException is thrown when there is something wrong with the operation.
+		/// MJServiceException - Internal service error.
+		/// </summary>
+		/// <returns>A list of maneuver nodes necessary to perform this operation</returns>
+		[KRPCMethod]
+		public List<Node> MakeNodes() {
 			try {
 				Vessel vessel = FlightGlobals.ActiveVessel;
-				object param = makeNodeImpl.Invoke(this.instance, new object[] { vessel.orbit, Planetarium.GetUniversalTime(), MechJeb.TargetController.instance });
-				//a warning may be stored in ErrorMessage property (if it's an error, we will throw an exception)
+				IEnumerable<object> parameters = (IEnumerable<object>)makeNodesImpl.Invoke(this.instance, new object[] { vessel.orbit, Planetarium.GetUniversalTime(), MechJeb.TargetController.instance });
+				// A warning may be stored in ErrorMessage property (if it's an error, we will throw an exception)
 
-				vessel.RemoveAllManeuverNodes(); //this implementation supports only one active ManeuverNode; removing the others to prevent bugs
-				return new Node(vessel, vessel.PlaceManeuverNode(vessel.orbit, (Vector3d)ManeuverParameters.dV.GetValue(param), (double)ManeuverParameters.uT.GetValue(param)));
+				//vessel.RemoveAllManeuverNodes(); // This implementation supports only one active ManeuverOperation; removing the other maneuver nodess to prevent bugs
+
+				List<Node> nodes = new List<Node>();
+				foreach(object param in parameters)
+					nodes.Add(new Node(vessel, vessel.PlaceManeuverNode(vessel.orbit, (Vector3d)ManeuverParameters.dV.GetValue(param), (double)ManeuverParameters.uT.GetValue(param))));
+				return nodes;
 			}
 			catch(Exception ex) {
 				if(ex is TargetInvocationException)
