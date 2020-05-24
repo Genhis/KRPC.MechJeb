@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - AscentClassic properties - `AutoPathPerc` and `AutoPathSpeedFactor`
 - ManeuverPlanner operations were not working in MechJeb v2.9.2.0+ ([#10](https://github.com/Genhis/KRPC.MechJeb/issues/10))
 - Translatron mode getter raised an exception
+- The mod looked for MechJeb instance in flight mode every frame until it found one; now it does so only once per vessel change
 
 ## [0.5.1] - 2020-02-16
 ### Fixed
