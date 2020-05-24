@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 ### Added
+- `LaunchMode` property to AscentAutopilot to determine whether there is an ongoing timed launch
+- `AbortTimedLaunch()` method to AscentAutopilot to cancel any known timed launch before it starts
 - **`MakeNodes()` method to ManeuverPlanner operations** returning a list of nodes
 - Popup windows in main menu and flight screens showing initialization errors and unavailable API methods
 ### Changed

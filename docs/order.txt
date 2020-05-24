@@ -69,6 +69,8 @@ MechJeb.AscentAutopilot.SkipCircularization
 MechJeb.AscentAutopilot.WarpCountDown
 MechJeb.AscentAutopilot.LaunchLANDifference
 MechJeb.AscentAutopilot.LaunchPhaseAngle
+MechJeb.AscentAutopilot.LaunchMode
+MechJeb.AscentAutopilot.AbortTimedLaunch
 MechJeb.AscentAutopilot.LaunchToRendezvous
 MechJeb.AscentAutopilot.LaunchToTargetPlane
 
@@ -89,6 +91,11 @@ MechJeb.AscentGT.IntermediateAltitude
 MechJeb.AscentGT.TurnStartAltitude
 MechJeb.AscentGT.TurnStartPitch
 MechJeb.AscentGT.TurnStartVelocity
+
+MechJeb.AscentLaunchMode.Normal
+MechJeb.AscentLaunchMode.Rendezvous
+MechJeb.AscentLaunchMode.TargetPlane
+MechJeb.AscentLaunchMode.Unknown
 
 MechJeb.AscentPVG.DesiredApoapsis
 MechJeb.AscentPVG.PitchStartVelocity

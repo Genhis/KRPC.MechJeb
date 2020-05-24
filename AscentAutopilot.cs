@@ -51,6 +51,7 @@ namespace KRPC.MechJeb {
 		private static FieldInfo launchLANDifferenceField;
 		private static FieldInfo warpCountDownField;
 
+		private static FieldInfo timedLaunch;
 		private static MethodInfo startCountdown;
 
 		// Instance objects
@@ -87,6 +88,7 @@ namespace KRPC.MechJeb {
 			launchLANDifferenceField = type.GetCheckedField("launchLANDifference");
 			warpCountDownField = type.GetCheckedField("warpCountDown");
 
+			timedLaunch = type.GetCheckedField("timedLaunch");
 			startCountdown = type.GetCheckedMethod("StartCountdown");
 		}
 
@@ -323,9 +325,41 @@ namespace KRPC.MechJeb {
 			set => EditableInt.Set(this.warpCountDown, value);
 		}
 
+		/// <summary>
+		/// Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+		/// </summary>
+		[KRPCProperty]
+		public AscentLaunchMode LaunchMode {
+			get {
+				if(!(bool)timedLaunch.GetValue(this.instance))
+					return AscentLaunchMode.Normal;
+				if((bool)AscentGuidance.launchingToRendezvous.GetValue(this.guiInstance))
+					return AscentLaunchMode.Rendezvous;
+				if((bool)AscentGuidance.launchingToPlane.GetValue(this.guiInstance))
+					return AscentLaunchMode.TargetPlane;
+				return AscentLaunchMode.Unknown;
+			}
+		}
+
+		/// <summary>
+		/// Abort a known timed launch when it has not started yet
+		/// </summary>
+		[KRPCMethod]
+		public void AbortTimedLaunch() {
+			if(this.LaunchMode == AscentLaunchMode.Unknown)
+				throw new InvalidOperationException("There is an unknown timed launch ongoing which can't be aborted");
+
+			AscentGuidance.launchingToPlane.SetValue(this.guiInstance, false);
+			AscentGuidance.launchingToRendezvous.SetValue(this.guiInstance, false);
+			timedLaunch.SetValue(this.instance, false);
+		}
+
+		/// <summary>
+		/// Launch to rendezvous with the selected target.
+		/// </summary>
 		[KRPCMethod]
 		public void LaunchToRendezvous() {
-			this.AbortLaunch();
+			this.AbortTimedLaunch();
 			AscentGuidance.launchingToRendezvous.SetValue(this.guiInstance, true);
 			startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchPhaseAngle) });
 		}
@@ -335,14 +369,32 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCMethod]
 		public void LaunchToTargetPlane() {
-			this.AbortLaunch();
+			this.AbortTimedLaunch();
 			AscentGuidance.launchingToPlane.SetValue(this.guiInstance, true);
 			startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchLANDifference) });
 		}
 
-		private void AbortLaunch() {
-			AscentGuidance.launchingToPlane.SetValue(this.guiInstance, false);
-			AscentGuidance.launchingToRendezvous.SetValue(this.guiInstance, false);
+		[KRPCEnum(Service = "MechJeb")]
+		public enum AscentLaunchMode {
+			/// <summary>
+			/// The autopilot is not performing a timed launch.
+			/// </summary>
+			Normal,
+
+			/// <summary>
+			/// The autopilot is performing a timed launch to rendezvous with the target vessel.
+			/// </summary>
+			Rendezvous,
+
+			/// <summary>
+			/// The autopilot is performing a timed launch to target plane.
+			/// </summary>
+			TargetPlane,
+
+			/// <summary>
+			/// The autopilot is performing an unknown timed launch.
+			/// </summary>
+			Unknown = 99
 		}
 	}
 
