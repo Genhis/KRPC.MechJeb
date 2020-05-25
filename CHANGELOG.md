@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.6.0] - 2020-05-25
 ### Added
 - `LaunchMode` property to AscentAutopilot to determine whether there is an ongoing timed launch
 - `AbortTimedLaunch()` method to AscentAutopilot to cancel any known timed launch before it starts
@@ -43,7 +45,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **AscentPEG** module overhaul (renamed to **AscentPVG**)
 - **OperationTransfer** changed from Hohmann to Bi-impulsive transfer
 ### Fixed
-- AscentAutopilot raised an exception during initialization phase ([#1](https://github.com/Genhis/KRPC.MechJeb/issues/1) due to AscentPEG being renamed to AscentPVG ([MuMech/MechJeb2@61c0ada](https://github.com/MuMech/MechJeb2/commit/61c0adae6bea4f2f4e9b02b86534d4f1993b9e8))
+- AscentAutopilot raised an exception during initialization phase ([#1](https://github.com/Genhis/KRPC.MechJeb/issues/1)) due to AscentPEG being renamed to AscentPVG ([MuMech/MechJeb2@61c0ada](https://github.com/MuMech/MechJeb2/commit/61c0adae6bea4f2f4e9b02b86534d4f1993b9e8))
 - DeployableController raised an exception during initialization phase
 
 ## [0.3.0] - 2018-09-15
@@ -108,7 +110,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **StagingController**
 - **TargetController** to get information about the current target
 
-[Unreleased]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.4.0...v0.4.1
