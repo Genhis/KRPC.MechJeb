@@ -1,4 +1,4 @@
-Third-party scripts
+Third-party Scripts
 ===================
 
 Here is a collection of third-party scripts made with kRPC.MechJeb addon.
