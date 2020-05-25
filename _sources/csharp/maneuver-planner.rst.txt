@@ -237,13 +237,31 @@ OperationApoapsis
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewApoapsis { get; set; }
@@ -277,13 +295,31 @@ OperationCircularize
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: TimeSelector TimeSelector { get; }
@@ -322,13 +358,31 @@ OperationCourseCorrection
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
 
@@ -349,13 +403,31 @@ OperationEllipticize
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewApoapsis { get; set; }
@@ -394,13 +466,31 @@ OperationInclination
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewInclination { get; set; }
@@ -433,13 +523,31 @@ OperationInterplanetaryTransfer
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: bool WaitForPhaseAngle { get; set; }
@@ -466,13 +574,31 @@ OperationKillRelVel
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: TimeSelector TimeSelector { get; }
@@ -505,13 +631,31 @@ OperationLambert
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: TimeSelector TimeSelector { get; }
@@ -538,13 +682,31 @@ OperationLan
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewLAN { get; set; }
@@ -567,7 +729,7 @@ OperationLongitude
 
 .. class:: OperationLongitude
 
-   Change longitude of ascending node
+   Change surface longitude of apsis
 
    .. property:: string ErrorMessage { get; }
 
@@ -577,13 +739,31 @@ OperationLongitude
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewSurfaceLongitude { get; set; }
@@ -616,13 +796,31 @@ OperationMoonReturn
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double MoonReturnAltitude { get; set; }
@@ -649,13 +847,31 @@ OperationPeriapsis
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewPeriapsis { get; set; }
@@ -688,13 +904,31 @@ OperationPlane
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: TimeSelector TimeSelector { get; }
@@ -722,13 +956,31 @@ OperationResonantOrbit
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: int ResonanceDenominator { get; set; }
@@ -767,13 +1019,31 @@ OperationSemiMajor
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: double NewSemiMajorAxis { get; set; }
@@ -809,13 +1079,31 @@ OperationTransfer
 
    .. method:: SpaceCenter.Node MakeNode()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: System.Collections.Generic.IList<SpaceCenter.Node> MakeNodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. property:: bool InterceptOnly { get; set; }

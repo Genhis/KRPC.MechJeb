@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Rendezvous with a Target &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>Rendezvous with a Target &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,39 +17,43 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Docking with a Target" href="docking.html" />
     <link rel="prev" title="Advanced Launch into Orbit" href="advanced-launch.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +67,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -87,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a><ul class="current">
@@ -97,11 +101,11 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html">Docking with a Target</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -110,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -183,8 +187,8 @@
 <span id="tutorials-rendezvous"></span><h1>Rendezvous with a Target<a class="headerlink" href="#rendezvous-with-a-target" title="Permalink to this headline">¶</a></h1>
 <p>This script will rendezvous any rocket with a targetted rocket. The script assumes the rocket is in orbit, planes match and the target is set.</p>
 <p>The complete program is available in a variety of languages:</p>
-<p><a class="reference download internal" href="../_downloads/RendezvousWithTarget.java" download=""><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
-<a class="reference download internal" href="../_downloads/RendezvousWithTarget.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/f2b5e253b1ce0790d45aaf0ee042e6f1/RendezvousWithTarget.java"><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
+<a class="reference download internal" download="" href="../_downloads/be0509eaf30b3f5809929c5b071f9c9a/RendezvousWithTarget.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
 <p>First of all, we start with connecting to the server and initializing MechJeb service instance.</p>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
@@ -201,10 +205,10 @@ Python</div>
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>16
 17
 18
-19</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">RPCException</span><span class="o">,</span> <span class="n">StreamException</span> <span class="o">{</span>
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">,</span> <span class="n">RPCException</span><span class="p">,</span> <span class="n">StreamException</span> <span class="p">{</span>
         <span class="c1">//This script assumes the vessel is in orbit, planes match and the target is set.</span>
-        <span class="k">try</span><span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Rendezvous with a target&quot;</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+        <span class="k">try</span><span class="p">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="s">&quot;Rendezvous with a target&quot;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -243,15 +247,15 @@ Python</div>
 26
 27
 28
-29</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Planning Hohmann transfer&quot;</span><span class="o">);</span>
-            <span class="n">ManeuverPlanner</span> <span class="n">planner</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getManeuverPlanner</span><span class="o">();</span>
-            <span class="n">OperationTransfer</span> <span class="n">hohmann</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="na">getOperationTransfer</span><span class="o">();</span>
-            <span class="n">hohmann</span><span class="o">.</span><span class="na">makeNode</span><span class="o">();</span>
+29</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Planning Hohmann transfer&quot;</span><span class="p">);</span>
+            <span class="n">ManeuverPlanner</span> <span class="n">planner</span> <span class="o">=</span> <span class="n">mj</span><span class="p">.</span><span class="na">getManeuverPlanner</span><span class="p">();</span>
+            <span class="n">OperationTransfer</span> <span class="n">hohmann</span> <span class="o">=</span> <span class="n">planner</span><span class="p">.</span><span class="na">getOperationTransfer</span><span class="p">();</span>
+            <span class="n">hohmann</span><span class="p">.</span><span class="na">makeNodes</span><span class="p">();</span>
 
             <span class="c1">//check for warnings</span>
-            <span class="n">String</span> <span class="n">warning</span> <span class="o">=</span> <span class="n">hohmann</span><span class="o">.</span><span class="na">getErrorMessage</span><span class="o">();</span>
-            <span class="k">if</span><span class="o">(!</span><span class="n">warning</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span>
-                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">warning</span><span class="o">);</span>
+            <span class="n">String</span> <span class="n">warning</span> <span class="o">=</span> <span class="n">hohmann</span><span class="p">.</span><span class="na">getErrorMessage</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">warning</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">warning</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -264,15 +268,15 @@ Python</div>
 22
 23
 24
-25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Planning Hohmann transfer&quot;</span><span class="p">)</span>
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Planning Hohmann transfer&quot;</span><span class="p">)</span>
 <span class="n">planner</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="n">maneuver_planner</span>
 <span class="n">hohmann</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="n">operation_transfer</span>
-<span class="n">hohmann</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+<span class="n">hohmann</span><span class="o">.</span><span class="n">make_nodes</span><span class="p">()</span>
 
 <span class="c1">#check for warnings</span>
 <span class="n">warning</span> <span class="o">=</span> <span class="n">hohmann</span><span class="o">.</span><span class="n">error_message</span>
 <span class="k">if</span> <span class="n">warning</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">warning</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">warning</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -292,9 +296,9 @@ Python</div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-SmF2YQ== active docutils container">
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>31
 32
-33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="c1">//execute the node</span>
-            <span class="n">NodeExecutor</span> <span class="n">nodeExecutor</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getNodeExecutor</span><span class="o">();</span>
-            <span class="n">RendezvousWithTarget</span><span class="o">.</span><span class="na">executeNode</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">nodeExecutor</span><span class="o">);</span>
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="c1">//execute the nodes</span>
+            <span class="n">NodeExecutor</span> <span class="n">nodeExecutor</span> <span class="o">=</span> <span class="n">mj</span><span class="p">.</span><span class="na">getNodeExecutor</span><span class="p">();</span>
+            <span class="n">RendezvousWithTarget</span><span class="p">.</span><span class="na">executeNodes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">nodeExecutor</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>54
@@ -308,27 +312,27 @@ Python</div>
 62
 63
 64
-65</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">executeNode</span><span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span><span class="o">,</span> <span class="n">NodeExecutor</span> <span class="n">ne</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">StreamException</span><span class="o">,</span> <span class="n">RPCException</span> <span class="o">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Executing next maneuver node&quot;</span><span class="o">);</span>
-        <span class="n">ne</span><span class="o">.</span><span class="na">executeOneNode</span><span class="o">();</span>
+65</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">executeNodes</span><span class="p">(</span><span class="n">Connection</span> <span class="n">conn</span><span class="p">,</span> <span class="n">NodeExecutor</span> <span class="n">ne</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">StreamException</span><span class="p">,</span> <span class="n">RPCException</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Executing maneuver nodes&quot;</span><span class="p">);</span>
+        <span class="n">ne</span><span class="p">.</span><span class="na">executeAllNodes</span><span class="p">();</span>
 
-        <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">ne</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
-        <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
-            <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
-                <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
-        <span class="o">}</span>
-        <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
-    <span class="o">}</span>
+        <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="na">addStream</span><span class="p">(</span><span class="n">ne</span><span class="p">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="p">);</span>
+        <span class="n">enabled</span><span class="p">.</span><span class="na">setRate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
+        <span class="kd">synchronized</span><span class="p">(</span><span class="n">enabled</span><span class="p">.</span><span class="na">getCondition</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">enabled</span><span class="p">.</span><span class="na">get</span><span class="p">())</span>
+                <span class="n">enabled</span><span class="p">.</span><span class="na">waitForUpdate</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">enabled</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+    <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-UHl0aG9u docutils container">
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>27
 28
-29</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#execute the node</span>
+29</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#execute the nodes</span>
 <span class="n">executor</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="n">node_executor</span>
-<span class="n">execute_node</span><span class="p">()</span>
+<span class="n">execute_nodes</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 3
@@ -339,9 +343,9 @@ Python</div>
  8
  9
 10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">execute_node</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Executing next maneuver node&quot;</span><span class="p">)</span>
-    <span class="n">executor</span><span class="o">.</span><span class="n">execute_one_node</span><span class="p">()</span>
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">execute_nodes</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executing maneuver nodes&quot;</span><span class="p">)</span>
+    <span class="n">executor</span><span class="o">.</span><span class="n">execute_all_nodes</span><span class="p">()</span>
     
     <span class="k">with</span> <span class="n">conn</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="nb">getattr</span><span class="p">,</span> <span class="n">executor</span><span class="p">,</span> <span class="s2">&quot;enabled&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">enabled</span><span class="p">:</span>
         <span class="n">enabled</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#we don&#39;t need a high throughput rate, 1 second is more than enough</span>
@@ -372,12 +376,12 @@ Python</div>
 39
 40
 41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="c1">//fine tune closest approach to the target</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Correcting course&quot;</span><span class="o">);</span>
-            <span class="n">OperationCourseCorrection</span> <span class="n">fineTuneClosestApproach</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="na">getOperationCourseCorrection</span><span class="o">();</span>
-            <span class="n">fineTuneClosestApproach</span><span class="o">.</span><span class="na">setInterceptDistance</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span> <span class="c1">//50 meters seems to be optimal distance; if you use 0, you can hit the target</span>
-            <span class="n">fineTuneClosestApproach</span><span class="o">.</span><span class="na">makeNode</span><span class="o">();</span>
-            <span class="n">nodeExecutor</span><span class="o">.</span><span class="na">setTolerance</span><span class="o">(</span><span class="mf">0.01</span><span class="o">);</span> <span class="c1">//do a high-precision maneuver (0.01 dV tolerance)</span>
-            <span class="n">RendezvousWithTarget</span><span class="o">.</span><span class="na">executeNode</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">nodeExecutor</span><span class="o">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Correcting course&quot;</span><span class="p">);</span>
+            <span class="n">OperationCourseCorrection</span> <span class="n">fineTuneClosestApproach</span> <span class="o">=</span> <span class="n">planner</span><span class="p">.</span><span class="na">getOperationCourseCorrection</span><span class="p">();</span>
+            <span class="n">fineTuneClosestApproach</span><span class="p">.</span><span class="na">setInterceptDistance</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span> <span class="c1">//50 meters seems to be optimal distance; if you use 0, you can hit the target</span>
+            <span class="n">fineTuneClosestApproach</span><span class="p">.</span><span class="na">makeNodes</span><span class="p">();</span>
+            <span class="n">nodeExecutor</span><span class="p">.</span><span class="na">setTolerance</span><span class="p">(</span><span class="mf">0.01</span><span class="p">);</span> <span class="c1">//do a high-precision maneuver (0.01 dV tolerance)</span>
+            <span class="n">RendezvousWithTarget</span><span class="p">.</span><span class="na">executeNodes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">nodeExecutor</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -389,12 +393,12 @@ Python</div>
 35
 36
 37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#fine tune closest approach to the target</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Correcting course&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correcting course&quot;</span><span class="p">)</span>
 <span class="n">fineTuneClosestApproach</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="n">operation_course_correction</span>
 <span class="n">fineTuneClosestApproach</span><span class="o">.</span><span class="n">intercept_distance</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1">#50 meters seems to be optimal distance; if you use 0, you can hit the target</span>
-<span class="n">fineTuneClosestApproach</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+<span class="n">fineTuneClosestApproach</span><span class="o">.</span><span class="n">make_nodes</span><span class="p">()</span>
 <span class="n">executor</span><span class="o">.</span><span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="c1">#do a high-precision maneuver (0.01 dV tolerance)</span>
-<span class="n">execute_node</span><span class="p">()</span>
+<span class="n">execute_nodes</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -421,16 +425,16 @@ Python</div>
 49
 50
 51
-52</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Matching speed with the target&quot;</span><span class="o">);</span>
-            <span class="n">OperationKillRelVel</span> <span class="n">matchSpeed</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="na">getOperationKillRelVel</span><span class="o">();</span>
-            <span class="n">matchSpeed</span><span class="o">.</span><span class="na">getTimeSelector</span><span class="o">().</span><span class="na">setTimeReference</span><span class="o">(</span><span class="n">TimeReference</span><span class="o">.</span><span class="na">CLOSEST_APPROACH</span><span class="o">);</span> <span class="c1">//match speed at the closest approach</span>
-            <span class="n">matchSpeed</span><span class="o">.</span><span class="na">makeNode</span><span class="o">();</span>
-            <span class="n">nodeExecutor</span><span class="o">.</span><span class="na">setTolerance</span><span class="o">(</span><span class="mf">0.1</span><span class="o">);</span> <span class="c1">//return the precision back to normal</span>
-            <span class="n">RendezvousWithTarget</span><span class="o">.</span><span class="na">executeNode</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">nodeExecutor</span><span class="o">);</span>
+52</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Matching speed with the target&quot;</span><span class="p">);</span>
+            <span class="n">OperationKillRelVel</span> <span class="n">matchSpeed</span> <span class="o">=</span> <span class="n">planner</span><span class="p">.</span><span class="na">getOperationKillRelVel</span><span class="p">();</span>
+            <span class="n">matchSpeed</span><span class="p">.</span><span class="na">getTimeSelector</span><span class="p">().</span><span class="na">setTimeReference</span><span class="p">(</span><span class="n">TimeReference</span><span class="p">.</span><span class="na">CLOSEST_APPROACH</span><span class="p">);</span> <span class="c1">//match speed at the closest approach</span>
+            <span class="n">matchSpeed</span><span class="p">.</span><span class="na">makeNodes</span><span class="p">();</span>
+            <span class="n">nodeExecutor</span><span class="p">.</span><span class="na">setTolerance</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span> <span class="c1">//return the precision back to normal</span>
+            <span class="n">RendezvousWithTarget</span><span class="p">.</span><span class="na">executeNodes</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">nodeExecutor</span><span class="p">);</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Rendezvous complete!&quot;</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Rendezvous complete!&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -443,14 +447,14 @@ Python</div>
 44
 45
 46
-47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Matching speed with the target&quot;</span><span class="p">)</span>
+47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matching speed with the target&quot;</span><span class="p">)</span>
 <span class="n">matchSpeed</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="n">operation_kill_rel_vel</span>
 <span class="n">matchSpeed</span><span class="o">.</span><span class="n">time_selector</span><span class="o">.</span><span class="n">time_reference</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="n">TimeReference</span><span class="o">.</span><span class="n">closest_approach</span> <span class="c1">#match speed at the closest approach</span>
-<span class="n">matchSpeed</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+<span class="n">matchSpeed</span><span class="o">.</span><span class="n">make_nodes</span><span class="p">()</span>
 <span class="n">executor</span><span class="o">.</span><span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1">#return the precision back to normal</span>
-<span class="n">execute_node</span><span class="p">()</span>
+<span class="n">execute_nodes</span><span class="p">()</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Rendezvous complete!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rendezvous complete!&quot;</span><span class="p">)</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
@@ -470,7 +474,7 @@ Python</div>
         <a href="docking.html" class="btn btn-neutral float-right" title="Docking with a Target" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="advanced-launch.html" class="btn btn-neutral" title="Advanced Launch into Orbit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="advanced-launch.html" class="btn btn-neutral float-left" title="Advanced Launch into Orbit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -479,7 +483,7 @@ Python</div>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -496,35 +500,16 @@ Python</div>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

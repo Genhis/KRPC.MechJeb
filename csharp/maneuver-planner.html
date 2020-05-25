@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SmartASS" href="smart-ass.html" />
     <link rel="prev" title="RendezvousAutopilot" href="rendezvous-autopilot.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">C#</a><ul class="current">
@@ -116,7 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -413,7 +415,7 @@
 <code class="descname">class TimeSelector</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.TimeSelector" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.TimeSelector.CircularizeAltitude">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">CircularizeAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.TimeSelector.CircularizeAltitude" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">CircularizeAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.TimeSelector.CircularizeAltitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>To be used with <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.TimeReference.Altitude" title="KRPC.Client.Services.MechJeb.TimeReference.Altitude value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">TimeReference.Altitude</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -427,7 +429,7 @@
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.TimeSelector.LeadTime">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">LeadTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.TimeSelector.LeadTime" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">LeadTime</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.TimeSelector.LeadTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>To be used with <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.TimeReference.XFromNow" title="KRPC.Client.Services.MechJeb.TimeReference.XFromNow value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">TimeReference.XFromNow</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -539,7 +541,7 @@
 <code class="descname">class OperationApoapsis</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationApoapsis" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationApoapsis.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationApoapsis.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationApoapsis.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -554,7 +556,7 @@
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationApoapsis.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationApoapsis.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -562,7 +564,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationApoapsis.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationApoapsis.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -570,7 +597,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationApoapsis.NewApoapsis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationApoapsis.NewApoapsis" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationApoapsis.NewApoapsis" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -606,7 +633,7 @@ MJServiceException - Internal service error.</p>
 To match apoapsis to periapsis, set the time to <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.TimeReference.Periapsis" title="KRPC.Client.Services.MechJeb.TimeReference.Periapsis value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">TimeReference.Periapsis</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.TimeReference.Apoapsis" title="KRPC.Client.Services.MechJeb.TimeReference.Apoapsis value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">TimeReference.Apoapsis</span></code></a>. Theese are the most efficient, but it can also create node at specific height or after specific time.</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationCircularize.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCircularize.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCircularize.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -621,7 +648,7 @@ To match apoapsis to periapsis, set the time to <a class="reference internal" hr
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationCircularize.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationCircularize.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -629,7 +656,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationCircularize.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationCircularize.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -658,7 +710,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationCourseCorrection</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationCourseCorrection" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.CourseCorrectFinalPeA">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">CourseCorrectFinalPeA</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.CourseCorrectFinalPeA" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">CourseCorrectFinalPeA</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.CourseCorrectFinalPeA" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -671,7 +723,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -685,7 +737,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.InterceptDistance">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">InterceptDistance</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.InterceptDistance" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">InterceptDistance</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationCourseCorrection.InterceptDistance" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -699,7 +751,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationCourseCorrection.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationCourseCorrection.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -707,7 +759,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationCourseCorrection.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationCourseCorrection.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -723,7 +800,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationEllipticize</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationEllipticize" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationEllipticize.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -738,7 +815,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationEllipticize.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationEllipticize.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -746,7 +823,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationEllipticize.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationEllipticize.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -754,7 +856,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewApoapsis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewApoapsis" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewApoapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewApoapsis" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -767,7 +869,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewPeriapsis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewPeriapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewPeriapsis" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewPeriapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationEllipticize.NewPeriapsis" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -801,7 +903,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationInclination</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationInclination" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationInclination.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInclination.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInclination.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -816,7 +918,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationInclination.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationInclination.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -824,7 +926,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationInclination.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationInclination.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -832,7 +959,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationInclination.NewInclination">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewInclination</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInclination.NewInclination" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewInclination</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInclination.NewInclination" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -866,7 +993,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationInterplanetaryTransfer</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -881,7 +1008,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -889,7 +1016,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -897,7 +1049,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.WaitForPhaseAngle">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">WaitForPhaseAngle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.WaitForPhaseAngle" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">WaitForPhaseAngle</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationInterplanetaryTransfer.WaitForPhaseAngle" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -919,7 +1071,7 @@ MJServiceException - Internal service error.</p>
 <dd><p>Kill relative velocity to a given target.</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationKillRelVel.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationKillRelVel.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationKillRelVel.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -934,7 +1086,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationKillRelVel.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationKillRelVel.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -942,7 +1094,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationKillRelVel.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationKillRelVel.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -971,7 +1148,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationLambert</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationLambert" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLambert.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLambert.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLambert.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -985,7 +1162,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLambert.InterceptInterval">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">InterceptInterval</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLambert.InterceptInterval" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">InterceptInterval</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLambert.InterceptInterval" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -999,7 +1176,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationLambert.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLambert.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1007,7 +1184,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationLambert.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLambert.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1037,7 +1239,7 @@ MJServiceException - Internal service error.</p>
 <dd><p>Change longitude of ascending node</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLan.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLan.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLan.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1052,7 +1254,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationLan.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLan.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1060,7 +1262,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationLan.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLan.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1068,7 +1295,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLan.NewLAN">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewLAN</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLan.NewLAN" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewLAN</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLan.NewLAN" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1100,10 +1327,10 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="class-KRPC.Client.Services.MechJeb.OperationLongitude">
 <code class="descname">class OperationLongitude</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationLongitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change longitude of ascending node</p>
+<dd><p>Change surface longitude of apsis</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLongitude.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLongitude.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLongitude.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1118,7 +1345,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationLongitude.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLongitude.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1126,7 +1353,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationLongitude.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationLongitude.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1134,7 +1386,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationLongitude.NewSurfaceLongitude">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewSurfaceLongitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLongitude.NewSurfaceLongitude" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewSurfaceLongitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationLongitude.NewSurfaceLongitude" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1168,7 +1420,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationMoonReturn</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationMoonReturn" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationMoonReturn.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationMoonReturn.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationMoonReturn.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1183,7 +1435,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationMoonReturn.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationMoonReturn.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1191,7 +1443,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationMoonReturn.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationMoonReturn.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1199,7 +1476,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationMoonReturn.MoonReturnAltitude">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">MoonReturnAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationMoonReturn.MoonReturnAltitude" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">MoonReturnAltitude</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationMoonReturn.MoonReturnAltitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>Approximate return altitude from a moon (from an orbiting body to the parent body).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1221,7 +1498,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationPeriapsis</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationPeriapsis" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationPeriapsis.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPeriapsis.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPeriapsis.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1236,7 +1513,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationPeriapsis.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationPeriapsis.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1244,7 +1521,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationPeriapsis.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationPeriapsis.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1252,7 +1554,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationPeriapsis.NewPeriapsis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewPeriapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPeriapsis.NewPeriapsis" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewPeriapsis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPeriapsis.NewPeriapsis" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1286,7 +1588,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationPlane</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationPlane" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationPlane.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPlane.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationPlane.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1301,7 +1603,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationPlane.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationPlane.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1309,7 +1611,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationPlane.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationPlane.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1340,7 +1667,7 @@ MJServiceException - Internal service error.</p>
 To deploy satellites, set the denominator to number of satellites you want to have in the constellation. Setting the nominator to one less than denominator is the most efficient, but not necessary the fastest. To successfully deploy all satellites, make sure the numbers are incommensurable.</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1355,7 +1682,7 @@ To deploy satellites, set the denominator to number of satellites you want to ha
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationResonantOrbit.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationResonantOrbit.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1363,7 +1690,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationResonantOrbit.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationResonantOrbit.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1371,7 +1723,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceDenominator">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="descname">ResonanceDenominator</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceDenominator" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32" title="System.Int32">Int32</a> <code class="descname">ResonanceDenominator</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceDenominator" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1384,7 +1736,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceNumerator">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" title="System.Int32">Int32</a> <code class="descname">ResonanceNumerator</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceNumerator" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32" title="System.Int32">Int32</a> <code class="descname">ResonanceNumerator</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationResonantOrbit.ResonanceNumerator" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1418,7 +1770,7 @@ MJServiceException - Internal service error.</p>
 <code class="descname">class OperationSemiMajor</code><a class="headerlink" href="#class-KRPC.Client.Services.MechJeb.OperationSemiMajor" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationSemiMajor.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationSemiMajor.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationSemiMajor.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1433,7 +1785,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationSemiMajor.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationSemiMajor.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1441,7 +1793,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationSemiMajor.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationSemiMajor.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1449,7 +1826,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationSemiMajor.NewSemiMajorAxis">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">NewSemiMajorAxis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationSemiMajor.NewSemiMajorAxis" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">NewSemiMajorAxis</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationSemiMajor.NewSemiMajorAxis" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1486,7 +1863,7 @@ MJServiceException - Internal service error.</p>
 Contrary to the name, the transfer is often uni-impulsive. You can select when you want the manevuer to happen or select optimum time.</p>
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationTransfer.ErrorMessage">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.string.aspx" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.ErrorMessage" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.string" title="System.String">String</a> <code class="descname">ErrorMessage</code> { <em class="property">get;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1501,7 +1878,7 @@ Contrary to the name, the transfer is often uni-impulsive. You can select when y
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.OperationTransfer.MakeNode">
 SpaceCenter.Node <code class="descname">MakeNode</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationTransfer.MakeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1509,7 +1886,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-KRPC.Client.Services.MechJeb.OperationTransfer.MakeNodes">
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1" title="System.Collections.Generic.IList">IList</a>&lt;SpaceCenter.Node&gt; <code class="descname">MakeNodes</code> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.OperationTransfer.MakeNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1517,7 +1919,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationTransfer.InterceptOnly">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">InterceptOnly</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.InterceptOnly" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">InterceptOnly</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.InterceptOnly" title="Permalink to this definition">¶</a></dt>
 <dd><p>Intercept only, no capture burn (impact/flyby)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1531,7 +1933,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationTransfer.PeriodOffset">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">PeriodOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.PeriodOffset" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">PeriodOffset</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.PeriodOffset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fractional target period offset</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1545,7 +1947,7 @@ MJServiceException - Internal service error.</p>
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.OperationTransfer.SimpleTransfer">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">SimpleTransfer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.SimpleTransfer" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">SimpleTransfer</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.OperationTransfer.SimpleTransfer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple coplanar Hohmann transfer.
 Set it to true if you are used to the old version of transfer maneuver.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1592,7 +1994,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
         <a href="smart-ass.html" class="btn btn-neutral float-right" title="SmartASS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rendezvous-autopilot.html" class="btn btn-neutral" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rendezvous-autopilot.html" class="btn btn-neutral float-left" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1601,7 +2003,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -1618,33 +2020,16 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

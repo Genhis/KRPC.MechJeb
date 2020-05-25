@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RendezvousAutopilot &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>RendezvousAutopilot &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ManeuverPlanner" href="maneuver-planner.html" />
     <link rel="prev" title="LandingAutopilot" href="landing-autopilot.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -113,7 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -185,16 +187,16 @@
   <div class="section" id="rendezvousautopilot">
 <h1>RendezvousAutopilot<a class="headerlink" href="#rendezvousautopilot" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilotE">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilotE"></span><span id="krpc::services::MechJeb::RendezvousAutopilot"></span><em class="property">class </em><code class="descname">RendezvousAutopilot</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilotE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilotE">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilotE"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilotE"></span><span id="krpc::services::MechJeb::RendezvousAutopilot"></span><em class="property">class </em><code class="descname">RendezvousAutopilot</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilotE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::enabled"></span>bool <code class="descname">enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::enabled"></span>bool <code class="descname">enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot7enabledEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_enabled__b"></span>void <code class="descname">set_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_enabled__b"></span>void <code class="descname">set_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot11set_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -206,8 +208,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot6statusEv">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot6statusEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::status"></span>std::string <code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot6statusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot6statusEv">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot6statusEv"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot6statusEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::status"></span>std::string <code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot6statusEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -219,13 +221,13 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::desired_distance"></span>double <code class="descname">desired_distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::desired_distance"></span>double <code class="descname">desired_distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot16desired_distanceEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_desired_distance__double"></span>void <code class="descname">set_desired_distance</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_desired_distance__double"></span>void <code class="descname">set_desired_distance</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot20set_desired_distanceEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -237,13 +239,13 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::max_phasing_orbits"></span>double <code class="descname">max_phasing_orbits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::max_phasing_orbits"></span>double <code class="descname">max_phasing_orbits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot18max_phasing_orbitsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd">
-<span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_max_phasing_orbits__double"></span>void <code class="descname">set_max_phasing_orbits</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd">
+<span id="_CPPv3N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd"></span><span id="_CPPv2N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd"></span><span id="krpc::services::MechJeb::RendezvousAutopilot::set_max_phasing_orbits__double"></span>void <code class="descname">set_max_phasing_orbits</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilot22set_max_phasing_orbitsEd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -269,7 +271,7 @@
         <a href="maneuver-planner.html" class="btn btn-neutral float-right" title="ManeuverPlanner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="landing-autopilot.html" class="btn btn-neutral" title="LandingAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="landing-autopilot.html" class="btn btn-neutral float-left" title="LandingAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -278,7 +280,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -295,33 +297,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

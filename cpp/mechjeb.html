@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MechJeb service &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>MechJeb service &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="AirplaneAutopilot" href="airplane-autopilot.html" />
     <link rel="prev" title="C++" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -106,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -178,18 +180,18 @@
   <div class="section" id="mechjeb-service">
 <h1>MechJeb service<a class="headerlink" href="#mechjeb-service" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv3N4krpc8services7MechJebE">
-<span id="_CPPv2N4krpc8services7MechJebE"></span><span id="krpc::services::MechJeb"></span><em class="property">class </em><code class="descname">MechJeb</code> : <em class="property">public</em> krpc::Service<a class="headerlink" href="#_CPPv3N4krpc8services7MechJebE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJebE">
+<span id="_CPPv3N4krpc8services7MechJebE"></span><span id="_CPPv2N4krpc8services7MechJebE"></span><span id="krpc::services::MechJeb"></span><em class="property">class </em><code class="descname">MechJeb</code> : <em class="property">public</em> krpc::Service<a class="headerlink" href="#_CPPv4N4krpc8services7MechJebE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This service provides functionality to interact with <a class="reference external" href="https://github.com/MuMech/MechJeb2">MechJeb 2</a>.</p>
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE">
-<span id="_CPPv2N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE"></span><span id="krpc::services::MechJeb::MechJeb__krpc::ClientP"></span><code class="descname">MechJeb</code><span class="sig-paren">(</span>krpc::Client *<em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE">
+<span id="_CPPv3N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE"></span><span id="_CPPv2N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE"></span><span id="krpc::services::MechJeb::MechJeb__krpc::ClientP"></span><code class="descname">MechJeb</code><span class="sig-paren">(</span>krpc::Client *<em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb7MechJebEPN4krpc6ClientE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct an instance of this service.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9api_readyEv">
-<span id="_CPPv2N4krpc8services7MechJeb9api_readyEv"></span><span id="krpc::services::MechJeb::api_ready"></span>bool <code class="descname">api_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9api_readyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb9api_readyEv">
+<span id="_CPPv3N4krpc8services7MechJeb9api_readyEv"></span><span id="_CPPv2N4krpc8services7MechJeb9api_readyEv"></span><span id="krpc::services::MechJeb::api_ready"></span>bool <code class="descname">api_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb9api_readyEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A value indicating whether the service is available.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -202,8 +204,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb18airplane_autopilotEv">
-<span id="_CPPv2N4krpc8services7MechJeb18airplane_autopilotEv"></span><span id="krpc::services::MechJeb::airplane_autopilot"></span><a class="reference internal" href="airplane-autopilot.html#_CPPv3N4krpc8services7MechJeb17AirplaneAutopilotE" title="krpc::services::MechJeb::AirplaneAutopilot">AirplaneAutopilot</a> <code class="descname">airplane_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb18airplane_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb18airplane_autopilotEv">
+<span id="_CPPv3N4krpc8services7MechJeb18airplane_autopilotEv"></span><span id="_CPPv2N4krpc8services7MechJeb18airplane_autopilotEv"></span><span id="krpc::services::MechJeb::airplane_autopilot"></span><a class="reference internal" href="airplane-autopilot.html#_CPPv4N4krpc8services7MechJeb17AirplaneAutopilotE" title="krpc::services::MechJeb::AirplaneAutopilot">AirplaneAutopilot</a> <code class="descname">airplane_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18airplane_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -215,8 +217,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb18antenna_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb18antenna_controllerEv"></span><span id="krpc::services::MechJeb::antenna_controller"></span>DeployableController <code class="descname">antenna_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb18antenna_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb18antenna_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb18antenna_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb18antenna_controllerEv"></span><span id="krpc::services::MechJeb::antenna_controller"></span>DeployableController <code class="descname">antenna_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18antenna_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -228,8 +230,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16ascent_autopilotEv">
-<span id="_CPPv2N4krpc8services7MechJeb16ascent_autopilotEv"></span><span id="krpc::services::MechJeb::ascent_autopilot"></span><a class="reference internal" href="ascent-autopilot.html#_CPPv3N4krpc8services7MechJeb15AscentAutopilotE" title="krpc::services::MechJeb::AscentAutopilot">AscentAutopilot</a> <code class="descname">ascent_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16ascent_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16ascent_autopilotEv">
+<span id="_CPPv3N4krpc8services7MechJeb16ascent_autopilotEv"></span><span id="_CPPv2N4krpc8services7MechJeb16ascent_autopilotEv"></span><span id="krpc::services::MechJeb::ascent_autopilot"></span><a class="reference internal" href="ascent-autopilot.html#_CPPv4N4krpc8services7MechJeb15AscentAutopilotE" title="krpc::services::MechJeb::AscentAutopilot">AscentAutopilot</a> <code class="descname">ascent_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16ascent_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -241,8 +243,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb17docking_autopilotEv">
-<span id="_CPPv2N4krpc8services7MechJeb17docking_autopilotEv"></span><span id="krpc::services::MechJeb::docking_autopilot"></span><a class="reference internal" href="docking-autopilot.html#_CPPv3N4krpc8services7MechJeb16DockingAutopilotE" title="krpc::services::MechJeb::DockingAutopilot">DockingAutopilot</a> <code class="descname">docking_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17docking_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb17docking_autopilotEv">
+<span id="_CPPv3N4krpc8services7MechJeb17docking_autopilotEv"></span><span id="_CPPv2N4krpc8services7MechJeb17docking_autopilotEv"></span><span id="krpc::services::MechJeb::docking_autopilot"></span><a class="reference internal" href="docking-autopilot.html#_CPPv4N4krpc8services7MechJeb16DockingAutopilotE" title="krpc::services::MechJeb::DockingAutopilot">DockingAutopilot</a> <code class="descname">docking_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17docking_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -254,8 +256,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb17landing_autopilotEv">
-<span id="_CPPv2N4krpc8services7MechJeb17landing_autopilotEv"></span><span id="krpc::services::MechJeb::landing_autopilot"></span><a class="reference internal" href="landing-autopilot.html#_CPPv3N4krpc8services7MechJeb16LandingAutopilotE" title="krpc::services::MechJeb::LandingAutopilot">LandingAutopilot</a> <code class="descname">landing_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17landing_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb17landing_autopilotEv">
+<span id="_CPPv3N4krpc8services7MechJeb17landing_autopilotEv"></span><span id="_CPPv2N4krpc8services7MechJeb17landing_autopilotEv"></span><span id="krpc::services::MechJeb::landing_autopilot"></span><a class="reference internal" href="landing-autopilot.html#_CPPv4N4krpc8services7MechJeb16LandingAutopilotE" title="krpc::services::MechJeb::LandingAutopilot">LandingAutopilot</a> <code class="descname">landing_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17landing_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -267,8 +269,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16maneuver_plannerEv">
-<span id="_CPPv2N4krpc8services7MechJeb16maneuver_plannerEv"></span><span id="krpc::services::MechJeb::maneuver_planner"></span><a class="reference internal" href="maneuver-planner.html#_CPPv3N4krpc8services7MechJeb15ManeuverPlannerE" title="krpc::services::MechJeb::ManeuverPlanner">ManeuverPlanner</a> <code class="descname">maneuver_planner</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16maneuver_plannerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16maneuver_plannerEv">
+<span id="_CPPv3N4krpc8services7MechJeb16maneuver_plannerEv"></span><span id="_CPPv2N4krpc8services7MechJeb16maneuver_plannerEv"></span><span id="krpc::services::MechJeb::maneuver_planner"></span><a class="reference internal" href="maneuver-planner.html#_CPPv4N4krpc8services7MechJeb15ManeuverPlannerE" title="krpc::services::MechJeb::ManeuverPlanner">ManeuverPlanner</a> <code class="descname">maneuver_planner</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16maneuver_plannerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -280,8 +282,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb13node_executorEv">
-<span id="_CPPv2N4krpc8services7MechJeb13node_executorEv"></span><span id="krpc::services::MechJeb::node_executor"></span><a class="reference internal" href="node-executor.html#_CPPv3N4krpc8services7MechJeb12NodeExecutorE" title="krpc::services::MechJeb::NodeExecutor">NodeExecutor</a> <code class="descname">node_executor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb13node_executorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb13node_executorEv">
+<span id="_CPPv3N4krpc8services7MechJeb13node_executorEv"></span><span id="_CPPv2N4krpc8services7MechJeb13node_executorEv"></span><span id="krpc::services::MechJeb::node_executor"></span><a class="reference internal" href="node-executor.html#_CPPv4N4krpc8services7MechJeb12NodeExecutorE" title="krpc::services::MechJeb::NodeExecutor">NodeExecutor</a> <code class="descname">node_executor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13node_executorEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -293,8 +295,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb14rcs_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb14rcs_controllerEv"></span><span id="krpc::services::MechJeb::rcs_controller"></span><a class="reference internal" href="rcs-controller.html#_CPPv3N4krpc8services7MechJeb13RCSControllerE" title="krpc::services::MechJeb::RCSController">RCSController</a> <code class="descname">rcs_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb14rcs_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb14rcs_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb14rcs_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb14rcs_controllerEv"></span><span id="krpc::services::MechJeb::rcs_controller"></span><a class="reference internal" href="rcs-controller.html#_CPPv4N4krpc8services7MechJeb13RCSControllerE" title="krpc::services::MechJeb::RCSController">RCSController</a> <code class="descname">rcs_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb14rcs_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -306,8 +308,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb20rendezvous_autopilotEv">
-<span id="_CPPv2N4krpc8services7MechJeb20rendezvous_autopilotEv"></span><span id="krpc::services::MechJeb::rendezvous_autopilot"></span><a class="reference internal" href="rendezvous-autopilot.html#_CPPv3N4krpc8services7MechJeb19RendezvousAutopilotE" title="krpc::services::MechJeb::RendezvousAutopilot">RendezvousAutopilot</a> <code class="descname">rendezvous_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb20rendezvous_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb20rendezvous_autopilotEv">
+<span id="_CPPv3N4krpc8services7MechJeb20rendezvous_autopilotEv"></span><span id="_CPPv2N4krpc8services7MechJeb20rendezvous_autopilotEv"></span><span id="krpc::services::MechJeb::rendezvous_autopilot"></span><a class="reference internal" href="rendezvous-autopilot.html#_CPPv4N4krpc8services7MechJeb19RendezvousAutopilotE" title="krpc::services::MechJeb::RendezvousAutopilot">RendezvousAutopilot</a> <code class="descname">rendezvous_autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20rendezvous_autopilotEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -319,8 +321,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9smart_assEv">
-<span id="_CPPv2N4krpc8services7MechJeb9smart_assEv"></span><span id="krpc::services::MechJeb::smart_ass"></span><a class="reference internal" href="smart-ass.html#_CPPv3N4krpc8services7MechJeb8SmartASSE" title="krpc::services::MechJeb::SmartASS">SmartASS</a> <code class="descname">smart_ass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9smart_assEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb9smart_assEv">
+<span id="_CPPv3N4krpc8services7MechJeb9smart_assEv"></span><span id="_CPPv2N4krpc8services7MechJeb9smart_assEv"></span><span id="krpc::services::MechJeb::smart_ass"></span><a class="reference internal" href="smart-ass.html#_CPPv4N4krpc8services7MechJeb8SmartASSE" title="krpc::services::MechJeb::SmartASS">SmartASS</a> <code class="descname">smart_ass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb9smart_assEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -332,8 +334,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb9smart_rcsEv">
-<span id="_CPPv2N4krpc8services7MechJeb9smart_rcsEv"></span><span id="krpc::services::MechJeb::smart_rcs"></span><a class="reference internal" href="smart-rcs.html#_CPPv3N4krpc8services7MechJeb8SmartRCSE" title="krpc::services::MechJeb::SmartRCS">SmartRCS</a> <code class="descname">smart_rcs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb9smart_rcsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb9smart_rcsEv">
+<span id="_CPPv3N4krpc8services7MechJeb9smart_rcsEv"></span><span id="_CPPv2N4krpc8services7MechJeb9smart_rcsEv"></span><span id="krpc::services::MechJeb::smart_rcs"></span><a class="reference internal" href="smart-rcs.html#_CPPv4N4krpc8services7MechJeb8SmartRCSE" title="krpc::services::MechJeb::SmartRCS">SmartRCS</a> <code class="descname">smart_rcs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb9smart_rcsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -345,8 +347,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb22solar_panel_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb22solar_panel_controllerEv"></span><span id="krpc::services::MechJeb::solar_panel_controller"></span>DeployableController <code class="descname">solar_panel_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb22solar_panel_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb22solar_panel_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb22solar_panel_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb22solar_panel_controllerEv"></span><span id="krpc::services::MechJeb::solar_panel_controller"></span>DeployableController <code class="descname">solar_panel_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb22solar_panel_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -358,8 +360,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb18staging_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb18staging_controllerEv"></span><span id="krpc::services::MechJeb::staging_controller"></span><a class="reference internal" href="staging-controller.html#_CPPv3N4krpc8services7MechJeb17StagingControllerE" title="krpc::services::MechJeb::StagingController">StagingController</a> <code class="descname">staging_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb18staging_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb18staging_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb18staging_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb18staging_controllerEv"></span><span id="krpc::services::MechJeb::staging_controller"></span><a class="reference internal" href="staging-controller.html#_CPPv4N4krpc8services7MechJeb17StagingControllerE" title="krpc::services::MechJeb::StagingController">StagingController</a> <code class="descname">staging_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18staging_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -371,8 +373,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb17target_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb17target_controllerEv"></span><span id="krpc::services::MechJeb::target_controller"></span><a class="reference internal" href="target-controller.html#_CPPv3N4krpc8services7MechJeb16TargetControllerE" title="krpc::services::MechJeb::TargetController">TargetController</a> <code class="descname">target_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17target_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb17target_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb17target_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb17target_controllerEv"></span><span id="krpc::services::MechJeb::target_controller"></span><a class="reference internal" href="target-controller.html#_CPPv4N4krpc8services7MechJeb16TargetControllerE" title="krpc::services::MechJeb::TargetController">TargetController</a> <code class="descname">target_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17target_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -384,8 +386,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb17thrust_controllerEv">
-<span id="_CPPv2N4krpc8services7MechJeb17thrust_controllerEv"></span><span id="krpc::services::MechJeb::thrust_controller"></span><a class="reference internal" href="thrust-controller.html#_CPPv3N4krpc8services7MechJeb16ThrustControllerE" title="krpc::services::MechJeb::ThrustController">ThrustController</a> <code class="descname">thrust_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb17thrust_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb17thrust_controllerEv">
+<span id="_CPPv3N4krpc8services7MechJeb17thrust_controllerEv"></span><span id="_CPPv2N4krpc8services7MechJeb17thrust_controllerEv"></span><span id="krpc::services::MechJeb::thrust_controller"></span><a class="reference internal" href="thrust-controller.html#_CPPv4N4krpc8services7MechJeb16ThrustControllerE" title="krpc::services::MechJeb::ThrustController">ThrustController</a> <code class="descname">thrust_controller</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17thrust_controllerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -397,8 +399,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb11translatronEv">
-<span id="_CPPv2N4krpc8services7MechJeb11translatronEv"></span><span id="krpc::services::MechJeb::translatron"></span><a class="reference internal" href="translatron.html#_CPPv3N4krpc8services7MechJeb11TranslatronE" title="krpc::services::MechJeb::Translatron">Translatron</a> <code class="descname">translatron</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb11translatronEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb11translatronEv">
+<span id="_CPPv3N4krpc8services7MechJeb11translatronEv"></span><span id="_CPPv2N4krpc8services7MechJeb11translatronEv"></span><span id="krpc::services::MechJeb::translatron"></span><a class="reference internal" href="translatron.html#_CPPv4N4krpc8services7MechJeb11TranslatronE" title="krpc::services::MechJeb::Translatron">Translatron</a> <code class="descname">translatron</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb11translatronEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -412,8 +414,8 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv3N4krpc8services7MechJeb18MJServiceExceptionE">
-<span id="_CPPv2N4krpc8services7MechJeb18MJServiceExceptionE"></span><span id="krpc::services::MechJeb::MJServiceException"></span><em class="property">class </em><code class="descname">MJServiceException</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb18MJServiceExceptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb18MJServiceExceptionE">
+<span id="_CPPv3N4krpc8services7MechJeb18MJServiceExceptionE"></span><span id="_CPPv2N4krpc8services7MechJeb18MJServiceExceptionE"></span><span id="krpc::services::MechJeb::MJServiceException"></span><em class="property">class </em><code class="descname">MJServiceException</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18MJServiceExceptionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>General exception for errors in the service.</p>
 </dd></dl>
 
@@ -430,7 +432,7 @@
         <a href="airplane-autopilot.html" class="btn btn-neutral float-right" title="AirplaneAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="C++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="C++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -439,7 +441,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -456,33 +458,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

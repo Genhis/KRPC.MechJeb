@@ -242,13 +242,31 @@ OperationApoapsis
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_apoapsis()
@@ -283,13 +301,31 @@ OperationCircularize
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: TimeSelector time_selector()
@@ -330,13 +366,31 @@ OperationCourseCorrection
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
 
@@ -357,13 +411,31 @@ OperationEllipticize
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_apoapsis()
@@ -404,13 +476,31 @@ OperationInclination
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_inclination()
@@ -444,13 +534,31 @@ OperationInterplanetaryTransfer
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: bool wait_for_phase_angle()
@@ -478,13 +586,31 @@ OperationKillRelVel
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: TimeSelector time_selector()
@@ -518,13 +644,31 @@ OperationLambert
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: TimeSelector time_selector()
@@ -551,13 +695,31 @@ OperationLan
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_lan()
@@ -581,7 +743,7 @@ OperationLongitude
 
 .. class:: OperationLongitude
 
-   Change longitude of ascending node
+   Change surface longitude of apsis
 
    .. function:: std::string error_message()
 
@@ -591,13 +753,31 @@ OperationLongitude
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_surface_longitude()
@@ -631,13 +811,31 @@ OperationMoonReturn
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double moon_return_altitude()
@@ -665,13 +863,31 @@ OperationPeriapsis
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_periapsis()
@@ -705,13 +921,31 @@ OperationPlane
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: TimeSelector time_selector()
@@ -739,13 +973,31 @@ OperationResonantOrbit
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: int32_t resonance_denominator()
@@ -786,13 +1038,31 @@ OperationSemiMajor
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: double new_semi_major_axis()
@@ -829,13 +1099,31 @@ OperationTransfer
 
    .. function:: SpaceCenter::Node make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: std::vector<SpaceCenter::Node> make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: bool intercept_only()

@@ -200,9 +200,22 @@ AscentAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: AscentLaunchMode launch_mode()
+
+      Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+
+      :Game Scenes: Flight
+
+   .. function:: void abort_timed_launch()
+
+      Abort a known timed launch when it has not started yet
+
+
+      :Game Scenes: Flight
+
    .. function:: void launch_to_rendezvous()
 
-
+      Launch to rendezvous with the selected target.
 
 
       :Game Scenes: Flight
@@ -213,6 +226,33 @@ AscentAutopilot
 
 
       :Game Scenes: Flight
+
+
+
+.. namespace:: krpc::services::MechJeb
+.. enum-struct:: AscentLaunchMode
+
+
+
+
+   .. enumerator:: normal
+
+      The autopilot is not performing a timed launch.
+
+
+   .. enumerator:: rendezvous
+
+      The autopilot is performing a timed launch to rendezvous with the target vessel.
+
+
+   .. enumerator:: target_plane
+
+      The autopilot is performing a timed launch to target plane.
+
+
+   .. enumerator:: unknown
+
+      The autopilot is performing an unknown timed launch.
 
 
 
@@ -231,15 +271,15 @@ AscentClassic
 
       :Game Scenes: Flight
 
-   .. function:: float auto_path_perc()
-   .. function:: void set_auto_path_perc(float value)
+   .. function:: float auto_turn_percent()
+   .. function:: void set_auto_turn_percent(float value)
 
       A value between 0 and 1.
 
       :Game Scenes: Flight
 
-   .. function:: float auto_path_speed_factor()
-   .. function:: void set_auto_path_speed_factor(float value)
+   .. function:: float auto_turn_speed_factor()
+   .. function:: void set_auto_turn_speed_factor(float value)
 
       A value between 0 and 1.
 

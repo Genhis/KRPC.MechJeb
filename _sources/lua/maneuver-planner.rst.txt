@@ -257,13 +257,29 @@ OperationApoapsis
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_apoapsis
 
@@ -299,13 +315,29 @@ OperationCircularize
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: time_selector
 
@@ -347,13 +379,29 @@ OperationCourseCorrection
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
 
 
@@ -374,13 +422,29 @@ OperationEllipticize
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_apoapsis
 
@@ -422,13 +486,29 @@ OperationInclination
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_inclination
 
@@ -463,13 +543,29 @@ OperationInterplanetaryTransfer
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: wait_for_phase_angle
 
@@ -497,13 +593,29 @@ OperationKillRelVel
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: time_selector
 
@@ -538,13 +650,29 @@ OperationLambert
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: time_selector
 
@@ -572,13 +700,29 @@ OperationLan
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_lan
 
@@ -602,7 +746,7 @@ OperationLongitude
 
 .. class:: OperationLongitude
 
-   Change longitude of ascending node
+   Change surface longitude of apsis
 
    .. attribute:: error_message
 
@@ -613,13 +757,29 @@ OperationLongitude
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_surface_longitude
 
@@ -654,13 +814,29 @@ OperationMoonReturn
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: moon_return_altitude
 
@@ -688,13 +864,29 @@ OperationPeriapsis
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_periapsis
 
@@ -729,13 +921,29 @@ OperationPlane
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: time_selector
 
@@ -764,13 +972,29 @@ OperationResonantOrbit
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: resonance_denominator
 
@@ -812,13 +1036,29 @@ OperationSemiMajor
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: new_semi_major_axis
 
@@ -856,13 +1096,29 @@ OperationTransfer
 
    .. method:: make_node()
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
+      :returns: The first maneuver node necessary to perform this operation.
       :rtype: :class:`SpaceCenter.Node`
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. method:: make_nodes()
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+      :returns: A list of maneuver nodes necessary to perform this operation
+      :rtype: List of :class:`SpaceCenter.Node`
 
    .. attribute:: intercept_only
 

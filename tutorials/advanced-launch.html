@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Advanced Launch into Orbit &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>Advanced Launch into Orbit &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,39 +17,43 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Rendezvous with a Target" href="rendezvous.html" />
     <link rel="prev" title="The First Launch" href="launch-into-orbit.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +67,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -87,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a><ul class="current">
@@ -97,11 +101,11 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html">Docking with a Target</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -110,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -183,8 +187,8 @@
 <span id="tutorials-advanced-launch"></span><h1>Advanced Launch into Orbit<a class="headerlink" href="#advanced-launch-into-orbit" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial is about setting advanced path parameters to AscentAutopilot. If you haven’t already done so, please read <a class="reference internal" href="launch-into-orbit.html#tutorials-launch-into-orbit"><span class="std std-ref">The First Launch</span></a> tutorial.</p>
 <p>The complete program is available in a variety of languages:</p>
-<p><a class="reference download internal" href="../_downloads/AdvancedLaunchIntoOrbit.java" download=""><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
-<a class="reference download internal" href="../_downloads/AdvancedLaunchIntoOrbit.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/96160f49d36d7f389f9c06787e19044f/AdvancedLaunchIntoOrbit.java"><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
+<a class="reference download internal" download="" href="../_downloads/90411cd3a5dc5bcf65b6b1ae45c52e39/AdvancedLaunchIntoOrbit.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
 <p>First of all, you need to set the ascent path you want to use. If you don’t, the program will use the path set in AscentGuidance window which may or may not be the one you want.
 Then, you can set path parameters. The parameters are the same as if you used <em>Edit ascent path</em> option.</p>
 <div class="sphinx-tabs docutils container">
@@ -204,12 +208,12 @@ Python</div>
 30
 31
 32
-33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">AscentClassic</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ascent</span><span class="o">.</span><span class="na">getAscentPathClassic</span><span class="o">();</span>
-            <span class="n">path</span><span class="o">.</span><span class="na">setTurnShapeExponent</span><span class="o">(</span><span class="mf">0.5</span><span class="o">);</span> <span class="c1">//set the turn shape to 50%</span>
-            <span class="n">path</span><span class="o">.</span><span class="na">setAutoPath</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">//don&#39;t use autopath</span>
-            <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartAltitude</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
-            <span class="n">path</span><span class="o">.</span><span class="na">setTurnStartVelocity</span><span class="o">(</span><span class="mi">120</span><span class="o">);</span>
-            <span class="n">path</span><span class="o">.</span><span class="na">setTurnEndAltitude</span><span class="o">(</span><span class="mi">65000</span><span class="o">);</span>
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">AscentClassic</span> <span class="n">path</span> <span class="o">=</span> <span class="n">ascent</span><span class="p">.</span><span class="na">getAscentPathClassic</span><span class="p">();</span>
+            <span class="n">path</span><span class="p">.</span><span class="na">setTurnShapeExponent</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span> <span class="c1">//set the turn shape to 50%</span>
+            <span class="n">path</span><span class="p">.</span><span class="na">setAutoPath</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span> <span class="c1">//don&#39;t use autopath</span>
+            <span class="n">path</span><span class="p">.</span><span class="na">setTurnStartAltitude</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+            <span class="n">path</span><span class="p">.</span><span class="na">setTurnStartVelocity</span><span class="p">(</span><span class="mi">120</span><span class="p">);</span>
+            <span class="n">path</span><span class="p">.</span><span class="na">setTurnEndAltitude</span><span class="p">(</span><span class="mi">65000</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -225,7 +229,7 @@ Python</div>
 
 <span class="n">path</span> <span class="o">=</span> <span class="n">ascent</span><span class="o">.</span><span class="n">ascent_path_classic</span>
 <span class="n">path</span><span class="o">.</span><span class="n">turn_shape_exponent</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#set the turn shape to 50%</span>
-<span class="n">path</span><span class="o">.</span><span class="n">auto_path</span> <span class="o">=</span> <span class="bp">False</span> <span class="c1">#don&#39;t use autopath</span>
+<span class="n">path</span><span class="o">.</span><span class="n">auto_path</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#don&#39;t use autopath</span>
 <span class="n">path</span><span class="o">.</span><span class="n">turn_start_altitude</span> <span class="o">=</span> <span class="mi">3000</span>
 <span class="n">path</span><span class="o">.</span><span class="n">turn_start_velocity</span> <span class="o">=</span> <span class="mi">120</span>
 <span class="n">path</span><span class="o">.</span><span class="n">turn_end_altitude</span> <span class="o">=</span> <span class="mi">65000</span>
@@ -246,7 +250,7 @@ Python</div>
         <a href="rendezvous.html" class="btn btn-neutral float-right" title="Rendezvous with a Target" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="launch-into-orbit.html" class="btn btn-neutral" title="The First Launch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="launch-into-orbit.html" class="btn btn-neutral float-left" title="The First Launch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -255,7 +259,7 @@ Python</div>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -272,35 +276,16 @@ Python</div>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

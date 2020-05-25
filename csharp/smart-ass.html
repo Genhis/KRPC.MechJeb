@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SmartASS &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>SmartASS &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SmartRCS" href="smart-rcs.html" />
     <link rel="prev" title="ManeuverPlanner" href="maneuver-planner.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">C#</a><ul class="current">
@@ -112,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -217,7 +219,7 @@
 
 <dl class="method">
 <dt id="method-KRPC.Client.Services.MechJeb.SmartASS.Update">
-void <code class="descname">Update</code> <span class="sig-paren">(</span><a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <em>resetPID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.SmartASS.Update" title="Permalink to this definition">¶</a></dt>
+void <code class="descname">Update</code> <span class="sig-paren">(</span><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <em>resetPID</em><span class="sig-paren">)</span><a class="headerlink" href="#method-KRPC.Client.Services.MechJeb.SmartASS.Update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update SmartASS position to use new values.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -237,7 +239,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.ForceYaw">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ForceYaw</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForceYaw" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">ForceYaw</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForceYaw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable yaw control for <a class="reference internal" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceHeading" title="KRPC.Client.Services.MechJeb.SmartASS.SurfaceHeading property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">SmartASS.SurfaceHeading</span></code></a>, <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfacePrograde" title="KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfacePrograde value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">SmartASSAutopilotMode.SurfacePrograde</span></code></a> and <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfaceRetrograde" title="KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfaceRetrograde value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">SmartASSAutopilotMode.SurfaceRetrograde</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -251,7 +253,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.ForcePitch">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ForcePitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForcePitch" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">ForcePitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForcePitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable pitch control for <a class="reference internal" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfacePitch" title="KRPC.Client.Services.MechJeb.SmartASS.SurfacePitch property"><code class="xref csharp csharp-prop docutils literal notranslate"><span class="pre">SmartASS.SurfacePitch</span></code></a>, <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfacePrograde" title="KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfacePrograde value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">SmartASSAutopilotMode.SurfacePrograde</span></code></a> and <a class="reference internal" href="#value-KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfaceRetrograde" title="KRPC.Client.Services.MechJeb.SmartASSAutopilotMode.SurfaceRetrograde value"><code class="xref csharp csharp-enum docutils literal notranslate"><span class="pre">SmartASSAutopilotMode.SurfaceRetrograde</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -265,7 +267,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.ForceRoll">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" title="System.Boolean">Boolean</a> <code class="descname">ForceRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForceRoll" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" title="System.Boolean">Boolean</a> <code class="descname">ForceRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.ForceRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable roll control.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -279,7 +281,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceHeading">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfaceHeading</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceHeading" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfaceHeading</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceHeading" title="Permalink to this definition">¶</a></dt>
 <dd><p>Heading; Also called or azimuth, or the direction where you want to go.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -297,7 +299,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfacePitch">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfacePitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfacePitch" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfacePitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfacePitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -315,7 +317,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceRoll">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfaceRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceRoll" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfaceRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Roll; 0 is top side up.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -333,7 +335,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelYaw">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfaceVelYaw</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelYaw" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfaceVelYaw</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelYaw" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -350,7 +352,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelPitch">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfaceVelPitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelPitch" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfaceVelPitch</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelPitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -368,7 +370,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
 <dl class="property">
 <dt id="property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelRoll">
-<a class="reference external" href="https://msdn.microsoft.com/en-us/library/system.double.aspx" title="System.Double">Double</a> <code class="descname">SurfaceVelRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelRoll" title="Permalink to this definition">¶</a></dt>
+<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.double" title="System.Double">Double</a> <code class="descname">SurfaceVelRoll</code> { <em class="property">get; set;</em> }<a class="headerlink" href="#property-KRPC.Client.Services.MechJeb.SmartASS.SurfaceVelRoll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Roll; 0 is top side up.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -713,7 +715,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
         <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="maneuver-planner.html" class="btn btn-neutral" title="ManeuverPlanner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="maneuver-planner.html" class="btn btn-neutral float-left" title="ManeuverPlanner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -722,7 +724,7 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -739,33 +741,16 @@ void <code class="descname">Update</code> <span class="sig-paren">(</span><a cla
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

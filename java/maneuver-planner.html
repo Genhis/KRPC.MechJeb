@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SmartASS" href="smart-ass.html" />
     <link rel="prev" title="RendezvousAutopilot" href="rendezvous-autopilot.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -116,7 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -569,7 +571,7 @@ public class <code class="descname">OperationApoapsis</code><a class="headerlink
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationApoapsis.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -577,7 +579,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationApoapsis.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationApoapsis.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -641,7 +668,7 @@ To match apoapsis to periapsis, set the time to <a class="reference internal" hr
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationCircularize.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -649,7 +676,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCircularize.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCircularize.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -729,7 +781,7 @@ public class <code class="descname">OperationCourseCorrection</code><a class="he
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationCourseCorrection.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -737,7 +789,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationCourseCorrection.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationCourseCorrection.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -768,7 +845,7 @@ public class <code class="descname">OperationEllipticize</code><a class="headerl
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationEllipticize.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -776,7 +853,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationEllipticize.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationEllipticize.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -856,7 +958,7 @@ public class <code class="descname">OperationInclination</code><a class="headerl
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationInclination.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -864,7 +966,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInclination.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInclination.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -926,7 +1053,7 @@ public class <code class="descname">OperationInterplanetaryTransfer</code><a cla
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -934,7 +1061,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationInterplanetaryTransfer.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -984,7 +1136,7 @@ public class <code class="descname">OperationKillRelVel</code><a class="headerli
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationKillRelVel.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -992,7 +1144,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationKillRelVel.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationKillRelVel.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1054,7 +1231,7 @@ public class <code class="descname">OperationLambert</code><a class="headerlink"
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationLambert.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1062,7 +1239,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLambert.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLambert.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1107,7 +1309,7 @@ public class <code class="descname">OperationLan</code><a class="headerlink" hre
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationLan.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1115,7 +1317,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLan.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLan.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1160,7 +1387,7 @@ MJServiceException - Internal service error.</p>
 <dl class="type">
 <dt id="krpc.client.services.MechJeb.OperationLongitude">
 public class <code class="descname">OperationLongitude</code><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change longitude of ascending node</p>
+<dd><p>Change surface longitude of apsis</p>
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationLongitude.getErrorMessage()">
  <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getErrorMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.getErrorMessage()" title="Permalink to this definition">¶</a></dt>
@@ -1178,7 +1405,7 @@ public class <code class="descname">OperationLongitude</code><a class="headerlin
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationLongitude.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1186,7 +1413,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationLongitude.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationLongitude.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1248,7 +1500,7 @@ public class <code class="descname">OperationMoonReturn</code><a class="headerli
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationMoonReturn.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1256,7 +1508,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationMoonReturn.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationMoonReturn.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1306,7 +1583,7 @@ public class <code class="descname">OperationPeriapsis</code><a class="headerlin
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationPeriapsis.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1314,7 +1591,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPeriapsis.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPeriapsis.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1376,7 +1678,7 @@ public class <code class="descname">OperationPlane</code><a class="headerlink" h
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationPlane.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1384,7 +1686,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationPlane.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationPlane.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1430,7 +1757,7 @@ To deploy satellites, set the denominator to number of satellites you want to ha
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationResonantOrbit.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1438,7 +1765,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationResonantOrbit.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationResonantOrbit.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1518,7 +1870,7 @@ public class <code class="descname">OperationSemiMajor</code><a class="headerlin
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationSemiMajor.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1526,7 +1878,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationSemiMajor.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationSemiMajor.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1591,7 +1968,7 @@ Contrary to the name, the transfer is often uni-impulsive. You can select when y
 <dl class="method">
 <dt id="krpc.client.services.MechJeb.OperationTransfer.makeNode()">
  SpaceCenter.Node <code class="descname">makeNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationTransfer.makeNode()" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1599,7 +1976,32 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.OperationTransfer.makeNodes()">
+ java.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html" title="java.util.package-summary">util</a>.<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="java.util.List">List</a>&lt;SpaceCenter.Node&gt; <code class="descname">makeNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.OperationTransfer.makeNodes()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1697,7 +2099,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
         <a href="smart-ass.html" class="btn btn-neutral float-right" title="SmartASS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rendezvous-autopilot.html" class="btn btn-neutral" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rendezvous-autopilot.html" class="btn btn-neutral float-left" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1706,7 +2108,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -1723,33 +2125,16 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

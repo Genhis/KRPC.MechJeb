@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The First Launch &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>The First Launch &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,39 +17,43 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/segment.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/menu.min.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Advanced Launch into Orbit" href="advanced-launch.html" />
     <link rel="prev" title="Tutorials and Examples" href="../tutorials.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +67,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -87,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a><ul class="current">
@@ -97,11 +101,11 @@
 <li class="toctree-l2"><a class="reference internal" href="docking.html">Docking with a Target</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -110,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -183,8 +187,8 @@
 <span id="tutorials-launch-into-orbit"></span><h1>The First Launch<a class="headerlink" href="#the-first-launch" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial launches any rocket into a 100km circular orbit with 6° inclination.</p>
 <p>The complete program is available in a variety of languages:</p>
-<p><a class="reference download internal" href="../_downloads/LaunchIntoOrbit.java" download=""><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
-<a class="reference download internal" href="../_downloads/LaunchIntoOrbit.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/142d02823a221b574bbccd6240abb87a/LaunchIntoOrbit.java"><code class="xref download docutils literal notranslate"><span class="pre">Java</span></code></a>,
+<a class="reference download internal" download="" href="../_downloads/87b3e277dbce38c1dcfa61d3ff5d75e3/LaunchIntoOrbit.py"><code class="xref download docutils literal notranslate"><span class="pre">Python</span></code></a></p>
 <p>We start with connecting to the server, getting <code class="docutils literal notranslate"><span class="pre">AscentAutopilot</span></code> module and setting launch parameters. Parameters which are omitted will be the same as in <em>Ascent Guidance</em> window.</p>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
@@ -213,22 +217,22 @@ Python</div>
 24
 25
 26
-27</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">,</span> <span class="n">RPCException</span><span class="o">,</span> <span class="n">StreamException</span> <span class="o">{</span>
-        <span class="k">try</span><span class="o">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="s">&quot;Launch into orbit&quot;</span><span class="o">))</span> <span class="o">{</span>
-            <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
-            <span class="n">AscentAutopilot</span> <span class="n">ascent</span> <span class="o">=</span> <span class="n">mj</span><span class="o">.</span><span class="na">getAscentAutopilot</span><span class="o">();</span>
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">,</span> <span class="n">RPCException</span><span class="p">,</span> <span class="n">StreamException</span> <span class="p">{</span>
+        <span class="k">try</span><span class="p">(</span><span class="n">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="s">&quot;Launch into orbit&quot;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">SpaceCenter</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">SpaceCenter</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+            <span class="n">MechJeb</span> <span class="n">mj</span> <span class="o">=</span> <span class="n">MechJeb</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+            <span class="n">AscentAutopilot</span> <span class="n">ascent</span> <span class="o">=</span> <span class="n">mj</span><span class="p">.</span><span class="na">getAscentAutopilot</span><span class="p">();</span>
 
             <span class="c1">//All of these options will be filled directly into AscentGuidance window and can be modified manually during flight.</span>
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredOrbitAltitude</span><span class="o">(</span><span class="mi">100000</span><span class="o">);</span>
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setDesiredInclination</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setDesiredOrbitAltitude</span><span class="p">(</span><span class="mi">100000</span><span class="p">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setDesiredInclination</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
 
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setForceRoll</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setVerticalRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setTurnRoll</span><span class="o">(</span><span class="mi">90</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setForceRoll</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setVerticalRoll</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setTurnRoll</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
 
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setAutostage</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-            <span class="n">ascent</span><span class="o">.</span><span class="na">setEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setAutostage</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="n">ascent</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -261,11 +265,11 @@ Python</div>
 <span class="n">ascent</span><span class="o">.</span><span class="n">desired_orbit_altitude</span> <span class="o">=</span> <span class="mi">100000</span>
 <span class="n">ascent</span><span class="o">.</span><span class="n">desired_inclination</span> <span class="o">=</span> <span class="mi">6</span>
 
-<span class="n">ascent</span><span class="o">.</span><span class="n">force_roll</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">ascent</span><span class="o">.</span><span class="n">force_roll</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">ascent</span><span class="o">.</span><span class="n">vertical_roll</span> <span class="o">=</span> <span class="mi">90</span>
 <span class="n">ascent</span><span class="o">.</span><span class="n">turn_roll</span> <span class="o">=</span> <span class="mi">90</span>
 
-<span class="n">ascent</span><span class="o">.</span><span class="n">autostage</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">ascent</span><span class="o">.</span><span class="n">autostage</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -302,20 +306,20 @@ Python</div>
 38
 39
 40
-41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">sc</span><span class="o">.</span><span class="na">getActiveVessel</span><span class="o">().</span><span class="na">getControl</span><span class="o">().</span><span class="na">activateNextStage</span><span class="o">();</span> <span class="c1">//launch the vessel</span>
+41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>            <span class="n">sc</span><span class="p">.</span><span class="na">getActiveVessel</span><span class="p">().</span><span class="na">getControl</span><span class="p">().</span><span class="na">activateNextStage</span><span class="p">();</span> <span class="c1">//launch the vessel</span>
 
-            <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">addStream</span><span class="o">(</span><span class="n">ascent</span><span class="o">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="o">);</span>
-            <span class="n">enabled</span><span class="o">.</span><span class="na">setRate</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
-            <span class="kd">synchronized</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">getCondition</span><span class="o">())</span> <span class="o">{</span>
-                <span class="k">while</span><span class="o">(</span><span class="n">enabled</span><span class="o">.</span><span class="na">get</span><span class="o">())</span>
-                    <span class="n">enabled</span><span class="o">.</span><span class="na">waitForUpdate</span><span class="o">();</span>
-            <span class="o">}</span>
-            <span class="n">enabled</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+            <span class="n">Stream</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="na">addStream</span><span class="p">(</span><span class="n">ascent</span><span class="p">,</span> <span class="s">&quot;getEnabled&quot;</span><span class="p">);</span>
+            <span class="n">enabled</span><span class="p">.</span><span class="na">setRate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//we don&#39;t need a high throughput rate, 1 second is more than enough</span>
+            <span class="kd">synchronized</span><span class="p">(</span><span class="n">enabled</span><span class="p">.</span><span class="na">getCondition</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">while</span><span class="p">(</span><span class="n">enabled</span><span class="p">.</span><span class="na">get</span><span class="p">())</span>
+                    <span class="n">enabled</span><span class="p">.</span><span class="na">waitForUpdate</span><span class="p">();</span>
+            <span class="p">}</span>
+            <span class="n">enabled</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
 
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Launch complete!&quot;</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Launch complete!&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -330,7 +334,7 @@ Python</div>
 25
 26
 27
-28</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ascent</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="bp">True</span>
+28</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ascent</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">sc</span><span class="o">.</span><span class="n">active_vessel</span><span class="o">.</span><span class="n">control</span><span class="o">.</span><span class="n">activate_next_stage</span><span class="p">()</span> <span class="c1">#launch the vessel</span>
 
 <span class="k">with</span> <span class="n">conn</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="nb">getattr</span><span class="p">,</span> <span class="n">ascent</span><span class="p">,</span> <span class="s2">&quot;enabled&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">enabled</span><span class="p">:</span>
@@ -339,7 +343,7 @@ Python</div>
         <span class="k">while</span> <span class="n">enabled</span><span class="p">():</span>
             <span class="n">enabled</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Launch complete!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Launch complete!&quot;</span><span class="p">)</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
@@ -359,7 +363,7 @@ Python</div>
         <a href="advanced-launch.html" class="btn btn-neutral float-right" title="Advanced Launch into Orbit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../tutorials.html" class="btn btn-neutral" title="Tutorials and Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../tutorials.html" class="btn btn-neutral float-left" title="Tutorials and Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -368,7 +372,7 @@ Python</div>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -385,35 +389,16 @@ Python</div>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
-      <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

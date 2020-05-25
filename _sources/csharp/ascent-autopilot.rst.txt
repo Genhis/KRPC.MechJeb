@@ -181,9 +181,22 @@ AscentAutopilot
 
       :Game Scenes: Flight
 
+   .. property:: AscentLaunchMode LaunchMode { get; }
+
+      Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+
+      :Game Scenes: Flight
+
+   .. method:: void AbortTimedLaunch()
+
+      Abort a known timed launch when it has not started yet
+
+
+      :Game Scenes: Flight
+
    .. method:: void LaunchToRendezvous()
 
-
+      Launch to rendezvous with the selected target.
 
 
       :Game Scenes: Flight
@@ -194,6 +207,32 @@ AscentAutopilot
 
 
       :Game Scenes: Flight
+
+
+
+.. enum:: AscentLaunchMode
+
+
+
+
+   .. value:: Normal
+
+      The autopilot is not performing a timed launch.
+
+
+   .. value:: Rendezvous
+
+      The autopilot is performing a timed launch to rendezvous with the target vessel.
+
+
+   .. value:: TargetPlane
+
+      The autopilot is performing a timed launch to target plane.
+
+
+   .. value:: Unknown
+
+      The autopilot is performing an unknown timed launch.
 
 
 
@@ -211,13 +250,13 @@ AscentClassic
 
       :Game Scenes: Flight
 
-   .. property:: float AutoPathPerc { get; set; }
+   .. property:: float AutoTurnPercent { get; set; }
 
       A value between 0 and 1.
 
       :Game Scenes: Flight
 
-   .. property:: float AutoPathSpeedFactor { get; set; }
+   .. property:: float AutoTurnSpeedFactor { get; set; }
 
       A value between 0 and 1.
 

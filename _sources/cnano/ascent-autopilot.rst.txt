@@ -200,9 +200,22 @@ AscentAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchMode(krpc_connection_t connection, krpc_MechJeb_AscentLaunchMode_t * result)
+
+      Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_AbortTimedLaunch(krpc_connection_t connection)
+
+      Abort a known timed launch when it has not started yet
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AscentAutopilot_LaunchToRendezvous(krpc_connection_t connection)
 
-
+      Launch to rendezvous with the selected target.
 
 
       :Game Scenes: Flight
@@ -213,6 +226,32 @@ AscentAutopilot
 
 
       :Game Scenes: Flight
+
+
+
+.. type:: krpc_MechJeb_AscentLaunchMode_t
+
+
+
+
+   .. macro:: KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL
+
+      The autopilot is not performing a timed launch.
+
+
+   .. macro:: KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS
+
+      The autopilot is performing a timed launch to rendezvous with the target vessel.
+
+
+   .. macro:: KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE
+
+      The autopilot is performing a timed launch to target plane.
+
+
+   .. macro:: KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN
+
+      The autopilot is performing an unknown timed launch.
 
 
 
@@ -231,15 +270,15 @@ AscentClassic
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoPathPerc(krpc_connection_t connection, float * result)
-   .. function:: void krpc_MechJeb_AscentClassic_set_AutoPathPerc(float value)
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoTurnPercent(krpc_connection_t connection, float * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_AutoTurnPercent(float value)
 
       A value between 0 and 1.
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoPathSpeedFactor(krpc_connection_t connection, float * result)
-   .. function:: void krpc_MechJeb_AscentClassic_set_AutoPathSpeedFactor(float value)
+   .. function:: krpc_error_t krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor(krpc_connection_t connection, float * result)
+   .. function:: void krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor(float value)
 
       A value between 0 and 1.
 

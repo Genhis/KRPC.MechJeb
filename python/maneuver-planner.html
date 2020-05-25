@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SmartASS" href="smart-ass.html" />
     <link rel="prev" title="RendezvousAutopilot" href="rendezvous-autopilot.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -116,7 +118,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -634,7 +636,7 @@
 <dl class="method">
 <dt id="MechJeb.OperationApoapsis.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationApoapsis.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -642,9 +644,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationApoapsis.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationApoapsis.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -715,7 +744,7 @@ To match apoapsis to periapsis, set the time to <a class="reference internal" hr
 <dl class="method">
 <dt id="MechJeb.OperationCircularize.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationCircularize.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -723,9 +752,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationCircularize.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationCircularize.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -811,7 +867,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationCourseCorrection.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationCourseCorrection.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -819,9 +875,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationCourseCorrection.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationCourseCorrection.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -856,7 +939,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationEllipticize.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationEllipticize.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -864,9 +947,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationEllipticize.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationEllipticize.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -952,7 +1062,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationInclination.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationInclination.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -960,9 +1070,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationInclination.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationInclination.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1031,7 +1168,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationInterplanetaryTransfer.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationInterplanetaryTransfer.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1039,9 +1176,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationInterplanetaryTransfer.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationInterplanetaryTransfer.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1094,7 +1258,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationKillRelVel.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationKillRelVel.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1102,9 +1266,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationKillRelVel.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationKillRelVel.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1173,7 +1364,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationLambert.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLambert.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1181,9 +1372,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationLambert.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLambert.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1236,7 +1454,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationLan.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLan.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1244,9 +1462,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationLan.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLan.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1294,7 +1539,7 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationLongitude">
 <em class="property">class </em><code class="descname">OperationLongitude</code><a class="headerlink" href="#MechJeb.OperationLongitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change longitude of ascending node</p>
+<dd><p>Change surface longitude of apsis</p>
 <dl class="attribute">
 <dt id="MechJeb.OperationLongitude.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationLongitude.error_message" title="Permalink to this definition">¶</a></dt>
@@ -1316,7 +1561,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationLongitude.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLongitude.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1324,9 +1569,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationLongitude.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationLongitude.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1395,7 +1667,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationMoonReturn.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationMoonReturn.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1403,9 +1675,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationMoonReturn.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationMoonReturn.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1458,7 +1757,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationPeriapsis.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationPeriapsis.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1466,9 +1765,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationPeriapsis.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationPeriapsis.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1537,7 +1863,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationPlane.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationPlane.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1545,9 +1871,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationPlane.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationPlane.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1601,7 +1954,7 @@ To deploy satellites, set the denominator to number of satellites you want to ha
 <dl class="method">
 <dt id="MechJeb.OperationResonantOrbit.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationResonantOrbit.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1609,9 +1962,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationResonantOrbit.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationResonantOrbit.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1697,7 +2077,7 @@ MJServiceException - Internal service error.</p>
 <dl class="method">
 <dt id="MechJeb.OperationSemiMajor.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationSemiMajor.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1705,9 +2085,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationSemiMajor.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationSemiMajor.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1779,7 +2186,7 @@ Contrary to the name, the transfer is often uni-impulsive. You can select when y
 <dl class="method">
 <dt id="MechJeb.OperationTransfer.make_node">
 <code class="descname">make_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationTransfer.make_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new maneuver node.
+<dd><p>Execute the operation and create appropriate maneuver nodes.
 A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
 <p>OperationException is thrown when there is something wrong with the operation.
 MJServiceException - Internal service error.</p>
@@ -1787,9 +2194,36 @@ MJServiceException - Internal service error.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first maneuver node necessary to perform this operation.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is deprecated, use MakeNodes instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="MechJeb.OperationTransfer.make_nodes">
+<code class="descname">make_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.OperationTransfer.make_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the operation and create appropriate maneuver nodes.
+A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.</p>
+<p>OperationException is thrown when there is something wrong with the operation.
+MJServiceException - Internal service error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of maneuver nodes necessary to perform this operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list(<code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceCenter.Node</span></code>)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
 </tr>
 </tbody>
 </table>
@@ -1888,7 +2322,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
         <a href="smart-ass.html" class="btn btn-neutral float-right" title="SmartASS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rendezvous-autopilot.html" class="btn btn-neutral" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rendezvous-autopilot.html" class="btn btn-neutral float-left" title="RendezvousAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1897,7 +2331,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -1914,33 +2348,16 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

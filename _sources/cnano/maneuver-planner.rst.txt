@@ -240,13 +240,31 @@ OperationApoapsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_NewApoapsis(krpc_connection_t connection, double * result)
@@ -281,13 +299,31 @@ OperationCircularize
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
@@ -328,13 +364,31 @@ OperationCourseCorrection
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
 
@@ -355,13 +409,31 @@ OperationEllipticize
 
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_NewApoapsis(krpc_connection_t connection, double * result)
@@ -402,13 +474,31 @@ OperationInclination
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationInclination_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_NewInclination(krpc_connection_t connection, double * result)
@@ -442,13 +532,31 @@ OperationInterplanetaryTransfer
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_WaitForPhaseAngle(krpc_connection_t connection, bool * result)
@@ -476,13 +584,31 @@ OperationKillRelVel
 
    .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
@@ -516,13 +642,31 @@ OperationLambert
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationLambert_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
@@ -549,13 +693,31 @@ OperationLan
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLan_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationLan_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLan_NewLAN(krpc_connection_t connection, double * result)
@@ -579,7 +741,7 @@ OperationLongitude
 
 .. type:: krpc_MechJeb_OperationLongitude_t
 
-   Change longitude of ascending node
+   Change surface longitude of apsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -589,13 +751,31 @@ OperationLongitude
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLongitude_NewSurfaceLongitude(krpc_connection_t connection, double * result)
@@ -629,13 +809,31 @@ OperationMoonReturn
 
    .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_MoonReturnAltitude(krpc_connection_t connection, double * result)
@@ -663,13 +861,31 @@ OperationPeriapsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_NewPeriapsis(krpc_connection_t connection, double * result)
@@ -703,13 +919,31 @@ OperationPlane
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPlane_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationPlane_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPlane_TimeSelector(krpc_connection_t connection, krpc_MechJeb_TimeSelector_t * result)
@@ -737,13 +971,31 @@ OperationResonantOrbit
 
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationResonantOrbit_ResonanceDenominator(krpc_connection_t connection, int32_t * result)
@@ -784,13 +1036,31 @@ OperationSemiMajor
 
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_NewSemiMajorAxis(krpc_connection_t connection, double * result)
@@ -827,13 +1097,31 @@ OperationTransfer
 
    .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_MakeNode(krpc_connection_t connection, krpc_SpaceCenter_Node_t * result)
 
-      Create a new maneuver node.
+      Execute the operation and create appropriate maneuver nodes.
       A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
 
       OperationException is thrown when there is something wrong with the operation.
       MJServiceException - Internal service error.
 
 
+      :returns: The first maneuver node necessary to perform this operation.
+      :Game Scenes: Flight
+
+
+      .. note::
+
+         This method is deprecated, use MakeNodes instead.
+
+   .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_MakeNodes(krpc_connection_t connection, krpc_list_object_t * result)
+
+      Execute the operation and create appropriate maneuver nodes.
+      A warning may be stored in ErrorMessage during this process; so it may be useful to check its value.
+
+      OperationException is thrown when there is something wrong with the operation.
+      MJServiceException - Internal service error.
+
+
+      :returns: A list of maneuver nodes necessary to perform this operation
       :Game Scenes: Flight
 
    .. function:: krpc_error_t krpc_MechJeb_OperationTransfer_InterceptOnly(krpc_connection_t connection, bool * result)

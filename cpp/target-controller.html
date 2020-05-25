@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TargetController &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>TargetController &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ThrustController" href="thrust-controller.html" />
     <link rel="prev" title="StagingController" href="staging-controller.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -113,7 +115,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -185,11 +187,11 @@
   <div class="section" id="targetcontroller">
 <h1>TargetController<a class="headerlink" href="#targetcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetControllerE">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetControllerE"></span><span id="krpc::services::MechJeb::TargetController"></span><em class="property">class </em><code class="descname">TargetController</code><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetControllerE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetControllerE">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetControllerE"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetControllerE"></span><span id="krpc::services::MechJeb::TargetController"></span><em class="property">class </em><code class="descname">TargetController</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetControllerE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController9can_alignEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController9can_alignEv"></span><span id="krpc::services::MechJeb::TargetController::can_align"></span>bool <code class="descname">can_align</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController9can_alignEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController9can_alignEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController9can_alignEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController9can_alignEv"></span><span id="krpc::services::MechJeb::TargetController::can_align"></span>bool <code class="descname">can_align</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController9can_alignEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -201,8 +203,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController8distanceEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController8distanceEv"></span><span id="krpc::services::MechJeb::TargetController::distance"></span>float <code class="descname">distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController8distanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController8distanceEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController8distanceEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController8distanceEv"></span><span id="krpc::services::MechJeb::TargetController::distance"></span>float <code class="descname">distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController8distanceEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -214,8 +216,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController12docking_axisEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController12docking_axisEv"></span><span id="krpc::services::MechJeb::TargetController::docking_axis"></span>std::tuple&lt;double, double, double&gt; <code class="descname">docking_axis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController12docking_axisEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController12docking_axisEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController12docking_axisEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController12docking_axisEv"></span><span id="krpc::services::MechJeb::TargetController::docking_axis"></span>std::tuple&lt;double, double, double&gt; <code class="descname">docking_axis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController12docking_axisEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -227,8 +229,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController28get_position_target_positionEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController28get_position_target_positionEv"></span><span id="krpc::services::MechJeb::TargetController::get_position_target_position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">get_position_target_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController28get_position_target_positionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController28get_position_target_positionEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController28get_position_target_positionEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController28get_position_target_positionEv"></span><span id="krpc::services::MechJeb::TargetController::get_position_target_position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">get_position_target_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController28get_position_target_positionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -240,8 +242,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController26get_position_target_stringEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController26get_position_target_stringEv"></span><span id="krpc::services::MechJeb::TargetController::get_position_target_string"></span>std::string <code class="descname">get_position_target_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController26get_position_target_stringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController26get_position_target_stringEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController26get_position_target_stringEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController26get_position_target_stringEv"></span><span id="krpc::services::MechJeb::TargetController::get_position_target_string"></span>std::string <code class="descname">get_position_target_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController26get_position_target_stringEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -253,8 +255,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController20normal_target_existsEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController20normal_target_existsEv"></span><span id="krpc::services::MechJeb::TargetController::normal_target_exists"></span>bool <code class="descname">normal_target_exists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController20normal_target_existsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController20normal_target_existsEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController20normal_target_existsEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController20normal_target_existsEv"></span><span id="krpc::services::MechJeb::TargetController::normal_target_exists"></span>bool <code class="descname">normal_target_exists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController20normal_target_existsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -266,8 +268,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv"></span><span id="krpc::services::MechJeb::TargetController::pick_position_target_on_map"></span>void <code class="descname">pick_position_target_on_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv"></span><span id="krpc::services::MechJeb::TargetController::pick_position_target_on_map"></span>void <code class="descname">pick_position_target_on_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController27pick_position_target_on_mapEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -279,8 +281,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController8positionEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController8positionEv"></span><span id="krpc::services::MechJeb::TargetController::position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController8positionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController8positionEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController8positionEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController8positionEv"></span><span id="krpc::services::MechJeb::TargetController::position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController8positionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -292,8 +294,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController22position_target_existsEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController22position_target_existsEv"></span><span id="krpc::services::MechJeb::TargetController::position_target_exists"></span>bool <code class="descname">position_target_exists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController22position_target_existsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController22position_target_existsEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController22position_target_existsEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController22position_target_existsEv"></span><span id="krpc::services::MechJeb::TargetController::position_target_exists"></span>bool <code class="descname">position_target_exists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController22position_target_existsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -305,8 +307,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController17relative_positionEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController17relative_positionEv"></span><span id="krpc::services::MechJeb::TargetController::relative_position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">relative_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController17relative_positionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController17relative_positionEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController17relative_positionEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController17relative_positionEv"></span><span id="krpc::services::MechJeb::TargetController::relative_position"></span>std::tuple&lt;double, double, double&gt; <code class="descname">relative_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController17relative_positionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -318,8 +320,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController17relative_velocityEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController17relative_velocityEv"></span><span id="krpc::services::MechJeb::TargetController::relative_velocity"></span>std::tuple&lt;double, double, double&gt; <code class="descname">relative_velocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController17relative_velocityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController17relative_velocityEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController17relative_velocityEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController17relative_velocityEv"></span><span id="krpc::services::MechJeb::TargetController::relative_velocity"></span>std::tuple&lt;double, double, double&gt; <code class="descname">relative_velocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController17relative_velocityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -331,8 +333,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE"></span><span id="krpc::services::MechJeb::TargetController::set_direction_target__ss"></span>void <code class="descname">set_direction_target</code><span class="sig-paren">(</span>std::string <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE"></span><span id="krpc::services::MechJeb::TargetController::set_direction_target__ss"></span>void <code class="descname">set_direction_target</code><span class="sig-paren">(</span>std::string <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController20set_direction_targetENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -346,8 +348,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd"></span><span id="krpc::services::MechJeb::TargetController::set_position_target__SpaceCenter::CelestialBody.double.double"></span>void <code class="descname">set_position_target</code><span class="sig-paren">(</span>SpaceCenter::CelestialBody <em>body</em>, double <em>latitude</em>, double <em>longitude</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd"></span><span id="krpc::services::MechJeb::TargetController::set_position_target__SpaceCenter::CelestialBody.double.double"></span>void <code class="descname">set_position_target</code><span class="sig-paren">(</span>SpaceCenter::CelestialBody <em>body</em>, double <em>latitude</em>, double <em>longitude</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController19set_position_targetEN11SpaceCenter13CelestialBodyEdd" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -361,8 +363,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController12target_orbitEv">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController12target_orbitEv"></span><span id="krpc::services::MechJeb::TargetController::target_orbit"></span>SpaceCenter::Orbit <code class="descname">target_orbit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController12target_orbitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController12target_orbitEv">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController12target_orbitEv"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController12target_orbitEv"></span><span id="krpc::services::MechJeb::TargetController::target_orbit"></span>SpaceCenter::Orbit <code class="descname">target_orbit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController12target_orbitEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -374,8 +376,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE">
-<span id="_CPPv2N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE"></span><span id="krpc::services::MechJeb::TargetController::update_direction_target__std::tuple:double.double.double:"></span>void <code class="descname">update_direction_target</code><span class="sig-paren">(</span>std::tuple&lt;double, double, double&gt; <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE">
+<span id="_CPPv3N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE"></span><span id="_CPPv2N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE"></span><span id="krpc::services::MechJeb::TargetController::update_direction_target__std::tuple:double.double.double:"></span>void <code class="descname">update_direction_target</code><span class="sig-paren">(</span>std::tuple&lt;double, double, double&gt; <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16TargetController23update_direction_targetENSt5tupleIdddEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -403,7 +405,7 @@
         <a href="thrust-controller.html" class="btn btn-neutral float-right" title="ThrustController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="staging-controller.html" class="btn btn-neutral" title="StagingController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="staging-controller.html" class="btn btn-neutral float-left" title="StagingController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -412,7 +414,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -429,33 +431,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -231,9 +231,23 @@ AscentAutopilot
       :rtype: double
       :Game Scenes: Flight
 
+   .. attribute:: launch_mode
+
+      Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+
+      :Attribute: Read-only, cannot be set
+      :rtype: :class:`AscentLaunchMode`
+      :Game Scenes: Flight
+
+   .. method:: abort_timed_launch()
+
+      Abort a known timed launch when it has not started yet
+
+      :Game Scenes: Flight
+
    .. method:: launch_to_rendezvous()
 
-
+      Launch to rendezvous with the selected target.
 
       :Game Scenes: Flight
 
@@ -242,6 +256,32 @@ AscentAutopilot
       Launch into the plane of the selected target.
 
       :Game Scenes: Flight
+
+
+
+.. class:: AscentLaunchMode
+
+
+
+
+   .. data:: normal
+
+      The autopilot is not performing a timed launch.
+
+
+   .. data:: rendezvous
+
+      The autopilot is performing a timed launch to rendezvous with the target vessel.
+
+
+   .. data:: target_plane
+
+      The autopilot is performing a timed launch to target plane.
+
+
+   .. data:: unknown
+
+      The autopilot is performing an unknown timed launch.
 
 
 
@@ -261,7 +301,7 @@ AscentClassic
       :rtype: bool
       :Game Scenes: Flight
 
-   .. attribute:: auto_path_perc
+   .. attribute:: auto_turn_percent
 
       A value between 0 and 1.
 
@@ -269,7 +309,7 @@ AscentClassic
       :rtype: float
       :Game Scenes: Flight
 
-   .. attribute:: auto_path_speed_factor
+   .. attribute:: auto_turn_speed_factor
 
       A value between 0 and 1.
 

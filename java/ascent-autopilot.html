@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.5.0 documentation</title>
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.6.0 documentation</title>
   
 
   
@@ -17,13 +17,20 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -31,21 +38,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DockingAutopilot" href="docking-autopilot.html" />
     <link rel="prev" title="AirplaneAutopilot" href="airplane-autopilot.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -59,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.6.0
               </div>
             
           
@@ -83,15 +85,15 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting started</span></p>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../third-party-scripts.html">Third-party Scripts</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a bug</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client documentation</span></p>
+<p class="caption"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -118,7 +120,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External resources</span></p>
+<p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 </ul>
@@ -649,9 +651,38 @@ Paramethers can be set in <a class="reference internal" href="staging-controller
 </dd></dl>
 
 <dl class="method">
+<dt id="krpc.client.services.MechJeb.AscentAutopilot.getLaunchMode()">
+ <a class="reference internal" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="krpc.client.services.MechJeb.AscentLaunchMode">AscentLaunchMode</a> <code class="descname">getLaunchMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentAutopilot.getLaunchMode()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="krpc.client.services.MechJeb.AscentAutopilot.abortTimedLaunch()">
+ void <code class="descname">abortTimedLaunch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentAutopilot.abortTimedLaunch()" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort a known timed launch when it has not started yet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="krpc.client.services.MechJeb.AscentAutopilot.launchToRendezvous()">
  void <code class="descname">launchToRendezvous</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentAutopilot.launchToRendezvous()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Launch to rendezvous with the selected target.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -673,6 +704,35 @@ Paramethers can be set in <a class="reference internal" href="staging-controller
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="krpc.client.services.MechJeb.AscentLaunchMode">
+public enum <code class="descname">AscentLaunchMode</code><a class="headerlink" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field">
+<dt id="krpc.client.services.MechJeb.AscentLaunchMode.NORMAL">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="krpc.client.services.MechJeb.AscentLaunchMode">AscentLaunchMode</a> <code class="descname">NORMAL</code><a class="headerlink" href="#krpc.client.services.MechJeb.AscentLaunchMode.NORMAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autopilot is not performing a timed launch.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.AscentLaunchMode.RENDEZVOUS">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="krpc.client.services.MechJeb.AscentLaunchMode">AscentLaunchMode</a> <code class="descname">RENDEZVOUS</code><a class="headerlink" href="#krpc.client.services.MechJeb.AscentLaunchMode.RENDEZVOUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autopilot is performing a timed launch to rendezvous with the target vessel.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.AscentLaunchMode.TARGET_PLANE">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="krpc.client.services.MechJeb.AscentLaunchMode">AscentLaunchMode</a> <code class="descname">TARGET_PLANE</code><a class="headerlink" href="#krpc.client.services.MechJeb.AscentLaunchMode.TARGET_PLANE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autopilot is performing a timed launch to target plane.</p>
+</dd></dl>
+
+<dl class="field">
+<dt id="krpc.client.services.MechJeb.AscentLaunchMode.UNKNOWN">
+public <a class="reference internal" href="#krpc.client.services.MechJeb.AscentLaunchMode" title="krpc.client.services.MechJeb.AscentLaunchMode">AscentLaunchMode</a> <code class="descname">UNKNOWN</code><a class="headerlink" href="#krpc.client.services.MechJeb.AscentLaunchMode.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autopilot is performing an unknown timed launch.</p>
 </dd></dl>
 
 </dd></dl>
@@ -703,13 +763,13 @@ public class <code class="descname">AscentClassic</code><a class="headerlink" hr
 </dd></dl>
 
 <dl class="method">
-<dt id="krpc.client.services.MechJeb.AscentClassic.getAutoPathPerc()">
- float <code class="descname">getAutoPathPerc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.getAutoPathPerc()" title="Permalink to this definition">¶</a></dt>
+<dt id="krpc.client.services.MechJeb.AscentClassic.getAutoTurnPercent()">
+ float <code class="descname">getAutoTurnPercent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.getAutoTurnPercent()" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="krpc.client.services.MechJeb.AscentClassic.setAutoPathPerc(float)">
- void <code class="descname">setAutoPathPerc</code><span class="sig-paren">(</span>float<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.setAutoPathPerc(float)" title="Permalink to this definition">¶</a></dt>
+<dt id="krpc.client.services.MechJeb.AscentClassic.setAutoTurnPercent(float)">
+ void <code class="descname">setAutoTurnPercent</code><span class="sig-paren">(</span>float<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.setAutoTurnPercent(float)" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between 0 and 1.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -722,13 +782,13 @@ public class <code class="descname">AscentClassic</code><a class="headerlink" hr
 </dd></dl>
 
 <dl class="method">
-<dt id="krpc.client.services.MechJeb.AscentClassic.getAutoPathSpeedFactor()">
- float <code class="descname">getAutoPathSpeedFactor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.getAutoPathSpeedFactor()" title="Permalink to this definition">¶</a></dt>
+<dt id="krpc.client.services.MechJeb.AscentClassic.getAutoTurnSpeedFactor()">
+ float <code class="descname">getAutoTurnSpeedFactor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.getAutoTurnSpeedFactor()" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="krpc.client.services.MechJeb.AscentClassic.setAutoPathSpeedFactor(float)">
- void <code class="descname">setAutoPathSpeedFactor</code><span class="sig-paren">(</span>float<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.setAutoPathSpeedFactor(float)" title="Permalink to this definition">¶</a></dt>
+<dt id="krpc.client.services.MechJeb.AscentClassic.setAutoTurnSpeedFactor(float)">
+ void <code class="descname">setAutoTurnSpeedFactor</code><span class="sig-paren">(</span>float<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AscentClassic.setAutoTurnSpeedFactor(float)" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value between 0 and 1.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1083,7 +1143,7 @@ public class <code class="descname">AscentPVG</code><a class="headerlink" href="
         <a href="docking-autopilot.html" class="btn btn-neutral float-right" title="DockingAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="airplane-autopilot.html" class="btn btn-neutral" title="AirplaneAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="airplane-autopilot.html" class="btn btn-neutral float-left" title="AirplaneAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1092,7 +1152,7 @@ public class <code class="descname">AscentPVG</code><a class="headerlink" href="
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Genhis.
+        &copy; Copyright 2018-2020, Genhis
 
     </p>
   </div>
@@ -1109,33 +1169,16 @@ public class <code class="descname">AscentPVG</code><a class="headerlink" href="
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.5.0',
-            LANGUAGE:'en',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

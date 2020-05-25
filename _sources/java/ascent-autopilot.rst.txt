@@ -225,9 +225,22 @@ AscentAutopilot
 
       :Game Scenes: Flight
 
+   .. method:: AscentLaunchMode getLaunchMode()
+
+
+      Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
+
+      :Game Scenes: Flight
+
+   .. method:: void abortTimedLaunch()
+
+      Abort a known timed launch when it has not started yet
+
+      :Game Scenes: Flight
+
    .. method:: void launchToRendezvous()
 
-
+      Launch to rendezvous with the selected target.
 
       :Game Scenes: Flight
 
@@ -236,6 +249,32 @@ AscentAutopilot
       Launch into the plane of the selected target.
 
       :Game Scenes: Flight
+
+
+
+.. type:: public enum AscentLaunchMode
+
+
+
+
+   .. field:: public AscentLaunchMode NORMAL
+
+      The autopilot is not performing a timed launch.
+
+
+   .. field:: public AscentLaunchMode RENDEZVOUS
+
+      The autopilot is performing a timed launch to rendezvous with the target vessel.
+
+
+   .. field:: public AscentLaunchMode TARGET_PLANE
+
+      The autopilot is performing a timed launch to target plane.
+
+
+   .. field:: public AscentLaunchMode UNKNOWN
+
+      The autopilot is performing an unknown timed launch.
 
 
 
@@ -255,17 +294,17 @@ AscentClassic
 
       :Game Scenes: Flight
 
-   .. method:: float getAutoPathPerc()
+   .. method:: float getAutoTurnPercent()
 
-   .. method:: void setAutoPathPerc(float value)
+   .. method:: void setAutoTurnPercent(float value)
 
       A value between 0 and 1.
 
       :Game Scenes: Flight
 
-   .. method:: float getAutoPathSpeedFactor()
+   .. method:: float getAutoTurnSpeedFactor()
 
-   .. method:: void setAutoPathSpeedFactor(float value)
+   .. method:: void setAutoTurnSpeedFactor(float value)
 
       A value between 0 and 1.
 
