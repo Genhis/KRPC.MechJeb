@@ -1,3 +1,4 @@
+.buildtools/output
 bin
 lib
 obj
