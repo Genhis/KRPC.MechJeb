@@ -4,6 +4,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to return from a moon approximately at the specified altitude
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationMoonReturn : Operation {
 		internal new const string MechJebType = "MuMech.OperationMoonReturn";

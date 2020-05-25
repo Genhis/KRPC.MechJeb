@@ -154,7 +154,7 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public static bool APIReady { get; private set; }
 
-		// MODULES
+		// AUTOPILOTS
 
 		[KRPCProperty]
 		public static AirplaneAutopilot AirplaneAutopilot => (AirplaneAutopilot)modules["AirplaneAutopilot"];

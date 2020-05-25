@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 ### Fixed
 - AntennaController raised an exception when accessed
-- Target set in the same frame as an `Operation#MakeUpdate()` call was not recorded properly
+- Target set in the same frame but before `Operation#MakeNodes()` call was not recorded properly in `MakeNodes()`
 - SmartASS properties `SurfaceVelPitch` and `SurfaceVelRoll` were modifying wrong variables ([#15](https://github.com/Genhis/KRPC.MechJeb/issues/15))
 
 ## [0.6.0] - 2020-05-25

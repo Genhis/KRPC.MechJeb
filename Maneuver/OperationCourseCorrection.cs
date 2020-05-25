@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to fine-tune closest approach to target
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationCourseCorrection : Operation {
 		internal new const string MechJebType = "MuMech.OperationCourseCorrection";

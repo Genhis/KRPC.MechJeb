@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to change both periapsis and apoapsis
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationEllipticize : TimedOperation {
 		internal new const string MechJebType = "MuMech.OperationEllipticize";

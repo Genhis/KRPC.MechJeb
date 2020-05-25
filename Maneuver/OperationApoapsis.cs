@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to set a new apoapsis
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationApoapsis : TimedOperation {
 		internal new const string MechJebType = "MuMech.OperationApoapsis";

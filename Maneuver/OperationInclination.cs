@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to change inclination
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationInclination : TimedOperation {
 		internal new const string MechJebType = "MuMech.OperationInclination";

@@ -4,6 +4,9 @@ using System.Reflection;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to match planes with target
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationPlane : TimedOperation {
 		internal new const string MechJebType = "MuMech.OperationPlane";

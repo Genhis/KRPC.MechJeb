@@ -24,22 +24,35 @@ namespace KRPC.MechJeb {
 			allRetracted = type.GetCheckedMethod("AllRetracted");
 		}
 
+		/// <summary>
+		/// Automatically deploy modules of this type when controlled by a MechJeb autopilot
+		/// </summary>
 		[KRPCProperty]
 		public bool AutoDeploy {
 			get => (bool)autoDeploy.GetValue(this.instance);
 			set => autoDeploy.SetValue(this.instance, value);
 		}
 
+		/// <summary>
+		/// Extend all deployable modules of this type.
+		/// </summary>
 		[KRPCMethod]
 		public void ExtendAll() {
 			extendAll.Invoke(this.instance, null);
 		}
 
+		/// <summary>
+		/// Retract all deployable modules of this type.
+		/// </summary>
 		[KRPCMethod]
 		public void RetractAll() {
 			retractAll.Invoke(this.instance, null);
 		}
 
+		/// <summary>
+		/// Check if all deployable modules of this type are retracted.
+		/// </summary>
+		/// <returns>True if all modules are retracted; False otherwise</returns>
 		[KRPCMethod]
 		public bool AllRetracted() {
 			return (bool)allRetracted.Invoke(this.instance, null);

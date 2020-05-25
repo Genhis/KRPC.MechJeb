@@ -7,9 +7,75 @@ using KRPC.Service.Attributes;
 namespace KRPC.MechJeb.Maneuver {
 	[KRPCEnum(Service = "MechJeb")]
 	public enum TimeReference {
-		Computed, XFromNow, Apoapsis, Periapsis, Altitude, EqAscending, EqDescending,
-		RelAscending, RelDescending, ClosestApproach,
-		EqHighestAd, EqNearestAd, RelHighestAd, RelNearestAd
+		/// <summary>
+		/// At the optimum time.
+		/// </summary>
+		Computed,
+
+		/// <summary>
+		/// After a fixed <see cref="TimeSelector.LeadTime" />.
+		/// </summary>
+		XFromNow,
+
+		/// <summary>
+		/// At the next apoapsis.
+		/// </summary>
+		Apoapsis,
+
+		/// <summary>
+		/// At the next periapsis.
+		/// </summary>
+		Periapsis,
+
+		/// <summary>
+		/// At the selected <see cref="TimeSelector.CircularizeAltitude" />.
+		/// </summary>
+		Altitude,
+
+		/// <summary>
+		/// At the equatorial ascending node.
+		/// </summary>
+		EqAscending,
+
+		/// <summary>
+		/// At the equatorial descending node.
+		/// </summary>
+		EqDescending,
+
+		/// <summary>
+		/// At the next ascending node with the target.
+		/// </summary>
+		RelAscending,
+
+		/// <summary>
+		/// At the next descending node with the target.
+		/// </summary>
+		RelDescending,
+
+		/// <summary>
+		/// At the closest approach to the target.
+		/// </summary>
+		ClosestApproach,
+
+		/// <summary>
+		/// At the cheapest equatorial AN/DN.
+		/// </summary>
+		EqHighestAd,
+
+		/// <summary>
+		/// At the nearest equatorial AN/DN.
+		/// </summary>
+		EqNearestAd,
+
+		/// <summary>
+		/// At the cheapest AN/DN with the target.
+		/// </summary>
+		RelHighestAd,
+
+		/// <summary>
+		/// At the nearest AN/DN with the target.
+		/// </summary>
+		RelNearestAd
 	}
 
 	[KRPCClass(Service = "MechJeb")]

@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to set the chosen time
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationLambert : TimedOperation {
 		internal new const string MechJebType = "MuMech.OperationLambert";

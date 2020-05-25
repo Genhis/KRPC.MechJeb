@@ -5,7 +5,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
 	/// <summary>
-	/// Kill relative velocity to a given target.
+	/// Match velocities with target
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationKillRelVel : TimedOperation {

@@ -6,7 +6,7 @@
 {{ languages[domain.sphinxname] }}
 ==================================
 
-All object instances (modules, windows, controllers and operations) are permanent until you reset KSP, so you can cache them and reuse them for multiple flights. This may be useful if your program switches between vessels during flight. When you enter the flight scene or switch between vessels, it is recommended to **check whether the API is ready** before you call other operations. Otherwise, the API may throw an exception.
+All object instances (autopilots, windows, controllers and operations) are permanent until you reset KSP, so you can cache them and reuse them for multiple flights. This may be useful if your program switches between vessels during flight. When you enter the flight scene or switch between vessels, it is recommended to **check whether the API is ready** before you call other operations. Otherwise, the API may throw an exception.
 
 **Note:** Credit goes to `MechJeb2 wiki <https://github.com/MuMech/MechJeb2/wiki/>`_ for most of the method description.
 
@@ -36,6 +36,7 @@ Controllers
 -----------
 
 .. toctree::
+   deployable-controller
    node-executor
    rcs-controller
    staging-controller

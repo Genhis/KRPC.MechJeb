@@ -5,6 +5,9 @@ using KRPC.MechJeb.ExtensionMethods;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb.Maneuver {
+	/// <summary>
+	/// Create a maneuver to transfer to another planet
+	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class OperationInterplanetaryTransfer : Operation {
 		internal new const string MechJebType = "MuMech.OperationInterplanetaryTransfer";
