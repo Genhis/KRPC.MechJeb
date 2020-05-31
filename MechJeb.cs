@@ -21,6 +21,7 @@ namespace KRPC.MechJeb {
 		private static MethodInfo getComputerModule;
 
 		private static readonly Dictionary<string, Module> modules = new Dictionary<string, Module>();
+		private static readonly Dictionary<string, string> guiModules = new Dictionary<string, string>();
 
 		internal static bool InitTypes() {
 			try {
@@ -91,6 +92,13 @@ namespace KRPC.MechJeb {
 			modules.Add("SolarPanelController", new DeployableController());
 			modules.Add("TargetController", new TargetController());
 			modules.Add("ThrustController", new ThrustController());
+
+			// Create GUI modules
+			guiModules.Add("AirplaneAutopilot", "AirplaneGuidance");
+			guiModules.Add("AscentAutopilot", "AscentGuidance");
+			guiModules.Add("DockingAutopilot", "DockingGuidance");
+			guiModules.Add("LandingAutopilot", "LandingGuidance");
+			guiModules.Add("RendezvousAutopilot", "RendezvousGuidance");
 		}
 
 		internal static bool InitInstance() {
@@ -107,8 +115,9 @@ namespace KRPC.MechJeb {
 					string error = "Cannot initialize class " + p.Value.GetType().Name;
 					try {
 						object moduleInstance = GetComputerModule(p.Key);
+						guiModules.TryGetValue(p.Key, out string guiModule);
 						if(moduleInstance != null)
-							p.Value.InitInstance(moduleInstance);
+							p.Value.InitInstance(moduleInstance, guiModule == null ? null : GetComputerModule(guiModule));
 						else
 							errors.Add(error);
 					}

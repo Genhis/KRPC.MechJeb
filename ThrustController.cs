@@ -73,8 +73,8 @@ namespace KRPC.MechJeb {
 			transKillH = type.GetCheckedField("trans_kill_h");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.maxDynamicPressure = maxDynamicPressureField.GetInstanceValue(instance);
 			this.flameoutSafetyPct = flameoutSafetyPctField.GetInstanceValue(instance);

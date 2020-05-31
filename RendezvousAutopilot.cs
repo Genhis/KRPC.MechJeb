@@ -24,11 +24,20 @@ namespace KRPC.MechJeb {
 			status = type.GetCheckedField("status");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.desiredDistance = desiredDistanceField.GetInstanceValue(instance);
 			this.maxPhasingOrbits = maxPhasingOrbitsField.GetInstanceValue(instance);
+		}
+
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
 		}
 
 		[KRPCProperty]

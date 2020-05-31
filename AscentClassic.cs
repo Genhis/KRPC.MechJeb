@@ -46,8 +46,8 @@ namespace KRPC.MechJeb {
 			autoTurnEndAltitude = type.GetCheckedProperty("autoTurnEndAltitude");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.turnStartAltitude = turnStartAltitudeField.GetInstanceValue(instance);
 			this.turnStartVelocity = turnStartVelocityField.GetInstanceValue(instance);

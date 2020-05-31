@@ -6,7 +6,7 @@ using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
 	public abstract class Module {
-		protected internal abstract void InitInstance(object instance);
+		protected internal abstract void InitInstance(object instance, object guiInstance);
 	}
 
 	public abstract class ComputerModule : Module {
@@ -18,6 +18,7 @@ namespace KRPC.MechJeb {
 
 		// Instance objects
 		protected internal object instance;
+		protected object guiInstance;
 
 		private object users;
 
@@ -26,8 +27,9 @@ namespace KRPC.MechJeb {
 			usersField = type.GetCheckedField("users");
 		}
 
-		protected internal override void InitInstance(object instance) {
+		protected internal override void InitInstance(object instance, object guiInstance) {
 			this.instance = instance;
+			this.guiInstance = guiInstance ?? instance;
 
 			this.users = usersField.GetInstanceValue(instance);
 		}
@@ -39,6 +41,16 @@ namespace KRPC.MechJeb {
 					UserPool.usersAdd.Invoke(this.users, new object[] { this });
 				else
 					UserPool.usersRemove.Invoke(this.users, new object[] { this });
+			}
+		}
+
+		public virtual bool Visible {
+			get => (bool)enabled.GetValue(this.guiInstance, null);
+			set {
+				if(value)
+					UserPool.usersAdd.Invoke(usersField.GetValue(this.guiInstance), new object[] { this.instance });
+				else
+					UserPool.usersRemove.Invoke(usersField.GetValue(this.guiInstance), new object[] { this.instance });
 			}
 		}
 
@@ -77,5 +89,14 @@ namespace KRPC.MechJeb {
 		}
 	}
 
-	public abstract class DisplayModule : ComputerModule { }
+	public abstract class DisplayModule : ComputerModule {
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
+		}
+	}
 }

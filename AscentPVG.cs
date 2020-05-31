@@ -30,8 +30,8 @@ namespace KRPC.MechJeb {
 			omitCoast = type.GetCheckedField("omitCoast");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.pitchStartVelocity = pitchStartVelocityField.GetInstanceValue(instance);
 			this.pitchRate = pitchRateField.GetInstanceValue(instance);

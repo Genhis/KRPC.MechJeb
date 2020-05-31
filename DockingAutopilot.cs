@@ -41,8 +41,8 @@ namespace KRPC.MechJeb {
 			targetSize = type.GetCheckedField("targetSize");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.speedLimit = speedLimitField.GetInstanceValue(instance);
 			this.roll = rollField.GetInstanceValue(instance);
@@ -52,6 +52,15 @@ namespace KRPC.MechJeb {
 
 		[KRPCProperty]
 		public string Status => status.GetValue(this.instance).ToString();
+
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
+		}
 
 		[KRPCProperty]
 		public double SpeedLimit {

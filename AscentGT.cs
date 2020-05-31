@@ -38,8 +38,9 @@ namespace KRPC.MechJeb {
 			holdAPTimeField = type.GetCheckedField("holdAPTime");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
+
 			this.turnStartAltitude = turnStartAltitudeField.GetInstanceValue(instance);
 			this.turnStartVelocity = turnStartVelocityField.GetInstanceValue(instance);
 			this.turnStartPitch = turnStartPitchField.GetInstanceValue(instance);

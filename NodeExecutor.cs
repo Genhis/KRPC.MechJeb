@@ -32,8 +32,8 @@ namespace KRPC.MechJeb {
 			abort = type.GetCheckedMethod("Abort");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.leadTime = leadTimeField.GetInstanceValue(instance);
 			this.tolerance = toleranceField.GetInstanceValue(instance);

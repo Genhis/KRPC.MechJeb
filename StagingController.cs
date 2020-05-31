@@ -49,8 +49,8 @@ namespace KRPC.MechJeb {
 			autostagingOnce = type.GetCheckedField("autostagingOnce");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.autostagePreDelay = autostagePreDelayField.GetInstanceValue(instance);
 			this.autostagePostDelay = autostagePostDelayField.GetInstanceValue(instance);

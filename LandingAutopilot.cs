@@ -42,12 +42,21 @@ namespace KRPC.MechJeb {
 			stopLanding = type.GetCheckedMethod("StopLanding");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.touchdownSpeed = touchdownSpeedField.GetInstanceValue(instance);
 			this.limitGearsStage = limitGearsStageField.GetInstanceValue(instance);
 			this.limitChutesStage = limitChutesStageField.GetInstanceValue(instance);
+		}
+
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
 		}
 
 		[KRPCProperty]

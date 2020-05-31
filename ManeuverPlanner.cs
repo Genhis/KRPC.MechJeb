@@ -41,7 +41,7 @@ namespace KRPC.MechJeb {
 			operationsField = type.GetCheckedField("operation", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
-		protected internal override void InitInstance(object instance) {
+		protected internal override void InitInstance(object instance, object guiInstance) {
 			Dictionary<string, object> operations = instance != null ? ((object[])operationsField.GetValue(instance)).ToDictionary(el => el.GetType().FullName, el => el) : new Dictionary<string, object>();
 
 			foreach(KeyValuePair<string, Operation> p in this.operations) {

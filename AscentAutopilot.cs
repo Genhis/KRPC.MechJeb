@@ -55,8 +55,6 @@ namespace KRPC.MechJeb {
 		private static MethodInfo startCountdown;
 
 		// Instance objects
-		private object guiInstance;
-
 		private object desiredOrbitAltitude;
 		private object correctiveSteeringGain;
 		private object verticalRoll;
@@ -92,9 +90,8 @@ namespace KRPC.MechJeb {
 			startCountdown = type.GetCheckedMethod("StartCountdown");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
-			this.guiInstance = MechJeb.GetComputerModule("AscentGuidance");
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
 
 			this.desiredOrbitAltitude = desiredOrbitAltitudeField.GetInstanceValue(instance);
 			this.correctiveSteeringGain = correctiveSteeringGainField.GetInstanceValue(instance);
@@ -165,6 +162,15 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public AscentPVG AscentPathPVG { get; }
+
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
+		}
 
 		/// <summary>
 		/// The desired altitude in kilometres for the final circular orbit.

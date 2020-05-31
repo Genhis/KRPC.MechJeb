@@ -98,8 +98,9 @@ namespace KRPC.MechJeb {
 			yawLimitField = type.GetCheckedField("YawLimit");
 		}
 
-		protected internal override void InitInstance(object instance) {
-			base.InitInstance(instance);
+		protected internal override void InitInstance(object instance, object guiInstance) {
+			base.InitInstance(instance, guiInstance);
+
 			this.accKp = accKpField.GetInstanceValue(instance);
 			this.accKi = accKiField.GetInstanceValue(instance);
 			this.accKd = accKdField.GetInstanceValue(instance);
@@ -117,6 +118,15 @@ namespace KRPC.MechJeb {
 			this.yawKd = yawKdField.GetInstanceValue(instance);
 
 			this.yawLimit = yawLimitField.GetInstanceValue(instance);
+		}
+
+		/// <summary>
+		/// The visibility of the GUI window
+		/// </summary>
+		[KRPCProperty]
+		public override bool Visible {
+			get => base.Visible;
+			set => base.Visible = value;
 		}
 
 		[KRPCProperty]
