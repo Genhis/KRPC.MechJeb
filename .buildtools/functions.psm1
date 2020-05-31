@@ -20,12 +20,19 @@ function BuildClients() {
 	}
 	
 	BuildDefinitions
+	
+	$clientsDir = "output/clients/"
+	if(Test-Path $clientsDir) {
+		Echo "Removing clients directory"
+		rmdir $clientsDir -recurse
+	}
+	
 	Echo "Building clients"
 	foreach($key in $extensions.keys) {
 		$log = "  Language: " + $key
 		Echo $log
 		
-		$directory = "output/clients/" + $names[$key]
+		$directory = $clientsDir + $names[$key]
 		$null = New-Item -ItemType Directory -Force -Path $directory
 		
 		$value = $directory + "/MechJeb." + $extensions[$key]
@@ -34,16 +41,17 @@ function BuildClients() {
 }
 
 function CopyDocumentation() {
-	Echo "Copying documentation files"
-	robocopy ../docs output/docs /e > $null
-}
-
-function BuildTemplates($languages) {
 	$docsPath = "output/docs"
 	if(Test-Path $docsPath) {
 		Echo "Removing docs directory"
 		rmdir $docsPath -recurse
 	}
+	
+	Echo "Copying documentation files"
+	robocopy ../docs $docsPath /e > $null
+}
+
+function BuildTemplates($languages) {
 	CopyDocumentation
 	
 	Echo "Building templates"
@@ -60,6 +68,8 @@ function BuildTemplates($languages) {
 			krpc-docgen $lang $input ../docs/order.txt $output output/KRPC.MechJeb.json
 		}
 	}
+	
+	BuildHTML
 }
 
 function BuildAllTemplates() {
@@ -90,14 +100,8 @@ function BuildHTML() {
 function BuildRelease() {
 	BuildClients
 	
-	$source = "output/release"
-	if(Test-Path $source) {
-		Echo "Removing release directory"
-		rmdir $source -recurse
-	}
-	
 	Echo "Building release archive"
-	robocopy output/clients $source /e > $null
+	$source = "output/clients"
 	Copy-Item ../bin/Release/KRPC.MechJeb.dll $source
 	Copy-Item ../CHANGELOG.md $source
 	Copy-Item ../LICENSE $source

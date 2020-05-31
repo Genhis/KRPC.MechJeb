@@ -1,0 +1,7 @@
+krpctools
+Sphinx==1.8.5
+sphinx-csharp
+javasphinx
+git+https://github.com/djungelorm/sphinx-lua.git
+sphinx-tabs
+sphinx-rtd-theme
