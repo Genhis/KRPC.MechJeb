@@ -24,11 +24,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AscentAutopilot.py" />
-    <Compile Include="Assert.py" />
-    <Compile Include="ComputerModule.py" />
-    <Compile Include="MechJeb.py" />
-    <Compile Include="__init__.py" />
+    <Compile Include="krpcmjtest\Annotations.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="krpcmjtest\AscentAutopilot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="krpcmjtest\ComputerModule.py" />
+    <Compile Include="krpcmjtest\DockingAutopilot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestRunner.py" />
+    <Compile Include="krpcmjtest\TestCase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="krpcmjtest\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="krpcmjtest\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
