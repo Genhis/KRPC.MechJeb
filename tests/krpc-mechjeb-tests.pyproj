@@ -5,8 +5,7 @@
     <ProjectGuid>6fa795a1-14ec-4cf8-9dc7-c828f6b0980a</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>TestRunner.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +31,9 @@
     </Compile>
     <Compile Include="krpcmjtest\ComputerModule.py" />
     <Compile Include="krpcmjtest\DockingAutopilot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="krpcmjtest\Util.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TestRunner.py" />

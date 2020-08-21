@@ -14,16 +14,17 @@ mj = conn.mech_jeb
 
 # Create modules
 modules = [
-	AscentAutopilotTest("AscentAutopilot", mj.ascent_autopilot),
-	DockingAutopilotTest("DockingAutopilot", mj.docking_autopilot)
+	AscentAutopilotTest("AscentAutopilot"),
+	DockingAutopilotTest("DockingAutopilot")
 ]
 
 # Test modules
 for module in modules:
 	prettyPrint("Testing module " + module.type)
 	indent += 1
-
-	members = inspect.getmembers(type(module), inspect.ismethod)
+	
+	module.setInstance(conn, sc, mj)
+	members = inspect.getmembers(module, inspect.ismethod)
 	for name, method in members:
 		if hasAnnotation(method, Annotations.BeforeClass):
 			prettyPrint("Calling BeforeClass")
@@ -33,13 +34,16 @@ for module in modules:
 		if hasAnnotation(method, Annotations.Test):
 			value = getTestType(method)
 			method = getattr(module, name)
-			if value == InputType.BOOLEAN:
+			if value == InputType.NONE:
+				method()
+			elif value == InputType.BOOLEAN:
 				method(True)
 				method(False)
-			elif value == InputType.FLOAT:
-				for i in range(1, 4):
-					method((i ** 3 + 0.25 ** i) * 100)
-			elif value == InputType.INTEGER:
+			else:
+				if value == InputType.FLOAT:
+					for i in range(1, 4):
+						method((i ** 3 + 0.25 ** i) * 100)
+				# value == InputType.INTEGER:
 				for i in range(1, 4):
 					method(i ** 3 * 100)
 	indent -= 1

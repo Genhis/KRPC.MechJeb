@@ -2,6 +2,7 @@ import functools
 from enum import Enum
 
 class InputType(Enum):
+	NONE = 0
 	BOOLEAN = 1
 	FLOAT = 2
 	INTEGER = 3
