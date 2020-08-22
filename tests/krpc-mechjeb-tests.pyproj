@@ -23,6 +23,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="krpcmjtest\AscentGt.py" />
+    <Compile Include="krpcmjtest\AscentClassic.py" />
     <Compile Include="krpcmjtest\Translatron.py" />
     <Compile Include="krpcmjtest\SmartRcs.py" />
     <Compile Include="krpcmjtest\SmartAss.py" />

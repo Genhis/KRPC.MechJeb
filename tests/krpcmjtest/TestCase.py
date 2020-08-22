@@ -1,6 +1,7 @@
 import inspect
 
 from .Annotations import Generated, Test
+from .Util import toSnakeCase
 
 class AssertionException(Exception):
 	def __init__(self, message):
@@ -9,6 +10,28 @@ class AssertionException(Exception):
 class TestCase:
 	def __init__(self, type):
 		self.type = type
+
+	def setInstance(self, spacecenter, mechjeb):
+		self.sc = spacecenter
+		self.instance = getattr(mechjeb, toSnakeCase(self.type))
+
+		def generateTest(type, name):
+			@Generated
+			@Test(type)
+			def test(self, value):
+				setattr(self.instance, name, value)
+				self.assertEquals(value, getattr(self.instance, name))
+			
+			return test
+
+		# Create default testing methods if they don't exist
+		overriddenTests = list(name for name, method in inspect.getmembers(self, inspect.ismethod) if not name.startswith("_") and hasAnnotation(method, Test))
+		# TODO: Check for missing tests
+		for name, attribute in inspect.getmembers(self.instance, lambda o: not inspect.ismethod(o)):
+			if not name.startswith("_") and name not in overriddenTests:
+				t = toInputType(type(attribute))
+				if t != InputType.NONE:
+					setattr(self, name, generateTest(t, name).__get__(self, self.__class__))
 
 	def assertFail(self):
 		raise AssertionException(self._getExceptionPrefix() + "Not implemented")
@@ -34,12 +57,3 @@ class TestCase:
 
 	def _getExceptionPrefix(self):
 		return self.type + " " + inspect.stack()[2].function + "() failed: "
-
-def generateTest(type, name):
-	@Generated
-	@Test(type)
-	def test(self, value):
-		setattr(self.instance, name, value)
-		self.assertEquals(value, getattr(self.instance, name))
-			
-	return test
