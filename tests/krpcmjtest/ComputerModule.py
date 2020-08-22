@@ -1,7 +1,7 @@
 import inspect
 
 from .Annotations import InputType, Test, hasAnnotation, toInputType
-from .TestCase import TestCase
+from .TestCase import TestCase, generateTest
 from .Util import toSnakeCase
 
 class ComputerModuleTest(TestCase):
@@ -11,14 +11,6 @@ class ComputerModuleTest(TestCase):
 	def setInstance(self, spacecenter, mechjeb):
 		self.sc = spacecenter
 		self.instance = getattr(mechjeb, toSnakeCase(self.type))
-
-		def generateTest(type, name):
-			@Test(type)
-			def test(self, value):
-				setattr(self.instance, name, value)
-				self.assertEquals(value, getattr(self.instance, name))
-			
-			return test
 
 		# Create default testing methods if they don't exist
 		overriddenTests = list(name for name, method in inspect.getmembers(self, inspect.ismethod) if not name.startswith("_") and hasAnnotation(method, Test))

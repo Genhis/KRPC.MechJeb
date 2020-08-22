@@ -8,6 +8,7 @@ class InputType(Enum):
 	INTEGER = 3
 
 __beforeClassAttr = "annotations-beforeclass"
+__generatedAttr = "annotations-generated"
 __testAttr = "annotations-test"
 
 def BeforeClass(func):
@@ -17,6 +18,14 @@ def BeforeClass(func):
 
 	setattr(wrappedBeforeClass, __beforeClassAttr, True)
 	return wrappedBeforeClass
+
+def Generated(func):
+	@functools.wraps(func)
+	def wrappedGenerated(*args, **kwargs):
+		return func(*args, **kwargs)
+
+	setattr(wrappedGenerated, __generatedAttr, True)
+	return wrappedGenerated
 
 def Test(type):
 	def decoratorTest(func):
@@ -33,6 +42,7 @@ def getTestType(method):
 
 __annotations = {
 	BeforeClass: __beforeClassAttr,
+	Generated: __generatedAttr,
 	Test: __testAttr
 }
 def hasAnnotation(method, annotation):

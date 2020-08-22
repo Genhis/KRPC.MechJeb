@@ -1,5 +1,6 @@
-import krpc
 import inspect
+
+from .Annotations import Generated, Test
 
 class AssertionException(Exception):
 	def __init__(self, message):
@@ -38,3 +39,12 @@ class TestCase:
 
 	def _getExceptionPrefix(self):
 		return self.type + " " + inspect.stack()[2].function + "() failed: "
+
+def generateTest(type, name):
+	@Generated
+	@Test(type)
+	def test(self, value):
+		setattr(self.instance, name, value)
+		self.assertEquals(value, getattr(self.instance, name))
+			
+	return test
