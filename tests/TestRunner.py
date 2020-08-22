@@ -14,8 +14,11 @@ mj = conn.mech_jeb
 
 # Create modules
 modules = [
+	AirplaneAutopilotTest("AirplaneAutopilot"),
 	AscentAutopilotTest("AscentAutopilot"),
-	#DockingAutopilotTest("DockingAutopilot")
+	DockingAutopilotTest("DockingAutopilot"),
+	LandingAutopilotTest("LandingAutopilot"),
+	RendezvousAutopilotTest("RendezvousAutopilot"),
 ]
 
 # Test modules

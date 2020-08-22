@@ -29,13 +29,29 @@ class AscentAutopilotTest(ComputerModuleTest):
 		self.assertInRange(0, 2, self.instance.ascent_path_index)
 
 	@Test(InputType.NONE)
-	def ascentPathClassic(self):
+	def ascent_path_classic(self):
 		self.assertIsObject(self.instance.ascent_path_classic)
 
 	@Test(InputType.NONE)
-	def ascentPathGT(self):
+	def ascent_path_gt(self):
 		self.assertIsObject(self.instance.ascent_path_gt)
 
 	@Test(InputType.NONE)
-	def ascentPathPVG(self):
+	def ascent_path_pvg(self):
 		self.assertIsObject(self.instance.ascent_path_pvg)
+
+	@Test(InputType.NONE)
+	def launch_mode(self):
+		self.assertFail()
+
+	@Test(InputType.NONE)
+	def abort_timed_launch(self):
+		self.assertFail()
+
+	@Test(InputType.NONE)
+	def launch_to_rendezvous(self):
+		self.assertFail()
+
+	@Test(InputType.NONE)
+	def launch_to_target_plane(self):
+		self.assertFail()

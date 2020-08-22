@@ -23,6 +23,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="krpcmjtest\RendezvousAutopilot.py" />
+    <Compile Include="krpcmjtest\LandingAutopilot.py" />
     <Compile Include="krpcmjtest\Annotations.py">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +32,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="krpcmjtest\ComputerModule.py" />
+    <Compile Include="krpcmjtest\AirplaneAutopilot.py" />
     <Compile Include="krpcmjtest\DockingAutopilot.py">
       <SubType>Code</SubType>
     </Compile>
