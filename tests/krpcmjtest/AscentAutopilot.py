@@ -4,11 +4,11 @@ from .AscentGt import AscentGtTest
 from .ComputerModule import ComputerModuleTest
 
 class AscentAutopilotTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
-		self._submodules = [
-			AscentClassicTest("AscentClassic"),
-			AscentGtTest("AscentGT"),
+	def __init__(self):
+		super().__init__("ascent_autopilot", "AscentAutopilot")
+		self.submodules = [
+			AscentClassicTest(),
+			AscentGtTest(),
 		]
 
 	@Test(InputType.NONE)
@@ -61,7 +61,3 @@ class AscentAutopilotTest(ComputerModuleTest):
 	@Test(InputType.NONE)
 	def launch_to_target_plane(self):
 		self.assertFail()
-
-class AscentBaseTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)

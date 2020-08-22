@@ -1,9 +1,9 @@
 from .Annotations import InputType, Test
-from .ComputerModule import ComputerModuleTest
+from .ComputerModule import DisplayModuleTest
 
-class SmartRcsTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
+class SmartRcsTest(DisplayModuleTest):
+	def __init__(self):
+		super().__init__("smart_rcs", "SmartRcs")
 
 	@Test(InputType.NONE)
 	def mode(self):

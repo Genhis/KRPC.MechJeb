@@ -1,10 +1,10 @@
 from .Annotations import InputType, BeforeClass, Test
-from .AscentAutopilot import AscentBaseTest
+from .ComputerModule import ComputerModuleTest
 
-class AscentClassicTest(AscentBaseTest):
-	def __init__(self, type):
-		super().__init__(type)
+class AscentClassicTest(ComputerModuleTest):
+	def __init__(self):
+		super().__init__("ascent_path_classic", "AscentClassic")
 
 	@BeforeClass
 	def setUp(self):
-		self.instance.ascent_path_index = 0
+		self.parent.ascent_path_index = 0

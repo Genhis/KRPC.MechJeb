@@ -2,8 +2,8 @@ from .Annotations import InputType, BeforeClass, Test
 from .ComputerModule import ComputerModuleTest
 
 class DockingAutopilotTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
+	def __init__(self):
+		super().__init__("docking_autopilot", "DockingAutopilot")
 
 	#@BeforeClass
 	def beforeClass(self):

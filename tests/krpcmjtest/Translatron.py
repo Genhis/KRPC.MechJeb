@@ -1,9 +1,9 @@
 from .Annotations import InputType, Test
-from .ComputerModule import ComputerModuleTest
+from .ComputerModule import DisplayModuleTest
 
-class TranslatronTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
+class TranslatronTest(DisplayModuleTest):
+	def __init__(self):
+		super().__init__("translatron", "Translatron")
 
 	@Test(InputType.NONE)
 	def mode(self):

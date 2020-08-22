@@ -8,60 +8,73 @@ indent = 0
 def prettyPrint(message, end = "\n"):
 	print("    " * indent + message, end = end)
 
+def printErrors(errors):
+	global indent
+	
+	indent += 1
+	for error in errors:
+		prettyPrint(error)
+	indent -= 1
+
 def runTests(sc, parentInstance, modules):
+	global indent
+
 	for module in modules:
-		prettyPrint("Testing module " + module.type)
+		prettyPrint("Testing module " + module.name)
 		indent += 1
 	
-		module.setInstance(sc, parentInstance)
-		members = inspect.getmembers(module)
-		for name, method in members:
-			if Annotations.hasAnnotation(method, Annotations.BeforeClass):
-				prettyPrint("Calling BeforeClass")
-				getattr(module, name)()
+		try:
+			globalErrors = module.setInstance(sc, parentInstance)
+			members = inspect.getmembers(module)
+			for name, method in members:
+				if Annotations.hasAnnotation(method, Annotations.BeforeClass):
+					prettyPrint("Setting up environment...")
+					getattr(module, name)()
 
-		for name, method in members:
-			if Annotations.hasAnnotation(method, Annotations.Test):
-				prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
-				errors = []
+			for name, method in members:
+				if Annotations.hasAnnotation(method, Annotations.Test):
+					prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
+					if name in globalErrors:
+						print("      NOT RUN")
+						printErrors([str(globalErrors[name])])
 
-				value = Annotations.getTestType(method)
-				method = getattr(module, name)
-				values = []
-				if value == InputType.NONE:
-					values.append(-1)
-					try:
-						method()
-					except:
-						errors.append(str(sys.exc_info()[0]))
-				else:
-					if value == InputType.BOOLEAN:
-						values = [True, False]
-					else:
-						if value == InputType.FLOAT:
-							for i in range(1, 4):
-								values.append((i ** 3 + 0.25 ** i) * 100)
-						# value == InputType.INTEGER:
-						for i in range(1, 4):
-							values.append(i ** 3 * 100)
-
-					for value in values:
+					errors = []
+					values = []
+					def catchExceptions(callable):
 						try:
-							method(value)
-						except:
-							errors.append(str(sys.exc_info()[0]))
+							callable()
+						except (Exception, RuntimeError) as ex:
+							errors.append(str(ex))
 
-				failed = len(errors) > 0
-				print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("FAILED" if failed else "SUCCEEDED"))
-				if failed:
-					indent += 1
-					for error in errors:
-						prettyPrint(error)
-					indent -= 1
+					value = Annotations.getTestType(method)
+					method = getattr(module, name)
+					if value == InputType.NONE:
+						values.append(-1)
+						catchExceptions(method)
+					else:
+						if value == InputType.BOOLEAN:
+							values = [True, False]
+						else:
+							if value == InputType.FLOAT:
+								for i in range(1, 4):
+									values.append((i ** 3 + 0.25 ** i) * 100)
+							# value == InputType.INTEGER:
+							for i in range(1, 4):
+								values.append(i ** 3 * 100)
 
-			# Check for sub-modules
-			if hasattr(module.instance, "_submodules"):
-				runTests(sc, module.instance, module.instance._submodules)
+						for value in values:
+							catchExceptions(lambda: method(value))
+
+					failed = len(errors) > 0
+					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("FAILED" if failed else "SUCCEEDED"))
+					if failed:
+						printErrors(errors)
+		except (Exception, RuntimeError) as ex:
+			printErrors([ex])
+
+		# Check for sub-modules
+		if hasattr(module, "submodules"):
+			runTests(sc, module.instance, module.submodules)
 
 		indent -= 1
 
@@ -72,16 +85,16 @@ mj = conn.mech_jeb
 
 # Create modules
 modules = [
-	#AirplaneAutopilotTest("AirplaneAutopilot"),
-	AscentAutopilotTest("AscentAutopilot"),
-	DockingAutopilotTest("DockingAutopilot"),
-	LandingAutopilotTest("LandingAutopilot"),
-	RendezvousAutopilotTest("RendezvousAutopilot"),
+	#AirplaneAutopilotTest(),
+	AscentAutopilotTest(),
+	DockingAutopilotTest(),
+	LandingAutopilotTest(),
+	RendezvousAutopilotTest(),
 
-	SmartAssTest("SmartASS"),
-	SmartRcsTest("SmartRCS"),
-	TranslatronTest("Translatron"),
+	SmartAssTest(),
+	SmartRcsTest(),
+	TranslatronTest(),
 ]
 
 # Test modules
-runTests(modules)
+runTests(sc, mj, modules)

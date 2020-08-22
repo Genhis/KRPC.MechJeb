@@ -1,9 +1,9 @@
 from .Annotations import InputType, Test
-from .ComputerModule import ComputerModuleTest
+from .ComputerModule import DisplayModuleTest
 
-class SmartAssTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
+class SmartAssTest(DisplayModuleTest):
+	def __init__(self):
+		super().__init__("smart_ass", "SmartAss")
 
 	@Test(InputType.NONE)
 	def interface_mode(self):

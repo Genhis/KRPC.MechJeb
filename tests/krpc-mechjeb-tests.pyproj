@@ -41,9 +41,6 @@
     <Compile Include="krpcmjtest\DockingAutopilot.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="krpcmjtest\Util.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="TestRunner.py" />
     <Compile Include="krpcmjtest\TestCase.py">
       <SubType>Code</SubType>

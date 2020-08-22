@@ -1,9 +1,9 @@
 from .Annotations import InputType, Test
-from .ComputerModule import ComputerModuleTest
+from .ComputerModule import AutopilotModuleTest
 
-class LandingAutopilotTest(ComputerModuleTest):
-	def __init__(self, type):
-		super().__init__(type)
+class LandingAutopilotTest(AutopilotModuleTest):
+	def __init__(self):
+		super().__init__("landing_autopilot", "LandingAutopilot")
 
 	@Test(InputType.NONE)
 	def land_at_position_target(self):
