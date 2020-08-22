@@ -20,6 +20,10 @@ modules = [
 	DockingAutopilotTest("DockingAutopilot"),
 	LandingAutopilotTest("LandingAutopilot"),
 	RendezvousAutopilotTest("RendezvousAutopilot"),
+
+	SmartAssTest("SmartASS"),
+	SmartRcsTest("SmartRCS"),
+	TranslatronTest("Translatron"),
 ]
 
 # Test modules

@@ -23,6 +23,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="krpcmjtest\Translatron.py" />
+    <Compile Include="krpcmjtest\SmartRcs.py" />
+    <Compile Include="krpcmjtest\SmartAss.py" />
     <Compile Include="krpcmjtest\RendezvousAutopilot.py" />
     <Compile Include="krpcmjtest\LandingAutopilot.py" />
     <Compile Include="krpcmjtest\Annotations.py">
