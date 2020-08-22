@@ -37,3 +37,11 @@ __annotations = {
 }
 def hasAnnotation(method, annotation):
 	return hasattr(method, __annotations[annotation])
+
+__inputType = {
+	bool: InputType.BOOLEAN,
+	float: InputType.FLOAT,
+	int: InputType.INTEGER
+}
+def toInputType(type):
+	return __inputType[type] if type in __inputType else InputType.NONE

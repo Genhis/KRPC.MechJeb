@@ -1,4 +1,6 @@
-from .Annotations import InputType, Test
+import inspect
+
+from .Annotations import InputType, Test, hasAnnotation, toInputType
 from .TestCase import TestCase
 from .Util import toSnakeCase
 
@@ -11,7 +13,18 @@ class ComputerModuleTest(TestCase):
 		self.sc = spacecenter
 		self.instance = getattr(mechjeb, toSnakeCase(self.type))
 
-	@Test(InputType.BOOLEAN)
-	def testEnabled(self, value):
-		self.instance.enabled = value
-		self.assertEquals(value, self.instance.enabled)
+		def generateTest(type, name):
+			@Test(type)
+			def test(self, value):
+				setattr(self.instance, name, value)
+				self.assertEquals(value, getattr(self.instance, name))
+			
+			return test
+
+		# Create default testing methods if they don't exist
+		overriddenTests = list(name for name, method in inspect.getmembers(self, inspect.ismethod) if not name.startswith("_") and hasAnnotation(method, Test))
+		for name, attribute in inspect.getmembers(self.instance, lambda o: not inspect.ismethod(o)):
+			if not name.startswith("_") and name not in overriddenTests:
+				t = toInputType(type(attribute))
+				if t != InputType.NONE:
+					setattr(self, name, generateTest(t, name).__get__(self, self.__class__))
