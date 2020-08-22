@@ -8,8 +8,7 @@ class ComputerModuleTest(TestCase):
 	def __init__(self, type):
 		super().__init__(type)
 
-	def setInstance(self, conn, spacecenter, mechjeb):
-		self.conn = conn
+	def setInstance(self, spacecenter, mechjeb):
 		self.sc = spacecenter
 		self.instance = getattr(mechjeb, toSnakeCase(self.type))
 

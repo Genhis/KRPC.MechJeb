@@ -23,7 +23,7 @@ for module in modules:
 	prettyPrint("Testing module " + module.type)
 	indent += 1
 	
-	module.setInstance(conn, sc, mj)
+	module.setInstance(sc, mj)
 	members = inspect.getmembers(module)
 	for name, method in members:
 		if Annotations.hasAnnotation(method, Annotations.BeforeClass):
