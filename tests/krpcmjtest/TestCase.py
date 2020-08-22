@@ -16,14 +16,10 @@ class TestCase:
 	def assertEquals(self, expected, actual):
 		if expected != actual:
 			raise AssertionException(self._getExceptionPrefix() + "Expected " + str(expected) + " but got " + str(actual))
-		else:
-			print("OK")
 	
 	def assertTrue(self, message, actual):
 		if not actual:
 			raise AssertionException(self._getExceptionPrefix() + message)
-		else:
-			print("OK")
 	
 	def assertFalse(self, message, actual):
 		self.assertTrue(message, not actual)
@@ -31,11 +27,10 @@ class TestCase:
 	def assertInRange(self, a, b, actual):
 		if actual < a or actual > b:
 			raise AssertionException(self._getExceptionPrefix() + "Excepted a value in range <" + str(a) + ", " + str(b) + "> but got " + str(actual))
-		else:
-			print("OK")
 
 	def assertIsObject(self, value):
-		print(type(value))
+		#print(type(value))
+		pass
 
 	def _getExceptionPrefix(self):
 		return self.type + " " + inspect.stack()[2].function + "() failed: "

@@ -1,11 +1,12 @@
 import krpc
 import inspect
+import sys
 from krpcmjtest import *
 
 # Function definitions
 indent = 0
-def prettyPrint(message):
-	print(" " * indent * 2 + message)
+def prettyPrint(message, end = "\n"):
+	print("    " * indent + message, end = end)
 
 # Initialize kRPC
 conn = krpc.connect("KRPC.MechJeb tests")
@@ -14,7 +15,7 @@ mj = conn.mech_jeb
 
 # Create modules
 modules = [
-	AirplaneAutopilotTest("AirplaneAutopilot"),
+	#AirplaneAutopilotTest("AirplaneAutopilot"),
 	AscentAutopilotTest("AscentAutopilot"),
 	DockingAutopilotTest("DockingAutopilot"),
 	LandingAutopilotTest("LandingAutopilot"),
@@ -35,22 +36,41 @@ for module in modules:
 
 	for name, method in members:
 		if Annotations.hasAnnotation(method, Annotations.Test):
-			try:
-				prettyPrint("Testing " + module.type + "#" + name)
-				value = Annotations.getTestType(method)
-				method = getattr(module, name)
-				if value == InputType.NONE:
+			prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
+			errors = []
+
+			value = Annotations.getTestType(method)
+			method = getattr(module, name)
+			values = []
+			if value == InputType.NONE:
+				values.append(-1)
+				try:
 					method()
-				elif value == InputType.BOOLEAN:
-					method(True)
-					method(False)
+				except:
+					errors.append(str(sys.exc_info()[0]))
+			else:
+				if value == InputType.BOOLEAN:
+					values = [True, False]
 				else:
 					if value == InputType.FLOAT:
 						for i in range(1, 4):
-							method((i ** 3 + 0.25 ** i) * 100)
+							values.append((i ** 3 + 0.25 ** i) * 100)
 					# value == InputType.INTEGER:
 					for i in range(1, 4):
-						method(i ** 3 * 100)
-			except AssertionException as ex:
-				print(ex)
+						values.append(i ** 3 * 100)
+
+				for value in values:
+					try:
+						method(value)
+					except:
+						errors.append(str(sys.exc_info()[0]))
+
+			failed = len(errors) > 0
+			print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("FAILED" if failed else "SUCCEEDED"))
+			if failed:
+				indent += 1
+				for error in errors:
+					prettyPrint(error)
+				indent -= 1
+
 	indent -= 1
