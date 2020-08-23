@@ -28,6 +28,16 @@ class TestCase:
 			
 			return test
 
+		def generateReadOnly(type, name):
+			@Generated
+			@Test(InputType.READ_ONLY)
+			def test(self):
+				# Read-only value is tested when determining its write access below
+				# This methos is here only to keep track of tests in TestRunner
+				pass
+
+			return test
+
 		# Create default testing methods if they don't exist
 		overriddenTests = list(name for name, method in inspect.getmembers(self, inspect.ismethod) if not name.startswith("_") and hasAnnotation(method, Test))
 		# TODO: Check for missing tests
@@ -36,9 +46,19 @@ class TestCase:
 		for name in dir(self.instance):
 			if not name.startswith("_") and name not in overriddenTests:
 				try:
-					t = toInputType(type(getattr(self.instance, name)))
+					attribute = getattr(self.instance, name)
+
+					t = toInputType(type(attribute))
 					if t != InputType.NONE:
-						setattr(self, name, generateTest(t, name).__get__(self, self.__class__))
+
+						# Check if the attribute is read-only - is there a better way?
+						generator = generateTest
+						try:
+							setattr(self.instance, name, attribute)
+						except AttributeError:
+							generator = generateReadOnly
+
+						setattr(self, name, generator(t, name).__get__(self, self.__class__))
 					else:
 						errors[name] = MissingTestException()
 				except (Exception, RuntimeError) as ex:

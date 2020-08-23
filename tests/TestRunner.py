@@ -44,8 +44,9 @@ def runTests(spaceCenter, parentInstance, modules):
 							errors.append(str(ex))
 
 					value = Annotations.getTestType(method)
+					readOnly = value == InputType.READ_ONLY
 					method = getattr(module, name)
-					if value == InputType.NONE:
+					if value == InputType.NONE or readOnly:
 						values.append(-1)
 						catchExceptions(method)
 					else:
@@ -63,7 +64,7 @@ def runTests(spaceCenter, parentInstance, modules):
 							catchExceptions(lambda: method(value))
 
 					failed = len(errors) > 0
-					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("FAILED" if failed else "SUCCEEDED"))
+					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("READ-ONLY" if readOnly else "FAILED" if failed else "SUCCEEDED"))
 					if failed:
 						printErrors(errors)
 
@@ -78,7 +79,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 			# Check for sub-modules
 			if hasattr(module, "submodules"):
-				runTests(sc, module.instance, module.submodules)
+				runTests(spaceCenter, module.instance, module.submodules)
 		except (Exception, RuntimeError) as ex:
 			prettyPrint("Testing FAILED: " + str(ex))
 

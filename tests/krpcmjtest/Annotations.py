@@ -6,6 +6,7 @@ class InputType(Enum):
 	BOOLEAN = 1
 	FLOAT = 2
 	INTEGER = 3
+	READ_ONLY = 4
 
 __beforeClassAttr = "annotations-beforeclass"
 __generatedAttr = "annotations-generated"
