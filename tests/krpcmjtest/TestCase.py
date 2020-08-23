@@ -6,9 +6,6 @@ class AssertionException(Exception):
 	def __init__(self, message):
 		self.message = message
 
-class MissingTestException(Exception):
-	pass
-
 class TestCase:
 	def __init__(self, variable, name):
 		self.variable = variable
@@ -28,10 +25,11 @@ class TestCase:
 			
 			return test
 
-		def generateReadOnly(type, name):
+		def generateEmpty(type, name):
 			@Generated
-			@Test(InputType.READ_ONLY)
+			@Test(type)
 			def test(self):
+				# Represents read-only or missing tests
 				# Read-only value is tested when determining its write access below
 				# This methos is here only to keep track of tests in TestRunner
 				pass
@@ -47,20 +45,20 @@ class TestCase:
 			if not name.startswith("_") and name not in overriddenTests:
 				try:
 					attribute = getattr(self.instance, name)
-
+					
+					generator = generateEmpty
 					t = toInputType(type(attribute))
 					if t != InputType.NONE:
-
 						# Check if the attribute is read-only - is there a better way?
-						generator = generateTest
 						try:
 							setattr(self.instance, name, attribute)
+							generator = generateTest
 						except AttributeError:
-							generator = generateReadOnly
-
-						setattr(self, name, generator(t, name).__get__(self, self.__class__))
+							t = InputType.READ_ONLY
 					else:
-						errors[name] = MissingTestException()
+						t = InputType.MISSING
+
+					setattr(self, name, generator(t, name).__get__(self, self.__class__))
 				except (Exception, RuntimeError) as ex:
 					errors[name] = ex
 

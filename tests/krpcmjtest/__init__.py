@@ -1,6 +1,6 @@
 import krpcmjtest.Annotations
 from .Annotations import InputType
-from .TestCase import AssertionException, MissingTestException
+from .TestCase import AssertionException
 
 from .AirplaneAutopilot import AirplaneAutopilotTest
 from .AscentAutopilot import AscentAutopilotTest

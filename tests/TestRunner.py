@@ -16,6 +16,14 @@ def printErrors(errors):
 		prettyPrint(error)
 	indent -= 1
 
+def getTypeMessage(type, failed):
+	if type == InputType.READ_ONLY:
+		return "READ-ONLY"
+	if type == InputType.MISSING:
+		return "MISSING"
+
+	return "FAILED" if failed else "SUCCEEDED"
+
 def runTests(spaceCenter, parentInstance, modules):
 	global indent
 
@@ -43,20 +51,20 @@ def runTests(spaceCenter, parentInstance, modules):
 						except (Exception, RuntimeError) as ex:
 							errors.append(str(ex))
 
-					value = Annotations.getTestType(method)
-					readOnly = value == InputType.READ_ONLY
+					t = Annotations.getTestType(method)
+					empty = t == InputType.READ_ONLY or t == InputType.MISSING
 					method = getattr(module, name)
-					if value == InputType.NONE or readOnly:
+					if t == InputType.NONE:
 						values.append(-1)
 						catchExceptions(method)
-					else:
-						if value == InputType.BOOLEAN:
+					elif not empty:
+						if t == InputType.BOOLEAN:
 							values = [True, False]
 						else:
-							if value == InputType.FLOAT:
+							if t == InputType.FLOAT:
 								for i in range(1, 4):
 									values.append((i ** 3 + 0.25 ** i) * 100)
-							# value == InputType.INTEGER:
+							# t == InputType.INTEGER:
 							for i in range(1, 4):
 								values.append(i ** 3 * 100)
 
@@ -64,18 +72,14 @@ def runTests(spaceCenter, parentInstance, modules):
 							catchExceptions(lambda: method(value))
 
 					failed = len(errors) > 0
-					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("READ-ONLY" if readOnly else "FAILED" if failed else "SUCCEEDED"))
+					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + getTypeMessage(t, failed))
 					if failed:
 						printErrors(errors)
 
 						
 			for name, error in globalErrors.items():
-				prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
-				if isinstance(error, MissingTestException):
-					print("      MISSING")
-				else:
-					print("      NOT RUN")
-					printErrors([str(error)])
+				prettyPrint("%-40s       NOT RUN" % ("Calling " + name + "()"))
+				printErrors([str(error)])
 
 			# Check for sub-modules
 			if hasattr(module, "submodules"):
