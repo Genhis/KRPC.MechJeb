@@ -1,6 +1,6 @@
 import krpc
 import inspect
-import sys
+
 from krpcmjtest import *
 
 # Function definitions
@@ -16,7 +16,7 @@ def printErrors(errors):
 		prettyPrint(error)
 	indent -= 1
 
-def runTests(sc, parentInstance, modules):
+def runTests(spaceCenter, parentInstance, modules):
 	global indent
 
 	for module in modules:
@@ -24,8 +24,8 @@ def runTests(sc, parentInstance, modules):
 		indent += 1
 	
 		try:
-			globalErrors = module.setInstance(sc, parentInstance)
-			members = inspect.getmembers(module)
+			globalErrors = module.setInstance(spaceCenter, parentInstance)
+			members = inspect.getmembers(module, inspect.ismethod)
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.BeforeClass):
 					prettyPrint("Setting up environment...")
@@ -34,9 +34,6 @@ def runTests(sc, parentInstance, modules):
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.Test):
 					prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
-					if name in globalErrors:
-						print("      NOT RUN")
-						printErrors([str(globalErrors[name])])
 
 					errors = []
 					values = []
@@ -69,23 +66,31 @@ def runTests(sc, parentInstance, modules):
 					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + ("FAILED" if failed else "SUCCEEDED"))
 					if failed:
 						printErrors(errors)
-		except (Exception, RuntimeError) as ex:
-			printErrors([ex])
 
-		# Check for sub-modules
-		if hasattr(module, "submodules"):
-			runTests(sc, module.instance, module.submodules)
+						
+			for name, error in globalErrors.items():
+				prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
+				if isinstance(error, MissingTestException):
+					print("      MISSING")
+				else:
+					print("      NOT RUN")
+					printErrors([str(error)])
+
+			# Check for sub-modules
+			if hasattr(module, "submodules"):
+				runTests(sc, module.instance, module.submodules)
+		except (Exception, RuntimeError) as ex:
+			prettyPrint("Testing FAILED: " + str(ex))
+
 
 		indent -= 1
 
 # Initialize kRPC
 conn = krpc.connect("KRPC.MechJeb tests")
-sc = conn.space_center
-mj = conn.mech_jeb
 
 # Create modules
 modules = [
-	#AirplaneAutopilotTest(),
+	AirplaneAutopilotTest(),
 	AscentAutopilotTest(),
 	DockingAutopilotTest(),
 	LandingAutopilotTest(),
@@ -97,4 +102,4 @@ modules = [
 ]
 
 # Test modules
-runTests(sc, mj, modules)
+runTests(conn.space_center, conn.mech_jeb, modules)

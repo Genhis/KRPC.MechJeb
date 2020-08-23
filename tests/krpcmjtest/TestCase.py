@@ -6,6 +6,9 @@ class AssertionException(Exception):
 	def __init__(self, message):
 		self.message = message
 
+class MissingTestException(Exception):
+	pass
+
 class TestCase:
 	def __init__(self, variable, name):
 		self.variable = variable
@@ -36,6 +39,8 @@ class TestCase:
 					t = toInputType(type(getattr(self.instance, name)))
 					if t != InputType.NONE:
 						setattr(self, name, generateTest(t, name).__get__(self, self.__class__))
+					else:
+						errors[name] = MissingTestException()
 				except (Exception, RuntimeError) as ex:
 					errors[name] = ex
 
