@@ -1,5 +1,6 @@
 import krpc
 import inspect
+import re
 
 from krpcmjtest import *
 
@@ -13,8 +14,19 @@ def printErrors(errors):
 	
 	indent += 1
 	for error in errors:
-		prettyPrint(error)
+		lines = error.split("\n")
+		removeFrom = 1
+		for i, line in enumerate(lines):
+			if "KRPC." in line:
+				removeFrom = i + 1
+
+		if removeFrom < len(lines):
+			del lines[removeFrom:]
+
+		for line in lines:
+			prettyPrint(printErrors.p1.sub("", line).replace(" (", "("))
 	indent -= 1
+printErrors.p1 = re.compile(r"\[0x.*")
 
 def getTypeMessage(type, failed):
 	if type == InputType.READ_ONLY:
@@ -41,7 +53,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.Test):
-					prettyPrint("%-40s" % ("Calling " + name + "()"), " ")
+					prettyPrint("Calling %-30s()" % (name), " ")
 
 					errors = []
 					values = []
@@ -63,7 +75,7 @@ def runTests(spaceCenter, parentInstance, modules):
 						else:
 							if t == InputType.FLOAT:
 								for i in range(1, 4):
-									values.append((i ** 3 + 0.25 ** i) * 100)
+									values.append(i ** 3 * 100 + 0.25 ** i)
 							# t == InputType.INTEGER:
 							for i in range(1, 4):
 								values.append(i ** 3 * 100)
@@ -78,7 +90,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 						
 			for name, error in globalErrors.items():
-				prettyPrint("%-40s       NOT RUN" % ("Calling " + name + "()"))
+				prettyPrint("Calling %-30s()       NOT RUN" % (name))
 				printErrors([str(error)])
 
 			# Check for sub-modules

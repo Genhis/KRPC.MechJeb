@@ -45,7 +45,7 @@ class TestCase:
 			if not name.startswith("_") and name not in overriddenTests:
 				try:
 					attribute = getattr(self.instance, name)
-					
+
 					generator = generateEmpty
 					t = toInputType(type(attribute))
 					if t != InputType.NONE:
@@ -60,6 +60,7 @@ class TestCase:
 
 					setattr(self, name, generator(t, name).__get__(self, self.__class__))
 				except (Exception, RuntimeError) as ex:
+					print("error")
 					errors[name] = ex
 
 		return errors
