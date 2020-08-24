@@ -2,6 +2,7 @@ import krpc
 import inspect
 import re
 
+from colorama import init as coloramaInit, Fore, Back, Style
 from krpcmjtest import *
 
 # Function definitions
@@ -30,11 +31,13 @@ printErrors.p1 = re.compile(r"\[0x.*")
 
 def getTypeMessage(type, failed):
 	if type == InputType.READ_ONLY:
-		return "READ-ONLY"
+		return Fore.CYAN + "READ-ONLY"
 	if type == InputType.MISSING:
-		return "MISSING"
+		return Fore.YELLOW + "MISSING"
+	if type == InputType.NOT_RUN:
+		return "NOT RUN"
 
-	return "FAILED" if failed else "SUCCEEDED"
+	return Fore.RED + "FAILED" if failed else Fore.GREEN + "SUCCEEDED"
 
 def runTests(spaceCenter, parentInstance, modules):
 	global indent
@@ -53,7 +56,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.Test):
-					prettyPrint("Calling %-30s()" % (name), " ")
+					prettyPrint("Calling %-30s" % (name + "()"), " ")
 
 					errors = []
 					values = []
@@ -64,7 +67,7 @@ def runTests(spaceCenter, parentInstance, modules):
 							errors.append(str(ex))
 
 					t = Annotations.getTestType(method)
-					empty = t == InputType.READ_ONLY or t == InputType.MISSING
+					empty = t == InputType.READ_ONLY or t == InputType.MISSING or t == InputType.NOT_RUN
 					method = getattr(module, name)
 					if t == InputType.NONE:
 						values.append(-1)
@@ -84,14 +87,11 @@ def runTests(spaceCenter, parentInstance, modules):
 							catchExceptions(lambda: method(value))
 
 					failed = len(errors) > 0
-					print(str(len(values) - len(errors)) + "/" + str(len(values)) + "   " + getTypeMessage(t, failed))
+					print(("   " if empty else str(len(values) - len(errors)) + "/" + str(len(values))) + "   " + getTypeMessage(t, failed))
 					if failed:
 						printErrors(errors)
-
-						
-			for name, error in globalErrors.items():
-				prettyPrint("Calling %-30s()       NOT RUN" % (name))
-				printErrors([str(error)])
+					elif t == InputType.NOT_RUN:
+						printErrors([str(globalErrors[name])])
 
 			# Check for sub-modules
 			if hasattr(module, "submodules"):
@@ -119,4 +119,5 @@ modules = [
 ]
 
 # Test modules
+coloramaInit(True)
 runTests(conn.space_center, conn.mech_jeb, modules)

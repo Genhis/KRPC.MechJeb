@@ -8,6 +8,7 @@ class InputType(Enum):
 	INTEGER = 3
 	READ_ONLY = 4
 	MISSING = 5
+	NOT_RUN = 6
 
 __beforeClassAttr = "annotations-beforeclass"
 __generatedAttr = "annotations-generated"

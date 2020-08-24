@@ -43,10 +43,10 @@ class TestCase:
 		# Need to iterate through names to catch potential attribute exceptions
 		for name in dir(self.instance):
 			if not name.startswith("_") and name not in overriddenTests:
+				generator = generateEmpty
+				t = InputType.NOT_RUN
 				try:
 					attribute = getattr(self.instance, name)
-
-					generator = generateEmpty
 					t = toInputType(type(attribute))
 					if t != InputType.NONE:
 						# Check if the attribute is read-only - is there a better way?
@@ -58,11 +58,11 @@ class TestCase:
 					else:
 						t = InputType.MISSING
 
-					setattr(self, name, generator(t, name).__get__(self, self.__class__))
 				except (Exception, RuntimeError) as ex:
-					print("error")
+					t = InputType.NOT_RUN
 					errors[name] = ex
 
+				setattr(self, name, generator(t, name).__get__(self, self.__class__))
 		return errors
 
 	def assertFail(self):
