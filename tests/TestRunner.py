@@ -136,6 +136,8 @@ modules = [
 	NodeExecutorTest(),
 	RcsControllerTest(),
 	StagingControllerTest(),
+	TargetControllerTest(),
+	ThrustControllerTest(),
 ]
 
 # Test modules

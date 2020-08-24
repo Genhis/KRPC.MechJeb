@@ -15,3 +15,5 @@ from .Translatron import TranslatronTest
 from .NodeExecutor import NodeExecutorTest
 from .RcsController import RcsControllerTest
 from .StagingController import StagingControllerTest
+from .TargetController import TargetControllerTest
+from .ThrustController import ThrustControllerTest
