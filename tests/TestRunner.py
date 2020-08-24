@@ -7,15 +7,16 @@ from krpcmjtest import *
 
 # Function definitions
 indent = 0
+indentMultiplier = 4
 def prettyPrint(message, end = "\n"):
-	print("    " * indent + message, end = end)
+	print(" " * indentMultiplier * indent + message, end = end)
 
 def printErrors(errors):
 	global indent
 	
 	indent += 1
 	for error in errors:
-		lines = error.split("\n")
+		lines = (type(error).__name__ + ": " + str(error)).split("\n")
 		removeFrom = 1
 		for i, line in enumerate(lines):
 			if "KRPC." in line:
@@ -25,19 +26,19 @@ def printErrors(errors):
 			del lines[removeFrom:]
 
 		for line in lines:
-			prettyPrint(Fore.BLACK + Style.BRIGHT + printErrors.p1.sub("", line).replace(" (", "("))
+			prettyPrint(Fore.BLACK + printErrors.p1.sub("", line).replace(" (", "("))
 	indent -= 1
 printErrors.p1 = re.compile(r"\[0x.*")
 
 def getTypeMessage(type, failed):
 	if type == InputType.READ_ONLY:
-		return Fore.CYAN + "READ-ONLY"
+		return Fore.CYAN + "READ-ONLY" + Fore.RESET
 	if type == InputType.MISSING:
-		return Fore.YELLOW + "MISSING"
+		return Fore.YELLOW + "MISSING" + Fore.RESET
 	if type == InputType.NOT_RUN:
-		return Fore.RED + "NOT RUN"
+		return Fore.RED + "NOT RUN" + Fore.RESET
 
-	return Fore.RED + "FAILED" if failed else Fore.GREEN + "SUCCEEDED"
+	return (Fore.RED + "FAILED" if failed else Fore.GREEN + "SUCCEEDED") + Fore.RESET
 
 summary = {
 	False: 0,
@@ -46,11 +47,13 @@ summary = {
 	InputType.MISSING: 0,
 	InputType.NOT_RUN: 0,
 }
+failedModules = []
 def runTests(spaceCenter, parentInstance, modules):
 	global indent
 
 	for module in modules:
-		prettyPrint("Testing module " + module.name)
+		print()
+		prettyPrint("Testing module " + Fore.YELLOW + module.name + Fore.RESET + ":")
 		indent += 1
 	
 		try:
@@ -63,7 +66,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.Test):
-					prettyPrint("Calling %-30s" % (name + "()"), " ")
+					prettyPrint(("Calling %-" + str(40 - indentMultiplier * indent) + "s") % (name + "()"), " ")
 
 					errors = []
 					values = []
@@ -71,7 +74,7 @@ def runTests(spaceCenter, parentInstance, modules):
 						try:
 							callable()
 						except (Exception, RuntimeError) as ex:
-							errors.append(str(ex))
+							errors.append(ex)
 
 					t = Annotations.getTestType(method)
 					empty = t == InputType.READ_ONLY or t == InputType.MISSING or t == InputType.NOT_RUN
@@ -100,17 +103,18 @@ def runTests(spaceCenter, parentInstance, modules):
 					else:
 						summary[t] += 1
 
-					print(("   " if empty else str(len(values) - len(errors)) + "/" + str(len(values))) + "   " + getTypeMessage(t, failed))
+					print(("   " if empty else str(len(values) - len(errors)) + "/" + str(len(values))) + "   %-19s" % (getTypeMessage(t, failed)) + ("" if Annotations.hasAnnotation(method, Annotations.Generated) else "   MANUAL"))
 					if failed:
 						printErrors(errors)
 					elif t == InputType.NOT_RUN:
-						printErrors([str(globalErrors[name])])
+						printErrors([globalErrors[name]])
 
 			# Check for sub-modules
 			if hasattr(module, "submodules"):
 				runTests(spaceCenter, module.instance, module.submodules)
 		except (Exception, RuntimeError) as ex:
-			prettyPrint("Testing FAILED: " + str(ex))
+			prettyPrint(Fore.RED + "*** Testing FAILED *** " + Fore.YELLOW + type(ex).__name__ + ": " + str(ex))
+			failedModules.append(module)
 
 		indent -= 1
 
@@ -145,3 +149,5 @@ printSummary(getTypeMessage(InputType.READ_ONLY, False), summary[InputType.READ_
 printSummary(getTypeMessage(InputType.MISSING, False), summary[InputType.MISSING])
 printSummary(getTypeMessage(InputType.NONE, True), summary[True])
 printSummary(getTypeMessage(InputType.NOT_RUN, False), summary[InputType.NOT_RUN])
+
+# TODO: print failed modules
