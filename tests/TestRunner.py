@@ -1,8 +1,8 @@
+from colorama import init as initColoredOutput, Fore, Style
 import krpc
 import inspect
 import re
 
-from colorama import init as coloramaInit, Fore, Back, Style
 from krpcmjtest import *
 
 # Function definitions
@@ -135,7 +135,7 @@ modules = [
 ]
 
 # Test modules
-coloramaInit(True)
+initColoredOutput(True)
 runTests(conn.space_center, conn.mech_jeb, modules)
 
 # Print summary
