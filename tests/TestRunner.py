@@ -129,6 +129,7 @@ modules = [
 	LandingAutopilotTest(),
 	RendezvousAutopilotTest(),
 
+	ManeuverPlannerTest(),
 	SmartAssTest(),
 	SmartRcsTest(),
 	TranslatronTest(),

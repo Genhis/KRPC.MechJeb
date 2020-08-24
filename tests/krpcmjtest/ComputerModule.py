@@ -1,5 +1,3 @@
-import inspect
-
 from .Annotations import InputType, Test
 from .TestCase import TestCase
 

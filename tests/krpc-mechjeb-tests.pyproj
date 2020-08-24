@@ -24,6 +24,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="krpcmjtest\ManeuverPlanner.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationResonantOrbit.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationSemiMajor.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationTransfer.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationLambert.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationLan.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationLongitude.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationMoonReturn.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationPlane.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationPeriapsis.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationKillRelVel.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationInterplanetaryTransfer.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationInclination.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationEllipticize.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationCourseCorrection.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationCircularize.py" />
+    <Compile Include="krpcmjtest\Maneuver\OperationApoapsis.py" />
+    <Compile Include="krpcmjtest\Maneuver\Operation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="krpcmjtest\Maneuver\__init__.py" />
     <Compile Include="krpcmjtest\ThrustController.py" />
     <Compile Include="krpcmjtest\TargetController.py" />
     <Compile Include="krpcmjtest\StagingController.py" />
@@ -57,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="krpcmjtest\" />
+    <Folder Include="krpcmjtest\Maneuver\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
