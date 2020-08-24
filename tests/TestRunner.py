@@ -25,7 +25,7 @@ def printErrors(errors):
 			del lines[removeFrom:]
 
 		for line in lines:
-			prettyPrint(printErrors.p1.sub("", line).replace(" (", "("))
+			prettyPrint(Fore.BLACK + Style.BRIGHT + printErrors.p1.sub("", line).replace(" (", "("))
 	indent -= 1
 printErrors.p1 = re.compile(r"\[0x.*")
 
@@ -35,10 +35,17 @@ def getTypeMessage(type, failed):
 	if type == InputType.MISSING:
 		return Fore.YELLOW + "MISSING"
 	if type == InputType.NOT_RUN:
-		return "NOT RUN"
+		return Fore.RED + "NOT RUN"
 
 	return Fore.RED + "FAILED" if failed else Fore.GREEN + "SUCCEEDED"
 
+summary = {
+	False: 0,
+	True: 0,
+	InputType.READ_ONLY: 0,
+	InputType.MISSING: 0,
+	InputType.NOT_RUN: 0,
+}
 def runTests(spaceCenter, parentInstance, modules):
 	global indent
 
@@ -69,24 +76,30 @@ def runTests(spaceCenter, parentInstance, modules):
 					t = Annotations.getTestType(method)
 					empty = t == InputType.READ_ONLY or t == InputType.MISSING or t == InputType.NOT_RUN
 					method = getattr(module, name)
-					if t == InputType.NONE:
-						values.append(-1)
-						catchExceptions(method)
-					elif not empty:
-						if t == InputType.BOOLEAN:
-							values = [True, False]
+					failed = False
+					if not empty:
+						if t == InputType.NONE:
+							values.append(-1)
+							catchExceptions(method)
 						else:
-							if t == InputType.FLOAT:
+							if t == InputType.BOOLEAN:
+								values = [True, False]
+							else:
+								if t == InputType.FLOAT:
+									for i in range(1, 4):
+										values.append(i ** 3 * 100 + 0.25 ** i)
+								# t == InputType.INTEGER:
 								for i in range(1, 4):
-									values.append(i ** 3 * 100 + 0.25 ** i)
-							# t == InputType.INTEGER:
-							for i in range(1, 4):
-								values.append(i ** 3 * 100)
+									values.append(i ** 3 * 100)
 
-						for value in values:
-							catchExceptions(lambda: method(value))
+							for value in values:
+								catchExceptions(lambda: method(value))
 
-					failed = len(errors) > 0
+						failed = len(errors) > 0
+						summary[failed] += 1
+					else:
+						summary[t] += 1
+
 					print(("   " if empty else str(len(values) - len(errors)) + "/" + str(len(values))) + "   " + getTypeMessage(t, failed))
 					if failed:
 						printErrors(errors)
@@ -98,7 +111,6 @@ def runTests(spaceCenter, parentInstance, modules):
 				runTests(spaceCenter, module.instance, module.submodules)
 		except (Exception, RuntimeError) as ex:
 			prettyPrint("Testing FAILED: " + str(ex))
-
 
 		indent -= 1
 
@@ -121,3 +133,15 @@ modules = [
 # Test modules
 coloramaInit(True)
 runTests(conn.space_center, conn.mech_jeb, modules)
+
+# Print summary
+def printSummary(message, value):
+	if value != 0:
+		print(message + ": " + str(value))
+
+print()
+printSummary(getTypeMessage(InputType.NONE, False), summary[False])
+printSummary(getTypeMessage(InputType.READ_ONLY, False), summary[InputType.READ_ONLY])
+printSummary(getTypeMessage(InputType.MISSING, False), summary[InputType.MISSING])
+printSummary(getTypeMessage(InputType.NONE, True), summary[True])
+printSummary(getTypeMessage(InputType.NOT_RUN, False), summary[InputType.NOT_RUN])

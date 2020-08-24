@@ -38,7 +38,6 @@ class TestCase:
 
 		# Create default testing methods if they don't exist
 		overriddenTests = list(name for name, method in inspect.getmembers(self, inspect.ismethod) if not name.startswith("_") and hasAnnotation(method, Test))
-		# TODO: Check for missing tests
 		errors = {}
 		# Need to iterate through names to catch potential attribute exceptions
 		for name in dir(self.instance):
