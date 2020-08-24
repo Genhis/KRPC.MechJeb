@@ -24,6 +24,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="krpcmjtest\StagingController.py" />
+    <Compile Include="krpcmjtest\RcsController.py" />
+    <Compile Include="krpcmjtest\NodeExecutor.py" />
     <Compile Include="krpcmjtest\AscentGt.py" />
     <Compile Include="krpcmjtest\AscentClassic.py" />
     <Compile Include="krpcmjtest\Translatron.py" />

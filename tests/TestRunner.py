@@ -132,6 +132,10 @@ modules = [
 	SmartAssTest(),
 	SmartRcsTest(),
 	TranslatronTest(),
+
+	NodeExecutorTest(),
+	RcsControllerTest(),
+	StagingControllerTest(),
 ]
 
 # Test modules
