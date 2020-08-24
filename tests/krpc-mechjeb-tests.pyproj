@@ -25,6 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="krpcmjtest\ManeuverPlanner.py" />
+    <Compile Include="krpcmjtest\Maneuver\TimeSelector.py" />
     <Compile Include="krpcmjtest\Maneuver\OperationResonantOrbit.py" />
     <Compile Include="krpcmjtest\Maneuver\OperationSemiMajor.py" />
     <Compile Include="krpcmjtest\Maneuver\OperationTransfer.py" />
