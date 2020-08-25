@@ -1,4 +1,4 @@
-import krpcmjtest.Annotations
+import modules.Annotations
 from .Annotations import InputType
 from .TestCase import AssertionException
 

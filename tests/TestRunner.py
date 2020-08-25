@@ -3,7 +3,7 @@ import krpc
 import inspect
 import re
 
-from krpcmjtest import *
+from modules import *
 
 # Function definitions
 indent = 0
