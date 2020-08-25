@@ -1,6 +1,6 @@
 from ..Annotations import InputType, Test
-from .Operation import OperationTest
+from .Operation import TimedOperationTest
 
-class OperationLongitudeTest(OperationTest):
+class OperationLongitudeTest(TimedOperationTest):
 	def __init__(self):
 		super().__init__("operation_longitude", "OperationLongitude")

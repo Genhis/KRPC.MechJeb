@@ -1,6 +1,6 @@
 from ..Annotations import InputType, Test
-from .Operation import OperationTest
+from .Operation import TimedOperationTest
 
-class OperationPeriapsisTest(OperationTest):
+class OperationPeriapsisTest(TimedOperationTest):
 	def __init__(self):
 		super().__init__("operation_periapsis", "OperationPeriapsis")
