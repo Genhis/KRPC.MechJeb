@@ -64,8 +64,8 @@ class TestCase:
 				setattr(self, name, generator(t, name).__get__(self, self.__class__))
 		return errors
 
-	def assertFail(self):
-		raise AssertionException("Not implemented")
+	def assertFail(self, message = "Not implemented"):
+		raise AssertionException(message)
 
 	def assertEquals(self, expected, actual):
 		if expected != actual:
