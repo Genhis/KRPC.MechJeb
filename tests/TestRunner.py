@@ -71,7 +71,7 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.Test):
-					prettyPrint(("Calling %-" + str(40 - indentMultiplier * indent) + "s") % (name + "()"), " ")
+					prettyPrint(("Calling %-" + str(44 - indentMultiplier * indent) + "s") % (name + "()"), " ")
 
 					errors = []
 					values = []

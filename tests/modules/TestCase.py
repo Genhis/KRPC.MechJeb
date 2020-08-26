@@ -4,7 +4,7 @@ from .Annotations import GeneratedTestType, GeneratedTest, ParameterizedTest, Te
 
 class AssertionException(Exception):
 	def __init__(self, message, propertyName = None):
-		self.message = ("" if propertyName is None else propertyName + ": ") + message
+		super().__init__(("" if propertyName is None else "[" + propertyName + "] ") + message)
 
 class TestGeneratorException(Exception):
 	def __init__(self, message):
@@ -83,7 +83,7 @@ class TestCase:
 
 	def assertEquals(self, expected, actual, propertyName = None):
 		# TODO: Is there a way to get better precision? 0.1 epsilon value just to pass OperationApoapsis tests is quite large...
-		if expected != actual and (type(actual) is not float or abs(expected - actual) > 0.1):
+		if expected != actual and (type(actual) is not float or abs(expected - actual) > 0.25):
 			raise AssertionException("Expected " + str(expected) + " but got " + str(actual), propertyName)
 	
 	def assertTrue(self, message, actual):
