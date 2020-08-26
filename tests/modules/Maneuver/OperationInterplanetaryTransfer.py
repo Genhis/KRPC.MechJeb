@@ -1,4 +1,3 @@
-from ..Annotations import InputType, Test
 from .Operation import OperationTest
 
 class OperationInterplanetaryTransferTest(OperationTest):

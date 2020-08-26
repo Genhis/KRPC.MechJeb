@@ -1,4 +1,4 @@
-from .Annotations import InputType, BeforeClass, Test
+from .Annotations import BeforeClass, Test
 from .ComputerModule import ComputerModuleTest
 
 class DockingAutopilotTest(ComputerModuleTest):
@@ -9,7 +9,7 @@ class DockingAutopilotTest(ComputerModuleTest):
 	def beforeClass(self):
 		#self.conn.space_center.
 		pass
-
-	@Test(InputType.NONE)
+	
+	@Test
 	def status(self):
 		self.assertFail()

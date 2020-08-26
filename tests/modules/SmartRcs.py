@@ -1,10 +1,10 @@
-from .Annotations import InputType, Test
+from .Annotations import Test
 from .ComputerModule import DisplayModuleTest
 
 class SmartRcsTest(DisplayModuleTest):
 	def __init__(self):
 		super().__init__("smart_rcs", "SmartRcs")
 
-	@Test(InputType.NONE)
+	@Test
 	def mode(self):
 		self.assertFail()

@@ -1,4 +1,3 @@
-from .Annotations import InputType, Test
 from .ComputerModule import ComputerModuleTest
 
 class ThrustControllerTest(ComputerModuleTest):

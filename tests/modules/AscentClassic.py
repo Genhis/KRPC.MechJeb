@@ -1,4 +1,4 @@
-from .Annotations import InputType, BeforeClass, Test
+from .Annotations import BeforeClass
 from .ComputerModule import ComputerModuleTest
 
 class AscentClassicTest(ComputerModuleTest):

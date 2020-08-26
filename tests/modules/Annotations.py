@@ -1,60 +1,62 @@
 import functools
-from enum import Enum
+from enum import Enum, auto
 
-class InputType(Enum):
-	NONE = 0
-	BOOLEAN = 1
-	FLOAT = 2
-	INTEGER = 3
-	READ_ONLY = 4
-	MISSING = 5
-	NOT_RUN = 6
+class GeneratedTestType(Enum):
+	NORMAL = auto()
+	READ_ONLY = auto()
+	MISSING = auto()
+	NOT_RUN = auto()
 
 __beforeClassAttr = "annotations-beforeclass"
-__generatedAttr = "annotations-generated"
+__generatedTestAttr = "annotations-generated-test"
+__parameterizedTestAttr = "annotations-parameterized-test"
 __testAttr = "annotations-test"
 
 def BeforeClass(func):
 	@functools.wraps(func)
-	def wrappedBeforeClass(*args, **kwargs):
+	def wrapper(*args, **kwargs):
 		return func(*args, **kwargs)
 
-	setattr(wrappedBeforeClass, __beforeClassAttr, True)
-	return wrappedBeforeClass
+	setattr(wrapper, __beforeClassAttr, True)
+	return wrapper
 
-def Generated(func):
+def Test(func):
 	@functools.wraps(func)
-	def wrappedGenerated(*args, **kwargs):
+	def wrapper(*args, **kwargs):
 		return func(*args, **kwargs)
 
-	setattr(wrappedGenerated, __generatedAttr, True)
-	return wrappedGenerated
+	setattr(wrapper, __testAttr, True)
+	return wrapper
 
-def Test(type):
-	def decoratorTest(func):
+def GeneratedTest(type):
+	def decorator(func):
 		@functools.wraps(func)
-		def wrappedTest(*args, **kwargs):
+		@Test
+		def wrapper(*args, **kwargs):
 			return func(*args, **kwargs)
 
-		setattr(wrappedTest, __testAttr, type)
-		return wrappedTest
-	return decoratorTest
+		setattr(wrapper, __generatedTestAttr, type)
+		return wrapper
+	return decorator
+GeneratedTest.getType = lambda method: getattr(method, __generatedTestAttr)
 
-def getTestType(method):
-	return getattr(method, __testAttr)
+def ParameterizedTest(*parameters):
+	def decorator(func):
+		@functools.wraps(func)
+		@Test
+		def wrapper(*args, **kwargs):
+			return func(*args, **kwargs)
+
+		setattr(wrapper, __parameterizedTestAttr, parameters)
+		return wrapper
+	return decorator
+ParameterizedTest.getParameters = lambda method: getattr(method, __parameterizedTestAttr)
 
 __annotations = {
 	BeforeClass: __beforeClassAttr,
-	Generated: __generatedAttr,
+	GeneratedTest: __generatedTestAttr,
+	ParameterizedTest: __parameterizedTestAttr,
 	Test: __testAttr
 }
 def hasAnnotation(method, annotation):
 	return hasattr(method, __annotations[annotation])
-
-__inputType = {
-	bool: InputType.BOOLEAN,
-	float: InputType.FLOAT,
-	int: InputType.INTEGER
-}
-def toInputType(type):
-	return __inputType[type] if type in __inputType else InputType.NONE

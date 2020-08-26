@@ -1,6 +1,6 @@
 import inspect
 
-from .Annotations import InputType, Generated, Test, hasAnnotation, toInputType
+from .Annotations import GeneratedTestType, GeneratedTest, ParameterizedTest, Test, hasAnnotation
 
 class AssertionException(Exception):
 	def __init__(self, message):
@@ -16,18 +16,17 @@ class TestCase:
 		self.parent = parent
 		self.instance = getattr(parent, self.variable)
 
-		def generateTest(type, name):
-			@Generated
-			@Test(type)
+		def generateTest(type, name, values):
+			@GeneratedTest(type)
+			@ParameterizedTest(values)
 			def test(self, value):
 				setattr(self.instance, name, value)
 				self.assertEquals(value, getattr(self.instance, name))
-			
+	
 			return test
 
-		def generateEmpty(type, name):
-			@Generated
-			@Test(type)
+		def generateEmpty(type, name, values):
+			@GeneratedTest(type)
 			def test(self):
 				# Represents read-only or missing tests
 				# Read-only value is tested when determining its write access below
@@ -43,32 +42,42 @@ class TestCase:
 		for name in dir(self.instance):
 			if not name.startswith("_") and name not in overriddenTests:
 				generator = generateEmpty
-				t = InputType.NOT_RUN
+				values = []
+				t = GeneratedTestType.NOT_RUN
 				try:
 					attribute = getattr(self.instance, name)
-					t = toInputType(type(attribute))
-					if t != InputType.NONE:
+					attrType = type(attribute)
+					if attrType is bool or attrType is float or attrType is int:
 						# Check if the attribute is read-only - is there a better way?
 						try:
 							setattr(self.instance, name, attribute)
+
 							generator = generateTest
+							t = GeneratedTestType.NORMAL
+							if attrType is bool:
+								values = [True, False]
+							else:
+								if attrType is float:
+									values = [100.05, 800.333, 2700.9417]
+
+								values += [50, 750, 3400]
 						except AttributeError:
-							t = InputType.READ_ONLY
+							t = GeneratedTestType.READ_ONLY
 					else:
-						t = InputType.MISSING
+						t = GeneratedTestType.MISSING
 
 				except (Exception, RuntimeError) as ex:
-					t = InputType.NOT_RUN
+					t = GeneratedTestType.NOT_RUN
 					errors[name] = ex
 
-				setattr(self, name, generator(t, name).__get__(self, self.__class__))
+				setattr(self, name, generator(t, name, values).__get__(self, self.__class__))
 		return errors
 
 	def assertFail(self, message = "Not implemented"):
 		raise AssertionException(message)
 
 	def assertEquals(self, expected, actual):
-		if expected != actual:
+		if expected != actual and (type(actual) is not float or abs(expected - actual) > 0.00005):
 			raise AssertionException("Expected " + str(expected) + " but got " + str(actual))
 	
 	def assertTrue(self, message, actual):

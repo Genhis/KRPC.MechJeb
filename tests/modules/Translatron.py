@@ -1,14 +1,14 @@
-from .Annotations import InputType, Test
+from .Annotations import Test
 from .ComputerModule import DisplayModuleTest
 
 class TranslatronTest(DisplayModuleTest):
 	def __init__(self):
 		super().__init__("translatron", "Translatron")
 
-	@Test(InputType.NONE)
+	@Test
 	def mode(self):
 		self.assertFail()
 
-	@Test(InputType.NONE)
+	@Test
 	def panic_switch(self):
 		self.assertFail()

@@ -1,6 +1,4 @@
-from .Annotations import InputType, Test
 from .ComputerModule import ModuleTest
-
 from .Maneuver import *
 
 class ManeuverPlannerTest(ModuleTest):

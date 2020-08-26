@@ -1,4 +1,3 @@
-from ..Annotations import InputType, Test
 from .Operation import TimedOperationTest
 
 class OperationKillRelVelTest(TimedOperationTest):

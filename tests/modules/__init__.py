@@ -1,5 +1,5 @@
 import modules.Annotations
-from .Annotations import InputType
+from .Annotations import GeneratedTestType
 from .TestCase import AssertionException
 
 from .AirplaneAutopilot import AirplaneAutopilotTest

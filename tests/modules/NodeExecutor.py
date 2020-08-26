@@ -1,18 +1,18 @@
-from .Annotations import InputType, Test
+from .Annotations import Test
 from .ComputerModule import ComputerModuleTest
 
 class NodeExecutorTest(ComputerModuleTest):
 	def __init__(self):
 		super().__init__("node_executor", "NodeExecutor")
 
-	@Test(InputType.NONE)
+	@Test
 	def abort(self):
 		self.assertFail()
 
-	@Test(InputType.NONE)
+	@Test
 	def execute_all_nodes(self):
 		self.assertFail()
 
-	@Test(InputType.NONE)
+	@Test
 	def execute_one_node(self):
 		self.assertFail()

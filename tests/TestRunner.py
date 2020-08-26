@@ -1,6 +1,7 @@
 from colorama import init as initColoredOutput, Fore, Style
 import krpc
 import inspect
+import itertools
 import re
 
 from modules import *
@@ -31,11 +32,11 @@ def printErrors(errors):
 printErrors.p1 = re.compile(r"\[0x.*")
 
 def getTypeMessage(type, failed):
-	if type == InputType.READ_ONLY:
+	if type == GeneratedTestType.READ_ONLY:
 		return Fore.CYAN + "READ-ONLY" + Fore.RESET
-	if type == InputType.MISSING:
+	if type == GeneratedTestType.MISSING:
 		return Fore.YELLOW + "MISSING" + Fore.RESET
-	if type == InputType.NOT_RUN:
+	if type == GeneratedTestType.NOT_RUN:
 		return Fore.RED + "NOT RUN" + Fore.RESET
 
 	return (Fore.RED + "FAILED" if failed else Fore.GREEN + "SUCCEEDED") + Fore.RESET
@@ -43,9 +44,9 @@ def getTypeMessage(type, failed):
 summary = {
 	False: 0,
 	True: 0,
-	InputType.READ_ONLY: 0,
-	InputType.MISSING: 0,
-	InputType.NOT_RUN: 0,
+	GeneratedTestType.READ_ONLY: 0,
+	GeneratedTestType.MISSING: 0,
+	GeneratedTestType.NOT_RUN: 0,
 }
 failedModules = []
 def runTests(spaceCenter, parentInstance, modules):
@@ -69,44 +70,34 @@ def runTests(spaceCenter, parentInstance, modules):
 					prettyPrint(("Calling %-" + str(40 - indentMultiplier * indent) + "s") % (name + "()"), " ")
 
 					errors = []
-					values = []
+					method = getattr(module, name)
+					values = list(itertools.product(*Annotations.ParameterizedTest.getParameters(method))) if Annotations.hasAnnotation(method, Annotations.ParameterizedTest) else []
 					def catchExceptions(callable):
 						try:
 							callable()
 						except (Exception, RuntimeError) as ex:
 							errors.append(ex)
 
-					t = Annotations.getTestType(method)
-					empty = t == InputType.READ_ONLY or t == InputType.MISSING or t == InputType.NOT_RUN
-					method = getattr(module, name)
+					generated = Annotations.hasAnnotation(method, Annotations.GeneratedTest)
+					t = Annotations.GeneratedTest.getType(method) if generated else GeneratedTestType.NORMAL
 					failed = False
-					if not empty:
-						if t == InputType.NONE:
+					if t is GeneratedTestType.NORMAL:
+						if len(values) == 0:
 							values.append(-1)
 							catchExceptions(method)
 						else:
-							if t == InputType.BOOLEAN:
-								values = [True, False]
-							else:
-								if t == InputType.FLOAT:
-									for i in range(1, 4):
-										values.append(i ** 3 * 100 + 0.25 ** i)
-								# t == InputType.INTEGER:
-								for i in range(1, 4):
-									values.append(i ** 3 * 100)
-
 							for value in values:
-								catchExceptions(lambda: method(value))
+								catchExceptions(lambda: method(*value))
 
 						failed = len(errors) > 0
 						summary[failed] += 1
 					else:
 						summary[t] += 1
 
-					print(("   " if empty else str(len(values) - len(errors)) + "/" + str(len(values))) + "   %-19s" % (getTypeMessage(t, failed)) + ("" if Annotations.hasAnnotation(method, Annotations.Generated) else "   MANUAL"))
+					print(("   " if t is not GeneratedTestType.NORMAL else str(len(values) - len(errors)) + "/" + str(len(values))) + "   %-19s" % (getTypeMessage(t, failed)) + ("" if generated else "   MANUAL"))
 					if failed:
 						printErrors(errors)
-					elif t == InputType.NOT_RUN:
+					elif t == GeneratedTestType.NOT_RUN:
 						printErrors([globalErrors[name]])
 
 			# Check for sub-modules
@@ -115,6 +106,7 @@ def runTests(spaceCenter, parentInstance, modules):
 		except (Exception, RuntimeError) as ex:
 			prettyPrint(Fore.RED + "*** Testing FAILED *** " + Fore.YELLOW + type(ex).__name__ + ": " + str(ex))
 			failedModules.append(module)
+			raise ex
 
 		indent -= 1
 
@@ -151,10 +143,10 @@ def printSummary(message, value):
 		print(message + ": " + str(value))
 
 print()
-printSummary(getTypeMessage(InputType.NONE, False), summary[False])
-printSummary(getTypeMessage(InputType.READ_ONLY, False), summary[InputType.READ_ONLY])
-printSummary(getTypeMessage(InputType.MISSING, False), summary[InputType.MISSING])
-printSummary(getTypeMessage(InputType.NONE, True), summary[True])
-printSummary(getTypeMessage(InputType.NOT_RUN, False), summary[InputType.NOT_RUN])
+printSummary(getTypeMessage(GeneratedTestType.NORMAL, False), summary[False])
+printSummary(getTypeMessage(GeneratedTestType.READ_ONLY, False), summary[GeneratedTestType.READ_ONLY])
+printSummary(getTypeMessage(GeneratedTestType.MISSING, False), summary[GeneratedTestType.MISSING])
+printSummary(getTypeMessage(GeneratedTestType.NORMAL, True), summary[True])
+printSummary(getTypeMessage(GeneratedTestType.NOT_RUN, False), summary[GeneratedTestType.NOT_RUN])
 
 # TODO: print failed modules
