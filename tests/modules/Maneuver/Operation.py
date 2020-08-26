@@ -59,3 +59,7 @@ class TimedOperationTest(OperationTest):
 	@GeneratedTest(GeneratedTestType.MISSING)
 	def make_nodes_eq_descending(self):
 		pass
+
+	@Test
+	def time_selector(self):
+		self.assertType("TimeSelector", "time_selector")

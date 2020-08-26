@@ -18,6 +18,10 @@ def printErrors(errors):
 	indent += 1
 	for error in errors:
 		lines = (type(error).__name__ + ": " + str(error)).split("\n")
+		if len(lines) == 1:
+			prettyPrint(Fore.BLACK + lines[0])
+			continue
+
 		removeFrom = 1
 		for i, line in enumerate(lines):
 			if "KRPC." in line:

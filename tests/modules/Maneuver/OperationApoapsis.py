@@ -4,8 +4,9 @@ from .Operation import TimedOperationTest, ManeuverTest
 class OperationApoapsisTest(TimedOperationTest):
 	def __init__(self):
 		super().__init__("operation_apoapsis", "OperationApoapsis")
+		self.submodules[0].validTimeReferences = ["apoapsis", "eq_ascending", "eq_descending", "periapsis", "x_from_now"]
 
-	@ParameterizedTest([280000, 375000, 935821.649], ["apoapsis", "eq_ascending", "eq_descending", "periapsis", "x_from_now"])
+	@ParameterizedTest([280000, 375000, 935821.649], lambda self: self.submodules[0].validTimeReferences)
 	@ManeuverTest
 	def make_nodes_valid(self, apoapsis, timeReference):
 		leadTime = 314
@@ -23,7 +24,7 @@ class OperationApoapsisTest(TimedOperationTest):
 		self.assertEquals(None, newOrbit.next_orbit, "next_orbit")
 		self.testTimeReference(nodes[0], newOrbit, timeReference, leadTime)
 
-	@ParameterizedTest([80000, 75341, 70821.649], ["apoapsis", "eq_ascending", "eq_descending", "periapsis", "x_from_now"])
+	@ParameterizedTest([80000, 75341, 70821.649], lambda self: self.submodules[0].validTimeReferences)
 	@ManeuverTest
 	def make_nodes_invalid(self, apoapsis, timeReference):
 		self.instance.new_apoapsis = apoapsis
