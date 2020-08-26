@@ -97,6 +97,9 @@ class TestCase:
 		if actual < a or actual > b:
 			raise AssertionException("Excepted a value in range <" + str(a) + ", " + str(b) + "> but got " + str(actual))
 
+	def assertType(self, typeName, variableName):
+		self.assertEquals(getattr(self.mechJeb, typeName), type(getattr(self.instance, variableName)))
+
 	def assertObject(self, value):
 		#print(type(value))
 		pass
