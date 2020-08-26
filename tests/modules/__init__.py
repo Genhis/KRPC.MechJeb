@@ -1,6 +1,6 @@
 import modules.Annotations
 from .Annotations import GeneratedTestType
-from .TestCase import AssertionException
+from .TestCase import AssertionException, TestGeneratorException
 
 from .AirplaneAutopilot import AirplaneAutopilotTest
 from .AscentAutopilot import AscentAutopilotTest

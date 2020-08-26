@@ -70,18 +70,32 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 					prettyPrint(("Calling %-" + str(40 - indentMultiplier * indent) + "s") % (name + "()"), " ")
 
 					errors = []
+					values = []
 					method = getattr(module, name)
-					values = list(itertools.product(*Annotations.ParameterizedTest.getParameters(method))) if Annotations.hasAnnotation(method, Annotations.ParameterizedTest) else []
+
 					def catchExceptions(callable):
 						try:
 							callable()
 						except (Exception, RuntimeError) as ex:
 							errors.append(ex)
-
+							
+					failed = False
 					generated = Annotations.hasAnnotation(method, Annotations.GeneratedTest)
 					t = Annotations.GeneratedTest.getType(method) if generated else GeneratedTestType.NORMAL
-					failed = False
-					if t is GeneratedTestType.NORMAL:
+					def runNormal():
+						nonlocal failed, values, t
+
+						if Annotations.hasAnnotation(method, Annotations.ParameterizedTest):
+							for param in Annotations.ParameterizedTest.getParameters(method):
+								v = param(module) if callable(param) else param
+								if len(v) == 0:
+									t = GeneratedTestType.NOT_RUN
+									globalErrors[name] = TestGeneratorException("Not enough parameters")
+									return
+
+								values.append(v)
+							values = list(itertools.product(*values))
+
 						if len(values) == 0:
 							values.append(-1)
 							catchExceptions(method)
@@ -91,6 +105,9 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 
 						failed = len(errors) > 0
 						summary[failed] += 1
+
+					if t is GeneratedTestType.NORMAL:
+						runNormal()
 					else:
 						summary[t] += 1
 

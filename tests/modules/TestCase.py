@@ -6,6 +6,10 @@ class AssertionException(Exception):
 	def __init__(self, message, propertyName = None):
 		self.message = ("" if propertyName is None else propertyName + ": ") + message
 
+class TestGeneratorException(Exception):
+	def __init__(self, message):
+		self.message = message
+
 class TestCase:
 	def __init__(self, variable, name):
 		self.variable = variable

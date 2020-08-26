@@ -41,6 +41,10 @@ def GeneratedTest(type):
 GeneratedTest.getType = lambda method: getattr(method, __generatedTestAttr)
 
 def ParameterizedTest(*parameters):
+	"""
+	Accepts lists of parameters or lambda-based generators to create tuple pairs using itertools.product()
+	"""
+
 	def decorator(func):
 		@functools.wraps(func)
 		@Test
