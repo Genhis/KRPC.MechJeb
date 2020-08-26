@@ -40,7 +40,7 @@ class TestCase:
 		errors = {}
 		# Need to iterate through names to catch potential attribute exceptions
 		for name in dir(self.instance):
-			if not name.startswith("_") and name not in overriddenTests:
+			if not name.startswith("_") and name not in overriddenTests and not any(s.startswith(name + "_") for s in overriddenTests):
 				generator = generateEmpty
 				values = []
 				t = GeneratedTestType.NOT_RUN

@@ -16,7 +16,7 @@ class AscentAutopilotTest(ComputerModuleTest):
 		self.assertFail()
 
 	@Test
-	def ascent_path_index(self):
+	def ascent_path_index_valid(self):
 		self.instance.ascent_path_index = 0;
 		self.assertEquals(0, self.instance.ascent_path_index)
 
