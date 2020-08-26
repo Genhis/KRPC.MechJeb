@@ -36,15 +36,15 @@ class AscentAutopilotTest(ComputerModuleTest):
 
 	@Test
 	def ascent_path_classic(self):
-		self.assertIsObject(self.instance.ascent_path_classic)
+		self.assertObject(self.instance.ascent_path_classic)
 
 	@Test
 	def ascent_path_gt(self):
-		self.assertIsObject(self.instance.ascent_path_gt)
+		self.assertObject(self.instance.ascent_path_gt)
 
 	@Test
 	def ascent_path_pvg(self):
-		self.assertIsObject(self.instance.ascent_path_pvg)
+		self.assertObject(self.instance.ascent_path_pvg)
 
 	@Test
 	def launch_mode(self):

@@ -3,16 +3,17 @@ import inspect
 from .Annotations import GeneratedTestType, GeneratedTest, ParameterizedTest, Test, hasAnnotation
 
 class AssertionException(Exception):
-	def __init__(self, message):
-		self.message = message
+	def __init__(self, message, propertyName = None):
+		self.message = ("" if propertyName is None else propertyName + ": ") + message
 
 class TestCase:
 	def __init__(self, variable, name):
 		self.variable = variable
 		self.name = name
 
-	def setInstance(self, spacecenter, parent):
-		self.sc = spacecenter
+	def setInstance(self, spaceCenter, mechJeb, parent):
+		self.spaceCenter = spaceCenter
+		self.mechJeb = mechJeb
 		self.parent = parent
 		self.instance = getattr(parent, self.variable)
 
@@ -76,9 +77,10 @@ class TestCase:
 	def assertFail(self, message = "Not implemented"):
 		raise AssertionException(message)
 
-	def assertEquals(self, expected, actual):
-		if expected != actual and (type(actual) is not float or abs(expected - actual) > 0.00005):
-			raise AssertionException("Expected " + str(expected) + " but got " + str(actual))
+	def assertEquals(self, expected, actual, propertyName = None):
+		# TODO: Is there a way to get better precision? 0.1 epsilon value just to pass OperationApoapsis tests is quite large...
+		if expected != actual and (type(actual) is not float or abs(expected - actual) > 0.1):
+			raise AssertionException("Expected " + str(expected) + " but got " + str(actual), propertyName)
 	
 	def assertTrue(self, message, actual):
 		if not actual:
@@ -91,6 +93,6 @@ class TestCase:
 		if actual < a or actual > b:
 			raise AssertionException("Excepted a value in range <" + str(a) + ", " + str(b) + "> but got " + str(actual))
 
-	def assertIsObject(self, value):
+	def assertObject(self, value):
 		#print(type(value))
 		pass

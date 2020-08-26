@@ -49,7 +49,7 @@ summary = {
 	GeneratedTestType.NOT_RUN: 0,
 }
 failedModules = []
-def runTests(spaceCenter, parentInstance, modules):
+def runTests(spaceCenter, mechJeb, parentInstance, modules):
 	global indent
 
 	for module in modules:
@@ -58,7 +58,7 @@ def runTests(spaceCenter, parentInstance, modules):
 		indent += 1
 	
 		try:
-			globalErrors = module.setInstance(spaceCenter, parentInstance)
+			globalErrors = module.setInstance(spaceCenter, mechJeb, parentInstance)
 			members = inspect.getmembers(module, inspect.ismethod)
 			for name, method in members:
 				if Annotations.hasAnnotation(method, Annotations.BeforeClass):
@@ -94,7 +94,7 @@ def runTests(spaceCenter, parentInstance, modules):
 					else:
 						summary[t] += 1
 
-					print(("   " if t is not GeneratedTestType.NORMAL else str(len(values) - len(errors)) + "/" + str(len(values))) + "   %-19s" % (getTypeMessage(t, failed)) + ("" if generated else "   MANUAL"))
+					print(("         " if t is not GeneratedTestType.NORMAL else "%3d / %-3d" % (len(values) - len(errors), len(values))) + "   %-19s" % (getTypeMessage(t, failed)) + ("" if generated else "   MANUAL"))
 					if failed:
 						printErrors(errors)
 					elif t == GeneratedTestType.NOT_RUN:
@@ -102,7 +102,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 			# Check for sub-modules
 			if hasattr(module, "submodules"):
-				runTests(spaceCenter, module.instance, module.submodules)
+				runTests(spaceCenter, mechJeb, module.instance, module.submodules)
 		except (Exception, RuntimeError) as ex:
 			prettyPrint(Fore.RED + "*** Testing FAILED *** " + Fore.YELLOW + type(ex).__name__ + ": " + str(ex))
 			failedModules.append(module)
@@ -112,6 +112,7 @@ def runTests(spaceCenter, parentInstance, modules):
 
 # Initialize kRPC
 conn = krpc.connect("KRPC.MechJeb tests")
+mj = conn.mech_jeb
 
 # Create modules
 modules = [
@@ -135,7 +136,7 @@ modules = [
 
 # Test modules
 initColoredOutput(True)
-runTests(conn.space_center, conn.mech_jeb, modules)
+runTests(conn.space_center, mj, mj, modules)
 
 # Print summary
 def printSummary(message, value):
