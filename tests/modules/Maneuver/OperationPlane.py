@@ -39,7 +39,7 @@ class OperationPlaneTest(TimedOperationTest):
 		self.instance.time_selector.time_reference = getattr(self.mechJeb.TimeReference, timeReference)
 		try:
 			self.instance.make_nodes()
-			self.assertFail("Expected OperationException for values (" + timeReference + ")")
+			self.assertFail("Expected OperationException")
 		except self.mechJeb.OperationException as ex:
 			if not str(ex).startswith("must select a target to match planes with."):
 				raise ex

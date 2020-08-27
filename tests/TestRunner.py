@@ -17,21 +17,30 @@ def printErrors(errors):
 	
 	indent += 1
 	for error in errors:
-		lines = (type(error).__name__ + ": " + str(error)).split("\n")
-		if len(lines) == 1:
-			prettyPrint(Fore.BLACK + lines[0])
-			continue
+		# Extract parameters if the error is from a parameterized method
+		parameters = ""
+		if type(error) is tuple:
+			if len(error[1]) > 0:
+				parameters = "\n  * Method parameters: " + str(error[1]).replace(",)", ")").replace("'", "\"")
+			error = error[0]
 
-		removeFrom = 1
-		for i, line in enumerate(lines):
-			if "KRPC." in line:
-				removeFrom = i + 1
+		lines = (type(error).__name__ + ": " + str(error) + parameters).split("\n")
+		if type(error) is not krpc.error.RPCError:
+			# If the exception is not a remote type, print it as-is
+			for line in lines:
+				prettyPrint(Fore.BLACK + line)
+		else:
+			# Remove unnecessary information from remote exceptions
+			removeFrom = 1
+			for i, line in enumerate(lines):
+				if "KRPC." in line:
+					removeFrom = i + 1
 
-		if removeFrom < len(lines):
-			del lines[removeFrom:]
+			if removeFrom < len(lines):
+				del lines[removeFrom:]
 
-		for line in lines:
-			prettyPrint(Fore.BLACK + printErrors.p1.sub("", line).replace(" (", "("))
+			for line in lines:
+				prettyPrint(Fore.BLACK + printErrors.p1.sub("", line).replace(" (", "("))
 	indent -= 1
 printErrors.p1 = re.compile(r"\[0x.*")
 
@@ -77,11 +86,11 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 					values = []
 					method = getattr(module, name)
 
-					def catchExceptions(callable):
+					def catchExceptions(callable, parameters = ()):
 						try:
 							callable()
 						except (Exception, RuntimeError) as ex:
-							errors.append(ex)
+							errors.append((ex, parameters))
 							
 					failed = False
 					generated = Annotations.hasAnnotation(method, Annotations.GeneratedTest)
@@ -105,7 +114,7 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 							catchExceptions(method)
 						else:
 							for value in values:
-								catchExceptions(lambda: method(*value))
+								catchExceptions(lambda: method(*value), value)
 
 						failed = len(errors) > 0
 						summary[failed] += 1

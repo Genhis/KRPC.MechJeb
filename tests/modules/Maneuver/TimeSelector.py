@@ -16,7 +16,7 @@ class TimeSelectorTest(TestCase):
 	def time_reference_invalid(self, timeReference):
 		try:
 			self.instance.time_reference = getattr(self.mechJeb.TimeReference, timeReference)
-			self.assertFail("Expected OperationException for values (" + timeReference + ")")
+			self.assertFail("Expected OperationException")
 		except self.mechJeb.OperationException as ex:
 			if not str(ex).startswith("This TimeReference is not allowed: "):
 				raise ex

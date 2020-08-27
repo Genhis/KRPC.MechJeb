@@ -44,7 +44,7 @@ class OperationApoapsisTest(TimedOperationTest):
 		self.instance.time_selector.time_reference = getattr(self.mechJeb.TimeReference, timeReference)
 		try:
 			self.instance.make_nodes()
-			self.assertFail("Expected OperationException for values (" + str(apoapsis) + ", " + timeReference + ")")
+			self.assertFail("Expected OperationException")
 		except self.mechJeb.OperationException as ex:
 			if not str(ex).startswith("new apoapsis cannot be lower than the altitude of the burn"):
 				raise ex
