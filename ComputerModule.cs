@@ -12,6 +12,9 @@ namespace KRPC.MechJeb {
 	public abstract class ComputerModule : Module {
 		internal const string MechJebType = "MuMech.ComputerModule";
 
+		// Methods needed for correct functionalify
+		private static MethodInfo onFixedUpdate;
+
 		// Fields and methods
 		private static PropertyInfo enabled;
 		private static FieldInfo usersField;
@@ -22,6 +25,8 @@ namespace KRPC.MechJeb {
 		private object users;
 
 		internal static void InitType(Type type) {
+			onFixedUpdate = type.GetCheckedMethod("OnFixedUpdate");
+
 			enabled = type.GetCheckedProperty("enabled");
 			usersField = type.GetCheckedField("users");
 		}
@@ -40,6 +45,10 @@ namespace KRPC.MechJeb {
 				else
 					UserPool.usersRemove.Invoke(this.users, new object[] { this });
 			}
+		}
+
+		internal void OnFixedUpdate() {
+			onFixedUpdate.Invoke(this.instance, null);
 		}
 
 		private static class UserPool {

@@ -73,6 +73,10 @@ namespace KRPC.MechJeb.Maneuver {
 		[KRPCMethod]
 		public List<Node> MakeNodes() {
 			try {
+				// If a target is set using kRPC API, MechJeb will become aware of it only in the next frame.
+				// We need to call TargetController.OnFixedUpdate() to force the target update.
+				MechJeb.TargetController.OnFixedUpdate();
+
 				Vessel vessel = FlightGlobals.ActiveVessel;
 				IEnumerable<object> parameters = (IEnumerable<object>)makeNodesImpl.Invoke(this.instance, new object[] { vessel.orbit, Planetarium.GetUniversalTime(), MechJeb.TargetController.instance });
 				// A warning may be stored in ErrorMessage property (if it's an error, we will throw an exception)
