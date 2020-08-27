@@ -36,7 +36,9 @@ class TimedOperationTest(OperationTest):
 		]
 
 	def testTimeReference(self, node, timeReference, leadTime = None, circularizeAltitude = None):
-		if timeReference == "apoapsis":
+		if timeReference == "altitude":
+			pass # TODO: Check if the node altitude equals to circularizeAltitude - how to get node altitude?
+		elif timeReference == "apoapsis":
 			self.assertEquals(self.oldOrbit.time_to_apoapsis, node.time_to, "time_to_apoapsis")
 		elif timeReference == "eq_ascending":
 			pass # TODO: what would be a suitable test?
@@ -44,17 +46,45 @@ class TimedOperationTest(OperationTest):
 			pass # TODO: what would be a suitable test?
 		elif timeReference == "periapsis":
 			self.assertEquals(self.oldOrbit.time_to_periapsis, node.time_to, "time_to_periapsis")
+		elif timeReference == "rel_ascending":
+			pass # TODO: what would be a suitable test?
+		elif timeReference == "rel_descending":
+			pass # TODO: what would be a suitable test?
+		elif timeReference == "rel_highest_ad":
+			pass # TODO: what would be a suitable test?
+		elif timeReference == "rel_nearest_ad":
+			pass # TODO: what would be a suitable test?
 		elif timeReference == "x_from_now":
 			self.assertEquals(leadTime, node.time_to, "time_to_x_from_now")
 		else:
 			self.assertFail("Time reference is not supported: " + timeReference)
 
 	@GeneratedTest(GeneratedTestType.MISSING)
-	def make_nodes_eq_ascending(self):
+	def time_reference_altitude(self):
 		pass
 
 	@GeneratedTest(GeneratedTestType.MISSING)
-	def make_nodes_eq_descending(self):
+	def time_reference_eq_ascending(self):
+		pass
+
+	@GeneratedTest(GeneratedTestType.MISSING)
+	def time_reference_eq_descending(self):
+		pass
+
+	@GeneratedTest(GeneratedTestType.MISSING)
+	def time_reference_rel_ascending(self):
+		pass
+
+	@GeneratedTest(GeneratedTestType.MISSING)
+	def time_reference_rel_descending(self):
+		pass
+
+	@GeneratedTest(GeneratedTestType.MISSING)
+	def time_reference_rel_highest_ad(self):
+		pass
+
+	@GeneratedTest(GeneratedTestType.MISSING)
+	def time_reference_rel_nearest_ad(self):
 		pass
 
 	@Test
