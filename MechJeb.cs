@@ -104,7 +104,7 @@ namespace KRPC.MechJeb {
 
 				// Set module instances to MechJeb objects
 				foreach(KeyValuePair<string, Module> p in modules) {
-					string error = "Cannot initialize class " + p.Value.GetType().Name;
+					string error = "Cannot initialize class " + p.Value.GetType().Name + " with " + p.Key;
 					try {
 						object moduleInstance = GetComputerModule(p.Key);
 						if(moduleInstance != null)
@@ -188,7 +188,7 @@ namespace KRPC.MechJeb {
 		// CONTROLLERS
 
 		[KRPCProperty]
-		public static DeployableController AntennaController => (DeployableController)modules["AntennaController"];
+		public static DeployableController AntennaController => (DeployableController)modules["DeployableAntennaController"];
 
 		[KRPCProperty]
 		public static NodeExecutor NodeExecutor => (NodeExecutor)modules["NodeExecutor"];
