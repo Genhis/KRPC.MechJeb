@@ -37,3 +37,9 @@ class OperationPlaneTest(TimedOperationTest):
 	def make_nodes_no_target(self, timeReference):
 		self.spaceCenter.clear_target()
 		self.testOperationException(timeReference, "must select a target to match planes with.")
+
+	@ManeuverTest
+	@ParameterizedTest(("Duna", "Kerbin", "Pol"), lambda self: self.submodules[0].validTimeReferences)
+	def make_nodes_outside_soi(self, target, timeReference):
+		self.spaceCenter.target_body = self.spaceCenter.bodies[target]
+		self.testOperationException(timeReference, "can only match planes with an object in the same sphere of influence.")
