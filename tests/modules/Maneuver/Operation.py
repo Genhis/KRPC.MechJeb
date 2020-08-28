@@ -16,8 +16,8 @@ def ManeuverTest(func):
 	return wrapper
 
 class OperationTest(TestCase):
-	def __init__(self, variable, name):
-		super().__init__(variable, name)
+	def __init__(self, variable, name, className = None):
+		super().__init__(variable, name, className)
 
 	def testOrbit(self, newOrbit, properties):
 		for propertyName in properties:
@@ -29,8 +29,8 @@ class OperationTest(TestCase):
 		self.oldOrbit = self.activeVessel.orbit
 
 class TimedOperationTest(OperationTest):
-	def __init__(self, variable, name):
-		super().__init__(variable, name)
+	def __init__(self, variable, name, className = None):
+		super().__init__(variable, name, className)
 		self.submodules = [
 			TimeSelectorTest()
 		]

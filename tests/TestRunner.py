@@ -67,7 +67,7 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 
 	for module in modules:
 		print()
-		prettyPrint("Testing module " + Fore.YELLOW + module.name + Fore.RESET + ":")
+		prettyPrint("Testing module " + Fore.YELLOW + (module.name if module.name == module.className else module.className + "[" + module.name + "]") + Fore.RESET + ":")
 		indent += 1
 	
 		try:
@@ -157,8 +157,10 @@ modules = [
 	SmartRcsTest(),
 	TranslatronTest(),
 
+	AntennaControllerTest(),
 	NodeExecutorTest(),
 	RcsControllerTest(),
+	SolarPanelControllerTest(),
 	StagingControllerTest(),
 	TargetControllerTest(),
 	ThrustControllerTest(),

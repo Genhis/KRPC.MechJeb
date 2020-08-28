@@ -13,6 +13,7 @@ from .SmartAss import SmartAssTest
 from .SmartRcs import SmartRcsTest
 from .Translatron import TranslatronTest
 
+from .DeployableController import AntennaControllerTest, SolarPanelControllerTest
 from .NodeExecutor import NodeExecutorTest
 from .RcsController import RcsControllerTest
 from .StagingController import StagingControllerTest

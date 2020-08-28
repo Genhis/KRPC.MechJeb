@@ -11,9 +11,10 @@ class TestGeneratorException(Exception):
 		self.message = message
 
 class TestCase:
-	def __init__(self, variable, name):
+	def __init__(self, variable, name, className = None):
 		self.variable = variable
 		self.name = name
+		self.className = name if className is None else className
 
 	def setInstance(self, spaceCenter, mechJeb, parent):
 		self.spaceCenter = spaceCenter

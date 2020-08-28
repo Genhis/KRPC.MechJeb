@@ -24,6 +24,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="modules\DeployableController.py" />
     <Compile Include="modules\ManeuverPlanner.py" />
     <Compile Include="modules\Maneuver\TimeSelector.py" />
     <Compile Include="modules\Maneuver\OperationResonantOrbit.py" />
