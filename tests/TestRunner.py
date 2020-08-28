@@ -131,8 +131,7 @@ def runTests(spaceCenter, mechJeb, parentInstance, modules):
 						printErrors([globalErrors[name]])
 
 			# Check for sub-modules
-			if hasattr(module, "submodules"):
-				runTests(spaceCenter, mechJeb, module.instance, module.submodules)
+			runTests(spaceCenter, mechJeb, module.instance, module.submodules)
 		except (Exception, RuntimeError) as ex:
 			prettyPrint(Fore.RED + "*** Testing FAILED *** " + Fore.YELLOW + type(ex).__name__ + ": " + str(ex))
 			failedModules.append(module)

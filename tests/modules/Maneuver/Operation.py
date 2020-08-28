@@ -86,7 +86,3 @@ class TimedOperationTest(OperationTest):
 	@GeneratedTest(GeneratedTestType.MISSING)
 	def time_reference_rel_nearest_ad(self):
 		pass
-
-	@Test
-	def time_selector(self):
-		self.assertType("TimeSelector", "time_selector")
