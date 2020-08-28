@@ -53,10 +53,4 @@ class OperationCircularizeTest(TimedOperationTest):
 	@ParameterizedTest([80000, 112450, 187550, 240000])
 	def make_nodes_altitude_invalid(self, altitude):
 		self.instance.time_selector.circularize_altitude = altitude
-		self.instance.time_selector.time_reference = self.mechJeb.TimeReference.altitude
-		try:
-			self.instance.make_nodes()
-			self.assertFail("Expected OperationException")
-		except self.mechJeb.OperationException as ex:
-			if not str(ex).startswith("Warning: can't circularize at this altitude, since current orbit does not reach it."):
-				raise ex
+		self.testOperationException("altitude", "Warning: can't circularize at this altitude, since current orbit does not reach it.")

@@ -41,10 +41,4 @@ class OperationPeriapsisTest(TimedOperationTest):
 	@ParameterizedTest([280000, 375000, 935821.649], lambda self: self.submodules[0].validTimeReferences)
 	def make_nodes_invalid(self, periapsis, timeReference):
 		self.instance.new_periapsis = periapsis
-		self.instance.time_selector.time_reference = getattr(self.mechJeb.TimeReference, timeReference)
-		try:
-			self.instance.make_nodes()
-			self.assertFail("Expected OperationException")
-		except self.mechJeb.OperationException as ex:
-			if not str(ex).startswith("new periapsis cannot be higher than the altitude of the burn"):
-				raise ex
+		self.testOperationException(timeReference, "new periapsis cannot be higher than the altitude of the burn")
