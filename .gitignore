@@ -1,4 +1,5 @@
 .buildtools/output
+__pycache__
 bin
 lib
 obj
