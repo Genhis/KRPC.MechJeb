@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.1 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
             
           
@@ -121,6 +121,7 @@
 <p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
             
@@ -500,72 +501,86 @@
 <dd><dl class="data">
 <dt id="MechJeb.TimeReference.altitude">
 <code class="descname">altitude</code><a class="headerlink" href="#MechJeb.TimeReference.altitude" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the selected <a class="reference internal" href="#MechJeb.TimeSelector.circularize_altitude" title="MechJeb.TimeSelector.circularize_altitude"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeSelector.circularize_altitude</span></code></a>.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.apoapsis">
 <code class="descname">apoapsis</code><a class="headerlink" href="#MechJeb.TimeReference.apoapsis" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next apoapsis.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.closest_approach">
 <code class="descname">closest_approach</code><a class="headerlink" href="#MechJeb.TimeReference.closest_approach" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the closest approach to the target.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.computed">
 <code class="descname">computed</code><a class="headerlink" href="#MechJeb.TimeReference.computed" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the optimum time.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.eq_ascending">
 <code class="descname">eq_ascending</code><a class="headerlink" href="#MechJeb.TimeReference.eq_ascending" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial ascending node.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.eq_descending">
 <code class="descname">eq_descending</code><a class="headerlink" href="#MechJeb.TimeReference.eq_descending" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial descending node.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.eq_highest_ad">
 <code class="descname">eq_highest_ad</code><a class="headerlink" href="#MechJeb.TimeReference.eq_highest_ad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.eq_nearest_ad">
 <code class="descname">eq_nearest_ad</code><a class="headerlink" href="#MechJeb.TimeReference.eq_nearest_ad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the nearest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.periapsis">
 <code class="descname">periapsis</code><a class="headerlink" href="#MechJeb.TimeReference.periapsis" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next periapsis.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.rel_ascending">
 <code class="descname">rel_ascending</code><a class="headerlink" href="#MechJeb.TimeReference.rel_ascending" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next ascending node with the target.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.rel_descending">
 <code class="descname">rel_descending</code><a class="headerlink" href="#MechJeb.TimeReference.rel_descending" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next descending node with the target.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.rel_highest_ad">
 <code class="descname">rel_highest_ad</code><a class="headerlink" href="#MechJeb.TimeReference.rel_highest_ad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.rel_nearest_ad">
 <code class="descname">rel_nearest_ad</code><a class="headerlink" href="#MechJeb.TimeReference.rel_nearest_ad" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the nearest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="data">
 <dt id="MechJeb.TimeReference.x_from_now">
 <code class="descname">x_from_now</code><a class="headerlink" href="#MechJeb.TimeReference.x_from_now" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>After a fixed <a class="reference internal" href="#MechJeb.TimeSelector.lead_time" title="MechJeb.TimeSelector.lead_time"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeSelector.lead_time</span></code></a>.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -577,7 +592,8 @@
 <dl class="class">
 <dt id="MechJeb.OperationApoapsis">
 <em class="property">class </em><code class="descname">OperationApoapsis</code><a class="headerlink" href="#MechJeb.OperationApoapsis" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to set a new apoapsis</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationApoapsis.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationApoapsis.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -674,7 +690,7 @@ MJServiceException - Internal service error.</p>
 <dt id="MechJeb.OperationCircularize">
 <em class="property">class </em><code class="descname">OperationCircularize</code><a class="headerlink" href="#MechJeb.OperationCircularize" title="Permalink to this definition">¶</a></dt>
 <dd><p>This mode creates a manevuer to match your apoapsis to periapsis.
-To match apoapsis to periapsis, set the time to <a class="reference internal" href="#MechJeb.TimeReference.periapsis" title="MechJeb.TimeReference.periapsis"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeReference.periapsis</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#MechJeb.TimeReference.apoapsis" title="MechJeb.TimeReference.apoapsis"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeReference.apoapsis</span></code></a>. Theese are the most efficient, but it can also create node at specific height or after specific time.</p>
+To match apoapsis to periapsis, set the time to <a class="reference internal" href="#MechJeb.TimeReference.periapsis" title="MechJeb.TimeReference.periapsis"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeReference.periapsis</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#MechJeb.TimeReference.apoapsis" title="MechJeb.TimeReference.apoapsis"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.TimeReference.apoapsis</span></code></a>. These are the most efficient, but it can also create node at specific height or after specific time.</p>
 <dl class="attribute">
 <dt id="MechJeb.OperationCircularize.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationCircularize.error_message" title="Permalink to this definition">¶</a></dt>
@@ -756,7 +772,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationCourseCorrection">
 <em class="property">class </em><code class="descname">OperationCourseCorrection</code><a class="headerlink" href="#MechJeb.OperationCourseCorrection" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to fine-tune closest approach to target</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationCourseCorrection.course_correct_final_pe_a">
 <code class="descname">course_correct_final_pe_a</code><a class="headerlink" href="#MechJeb.OperationCourseCorrection.course_correct_final_pe_a" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -852,7 +869,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationEllipticize">
 <em class="property">class </em><code class="descname">OperationEllipticize</code><a class="headerlink" href="#MechJeb.OperationEllipticize" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to change both periapsis and apoapsis</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationEllipticize.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationEllipticize.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -963,7 +981,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationInclination">
 <em class="property">class </em><code class="descname">OperationInclination</code><a class="headerlink" href="#MechJeb.OperationInclination" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to change inclination</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationInclination.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationInclination.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1059,7 +1078,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationInterplanetaryTransfer">
 <em class="property">class </em><code class="descname">OperationInterplanetaryTransfer</code><a class="headerlink" href="#MechJeb.OperationInterplanetaryTransfer" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to transfer to another planet</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationInterplanetaryTransfer.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationInterplanetaryTransfer.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1140,7 +1160,7 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationKillRelVel">
 <em class="property">class </em><code class="descname">OperationKillRelVel</code><a class="headerlink" href="#MechJeb.OperationKillRelVel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kill relative velocity to a given target.</p>
+<dd><p>Match velocities with target</p>
 <dl class="attribute">
 <dt id="MechJeb.OperationKillRelVel.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationKillRelVel.error_message" title="Permalink to this definition">¶</a></dt>
@@ -1222,7 +1242,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationLambert">
 <em class="property">class </em><code class="descname">OperationLambert</code><a class="headerlink" href="#MechJeb.OperationLambert" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to set the chosen time</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationLambert.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationLambert.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1512,7 +1533,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationMoonReturn">
 <em class="property">class </em><code class="descname">OperationMoonReturn</code><a class="headerlink" href="#MechJeb.OperationMoonReturn" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to return from a moon approximately at the specified altitude</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationMoonReturn.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationMoonReturn.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1594,7 +1616,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationPeriapsis">
 <em class="property">class </em><code class="descname">OperationPeriapsis</code><a class="headerlink" href="#MechJeb.OperationPeriapsis" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to set a new periapsis</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationPeriapsis.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationPeriapsis.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1690,7 +1713,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationPlane">
 <em class="property">class </em><code class="descname">OperationPlane</code><a class="headerlink" href="#MechJeb.OperationPlane" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to match planes with target</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationPlane.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationPlane.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1884,7 +1908,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="MechJeb.OperationSemiMajor">
 <em class="property">class </em><code class="descname">OperationSemiMajor</code><a class="headerlink" href="#MechJeb.OperationSemiMajor" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Create a maneuver to set a new semi-major axis</p>
+<dl class="attribute">
 <dt id="MechJeb.OperationSemiMajor.error_message">
 <code class="descname">error_message</code><a class="headerlink" href="#MechJeb.OperationSemiMajor.error_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -2135,7 +2160,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2020, Genhis
+        &copy; Copyright 2018-2021, Genhis
 
     </p>
   </div>

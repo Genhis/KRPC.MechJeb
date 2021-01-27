@@ -154,72 +154,72 @@ TimeSelector
 
    .. enumerator:: altitude
 
-
+      At the selected :func:`TimeSelector::circularize_altitude`.
 
 
    .. enumerator:: apoapsis
 
-
+      At the next apoapsis.
 
 
    .. enumerator:: closest_approach
 
-
+      At the closest approach to the target.
 
 
    .. enumerator:: computed
 
-
+      At the optimum time.
 
 
    .. enumerator:: eq_ascending
 
-
+      At the equatorial ascending node.
 
 
    .. enumerator:: eq_descending
 
-
+      At the equatorial descending node.
 
 
    .. enumerator:: eq_highest_ad
 
-
+      At the cheapest equatorial AN/DN.
 
 
    .. enumerator:: eq_nearest_ad
 
-
+      At the nearest equatorial AN/DN.
 
 
    .. enumerator:: periapsis
 
-
+      At the next periapsis.
 
 
    .. enumerator:: rel_ascending
 
-
+      At the next ascending node with the target.
 
 
    .. enumerator:: rel_descending
 
-
+      At the next descending node with the target.
 
 
    .. enumerator:: rel_highest_ad
 
-
+      At the cheapest AN/DN with the target.
 
 
    .. enumerator:: rel_nearest_ad
 
-
+      At the nearest AN/DN with the target.
 
 
    .. enumerator:: x_from_now
 
-
+      After a fixed :func:`TimeSelector::lead_time`.
 
 
 
@@ -232,7 +232,7 @@ OperationApoapsis
 
 .. class:: OperationApoapsis
 
-
+   Create a maneuver to set a new apoapsis
 
    .. function:: std::string error_message()
 
@@ -291,7 +291,7 @@ OperationCircularize
 .. class:: OperationCircularize
 
    This mode creates a manevuer to match your apoapsis to periapsis.
-   To match apoapsis to periapsis, set the time to :enumerator:`TimeReference::periapsis`; to match periapsis to apoapsis, set the time to :enumerator:`TimeReference::apoapsis`. Theese are the most efficient, but it can also create node at specific height or after specific time.
+   To match apoapsis to periapsis, set the time to :enumerator:`TimeReference::periapsis`; to match periapsis to apoapsis, set the time to :enumerator:`TimeReference::apoapsis`. These are the most efficient, but it can also create node at specific height or after specific time.
 
    .. function:: std::string error_message()
 
@@ -342,7 +342,7 @@ OperationCourseCorrection
 
 .. class:: OperationCourseCorrection
 
-
+   Create a maneuver to fine-tune closest approach to target
 
    .. function:: double course_correct_final_pe_a()
    .. function:: void set_course_correct_final_pe_a(double value)
@@ -401,7 +401,7 @@ OperationEllipticize
 
 .. class:: OperationEllipticize
 
-
+   Create a maneuver to change both periapsis and apoapsis
 
    .. function:: std::string error_message()
 
@@ -466,7 +466,7 @@ OperationInclination
 
 .. class:: OperationInclination
 
-
+   Create a maneuver to change inclination
 
    .. function:: std::string error_message()
 
@@ -524,7 +524,7 @@ OperationInterplanetaryTransfer
 
 .. class:: OperationInterplanetaryTransfer
 
-
+   Create a maneuver to transfer to another planet
 
    .. function:: std::string error_message()
 
@@ -576,7 +576,7 @@ OperationKillRelVel
 
 .. class:: OperationKillRelVel
 
-   Kill relative velocity to a given target.
+   Match velocities with target
 
    .. function:: std::string error_message()
 
@@ -627,7 +627,7 @@ OperationLambert
 
 .. class:: OperationLambert
 
-
+   Create a maneuver to set the chosen time
 
    .. function:: std::string error_message()
 
@@ -801,7 +801,7 @@ OperationMoonReturn
 
 .. class:: OperationMoonReturn
 
-
+   Create a maneuver to return from a moon approximately at the specified altitude
 
    .. function:: std::string error_message()
 
@@ -853,7 +853,7 @@ OperationPeriapsis
 
 .. class:: OperationPeriapsis
 
-
+   Create a maneuver to set a new periapsis
 
    .. function:: std::string error_message()
 
@@ -911,7 +911,7 @@ OperationPlane
 
 .. class:: OperationPlane
 
-
+   Create a maneuver to match planes with target
 
    .. function:: std::string error_message()
 
@@ -1028,7 +1028,7 @@ OperationSemiMajor
 
 .. class:: OperationSemiMajor
 
-
+   Create a maneuver to set a new semi-major axis
 
    .. function:: std::string error_message()
 

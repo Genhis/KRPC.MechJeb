@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.1 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
             
           
@@ -121,6 +121,7 @@
 <p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
             
@@ -477,72 +478,86 @@
 <dd><dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference8altitudeE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference8altitudeE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference8altitudeE"></span><em class="property">enumerator </em><code class="descname">altitude</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference8altitudeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the selected <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb12TimeSelector20circularize_altitudeEv" title="krpc::services::MechJeb::TimeSelector::circularize_altitude"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">TimeSelector::circularize_altitude()</span></code></a>.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference8apoapsisE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference8apoapsisE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference8apoapsisE"></span><em class="property">enumerator </em><code class="descname">apoapsis</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference8apoapsisE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the next apoapsis.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference16closest_approachE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference16closest_approachE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference16closest_approachE"></span><em class="property">enumerator </em><code class="descname">closest_approach</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference16closest_approachE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the closest approach to the target.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference8computedE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference8computedE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference8computedE"></span><em class="property">enumerator </em><code class="descname">computed</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference8computedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the optimum time.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference12eq_ascendingE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference12eq_ascendingE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference12eq_ascendingE"></span><em class="property">enumerator </em><code class="descname">eq_ascending</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference12eq_ascendingE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial ascending node.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference13eq_descendingE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference13eq_descendingE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference13eq_descendingE"></span><em class="property">enumerator </em><code class="descname">eq_descending</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference13eq_descendingE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial descending node.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference13eq_highest_adE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference13eq_highest_adE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference13eq_highest_adE"></span><em class="property">enumerator </em><code class="descname">eq_highest_ad</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference13eq_highest_adE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference13eq_nearest_adE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference13eq_nearest_adE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference13eq_nearest_adE"></span><em class="property">enumerator </em><code class="descname">eq_nearest_ad</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference13eq_nearest_adE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the nearest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference9periapsisE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference9periapsisE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference9periapsisE"></span><em class="property">enumerator </em><code class="descname">periapsis</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference9periapsisE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the next periapsis.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference13rel_ascendingE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference13rel_ascendingE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference13rel_ascendingE"></span><em class="property">enumerator </em><code class="descname">rel_ascending</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference13rel_ascendingE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the next ascending node with the target.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference14rel_descendingE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference14rel_descendingE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference14rel_descendingE"></span><em class="property">enumerator </em><code class="descname">rel_descending</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference14rel_descendingE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the next descending node with the target.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference14rel_highest_adE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference14rel_highest_adE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference14rel_highest_adE"></span><em class="property">enumerator </em><code class="descname">rel_highest_ad</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference14rel_highest_adE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference14rel_nearest_adE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference14rel_nearest_adE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference14rel_nearest_adE"></span><em class="property">enumerator </em><code class="descname">rel_nearest_ad</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference14rel_nearest_adE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>At the nearest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N4krpc8services7MechJeb13TimeReference10x_from_nowE">
 <span id="_CPPv3N4krpc8services7MechJeb13TimeReference10x_from_nowE"></span><span id="_CPPv2N4krpc8services7MechJeb13TimeReference10x_from_nowE"></span><em class="property">enumerator </em><code class="descname">x_from_now</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb13TimeReference10x_from_nowE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>After a fixed <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb12TimeSelector9lead_timeEv" title="krpc::services::MechJeb::TimeSelector::lead_time"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">TimeSelector::lead_time()</span></code></a>.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -554,7 +569,8 @@
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb17OperationApoapsisE">
 <span id="_CPPv3N4krpc8services7MechJeb17OperationApoapsisE"></span><span id="_CPPv2N4krpc8services7MechJeb17OperationApoapsisE"></span><span id="krpc::services::MechJeb::OperationApoapsis"></span><em class="property">class </em><code class="descname">OperationApoapsis</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17OperationApoapsisE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new apoapsis</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb17OperationApoapsis13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb17OperationApoapsis13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb17OperationApoapsis13error_messageEv"></span><span id="krpc::services::MechJeb::OperationApoapsis::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17OperationApoapsis13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -650,7 +666,7 @@ MJServiceException - Internal service error.</p>
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationCircularizeE">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationCircularizeE"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationCircularizeE"></span><span id="krpc::services::MechJeb::OperationCircularize"></span><em class="property">class </em><code class="descname">OperationCircularize</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationCircularizeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This mode creates a manevuer to match your apoapsis to periapsis.
-To match apoapsis to periapsis, set the time to <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb13TimeReference9periapsisE" title="krpc::services::MechJeb::TimeReference::periapsis"><code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">TimeReference::periapsis</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb13TimeReference8apoapsisE" title="krpc::services::MechJeb::TimeReference::apoapsis"><code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">TimeReference::apoapsis</span></code></a>. Theese are the most efficient, but it can also create node at specific height or after specific time.</p>
+To match apoapsis to periapsis, set the time to <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb13TimeReference9periapsisE" title="krpc::services::MechJeb::TimeReference::periapsis"><code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">TimeReference::periapsis</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#_CPPv4N4krpc8services7MechJeb13TimeReference8apoapsisE" title="krpc::services::MechJeb::TimeReference::apoapsis"><code class="xref cpp cpp-enumerator docutils literal notranslate"><span class="pre">TimeReference::apoapsis</span></code></a>. These are the most efficient, but it can also create node at specific height or after specific time.</p>
 <dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationCircularize13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationCircularize13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationCircularize13error_messageEv"></span><span id="krpc::services::MechJeb::OperationCircularize::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationCircularize13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
@@ -728,7 +744,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb25OperationCourseCorrectionE">
 <span id="_CPPv3N4krpc8services7MechJeb25OperationCourseCorrectionE"></span><span id="_CPPv2N4krpc8services7MechJeb25OperationCourseCorrectionE"></span><span id="krpc::services::MechJeb::OperationCourseCorrection"></span><em class="property">class </em><code class="descname">OperationCourseCorrection</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb25OperationCourseCorrectionE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to fine-tune closest approach to target</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb25OperationCourseCorrection25course_correct_final_pe_aEv">
 <span id="_CPPv3N4krpc8services7MechJeb25OperationCourseCorrection25course_correct_final_pe_aEv"></span><span id="_CPPv2N4krpc8services7MechJeb25OperationCourseCorrection25course_correct_final_pe_aEv"></span><span id="krpc::services::MechJeb::OperationCourseCorrection::course_correct_final_pe_a"></span>double <code class="descname">course_correct_final_pe_a</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb25OperationCourseCorrection25course_correct_final_pe_aEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -828,7 +845,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationEllipticizeE">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationEllipticizeE"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationEllipticizeE"></span><span id="krpc::services::MechJeb::OperationEllipticize"></span><em class="property">class </em><code class="descname">OperationEllipticize</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationEllipticizeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to change both periapsis and apoapsis</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationEllipticize13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationEllipticize13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationEllipticize13error_messageEv"></span><span id="krpc::services::MechJeb::OperationEllipticize::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationEllipticize13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -941,7 +959,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationInclinationE">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationInclinationE"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationInclinationE"></span><span id="krpc::services::MechJeb::OperationInclination"></span><em class="property">class </em><code class="descname">OperationInclination</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationInclinationE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to change inclination</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb20OperationInclination13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb20OperationInclination13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb20OperationInclination13error_messageEv"></span><span id="krpc::services::MechJeb::OperationInclination::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb20OperationInclination13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1036,7 +1055,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb31OperationInterplanetaryTransferE">
 <span id="_CPPv3N4krpc8services7MechJeb31OperationInterplanetaryTransferE"></span><span id="_CPPv2N4krpc8services7MechJeb31OperationInterplanetaryTransferE"></span><span id="krpc::services::MechJeb::OperationInterplanetaryTransfer"></span><em class="property">class </em><code class="descname">OperationInterplanetaryTransfer</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb31OperationInterplanetaryTransferE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to transfer to another planet</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb31OperationInterplanetaryTransfer13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb31OperationInterplanetaryTransfer13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb31OperationInterplanetaryTransfer13error_messageEv"></span><span id="krpc::services::MechJeb::OperationInterplanetaryTransfer::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb31OperationInterplanetaryTransfer13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1118,7 +1138,7 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb19OperationKillRelVelE">
 <span id="_CPPv3N4krpc8services7MechJeb19OperationKillRelVelE"></span><span id="_CPPv2N4krpc8services7MechJeb19OperationKillRelVelE"></span><span id="krpc::services::MechJeb::OperationKillRelVel"></span><em class="property">class </em><code class="descname">OperationKillRelVel</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19OperationKillRelVelE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Kill relative velocity to a given target.</p>
+<dd><p>Match velocities with target</p>
 <dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb19OperationKillRelVel13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb19OperationKillRelVel13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb19OperationKillRelVel13error_messageEv"></span><span id="krpc::services::MechJeb::OperationKillRelVel::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19OperationKillRelVel13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
@@ -1196,7 +1216,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb16OperationLambertE">
 <span id="_CPPv3N4krpc8services7MechJeb16OperationLambertE"></span><span id="_CPPv2N4krpc8services7MechJeb16OperationLambertE"></span><span id="krpc::services::MechJeb::OperationLambert"></span><em class="property">class </em><code class="descname">OperationLambert</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16OperationLambertE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set the chosen time</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb16OperationLambert13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb16OperationLambert13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb16OperationLambert13error_messageEv"></span><span id="krpc::services::MechJeb::OperationLambert::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb16OperationLambert13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1483,7 +1504,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb19OperationMoonReturnE">
 <span id="_CPPv3N4krpc8services7MechJeb19OperationMoonReturnE"></span><span id="_CPPv2N4krpc8services7MechJeb19OperationMoonReturnE"></span><span id="krpc::services::MechJeb::OperationMoonReturn"></span><em class="property">class </em><code class="descname">OperationMoonReturn</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19OperationMoonReturnE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to return from a moon approximately at the specified altitude</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb19OperationMoonReturn13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb19OperationMoonReturn13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb19OperationMoonReturn13error_messageEv"></span><span id="krpc::services::MechJeb::OperationMoonReturn::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb19OperationMoonReturn13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1566,7 +1588,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb18OperationPeriapsisE">
 <span id="_CPPv3N4krpc8services7MechJeb18OperationPeriapsisE"></span><span id="_CPPv2N4krpc8services7MechJeb18OperationPeriapsisE"></span><span id="krpc::services::MechJeb::OperationPeriapsis"></span><em class="property">class </em><code class="descname">OperationPeriapsis</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18OperationPeriapsisE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new periapsis</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb18OperationPeriapsis13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb18OperationPeriapsis13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb18OperationPeriapsis13error_messageEv"></span><span id="krpc::services::MechJeb::OperationPeriapsis::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18OperationPeriapsis13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1661,7 +1684,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb14OperationPlaneE">
 <span id="_CPPv3N4krpc8services7MechJeb14OperationPlaneE"></span><span id="_CPPv2N4krpc8services7MechJeb14OperationPlaneE"></span><span id="krpc::services::MechJeb::OperationPlane"></span><em class="property">class </em><code class="descname">OperationPlane</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb14OperationPlaneE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to match planes with target</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb14OperationPlane13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb14OperationPlane13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb14OperationPlane13error_messageEv"></span><span id="krpc::services::MechJeb::OperationPlane::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb14OperationPlane13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1853,7 +1877,8 @@ MJServiceException - Internal service error.</p>
 <dl class="class">
 <dt id="_CPPv4N4krpc8services7MechJeb18OperationSemiMajorE">
 <span id="_CPPv3N4krpc8services7MechJeb18OperationSemiMajorE"></span><span id="_CPPv2N4krpc8services7MechJeb18OperationSemiMajorE"></span><span id="krpc::services::MechJeb::OperationSemiMajor"></span><em class="property">class </em><code class="descname">OperationSemiMajor</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18OperationSemiMajorE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new semi-major axis</p>
+<dl class="function">
 <dt id="_CPPv4N4krpc8services7MechJeb18OperationSemiMajor13error_messageEv">
 <span id="_CPPv3N4krpc8services7MechJeb18OperationSemiMajor13error_messageEv"></span><span id="_CPPv2N4krpc8services7MechJeb18OperationSemiMajor13error_messageEv"></span><span id="krpc::services::MechJeb::OperationSemiMajor::error_message"></span>std::string <code class="descname">error_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb18OperationSemiMajor13error_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -2108,7 +2133,7 @@ Set it to true if you are used to the old version of transfer maneuver.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2020, Genhis
+        &copy; Copyright 2018-2021, Genhis
 
     </p>
   </div>

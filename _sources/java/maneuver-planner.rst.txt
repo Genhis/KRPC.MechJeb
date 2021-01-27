@@ -171,72 +171,72 @@ TimeSelector
 
    .. field:: public TimeReference ALTITUDE
 
-
+      At the selected :meth:`TimeSelector.getCircularizeAltitude()`.
 
 
    .. field:: public TimeReference APOAPSIS
 
-
+      At the next apoapsis.
 
 
    .. field:: public TimeReference CLOSEST_APPROACH
 
-
+      At the closest approach to the target.
 
 
    .. field:: public TimeReference COMPUTED
 
-
+      At the optimum time.
 
 
    .. field:: public TimeReference EQ_ASCENDING
 
-
+      At the equatorial ascending node.
 
 
    .. field:: public TimeReference EQ_DESCENDING
 
-
+      At the equatorial descending node.
 
 
    .. field:: public TimeReference EQ_HIGHEST_AD
 
-
+      At the cheapest equatorial AN/DN.
 
 
    .. field:: public TimeReference EQ_NEAREST_AD
 
-
+      At the nearest equatorial AN/DN.
 
 
    .. field:: public TimeReference PERIAPSIS
 
-
+      At the next periapsis.
 
 
    .. field:: public TimeReference REL_ASCENDING
 
-
+      At the next ascending node with the target.
 
 
    .. field:: public TimeReference REL_DESCENDING
 
-
+      At the next descending node with the target.
 
 
    .. field:: public TimeReference REL_HIGHEST_AD
 
-
+      At the cheapest AN/DN with the target.
 
 
    .. field:: public TimeReference REL_NEAREST_AD
 
-
+      At the nearest AN/DN with the target.
 
 
    .. field:: public TimeReference X_FROM_NOW
 
-
+      After a fixed :meth:`TimeSelector.getLeadTime()`.
 
 
 
@@ -249,7 +249,7 @@ OperationApoapsis
 
 .. type:: public class OperationApoapsis
 
-
+   Create a maneuver to set a new apoapsis
 
    .. method:: String getErrorMessage()
 
@@ -309,7 +309,7 @@ OperationCircularize
 .. type:: public class OperationCircularize
 
    This mode creates a manevuer to match your apoapsis to periapsis.
-   To match apoapsis to periapsis, set the time to :meth:`TimeReference.PERIAPSIS`; to match periapsis to apoapsis, set the time to :meth:`TimeReference.APOAPSIS`. Theese are the most efficient, but it can also create node at specific height or after specific time.
+   To match apoapsis to periapsis, set the time to :meth:`TimeReference.PERIAPSIS`; to match periapsis to apoapsis, set the time to :meth:`TimeReference.APOAPSIS`. These are the most efficient, but it can also create node at specific height or after specific time.
 
    .. method:: String getErrorMessage()
 
@@ -360,7 +360,7 @@ OperationCourseCorrection
 
 .. type:: public class OperationCourseCorrection
 
-
+   Create a maneuver to fine-tune closest approach to target
 
    .. method:: double getCourseCorrectFinalPeA()
 
@@ -420,7 +420,7 @@ OperationEllipticize
 
 .. type:: public class OperationEllipticize
 
-
+   Create a maneuver to change both periapsis and apoapsis
 
    .. method:: String getErrorMessage()
 
@@ -487,7 +487,7 @@ OperationInclination
 
 .. type:: public class OperationInclination
 
-
+   Create a maneuver to change inclination
 
    .. method:: String getErrorMessage()
 
@@ -546,7 +546,7 @@ OperationInterplanetaryTransfer
 
 .. type:: public class OperationInterplanetaryTransfer
 
-
+   Create a maneuver to transfer to another planet
 
    .. method:: String getErrorMessage()
 
@@ -598,7 +598,7 @@ OperationKillRelVel
 
 .. type:: public class OperationKillRelVel
 
-   Kill relative velocity to a given target.
+   Match velocities with target
 
    .. method:: String getErrorMessage()
 
@@ -649,7 +649,7 @@ OperationLambert
 
 .. type:: public class OperationLambert
 
-
+   Create a maneuver to set the chosen time
 
    .. method:: String getErrorMessage()
 
@@ -826,7 +826,7 @@ OperationMoonReturn
 
 .. type:: public class OperationMoonReturn
 
-
+   Create a maneuver to return from a moon approximately at the specified altitude
 
    .. method:: String getErrorMessage()
 
@@ -878,7 +878,7 @@ OperationPeriapsis
 
 .. type:: public class OperationPeriapsis
 
-
+   Create a maneuver to set a new periapsis
 
    .. method:: String getErrorMessage()
 
@@ -937,7 +937,7 @@ OperationPlane
 
 .. type:: public class OperationPlane
 
-
+   Create a maneuver to match planes with target
 
    .. method:: String getErrorMessage()
 
@@ -1056,7 +1056,7 @@ OperationSemiMajor
 
 .. type:: public class OperationSemiMajor
 
-
+   Create a maneuver to set a new semi-major axis
 
    .. method:: String getErrorMessage()
 

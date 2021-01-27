@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; kRPC.MechJeb 0.6.0 documentation</title>
+  <title>Index &mdash; kRPC.MechJeb 0.6.1 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
             
           
@@ -110,6 +110,7 @@
 <p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
             
@@ -237,6 +238,10 @@
       </ul></li>
       <li><a href="java/thrust-controller.html#krpc.client.services.MechJeb.DifferentialThrottleStatus.ALL_ENGINES_OFF">ALL_ENGINES_OFF (Java field)</a>
 </li>
+      <li><a href="lua/deployable-controller.html#MechJeb.DeployableController.all_retracted">all_retracted() (DeployableController method)</a>, <a href="python/deployable-controller.html#MechJeb.DeployableController.all_retracted">[1]</a>
+</li>
+      <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController.allRetracted()">allRetracted() (Java method)</a>
+</li>
       <li><a href="java/maneuver-planner.html#krpc.client.services.MechJeb.TimeReference.ALTITUDE">ALTITUDE (Java field)</a>
 </li>
       <li><a href="lua/airplane-autopilot.html#MechJeb.AirplaneAutopilot.altitude_hold_enabled">altitude_hold_enabled (AirplaneAutopilot attribute)</a>, <a href="python/airplane-autopilot.html#MechJeb.AirplaneAutopilot.altitude_hold_enabled">[1]</a>
@@ -285,10 +290,10 @@
         <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentLaunchMode">(Java enum)</a>
 </li>
       </ul></li>
-      <li><a href="lua/ascent-autopilot.html#MechJeb.AscentLaunchMode.normal">AscentLaunchMode.normal (in module MechJeb)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentLaunchMode.normal">[1]</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lua/ascent-autopilot.html#MechJeb.AscentLaunchMode.normal">AscentLaunchMode.normal (in module MechJeb)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentLaunchMode.normal">[1]</a>
+</li>
       <li><a href="lua/ascent-autopilot.html#MechJeb.AscentLaunchMode.rendezvous">AscentLaunchMode.rendezvous (in module MechJeb)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentLaunchMode.rendezvous">[1]</a>
 </li>
       <li><a href="lua/ascent-autopilot.html#MechJeb.AscentLaunchMode.target_plane">AscentLaunchMode.target_plane (in module MechJeb)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentLaunchMode.target_plane">[1]</a>
@@ -328,6 +333,8 @@
       <li><a href="lua/smart-ass.html#MechJeb.AttitudeReference.target">AttitudeReference.target (in module MechJeb)</a>, <a href="python/smart-ass.html#MechJeb.AttitudeReference.target">[1]</a>
 </li>
       <li><a href="lua/smart-ass.html#MechJeb.AttitudeReference.target_orientation">AttitudeReference.target_orientation (in module MechJeb)</a>, <a href="python/smart-ass.html#MechJeb.AttitudeReference.target_orientation">[1]</a>
+</li>
+      <li><a href="lua/deployable-controller.html#MechJeb.DeployableController.auto_deploy">auto_deploy (DeployableController attribute)</a>, <a href="python/deployable-controller.html#MechJeb.DeployableController.auto_deploy">[1]</a>
 </li>
       <li><a href="lua/ascent-autopilot.html#MechJeb.AscentAutopilot.auto_deploy_antennas">auto_deploy_antennas (AscentAutopilot attribute)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentAutopilot.auto_deploy_antennas">[1]</a>
 </li>
@@ -405,6 +412,12 @@
 </li>
       <li><a href="lua/landing-autopilot.html#MechJeb.LandingAutopilot.deploy_gears">deploy_gears (LandingAutopilot attribute)</a>, <a href="python/landing-autopilot.html#MechJeb.LandingAutopilot.deploy_gears">[1]</a>
 </li>
+      <li><a href="lua/deployable-controller.html#MechJeb.DeployableController">DeployableController (class in MechJeb)</a>, <a href="python/deployable-controller.html#MechJeb.DeployableController">[1]</a>
+
+      <ul>
+        <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController">(Java class)</a>
+</li>
+      </ul></li>
       <li><a href="lua/ascent-autopilot.html#MechJeb.AscentPVG.desired_apoapsis">desired_apoapsis (AscentPVG attribute)</a>, <a href="python/ascent-autopilot.html#MechJeb.AscentPVG.desired_apoapsis">[1]</a>
 </li>
       <li><a href="lua/rendezvous-autopilot.html#MechJeb.RendezvousAutopilot.desired_distance">desired_distance (RendezvousAutopilot attribute)</a>, <a href="python/rendezvous-autopilot.html#MechJeb.RendezvousAutopilot.desired_distance">[1]</a>
@@ -429,10 +442,10 @@
 </li>
       <li><a href="lua/thrust-controller.html#MechJeb.DifferentialThrottleStatus.solver_failed">DifferentialThrottleStatus.solver_failed (in module MechJeb)</a>, <a href="python/thrust-controller.html#MechJeb.DifferentialThrottleStatus.solver_failed">[1]</a>
 </li>
-      <li><a href="lua/thrust-controller.html#MechJeb.DifferentialThrottleStatus.success">DifferentialThrottleStatus.success (in module MechJeb)</a>, <a href="python/thrust-controller.html#MechJeb.DifferentialThrottleStatus.success">[1]</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lua/thrust-controller.html#MechJeb.DifferentialThrottleStatus.success">DifferentialThrottleStatus.success (in module MechJeb)</a>, <a href="python/thrust-controller.html#MechJeb.DifferentialThrottleStatus.success">[1]</a>
+</li>
       <li><a href="java/translatron.html#krpc.client.services.MechJeb.TranslatronMode.DIRECT">DIRECT (Java field)</a>
 </li>
       <li><a href="lua/smart-ass.html#MechJeb.Direction">Direction (class in MechJeb)</a>, <a href="python/smart-ass.html#MechJeb.Direction">[1]</a>
@@ -547,6 +560,10 @@
 </li>
       <li><a href="java/node-executor.html#krpc.client.services.MechJeb.NodeExecutor.executeOneNode()">executeOneNode() (Java method)</a>
 </li>
+      <li><a href="lua/deployable-controller.html#MechJeb.DeployableController.extend_all">extend_all() (DeployableController method)</a>, <a href="python/deployable-controller.html#MechJeb.DeployableController.extend_all">[1]</a>
+</li>
+      <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController.extendAll()">extendAll() (Java method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -618,6 +635,8 @@
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.getAscentPathIndex()">getAscentPathIndex() (Java method)</a>
 </li>
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.getAscentPathPVG()">getAscentPathPVG() (Java method)</a>
+</li>
+      <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController.getAutoDeploy()">getAutoDeploy() (Java method)</a>
 </li>
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.getAutoDeployAntennas()">getAutoDeployAntennas() (Java method)</a>
 </li>
@@ -1043,7 +1062,7 @@
 </li>
       <li><a href="java/smart-ass.html#krpc.client.services.MechJeb.SmartASSAutopilotMode.KILL_ROT">KILL_ROT (Java field)</a>
 </li>
-      <li><a href="java/airplane-autopilot.html#package-krpc.client.services.MechJeb">krpc.client.services.MechJeb (package)</a>, <a href="java/ascent-autopilot.html#package-krpc.client.services.MechJeb">[1]</a>, <a href="java/docking-autopilot.html#package-krpc.client.services.MechJeb">[2]</a>, <a href="java/landing-autopilot.html#package-krpc.client.services.MechJeb">[3]</a>, <a href="java/maneuver-planner.html#package-krpc.client.services.MechJeb">[4]</a>, <a href="java/mechjeb.html#package-krpc.client.services.MechJeb">[5]</a>, <a href="java/node-executor.html#package-krpc.client.services.MechJeb">[6]</a>, <a href="java/rcs-controller.html#package-krpc.client.services.MechJeb">[7]</a>, <a href="java/rendezvous-autopilot.html#package-krpc.client.services.MechJeb">[8]</a>, <a href="java/smart-ass.html#package-krpc.client.services.MechJeb">[9]</a>, <a href="java/smart-rcs.html#package-krpc.client.services.MechJeb">[10]</a>, <a href="java/staging-controller.html#package-krpc.client.services.MechJeb">[11]</a>, <a href="java/target-controller.html#package-krpc.client.services.MechJeb">[12]</a>, <a href="java/thrust-controller.html#package-krpc.client.services.MechJeb">[13]</a>, <a href="java/translatron.html#package-krpc.client.services.MechJeb">[14]</a>
+      <li><a href="java/airplane-autopilot.html#package-krpc.client.services.MechJeb">krpc.client.services.MechJeb (package)</a>, <a href="java/ascent-autopilot.html#package-krpc.client.services.MechJeb">[1]</a>, <a href="java/deployable-controller.html#package-krpc.client.services.MechJeb">[2]</a>, <a href="java/docking-autopilot.html#package-krpc.client.services.MechJeb">[3]</a>, <a href="java/landing-autopilot.html#package-krpc.client.services.MechJeb">[4]</a>, <a href="java/maneuver-planner.html#package-krpc.client.services.MechJeb">[5]</a>, <a href="java/mechjeb.html#package-krpc.client.services.MechJeb">[6]</a>, <a href="java/node-executor.html#package-krpc.client.services.MechJeb">[7]</a>, <a href="java/rcs-controller.html#package-krpc.client.services.MechJeb">[8]</a>, <a href="java/rendezvous-autopilot.html#package-krpc.client.services.MechJeb">[9]</a>, <a href="java/smart-ass.html#package-krpc.client.services.MechJeb">[10]</a>, <a href="java/smart-rcs.html#package-krpc.client.services.MechJeb">[11]</a>, <a href="java/staging-controller.html#package-krpc.client.services.MechJeb">[12]</a>, <a href="java/target-controller.html#package-krpc.client.services.MechJeb">[13]</a>, <a href="java/thrust-controller.html#package-krpc.client.services.MechJeb">[14]</a>, <a href="java/translatron.html#package-krpc.client.services.MechJeb">[15]</a>
 </li>
       <li><a href="cpp/mechjeb.html#_CPPv4N4krpc8services7MechJebE">krpc::services::MechJeb (C++ class)</a>
 </li>
@@ -1372,6 +1391,18 @@
       <li><a href="cpp/smart-ass.html#_CPPv4N4krpc8services7MechJeb17AttitudeReference6targetE">krpc::services::MechJeb::AttitudeReference::target (C++ enumerator)</a>
 </li>
       <li><a href="cpp/smart-ass.html#_CPPv4N4krpc8services7MechJeb17AttitudeReference18target_orientationE">krpc::services::MechJeb::AttitudeReference::target_orientation (C++ enumerator)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableControllerE">krpc::services::MechJeb::DeployableController (C++ class)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableController13all_retractedEv">krpc::services::MechJeb::DeployableController::all_retracted (C++ function)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableController11auto_deployEv">krpc::services::MechJeb::DeployableController::auto_deploy (C++ function)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableController10extend_allEv">krpc::services::MechJeb::DeployableController::extend_all (C++ function)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableController11retract_allEv">krpc::services::MechJeb::DeployableController::retract_all (C++ function)</a>
+</li>
+      <li><a href="cpp/deployable-controller.html#_CPPv4N4krpc8services7MechJeb20DeployableController15set_auto_deployEb">krpc::services::MechJeb::DeployableController::set_auto_deploy (C++ function)</a>
 </li>
       <li><a href="cpp/thrust-controller.html#_CPPv4N4krpc8services7MechJeb26DifferentialThrottleStatusE">krpc::services::MechJeb::DifferentialThrottleStatus (C++ enum)</a>
 </li>
@@ -2506,6 +2537,18 @@
       <li><a href="cnano/smart-ass.html#c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGET">KRPC_MECHJEB_ATTITUDEREFERENCE_TARGET (C macro)</a>
 </li>
       <li><a href="cnano/smart-ass.html#c.KRPC_MECHJEB_ATTITUDEREFERENCE_TARGETORIENTATION">KRPC_MECHJEB_ATTITUDEREFERENCE_TARGETORIENTATION (C macro)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_AllRetracted">krpc_MechJeb_DeployableController_AllRetracted (C function)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_AutoDeploy">krpc_MechJeb_DeployableController_AutoDeploy (C function)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_ExtendAll">krpc_MechJeb_DeployableController_ExtendAll (C function)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_RetractAll">krpc_MechJeb_DeployableController_RetractAll (C function)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_set_AutoDeploy">krpc_MechJeb_DeployableController_set_AutoDeploy (C function)</a>
+</li>
+      <li><a href="cnano/deployable-controller.html#c.krpc_MechJeb_DeployableController_t">krpc_MechJeb_DeployableController_t (C type)</a>
 </li>
       <li><a href="cnano/thrust-controller.html#c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF (C macro)</a>
 </li>
@@ -3779,10 +3822,10 @@
 </li>
       <li><a href="lua/target-controller.html#MechJeb.TargetController.relative_position">relative_position (TargetController attribute)</a>, <a href="python/target-controller.html#MechJeb.TargetController.relative_position">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="java/smart-ass.html#krpc.client.services.MechJeb.AttitudeReference.RELATIVE_VELOCITY">RELATIVE_VELOCITY (Java field)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lua/target-controller.html#MechJeb.TargetController.relative_velocity">relative_velocity (TargetController attribute)</a>, <a href="python/target-controller.html#MechJeb.TargetController.relative_velocity">[1]</a>
 </li>
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentLaunchMode.RENDEZVOUS">RENDEZVOUS (Java field)</a>
@@ -3798,6 +3841,10 @@
       <li><a href="lua/maneuver-planner.html#MechJeb.OperationResonantOrbit.resonance_denominator">resonance_denominator (OperationResonantOrbit attribute)</a>, <a href="python/maneuver-planner.html#MechJeb.OperationResonantOrbit.resonance_denominator">[1]</a>
 </li>
       <li><a href="lua/maneuver-planner.html#MechJeb.OperationResonantOrbit.resonance_numerator">resonance_numerator (OperationResonantOrbit attribute)</a>, <a href="python/maneuver-planner.html#MechJeb.OperationResonantOrbit.resonance_numerator">[1]</a>
+</li>
+      <li><a href="lua/deployable-controller.html#MechJeb.DeployableController.retract_all">retract_all() (DeployableController method)</a>, <a href="python/deployable-controller.html#MechJeb.DeployableController.retract_all">[1]</a>
+</li>
+      <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController.retractAll()">retractAll() (Java method)</a>
 </li>
       <li><a href="java/smart-ass.html#krpc.client.services.MechJeb.SmartASSAutopilotMode.RETROGRADE">RETROGRADE (Java field)</a>
 </li>
@@ -3846,6 +3893,8 @@
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.setAoALimitFadeoutPressure(double)">setAoALimitFadeoutPressure(double) (Java method)</a>
 </li>
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.setAscentPathIndex(int)">setAscentPathIndex(int) (Java method)</a>
+</li>
+      <li><a href="java/deployable-controller.html#krpc.client.services.MechJeb.DeployableController.setAutoDeploy(boolean)">setAutoDeploy(boolean) (Java method)</a>
 </li>
       <li><a href="java/ascent-autopilot.html#krpc.client.services.MechJeb.AscentAutopilot.setAutoDeployAntennas(boolean)">setAutoDeployAntennas(boolean) (Java method)</a>
 </li>
@@ -4556,7 +4605,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2020, Genhis
+        &copy; Copyright 2018-2021, Genhis
 
     </p>
   </div>

@@ -1,0 +1,40 @@
+.. default-domain:: c
+.. highlight:: c
+
+
+DeployableController
+====================
+
+
+.. type:: krpc_MechJeb_DeployableController_t
+
+
+
+   .. function:: krpc_error_t krpc_MechJeb_DeployableController_AllRetracted(krpc_connection_t connection, bool * result)
+
+      Check if all deployable modules of this type are retracted.
+
+
+      :returns: True if all modules are retracted; False otherwise
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_DeployableController_AutoDeploy(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_DeployableController_set_AutoDeploy(bool value)
+
+      Automatically deploy modules of this type when controlled by a MechJeb autopilot
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_DeployableController_ExtendAll(krpc_connection_t connection)
+
+      Extend all deployable modules of this type.
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_DeployableController_RetractAll(krpc_connection_t connection)
+
+      Retract all deployable modules of this type.
+
+
+      :Game Scenes: Flight

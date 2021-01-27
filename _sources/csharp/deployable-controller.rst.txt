@@ -1,0 +1,39 @@
+.. default-domain:: csharp
+.. highlight:: csharp
+.. namespace:: KRPC.Client.Services.MechJeb
+
+DeployableController
+====================
+
+
+.. class:: DeployableController
+
+
+
+   .. method:: bool AllRetracted()
+
+      Check if all deployable modules of this type are retracted.
+
+
+      :returns: True if all modules are retracted; False otherwise
+      :Game Scenes: Flight
+
+   .. property:: bool AutoDeploy { get; set; }
+
+      Automatically deploy modules of this type when controlled by a MechJeb autopilot
+
+      :Game Scenes: Flight
+
+   .. method:: void ExtendAll()
+
+      Extend all deployable modules of this type.
+
+
+      :Game Scenes: Flight
+
+   .. method:: void RetractAll()
+
+      Retract all deployable modules of this type.
+
+
+      :Game Scenes: Flight

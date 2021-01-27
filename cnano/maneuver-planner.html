@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.0 documentation</title>
+  <title>ManeuverPlanner &mdash; kRPC.MechJeb 0.6.1 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
             
           
@@ -121,6 +121,7 @@
 <p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
             
@@ -474,72 +475,86 @@ void <code class="descname">krpc_MechJeb_TimeSelector_set_TimeReference</code><s
 <dd><dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_ALTITUDE">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_ALTITUDE</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_ALTITUDE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the selected <a class="reference internal" href="#c.krpc_MechJeb_TimeSelector_CircularizeAltitude" title="krpc_MechJeb_TimeSelector_CircularizeAltitude"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_TimeSelector_CircularizeAltitude()</span></code></a>.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next apoapsis.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_CLOSESTAPPROACH">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_CLOSESTAPPROACH</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_CLOSESTAPPROACH" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the closest approach to the target.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_COMPUTED">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_COMPUTED</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_COMPUTED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the optimum time.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_EQASCENDING">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_EQASCENDING</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_EQASCENDING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial ascending node.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_EQDESCENDING">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_EQDESCENDING</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_EQDESCENDING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the equatorial descending node.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_EQHIGHESTAD">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_EQHIGHESTAD</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_EQHIGHESTAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_EQNEARESTAD">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_EQNEARESTAD</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_EQNEARESTAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the nearest equatorial AN/DN.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next periapsis.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_RELASCENDING">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_RELASCENDING</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_RELASCENDING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next ascending node with the target.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_RELDESCENDING">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_RELDESCENDING</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_RELDESCENDING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the next descending node with the target.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_RELHIGHESTAD">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_RELHIGHESTAD</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_RELHIGHESTAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the cheapest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_RELNEARESTAD">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_RELNEARESTAD</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_RELNEARESTAD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>At the nearest AN/DN with the target.</p>
+</dd></dl>
 
 <dl class="macro">
 <dt id="c.KRPC_MECHJEB_TIMEREFERENCE_XFROMNOW">
 <code class="descname">KRPC_MECHJEB_TIMEREFERENCE_XFROMNOW</code><a class="headerlink" href="#c.KRPC_MECHJEB_TIMEREFERENCE_XFROMNOW" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>After a fixed <a class="reference internal" href="#c.krpc_MechJeb_TimeSelector_LeadTime" title="krpc_MechJeb_TimeSelector_LeadTime"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_TimeSelector_LeadTime()</span></code></a>.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -551,7 +566,8 @@ void <code class="descname">krpc_MechJeb_TimeSelector_set_TimeReference</code><s
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationApoapsis_t">
 <code class="descname">krpc_MechJeb_OperationApoapsis_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationApoapsis_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new apoapsis</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationApoapsis_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationApoapsis_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationApoapsis_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -647,7 +663,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationApoapsis_TimeSelector<
 <dt id="c.krpc_MechJeb_OperationCircularize_t">
 <code class="descname">krpc_MechJeb_OperationCircularize_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationCircularize_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>This mode creates a manevuer to match your apoapsis to periapsis.
-To match apoapsis to periapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS</span></code></a>. Theese are the most efficient, but it can also create node at specific height or after specific time.</p>
+To match apoapsis to periapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS</span></code></a>; to match periapsis to apoapsis, set the time to <a class="reference internal" href="#c.KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS" title="KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS"><code class="xref c c-macro docutils literal notranslate"><span class="pre">KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS</span></code></a>. These are the most efficient, but it can also create node at specific height or after specific time.</p>
 <dl class="function">
 <dt id="c.krpc_MechJeb_OperationCircularize_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationCircularize_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationCircularize_ErrorMessage" title="Permalink to this definition">¶</a></dt>
@@ -725,7 +741,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationCircularize_TimeSelect
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationCourseCorrection_t">
 <code class="descname">krpc_MechJeb_OperationCourseCorrection_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationCourseCorrection_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to fine-tune closest approach to target</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationCourseCorrection_CourseCorrectFinalPeA">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationCourseCorrection_CourseCorrectFinalPeA</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationCourseCorrection_CourseCorrectFinalPeA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -825,7 +842,8 @@ MJServiceException - Internal service error.</p>
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationEllipticize_t">
 <code class="descname">krpc_MechJeb_OperationEllipticize_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationEllipticize_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to change both periapsis and apoapsis</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationEllipticize_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationEllipticize_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationEllipticize_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -938,7 +956,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationEllipticize_TimeSelect
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationInclination_t">
 <code class="descname">krpc_MechJeb_OperationInclination_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationInclination_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to change inclination</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationInclination_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationInclination_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationInclination_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1033,7 +1052,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationInclination_TimeSelect
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationInterplanetaryTransfer_t">
 <code class="descname">krpc_MechJeb_OperationInterplanetaryTransfer_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationInterplanetaryTransfer_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to transfer to another planet</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationInterplanetaryTransfer_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationInterplanetaryTransfer_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationInterplanetaryTransfer_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1115,7 +1135,7 @@ void <code class="descname">krpc_MechJeb_OperationInterplanetaryTransfer_set_Wai
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationKillRelVel_t">
 <code class="descname">krpc_MechJeb_OperationKillRelVel_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationKillRelVel_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kill relative velocity to a given target.</p>
+<dd><p>Match velocities with target</p>
 <dl class="function">
 <dt id="c.krpc_MechJeb_OperationKillRelVel_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationKillRelVel_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationKillRelVel_ErrorMessage" title="Permalink to this definition">¶</a></dt>
@@ -1193,7 +1213,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationKillRelVel_TimeSelecto
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationLambert_t">
 <code class="descname">krpc_MechJeb_OperationLambert_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationLambert_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set the chosen time</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationLambert_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationLambert_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationLambert_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1480,7 +1501,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationLongitude_TimeSelector
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationMoonReturn_t">
 <code class="descname">krpc_MechJeb_OperationMoonReturn_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationMoonReturn_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to return from a moon approximately at the specified altitude</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationMoonReturn_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationMoonReturn_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationMoonReturn_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1563,7 +1585,8 @@ void <code class="descname">krpc_MechJeb_OperationMoonReturn_set_MoonReturnAltit
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationPeriapsis_t">
 <code class="descname">krpc_MechJeb_OperationPeriapsis_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationPeriapsis_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new periapsis</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationPeriapsis_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationPeriapsis_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationPeriapsis_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1658,7 +1681,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationPeriapsis_TimeSelector
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationPlane_t">
 <code class="descname">krpc_MechJeb_OperationPlane_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationPlane_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to match planes with target</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationPlane_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationPlane_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationPlane_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -1850,7 +1874,8 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationResonantOrbit_TimeSele
 <dl class="type">
 <dt id="c.krpc_MechJeb_OperationSemiMajor_t">
 <code class="descname">krpc_MechJeb_OperationSemiMajor_t</code><a class="headerlink" href="#c.krpc_MechJeb_OperationSemiMajor_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
+<dd><p>Create a maneuver to set a new semi-major axis</p>
+<dl class="function">
 <dt id="c.krpc_MechJeb_OperationSemiMajor_ErrorMessage">
 krpc_error_t <code class="descname">krpc_MechJeb_OperationSemiMajor_ErrorMessage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_OperationSemiMajor_ErrorMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>A warning may be stored there during MakeNode() call.</p>
@@ -2105,7 +2130,7 @@ krpc_error_t <code class="descname">krpc_MechJeb_OperationTransfer_TimeSelector<
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2020, Genhis
+        &copy; Copyright 2018-2021, Genhis
 
     </p>
   </div>

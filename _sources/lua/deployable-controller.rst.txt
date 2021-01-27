@@ -1,0 +1,33 @@
+.. default-domain:: lua
+.. highlight:: lua
+.. currentmodule:: MechJeb
+
+DeployableController
+====================
+
+
+.. class:: DeployableController
+
+
+
+   .. method:: all_retracted()
+
+      Check if all deployable modules of this type are retracted.
+
+      :returns: True if all modules are retracted; False otherwise
+      :rtype: boolean
+
+   .. attribute:: auto_deploy
+
+      Automatically deploy modules of this type when controlled by a MechJeb autopilot
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. method:: extend_all()
+
+      Extend all deployable modules of this type.
+
+   .. method:: retract_all()
+
+      Retract all deployable modules of this type.

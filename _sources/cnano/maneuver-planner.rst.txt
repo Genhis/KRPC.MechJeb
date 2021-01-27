@@ -152,72 +152,72 @@ TimeSelector
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_ALTITUDE
 
-
+      At the selected :func:`krpc_MechJeb_TimeSelector_CircularizeAltitude`.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS
 
-
+      At the next apoapsis.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_CLOSESTAPPROACH
 
-
+      At the closest approach to the target.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_COMPUTED
 
-
+      At the optimum time.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_EQASCENDING
 
-
+      At the equatorial ascending node.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_EQDESCENDING
 
-
+      At the equatorial descending node.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_EQHIGHESTAD
 
-
+      At the cheapest equatorial AN/DN.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_EQNEARESTAD
 
-
+      At the nearest equatorial AN/DN.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS
 
-
+      At the next periapsis.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_RELASCENDING
 
-
+      At the next ascending node with the target.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_RELDESCENDING
 
-
+      At the next descending node with the target.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_RELHIGHESTAD
 
-
+      At the cheapest AN/DN with the target.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_RELNEARESTAD
 
-
+      At the nearest AN/DN with the target.
 
 
    .. macro:: KRPC_MECHJEB_TIMEREFERENCE_XFROMNOW
 
-
+      After a fixed :func:`krpc_MechJeb_TimeSelector_LeadTime`.
 
 
 
@@ -230,7 +230,7 @@ OperationApoapsis
 
 .. type:: krpc_MechJeb_OperationApoapsis_t
 
-
+   Create a maneuver to set a new apoapsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationApoapsis_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -289,7 +289,7 @@ OperationCircularize
 .. type:: krpc_MechJeb_OperationCircularize_t
 
    This mode creates a manevuer to match your apoapsis to periapsis.
-   To match apoapsis to periapsis, set the time to :macro:`KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS`; to match periapsis to apoapsis, set the time to :macro:`KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS`. Theese are the most efficient, but it can also create node at specific height or after specific time.
+   To match apoapsis to periapsis, set the time to :macro:`KRPC_MECHJEB_TIMEREFERENCE_PERIAPSIS`; to match periapsis to apoapsis, set the time to :macro:`KRPC_MECHJEB_TIMEREFERENCE_APOAPSIS`. These are the most efficient, but it can also create node at specific height or after specific time.
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCircularize_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -340,7 +340,7 @@ OperationCourseCorrection
 
 .. type:: krpc_MechJeb_OperationCourseCorrection_t
 
-
+   Create a maneuver to fine-tune closest approach to target
 
    .. function:: krpc_error_t krpc_MechJeb_OperationCourseCorrection_CourseCorrectFinalPeA(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_OperationCourseCorrection_set_CourseCorrectFinalPeA(double value)
@@ -399,7 +399,7 @@ OperationEllipticize
 
 .. type:: krpc_MechJeb_OperationEllipticize_t
 
-
+   Create a maneuver to change both periapsis and apoapsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationEllipticize_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -464,7 +464,7 @@ OperationInclination
 
 .. type:: krpc_MechJeb_OperationInclination_t
 
-
+   Create a maneuver to change inclination
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInclination_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -522,7 +522,7 @@ OperationInterplanetaryTransfer
 
 .. type:: krpc_MechJeb_OperationInterplanetaryTransfer_t
 
-
+   Create a maneuver to transfer to another planet
 
    .. function:: krpc_error_t krpc_MechJeb_OperationInterplanetaryTransfer_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -574,7 +574,7 @@ OperationKillRelVel
 
 .. type:: krpc_MechJeb_OperationKillRelVel_t
 
-   Kill relative velocity to a given target.
+   Match velocities with target
 
    .. function:: krpc_error_t krpc_MechJeb_OperationKillRelVel_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -625,7 +625,7 @@ OperationLambert
 
 .. type:: krpc_MechJeb_OperationLambert_t
 
-
+   Create a maneuver to set the chosen time
 
    .. function:: krpc_error_t krpc_MechJeb_OperationLambert_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -799,7 +799,7 @@ OperationMoonReturn
 
 .. type:: krpc_MechJeb_OperationMoonReturn_t
 
-
+   Create a maneuver to return from a moon approximately at the specified altitude
 
    .. function:: krpc_error_t krpc_MechJeb_OperationMoonReturn_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -851,7 +851,7 @@ OperationPeriapsis
 
 .. type:: krpc_MechJeb_OperationPeriapsis_t
 
-
+   Create a maneuver to set a new periapsis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPeriapsis_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -909,7 +909,7 @@ OperationPlane
 
 .. type:: krpc_MechJeb_OperationPlane_t
 
-
+   Create a maneuver to match planes with target
 
    .. function:: krpc_error_t krpc_MechJeb_OperationPlane_ErrorMessage(krpc_connection_t connection, char * * result)
 
@@ -1026,7 +1026,7 @@ OperationSemiMajor
 
 .. type:: krpc_MechJeb_OperationSemiMajor_t
 
-
+   Create a maneuver to set a new semi-major axis
 
    .. function:: krpc_error_t krpc_MechJeb_OperationSemiMajor_ErrorMessage(krpc_connection_t connection, char * * result)
 

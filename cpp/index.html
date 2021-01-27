@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>C++ &mdash; kRPC.MechJeb 0.6.0 documentation</title>
+  <title>C++ &mdash; kRPC.MechJeb 0.6.1 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.6.0
+                0.6.1
               </div>
             
           
@@ -115,6 +115,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#controllers">Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployable-controller.html">DeployableController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="node-executor.html">NodeExecutor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="rcs-controller.html">RCSController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="staging-controller.html">StagingController</a></li>
@@ -131,6 +132,7 @@
 <p class="caption"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
             
@@ -197,7 +199,7 @@
             
   <div class="section" id="c">
 <h1>C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
-<p>All object instances (modules, windows, controllers and operations) are permanent until you reset KSP, so you can cache them and reuse them for multiple flights. This may be useful if your program switches between vessels during flight. When you enter the flight scene or switch between vessels, it is recommended to <strong>check whether the API is ready</strong> before you call other operations. Otherwise, the API may throw an exception.</p>
+<p>All object instances (autopilots, windows, controllers and operations) are permanent until you reset KSP, so you can cache them and reuse them for multiple flights. This may be useful if your program switches between vessels during flight. When you enter the flight scene or switch between vessels, it is recommended to <strong>check whether the API is ready</strong> before you call other operations. Otherwise, the API may throw an exception.</p>
 <p><strong>Note:</strong> Credit goes to <a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki/">MechJeb2 wiki</a> for most of the method description.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -258,6 +260,7 @@
 <h2>Controllers<a class="headerlink" href="#controllers" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="deployable-controller.html">DeployableController</a></li>
 <li class="toctree-l1"><a class="reference internal" href="node-executor.html">NodeExecutor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rcs-controller.html">RCSController</a></li>
 <li class="toctree-l1"><a class="reference internal" href="staging-controller.html">StagingController</a></li>
@@ -288,7 +291,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2020, Genhis
+        &copy; Copyright 2018-2021, Genhis
 
     </p>
   </div>

@@ -1,0 +1,39 @@
+.. default-domain:: py
+.. highlight:: py
+.. currentmodule:: MechJeb
+
+DeployableController
+====================
+
+
+.. class:: DeployableController
+
+
+
+   .. method:: all_retracted()
+
+      Check if all deployable modules of this type are retracted.
+
+      :returns: True if all modules are retracted; False otherwise
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: auto_deploy
+
+      Automatically deploy modules of this type when controlled by a MechJeb autopilot
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. method:: extend_all()
+
+      Extend all deployable modules of this type.
+
+      :Game Scenes: Flight
+
+   .. method:: retract_all()
+
+      Retract all deployable modules of this type.
+
+      :Game Scenes: Flight

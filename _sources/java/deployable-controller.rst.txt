@@ -1,0 +1,38 @@
+.. default-domain:: java
+.. highlight:: java
+.. package:: krpc.client.services.MechJeb
+
+DeployableController
+====================
+
+
+.. type:: public class DeployableController
+
+
+
+   .. method:: boolean allRetracted()
+
+      Check if all deployable modules of this type are retracted.
+
+      :returns: True if all modules are retracted; False otherwise
+      :Game Scenes: Flight
+
+   .. method:: boolean getAutoDeploy()
+
+   .. method:: void setAutoDeploy(boolean value)
+
+      Automatically deploy modules of this type when controlled by a MechJeb autopilot
+
+      :Game Scenes: Flight
+
+   .. method:: void extendAll()
+
+      Extend all deployable modules of this type.
+
+      :Game Scenes: Flight
+
+   .. method:: void retractAll()
+
+      Retract all deployable modules of this type.
+
+      :Game Scenes: Flight

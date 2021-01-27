@@ -168,72 +168,72 @@ TimeSelector
 
    .. data:: altitude
 
-
+      At the selected :attr:`MechJeb.TimeSelector.circularize_altitude`.
 
 
    .. data:: apoapsis
 
-
+      At the next apoapsis.
 
 
    .. data:: closest_approach
 
-
+      At the closest approach to the target.
 
 
    .. data:: computed
 
-
+      At the optimum time.
 
 
    .. data:: eq_ascending
 
-
+      At the equatorial ascending node.
 
 
    .. data:: eq_descending
 
-
+      At the equatorial descending node.
 
 
    .. data:: eq_highest_ad
 
-
+      At the cheapest equatorial AN/DN.
 
 
    .. data:: eq_nearest_ad
 
-
+      At the nearest equatorial AN/DN.
 
 
    .. data:: periapsis
 
-
+      At the next periapsis.
 
 
    .. data:: rel_ascending
 
-
+      At the next ascending node with the target.
 
 
    .. data:: rel_descending
 
-
+      At the next descending node with the target.
 
 
    .. data:: rel_highest_ad
 
-
+      At the cheapest AN/DN with the target.
 
 
    .. data:: rel_nearest_ad
 
-
+      At the nearest AN/DN with the target.
 
 
    .. data:: x_from_now
 
-
+      After a fixed :attr:`MechJeb.TimeSelector.lead_time`.
 
 
 
@@ -246,7 +246,7 @@ OperationApoapsis
 
 .. class:: OperationApoapsis
 
-
+   Create a maneuver to set a new apoapsis
 
    .. attribute:: error_message
 
@@ -304,7 +304,7 @@ OperationCircularize
 .. class:: OperationCircularize
 
    This mode creates a manevuer to match your apoapsis to periapsis.
-   To match apoapsis to periapsis, set the time to :attr:`MechJeb.TimeReference.periapsis`; to match periapsis to apoapsis, set the time to :attr:`MechJeb.TimeReference.apoapsis`. Theese are the most efficient, but it can also create node at specific height or after specific time.
+   To match apoapsis to periapsis, set the time to :attr:`MechJeb.TimeReference.periapsis`; to match periapsis to apoapsis, set the time to :attr:`MechJeb.TimeReference.apoapsis`. These are the most efficient, but it can also create node at specific height or after specific time.
 
    .. attribute:: error_message
 
@@ -354,7 +354,7 @@ OperationCourseCorrection
 
 .. class:: OperationCourseCorrection
 
-
+   Create a maneuver to fine-tune closest approach to target
 
    .. attribute:: course_correct_final_pe_a
 
@@ -411,7 +411,7 @@ OperationEllipticize
 
 .. class:: OperationEllipticize
 
-
+   Create a maneuver to change both periapsis and apoapsis
 
    .. attribute:: error_message
 
@@ -475,7 +475,7 @@ OperationInclination
 
 .. class:: OperationInclination
 
-
+   Create a maneuver to change inclination
 
    .. attribute:: error_message
 
@@ -532,7 +532,7 @@ OperationInterplanetaryTransfer
 
 .. class:: OperationInterplanetaryTransfer
 
-
+   Create a maneuver to transfer to another planet
 
    .. attribute:: error_message
 
@@ -582,7 +582,7 @@ OperationKillRelVel
 
 .. class:: OperationKillRelVel
 
-   Kill relative velocity to a given target.
+   Match velocities with target
 
    .. attribute:: error_message
 
@@ -632,7 +632,7 @@ OperationLambert
 
 .. class:: OperationLambert
 
-
+   Create a maneuver to set the chosen time
 
    .. attribute:: error_message
 
@@ -803,7 +803,7 @@ OperationMoonReturn
 
 .. class:: OperationMoonReturn
 
-
+   Create a maneuver to return from a moon approximately at the specified altitude
 
    .. attribute:: error_message
 
@@ -853,7 +853,7 @@ OperationPeriapsis
 
 .. class:: OperationPeriapsis
 
-
+   Create a maneuver to set a new periapsis
 
    .. attribute:: error_message
 
@@ -910,7 +910,7 @@ OperationPlane
 
 .. class:: OperationPlane
 
-
+   Create a maneuver to match planes with target
 
    .. attribute:: error_message
 
@@ -1025,7 +1025,7 @@ OperationSemiMajor
 
 .. class:: OperationSemiMajor
 
-
+   Create a maneuver to set a new semi-major axis
 
    .. attribute:: error_message
 

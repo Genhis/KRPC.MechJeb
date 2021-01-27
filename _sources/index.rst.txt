@@ -39,3 +39,4 @@ Are you tired of manually giving commands to your rockets? Do you want to automa
    :caption: External Resources
 
    kRPC Documentation <https://krpc.github.io/krpc/>
+   MechJeb2 Wiki <https://github.com/MuMech/MechJeb2/wiki>
