@@ -6,7 +6,7 @@ function BuildDefinitions() {
 
 function BuildClients() {
 	$extensions = @{
-		cnano = "c"
+		cnano = "h"
 		cpp = "hpp"
 		csharp = "cs"
 		java = "java"
