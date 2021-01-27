@@ -154,8 +154,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.SurfacePrograde" /> and <see cref="SmartASSAutopilotMode.SurfaceRetrograde" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceVelPitch {
-			get => EditableDouble.Get(srfPit, this.instance);
-			set => EditableDouble.Set(srfPit, this.instance, value);
+			get => EditableDouble.Get(srfVelPit, this.instance);
+			set => EditableDouble.Set(srfVelPit, this.instance, value);
 		}
 
 		/// <summary>
@@ -164,8 +164,8 @@ namespace KRPC.MechJeb {
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.SurfacePrograde" /> and <see cref="SmartASSAutopilotMode.SurfaceRetrograde" /> mode.</remarks>
 		[KRPCProperty]
 		public double SurfaceVelRoll {
-			get => EditableDouble.Get(srfRol, this.instance);
-			set => EditableDouble.Set(srfRol, this.instance, value);
+			get => EditableDouble.Get(srfVelRol, this.instance);
+			set => EditableDouble.Set(srfVelRol, this.instance, value);
 		}
 
 		/// <remarks>Works only in <see cref="SmartASSAutopilotMode.Advanced" /> mode.</remarks>
