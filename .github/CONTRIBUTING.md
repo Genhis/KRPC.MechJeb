@@ -19,8 +19,8 @@ If you encounter any problems with kRPC.MechJeb, please [open a new issue](https
 
 ## Working from source
 
-Besides general Visual Studio setup, you need to create lib folder in the root project directory and copy there four DLLs:
-- **Assembly-CSharp.dll** and **UnityEngine.dll** (found in `Kerbal Space Program\KSP_x64_Data\Managed`)
+Besides general Visual Studio setup, you need to create lib folder in the root project directory and copy these DLLs to the folder:
+- **Assembly-CSharp.dll**, **UnityEngine.dll** and **UnityEngine.CoreModule.dll** (found in `Kerbal Space Program\KSP_x64_Data\Managed`)
 - **KRPC.dll** and **KRPC.SpaceCenter.dll** (found in kRPC distribution package or `Kerbal Space Program\GameData\kRPC` if you have the mod installed)
 
 ## Creating pull requests

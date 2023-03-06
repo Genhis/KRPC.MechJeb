@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("kRPC.MechJeb")]
-[assembly: AssemblyCopyright("© 2018-2021 Genhis")]
+[assembly: AssemblyCopyright("© 2018-2023 Genhis")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
