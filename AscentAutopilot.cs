@@ -405,21 +405,13 @@ namespace KRPC.MechJeb {
 
 		// Fields and methods
 		private static MethodInfo timeToPhaseAngle;
-		private static MethodInfo timeToPlane;
 
 		internal static void InitType(Type type) {
 			timeToPhaseAngle = type.GetCheckedMethod("TimeToPhaseAngle");
-			timeToPlane = type.GetCheckedMethod("TimeToPlane");
 		}
 
 		public static double TimeToPhaseAngle(double launchPhaseAngle) {
 			return (double)timeToPhaseAngle.Invoke(null, new object[] { launchPhaseAngle, FlightGlobals.ActiveVessel.mainBody, GetLongtitude(), MechJeb.TargetController.TargetOrbit.InternalOrbit });
-		}
-
-		public static double TimeToPlane(double launchLANDifference) {
-			Vessel vessel = FlightGlobals.ActiveVessel;
-			CelestialBody body = vessel.mainBody;
-			return (double)timeToPlane.Invoke(null, new object[] { launchLANDifference, body, body.GetLatitude(vessel.CoMD), GetLongtitude(), MechJeb.TargetController.TargetOrbit.InternalOrbit });
 		}
 
 		private static double GetLongtitude() {

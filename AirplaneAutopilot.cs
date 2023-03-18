@@ -12,7 +12,6 @@ namespace KRPC.MechJeb {
 
 		// Fields and methods
 		private static FieldInfo headingHoldEnabled;
-
 		private static FieldInfo altitudeHoldEnabled;
 		private static FieldInfo vertSpeedHoldEnabled;
 		private static FieldInfo rollHoldEnabled;
@@ -23,16 +22,15 @@ namespace KRPC.MechJeb {
 		private static FieldInfo rollTarget;
 		private static FieldInfo speedTarget;
 		private static FieldInfo vertSpeedTarget;
-		private static FieldInfo vertSpeedMax;
-		private static FieldInfo rollMax;
+		private static FieldInfo bankAngle;
 
 		private static FieldInfo accKpField;
 		private static FieldInfo accKiField;
 		private static FieldInfo accKdField;
 
-		private static FieldInfo verKpField;
-		private static FieldInfo verKiField;
-		private static FieldInfo verKdField;
+		private static FieldInfo pitKpField;
+		private static FieldInfo pitKiField;
+		private static FieldInfo pitKdField;
 
 		private static FieldInfo rolKpField;
 		private static FieldInfo rolKiField;
@@ -43,16 +41,18 @@ namespace KRPC.MechJeb {
 		private static FieldInfo yawKdField;
 
 		private static FieldInfo yawLimitField;
+		private static FieldInfo rollLimitField;
+		private static FieldInfo pitchUpLimitField;
+		private static FieldInfo pitchDownLimitField;
 
 		// Instance objects
 		private object accKp;
-
 		private object accKi;
 		private object accKd;
 
-		private object verKp;
-		private object verKi;
-		private object verKd;
+		private object pitKp;
+		private object pitKi;
+		private object pitKd;
 
 		private object rolKp;
 		private object rolKi;
@@ -63,6 +63,9 @@ namespace KRPC.MechJeb {
 		private object yawKd;
 
 		private object yawLimit;
+		private object rollLimit;
+		private object pitchUpLimit;
+		private object pitchDownLimit;
 
 		internal static new void InitType(Type type) {
 			headingHoldEnabled = type.GetCheckedField("HeadingHoldEnabled");
@@ -76,16 +79,15 @@ namespace KRPC.MechJeb {
 			rollTarget = type.GetCheckedField("RollTarget");
 			speedTarget = type.GetCheckedField("SpeedTarget");
 			vertSpeedTarget = type.GetCheckedField("VertSpeedTarget");
-			vertSpeedMax = type.GetCheckedField("VertSpeedMax");
-			rollMax = type.GetCheckedField("RollMax");
+			bankAngle = type.GetCheckedField("BankAngle");
 
 			accKpField = type.GetCheckedField("AccKp");
 			accKiField = type.GetCheckedField("AccKi");
 			accKdField = type.GetCheckedField("AccKd");
 
-			verKpField = type.GetCheckedField("VerKp");
-			verKiField = type.GetCheckedField("VerKi");
-			verKdField = type.GetCheckedField("VerKd");
+			pitKpField = type.GetCheckedField("PitKp");
+			pitKiField = type.GetCheckedField("PitKi");
+			pitKdField = type.GetCheckedField("PitKd");
 
 			rolKpField = type.GetCheckedField("RolKp");
 			rolKiField = type.GetCheckedField("RolKi");
@@ -96,6 +98,9 @@ namespace KRPC.MechJeb {
 			yawKdField = type.GetCheckedField("YawKd");
 
 			yawLimitField = type.GetCheckedField("YawLimit");
+			rollLimitField = type.GetCheckedField("RollLimit");
+			pitchUpLimitField = type.GetCheckedField("PitchUpLimit");
+			pitchDownLimitField = type.GetCheckedField("PitchDownLimit");
 		}
 
 		protected internal override void InitInstance(object instance) {
@@ -104,9 +109,9 @@ namespace KRPC.MechJeb {
 			this.accKi = accKiField.GetInstanceValue(instance);
 			this.accKd = accKdField.GetInstanceValue(instance);
 
-			this.verKp = verKpField.GetInstanceValue(instance);
-			this.verKi = verKiField.GetInstanceValue(instance);
-			this.verKd = verKdField.GetInstanceValue(instance);
+			this.pitKp = pitKpField.GetInstanceValue(instance);
+			this.pitKi = pitKiField.GetInstanceValue(instance);
+			this.pitKd = pitKdField.GetInstanceValue(instance);
 
 			this.rolKp = rolKpField.GetInstanceValue(instance);
 			this.rolKi = rolKiField.GetInstanceValue(instance);
@@ -117,6 +122,9 @@ namespace KRPC.MechJeb {
 			this.yawKd = yawKdField.GetInstanceValue(instance);
 
 			this.yawLimit = yawLimitField.GetInstanceValue(instance);
+			this.rollLimit = rollLimitField.GetInstanceValue(instance);
+			this.pitchUpLimit = pitchUpLimitField.GetInstanceValue(instance);
+			this.pitchDownLimit = pitchDownLimitField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
@@ -180,15 +188,9 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
-		public double VertSpeedMax {
-			get => (double)vertSpeedMax.GetValue(this.instance);
-			set => vertSpeedMax.SetValue(this.instance, value);
-		}
-
-		[KRPCProperty]
-		public double RollMax {
-			get => (double)rollMax.GetValue(this.instance);
-			set => rollMax.SetValue(this.instance, value);
+		public double BankAngle {
+			get => (double)bankAngle.GetValue(this.instance);
+			set => bankAngle.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]
@@ -210,21 +212,21 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
-		public double VerKp {
-			get => EditableDouble.Get(this.verKp);
-			set => EditableDouble.Set(this.verKp, value);
+		public double PitKp {
+			get => EditableDouble.Get(this.pitKp);
+			set => EditableDouble.Set(this.pitKp, value);
 		}
 
 		[KRPCProperty]
-		public double VerKi {
-			get => EditableDouble.Get(this.verKi);
-			set => EditableDouble.Set(this.verKi, value);
+		public double PitKi {
+			get => EditableDouble.Get(this.pitKi);
+			set => EditableDouble.Set(this.pitKi, value);
 		}
 
 		[KRPCProperty]
-		public double VerKd {
-			get => EditableDouble.Get(this.verKd);
-			set => EditableDouble.Set(this.verKd, value);
+		public double PitKd {
+			get => EditableDouble.Get(this.pitKd);
+			set => EditableDouble.Set(this.pitKd, value);
 		}
 
 		[KRPCProperty]
@@ -267,6 +269,24 @@ namespace KRPC.MechJeb {
 		public double YawLimit {
 			get => EditableDouble.Get(this.yawLimit);
 			set => EditableDouble.Set(this.yawLimit, value);
+		}
+
+		[KRPCProperty]
+		public double RollLimit {
+			get => EditableDouble.Get(this.rollLimit);
+			set => EditableDouble.Set(this.rollLimit, value);
+		}
+
+		[KRPCProperty]
+		public double PitchUpLimit {
+			get => EditableDouble.Get(this.pitchUpLimit);
+			set => EditableDouble.Set(this.pitchUpLimit, value);
+		}
+
+		[KRPCProperty]
+		public double PitchDownLimit {
+			get => EditableDouble.Get(this.pitchDownLimit);
+			set => EditableDouble.Set(this.pitchDownLimit, value);
 		}
 	}
 }

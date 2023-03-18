@@ -20,28 +20,30 @@ MechJeb.Translatron
 MechJeb.AirplaneAutopilot.Enabled
 MechJeb.AirplaneAutopilot.AltitudeHoldEnabled
 MechJeb.AirplaneAutopilot.AltitudeTarget
+MechJeb.AirplaneAutopilot.BankAngle
 MechJeb.AirplaneAutopilot.HeadingHoldEnabled
 MechJeb.AirplaneAutopilot.HeadingTarget
 MechJeb.AirplaneAutopilot.RollHoldEnabled
-MechJeb.AirplaneAutopilot.RollMax
 MechJeb.AirplaneAutopilot.RollTarget
 MechJeb.AirplaneAutopilot.SpeedHoldEnabled
 MechJeb.AirplaneAutopilot.SpeedTarget
 MechJeb.AirplaneAutopilot.VertSpeedHoldEnabled
-MechJeb.AirplaneAutopilot.VertSpeedMax
 MechJeb.AirplaneAutopilot.VertSpeedTarget
 MechJeb.AirplaneAutopilot.AccKd
 MechJeb.AirplaneAutopilot.AccKi
 MechJeb.AirplaneAutopilot.AccKp
+MechJeb.AirplaneAutopilot.PitKd
+MechJeb.AirplaneAutopilot.PitKi
+MechJeb.AirplaneAutopilot.PitKp
 MechJeb.AirplaneAutopilot.RolKd
 MechJeb.AirplaneAutopilot.RolKi
 MechJeb.AirplaneAutopilot.RolKp
-MechJeb.AirplaneAutopilot.VerKd
-MechJeb.AirplaneAutopilot.VerKi
-MechJeb.AirplaneAutopilot.VerKp
 MechJeb.AirplaneAutopilot.YawKd
 MechJeb.AirplaneAutopilot.YawKi
 MechJeb.AirplaneAutopilot.YawKp
+MechJeb.AirplaneAutopilot.PitchDownLimit
+MechJeb.AirplaneAutopilot.PitchUpLimit
+MechJeb.AirplaneAutopilot.RollLimit
 MechJeb.AirplaneAutopilot.YawLimit
 
 MechJeb.AscentAutopilot.Enabled
@@ -97,10 +99,16 @@ MechJeb.AscentLaunchMode.Rendezvous
 MechJeb.AscentLaunchMode.TargetPlane
 MechJeb.AscentLaunchMode.Unknown
 
+MechJeb.AscentPVG.AttachAltFlag
 MechJeb.AscentPVG.DesiredApoapsis
-MechJeb.AscentPVG.PitchStartVelocity
+MechJeb.AscentPVG.DesiredAttachAlt
+MechJeb.AscentPVG.DynamicPressureTrigger
+MechJeb.AscentPVG.FixedCoast
+MechJeb.AscentPVG.FixedCoastLength
 MechJeb.AscentPVG.PitchRate
-MechJeb.AscentPVG.OmitCoast
+MechJeb.AscentPVG.PitchStartVelocity
+MechJeb.AscentPVG.StagingTrigger
+MechJeb.AscentPVG.StagingTriggerFlag
 
 MechJeb.AttitudeReference.Inertial
 MechJeb.AttitudeReference.Orbit
