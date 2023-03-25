@@ -16,18 +16,34 @@ namespace KRPC.MechJeb {
 		private static FieldInfo pitchStartVelocityField;
 		private static FieldInfo pitchRateField;
 		private static FieldInfo desiredApoapsisField;
-		private static FieldInfo omitCoast;
+		private static FieldInfo attachAltFlag;
+		private static FieldInfo desiredAttachAltField;
+		private static FieldInfo dynamicPressureTriggerField;
+		private static FieldInfo stagingTriggerField;
+		private static FieldInfo stagingTriggerFlag;
+		private static FieldInfo fixedCoast;
+		private static FieldInfo fixedCoastLengthField;
 
 		// Instance objects
 		private object pitchStartVelocity;
 		private object pitchRate;
 		private object desiredApoapsis;
+		private object desiredAttachAlt;
+		private object dynamicPressureTrigger;
+		private object stagingTrigger;
+		private object fixedCoastLength;
 
 		internal static new void InitType(Type type) {
-			pitchStartVelocityField = type.GetCheckedField("pitchStartVelocity");
-			pitchRateField = type.GetCheckedField("pitchRate");
-			desiredApoapsisField = type.GetCheckedField("desiredApoapsis");
-			omitCoast = type.GetCheckedField("omitCoast");
+			pitchStartVelocityField = type.GetCheckedField("PitchStartVelocity");
+			pitchRateField = type.GetCheckedField("PitchRate");
+			desiredApoapsisField = type.GetCheckedField("DesiredApoapsis");
+			attachAltFlag = type.GetCheckedField("AttachAltFlag");
+			desiredAttachAltField = type.GetCheckedField("DesiredAttachAlt");
+			dynamicPressureTriggerField = type.GetCheckedField("DynamicPressureTrigger");
+			stagingTriggerField = type.GetCheckedField("StagingTrigger");
+			stagingTriggerFlag = type.GetCheckedField("StagingTriggerFlag");
+			fixedCoast = type.GetCheckedField("FixedCoast");
+			fixedCoastLengthField = type.GetCheckedField("FixedCoastLength");
 		}
 
 		protected internal override void InitInstance(object instance) {
@@ -36,6 +52,10 @@ namespace KRPC.MechJeb {
 			this.pitchStartVelocity = pitchStartVelocityField.GetInstanceValue(instance);
 			this.pitchRate = pitchRateField.GetInstanceValue(instance);
 			this.desiredApoapsis = desiredApoapsisField.GetInstanceValue(instance);
+			this.desiredAttachAlt = desiredAttachAltField.GetInstanceValue(instance);
+			this.dynamicPressureTrigger = dynamicPressureTriggerField.GetInstanceValue(instance);
+			this.stagingTrigger = stagingTriggerField.GetInstanceValue(instance);
+			this.fixedCoastLength = fixedCoastLengthField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]
@@ -60,9 +80,45 @@ namespace KRPC.MechJeb {
 		}
 
 		[KRPCProperty]
-		public bool OmitCoast {
-			get => (bool)omitCoast.GetValue(this.instance);
-			set => omitCoast.SetValue(this.instance, value);
+		public bool AttachAltFlag {
+			get => (bool)attachAltFlag.GetValue(this.instance);
+			set => attachAltFlag.SetValue(this.instance, value);
+		}
+
+		[KRPCProperty]
+		public double DesiredAttachAlt {
+			get => EditableDouble.Get(this.desiredAttachAlt);
+			set => EditableDouble.Set(this.desiredAttachAlt, value);
+		}
+
+		[KRPCProperty]
+		public double DynamicPressureTrigger {
+			get => EditableDouble.Get(this.dynamicPressureTrigger);
+			set => EditableDouble.Set(this.dynamicPressureTrigger, value);
+		}
+
+		[KRPCProperty]
+		public int StagingTrigger {
+			get => EditableInt.Get(this.stagingTrigger);
+			set => EditableInt.Set(this.stagingTrigger, value);
+		}
+
+		[KRPCProperty]
+		public bool StagingTriggerFlag {
+			get => (bool)stagingTriggerFlag.GetValue(this.instance);
+			set => stagingTriggerFlag.SetValue(this.instance, value);
+		}
+
+		[KRPCProperty]
+		public bool FixedCoast {
+			get => (bool)fixedCoast.GetValue(this.instance);
+			set => fixedCoast.SetValue(this.instance, value);
+		}
+
+		[KRPCProperty]
+		public double FixedCoastLength {
+			get => EditableDouble.Get(this.fixedCoastLength);
+			set => EditableDouble.Set(this.fixedCoastLength, value);
 		}
 	}
 }
