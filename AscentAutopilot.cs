@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 
 using KRPC.MechJeb.ExtensionMethods;
+using KRPC.MechJeb.Util;
 using KRPC.Service.Attributes;
 
 namespace KRPC.MechJeb {
@@ -354,14 +355,29 @@ namespace KRPC.MechJeb {
 			timedLaunch.SetValue(this.instance, false);
 		}
 
+		private void StartCountdown(double timeOffset) {
+			startCountdown.Invoke(this.instance, new object[] { MechJeb.vesselState.Time + timeOffset });
+		}
+
 		/// <summary>
 		/// Launch to rendezvous with the selected target.
 		/// </summary>
 		[KRPCMethod]
 		public void LaunchToRendezvous() {
+			if(!MechJeb.TargetController.NormalTargetExists)
+				throw new InvalidOperationException("Invalid target");
+			if(this.AscentPathIndex == 2)
+				throw new InvalidOperationException("This action can't be performed in PVG path mode");
+
 			this.AbortTimedLaunch();
-			AscentGuidance.launchingToRendezvous.SetValue(this.guiInstance, true);
-			startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchPhaseAngle) });
+			try {
+				AscentGuidance.launchingToRendezvous.SetValue(this.guiInstance, true);
+				this.StartCountdown(LaunchTiming.TimeToPhaseAngle(this.LaunchPhaseAngle));
+			}
+			catch(Exception) {
+				this.AbortTimedLaunch();
+				throw;
+			}
 		}
 
 		/// <summary>
@@ -369,9 +385,22 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCMethod]
 		public void LaunchToTargetPlane() {
+			if(!MechJeb.TargetController.NormalTargetExists)
+				throw new InvalidOperationException("Invalid target");
+
 			this.AbortTimedLaunch();
-			AscentGuidance.launchingToPlane.SetValue(this.guiInstance, true);
-			startCountdown.Invoke(this.instance, new object[] { Planetarium.GetUniversalTime() + LaunchTiming.TimeToPhaseAngle(this.LaunchLANDifference) });
+			try {
+				Orbit target = MechJeb.TargetController.InternalTargetOrbit;
+				AscentGuidance.launchingToPlane.SetValue(this.guiInstance, true);
+
+				Tuple<double, double> item = MathFunctions.MinimumTimeToPlane(target.LAN - this.LaunchLANDifference, target.inclination);
+				this.StartCountdown(item.Item1);
+				this.DesiredInclination = item.Item2;
+			}
+			catch(Exception) {
+				this.AbortTimedLaunch();
+				throw;
+			}
 		}
 
 		[KRPCEnum(Service = "MechJeb")]
@@ -399,28 +428,4 @@ namespace KRPC.MechJeb {
 	}
 
 	public abstract class AscentBase : ComputerModule { }
-
-	public static class LaunchTiming {
-		internal const string MechJebType = "MuMech.LaunchTiming";
-
-		// Fields and methods
-		private static MethodInfo timeToPhaseAngle;
-
-		internal static void InitType(Type type) {
-			timeToPhaseAngle = type.GetCheckedMethod("TimeToPhaseAngle");
-		}
-
-		public static double TimeToPhaseAngle(double launchPhaseAngle) {
-			return (double)timeToPhaseAngle.Invoke(null, new object[] { launchPhaseAngle, FlightGlobals.ActiveVessel.mainBody, GetLongtitude(), MechJeb.TargetController.TargetOrbit.InternalOrbit });
-		}
-
-		private static double GetLongtitude() {
-			Vessel vessel = FlightGlobals.ActiveVessel;
-			double longtitude = vessel.mainBody.GetLongitude(vessel.CoMD) % 360;
-			if(longtitude > 180)
-				longtitude -= 360;
-
-			return longtitude;
-		}
-	}
 }

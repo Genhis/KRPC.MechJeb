@@ -83,6 +83,7 @@
     <Compile Include="Maneuver\OperationTransfer.cs" />
     <Compile Include="Maneuver\TimeSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\MathFunctions.cs" />
     <Compile Include="Util\Vector6.cs" />
     <Compile Include="AirplaneAutopilot.cs" />
     <Compile Include="AscentAutopilot.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="TargetController.cs" />
     <Compile Include="ThrustController.cs" />
     <Compile Include="Translatron.cs" />
+    <Compile Include="VesselState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
@@ -115,6 +117,5 @@
     <None Include="CHANGELOG.md" />
     <None Include="README.md" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

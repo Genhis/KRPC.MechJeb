@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 ### Changed
 - Updated to support KSP 1.12 and kRPC 0.5
+### Fixed
+- `AscentAutopilot#LaunchToTargetPlane` used incorrect timing
 
 ## [0.6.1] - 2021-01-27
 ### Fixed

@@ -18,8 +18,10 @@ namespace KRPC.MechJeb {
 		internal static List<string> errors = new List<string>();
 
 		private static Type type;
+		private static FieldInfo vesselStateField;
 		private static MethodInfo getComputerModule;
 
+		internal static readonly VesselState vesselState = new VesselState();
 		private static readonly Dictionary<string, Module> modules = new Dictionary<string, Module>();
 
 		internal static bool InitTypes() {
@@ -70,6 +72,7 @@ namespace KRPC.MechJeb {
 
 		internal static void InitType(Type t) {
 			type = t;
+			vesselStateField = t.GetCheckedField("vesselState");
 			getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
 
 			// MechJeb found, create module instances
@@ -98,9 +101,11 @@ namespace KRPC.MechJeb {
 
 			APIReady = false;
 			try {
-				Instance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
-				if(Instance == null)
+				MasterInstance = FlightGlobals.ActiveVessel.GetMasterMechJeb();
+				if(MasterInstance == null)
 					return false;
+
+				vesselState.InitInstance(vesselStateField.GetInstanceValue(MasterInstance));
 
 				// Set module instances to MechJeb objects
 				foreach(KeyValuePair<string, Module> p in modules) {
@@ -137,14 +142,14 @@ namespace KRPC.MechJeb {
 		}
 
 		internal static object GetComputerModule(string moduleType) {
-			object module = getComputerModule.Invoke(Instance, new object[] { "MechJebModule" + moduleType });
+			object module = getComputerModule.Invoke(MasterInstance, new object[] { "MechJebModule" + moduleType });
 			if(module == null)
 				Logger.Severe("MechJeb module " + moduleType + " not found");
 
 			return module;
 		}
 
-		internal static PartModule Instance { get; private set; }
+		internal static PartModule MasterInstance { get; private set; }
 
 		public static bool TypesLoaded => type != null;
 

@@ -94,8 +94,10 @@ namespace KRPC.MechJeb {
 		[KRPCProperty]
 		public bool CanAlign => (bool)canAlign.GetValue(this.instance, null);
 
+		internal Orbit InternalTargetOrbit => (Orbit)targetOrbit.GetValue(this.instance, null);
+
 		[KRPCProperty]
-		public SpaceCenter.Services.Orbit TargetOrbit => new SpaceCenter.Services.Orbit((Orbit)targetOrbit.GetValue(this.instance, null));
+		public SpaceCenter.Services.Orbit TargetOrbit => new SpaceCenter.Services.Orbit(this.InternalTargetOrbit);
 
 		[KRPCProperty]
 		public Tuple3 Position => ((Vector3)position.GetValue(this.instance, null)).ToTuple();

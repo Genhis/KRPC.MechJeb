@@ -22,7 +22,7 @@ namespace KRPC.MechJeb {
 
 		public void FixedUpdate() {
 			// Needed to fix outdated MechJeb instance when focus changes or a flight is reverted to launch.
-			if(FlightGlobals.ActiveVessel != MechJeb.Instance.vessel) {
+			if(FlightGlobals.ActiveVessel != MechJeb.MasterInstance.vessel) {
 				Logger.Info("MechJeb instance changed, resetting cache...");
 				this.Start();
 			}

@@ -53,4 +53,19 @@ namespace KRPC.MechJeb {
 			text.SetValue(instance, value.ToString());
 		}
 	}
+
+	public static class MovingAverage {
+		internal const string MechJebType = "MuMech.MovingAverage";
+
+		// Fields and methods
+		private static PropertyInfo value;
+
+		internal static void InitType(Type type) {
+			value = type.GetCheckedProperty("value");
+		}
+
+		public static double Get(object instance) {
+			return (double)value.GetValue(instance, null);
+		}
+	}
 }
