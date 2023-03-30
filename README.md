@@ -2,7 +2,7 @@
 
 Are you tired of manually giving commands to your rockets? Do you want to automate tourist transportation? Do you know basics of programming but don't want to bother with calculating precise steering yourself? Do you like to use MechJeb for controlling your rockets but want more automation? If all of this is true, then this KSP mod is just for you!
 
-**This addon to [kRPC](https://krpc.github.io/krpc) provides remote procedures to interact with [MechJeb 2](https://github.com/MuMech/MechJeb2).** With [a simple script](https://genhis.github.io/KRPC.MechJeb/tutorials/launch-into-orbit.html), you can configure MechJeb autopilots and remotely control your rocket.
+**This addon to [kRPC] provides remote procedures to interact with [MechJeb 2].** With [a simple script](https://genhis.github.io/KRPC.MechJeb/tutorials/launch-into-orbit.html), you can configure MechJeb autopilots and remotely control your rocket.
 
 ## Installation
 
@@ -12,7 +12,7 @@ Are you tired of manually giving commands to your rockets? Do you want to automa
 4. If you are using Python, Lua or similar client libraries, you can start coding right away. For C-nano, C++, C# and Java, find the relevant file in the release archive and link it with your project.
 5. Happy coding!
 
-Although all examples have been tested using **kRPC v0.4.8** and **MechJeb v2.8.3.0**, I do support upcoming versions, so please create a new issue if something doesn't work for you.
+If you encounter any issues, please check if your [kRPC] and [MechJeb 2] versions are supported for your chosen [kRPC.MechJeb version](https://github.com/Genhis/KRPC.MechJeb/releases). Newer versions may contain breaking changes, so it may be necessary to downgrade them to the latest supported versions. A popup will notify you about potential issues when you start the game, listing functions/properties which are unavailable. If you don't see the popup, kRPC.MechJeb should work as expected.
 
 ## Getting started
 
@@ -45,3 +45,6 @@ See [Working from source](https://github.com/Genhis/KRPC.MechJeb/blob/master/.gi
 
 - **NodeEditor** (replacement in kRPC.SpaceCenter service)
 - **WarpHelper**
+
+[kRPC]: https://krpc.github.io/krpc
+[MechJeb 2]: https://github.com/MuMech/MechJeb2

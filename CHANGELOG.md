@@ -4,8 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `BankAngle`, `PitKp`, `PitKi`, `PitKd`, `RollLimit`, `PitchUpLimit`, `PitchDownLimit` to **AirplaneAutopilot**
+- `AttachAltFlag`, `DesiredAttachAlt`, `DynamicPressureTrigger`, `StagingTrigger`, `StagingTriggerFlag`, `FixedCoast`, `FixedCoastLength` to **AscentPVG**
 ### Changed
-- Updated to support KSP 1.12 and kRPC 0.5.2
+- Updated for KSP 1.12 and kRPC 0.5.2
+- Updated AscentAutopilot and AirplaneAutopilot for MechJeb 2.14.3.0 ([#15](https://github.com/Genhis/KRPC.MechJeb/issues/15), [#19](https://github.com/Genhis/KRPC.MechJeb/issues/19)) - some new fields may be missing
+### Removed
+- `VertSpeedMax`, `RollMax`, `VerKp`, `VerKi`, `VerKd` from **AirplaneAutopilot** (they were either renamed or removed from MechJeb2)
+- `OmitCoast` from **AscentPVG** (the autopilot was significantly reworked)
 ### Fixed
 - `AscentAutopilot#LaunchToTargetPlane` used incorrect timing
 - Initialization of a MechJeb module was interrupted when one of its fields didn't exist anymore ([#15](https://github.com/Genhis/KRPC.MechJeb/issues/15))
