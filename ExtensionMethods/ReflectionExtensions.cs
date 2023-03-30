@@ -51,7 +51,7 @@ namespace KRPC.MechJeb.ExtensionMethods {
 				MechJeb.errors.Add(error);
 			}
 			else
-				Logger.Info(type + "." + name + " found");
+				Logger.Debug(type + "." + name + " found");
 
 			return obj;
 		}

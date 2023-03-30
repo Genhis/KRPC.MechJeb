@@ -32,7 +32,7 @@ namespace KRPC.MechJeb {
 					FieldInfo mechjebTypeField = t.GetField("MechJebType", BindingFlags.NonPublic | BindingFlags.Static);
 					if(mechjebTypeField != null) {
 						string mechjebType = (string)mechjebTypeField.GetValue(null);
-						Logger.Info("Found class " + t.Name + " wanting to use " + mechjebType);
+						Logger.Debug("Found class " + t.Name + " wanting to use " + mechjebType);
 						mechjebTypes.Add(mechjebType, t);
 					}
 				}
@@ -41,7 +41,7 @@ namespace KRPC.MechJeb {
 				AssemblyLoader.loadedAssemblies.TypeOperation(mechjebType => {
 					if(mechjebTypes.TryGetValue(mechjebType.FullName, out Type internalType)) {
 						try {
-							Logger.Info("Loading class " + internalType.Name + " using " + mechjebType.FullName);
+							Logger.Debug("Loading class " + internalType.Name + " using " + mechjebType.FullName);
 							internalType.GetMethod("InitType", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { mechjebType });
 							mechjebTypes.Remove(mechjebType.FullName);
 						}
