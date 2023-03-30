@@ -14,21 +14,21 @@ AscentAutopilot
 
       See `MechJeb2 wiki <https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues>`_ for more guidance on how to optimally set up this autopilot.
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: status
+   .. attribute:: status: string
 
       The autopilot status; it depends on the selected ascent path.
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: ascent_path_index
+   .. attribute:: ascent_path_index: number
 
       The selected ascent path.
 
@@ -41,42 +41,42 @@ AscentAutopilot
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: ascent_path_classic
+   .. attribute:: ascent_path_classic: MechJeb.AscentClassic
 
       Get Classic Ascent Profile settings.
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.AscentClassic`
 
-   .. attribute:: ascent_path_gt
+   .. attribute:: ascent_path_gt: MechJeb.AscentGT
 
       Get Stock-style GravityTurn profile settings.
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.AscentGT`
 
-   .. attribute:: ascent_path_pvg
+   .. attribute:: ascent_path_pvg: MechJeb.AscentPVG
 
       Get Powered Explicit Guidance (RSS/RO) profile settings.
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.AscentPVG`
 
-   .. attribute:: desired_inclination
+   .. attribute:: desired_inclination: number
 
       The desired inclination in degrees for the final circular orbit.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: desired_orbit_altitude
+   .. attribute:: desired_orbit_altitude: number
 
       The desired altitude in kilometres for the final circular orbit.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: thrust_controller
+   .. attribute:: thrust_controller: MechJeb.ThrustController
 
 
 
@@ -87,63 +87,63 @@ AscentAutopilot
 
          Equivalent to :attr:`MechJeb.thrust_controller`.
 
-   .. attribute:: force_roll
+   .. attribute:: force_roll: boolean
 
       The state of force roll.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: turn_roll
+   .. attribute:: turn_roll: number
 
       The turn roll used by the autopilot.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: vertical_roll
+   .. attribute:: vertical_roll: number
 
       The vertical/climb roll used by the autopilot.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: limit_ao_a
+   .. attribute:: limit_ao_a: boolean
 
       Whether to limit angle of attack.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: max_ao_a
+   .. attribute:: max_ao_a: number
 
       The maximal angle of attack used by the autopilot.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: ao_a_limit_fadeout_pressure
+   .. attribute:: ao_a_limit_fadeout_pressure: number
 
       The pressure value when AoA limit is automatically deactivated.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: corrective_steering
+   .. attribute:: corrective_steering: boolean
 
       Will cause the craft to steer based on the more accurate velocity vector rather than positional vector (large craft may actually perform better with this box unchecked).
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: corrective_steering_gain
+   .. attribute:: corrective_steering_gain: number
 
       The gain of corrective steering used by the autopilot.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: autostage
+   .. attribute:: autostage: boolean
 
       The autopilot will automatically stage when the current stage has run out of fuel.
       Paramethers can be set in :class:`MechJeb.StagingController`.
@@ -151,7 +151,7 @@ AscentAutopilot
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: staging_controller
+   .. attribute:: staging_controller: MechJeb.StagingController
 
 
 
@@ -162,49 +162,49 @@ AscentAutopilot
 
          Equivalent to :attr:`MechJeb.staging_controller`.
 
-   .. attribute:: autodeploy_solar_panels
+   .. attribute:: autodeploy_solar_panels: boolean
 
       Whether to deploy solar panels automatically when the ascent finishes.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: auto_deploy_antennas
+   .. attribute:: auto_deploy_antennas: boolean
 
       Whether to deploy antennas automatically when the ascent finishes.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: skip_circularization
+   .. attribute:: skip_circularization: boolean
 
       Whether to skip circularization burn and do only the ascent.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: warp_count_down
+   .. attribute:: warp_count_down: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: launch_lan_difference
+   .. attribute:: launch_lan_difference: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: launch_phase_angle
+   .. attribute:: launch_phase_angle: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: launch_mode
+   .. attribute:: launch_mode: MechJeb.AscentLaunchMode
 
       Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.
 
@@ -259,77 +259,77 @@ AscentClassic
 
    The Classic Ascent Profile.
 
-   .. attribute:: auto_path
+   .. attribute:: auto_path: boolean
 
       Whether to enable automatic altitude turn.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: auto_turn_percent
+   .. attribute:: auto_turn_percent: number
 
       A value between 0 and 1.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: auto_turn_speed_factor
+   .. attribute:: auto_turn_speed_factor: number
 
       A value between 0 and 1.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: auto_turn_start_altitude
+   .. attribute:: auto_turn_start_altitude: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: auto_turn_start_velocity
+   .. attribute:: auto_turn_start_velocity: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: auto_turn_end_altitude
+   .. attribute:: auto_turn_end_altitude: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: turn_start_altitude
+   .. attribute:: turn_start_altitude: number
 
       The turn starts when this altitude is reached.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_start_velocity
+   .. attribute:: turn_start_velocity: number
 
       The turn starts when this velocity is reached.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_end_altitude
+   .. attribute:: turn_end_altitude: number
 
       The turn ends when this altitude is reached.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_end_angle
+   .. attribute:: turn_end_angle: number
 
       The final flight path angle.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_shape_exponent
+   .. attribute:: turn_shape_exponent: number
 
       A value between 0 - 1 describing how steep the turn is.
 
@@ -351,7 +351,7 @@ AscentGT
 
       It's not precisely the GT mod algorithm and it does not do any pitch-up during the intermediate burn right now, so it won't handle low TWR upper stages.
 
-   .. attribute:: hold_ap_time
+   .. attribute:: hold_ap_time: number
 
       At the intermediate altitude with this much time-to-apoapsis left the engine will start burning prograde to lift the apoapsis.
       The engine will throttle down in order to burn closer to the apoapsis.
@@ -360,28 +360,28 @@ AscentGT
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: intermediate_altitude
+   .. attribute:: intermediate_altitude: number
 
       Intermediate apoapsis altitude to coast to and then raise the apoapsis up to the eventual final target. May be set to equal the final target in order to skip the intermediate phase.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_start_altitude
+   .. attribute:: turn_start_altitude: number
 
       Altitude in km to pitch over and initiate the Gravity Turn (higher values for lower-TWR rockets).
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_start_pitch
+   .. attribute:: turn_start_pitch: number
 
       Pitch that the pitch program immediately applies.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: turn_start_velocity
+   .. attribute:: turn_start_velocity: number
 
       Velocity in m/s which triggers pitch over and initiates the Gravity Turn (higher values for lower-TWR rockets).
 
@@ -398,28 +398,70 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
-   .. attribute:: desired_apoapsis
+   .. attribute:: attach_alt_flag: boolean
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: desired_apoapsis: number
 
       The target apoapsis in meters.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: pitch_start_velocity
+   .. attribute:: desired_attach_alt: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: pitch_rate
+   .. attribute:: dynamic_pressure_trigger: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: omit_coast
+   .. attribute:: fixed_coast: boolean
+
+
+
+      :Attribute: Can be read or written
+      :rtype: boolean
+
+   .. attribute:: fixed_coast_length: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: pitch_rate: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: pitch_start_velocity: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: staging_trigger: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: staging_trigger_flag: boolean
 
 
 

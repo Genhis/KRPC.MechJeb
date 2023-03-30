@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>TargetController &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TargetController &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ThrustController" href="thrust-controller.html" />
     <link rel="prev" title="StagingController" href="staging-controller.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -116,347 +77,242 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Java</a> &raquo;</li>
-        
-      <li>TargetController</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Java</a></li>
+      <li class="breadcrumb-item active">TargetController</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/java/target-controller.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <span class="target" id="package-krpc.client.services.MechJeb"></span><div class="section" id="targetcontroller">
-<h1>TargetController<a class="headerlink" href="#targetcontroller" title="Permalink to this headline">¶</a></h1>
-<dl class="type">
-<dt id="krpc.client.services.MechJeb.TargetController">
-public class <code class="descname">TargetController</code><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getCanAlign()">
- boolean <code class="descname">getCanAlign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getCanAlign()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+             
+  <span class="target" id="package-krpc.client.services.MechJeb"></span><section id="targetcontroller">
+<h1>TargetController<a class="headerlink" href="#targetcontroller" title="Permalink to this heading"></a></h1>
+<dl class="java type">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController">
+<span class="pre">public</span> <span class="pre">class</span> <span class="sig-name descname"><span class="pre">TargetController</span></span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController" title="Permalink to this definition"></a></dt>
+<dd><dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getCanAlign()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getCanAlign</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getCanAlign()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getDistance()">
- float <code class="descname">getDistance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getDistance()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getDistance()">
+ <span class="pre">float</span> <span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getDistance()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getDockingAxis()">
- org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt; <code class="descname">getDockingAxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getDockingAxis()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getDockingAxis()">
+ <span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">getDockingAxis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getDockingAxis()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getPositionTargetPosition()">
- org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt; <code class="descname">getPositionTargetPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetPosition()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getPositionTargetPosition()">
+ <span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">getPositionTargetPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetPosition()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getPositionTargetString()">
- <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getPositionTargetString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetString()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getPositionTargetString()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String"><span class="pre">String</span></a> <span class="sig-name descname"><span class="pre">getPositionTargetString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetString()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getNormalTargetExists()">
- boolean <code class="descname">getNormalTargetExists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getNormalTargetExists()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getNormalTargetExists()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getNormalTargetExists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getNormalTargetExists()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.pickPositionTargetOnMap()">
- void <code class="descname">pickPositionTargetOnMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.pickPositionTargetOnMap()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.pickPositionTargetOnMap()">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">pickPositionTargetOnMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.pickPositionTargetOnMap()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getPosition()">
- org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt; <code class="descname">getPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPosition()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getPosition()">
+ <span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">getPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPosition()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getPositionTargetExists()">
- boolean <code class="descname">getPositionTargetExists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetExists()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getPositionTargetExists()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getPositionTargetExists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getPositionTargetExists()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getRelativePosition()">
- org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt; <code class="descname">getRelativePosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getRelativePosition()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getRelativePosition()">
+ <span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">getRelativePosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getRelativePosition()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getRelativeVelocity()">
- org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt; <code class="descname">getRelativeVelocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getRelativeVelocity()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getRelativeVelocity()">
+ <span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">getRelativeVelocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getRelativeVelocity()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.setDirectionTarget(String)">
- void <code class="descname">setDirectionTarget</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> name</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.setDirectionTarget(String)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>name</strong> (<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String"><em>String</em></a>) – </li>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.setDirectionTarget(String)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setDirectionTarget</span></span><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String"><span class="pre">String</span></a><em> <span class="pre">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.setDirectionTarget(String)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String"><code class="xref java java-type docutils literal notranslate"><span class="pre">String</span></code></a></span>) – </p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body"><p class="first last">Flight</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-even"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.setPositionTarget(SpaceCenter.CelestialBody, double, double)">
- void <code class="descname">setPositionTarget</code><span class="sig-paren">(</span>SpaceCenter.CelestialBody<em> body</em>, double<em> latitude</em>, double<em> longitude</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.setPositionTarget(SpaceCenter.CelestialBody, double, double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>body</strong> (<em>SpaceCenter.CelestialBody</em>) – </li>
-<li><strong>latitude</strong> (<em>double</em>) – </li>
-<li><strong>longitude</strong> (<em>double</em>) – </li>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.setPositionTarget(SpaceCenter.CelestialBody, double, double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPositionTarget</span></span><span class="sig-paren">(</span><span class="pre">SpaceCenter</span><span class="pre">.</span><span class="pre">CelestialBody</span><em> <span class="pre">body</span></em>, <span class="pre">double</span><em> <span class="pre">latitude</span></em>, <span class="pre">double</span><em> <span class="pre">longitude</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.setPositionTarget(SpaceCenter.CelestialBody, double, double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<span><code class="xref java java-type docutils literal notranslate"><span class="pre">SpaceCenter.CelestialBody</span></code></span>) – </p></li>
+<li><p><strong>latitude</strong> (<span><code class="xref java java-type docutils literal notranslate"><span class="pre">double</span></code></span>) – </p></li>
+<li><p><strong>longitude</strong> (<span><code class="xref java java-type docutils literal notranslate"><span class="pre">double</span></code></span>) – </p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body"><p class="first last">Flight</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-even"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.getTargetOrbit()">
- SpaceCenter.Orbit <code class="descname">getTargetOrbit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getTargetOrbit()" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.getTargetOrbit()">
+ <span class="pre">SpaceCenter</span><span class="pre">.</span><span class="pre">Orbit</span> <span class="sig-name descname"><span class="pre">getTargetOrbit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.getTargetOrbit()" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.TargetController.updateDirectionTarget(org.javatuples.Triplet)">
- void <code class="descname">updateDirectionTarget</code><span class="sig-paren">(</span>org.javatuples.<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet">Triplet</a>&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double">Double</a>&gt;<em> direction</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.updateDirectionTarget(org.javatuples.Triplet)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>direction</strong> (<a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet&lt;Double,Double,Double&gt;.html" title="org.javatuples.Triplet&lt;Double,Double,Double&gt;"><em>org.javatuples.Triplet&lt;Double,Double,Double&gt;</em></a>) – </li>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.TargetController.updateDirectionTarget(org.javatuples.Triplet)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">updateDirectionTarget</span></span><span class="sig-paren">(</span><span class="pre">org</span><span class="pre">.</span><span class="pre">javatuples</span><span class="pre">.</span><a class="reference external" href="http://www.javatuples.org/apidocs/org/javatuples/Triplet.html" title="org.javatuples.Triplet"><span class="pre">Triplet</span></a><span class="pre">&lt;</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">,</span> <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="java.lang.Double"><span class="pre">Double</span></a><span class="pre">&gt;</span><em> <span class="pre">direction</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.TargetController.updateDirectionTarget(org.javatuples.Triplet)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction</strong> (<span><code class="xref java java-type docutils literal notranslate"><span class="pre">org.javatuples.Triplet</span></code></span>) – </p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Game Scenes:</th><td class="field-body"><p class="first last">Flight</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-even"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="thrust-controller.html" class="btn btn-neutral float-right" title="ThrustController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="staging-controller.html" class="btn btn-neutral float-left" title="StagingController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="staging-controller.html" class="btn btn-neutral float-left" title="StagingController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="thrust-controller.html" class="btn btn-neutral float-right" title="ThrustController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

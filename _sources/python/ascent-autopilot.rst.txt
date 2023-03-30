@@ -73,7 +73,7 @@ AscentAutopilot
       The desired inclination in degrees for the final circular orbit.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: desired_orbit_altitude
@@ -81,7 +81,7 @@ AscentAutopilot
       The desired altitude in kilometres for the final circular orbit.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: thrust_controller
@@ -110,7 +110,7 @@ AscentAutopilot
       The turn roll used by the autopilot.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: vertical_roll
@@ -118,7 +118,7 @@ AscentAutopilot
       The vertical/climb roll used by the autopilot.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: limit_ao_a
@@ -134,7 +134,7 @@ AscentAutopilot
       The maximal angle of attack used by the autopilot.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: ao_a_limit_fadeout_pressure
@@ -142,7 +142,7 @@ AscentAutopilot
       The pressure value when AoA limit is automatically deactivated.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: corrective_steering
@@ -158,7 +158,7 @@ AscentAutopilot
       The gain of corrective steering used by the autopilot.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: autostage
@@ -220,7 +220,7 @@ AscentAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: launch_phase_angle
@@ -228,7 +228,7 @@ AscentAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: launch_mode
@@ -322,7 +322,7 @@ AscentClassic
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: auto_turn_start_velocity
@@ -330,7 +330,7 @@ AscentClassic
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: auto_turn_end_altitude
@@ -338,7 +338,7 @@ AscentClassic
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_start_altitude
@@ -346,7 +346,7 @@ AscentClassic
       The turn starts when this altitude is reached.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_start_velocity
@@ -354,7 +354,7 @@ AscentClassic
       The turn starts when this velocity is reached.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_end_altitude
@@ -362,7 +362,7 @@ AscentClassic
       The turn ends when this altitude is reached.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_end_angle
@@ -370,7 +370,7 @@ AscentClassic
       The final flight path angle.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_shape_exponent
@@ -378,7 +378,7 @@ AscentClassic
       A value between 0 - 1 describing how steep the turn is.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -403,7 +403,7 @@ AscentGT
       This is very similar to the lead-time of a maneuver node in concept, but with throttling down in the case where the player has initiated the burn too early (the corollary is that if you see lots of throttling down at the start, you likely need less HoldAP time).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: intermediate_altitude
@@ -411,7 +411,7 @@ AscentGT
       Intermediate apoapsis altitude to coast to and then raise the apoapsis up to the eventual final target. May be set to equal the final target in order to skip the intermediate phase.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_start_altitude
@@ -419,7 +419,7 @@ AscentGT
       Altitude in km to pitch over and initiate the Gravity Turn (higher values for lower-TWR rockets).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_start_pitch
@@ -427,7 +427,7 @@ AscentGT
       Pitch that the pitch program immediately applies.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: turn_start_velocity
@@ -435,7 +435,7 @@ AscentGT
       Velocity in m/s which triggers pitch over and initiates the Gravity Turn (higher values for lower-TWR rockets).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -448,20 +448,52 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
+   .. attribute:: attach_alt_flag
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
    .. attribute:: desired_apoapsis
 
       The target apoapsis in meters.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
-   .. attribute:: pitch_start_velocity
+   .. attribute:: desired_attach_alt
 
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: dynamic_pressure_trigger
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: fixed_coast
+
+
+
+      :Attribute: Can be read or written
+      :rtype: bool
+      :Game Scenes: Flight
+
+   .. attribute:: fixed_coast_length
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: pitch_rate
@@ -469,10 +501,26 @@ AscentPVG
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
-   .. attribute:: omit_coast
+   .. attribute:: pitch_start_velocity
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: staging_trigger
+
+
+
+      :Attribute: Can be read or written
+      :rtype: int
+      :Game Scenes: Flight
+
+   .. attribute:: staging_trigger_flag
 
 
 

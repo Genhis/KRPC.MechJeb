@@ -17,7 +17,7 @@ DeployableController
       :returns: True if all modules are retracted; False otherwise
       :rtype: boolean
 
-   .. attribute:: auto_deploy
+   .. attribute:: auto_deploy: boolean
 
       Automatically deploy modules of this type when controlled by a MechJeb autopilot
 

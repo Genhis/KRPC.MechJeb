@@ -367,13 +367,37 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
+   .. property:: bool AttachAltFlag { get; set; }
+
+
+
+      :Game Scenes: Flight
+
    .. property:: double DesiredApoapsis { get; set; }
 
       The target apoapsis in meters.
 
       :Game Scenes: Flight
 
-   .. property:: double PitchStartVelocity { get; set; }
+   .. property:: double DesiredAttachAlt { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double DynamicPressureTrigger { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: bool FixedCoast { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double FixedCoastLength { get; set; }
 
 
 
@@ -385,7 +409,19 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. property:: bool OmitCoast { get; set; }
+   .. property:: double PitchStartVelocity { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: int StagingTrigger { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: bool StagingTriggerFlag { get; set; }
 
 
 

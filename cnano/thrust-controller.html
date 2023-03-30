@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ThrustController &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThrustController &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="C#" href="../csharp/index.html" />
     <link rel="prev" title="TargetController" href="target-controller.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">C-nano</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
@@ -116,501 +77,387 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">C-nano</a> &raquo;</li>
-        
-      <li>ThrustController</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C-nano</a></li>
+      <li class="breadcrumb-item active">ThrustController</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/cnano/thrust-controller.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="thrustcontroller">
-<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this headline">¶</a></h1>
-<dl class="type">
-<dt id="c.krpc_MechJeb_ThrustController_t">
-<code class="descname">krpc_MechJeb_ThrustController_t</code><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_DifferentialThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_DifferentialThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_DifferentialThrottle" title="Permalink to this definition">¶</a></dt>
+             
+  <section id="thrustcontroller">
+<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this heading"></a></h1>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_DifferentialThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_DifferentialThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_DifferentialThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_DifferentialThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_DifferentialThrottle</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_DifferentialThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_DifferentialThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_DifferentialThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_DifferentialThrottle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_DifferentialThrottleStatus">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_DifferentialThrottleStatus</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t" title="krpc_MechJeb_DifferentialThrottleStatus_t">krpc_MechJeb_DifferentialThrottleStatus_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_DifferentialThrottleStatus" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_DifferentialThrottleStatus">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_DifferentialThrottleStatus</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t" title="krpc_MechJeb_DifferentialThrottleStatus_t"><span class="n"><span class="pre">krpc_MechJeb_DifferentialThrottleStatus_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_DifferentialThrottleStatus" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_ElectricThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_ElectricThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_ElectricThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_ElectricThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_ElectricThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_ElectricThrottle</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_ElectricThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_ElectricThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_ElectricThrottleHi">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_ElectricThrottleHi</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_ElectricThrottleHi" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottleHi">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_ElectricThrottleHi</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottleHi" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_ElectricThrottleHi">
-void <code class="descname">krpc_MechJeb_ThrustController_set_ElectricThrottleHi</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_ElectricThrottleHi" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottleHi">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_ElectricThrottleHi</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottleHi" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_ElectricThrottleLo">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_ElectricThrottleLo</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_ElectricThrottleLo" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottleLo">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_ElectricThrottleLo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ElectricThrottleLo" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_ElectricThrottleLo">
-void <code class="descname">krpc_MechJeb_ThrustController_set_ElectricThrottleLo</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_ElectricThrottleLo" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottleLo">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_ElectricThrottleLo</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ElectricThrottleLo" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_FlameoutSafetyPct">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_FlameoutSafetyPct</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_FlameoutSafetyPct" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_FlameoutSafetyPct">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_FlameoutSafetyPct</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_FlameoutSafetyPct" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_FlameoutSafetyPct">
-void <code class="descname">krpc_MechJeb_ThrustController_set_FlameoutSafetyPct</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_FlameoutSafetyPct" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_FlameoutSafetyPct">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_FlameoutSafetyPct</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_FlameoutSafetyPct" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The jet safety margin. A value between 0 and 1.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimitAcceleration">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitAcceleration</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimitAcceleration" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitAcceleration">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimitAcceleration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitAcceleration" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimitAcceleration">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimitAcceleration</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitAcceleration" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitAcceleration">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimitAcceleration</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitAcceleration" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimitDynamicPressure">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitDynamicPressure</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimitDynamicPressure" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitDynamicPressure">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimitDynamicPressure</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitDynamicPressure" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimitDynamicPressure">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimitDynamicPressure</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitDynamicPressure" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitDynamicPressure">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimitDynamicPressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitDynamicPressure" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimitThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimitThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimitThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimitThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimitThrottle</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimitThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitThrottle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimitToPreventFlameout">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitToPreventFlameout</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimitToPreventFlameout" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitToPreventFlameout">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimitToPreventFlameout</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitToPreventFlameout" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimitToPreventFlameout">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimitToPreventFlameout</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitToPreventFlameout" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitToPreventFlameout">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimitToPreventFlameout</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitToPreventFlameout" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimitToPreventOverheats">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimitToPreventOverheats</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimitToPreventOverheats" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitToPreventOverheats">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimitToPreventOverheats</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimitToPreventOverheats" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimitToPreventOverheats</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimitToPreventOverheats</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimitToPreventOverheats" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Limits the throttle to prevent parts from overheating.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_LimiterMinThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_LimiterMinThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_LimiterMinThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimiterMinThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_LimiterMinThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_LimiterMinThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_LimiterMinThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_LimiterMinThrottle</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_LimiterMinThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimiterMinThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_LimiterMinThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_LimiterMinThrottle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_ManageIntakes">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_ManageIntakes</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_ManageIntakes" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ManageIntakes">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_ManageIntakes</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ManageIntakes" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_ManageIntakes">
-void <code class="descname">krpc_MechJeb_ThrustController_set_ManageIntakes</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_ManageIntakes" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ManageIntakes">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_ManageIntakes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ManageIntakes" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_MaxAcceleration">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxAcceleration</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_MaxAcceleration" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxAcceleration">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_MaxAcceleration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxAcceleration" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_MaxAcceleration">
-void <code class="descname">krpc_MechJeb_ThrustController_set_MaxAcceleration</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxAcceleration" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxAcceleration">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_MaxAcceleration</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxAcceleration" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_MaxDynamicPressure">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxDynamicPressure</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_MaxDynamicPressure" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxDynamicPressure">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_MaxDynamicPressure</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxDynamicPressure" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_MaxDynamicPressure">
-void <code class="descname">krpc_MechJeb_ThrustController_set_MaxDynamicPressure</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxDynamicPressure" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxDynamicPressure">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_MaxDynamicPressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxDynamicPressure" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Limit the maximal dynamic pressure in Pa.
 This avoids that pieces break off during launch because of atmospheric pressure.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_MaxThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MaxThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_MaxThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_MaxThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MaxThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_MaxThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_MaxThrottle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MaxThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_MaxThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MaxThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Never exceed the percentage of the throttle during ascent (value between 0 and 1).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_MinThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_MinThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_MinThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MinThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_MinThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_MinThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_MinThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_MinThrottle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_MinThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MinThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_MinThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_MinThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Never go below the percentage of the throttle during ascent (value between 0 and 1).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_SmoothThrottle">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_SmoothThrottle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_SmoothThrottle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_SmoothThrottle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_SmoothThrottle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_SmoothThrottle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_SmoothThrottle">
-void <code class="descname">krpc_MechJeb_ThrustController_set_SmoothThrottle</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_SmoothThrottle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_SmoothThrottle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_SmoothThrottle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_SmoothThrottle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_ThrottleSmoothingTime">
-krpc_error_t <code class="descname">krpc_MechJeb_ThrustController_ThrottleSmoothingTime</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_ThrottleSmoothingTime" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ThrottleSmoothingTime">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_ThrottleSmoothingTime</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_ThrottleSmoothingTime" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime">
-void <code class="descname">krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_ThrustController_t.krpc_MechJeb_ThrustController_set_ThrottleSmoothingTime" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="c.krpc_MechJeb_DifferentialThrottleStatus_t">
-<code class="descname">krpc_MechJeb_DifferentialThrottleStatus_t</code><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="macro">
-<dt id="c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF">
-<code class="descname">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF" title="Permalink to this definition">¶</a></dt>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_DifferentialThrottleStatus_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_DifferentialThrottleStatus_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_ALLENGINESOFF" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED">
-<code class="descname">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_MOREENGINESREQUIRED" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED">
-<code class="descname">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SOLVERFAILED" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS">
-<code class="descname">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS</code><a class="headerlink" href="#c.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_DifferentialThrottleStatus_t.KRPC_MECHJEB_DIFFERENTIALTHROTTLESTATUS_SUCCESS" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../csharp/index.html" class="btn btn-neutral float-right" title="C#" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="target-controller.html" class="btn btn-neutral float-left" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="target-controller.html" class="btn btn-neutral float-left" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../csharp/index.html" class="btn btn-neutral float-right" title="C#" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

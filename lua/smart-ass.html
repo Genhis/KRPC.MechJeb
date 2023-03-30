@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>SmartASS &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartASS &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SmartRCS" href="smart-rcs.html" />
     <link rel="prev" title="ManeuverPlanner" href="maneuver-planner.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -114,664 +75,578 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Lua</a> &raquo;</li>
-        
-      <li>SmartASS</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Lua</a></li>
+      <li class="breadcrumb-item active">SmartASS</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/lua/smart-ass.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="smartass">
-<h1>SmartASS<a class="headerlink" href="#smartass" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="MechJeb.SmartASS">
-<em class="property">class </em><code class="descname">SmartASS</code><a class="headerlink" href="#MechJeb.SmartASS" title="Permalink to this definition">¶</a></dt>
+             
+  <section id="smartass">
+<h1>SmartASS<a class="headerlink" href="#smartass" title="Permalink to this heading"></a></h1>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.SmartASS">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">SmartASS</span></span><a class="headerlink" href="#MechJeb.SmartASS" title="Permalink to this definition"></a></dt>
 <dd><p>The Smart A.S.S. module provides aids for vessel pitch control.</p>
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.interface_mode">
-<code class="descname">interface_mode</code><a class="headerlink" href="#MechJeb.SmartASS.interface_mode" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.interface_mode">
+<span class="sig-name descname"><span class="pre">interface_mode</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.SmartASSInterfaceMode</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.interface_mode" title="Permalink to this definition"></a></dt>
 <dd><p>GUI mode; doesn’t do anything except changing SmartASS GUI buttons to a specified mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.SmartASSInterfaceMode" title="MechJeb.SmartASSInterfaceMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.SmartASSInterfaceMode</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.SmartASSInterfaceMode" title="MechJeb.SmartASSInterfaceMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.SmartASSInterfaceMode</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.autopilot_mode">
-<code class="descname">autopilot_mode</code><a class="headerlink" href="#MechJeb.SmartASS.autopilot_mode" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.autopilot_mode">
+<span class="sig-name descname"><span class="pre">autopilot_mode</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.SmartASSAutopilotMode</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.autopilot_mode" title="Permalink to this definition"></a></dt>
 <dd><p>Current autopilot mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.SmartASSAutopilotMode" title="MechJeb.SmartASSAutopilotMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.SmartASSAutopilotMode" title="MechJeb.SmartASSAutopilotMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="MechJeb.SmartASS.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>reset_pid</em><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.SmartASS.update" title="Permalink to this definition">¶</a></dt>
+<dl class="lua method">
+<dt class="sig sig-object lua" id="MechJeb.SmartASS.update">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">reset_pid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.SmartASS.update" title="Permalink to this definition"></a></dt>
 <dd><p>Update SmartASS position to use new values.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reset_pid</strong> (<em>boolean</em>) – False most of the time, use true only if it doesn’t work.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reset_pid</strong> (<span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span>) – False most of the time, use true only if it doesn’t work.</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.force_yaw">
-<code class="descname">force_yaw</code><a class="headerlink" href="#MechJeb.SmartASS.force_yaw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable yaw control for <a class="reference internal" href="#MechJeb.SmartASS.surface_heading" title="MechJeb.SmartASS.surface_heading"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASS.surface_heading</span></code></a>, <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.force_yaw">
+<span class="sig-name descname"><span class="pre">force_yaw</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.force_yaw" title="Permalink to this definition"></a></dt>
+<dd><p>Enable yaw control for <a class="reference internal" href="#MechJeb.MechJeb.SmartASS.surface_heading" title="MechJeb.MechJeb.SmartASS.surface_heading"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASS.surface_heading</span></code></a>, <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.force_pitch">
-<code class="descname">force_pitch</code><a class="headerlink" href="#MechJeb.SmartASS.force_pitch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable pitch control for <a class="reference internal" href="#MechJeb.SmartASS.surface_pitch" title="MechJeb.SmartASS.surface_pitch"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASS.surface_pitch</span></code></a>, <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.force_pitch">
+<span class="sig-name descname"><span class="pre">force_pitch</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.force_pitch" title="Permalink to this definition"></a></dt>
+<dd><p>Enable pitch control for <a class="reference internal" href="#MechJeb.MechJeb.SmartASS.surface_pitch" title="MechJeb.MechJeb.SmartASS.surface_pitch"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASS.surface_pitch</span></code></a>, <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.force_roll">
-<code class="descname">force_roll</code><a class="headerlink" href="#MechJeb.SmartASS.force_roll" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.force_roll">
+<span class="sig-name descname"><span class="pre">force_roll</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.force_roll" title="Permalink to this definition"></a></dt>
 <dd><p>Enable roll control.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_heading">
-<code class="descname">surface_heading</code><a class="headerlink" href="#MechJeb.SmartASS.surface_heading" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_heading">
+<span class="sig-name descname"><span class="pre">surface_heading</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_heading" title="Permalink to this definition"></a></dt>
 <dd><p>Heading; Also called or azimuth, or the direction where you want to go.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_pitch">
-<code class="descname">surface_pitch</code><a class="headerlink" href="#MechJeb.SmartASS.surface_pitch" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_pitch">
+<span class="sig-name descname"><span class="pre">surface_pitch</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_pitch" title="Permalink to this definition"></a></dt>
 <dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_roll">
-<code class="descname">surface_roll</code><a class="headerlink" href="#MechJeb.SmartASS.surface_roll" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_roll">
+<span class="sig-name descname"><span class="pre">surface_roll</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_roll" title="Permalink to this definition"></a></dt>
 <dd><p>Roll; 0 is top side up.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface" title="MechJeb.SmartASSAutopilotMode.surface"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_vel_yaw">
-<code class="descname">surface_vel_yaw</code><a class="headerlink" href="#MechJeb.SmartASS.surface_vel_yaw" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_vel_yaw">
+<span class="sig-name descname"><span class="pre">surface_vel_yaw</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_vel_yaw" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_vel_pitch">
-<code class="descname">surface_vel_pitch</code><a class="headerlink" href="#MechJeb.SmartASS.surface_vel_pitch" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_vel_pitch">
+<span class="sig-name descname"><span class="pre">surface_vel_pitch</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_vel_pitch" title="Permalink to this definition"></a></dt>
 <dd><p>Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.surface_vel_roll">
-<code class="descname">surface_vel_roll</code><a class="headerlink" href="#MechJeb.SmartASS.surface_vel_roll" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.surface_vel_roll">
+<span class="sig-name descname"><span class="pre">surface_vel_roll</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.surface_vel_roll" title="Permalink to this definition"></a></dt>
 <dd><p>Roll; 0 is top side up.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="MechJeb.SmartASSAutopilotMode.surface_prograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_prograde</span></code></a> and <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="MechJeb.SmartASSAutopilotMode.surface_retrograde"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.surface_retrograde</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.advanced_reference">
-<code class="descname">advanced_reference</code><a class="headerlink" href="#MechJeb.SmartASS.advanced_reference" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.AttitudeReference" title="MechJeb.AttitudeReference"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AttitudeReference</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.advanced_reference">
+<span class="sig-name descname"><span class="pre">advanced_reference</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.AttitudeReference</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.advanced_reference" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.AttitudeReference" title="MechJeb.AttitudeReference"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.AttitudeReference</span></code></a></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.advanced" title="MechJeb.SmartASSAutopilotMode.advanced"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.advanced</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.advanced" title="MechJeb.SmartASSAutopilotMode.advanced"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.advanced</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.SmartASS.advanced_direction">
-<code class="descname">advanced_direction</code><a class="headerlink" href="#MechJeb.SmartASS.advanced_direction" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.Direction" title="MechJeb.Direction"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.Direction</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.SmartASS.advanced_direction">
+<span class="sig-name descname"><span class="pre">advanced_direction</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.Direction</span><a class="headerlink" href="#MechJeb.MechJeb.SmartASS.advanced_direction" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.Direction" title="MechJeb.Direction"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.Direction</span></code></a></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.advanced" title="MechJeb.SmartASSAutopilotMode.advanced"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.advanced</span></code></a> mode.</p>
+<p class="admonition-title">Note</p>
+<p>Works only in <a class="reference internal" href="#MechJeb.SmartASSAutopilotMode.advanced" title="MechJeb.SmartASSAutopilotMode.advanced"><code class="xref lua lua-attr docutils literal notranslate"><span class="pre">MechJeb.SmartASSAutopilotMode.advanced</span></code></a> mode.</p>
 </div>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.SmartASSInterfaceMode">
-<em class="property">class </em><code class="descname">SmartASSInterfaceMode</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.SmartASSInterfaceMode.orbital">
-<code class="descname">orbital</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.orbital" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">SmartASSInterfaceMode</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode.orbital">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">orbital</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.orbital" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSInterfaceMode.surface">
-<code class="descname">surface</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.surface" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode.surface">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.surface" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSInterfaceMode.target">
-<code class="descname">target</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.target" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode.target">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.target" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSInterfaceMode.advanced">
-<code class="descname">advanced</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.advanced" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode.advanced">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">advanced</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.advanced" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSInterfaceMode.automatic">
-<code class="descname">automatic</code><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.automatic" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSInterfaceMode.automatic">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">automatic</span></span><a class="headerlink" href="#MechJeb.SmartASSInterfaceMode.automatic" title="Permalink to this definition"></a></dt>
 <dd><p>Internal mode, do not set.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.SmartASSAutopilotMode">
-<em class="property">class </em><code class="descname">SmartASSAutopilotMode</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.off">
-<code class="descname">off</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.off" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">SmartASSAutopilotMode</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.off">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">off</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.off" title="Permalink to this definition"></a></dt>
 <dd><p>Switch off Smart A.S.S.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.kill_rot">
-<code class="descname">kill_rot</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.kill_rot" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.kill_rot">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">kill_rot</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.kill_rot" title="Permalink to this definition"></a></dt>
 <dd><p>“Kill” the spacecraft’s rotation (counters rotation/tumbling).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.node">
-<code class="descname">node</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.node" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.node">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.node" title="Permalink to this definition"></a></dt>
 <dd><p>Point the vessel to a maneuver node.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.advanced">
-<code class="descname">advanced</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.advanced" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.advanced">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">advanced</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.advanced" title="Permalink to this definition"></a></dt>
 <dd><p>Advanced mode.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.automatic">
-<code class="descname">automatic</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.automatic" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.automatic">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">automatic</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.automatic" title="Permalink to this definition"></a></dt>
 <dd><p>Automatic mode (internal mode, only for getting status).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.prograde">
-<code class="descname">prograde</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.prograde" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.prograde">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">prograde</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.prograde" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to orbital prograde.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.retrograde">
-<code class="descname">retrograde</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.retrograde" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.retrograde">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">retrograde</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.retrograde" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to orbital retrograde.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.normal_plus">
-<code class="descname">normal_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.normal_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.normal_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">normal_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.normal_plus" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to orbital normal (change inclination).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.normal_minus">
-<code class="descname">normal_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.normal_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.normal_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">normal_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.normal_minus" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to orbital anti-normal (change inclination).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.radial_plus">
-<code class="descname">radial_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.radial_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.radial_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">radial_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.radial_plus" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to radial outward (away from SOI).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.radial_minus">
-<code class="descname">radial_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.radial_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.radial_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">radial_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.radial_minus" title="Permalink to this definition"></a></dt>
 <dd><p>ORBIT: Orient to radial inward (towards SOI).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.surface_prograde">
-<code class="descname">surface_prograde</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.surface_prograde">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface_prograde</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface_prograde" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient in the direction of movement relative to the ground. Useful during lift-off for rockets which don’t have fins or are otherwise instable.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.surface_retrograde">
-<code class="descname">surface_retrograde</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.surface_retrograde">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface_retrograde</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface_retrograde" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient in the opposite direction of movement relative to the ground. Useful during reentry or aerobraking with an aerodynamically unstable craft.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.horizontal_plus">
-<code class="descname">horizontal_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.horizontal_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.horizontal_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">horizontal_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.horizontal_plus" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient in the direction of horizontal movement relative to the ground.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.horizontal_minus">
-<code class="descname">horizontal_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.horizontal_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.horizontal_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">horizontal_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.horizontal_minus" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient in the opposite direction of horizontal movement relative to the ground.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.surface">
-<code class="descname">surface</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.surface">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.surface" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient the vessel in specific direction relative to surface.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.vertical_plus">
-<code class="descname">vertical_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.vertical_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.vertical_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">vertical_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.vertical_plus" title="Permalink to this definition"></a></dt>
 <dd><p>SURFACE: Orient “up”, perpendicular to the surface.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.target_plus">
-<code class="descname">target_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.target_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.target_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">target_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.target_plus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient towards the target.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.target_minus">
-<code class="descname">target_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.target_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.target_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">target_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.target_minus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient away from the target.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.relative_plus">
-<code class="descname">relative_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.relative_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.relative_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">relative_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.relative_plus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient toward your relative velocity. Burning this direction will increase your relative velocity.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.relative_minus">
-<code class="descname">relative_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.relative_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.relative_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">relative_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.relative_minus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient away from your relative velocity. Burning this direction will decrease your relative velocity.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.parallel_plus">
-<code class="descname">parallel_plus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.parallel_plus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.parallel_plus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">parallel_plus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.parallel_plus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient parallel to the target’s orientation. If the target is a docking node it orients the ship along the docking axis, pointing away from the node.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.SmartASSAutopilotMode.parallel_minus">
-<code class="descname">parallel_minus</code><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.parallel_minus" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.SmartASSAutopilotMode.parallel_minus">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">parallel_minus</span></span><a class="headerlink" href="#MechJeb.SmartASSAutopilotMode.parallel_minus" title="Permalink to this definition"></a></dt>
 <dd><p>TARGET: Orient antiparallel to the target’s orientation. If the target is a docking node it orients the ship along the docking axis, pointing toward the node.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.AttitudeReference">
-<em class="property">class </em><code class="descname">AttitudeReference</code><a class="headerlink" href="#MechJeb.AttitudeReference" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.AttitudeReference.inertial">
-<code class="descname">inertial</code><a class="headerlink" href="#MechJeb.AttitudeReference.inertial" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">AttitudeReference</span></span><a class="headerlink" href="#MechJeb.AttitudeReference" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.inertial">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">inertial</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.inertial" title="Permalink to this definition"></a></dt>
 <dd><p>World coordinate system.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.orbit">
-<code class="descname">orbit</code><a class="headerlink" href="#MechJeb.AttitudeReference.orbit" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.orbit">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">orbit</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.orbit" title="Permalink to this definition"></a></dt>
 <dd><p>forward = prograde, left = normal plus, up = radial plus</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.orbit_horizontal">
-<code class="descname">orbit_horizontal</code><a class="headerlink" href="#MechJeb.AttitudeReference.orbit_horizontal" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.orbit_horizontal">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">orbit_horizontal</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.orbit_horizontal" title="Permalink to this definition"></a></dt>
 <dd><p>forward = surface projection of orbit velocity, up = surface normal</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.surface_north">
-<code class="descname">surface_north</code><a class="headerlink" href="#MechJeb.AttitudeReference.surface_north" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.surface_north">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface_north</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.surface_north" title="Permalink to this definition"></a></dt>
 <dd><p>forward = north, left = west, up = surface normal</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.surface_velocity">
-<code class="descname">surface_velocity</code><a class="headerlink" href="#MechJeb.AttitudeReference.surface_velocity" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.surface_velocity">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface_velocity</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.surface_velocity" title="Permalink to this definition"></a></dt>
 <dd><p>forward = surface frame vessel velocity, up = perpendicular component of surface normal</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.target">
-<code class="descname">target</code><a class="headerlink" href="#MechJeb.AttitudeReference.target" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.target">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.target" title="Permalink to this definition"></a></dt>
 <dd><p>forward = toward target, up = perpendicular component of vessel heading</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.relative_velocity">
-<code class="descname">relative_velocity</code><a class="headerlink" href="#MechJeb.AttitudeReference.relative_velocity" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.relative_velocity">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">relative_velocity</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.relative_velocity" title="Permalink to this definition"></a></dt>
 <dd><p>forward = toward relative velocity direction, up = tbd</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.target_orientation">
-<code class="descname">target_orientation</code><a class="headerlink" href="#MechJeb.AttitudeReference.target_orientation" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.target_orientation">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">target_orientation</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.target_orientation" title="Permalink to this definition"></a></dt>
 <dd><p>forward = direction target is facing, up = target up</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.maneuver_node">
-<code class="descname">maneuver_node</code><a class="headerlink" href="#MechJeb.AttitudeReference.maneuver_node" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.maneuver_node">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">maneuver_node</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.maneuver_node" title="Permalink to this definition"></a></dt>
 <dd><p>forward = next maneuver node direction, up = tbd</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.sun">
-<code class="descname">sun</code><a class="headerlink" href="#MechJeb.AttitudeReference.sun" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.sun">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">sun</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.sun" title="Permalink to this definition"></a></dt>
 <dd><p>forward = orbit velocity of the parent body orbiting the sun, up = radial plus of that orbit</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.AttitudeReference.surface_horizontal">
-<code class="descname">surface_horizontal</code><a class="headerlink" href="#MechJeb.AttitudeReference.surface_horizontal" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.AttitudeReference.surface_horizontal">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">surface_horizontal</span></span><a class="headerlink" href="#MechJeb.AttitudeReference.surface_horizontal" title="Permalink to this definition"></a></dt>
 <dd><p>forward = surface velocity horizontal component, up = surface normal</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.Direction">
-<em class="property">class </em><code class="descname">Direction</code><a class="headerlink" href="#MechJeb.Direction" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.Direction.forward">
-<code class="descname">forward</code><a class="headerlink" href="#MechJeb.Direction.forward" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.Direction">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">Direction</span></span><a class="headerlink" href="#MechJeb.Direction" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.forward">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">forward</span></span><a class="headerlink" href="#MechJeb.Direction.forward" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.Direction.back">
-<code class="descname">back</code><a class="headerlink" href="#MechJeb.Direction.back" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.back">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">back</span></span><a class="headerlink" href="#MechJeb.Direction.back" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.Direction.up">
-<code class="descname">up</code><a class="headerlink" href="#MechJeb.Direction.up" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.up">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">up</span></span><a class="headerlink" href="#MechJeb.Direction.up" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.Direction.down">
-<code class="descname">down</code><a class="headerlink" href="#MechJeb.Direction.down" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.down">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">down</span></span><a class="headerlink" href="#MechJeb.Direction.down" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.Direction.right">
-<code class="descname">right</code><a class="headerlink" href="#MechJeb.Direction.right" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.right">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">right</span></span><a class="headerlink" href="#MechJeb.Direction.right" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.Direction.left">
-<code class="descname">left</code><a class="headerlink" href="#MechJeb.Direction.left" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.Direction.left">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">left</span></span><a class="headerlink" href="#MechJeb.Direction.left" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="maneuver-planner.html" class="btn btn-neutral float-left" title="ManeuverPlanner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="maneuver-planner.html" class="btn btn-neutral float-left" title="ManeuverPlanner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="smart-rcs.html" class="btn btn-neutral float-right" title="SmartRCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

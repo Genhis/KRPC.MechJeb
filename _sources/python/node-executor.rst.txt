@@ -49,7 +49,7 @@ NodeExecutor
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: tolerance
@@ -57,5 +57,5 @@ NodeExecutor
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

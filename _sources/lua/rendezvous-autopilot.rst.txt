@@ -10,28 +10,28 @@ RendezvousAutopilot
 
 
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: status
+   .. attribute:: status: string
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: desired_distance
+   .. attribute:: desired_distance: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: max_phasing_orbits
+   .. attribute:: max_phasing_orbits: number
 
 
 

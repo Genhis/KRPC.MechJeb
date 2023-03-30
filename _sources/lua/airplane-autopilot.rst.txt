@@ -10,182 +10,196 @@ AirplaneAutopilot
 
 
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: altitude_hold_enabled
+   .. attribute:: altitude_hold_enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: altitude_target
+   .. attribute:: altitude_target: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: heading_hold_enabled
+   .. attribute:: bank_angle: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: heading_hold_enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: heading_target
+   .. attribute:: heading_target: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: roll_hold_enabled
+   .. attribute:: roll_hold_enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: roll_max
+   .. attribute:: roll_target: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: roll_target
-
-
-
-      :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: speed_hold_enabled
+   .. attribute:: speed_hold_enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: speed_target
+   .. attribute:: speed_target: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: vert_speed_hold_enabled
+   .. attribute:: vert_speed_hold_enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: vert_speed_max
+   .. attribute:: vert_speed_target: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: vert_speed_target
+   .. attribute:: acc_kd: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: acc_kd
+   .. attribute:: acc_ki: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: acc_ki
+   .. attribute:: acc_kp: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: acc_kp
+   .. attribute:: pit_kd: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: rol_kd
+   .. attribute:: pit_ki: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: rol_ki
+   .. attribute:: pit_kp: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: rol_kp
+   .. attribute:: rol_kd: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: ver_kd
+   .. attribute:: rol_ki: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: ver_ki
+   .. attribute:: rol_kp: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: ver_kp
+   .. attribute:: yaw_kd: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: yaw_kd
+   .. attribute:: yaw_ki: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: yaw_ki
+   .. attribute:: yaw_kp: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: yaw_kp
+   .. attribute:: pitch_down_limit: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: yaw_limit
+   .. attribute:: pitch_up_limit: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: roll_limit: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: yaw_limit: number
 
 
 

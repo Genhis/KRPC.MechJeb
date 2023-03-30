@@ -10,77 +10,77 @@ DockingAutopilot
 
 
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: status
+   .. attribute:: status: string
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: speed_limit
+   .. attribute:: speed_limit: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: override_safe_distance
+   .. attribute:: override_safe_distance: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: overriden_safe_distance
+   .. attribute:: overriden_safe_distance: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: override_target_size
+   .. attribute:: override_target_size: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: overriden_target_size
+   .. attribute:: overriden_target_size: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: safe_distance
+   .. attribute:: safe_distance: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: target_size
+   .. attribute:: target_size: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: force_roll
+   .. attribute:: force_roll: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: roll
+   .. attribute:: roll: number
 
 
 

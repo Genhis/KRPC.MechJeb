@@ -62,7 +62,7 @@ SmartASS
       Heading; Also called or azimuth, or the direction where you want to go.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -75,7 +75,7 @@ SmartASS
       Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -88,7 +88,7 @@ SmartASS
       Roll; 0 is top side up.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -101,7 +101,7 @@ SmartASS
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -114,7 +114,7 @@ SmartASS
       Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -127,7 +127,7 @@ SmartASS
       Roll; 0 is top side up.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 

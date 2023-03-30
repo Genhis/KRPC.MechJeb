@@ -159,7 +159,7 @@ TimeSelector
       To be used with :attr:`TimeReference.altitude`.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: lead_time
@@ -167,7 +167,7 @@ TimeSelector
       To be used with :attr:`TimeReference.x_from_now`.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_reference
@@ -309,7 +309,7 @@ OperationApoapsis
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -391,7 +391,7 @@ OperationCourseCorrection
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: error_message
@@ -407,7 +407,7 @@ OperationCourseCorrection
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. method:: make_node()
@@ -491,7 +491,7 @@ OperationEllipticize
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: new_periapsis
@@ -499,7 +499,7 @@ OperationEllipticize
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -562,7 +562,7 @@ OperationInclination
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -706,7 +706,7 @@ OperationLambert
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. method:: make_node()
@@ -798,7 +798,7 @@ OperationLan
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -861,7 +861,7 @@ OperationLongitude
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -924,7 +924,7 @@ OperationMoonReturn
       Approximate return altitude from a moon (from an orbiting body to the parent body).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 
@@ -979,7 +979,7 @@ OperationPeriapsis
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -1169,7 +1169,7 @@ OperationSemiMajor
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: time_selector
@@ -1243,7 +1243,7 @@ OperationTransfer
       Fractional target period offset
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: simple_transfer

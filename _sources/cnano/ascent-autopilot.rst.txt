@@ -399,6 +399,13 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_AttachAltFlag(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_AttachAltFlag(bool value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AscentPVG_DesiredApoapsis(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AscentPVG_set_DesiredApoapsis(double value)
 
@@ -406,8 +413,29 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_PitchStartVelocity(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AscentPVG_set_PitchStartVelocity(double value)
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_DesiredAttachAlt(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_DesiredAttachAlt(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_DynamicPressureTrigger(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_DynamicPressureTrigger(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_FixedCoast(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_FixedCoast(bool value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_FixedCoastLength(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_FixedCoastLength(double value)
 
 
 
@@ -420,8 +448,22 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_OmitCoast(krpc_connection_t connection, bool * result)
-   .. function:: void krpc_MechJeb_AscentPVG_set_OmitCoast(bool value)
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_PitchStartVelocity(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_PitchStartVelocity(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_StagingTrigger(krpc_connection_t connection, int32_t * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_StagingTrigger(int32_t value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AscentPVG_StagingTriggerFlag(krpc_connection_t connection, bool * result)
+   .. function:: void krpc_MechJeb_AscentPVG_set_StagingTriggerFlag(bool value)
 
 
 

@@ -10,112 +10,112 @@ ManeuverPlanner
 
 
 
-   .. attribute:: operation_apoapsis
+   .. attribute:: operation_apoapsis: MechJeb.OperationApoapsis
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationApoapsis`
 
-   .. attribute:: operation_circularize
+   .. attribute:: operation_circularize: MechJeb.OperationCircularize
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationCircularize`
 
-   .. attribute:: operation_course_correction
+   .. attribute:: operation_course_correction: MechJeb.OperationCourseCorrection
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationCourseCorrection`
 
-   .. attribute:: operation_ellipticize
+   .. attribute:: operation_ellipticize: MechJeb.OperationEllipticize
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationEllipticize`
 
-   .. attribute:: operation_inclination
+   .. attribute:: operation_inclination: MechJeb.OperationInclination
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationInclination`
 
-   .. attribute:: operation_interplanetary_transfer
+   .. attribute:: operation_interplanetary_transfer: MechJeb.OperationInterplanetaryTransfer
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationInterplanetaryTransfer`
 
-   .. attribute:: operation_kill_rel_vel
+   .. attribute:: operation_kill_rel_vel: MechJeb.OperationKillRelVel
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationKillRelVel`
 
-   .. attribute:: operation_lambert
+   .. attribute:: operation_lambert: MechJeb.OperationLambert
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationLambert`
 
-   .. attribute:: operation_lan
+   .. attribute:: operation_lan: MechJeb.OperationLan
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationLan`
 
-   .. attribute:: operation_longitude
+   .. attribute:: operation_longitude: MechJeb.OperationLongitude
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationLongitude`
 
-   .. attribute:: operation_moon_return
+   .. attribute:: operation_moon_return: MechJeb.OperationMoonReturn
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationMoonReturn`
 
-   .. attribute:: operation_periapsis
+   .. attribute:: operation_periapsis: MechJeb.OperationPeriapsis
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationPeriapsis`
 
-   .. attribute:: operation_plane
+   .. attribute:: operation_plane: MechJeb.OperationPlane
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationPlane`
 
-   .. attribute:: operation_resonant_orbit
+   .. attribute:: operation_resonant_orbit: MechJeb.OperationResonantOrbit
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationResonantOrbit`
 
-   .. attribute:: operation_semi_major
+   .. attribute:: operation_semi_major: MechJeb.OperationSemiMajor
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.OperationSemiMajor`
 
-   .. attribute:: operation_transfer
+   .. attribute:: operation_transfer: MechJeb.OperationTransfer
 
 
 
@@ -138,21 +138,21 @@ TimeSelector
 
 
 
-   .. attribute:: circularize_altitude
+   .. attribute:: circularize_altitude: number
 
       To be used with :attr:`MechJeb.TimeReference.altitude`.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: lead_time
+   .. attribute:: lead_time: number
 
       To be used with :attr:`MechJeb.TimeReference.x_from_now`.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_reference
+   .. attribute:: time_reference: MechJeb.TimeReference
 
 
 
@@ -248,7 +248,7 @@ OperationApoapsis
 
    Create a maneuver to set a new apoapsis
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -279,16 +279,16 @@ OperationApoapsis
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_apoapsis
+   .. attribute:: new_apoapsis: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -306,7 +306,7 @@ OperationCircularize
    This mode creates a manevuer to match your apoapsis to periapsis.
    To match apoapsis to periapsis, set the time to :attr:`MechJeb.TimeReference.periapsis`; to match periapsis to apoapsis, set the time to :attr:`MechJeb.TimeReference.apoapsis`. These are the most efficient, but it can also create node at specific height or after specific time.
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -337,9 +337,9 @@ OperationCircularize
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -356,21 +356,21 @@ OperationCourseCorrection
 
    Create a maneuver to fine-tune closest approach to target
 
-   .. attribute:: course_correct_final_pe_a
+   .. attribute:: course_correct_final_pe_a: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: intercept_distance
+   .. attribute:: intercept_distance: number
 
 
 
@@ -401,7 +401,7 @@ OperationCourseCorrection
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
 
 
@@ -413,7 +413,7 @@ OperationEllipticize
 
    Create a maneuver to change both periapsis and apoapsis
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -444,23 +444,23 @@ OperationEllipticize
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_apoapsis
-
-
-
-      :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: new_periapsis
+   .. attribute:: new_apoapsis: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: new_periapsis: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -477,7 +477,7 @@ OperationInclination
 
    Create a maneuver to change inclination
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -508,16 +508,16 @@ OperationInclination
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_inclination
+   .. attribute:: new_inclination: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -534,7 +534,7 @@ OperationInterplanetaryTransfer
 
    Create a maneuver to transfer to another planet
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -565,9 +565,9 @@ OperationInterplanetaryTransfer
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: wait_for_phase_angle
+   .. attribute:: wait_for_phase_angle: boolean
 
 
 
@@ -584,7 +584,7 @@ OperationKillRelVel
 
    Match velocities with target
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -615,9 +615,9 @@ OperationKillRelVel
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -634,14 +634,14 @@ OperationLambert
 
    Create a maneuver to set the chosen time
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: intercept_interval
+   .. attribute:: intercept_interval: number
 
 
 
@@ -672,9 +672,9 @@ OperationLambert
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -691,7 +691,7 @@ OperationLan
 
    Change longitude of ascending node
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -722,16 +722,16 @@ OperationLan
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_lan
+   .. attribute:: new_lan: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -748,7 +748,7 @@ OperationLongitude
 
    Change surface longitude of apsis
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -779,16 +779,16 @@ OperationLongitude
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_surface_longitude
+   .. attribute:: new_surface_longitude: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -805,7 +805,7 @@ OperationMoonReturn
 
    Create a maneuver to return from a moon approximately at the specified altitude
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -836,9 +836,9 @@ OperationMoonReturn
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: moon_return_altitude
+   .. attribute:: moon_return_altitude: number
 
       Approximate return altitude from a moon (from an orbiting body to the parent body).
 
@@ -855,7 +855,7 @@ OperationPeriapsis
 
    Create a maneuver to set a new periapsis
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -886,16 +886,16 @@ OperationPeriapsis
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_periapsis
+   .. attribute:: new_periapsis: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -912,7 +912,7 @@ OperationPlane
 
    Create a maneuver to match planes with target
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -943,9 +943,9 @@ OperationPlane
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -963,7 +963,7 @@ OperationResonantOrbit
    Resonant orbit is useful for placing satellites to a constellation. This mode should be used starting from a orbit in the desired orbital plane. Important parameter to this mode is the desired orbital ratio, which is the ratio between period of your current orbit and the new orbit.
    To deploy satellites, set the denominator to number of satellites you want to have in the constellation. Setting the nominator to one less than denominator is the most efficient, but not necessary the fastest. To successfully deploy all satellites, make sure the numbers are incommensurable.
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -994,23 +994,23 @@ OperationResonantOrbit
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: resonance_denominator
-
-
-
-      :Attribute: Can be read or written
-      :rtype: number
-
-   .. attribute:: resonance_numerator
+   .. attribute:: resonance_denominator: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: resonance_numerator: number
+
+
+
+      :Attribute: Can be read or written
+      :rtype: number
+
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -1027,7 +1027,7 @@ OperationSemiMajor
 
    Create a maneuver to set a new semi-major axis
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -1058,16 +1058,16 @@ OperationSemiMajor
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: new_semi_major_axis
+   .. attribute:: new_semi_major_axis: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 
@@ -1087,7 +1087,7 @@ OperationTransfer
    This option is used to plan transfer to target in single sphere of influence. It is suitable for rendezvous with other vessels or moons.
    Contrary to the name, the transfer is often uni-impulsive. You can select when you want the manevuer to happen or select optimum time.
 
-   .. attribute:: error_message
+   .. attribute:: error_message: string
 
       A warning may be stored there during MakeNode() call.
 
@@ -1118,23 +1118,23 @@ OperationTransfer
       MJServiceException - Internal service error.
 
       :returns: A list of maneuver nodes necessary to perform this operation
-      :rtype: List of :class:`SpaceCenter.Node`
+      :rtype: List
 
-   .. attribute:: intercept_only
+   .. attribute:: intercept_only: boolean
 
       Intercept only, no capture burn (impact/flyby)
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: period_offset
+   .. attribute:: period_offset: number
 
       Fractional target period offset
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: simple_transfer
+   .. attribute:: simple_transfer: boolean
 
       Simple coplanar Hohmann transfer.
       Set it to true if you are used to the old version of transfer maneuver.
@@ -1146,7 +1146,7 @@ OperationTransfer
 
          If set to true, TimeSelector property is ignored.
 
-   .. attribute:: time_selector
+   .. attribute:: time_selector: MechJeb.TimeSelector
 
 
 

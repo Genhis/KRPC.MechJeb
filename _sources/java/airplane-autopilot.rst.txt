@@ -34,6 +34,14 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. method:: double getBankAngle()
+
+   .. method:: void setBankAngle(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. method:: boolean getHeadingHoldEnabled()
 
    .. method:: void setHeadingHoldEnabled(boolean value)
@@ -53,14 +61,6 @@ AirplaneAutopilot
    .. method:: boolean getRollHoldEnabled()
 
    .. method:: void setRollHoldEnabled(boolean value)
-
-
-
-      :Game Scenes: Flight
-
-   .. method:: double getRollMax()
-
-   .. method:: void setRollMax(double value)
 
 
 
@@ -98,14 +98,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. method:: double getVertSpeedMax()
-
-   .. method:: void setVertSpeedMax(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. method:: double getVertSpeedTarget()
 
    .. method:: void setVertSpeedTarget(double value)
@@ -138,6 +130,30 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. method:: double getPitKd()
+
+   .. method:: void setPitKd(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getPitKi()
+
+   .. method:: void setPitKi(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getPitKp()
+
+   .. method:: void setPitKp(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. method:: double getRolKd()
 
    .. method:: void setRolKd(double value)
@@ -162,30 +178,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. method:: double getVerKd()
-
-   .. method:: void setVerKd(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. method:: double getVerKi()
-
-   .. method:: void setVerKi(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. method:: double getVerKp()
-
-   .. method:: void setVerKp(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. method:: double getYawKd()
 
    .. method:: void setYawKd(double value)
@@ -205,6 +197,30 @@ AirplaneAutopilot
    .. method:: double getYawKp()
 
    .. method:: void setYawKp(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getPitchDownLimit()
+
+   .. method:: void setPitchDownLimit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getPitchUpLimit()
+
+   .. method:: void setPitchUpLimit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getRollLimit()
+
+   .. method:: void setRollLimit(double value)
 
 
 

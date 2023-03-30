@@ -31,7 +31,15 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: bank_angle
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: heading_hold_enabled
@@ -47,7 +55,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: roll_hold_enabled
@@ -58,20 +66,12 @@ AirplaneAutopilot
       :rtype: bool
       :Game Scenes: Flight
 
-   .. attribute:: roll_max
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
-      :Game Scenes: Flight
-
    .. attribute:: roll_target
 
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: speed_hold_enabled
@@ -87,7 +87,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: vert_speed_hold_enabled
@@ -98,20 +98,12 @@ AirplaneAutopilot
       :rtype: bool
       :Game Scenes: Flight
 
-   .. attribute:: vert_speed_max
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
-      :Game Scenes: Flight
-
    .. attribute:: vert_speed_target
 
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: acc_kd
@@ -119,7 +111,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: acc_ki
@@ -127,7 +119,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: acc_kp
@@ -135,7 +127,31 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: pit_kd
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: pit_ki
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: pit_kp
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: rol_kd
@@ -143,7 +159,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: rol_ki
@@ -151,7 +167,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: rol_kp
@@ -159,31 +175,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
-      :Game Scenes: Flight
-
-   .. attribute:: ver_kd
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
-      :Game Scenes: Flight
-
-   .. attribute:: ver_ki
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
-      :Game Scenes: Flight
-
-   .. attribute:: ver_kp
-
-
-
-      :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: yaw_kd
@@ -191,7 +183,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: yaw_ki
@@ -199,7 +191,7 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: yaw_kp
@@ -207,7 +199,31 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: pitch_down_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: pitch_up_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
+      :Game Scenes: Flight
+
+   .. attribute:: roll_limit
+
+
+
+      :Attribute: Can be read or written
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: yaw_limit
@@ -215,5 +231,5 @@ AirplaneAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

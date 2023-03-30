@@ -400,6 +400,13 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
+   .. function:: bool attach_alt_flag()
+   .. function:: void set_attach_alt_flag(bool value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: double desired_apoapsis()
    .. function:: void set_desired_apoapsis(double value)
 
@@ -407,8 +414,29 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. function:: double pitch_start_velocity()
-   .. function:: void set_pitch_start_velocity(double value)
+   .. function:: double desired_attach_alt()
+   .. function:: void set_desired_attach_alt(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double dynamic_pressure_trigger()
+   .. function:: void set_dynamic_pressure_trigger(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: bool fixed_coast()
+   .. function:: void set_fixed_coast(bool value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double fixed_coast_length()
+   .. function:: void set_fixed_coast_length(double value)
 
 
 
@@ -421,8 +449,22 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. function:: bool omit_coast()
-   .. function:: void set_omit_coast(bool value)
+   .. function:: double pitch_start_velocity()
+   .. function:: void set_pitch_start_velocity(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: int32_t staging_trigger()
+   .. function:: void set_staging_trigger(int32_t value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: bool staging_trigger_flag()
+   .. function:: void set_staging_trigger_flag(bool value)
 
 
 

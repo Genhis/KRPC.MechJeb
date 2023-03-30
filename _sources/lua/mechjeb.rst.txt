@@ -11,7 +11,7 @@ MechJeb service
 This service provides functionality to interact with `MechJeb 2 <https://github.com/MuMech/MechJeb2>`_.
 
 
-.. attribute:: api_ready
+.. attribute:: api_ready: boolean
 
    A value indicating whether the service is available.
 
@@ -21,7 +21,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: airplane_autopilot
+.. attribute:: airplane_autopilot: MechJeb.AirplaneAutopilot
 
 
 
@@ -31,7 +31,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: antenna_controller
+.. attribute:: antenna_controller: MechJeb.DeployableController
 
 
 
@@ -41,7 +41,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: ascent_autopilot
+.. attribute:: ascent_autopilot: MechJeb.AscentAutopilot
 
 
 
@@ -51,7 +51,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: docking_autopilot
+.. attribute:: docking_autopilot: MechJeb.DockingAutopilot
 
 
 
@@ -61,7 +61,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: landing_autopilot
+.. attribute:: landing_autopilot: MechJeb.LandingAutopilot
 
 
 
@@ -71,7 +71,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: maneuver_planner
+.. attribute:: maneuver_planner: MechJeb.ManeuverPlanner
 
 
 
@@ -81,7 +81,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: node_executor
+.. attribute:: node_executor: MechJeb.NodeExecutor
 
 
 
@@ -91,7 +91,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: rcs_controller
+.. attribute:: rcs_controller: MechJeb.RCSController
 
 
 
@@ -101,7 +101,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: rendezvous_autopilot
+.. attribute:: rendezvous_autopilot: MechJeb.RendezvousAutopilot
 
 
 
@@ -111,7 +111,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: smart_ass
+.. attribute:: smart_ass: MechJeb.SmartASS
 
 
 
@@ -121,7 +121,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: smart_rcs
+.. attribute:: smart_rcs: MechJeb.SmartRCS
 
 
 
@@ -131,7 +131,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: solar_panel_controller
+.. attribute:: solar_panel_controller: MechJeb.DeployableController
 
 
 
@@ -141,7 +141,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: staging_controller
+.. attribute:: staging_controller: MechJeb.StagingController
 
 
 
@@ -151,7 +151,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: target_controller
+.. attribute:: target_controller: MechJeb.TargetController
 
 
 
@@ -161,7 +161,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: thrust_controller
+.. attribute:: thrust_controller: MechJeb.ThrustController
 
 
 
@@ -171,7 +171,7 @@ This service provides functionality to interact with `MechJeb 2 <https://github.
 
 
 
-.. attribute:: translatron
+.. attribute:: translatron: MechJeb.Translatron
 
 
 

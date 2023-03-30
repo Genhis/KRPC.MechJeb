@@ -10,28 +10,28 @@ LandingAutopilot
 
    The Landing Guidance module provides targeted and non-targeted landing autopilot.
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: status
+   .. attribute:: status: string
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: string
 
-   .. attribute:: deploy_chutes
+   .. attribute:: deploy_chutes: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: deploy_gears
+   .. attribute:: deploy_gears: boolean
 
 
 
@@ -42,21 +42,21 @@ LandingAutopilot
 
    .. method:: land_untargeted()
 
-   .. attribute:: limit_chutes_stage
+   .. attribute:: limit_chutes_stage: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: limit_gears_stage
+   .. attribute:: limit_gears_stage: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: rcs_adjustment
+   .. attribute:: rcs_adjustment: boolean
 
 
 
@@ -65,7 +65,7 @@ LandingAutopilot
 
    .. method:: stop_landing()
 
-   .. attribute:: touchdown_speed
+   .. attribute:: touchdown_speed: number
 
 
 

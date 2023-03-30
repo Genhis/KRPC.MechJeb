@@ -44,7 +44,7 @@ StagingController
       The autopilot will pause the actual staging after ? seconds for each stage.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: autostage_pre_delay
@@ -52,7 +52,7 @@ StagingController
       The autopilot will pause the actual staging before ? seconds for each stage.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: clamp_auto_stage_thrust_pct
@@ -60,7 +60,7 @@ StagingController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: fairing_max_aerothermal_flux
@@ -68,7 +68,7 @@ StagingController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: fairing_max_dynamic_pressure
@@ -76,7 +76,7 @@ StagingController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: fairing_min_altitude
@@ -84,7 +84,7 @@ StagingController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: hot_staging
@@ -100,5 +100,5 @@ StagingController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

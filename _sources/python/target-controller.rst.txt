@@ -31,14 +31,14 @@ TargetController
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: tuple(double, double, double)
+      :rtype: tuple(float, float, float)
       :Game Scenes: Flight
 
    .. method:: get_position_target_position()
 
 
 
-      :rtype: tuple(double, double, double)
+      :rtype: tuple(float, float, float)
       :Game Scenes: Flight
 
    .. method:: get_position_target_string()
@@ -67,7 +67,7 @@ TargetController
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: tuple(double, double, double)
+      :rtype: tuple(float, float, float)
       :Game Scenes: Flight
 
    .. attribute:: position_target_exists
@@ -83,7 +83,7 @@ TargetController
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: tuple(double, double, double)
+      :rtype: tuple(float, float, float)
       :Game Scenes: Flight
 
    .. attribute:: relative_velocity
@@ -91,7 +91,7 @@ TargetController
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: tuple(double, double, double)
+      :rtype: tuple(float, float, float)
       :Game Scenes: Flight
 
    .. method:: set_direction_target(name)
@@ -106,8 +106,8 @@ TargetController
 
 
       :param SpaceCenter.CelestialBody body:
-      :param double latitude:
-      :param double longitude:
+      :param float latitude:
+      :param float longitude:
       :Game Scenes: Flight
 
    .. attribute:: target_orbit

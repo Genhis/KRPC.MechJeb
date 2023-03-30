@@ -10,21 +10,21 @@ Translatron
 
    The Translatron module controls the vessel's throttle/velocity.
 
-   .. attribute:: mode
+   .. attribute:: mode: MechJeb.TranslatronMode
 
       Current translatron mode.
 
       :Attribute: Can be read or written
       :rtype: :class:`MechJeb.TranslatronMode`
 
-   .. attribute:: translation_speed
+   .. attribute:: translation_speed: number
 
       Speed which trasnlatron will hold
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: kill_horizontal_speed
+   .. attribute:: kill_horizontal_speed: boolean
 
       Kill horizontal speed
 

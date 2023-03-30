@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>StagingController &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StagingController &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="TargetController" href="target-controller.html" />
     <link rel="prev" title="RCSController" href="rcs-controller.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -116,338 +77,248 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">C++</a> &raquo;</li>
-        
-      <li>StagingController</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C++</a></li>
+      <li class="breadcrumb-item active">StagingController</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/cpp/staging-controller.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="stagingcontroller">
-<h1>StagingController<a class="headerlink" href="#stagingcontroller" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingControllerE">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingControllerE"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingControllerE"></span><span id="krpc::services::MechJeb::StagingController"></span><em class="property">class </em><code class="descname">StagingController</code><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingControllerE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController7enabledEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController7enabledEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController7enabledEv"></span><span id="krpc::services::MechJeb::StagingController::enabled"></span>bool <code class="descname">enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController7enabledEv" title="Permalink to this definition">¶</a><br /></dt>
+             
+  <section id="stagingcontroller">
+<h1>StagingController<a class="headerlink" href="#stagingcontroller" title="Permalink to this heading"></a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingControllerE">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingControllerE"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingControllerE"></span><span id="krpc::services::MechJeb::StagingController"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StagingController</span></span></span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingControllerE" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController7enabledEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController7enabledEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController7enabledEv"></span><span id="krpc::services::MechJeb::StagingController::enabled"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController7enabledEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController11set_enabledEb">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController11set_enabledEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController11set_enabledEb"></span><span id="krpc::services::MechJeb::StagingController::set_enabled__b"></span>void <code class="descname">set_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController11set_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController11set_enabledEb">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController11set_enabledEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController11set_enabledEb"></span><span id="krpc::services::MechJeb::StagingController::set_enabled__b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_enabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController11set_enabledEb" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController16autostaging_onceEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController16autostaging_onceEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController16autostaging_onceEv"></span><span id="krpc::services::MechJeb::StagingController::autostaging_once"></span>bool <code class="descname">autostaging_once</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController16autostaging_onceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController16autostaging_onceEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController16autostaging_onceEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController16autostaging_onceEv"></span><span id="krpc::services::MechJeb::StagingController::autostaging_once"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autostaging_once</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController16autostaging_onceEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb"></span><span id="krpc::services::MechJeb::StagingController::set_autostaging_once__b"></span>void <code class="descname">set_autostaging_once</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb"></span><span id="krpc::services::MechJeb::StagingController::set_autostaging_once__b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_autostaging_once</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20set_autostaging_onceEb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autostaging mode. If set to true, it will automatically disable itself after one staging action.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The controller needs to be enabled for this to work.</p>
+<p class="admonition-title">Note</p>
+<p>The controller needs to be enabled for this to work.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController15autostage_limitEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController15autostage_limitEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController15autostage_limitEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_limit"></span>int32_t <code class="descname">autostage_limit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController15autostage_limitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController15autostage_limitEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController15autostage_limitEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController15autostage_limitEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_limit"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autostage_limit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController15autostage_limitEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_limit__int32_t"></span>void <code class="descname">set_autostage_limit</code><span class="sig-paren">(</span>int32_t <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_limit__int32_t"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_autostage_limit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController19set_autostage_limitE7int32_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Stop at the selected stage - staging will not occur beyond this stage number.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController20autostage_post_delayEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController20autostage_post_delayEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20autostage_post_delayEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_post_delay"></span>double <code class="descname">autostage_post_delay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20autostage_post_delayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController20autostage_post_delayEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController20autostage_post_delayEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20autostage_post_delayEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_post_delay"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autostage_post_delay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20autostage_post_delayEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_post_delay__double"></span>void <code class="descname">set_autostage_post_delay</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_post_delay__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_autostage_post_delay</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController24set_autostage_post_delayEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot will pause the actual staging after ? seconds for each stage.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_pre_delay"></span>double <code class="descname">autostage_pre_delay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv"></span><span id="krpc::services::MechJeb::StagingController::autostage_pre_delay"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">autostage_pre_delay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController19autostage_pre_delayEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_pre_delay__double"></span>void <code class="descname">set_autostage_pre_delay</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd"></span><span id="krpc::services::MechJeb::StagingController::set_autostage_pre_delay__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_autostage_pre_delay</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController23set_autostage_pre_delayEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot will pause the actual staging before ? seconds for each stage.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv"></span><span id="krpc::services::MechJeb::StagingController::clamp_auto_stage_thrust_pct"></span>double <code class="descname">clamp_auto_stage_thrust_pct</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv"></span><span id="krpc::services::MechJeb::StagingController::clamp_auto_stage_thrust_pct"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clamp_auto_stage_thrust_pct</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController27clamp_auto_stage_thrust_pctEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd"></span><span id="krpc::services::MechJeb::StagingController::set_clamp_auto_stage_thrust_pct__double"></span>void <code class="descname">set_clamp_auto_stage_thrust_pct</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd"></span><span id="krpc::services::MechJeb::StagingController::set_clamp_auto_stage_thrust_pct__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_clamp_auto_stage_thrust_pct</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController31set_clamp_auto_stage_thrust_pctEd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_max_aerothermal_flux"></span>double <code class="descname">fairing_max_aerothermal_flux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_max_aerothermal_flux"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fairing_max_aerothermal_flux</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_aerothermal_fluxEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_max_aerothermal_flux__double"></span>void <code class="descname">set_fairing_max_aerothermal_flux</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_max_aerothermal_flux__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_fairing_max_aerothermal_flux</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_aerothermal_fluxEd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_max_dynamic_pressure"></span>double <code class="descname">fairing_max_dynamic_pressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_max_dynamic_pressure"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fairing_max_dynamic_pressure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController28fairing_max_dynamic_pressureEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_max_dynamic_pressure__double"></span>void <code class="descname">set_fairing_max_dynamic_pressure</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_max_dynamic_pressure__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_fairing_max_dynamic_pressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController32set_fairing_max_dynamic_pressureEd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_min_altitude"></span>double <code class="descname">fairing_min_altitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv"></span><span id="krpc::services::MechJeb::StagingController::fairing_min_altitude"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fairing_min_altitude</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController20fairing_min_altitudeEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_min_altitude__double"></span>void <code class="descname">set_fairing_min_altitude</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd"></span><span id="krpc::services::MechJeb::StagingController::set_fairing_min_altitude__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_fairing_min_altitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController24set_fairing_min_altitudeEd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController11hot_stagingEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController11hot_stagingEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController11hot_stagingEv"></span><span id="krpc::services::MechJeb::StagingController::hot_staging"></span>bool <code class="descname">hot_staging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController11hot_stagingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController11hot_stagingEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController11hot_stagingEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController11hot_stagingEv"></span><span id="krpc::services::MechJeb::StagingController::hot_staging"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hot_staging</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController11hot_stagingEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController15set_hot_stagingEb">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController15set_hot_stagingEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController15set_hot_stagingEb"></span><span id="krpc::services::MechJeb::StagingController::set_hot_staging__b"></span>void <code class="descname">set_hot_staging</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController15set_hot_stagingEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController15set_hot_stagingEb">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController15set_hot_stagingEb"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController15set_hot_stagingEb"></span><span id="krpc::services::MechJeb::StagingController::set_hot_staging__b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_hot_staging</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController15set_hot_stagingEb" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv"></span><span id="krpc::services::MechJeb::StagingController::hot_staging_lead_time"></span>double <code class="descname">hot_staging_lead_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv"></span><span id="krpc::services::MechJeb::StagingController::hot_staging_lead_time"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hot_staging_lead_time</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController21hot_staging_lead_timeEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd">
-<span id="_CPPv3N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd"></span><span id="krpc::services::MechJeb::StagingController::set_hot_staging_lead_time__double"></span>void <code class="descname">set_hot_staging_lead_time</code><span class="sig-paren">(</span>double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd">
+<span id="_CPPv3N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd"></span><span id="_CPPv2N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd"></span><span id="krpc::services::MechJeb::StagingController::set_hot_staging_lead_time__double"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_hot_staging_lead_time</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4krpc8services7MechJeb17StagingController25set_hot_staging_lead_timeEd" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="target-controller.html" class="btn btn-neutral float-right" title="TargetController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="rcs-controller.html" class="btn btn-neutral float-left" title="RCSController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rcs-controller.html" class="btn btn-neutral float-left" title="RCSController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="target-controller.html" class="btn btn-neutral float-right" title="TargetController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

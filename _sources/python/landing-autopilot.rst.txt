@@ -89,5 +89,5 @@ LandingAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

@@ -10,14 +10,14 @@ SmartASS
 
    The Smart A.S.S. module provides aids for vessel pitch control.
 
-   .. attribute:: interface_mode
+   .. attribute:: interface_mode: MechJeb.SmartASSInterfaceMode
 
       GUI mode; doesn't do anything except changing SmartASS GUI buttons to a specified mode.
 
       :Attribute: Can be read or written
       :rtype: :class:`MechJeb.SmartASSInterfaceMode`
 
-   .. attribute:: autopilot_mode
+   .. attribute:: autopilot_mode: MechJeb.SmartASSAutopilotMode
 
       Current autopilot mode.
 
@@ -30,28 +30,28 @@ SmartASS
 
       :param boolean reset_pid: False most of the time, use true only if it doesn't work.
 
-   .. attribute:: force_yaw
+   .. attribute:: force_yaw: boolean
 
       Enable yaw control for :attr:`MechJeb.SmartASS.surface_heading`, :attr:`MechJeb.SmartASSAutopilotMode.surface_prograde` and :attr:`MechJeb.SmartASSAutopilotMode.surface_retrograde`.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: force_pitch
+   .. attribute:: force_pitch: boolean
 
       Enable pitch control for :attr:`MechJeb.SmartASS.surface_pitch`, :attr:`MechJeb.SmartASSAutopilotMode.surface_prograde` and :attr:`MechJeb.SmartASSAutopilotMode.surface_retrograde`.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: force_roll
+   .. attribute:: force_roll: boolean
 
       Enable roll control.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: surface_heading
+   .. attribute:: surface_heading: number
 
       Heading; Also called or azimuth, or the direction where you want to go.
 
@@ -62,7 +62,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface` mode.
 
-   .. attribute:: surface_pitch
+   .. attribute:: surface_pitch: number
 
       Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
 
@@ -73,7 +73,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface` mode.
 
-   .. attribute:: surface_roll
+   .. attribute:: surface_roll: number
 
       Roll; 0 is top side up.
 
@@ -84,7 +84,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface` mode.
 
-   .. attribute:: surface_vel_yaw
+   .. attribute:: surface_vel_yaw: number
 
 
 
@@ -95,7 +95,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface_prograde` and :attr:`MechJeb.SmartASSAutopilotMode.surface_retrograde` mode.
 
-   .. attribute:: surface_vel_pitch
+   .. attribute:: surface_vel_pitch: number
 
       Pitch or inclination; 0 is horizontal and 90 is straight up. Can be negative.
 
@@ -106,7 +106,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface_prograde` and :attr:`MechJeb.SmartASSAutopilotMode.surface_retrograde` mode.
 
-   .. attribute:: surface_vel_roll
+   .. attribute:: surface_vel_roll: number
 
       Roll; 0 is top side up.
 
@@ -117,7 +117,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.surface_prograde` and :attr:`MechJeb.SmartASSAutopilotMode.surface_retrograde` mode.
 
-   .. attribute:: advanced_reference
+   .. attribute:: advanced_reference: MechJeb.AttitudeReference
 
 
 
@@ -128,7 +128,7 @@ SmartASS
 
          Works only in :attr:`MechJeb.SmartASSAutopilotMode.advanced` mode.
 
-   .. attribute:: advanced_direction
+   .. attribute:: advanced_direction: MechJeb.Direction
 
 
 

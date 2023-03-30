@@ -10,21 +10,21 @@ SmartRCS
 
 
 
-   .. attribute:: auto_disable_smart_rcs
+   .. attribute:: auto_disable_smart_rcs: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: mode
+   .. attribute:: mode: MechJeb.SmartRCSMode
 
 
 
       :Attribute: Can be read or written
       :rtype: :class:`MechJeb.SmartRCSMode`
 
-   .. attribute:: rcs_controller
+   .. attribute:: rcs_controller: MechJeb.RCSController
 
 
 

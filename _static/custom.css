@@ -12,11 +12,11 @@
     padding-right: 0;
 }
 
-/* Add space after a link */
-a + .descname {
-	margin-left: 5px;
+/* Add space to Java docs where it should be */
+.java.type > dt:first-child > .pre {
+	margin-left: 4px;
 }
 
-a + a + .descname {
-	margin-left: 0;
+.java .descname {
+	margin-left: 5px;
 }

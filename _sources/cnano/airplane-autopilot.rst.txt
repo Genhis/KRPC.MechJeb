@@ -31,6 +31,13 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_BankAngle(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_BankAngle(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_HeadingHoldEnabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_HeadingHoldEnabled(bool value)
 
@@ -47,13 +54,6 @@ AirplaneAutopilot
 
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_RollHoldEnabled(krpc_connection_t connection, bool * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_RollHoldEnabled(bool value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_RollMax(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_RollMax(double value)
 
 
 
@@ -87,13 +87,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_VertSpeedMax(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_VertSpeedMax(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_VertSpeedTarget(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_VertSpeedTarget(double value)
 
@@ -122,6 +115,27 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_PitKd(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_PitKd(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_PitKi(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_PitKi(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_PitKp(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_PitKp(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_RolKd(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_RolKd(double value)
 
@@ -143,27 +157,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_VerKd(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_VerKd(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_VerKi(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_VerKi(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_VerKp(krpc_connection_t connection, double * result)
-   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_VerKp(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_YawKd(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_YawKd(double value)
 
@@ -180,6 +173,27 @@ AirplaneAutopilot
 
    .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_YawKp(krpc_connection_t connection, double * result)
    .. function:: void krpc_MechJeb_AirplaneAutopilot_set_YawKp(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_PitchDownLimit(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_PitchDownLimit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_PitchUpLimit(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_PitchUpLimit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: krpc_error_t krpc_MechJeb_AirplaneAutopilot_RollLimit(krpc_connection_t connection, double * result)
+   .. function:: void krpc_MechJeb_AirplaneAutopilot_set_RollLimit(double value)
 
 
 

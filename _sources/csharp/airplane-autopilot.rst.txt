@@ -28,6 +28,12 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. property:: double BankAngle { get; set; }
+
+
+
+      :Game Scenes: Flight
+
    .. property:: bool HeadingHoldEnabled { get; set; }
 
 
@@ -41,12 +47,6 @@ AirplaneAutopilot
       :Game Scenes: Flight
 
    .. property:: bool RollHoldEnabled { get; set; }
-
-
-
-      :Game Scenes: Flight
-
-   .. property:: double RollMax { get; set; }
 
 
 
@@ -76,12 +76,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. property:: double VertSpeedMax { get; set; }
-
-
-
-      :Game Scenes: Flight
-
    .. property:: double VertSpeedTarget { get; set; }
 
 
@@ -106,6 +100,24 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. property:: double PitKd { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double PitKi { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double PitKp { get; set; }
+
+
+
+      :Game Scenes: Flight
+
    .. property:: double RolKd { get; set; }
 
 
@@ -124,24 +136,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. property:: double VerKd { get; set; }
-
-
-
-      :Game Scenes: Flight
-
-   .. property:: double VerKi { get; set; }
-
-
-
-      :Game Scenes: Flight
-
-   .. property:: double VerKp { get; set; }
-
-
-
-      :Game Scenes: Flight
-
    .. property:: double YawKd { get; set; }
 
 
@@ -155,6 +149,24 @@ AirplaneAutopilot
       :Game Scenes: Flight
 
    .. property:: double YawKp { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double PitchDownLimit { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double PitchUpLimit { get; set; }
+
+
+
+      :Game Scenes: Flight
+
+   .. property:: double RollLimit { get; set; }
 
 
 

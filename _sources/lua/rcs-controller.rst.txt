@@ -10,14 +10,14 @@ RCSController
 
 
 
-   .. attribute:: rcs_for_rotation
+   .. attribute:: rcs_for_rotation: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: rcs_throttle
+   .. attribute:: rcs_throttle: boolean
 
 
 

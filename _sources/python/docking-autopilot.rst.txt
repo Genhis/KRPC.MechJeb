@@ -31,7 +31,7 @@ DockingAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: override_safe_distance
@@ -47,7 +47,7 @@ DockingAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: override_target_size
@@ -63,7 +63,7 @@ DockingAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: safe_distance
@@ -95,5 +95,5 @@ DockingAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

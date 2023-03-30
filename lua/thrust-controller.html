@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ThrustController &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThrustController &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python" href="../python/index.html" />
     <link rel="prev" title="TargetController" href="target-controller.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -116,449 +77,354 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Lua</a> &raquo;</li>
-        
-      <li>ThrustController</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Lua</a></li>
+      <li class="breadcrumb-item active">ThrustController</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/lua/thrust-controller.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="thrustcontroller">
-<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="MechJeb.ThrustController">
-<em class="property">class </em><code class="descname">ThrustController</code><a class="headerlink" href="#MechJeb.ThrustController" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="MechJeb.ThrustController.differential_throttle">
-<code class="descname">differential_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.differential_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+             
+  <section id="thrustcontroller">
+<h1>ThrustController<a class="headerlink" href="#thrustcontroller" title="Permalink to this heading"></a></h1>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.ThrustController">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">ThrustController</span></span><a class="headerlink" href="#MechJeb.ThrustController" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.differential_throttle">
+<span class="sig-name descname"><span class="pre">differential_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.differential_throttle" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.differential_throttle_status">
-<code class="descname">differential_throttle_status</code><a class="headerlink" href="#MechJeb.ThrustController.differential_throttle_status" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Read-only, cannot be set</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.DifferentialThrottleStatus" title="MechJeb.DifferentialThrottleStatus"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.DifferentialThrottleStatus</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.differential_throttle_status">
+<span class="sig-name descname"><span class="pre">differential_throttle_status</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.DifferentialThrottleStatus</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.differential_throttle_status" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only, cannot be set</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.DifferentialThrottleStatus" title="MechJeb.DifferentialThrottleStatus"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.DifferentialThrottleStatus</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.electric_throttle">
-<code class="descname">electric_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.electric_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.electric_throttle">
+<span class="sig-name descname"><span class="pre">electric_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.electric_throttle" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.electric_throttle_hi">
-<code class="descname">electric_throttle_hi</code><a class="headerlink" href="#MechJeb.ThrustController.electric_throttle_hi" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.electric_throttle_hi">
+<span class="sig-name descname"><span class="pre">electric_throttle_hi</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.electric_throttle_hi" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.electric_throttle_lo">
-<code class="descname">electric_throttle_lo</code><a class="headerlink" href="#MechJeb.ThrustController.electric_throttle_lo" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.electric_throttle_lo">
+<span class="sig-name descname"><span class="pre">electric_throttle_lo</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.electric_throttle_lo" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.flameout_safety_pct">
-<code class="descname">flameout_safety_pct</code><a class="headerlink" href="#MechJeb.ThrustController.flameout_safety_pct" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.flameout_safety_pct">
+<span class="sig-name descname"><span class="pre">flameout_safety_pct</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.flameout_safety_pct" title="Permalink to this definition"></a></dt>
 <dd><p>The jet safety margin. A value between 0 and 1.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limit_acceleration">
-<code class="descname">limit_acceleration</code><a class="headerlink" href="#MechJeb.ThrustController.limit_acceleration" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limit_acceleration">
+<span class="sig-name descname"><span class="pre">limit_acceleration</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limit_acceleration" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limit_dynamic_pressure">
-<code class="descname">limit_dynamic_pressure</code><a class="headerlink" href="#MechJeb.ThrustController.limit_dynamic_pressure" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limit_dynamic_pressure">
+<span class="sig-name descname"><span class="pre">limit_dynamic_pressure</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limit_dynamic_pressure" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limit_throttle">
-<code class="descname">limit_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.limit_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limit_throttle">
+<span class="sig-name descname"><span class="pre">limit_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limit_throttle" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limit_to_prevent_flameout">
-<code class="descname">limit_to_prevent_flameout</code><a class="headerlink" href="#MechJeb.ThrustController.limit_to_prevent_flameout" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limit_to_prevent_flameout">
+<span class="sig-name descname"><span class="pre">limit_to_prevent_flameout</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limit_to_prevent_flameout" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limit_to_prevent_overheats">
-<code class="descname">limit_to_prevent_overheats</code><a class="headerlink" href="#MechJeb.ThrustController.limit_to_prevent_overheats" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limit_to_prevent_overheats">
+<span class="sig-name descname"><span class="pre">limit_to_prevent_overheats</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limit_to_prevent_overheats" title="Permalink to this definition"></a></dt>
 <dd><p>Limits the throttle to prevent parts from overheating.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.limiter_min_throttle">
-<code class="descname">limiter_min_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.limiter_min_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.limiter_min_throttle">
+<span class="sig-name descname"><span class="pre">limiter_min_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.limiter_min_throttle" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.manage_intakes">
-<code class="descname">manage_intakes</code><a class="headerlink" href="#MechJeb.ThrustController.manage_intakes" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.manage_intakes">
+<span class="sig-name descname"><span class="pre">manage_intakes</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.manage_intakes" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.max_acceleration">
-<code class="descname">max_acceleration</code><a class="headerlink" href="#MechJeb.ThrustController.max_acceleration" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.max_acceleration">
+<span class="sig-name descname"><span class="pre">max_acceleration</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.max_acceleration" title="Permalink to this definition"></a></dt>
 <dd><p>Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.max_dynamic_pressure">
-<code class="descname">max_dynamic_pressure</code><a class="headerlink" href="#MechJeb.ThrustController.max_dynamic_pressure" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.max_dynamic_pressure">
+<span class="sig-name descname"><span class="pre">max_dynamic_pressure</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.max_dynamic_pressure" title="Permalink to this definition"></a></dt>
 <dd><p>Limit the maximal dynamic pressure in Pa.
 This avoids that pieces break off during launch because of atmospheric pressure.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.max_throttle">
-<code class="descname">max_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.max_throttle" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.max_throttle">
+<span class="sig-name descname"><span class="pre">max_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.max_throttle" title="Permalink to this definition"></a></dt>
 <dd><p>Never exceed the percentage of the throttle during ascent (value between 0 and 1).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.min_throttle">
-<code class="descname">min_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.min_throttle" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.min_throttle">
+<span class="sig-name descname"><span class="pre">min_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.min_throttle" title="Permalink to this definition"></a></dt>
 <dd><p>Never go below the percentage of the throttle during ascent (value between 0 and 1).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.smooth_throttle">
-<code class="descname">smooth_throttle</code><a class="headerlink" href="#MechJeb.ThrustController.smooth_throttle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.smooth_throttle">
+<span class="sig-name descname"><span class="pre">smooth_throttle</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.smooth_throttle" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.ThrustController.throttle_smoothing_time">
-<code class="descname">throttle_smoothing_time</code><a class="headerlink" href="#MechJeb.ThrustController.throttle_smoothing_time" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.ThrustController.throttle_smoothing_time">
+<span class="sig-name descname"><span class="pre">throttle_smoothing_time</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.ThrustController.throttle_smoothing_time" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.DifferentialThrottleStatus">
-<em class="property">class </em><code class="descname">DifferentialThrottleStatus</code><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.DifferentialThrottleStatus.all_engines_off">
-<code class="descname">all_engines_off</code><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.all_engines_off" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.DifferentialThrottleStatus">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">DifferentialThrottleStatus</span></span><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.DifferentialThrottleStatus.all_engines_off">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">all_engines_off</span></span><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.all_engines_off" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.DifferentialThrottleStatus.more_engines_required">
-<code class="descname">more_engines_required</code><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.more_engines_required" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.DifferentialThrottleStatus.more_engines_required">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">more_engines_required</span></span><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.more_engines_required" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.DifferentialThrottleStatus.solver_failed">
-<code class="descname">solver_failed</code><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.solver_failed" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.DifferentialThrottleStatus.solver_failed">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">solver_failed</span></span><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.solver_failed" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.DifferentialThrottleStatus.success">
-<code class="descname">success</code><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.success" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.DifferentialThrottleStatus.success">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">success</span></span><a class="headerlink" href="#MechJeb.DifferentialThrottleStatus.success" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="target-controller.html" class="btn btn-neutral float-left" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="target-controller.html" class="btn btn-neutral float-left" title="TargetController" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

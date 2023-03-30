@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>AirplaneAutopilot &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirplaneAutopilot &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="AscentAutopilot" href="ascent-autopilot.html" />
     <link rel="prev" title="MechJeb service" href="mechjeb.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -115,600 +76,495 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Java</a> &raquo;</li>
-        
-      <li>AirplaneAutopilot</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Java</a></li>
+      <li class="breadcrumb-item active">AirplaneAutopilot</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/java/airplane-autopilot.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <span class="target" id="package-krpc.client.services.MechJeb"></span><div class="section" id="airplaneautopilot">
-<h1>AirplaneAutopilot<a class="headerlink" href="#airplaneautopilot" title="Permalink to this headline">¶</a></h1>
-<dl class="type">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot">
-public class <code class="descname">AirplaneAutopilot</code><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getEnabled()">
- boolean <code class="descname">getEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getEnabled()" title="Permalink to this definition">¶</a></dt>
+             
+  <span class="target" id="package-krpc.client.services.MechJeb"></span><section id="airplaneautopilot">
+<h1>AirplaneAutopilot<a class="headerlink" href="#airplaneautopilot" title="Permalink to this heading"></a></h1>
+<dl class="java type">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot">
+<span class="pre">public</span> <span class="pre">class</span> <span class="sig-name descname"><span class="pre">AirplaneAutopilot</span></span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot" title="Permalink to this definition"></a></dt>
+<dd><dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setEnabled(boolean)">
- void <code class="descname">setEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeHoldEnabled()">
- boolean <code class="descname">getAltitudeHoldEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeHoldEnabled()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeHoldEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getAltitudeHoldEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeHoldEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeHoldEnabled(boolean)">
- void <code class="descname">setAltitudeHoldEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeHoldEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeHoldEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setAltitudeHoldEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeHoldEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeTarget()">
- double <code class="descname">getAltitudeTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeTarget()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeTarget()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getAltitudeTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAltitudeTarget()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeTarget(double)">
- void <code class="descname">setAltitudeTarget</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeTarget(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeTarget(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setAltitudeTarget</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAltitudeTarget(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingHoldEnabled()">
- boolean <code class="descname">getHeadingHoldEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingHoldEnabled()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getBankAngle()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getBankAngle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getBankAngle()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingHoldEnabled(boolean)">
- void <code class="descname">setHeadingHoldEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingHoldEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setBankAngle(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setBankAngle</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setBankAngle(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingTarget()">
- double <code class="descname">getHeadingTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingTarget()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingHoldEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getHeadingHoldEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingHoldEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingTarget(double)">
- void <code class="descname">setHeadingTarget</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingTarget(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingHoldEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setHeadingHoldEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingHoldEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollHoldEnabled()">
- boolean <code class="descname">getRollHoldEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollHoldEnabled()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingTarget()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getHeadingTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getHeadingTarget()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollHoldEnabled(boolean)">
- void <code class="descname">setRollHoldEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollHoldEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingTarget(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setHeadingTarget</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setHeadingTarget(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollMax()">
- double <code class="descname">getRollMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollMax()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollHoldEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getRollHoldEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollHoldEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollMax(double)">
- void <code class="descname">setRollMax</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollMax(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollHoldEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRollHoldEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollHoldEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollTarget()">
- double <code class="descname">getRollTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollTarget()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollTarget()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getRollTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollTarget()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollTarget(double)">
- void <code class="descname">setRollTarget</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollTarget(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollTarget(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRollTarget</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollTarget(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedHoldEnabled()">
- boolean <code class="descname">getSpeedHoldEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedHoldEnabled()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedHoldEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getSpeedHoldEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedHoldEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedHoldEnabled(boolean)">
- void <code class="descname">setSpeedHoldEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedHoldEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedHoldEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setSpeedHoldEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedHoldEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedTarget()">
- double <code class="descname">getSpeedTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedTarget()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedTarget()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getSpeedTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getSpeedTarget()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedTarget(double)">
- void <code class="descname">setSpeedTarget</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedTarget(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedTarget(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setSpeedTarget</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setSpeedTarget(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedHoldEnabled()">
- boolean <code class="descname">getVertSpeedHoldEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedHoldEnabled()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedHoldEnabled()">
+ <span class="pre">boolean</span> <span class="sig-name descname"><span class="pre">getVertSpeedHoldEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedHoldEnabled()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedHoldEnabled(boolean)">
- void <code class="descname">setVertSpeedHoldEnabled</code><span class="sig-paren">(</span>boolean<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedHoldEnabled(boolean)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedHoldEnabled(boolean)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setVertSpeedHoldEnabled</span></span><span class="sig-paren">(</span><span class="pre">boolean</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedHoldEnabled(boolean)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedMax()">
- double <code class="descname">getVertSpeedMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedMax()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedTarget()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getVertSpeedTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedTarget()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedMax(double)">
- void <code class="descname">setVertSpeedMax</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedMax(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedTarget(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setVertSpeedTarget</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedTarget(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedTarget()">
- double <code class="descname">getVertSpeedTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVertSpeedTarget()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKd()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getAccKd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKd()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedTarget(double)">
- void <code class="descname">setVertSpeedTarget</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVertSpeedTarget(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKd(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setAccKd</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKd(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKd()">
- double <code class="descname">getAccKd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKd()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKi()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getAccKi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKi()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKd(double)">
- void <code class="descname">setAccKd</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKd(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKi(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setAccKi</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKi(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKi()">
- double <code class="descname">getAccKi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKi()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKp()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getAccKp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKp()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKi(double)">
- void <code class="descname">setAccKi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKi(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKp(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setAccKp</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKp(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getAccKp()">
- double <code class="descname">getAccKp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getAccKp()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getPitKd()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getPitKd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getPitKd()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setAccKp(double)">
- void <code class="descname">setAccKp</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setAccKp(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setPitKd(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPitKd</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setPitKd(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKd()">
- double <code class="descname">getRolKd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKd()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getPitKi()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getPitKi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getPitKi()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKd(double)">
- void <code class="descname">setRolKd</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKd(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setPitKi(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPitKi</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setPitKi(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKi()">
- double <code class="descname">getRolKi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKi()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getPitKp()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getPitKp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getPitKp()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKi(double)">
- void <code class="descname">setRolKi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKi(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setPitKp(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPitKp</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setPitKp(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKp()">
- double <code class="descname">getRolKp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKp()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKd()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getRolKd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKd()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKp(double)">
- void <code class="descname">setRolKp</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKp(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKd(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRolKd</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKd(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVerKd()">
- double <code class="descname">getVerKd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVerKd()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKi()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getRolKi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKi()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVerKd(double)">
- void <code class="descname">setVerKd</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVerKd(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKi(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRolKi</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKi(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVerKi()">
- double <code class="descname">getVerKi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVerKi()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRolKp()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getRolKp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRolKp()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVerKi(double)">
- void <code class="descname">setVerKi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVerKi(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRolKp(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRolKp</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRolKp(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getVerKp()">
- double <code class="descname">getVerKp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getVerKp()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKd()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getYawKd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKd()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setVerKp(double)">
- void <code class="descname">setVerKp</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setVerKp(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKd(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setYawKd</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKd(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKd()">
- double <code class="descname">getYawKd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKd()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKi()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getYawKi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKi()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKd(double)">
- void <code class="descname">setYawKd</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKd(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKi(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setYawKi</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKi(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKi()">
- double <code class="descname">getYawKi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKi()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKp()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getYawKp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKp()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKi(double)">
- void <code class="descname">setYawKi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKi(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKp(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setYawKp</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKp(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawKp()">
- double <code class="descname">getYawKp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawKp()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getPitchDownLimit()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getPitchDownLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getPitchDownLimit()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawKp(double)">
- void <code class="descname">setYawKp</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawKp(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setPitchDownLimit(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPitchDownLimit</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setPitchDownLimit(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawLimit()">
- double <code class="descname">getYawLimit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawLimit()" title="Permalink to this definition">¶</a></dt>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getPitchUpLimit()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getPitchUpLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getPitchUpLimit()" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawLimit(double)">
- void <code class="descname">setYawLimit</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawLimit(double)" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setPitchUpLimit(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setPitchUpLimit</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setPitchUpLimit(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getRollLimit()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getRollLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getRollLimit()" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setRollLimit(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setRollLimit</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setRollLimit(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.getYawLimit()">
+ <span class="pre">double</span> <span class="sig-name descname"><span class="pre">getYawLimit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.getYawLimit()" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="java method">
+<dt class="sig sig-object java" id="krpc.client.services.MechJeb.AirplaneAutopilot.setYawLimit(double)">
+ <span class="pre">void</span> <span class="sig-name descname"><span class="pre">setYawLimit</span></span><span class="sig-paren">(</span><span class="pre">double</span><em> <span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#krpc.client.services.MechJeb.AirplaneAutopilot.setYawLimit(double)" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ascent-autopilot.html" class="btn btn-neutral float-right" title="AscentAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mechjeb.html" class="btn btn-neutral float-left" title="MechJeb service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mechjeb.html" class="btn btn-neutral float-left" title="MechJeb service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ascent-autopilot.html" class="btn btn-neutral float-right" title="AscentAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

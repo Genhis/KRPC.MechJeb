@@ -10,7 +10,7 @@ NodeExecutor
 
 
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
@@ -19,7 +19,7 @@ NodeExecutor
 
    .. method:: abort()
 
-   .. attribute:: autowarp
+   .. attribute:: autowarp: boolean
 
 
 
@@ -30,14 +30,14 @@ NodeExecutor
 
    .. method:: execute_one_node()
 
-   .. attribute:: lead_time
+   .. attribute:: lead_time: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: tolerance
+   .. attribute:: tolerance: number
 
 
 

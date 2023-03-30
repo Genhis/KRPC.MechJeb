@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AscentAutopilot &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DockingAutopilot" href="docking-autopilot.html" />
     <link rel="prev" title="AirplaneAutopilot" href="airplane-autopilot.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">C-nano</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="mechjeb.html">MechJeb service</a></li>
@@ -120,1066 +81,952 @@
 <li class="toctree-l1"><a class="reference internal" href="../lua/index.html">Lua</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">C-nano</a> &raquo;</li>
-        
-      <li>AscentAutopilot</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C-nano</a></li>
+      <li class="breadcrumb-item active">AscentAutopilot</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/cnano/ascent-autopilot.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="ascentautopilot">
-<h1>AscentAutopilot<a class="headerlink" href="#ascentautopilot" title="Permalink to this headline">¶</a></h1>
-<dl class="type">
-<dt id="c.krpc_MechJeb_AscentAutopilot_t">
-<code class="descname">krpc_MechJeb_AscentAutopilot_t</code><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t" title="Permalink to this definition">¶</a></dt>
+             
+  <section id="ascentautopilot">
+<h1>AscentAutopilot<a class="headerlink" href="#ascentautopilot" title="Permalink to this heading"></a></h1>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>This module controls the Ascent Guidance in MechJeb 2.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See <a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues">MechJeb2 wiki</a> for more guidance on how to optimally set up this autopilot.</p>
+<p class="admonition-title">Note</p>
+<p>See <a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki/Ascent-Guidance#initial-pitch-over-issues">MechJeb2 wiki</a> for more guidance on how to optimally set up this autopilot.</p>
 </div>
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_Enabled">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_Enabled</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_Enabled" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Enabled">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_Enabled</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Enabled" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_Enabled">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_Enabled</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_Enabled" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_Enabled">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_Enabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_Enabled" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_Status">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_Status</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, char * *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_Status" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Status">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_Status</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Status" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot status; it depends on the selected ascent path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AscentPathIndex">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AscentPathIndex</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, int32_t *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AscentPathIndex" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathIndex">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AscentPathIndex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathIndex" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_AscentPathIndex">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_AscentPathIndex</code><span class="sig-paren">(</span>int32_t<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_AscentPathIndex" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AscentPathIndex">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_AscentPathIndex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AscentPathIndex" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The selected ascent path.</p>
 <p>0 = <a class="reference internal" href="#c.krpc_MechJeb_AscentClassic_t" title="krpc_MechJeb_AscentClassic_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">krpc_MechJeb_AscentClassic_t</span></code></a> (Classic Ascent Profile)</p>
 <p>1 = <a class="reference internal" href="#c.krpc_MechJeb_AscentGT_t" title="krpc_MechJeb_AscentGT_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">krpc_MechJeb_AscentGT_t</span></code></a> (Stock-style GravityTurn)</p>
 <p>2 = <a class="reference internal" href="#c.krpc_MechJeb_AscentPVG_t" title="krpc_MechJeb_AscentPVG_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">krpc_MechJeb_AscentPVG_t</span></code></a> (Primer Vector Guidance (RSS/RO))</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AscentPathClassic">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AscentPathClassic</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_AscentClassic_t" title="krpc_MechJeb_AscentClassic_t">krpc_MechJeb_AscentClassic_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AscentPathClassic" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathClassic">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AscentPathClassic</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="#c.krpc_MechJeb_AscentClassic_t" title="krpc_MechJeb_AscentClassic_t"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathClassic" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get Classic Ascent Profile settings.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AscentPathGT">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AscentPathGT</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_AscentGT_t" title="krpc_MechJeb_AscentGT_t">krpc_MechJeb_AscentGT_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AscentPathGT" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathGT">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AscentPathGT</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="#c.krpc_MechJeb_AscentGT_t" title="krpc_MechJeb_AscentGT_t"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathGT" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get Stock-style GravityTurn profile settings.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AscentPathPVG">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AscentPathPVG</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_AscentPVG_t" title="krpc_MechJeb_AscentPVG_t">krpc_MechJeb_AscentPVG_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AscentPathPVG" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathPVG">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AscentPathPVG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="#c.krpc_MechJeb_AscentPVG_t" title="krpc_MechJeb_AscentPVG_t"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AscentPathPVG" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get Powered Explicit Guidance (RSS/RO) profile settings.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_DesiredInclination">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_DesiredInclination</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_DesiredInclination" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_DesiredInclination">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_DesiredInclination</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_DesiredInclination" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_DesiredInclination">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_DesiredInclination</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_DesiredInclination" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_DesiredInclination">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_DesiredInclination</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_DesiredInclination" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The desired inclination in degrees for the final circular orbit.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_DesiredOrbitAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_DesiredOrbitAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The desired altitude in kilometres for the final circular orbit.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_ThrustController">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_ThrustController</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="thrust-controller.html#c.krpc_MechJeb_ThrustController_t" title="krpc_MechJeb_ThrustController_t">krpc_MechJeb_ThrustController_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_ThrustController" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_ThrustController">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_ThrustController</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="thrust-controller.html#c.krpc_MechJeb_ThrustController_t" title="krpc_MechJeb_ThrustController_t"><span class="n"><span class="pre">krpc_MechJeb_ThrustController_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_ThrustController" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Equivalent to <a class="reference internal" href="mechjeb.html#c.krpc_MechJeb_ThrustController" title="krpc_MechJeb_ThrustController"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_ThrustController()</span></code></a>.</p>
+<p class="admonition-title">Note</p>
+<p>Equivalent to <a class="reference internal" href="mechjeb.html#c.krpc_MechJeb_ThrustController" title="krpc_MechJeb_ThrustController"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_ThrustController()</span></code></a>.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_ForceRoll">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_ForceRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_ForceRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_ForceRoll">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_ForceRoll</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_ForceRoll" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_ForceRoll">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_ForceRoll</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_ForceRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_ForceRoll">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_ForceRoll</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_ForceRoll" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The state of force roll.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_TurnRoll">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_TurnRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_TurnRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_TurnRoll">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_TurnRoll</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_TurnRoll" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_TurnRoll">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_TurnRoll</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_TurnRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_TurnRoll">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_TurnRoll</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_TurnRoll" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The turn roll used by the autopilot.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_VerticalRoll">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_VerticalRoll</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_VerticalRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_VerticalRoll">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_VerticalRoll</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_VerticalRoll" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_VerticalRoll">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_VerticalRoll</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_VerticalRoll" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_VerticalRoll">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_VerticalRoll</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_VerticalRoll" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The vertical/climb roll used by the autopilot.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LimitAoA">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LimitAoA</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LimitAoA" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LimitAoA">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LimitAoA</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LimitAoA" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_LimitAoA">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_LimitAoA</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_LimitAoA" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LimitAoA">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_LimitAoA</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LimitAoA" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether to limit angle of attack.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_MaxAoA">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_MaxAoA</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_MaxAoA" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_MaxAoA">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_MaxAoA</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_MaxAoA" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_MaxAoA">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_MaxAoA</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_MaxAoA" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_MaxAoA">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_MaxAoA</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_MaxAoA" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The maximal angle of attack used by the autopilot.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AoALimitFadeoutPressure" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AoALimitFadeoutPressure" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The pressure value when AoA limit is automatically deactivated.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_CorrectiveSteering">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_CorrectiveSteering</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_CorrectiveSteering" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_CorrectiveSteering">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_CorrectiveSteering</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_CorrectiveSteering" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteering" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Will cause the craft to steer based on the more accurate velocity vector rather than positional vector (large craft may actually perform better with this box unchecked).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_CorrectiveSteeringGain" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_CorrectiveSteeringGain" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The gain of corrective steering used by the autopilot.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_Autostage">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_Autostage</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_Autostage" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Autostage">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_Autostage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_Autostage" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_Autostage">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_Autostage</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_Autostage" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_Autostage">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_Autostage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_Autostage" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot will automatically stage when the current stage has run out of fuel.
 Paramethers can be set in <a class="reference internal" href="staging-controller.html#c.krpc_MechJeb_StagingController_t" title="krpc_MechJeb_StagingController_t"><code class="xref c c-type docutils literal notranslate"><span class="pre">krpc_MechJeb_StagingController_t</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_StagingController">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_StagingController</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="staging-controller.html#c.krpc_MechJeb_StagingController_t" title="krpc_MechJeb_StagingController_t">krpc_MechJeb_StagingController_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_StagingController" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_StagingController">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_StagingController</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="staging-controller.html#c.krpc_MechJeb_StagingController_t" title="krpc_MechJeb_StagingController_t"><span class="n"><span class="pre">krpc_MechJeb_StagingController_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_StagingController" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Equivalent to <a class="reference internal" href="mechjeb.html#c.krpc_MechJeb_StagingController" title="krpc_MechJeb_StagingController"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_StagingController()</span></code></a>.</p>
+<p class="admonition-title">Note</p>
+<p>Equivalent to <a class="reference internal" href="mechjeb.html#c.krpc_MechJeb_StagingController" title="krpc_MechJeb_StagingController"><code class="xref c c-func docutils literal notranslate"><span class="pre">krpc_MechJeb_StagingController()</span></code></a>.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AutodeploySolarPanels" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AutodeploySolarPanels" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether to deploy solar panels automatically when the ascent finishes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AutoDeployAntennas">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AutoDeployAntennas</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AutoDeployAntennas" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AutoDeployAntennas">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AutoDeployAntennas</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AutoDeployAntennas" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_AutoDeployAntennas" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether to deploy antennas automatically when the ascent finishes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_SkipCircularization">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_SkipCircularization</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_SkipCircularization" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_SkipCircularization">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_SkipCircularization</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_SkipCircularization" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_SkipCircularization">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_SkipCircularization</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_SkipCircularization" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_SkipCircularization">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_SkipCircularization</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_SkipCircularization" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether to skip circularization burn and do only the ascent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_WarpCountDown">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_WarpCountDown</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, int32_t *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_WarpCountDown" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_WarpCountDown">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_WarpCountDown</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_WarpCountDown" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_WarpCountDown">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_WarpCountDown</code><span class="sig-paren">(</span>int32_t<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_WarpCountDown" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_WarpCountDown">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_WarpCountDown</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_WarpCountDown" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LaunchLANDifference">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LaunchLANDifference</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LaunchLANDifference" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchLANDifference">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LaunchLANDifference</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchLANDifference" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LaunchLANDifference" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchPhaseAngle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle">
-void <code class="descname">krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_set_LaunchPhaseAngle" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LaunchMode">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LaunchMode</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, <a class="reference internal" href="#c.krpc_MechJeb_AscentLaunchMode_t" title="krpc_MechJeb_AscentLaunchMode_t">krpc_MechJeb_AscentLaunchMode_t</a> *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LaunchMode" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchMode">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LaunchMode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <a class="reference internal" href="#c.krpc_MechJeb_AscentLaunchMode_t" title="krpc_MechJeb_AscentLaunchMode_t"><span class="n"><span class="pre">krpc_MechJeb_AscentLaunchMode_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchMode" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Current autopilot mode. Useful for determining whether the autopilot is performing a timed launch or not.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_AbortTimedLaunch">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_AbortTimedLaunch</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_AbortTimedLaunch" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AbortTimedLaunch">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_AbortTimedLaunch</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_AbortTimedLaunch" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Abort a known timed launch when it has not started yet</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LaunchToRendezvous">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LaunchToRendezvous</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LaunchToRendezvous" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchToRendezvous">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LaunchToRendezvous</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchToRendezvous" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Launch to rendezvous with the selected target.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentAutopilot_t.krpc_MechJeb_AscentAutopilot_LaunchToTargetPlane" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Launch into the plane of the selected target.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="c.krpc_MechJeb_AscentLaunchMode_t">
-<code class="descname">krpc_MechJeb_AscentLaunchMode_t</code><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="macro">
-<dt id="c.KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL">
-<code class="descname">KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL</code><a class="headerlink" href="#c.KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL" title="Permalink to this definition">¶</a></dt>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentLaunchMode_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentLaunchMode_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_NORMAL" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot is not performing a timed launch.</p>
 </dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS">
-<code class="descname">KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS</code><a class="headerlink" href="#c.KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_RENDEZVOUS" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot is performing a timed launch to rendezvous with the target vessel.</p>
 </dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE">
-<code class="descname">KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE</code><a class="headerlink" href="#c.KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_TARGETPLANE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot is performing a timed launch to target plane.</p>
 </dd></dl>
 
-<dl class="macro">
-<dt id="c.KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN">
-<code class="descname">KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN</code><a class="headerlink" href="#c.KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN">
+<span class="sig-name descname"><span class="n"><span class="pre">KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentLaunchMode_t.KRPC_MECHJEB_ASCENTLAUNCHMODE_UNKNOWN" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The autopilot is performing an unknown timed launch.</p>
 </dd></dl>
 
 </dd></dl>
 
-<div class="section" id="ascentclassic">
-<h2>AscentClassic<a class="headerlink" href="#ascentclassic" title="Permalink to this headline">¶</a></h2>
-<dl class="type">
-<dt id="c.krpc_MechJeb_AscentClassic_t">
-<code class="descname">krpc_MechJeb_AscentClassic_t</code><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t" title="Permalink to this definition">¶</a></dt>
+<section id="ascentclassic">
+<h2>AscentClassic<a class="headerlink" href="#ascentclassic" title="Permalink to this heading"></a></h2>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The Classic Ascent Profile.</p>
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoPath">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoPath</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoPath" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoPath">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoPath</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoPath" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_AutoPath">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_AutoPath</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_AutoPath" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoPath">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_AutoPath</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoPath" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Whether to enable automatic altitude turn.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoTurnPercent">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoTurnPercent</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, float *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoTurnPercent" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnPercent">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoTurnPercent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnPercent" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_AutoTurnPercent">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_AutoTurnPercent</code><span class="sig-paren">(</span>float<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_AutoTurnPercent" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoTurnPercent">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_AutoTurnPercent</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoTurnPercent" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A value between 0 and 1.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, float *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnSpeedFactor" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor</code><span class="sig-paren">(</span>float<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_AutoTurnSpeedFactor" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A value between 0 and 1.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoTurnStartAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoTurnStartAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoTurnStartAltitude" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnStartAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoTurnStartAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnStartAltitude" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoTurnStartVelocity">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoTurnStartVelocity</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoTurnStartVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnStartVelocity">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoTurnStartVelocity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnStartVelocity" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_AutoTurnEndAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_AutoTurnEndAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_AutoTurnEndAltitude" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnEndAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_AutoTurnEndAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_AutoTurnEndAltitude" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_TurnStartAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_TurnStartAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnStartAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_TurnStartAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnStartAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_TurnStartAltitude">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_TurnStartAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnStartAltitude">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_TurnStartAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnStartAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The turn starts when this altitude is reached.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_TurnStartVelocity">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_TurnStartVelocity</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnStartVelocity">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_TurnStartVelocity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnStartVelocity" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_TurnStartVelocity">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_TurnStartVelocity</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnStartVelocity">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_TurnStartVelocity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnStartVelocity" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The turn starts when this velocity is reached.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_TurnEndAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_TurnEndAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_TurnEndAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnEndAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_TurnEndAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnEndAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_TurnEndAltitude">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_TurnEndAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_TurnEndAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnEndAltitude">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_TurnEndAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnEndAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The turn ends when this altitude is reached.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_TurnEndAngle">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_TurnEndAngle</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_TurnEndAngle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnEndAngle">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_TurnEndAngle</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnEndAngle" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_TurnEndAngle">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_TurnEndAngle</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_TurnEndAngle" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnEndAngle">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_TurnEndAngle</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnEndAngle" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The final flight path angle.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_TurnShapeExponent">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentClassic_TurnShapeExponent</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_TurnShapeExponent" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnShapeExponent">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_TurnShapeExponent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_TurnShapeExponent" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentClassic_set_TurnShapeExponent">
-void <code class="descname">krpc_MechJeb_AscentClassic_set_TurnShapeExponent</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_set_TurnShapeExponent" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnShapeExponent">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentClassic_set_TurnShapeExponent</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentClassic_t.krpc_MechJeb_AscentClassic_set_TurnShapeExponent" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A value between 0 - 1 describing how steep the turn is.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="ascentgt">
-<h2>AscentGT<a class="headerlink" href="#ascentgt" title="Permalink to this headline">¶</a></h2>
-<dl class="type">
-<dt id="c.krpc_MechJeb_AscentGT_t">
-<code class="descname">krpc_MechJeb_AscentGT_t</code><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t" title="Permalink to this definition">¶</a></dt>
+</section>
+<section id="ascentgt">
+<h2>AscentGT<a class="headerlink" href="#ascentgt" title="Permalink to this heading"></a></h2>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>This profile is similar to the gravity turn mod. It is a 3-burn to orbit style of launch that can get to orbit with about 2800 dV on stock Kerbin.
 If you want to have fun make a rocket that is basically a nose cone, a jumbo-64 a mainsail and some fairly big fins, have the pitch program flip it over aggressively (uncheck the AoA limiter, set the values to like 0.5 / 50 / 40 / 45 / 1) and let it rip.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It’s not precisely the GT mod algorithm and it does not do any pitch-up during the intermediate burn right now, so it won’t handle low TWR upper stages.</p>
+<p class="admonition-title">Note</p>
+<p>It’s not precisely the GT mod algorithm and it does not do any pitch-up during the intermediate burn right now, so it won’t handle low TWR upper stages.</p>
 </div>
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_HoldAPTime">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentGT_HoldAPTime</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_HoldAPTime" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_HoldAPTime">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_HoldAPTime</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_HoldAPTime" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_set_HoldAPTime">
-void <code class="descname">krpc_MechJeb_AscentGT_set_HoldAPTime</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_set_HoldAPTime" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_HoldAPTime">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_set_HoldAPTime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_HoldAPTime" title="Permalink to this definition"></a><br /></dt>
 <dd><p>At the intermediate altitude with this much time-to-apoapsis left the engine will start burning prograde to lift the apoapsis.
 The engine will throttle down in order to burn closer to the apoapsis.
 This is very similar to the lead-time of a maneuver node in concept, but with throttling down in the case where the player has initiated the burn too early (the corollary is that if you see lots of throttling down at the start, you likely need less HoldAP time).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_IntermediateAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentGT_IntermediateAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_IntermediateAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_IntermediateAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_IntermediateAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_IntermediateAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_set_IntermediateAltitude">
-void <code class="descname">krpc_MechJeb_AscentGT_set_IntermediateAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_set_IntermediateAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_IntermediateAltitude">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_set_IntermediateAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_IntermediateAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Intermediate apoapsis altitude to coast to and then raise the apoapsis up to the eventual final target. May be set to equal the final target in order to skip the intermediate phase.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_TurnStartAltitude">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentGT_TurnStartAltitude</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartAltitude">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_TurnStartAltitude</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_set_TurnStartAltitude">
-void <code class="descname">krpc_MechJeb_AscentGT_set_TurnStartAltitude</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_set_TurnStartAltitude" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartAltitude">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_set_TurnStartAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartAltitude" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Altitude in km to pitch over and initiate the Gravity Turn (higher values for lower-TWR rockets).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_TurnStartPitch">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentGT_TurnStartPitch</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_TurnStartPitch" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartPitch">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_TurnStartPitch</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartPitch" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_set_TurnStartPitch">
-void <code class="descname">krpc_MechJeb_AscentGT_set_TurnStartPitch</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_set_TurnStartPitch" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartPitch">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_set_TurnStartPitch</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartPitch" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Pitch that the pitch program immediately applies.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_TurnStartVelocity">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentGT_TurnStartVelocity</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartVelocity">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_TurnStartVelocity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_TurnStartVelocity" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentGT_set_TurnStartVelocity">
-void <code class="descname">krpc_MechJeb_AscentGT_set_TurnStartVelocity</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_set_TurnStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartVelocity">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentGT_set_TurnStartVelocity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentGT_t.krpc_MechJeb_AscentGT_set_TurnStartVelocity" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Velocity in m/s which triggers pitch over and initiates the Gravity Turn (higher values for lower-TWR rockets).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="ascentpvg">
-<h2>AscentPVG<a class="headerlink" href="#ascentpvg" title="Permalink to this headline">¶</a></h2>
-<dl class="type">
-<dt id="c.krpc_MechJeb_AscentPVG_t">
-<code class="descname">krpc_MechJeb_AscentPVG_t</code><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t" title="Permalink to this definition">¶</a></dt>
+</section>
+<section id="ascentpvg">
+<h2>AscentPVG<a class="headerlink" href="#ascentpvg" title="Permalink to this heading"></a></h2>
+<dl class="c type">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t">
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_t</span></span></span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The Primer Vector Guidance (RSS/RO) profile.</p>
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_DesiredApoapsis">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentPVG_DesiredApoapsis</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_DesiredApoapsis" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_AttachAltFlag">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_AttachAltFlag</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_AttachAltFlag" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_set_DesiredApoapsis">
-void <code class="descname">krpc_MechJeb_AscentPVG_set_DesiredApoapsis</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_set_DesiredApoapsis" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_AttachAltFlag">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_AttachAltFlag</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_AttachAltFlag" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DesiredApoapsis">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_DesiredApoapsis</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DesiredApoapsis" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DesiredApoapsis">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_DesiredApoapsis</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DesiredApoapsis" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The target apoapsis in meters.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_PitchStartVelocity">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentPVG_PitchStartVelocity</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_PitchStartVelocity" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DesiredAttachAlt">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_DesiredAttachAlt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DesiredAttachAlt" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_set_PitchStartVelocity">
-void <code class="descname">krpc_MechJeb_AscentPVG_set_PitchStartVelocity</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_set_PitchStartVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DesiredAttachAlt">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_DesiredAttachAlt</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DesiredAttachAlt" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_PitchRate">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentPVG_PitchRate</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, double *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_PitchRate" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DynamicPressureTrigger">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_DynamicPressureTrigger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_DynamicPressureTrigger" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_set_PitchRate">
-void <code class="descname">krpc_MechJeb_AscentPVG_set_PitchRate</code><span class="sig-paren">(</span>double<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_set_PitchRate" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DynamicPressureTrigger">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_DynamicPressureTrigger</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_DynamicPressureTrigger" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_OmitCoast">
-krpc_error_t <code class="descname">krpc_MechJeb_AscentPVG_OmitCoast</code><span class="sig-paren">(</span>krpc_connection_t<em>&nbsp;connection</em>, bool *<em>&nbsp;result</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_OmitCoast" title="Permalink to this definition">¶</a></dt>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_FixedCoast">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_FixedCoast</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_FixedCoast" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="c.krpc_MechJeb_AscentPVG_set_OmitCoast">
-void <code class="descname">krpc_MechJeb_AscentPVG_set_OmitCoast</code><span class="sig-paren">(</span>bool<em>&nbsp;value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_set_OmitCoast" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Game Scenes:</th><td class="field-body">Flight</td>
-</tr>
-</tbody>
-</table>
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_FixedCoast">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_FixedCoast</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_FixedCoast" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_FixedCoastLength">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_FixedCoastLength</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_FixedCoastLength" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_FixedCoastLength">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_FixedCoastLength</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_FixedCoastLength" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_PitchRate">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_PitchRate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_PitchRate" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_PitchRate">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_PitchRate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_PitchRate" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_PitchStartVelocity">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_PitchStartVelocity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_PitchStartVelocity" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_PitchStartVelocity">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_PitchStartVelocity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_PitchStartVelocity" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_StagingTrigger">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_StagingTrigger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_StagingTrigger" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_StagingTrigger">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_StagingTrigger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_StagingTrigger" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_StagingTriggerFlag">
+<span class="n"><span class="pre">krpc_error_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_StagingTriggerFlag</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">krpc_connection_t</span></span><span class="w"> </span><span class="n"><span class="pre">connection</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_StagingTriggerFlag" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c function">
+<dt class="sig sig-object c" id="c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_StagingTriggerFlag">
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">krpc_MechJeb_AscentPVG_set_StagingTriggerFlag</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.krpc_MechJeb_AscentPVG_t.krpc_MechJeb_AscentPVG_set_StagingTriggerFlag" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Game Scenes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Flight</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="docking-autopilot.html" class="btn btn-neutral float-right" title="DockingAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="airplane-autopilot.html" class="btn btn-neutral float-left" title="AirplaneAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="airplane-autopilot.html" class="btn btn-neutral float-left" title="AirplaneAutopilot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="docking-autopilot.html" class="btn btn-neutral float-right" title="DockingAutopilot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

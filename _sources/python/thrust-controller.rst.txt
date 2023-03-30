@@ -39,7 +39,7 @@ ThrustController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: electric_throttle_lo
@@ -47,7 +47,7 @@ ThrustController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: flameout_safety_pct
@@ -55,7 +55,7 @@ ThrustController
       The jet safety margin. A value between 0 and 1.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: limit_acceleration
@@ -119,7 +119,7 @@ ThrustController
       Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: max_dynamic_pressure
@@ -128,7 +128,7 @@ ThrustController
       This avoids that pieces break off during launch because of atmospheric pressure.
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: max_throttle
@@ -136,7 +136,7 @@ ThrustController
       Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: min_throttle
@@ -144,7 +144,7 @@ ThrustController
       Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: smooth_throttle
@@ -160,7 +160,7 @@ ThrustController
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
 

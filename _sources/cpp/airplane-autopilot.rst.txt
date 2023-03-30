@@ -31,6 +31,13 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: double bank_angle()
+   .. function:: void set_bank_angle(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: bool heading_hold_enabled()
    .. function:: void set_heading_hold_enabled(bool value)
 
@@ -47,13 +54,6 @@ AirplaneAutopilot
 
    .. function:: bool roll_hold_enabled()
    .. function:: void set_roll_hold_enabled(bool value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: double roll_max()
-   .. function:: void set_roll_max(double value)
 
 
 
@@ -87,13 +87,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. function:: double vert_speed_max()
-   .. function:: void set_vert_speed_max(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. function:: double vert_speed_target()
    .. function:: void set_vert_speed_target(double value)
 
@@ -122,6 +115,27 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
+   .. function:: double pit_kd()
+   .. function:: void set_pit_kd(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double pit_ki()
+   .. function:: void set_pit_ki(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double pit_kp()
+   .. function:: void set_pit_kp(double value)
+
+
+
+      :Game Scenes: Flight
+
    .. function:: double rol_kd()
    .. function:: void set_rol_kd(double value)
 
@@ -143,27 +157,6 @@ AirplaneAutopilot
 
       :Game Scenes: Flight
 
-   .. function:: double ver_kd()
-   .. function:: void set_ver_kd(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: double ver_ki()
-   .. function:: void set_ver_ki(double value)
-
-
-
-      :Game Scenes: Flight
-
-   .. function:: double ver_kp()
-   .. function:: void set_ver_kp(double value)
-
-
-
-      :Game Scenes: Flight
-
    .. function:: double yaw_kd()
    .. function:: void set_yaw_kd(double value)
 
@@ -180,6 +173,27 @@ AirplaneAutopilot
 
    .. function:: double yaw_kp()
    .. function:: void set_yaw_kp(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double pitch_down_limit()
+   .. function:: void set_pitch_down_limit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double pitch_up_limit()
+   .. function:: void set_pitch_up_limit(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. function:: double roll_limit()
+   .. function:: void set_roll_limit(double value)
 
 
 

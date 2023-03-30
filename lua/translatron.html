@@ -1,91 +1,52 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Translatron &mdash; kRPC.MechJeb 0.6.1 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translatron &mdash; kRPC.MechJeb 0.7.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DeployableController" href="deployable-controller.html" />
     <link rel="prev" title="SmartRCS" href="smart-rcs.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> kRPC.MechJeb
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            kRPC.MechJeb
           </a>
-
-          
-            
-            
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials and Examples</a></li>
@@ -93,7 +54,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/blob/master/.github/CONTRIBUTING.md">Contributing</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Genhis/KRPC.MechJeb/issues/">Report a Bug</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../cnano/index.html">C-nano</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../csharp/index.html">C#</a></li>
@@ -114,228 +75,165 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 </ul>
-<p class="caption"><span class="caption-text">External Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">External Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://krpc.github.io/krpc/">kRPC Documentation</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/MuMech/MechJeb2/wiki">MechJeb2 Wiki</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">kRPC.MechJeb</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Lua</a> &raquo;</li>
-        
-      <li>Translatron</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Lua</a></li>
+      <li class="breadcrumb-item active">Translatron</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/lua/translatron.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="translatron">
-<h1>Translatron<a class="headerlink" href="#translatron" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="MechJeb.Translatron">
-<em class="property">class </em><code class="descname">Translatron</code><a class="headerlink" href="#MechJeb.Translatron" title="Permalink to this definition">¶</a></dt>
+             
+  <section id="translatron">
+<h1>Translatron<a class="headerlink" href="#translatron" title="Permalink to this heading"></a></h1>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.Translatron">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">Translatron</span></span><a class="headerlink" href="#MechJeb.Translatron" title="Permalink to this definition"></a></dt>
 <dd><p>The Translatron module controls the vessel’s throttle/velocity.</p>
-<dl class="attribute">
-<dt id="MechJeb.Translatron.mode">
-<code class="descname">mode</code><a class="headerlink" href="#MechJeb.Translatron.mode" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.Translatron.mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">MechJeb.TranslatronMode</span><a class="headerlink" href="#MechJeb.MechJeb.Translatron.mode" title="Permalink to this definition"></a></dt>
 <dd><p>Current translatron mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#MechJeb.TranslatronMode" title="MechJeb.TranslatronMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.TranslatronMode</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#MechJeb.TranslatronMode" title="MechJeb.TranslatronMode"><code class="xref lua lua-class docutils literal notranslate"><span class="pre">MechJeb.TranslatronMode</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.Translatron.translation_speed">
-<code class="descname">translation_speed</code><a class="headerlink" href="#MechJeb.Translatron.translation_speed" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.Translatron.translation_speed">
+<span class="sig-name descname"><span class="pre">translation_speed</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">number</span><a class="headerlink" href="#MechJeb.MechJeb.Translatron.translation_speed" title="Permalink to this definition"></a></dt>
 <dd><p>Speed which trasnlatron will hold</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">number</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">number</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="MechJeb.Translatron.kill_horizontal_speed">
-<code class="descname">kill_horizontal_speed</code><a class="headerlink" href="#MechJeb.Translatron.kill_horizontal_speed" title="Permalink to this definition">¶</a></dt>
+<dl class="lua attribute">
+<dt class="sig sig-object lua" id="MechJeb.MechJeb.Translatron.kill_horizontal_speed">
+<span class="sig-name descname"><span class="pre">kill_horizontal_speed</span></span><em class="property"><span class="pre">:</span> </em><span class="pre">boolean</span><a class="headerlink" href="#MechJeb.MechJeb.Translatron.kill_horizontal_speed" title="Permalink to this definition"></a></dt>
 <dd><p>Kill horizontal speed</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attribute:</th><td class="field-body">Can be read or written</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Can be read or written</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><code class="xref lua lua-class docutils literal notranslate"><span class="pre">boolean</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="MechJeb.Translatron.panic_switch">
-<code class="descname">panic_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.Translatron.panic_switch" title="Permalink to this definition">¶</a></dt>
+<dl class="lua method">
+<dt class="sig sig-object lua" id="MechJeb.Translatron.panic_switch">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">panic_switch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MechJeb.Translatron.panic_switch" title="Permalink to this definition"></a></dt>
 <dd><p>Abort mission by seperating all but the last stage and activating landing autopilot.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
-<dt id="MechJeb.TranslatronMode">
-<em class="property">class </em><code class="descname">TranslatronMode</code><a class="headerlink" href="#MechJeb.TranslatronMode" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="data">
-<dt id="MechJeb.TranslatronMode.off">
-<code class="descname">off</code><a class="headerlink" href="#MechJeb.TranslatronMode.off" title="Permalink to this definition">¶</a></dt>
+<dl class="lua class">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">MechJeb.</span></span><span class="sig-name descname"><span class="pre">TranslatronMode</span></span><a class="headerlink" href="#MechJeb.TranslatronMode" title="Permalink to this definition"></a></dt>
+<dd><dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.off">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">off</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.off" title="Permalink to this definition"></a></dt>
 <dd><p>Switch off Translatron.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.TranslatronMode.keep_orbital">
-<code class="descname">keep_orbital</code><a class="headerlink" href="#MechJeb.TranslatronMode.keep_orbital" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.keep_orbital">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">keep_orbital</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.keep_orbital" title="Permalink to this definition"></a></dt>
 <dd><p>Keep orbital velocity.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.TranslatronMode.keep_surface">
-<code class="descname">keep_surface</code><a class="headerlink" href="#MechJeb.TranslatronMode.keep_surface" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.keep_surface">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">keep_surface</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.keep_surface" title="Permalink to this definition"></a></dt>
 <dd><p>Keep surface velocity.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.TranslatronMode.keep_vertical">
-<code class="descname">keep_vertical</code><a class="headerlink" href="#MechJeb.TranslatronMode.keep_vertical" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.keep_vertical">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">keep_vertical</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.keep_vertical" title="Permalink to this definition"></a></dt>
 <dd><p>Keep vertical velocity (climb/descent speed).</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.TranslatronMode.keep_relative">
-<code class="descname">keep_relative</code><a class="headerlink" href="#MechJeb.TranslatronMode.keep_relative" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.keep_relative">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">keep_relative</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.keep_relative" title="Permalink to this definition"></a></dt>
 <dd><p>Internal mode, do not set.</p>
 </dd></dl>
 
-<dl class="data">
-<dt id="MechJeb.TranslatronMode.direct">
-<code class="descname">direct</code><a class="headerlink" href="#MechJeb.TranslatronMode.direct" title="Permalink to this definition">¶</a></dt>
+<dl class="lua data">
+<dt class="sig sig-object lua" id="MechJeb.TranslatronMode.direct">
+<em class="property"> </em><span class="sig-name descname"><span class="pre">direct</span></span><a class="headerlink" href="#MechJeb.TranslatronMode.direct" title="Permalink to this definition"></a></dt>
 <dd><p>Internal mode, do not set.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="deployable-controller.html" class="btn btn-neutral float-right" title="DeployableController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="smart-rcs.html" class="btn btn-neutral float-left" title="SmartRCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="smart-rcs.html" class="btn btn-neutral float-left" title="SmartRCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deployable-controller.html" class="btn btn-neutral float-right" title="DeployableController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2021, Genhis
-
-    </p>
+    <p>&#169; Copyright 2018-2023, Genhis.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

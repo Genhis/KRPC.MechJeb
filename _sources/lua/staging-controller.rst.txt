@@ -10,14 +10,14 @@ StagingController
 
 
 
-   .. attribute:: enabled
+   .. attribute:: enabled: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: autostaging_once
+   .. attribute:: autostaging_once: boolean
 
       The autostaging mode. If set to true, it will automatically disable itself after one staging action.
 
@@ -28,63 +28,63 @@ StagingController
 
          The controller needs to be enabled for this to work.
 
-   .. attribute:: autostage_limit
+   .. attribute:: autostage_limit: number
 
       Stop at the selected stage - staging will not occur beyond this stage number.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: autostage_post_delay
+   .. attribute:: autostage_post_delay: number
 
       The autopilot will pause the actual staging after ? seconds for each stage.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: autostage_pre_delay
+   .. attribute:: autostage_pre_delay: number
 
       The autopilot will pause the actual staging before ? seconds for each stage.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: clamp_auto_stage_thrust_pct
+   .. attribute:: clamp_auto_stage_thrust_pct: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: fairing_max_aerothermal_flux
+   .. attribute:: fairing_max_aerothermal_flux: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: fairing_max_dynamic_pressure
+   .. attribute:: fairing_max_dynamic_pressure: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: fairing_min_altitude
+   .. attribute:: fairing_min_altitude: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: hot_staging
+   .. attribute:: hot_staging: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: hot_staging_lead_time
+   .. attribute:: hot_staging_lead_time: number
 
 
 

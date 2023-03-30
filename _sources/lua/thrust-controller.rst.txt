@@ -10,105 +10,105 @@ ThrustController
 
 
 
-   .. attribute:: differential_throttle
+   .. attribute:: differential_throttle: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: differential_throttle_status
+   .. attribute:: differential_throttle_status: MechJeb.DifferentialThrottleStatus
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: :class:`MechJeb.DifferentialThrottleStatus`
 
-   .. attribute:: electric_throttle
+   .. attribute:: electric_throttle: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: electric_throttle_hi
+   .. attribute:: electric_throttle_hi: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: electric_throttle_lo
+   .. attribute:: electric_throttle_lo: number
 
 
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: flameout_safety_pct
+   .. attribute:: flameout_safety_pct: number
 
       The jet safety margin. A value between 0 and 1.
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: limit_acceleration
+   .. attribute:: limit_acceleration: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: limit_dynamic_pressure
+   .. attribute:: limit_dynamic_pressure: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: limit_throttle
+   .. attribute:: limit_throttle: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: limit_to_prevent_flameout
+   .. attribute:: limit_to_prevent_flameout: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: limit_to_prevent_overheats
+   .. attribute:: limit_to_prevent_overheats: boolean
 
       Limits the throttle to prevent parts from overheating.
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: limiter_min_throttle
+   .. attribute:: limiter_min_throttle: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: manage_intakes
+   .. attribute:: manage_intakes: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: max_acceleration
+   .. attribute:: max_acceleration: number
 
       Limit acceleration to [m/s^2] (never exceed the acceleration during ascent).
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: max_dynamic_pressure
+   .. attribute:: max_dynamic_pressure: number
 
       Limit the maximal dynamic pressure in Pa.
       This avoids that pieces break off during launch because of atmospheric pressure.
@@ -116,28 +116,28 @@ ThrustController
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: max_throttle
+   .. attribute:: max_throttle: number
 
       Never exceed the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: min_throttle
+   .. attribute:: min_throttle: number
 
       Never go below the percentage of the throttle during ascent (value between 0 and 1).
 
       :Attribute: Can be read or written
       :rtype: number
 
-   .. attribute:: smooth_throttle
+   .. attribute:: smooth_throttle: boolean
 
 
 
       :Attribute: Can be read or written
       :rtype: boolean
 
-   .. attribute:: throttle_smoothing_time
+   .. attribute:: throttle_smoothing_time: number
 
 
 

@@ -10,32 +10,32 @@ TargetController
 
 
 
-   .. attribute:: can_align
+   .. attribute:: can_align: boolean
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: boolean
 
-   .. attribute:: distance
+   .. attribute:: distance: number
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: number
 
-   .. attribute:: docking_axis
+   .. attribute:: docking_axis: Tuple
 
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: Tuple of (number, number, number)
+      :rtype: Tuple
 
    .. method:: get_position_target_position()
 
 
 
-      :rtype: Tuple of (number, number, number)
+      :rtype: Tuple
 
    .. method:: get_position_target_string()
 
@@ -43,7 +43,7 @@ TargetController
 
       :rtype: string
 
-   .. attribute:: normal_target_exists
+   .. attribute:: normal_target_exists: boolean
 
 
 
@@ -52,33 +52,33 @@ TargetController
 
    .. method:: pick_position_target_on_map()
 
-   .. attribute:: position
+   .. attribute:: position: Tuple
 
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: Tuple of (number, number, number)
+      :rtype: Tuple
 
-   .. attribute:: position_target_exists
+   .. attribute:: position_target_exists: boolean
 
 
 
       :Attribute: Read-only, cannot be set
       :rtype: boolean
 
-   .. attribute:: relative_position
+   .. attribute:: relative_position: Tuple
 
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: Tuple of (number, number, number)
+      :rtype: Tuple
 
-   .. attribute:: relative_velocity
+   .. attribute:: relative_velocity: Tuple
 
 
 
       :Attribute: Read-only, cannot be set
-      :rtype: Tuple of (number, number, number)
+      :rtype: Tuple
 
    .. method:: set_direction_target(name)
 
@@ -94,7 +94,7 @@ TargetController
       :param number latitude:
       :param number longitude:
 
-   .. attribute:: target_orbit
+   .. attribute:: target_orbit: SpaceCenter.Orbit
 
 
 

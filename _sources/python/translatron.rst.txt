@@ -23,7 +23,7 @@ Translatron
       Speed which trasnlatron will hold
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: kill_horizontal_speed

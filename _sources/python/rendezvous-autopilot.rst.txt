@@ -31,7 +31,7 @@ RendezvousAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight
 
    .. attribute:: max_phasing_orbits
@@ -39,5 +39,5 @@ RendezvousAutopilot
 
 
       :Attribute: Can be read or written
-      :rtype: double
+      :rtype: float
       :Game Scenes: Flight

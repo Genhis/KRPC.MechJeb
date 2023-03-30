@@ -438,6 +438,14 @@ AscentPVG
 
    The Primer Vector Guidance (RSS/RO) profile.
 
+   .. method:: boolean getAttachAltFlag()
+
+   .. method:: void setAttachAltFlag(boolean value)
+
+
+
+      :Game Scenes: Flight
+
    .. method:: double getDesiredApoapsis()
 
    .. method:: void setDesiredApoapsis(double value)
@@ -446,9 +454,33 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. method:: double getPitchStartVelocity()
+   .. method:: double getDesiredAttachAlt()
 
-   .. method:: void setPitchStartVelocity(double value)
+   .. method:: void setDesiredAttachAlt(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getDynamicPressureTrigger()
+
+   .. method:: void setDynamicPressureTrigger(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getFixedCoast()
+
+   .. method:: void setFixedCoast(boolean value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: double getFixedCoastLength()
+
+   .. method:: void setFixedCoastLength(double value)
 
 
 
@@ -462,9 +494,25 @@ AscentPVG
 
       :Game Scenes: Flight
 
-   .. method:: boolean getOmitCoast()
+   .. method:: double getPitchStartVelocity()
 
-   .. method:: void setOmitCoast(boolean value)
+   .. method:: void setPitchStartVelocity(double value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: int getStagingTrigger()
+
+   .. method:: void setStagingTrigger(int value)
+
+
+
+      :Game Scenes: Flight
+
+   .. method:: boolean getStagingTriggerFlag()
+
+   .. method:: void setStagingTriggerFlag(boolean value)
 
 
 
