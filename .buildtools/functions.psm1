@@ -87,6 +87,10 @@ function BuildHTML() {
 		}
 	}
 	
+	$docsPath = "output/docs"
+	# Copy conf.py again if this is called as a standalone function.
+	robocopy ../docs $docsPath conf.py > $null
+
 	$htmlPath = "output/html"
 	if(Test-Path $htmlPath) {
 		Echo "Removing html directory"
@@ -94,7 +98,7 @@ function BuildHTML() {
 	}
 	Echo "Building HTML"
 	Echo "=================================================="
-	sphinx-build -b html output/docs $htmlPath
+	sphinx-build -b html $docsPath $htmlPath
 }
 
 function BuildRelease() {

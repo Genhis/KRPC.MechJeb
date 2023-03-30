@@ -23,12 +23,11 @@ def setup(app):
 
 htmlhelp_basename = "krpc-mechjeb-doc"
 
+add_module_names = False
+sphinx_tabs_nowarn = True
+toc_object_entries = False
 todo_include_todos = True
 
 javadoc_url_map = {
     "org.javatuples" : ("http://www.javatuples.org/apidocs/", "javadoc")
 }
-
-add_module_names = False
-
-sphinx_tabs_nowarn = True
