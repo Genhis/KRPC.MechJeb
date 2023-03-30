@@ -57,7 +57,7 @@ namespace KRPC.MechJeb.ExtensionMethods {
 		}
 
 		public static object GetInstanceValue(this FieldInfo field, object instance) {
-			return instance != null ? field.GetValue(instance) : null;
+			return field != null && instance != null ? field.GetValue(instance) : null;
 		}
 	}
 }

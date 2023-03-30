@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated to support KSP 1.12 and kRPC 0.5.2
 ### Fixed
 - `AscentAutopilot#LaunchToTargetPlane` used incorrect timing
+- Initialization of a MechJeb module was interrupted when one of its fields didn't exist anymore ([#15](https://github.com/Genhis/KRPC.MechJeb/issues/15))
 
 ## [0.6.1] - 2021-01-27
 ### Fixed
