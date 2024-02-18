@@ -38,6 +38,7 @@ function BuildClients() {
 		$value = $directory + "/MechJeb." + $extensions[$key]
 		krpc-clientgen $key MechJeb output/KRPC.MechJeb.json -o $value
 	}
+	Copy-Item output/KRPC.MechJeb.json output/clients
 }
 
 function CopyDocumentation() {
