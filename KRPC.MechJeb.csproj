@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>KRPC.MechJeb</RootNamespace>
     <AssemblyName>KRPC.MechJeb</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -40,25 +40,28 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="KRPC, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KRPC, Version=0.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\KRPC.dll</HintPath>
+      <HintPath>..\..\..\..\Kerbal Space Program\GameData\kRPC\KRPC.dll</HintPath>
     </Reference>
-    <Reference Include="KRPC.SpaceCenter, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KRPC.Core">
+      <HintPath>..\..\..\..\Kerbal Space Program\GameData\kRPC\KRPC.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="KRPC.SpaceCenter, Version=0.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\KRPC.SpaceCenter.dll</HintPath>
+      <HintPath>..\..\..\..\Kerbal Space Program\GameData\kRPC\KRPC.SpaceCenter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
