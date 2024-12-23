@@ -42,11 +42,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="KRPC, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KRPC">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\KRPC.dll</HintPath>
     </Reference>
-    <Reference Include="KRPC.SpaceCenter, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="KRPC.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\KRPC.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="KRPC.SpaceCenter">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\KRPC.SpaceCenter.dll</HintPath>
     </Reference>
