@@ -15,9 +15,9 @@ namespace KRPC.MechJeb {
 		internal static FieldInfo launchingToRendezvous;
 
 		internal static void InitType(Type type) {
-			desiredInclination = type.GetField("desiredInclination");
-			launchingToPlane = type.GetField("launchingToPlane");
-			launchingToRendezvous = type.GetField("launchingToRendezvous");
+			desiredInclination = type.GetField("DesiredInclination");
+			launchingToPlane = type.GetField("LaunchingToPlane");
+			launchingToRendezvous = type.GetField("LaunchingToRendezvous");
 		}
 	}
 
@@ -29,7 +29,7 @@ namespace KRPC.MechJeb {
 	/// </remarks>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentAutopilot : KRPCComputerModule {
-		internal new const string MechJebType = "MuMech.MechJebModuleAscentAutopilot";
+		internal new const string MechJebType = "MuMech.MechJebModuleAscentClassicAutopilot";
 
 		// Fields and methods
 		private static FieldInfo status;
@@ -69,27 +69,27 @@ namespace KRPC.MechJeb {
 		private object warpCountDown;
 
 		internal static new void InitType(Type type) {
-			status = type.GetCheckedField("status");
-			ascentPathIdx = type.GetCheckedProperty("ascentPathIdxPublic");
-			desiredOrbitAltitudeField = type.GetCheckedField("desiredOrbitAltitude");
-			autoThrottle = type.GetCheckedField("autoThrottle");
-			correctiveSteering = type.GetCheckedField("correctiveSteering");
-			correctiveSteeringGainField = type.GetCheckedField("correctiveSteeringGain");
-			forceRoll = type.GetCheckedField("forceRoll");
-			verticalRollField = type.GetCheckedField("verticalRoll");
-			turnRollField = type.GetCheckedField("turnRoll");
-			autodeploySolarPanels = type.GetCheckedField("autodeploySolarPanels");
-			autoDeployAntennas = type.GetCheckedField("autoDeployAntennas");
-			skipCircularization = type.GetCheckedField("skipCircularization");
-			autostage = type.GetCheckedProperty("autostage");
-			limitAoA = type.GetCheckedField("limitAoA");
-			maxAoAField = type.GetCheckedField("maxAoA");
-			aoALimitFadeoutPressureField = type.GetCheckedField("aoALimitFadeoutPressure");
-			launchPhaseAngleField = type.GetCheckedField("launchPhaseAngle");
-			launchLANDifferenceField = type.GetCheckedField("launchLANDifference");
-			warpCountDownField = type.GetCheckedField("warpCountDown");
+			status = type.GetCheckedField("Status");
+			ascentPathIdx = type.GetCheckedProperty("AscentPathIdxPublic");
+			desiredOrbitAltitudeField = type.GetCheckedField("DesiredOrbitAltitude");
+			autoThrottle = type.GetCheckedField("AutoThrottle");
+			correctiveSteering = type.GetCheckedField("CorrectiveSteering");
+			correctiveSteeringGainField = type.GetCheckedField("CorrectiveSteeringGain");
+			forceRoll = type.GetCheckedField("ForceRoll");
+			verticalRollField = type.GetCheckedField("VerticalRoll");
+			turnRollField = type.GetCheckedField("TurnRoll");
+			autodeploySolarPanels = type.GetCheckedField("AutodeploySolarPanels");
+			autoDeployAntennas = type.GetCheckedField("AutoDeployAntennas");
+			skipCircularization = type.GetCheckedField("SkipCircularization");
+			autostage = type.GetCheckedProperty("Autostage");
+			limitAoA = type.GetCheckedField("LimitAoA");
+			maxAoAField = type.GetCheckedField("MaxAoA");
+			aoALimitFadeoutPressureField = type.GetCheckedField("AoALimitFadeoutPressure");
+			launchPhaseAngleField = type.GetCheckedField("LaunchPhaseAngle");
+			launchLANDifferenceField = type.GetCheckedField("LaunchLANDifference");
+			warpCountDownField = type.GetCheckedField("WarpCountDown");
 
-			timedLaunch = type.GetCheckedField("timedLaunch");
+			timedLaunch = type.GetCheckedField("TimedLaunch");
 			startCountdown = type.GetCheckedMethod("StartCountdown");
 		}
 

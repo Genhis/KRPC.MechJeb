@@ -20,7 +20,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private object interceptInterval;
 
 		internal static new void InitType(Type type) {
-			interceptIntervalField = type.GetCheckedField("interceptInterval");
+			interceptIntervalField = type.GetCheckedField("InterceptInterval");
 			timeSelector = GetTimeSelectorField(type);
 		}
 
