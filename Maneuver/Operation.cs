@@ -35,7 +35,7 @@ namespace KRPC.MechJeb.Maneuver {
 
 		internal static void InitType(Type type) {
 			errorMessage = type.GetCheckedMethod("GetErrorMessage");
-			makeNodesImpl = type.GetCheckedMethod("MakeNodesImpl");
+			makeNodesImpl = type.GetCheckedMethod("MakeNodesImpl", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		protected internal virtual void InitInstance(object instance) {
@@ -120,12 +120,14 @@ namespace KRPC.MechJeb.Maneuver {
 		}
 
 		protected static FieldInfo GetTimeSelectorField(Type type) {
-			// Need to do it this way because MechJeb does not have a separate TimedOperation class. Instead, the field is duplicated where needed.
-			return type.GetCheckedField("_timeSelector", BindingFlags.NonPublic | BindingFlags.Instance);
+			// _timeSelector only exists on some operations in MechJeb 2.15.x (e.g. OperationResonantOrbit).
+			return type.GetField("_timeSelector", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		protected void InitTimeSelector(FieldInfo timeSelector) {
-			this.TimeSelector.InitInstance(timeSelector.GetInstanceValue(this.instance));
+			// Guard against null instance — operations initialized with null (module absent) must not throw
+			object selectorInstance = (this.instance != null) ? timeSelector?.GetValue(this.instance) : null;
+			this.TimeSelector.InitInstance(selectorInstance);
 		}
 
 		[KRPCProperty]

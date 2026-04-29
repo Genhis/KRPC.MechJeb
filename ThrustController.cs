@@ -33,7 +33,7 @@ namespace KRPC.MechJeb {
 		private static FieldInfo electricThrottleHiField;
 
 		// Translatron fields
-		internal static PropertyInfo tMode;
+		internal static FieldInfo tMode;
 		internal static FieldInfo transSpdAct;
 		internal static FieldInfo transKillH;
 
@@ -47,30 +47,32 @@ namespace KRPC.MechJeb {
 		private object electricThrottleHi;
 
 		internal static new void InitType(Type type) {
-			limitDynamicPressure = type.GetCheckedField("limitDynamicPressure");
-			maxDynamicPressureField = type.GetCheckedField("maxDynamicPressure");
-			limitToPreventOverheats = type.GetCheckedField("limitToPreventOverheats");
-			smoothThrottle = type.GetCheckedField("smoothThrottle");
-			throttleSmoothingTime = type.GetCheckedField("throttleSmoothingTime");
-			limitToPreventFlameout = type.GetCheckedField("limitToPreventFlameout");
-			flameoutSafetyPctField = type.GetCheckedField("flameoutSafetyPct");
-			manageIntakes = type.GetCheckedField("manageIntakes");
-			limitAcceleration = type.GetCheckedField("limitAcceleration");
-			maxAccelerationField = type.GetCheckedField("maxAcceleration");
-			limitThrottle = type.GetCheckedField("limitThrottle");
-			maxThrottleField = type.GetCheckedField("maxThrottle");
-			limiterMinThrottle = type.GetCheckedField("limiterMinThrottle");
-			minThrottleField = type.GetCheckedField("minThrottle");
-			differentialThrottle = type.GetCheckedField("differentialThrottle");
-			differentialThrottleSuccess = type.GetCheckedField("differentialThrottleSuccess");
-			electricThrottle = type.GetCheckedField("electricThrottle");
-			electricThrottleLoField = type.GetCheckedField("electricThrottleLo");
-			electricThrottleHiField = type.GetCheckedField("electricThrottleHi");
+			limitDynamicPressure = type.GetCheckedField("LimitDynamicPressure");
+			maxDynamicPressureField = type.GetField("MaxDynamicPressure") ?? type.GetField("maxDynamicPressure");
+			limitToPreventOverheats = type.GetCheckedField("LimitToPreventOverheats");
+			smoothThrottle = type.GetField("SmoothThrottle") ?? type.GetField("smoothThrottle");
+			throttleSmoothingTime = type.GetCheckedField("ThrottleSmoothingTime");
+			limitToPreventFlameout = type.GetCheckedField("LimitToPreventFlameout");
+			flameoutSafetyPctField = type.GetCheckedField("FlameoutSafetyPct");
+			manageIntakes = type.GetCheckedField("ManageIntakes");
+			limitAcceleration = type.GetCheckedField("LimitAcceleration");
+			maxAccelerationField = type.GetCheckedField("MaxAcceleration");
+			limitThrottle = type.GetCheckedField("LimitThrottle");
+			maxThrottleField = type.GetField("MaxThrottle") ?? type.GetField("maxThrottle");
+			limiterMinThrottle = type.GetCheckedField("LimiterMinThrottle");
+			minThrottleField = type.GetField("MinThrottle") ?? type.GetField("minThrottle");
+			differentialThrottle = type.GetField("DifferentialThrottle") ?? type.GetField("differentialThrottle");
+			differentialThrottleSuccess = type.GetCheckedField("DifferentialThrottleSuccess");
+			electricThrottle = type.GetCheckedField("ElectricThrottle");
+			electricThrottleLoField = type.GetCheckedField("ElectricThrottleLo");
+			electricThrottleHiField = type.GetCheckedField("ElectricThrottleHi");
 
 			// Translatron fields
-			tMode = type.GetCheckedProperty("tmode");
-			transSpdAct = type.GetCheckedField("trans_spd_act");
-			transKillH = type.GetCheckedField("trans_kill_h");
+			// _tmode is private in MechJeb 2.15.x — requires NonPublic binding; fall back to public tmode for older versions
+			tMode = type.GetField("_tmode", BindingFlags.NonPublic | BindingFlags.Instance)
+			     ?? type.GetField("tmode");
+			transSpdAct = type.GetCheckedField("TransSpdAct");
+			transKillH = type.GetCheckedField("TransKillH");
 		}
 
 		protected internal override void InitInstance(object instance) {

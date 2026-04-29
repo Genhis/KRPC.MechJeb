@@ -4,23 +4,17 @@ using System.Reflection;
 using KRPC.MechJeb.ExtensionMethods;
 
 namespace KRPC.MechJeb.Util {
+	// MuMech.LaunchTiming was removed in MechJeb 2.15.x.
+	// LaunchToRendezvous in AscentAutopilot will throw NotSupportedException if called.
 	internal static class LaunchTiming {
-		internal const string MechJebType = "MuMech.LaunchTiming";
-
-		// Fields and methods
-		private static MethodInfo timeToPhaseAngle;
-
-		internal static void InitType(Type type) {
-			timeToPhaseAngle = type.GetCheckedMethod("TimeToPhaseAngle");
-		}
-
 		public static double TimeToPhaseAngle(double launchPhaseAngle) {
-			return (double)timeToPhaseAngle.Invoke(null, new object[] { launchPhaseAngle, FlightGlobals.ActiveVessel.mainBody, MechJeb.vesselState.Longitude, MechJeb.TargetController.TargetOrbit.InternalOrbit });
+			throw new NotSupportedException("LaunchTiming.TimeToPhaseAngle is not available in MechJeb 2.15.x");
 		}
 	}
 
 	internal static class MathFunctions {
-		internal const string MechJebType = "MechJebLib.Maths.Functions";
+		// Renamed from MechJebLib.Maths.Functions to MechJebLib.Functions.Astro in MechJeb 2.15.x
+		internal const string MechJebType = "MechJebLib.Functions.Astro";
 
 		// Fields and methods
 		private static MethodInfo timeToPlane;

@@ -10,9 +10,10 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentClassic : AscentBase {
-		internal new const string MechJebType = "MuMech.MechJebModuleAscentClassic";
+		// In MechJeb 2.15.x, MechJebModuleAscentClassic was removed.
+		// Settings now live in MechJebModuleAscentSettings (initialized by AscentAutopilot.InitType).
 
-		// Fields and methods
+		// Fields and methods (looked up against MechJebModuleAscentSettings)
 		private static FieldInfo turnStartAltitudeField;
 		private static FieldInfo turnStartVelocityField;
 		private static FieldInfo turnEndAltitudeField;
@@ -21,9 +22,6 @@ namespace KRPC.MechJeb {
 		private static FieldInfo autoPath;
 		private static FieldInfo autoTurnPerc;
 		private static FieldInfo autoTurnSpdFactor;
-		private static PropertyInfo autoTurnStartAltitude;
-		private static PropertyInfo autoTurnStartVelocity;
-		private static PropertyInfo autoTurnEndAltitude;
 
 		// Instance objects
 		private object turnStartAltitude;
@@ -33,17 +31,15 @@ namespace KRPC.MechJeb {
 		private object turnShapeExponent;
 
 		internal static new void InitType(Type type) {
-			turnStartAltitudeField = type.GetCheckedField("turnStartAltitude");
-			turnStartVelocityField = type.GetCheckedField("turnStartVelocity");
-			turnEndAltitudeField = type.GetCheckedField("turnEndAltitude");
-			turnEndAngleField = type.GetCheckedField("turnEndAngle");
-			turnShapeExponentField = type.GetCheckedField("turnShapeExponent");
-			autoPath = type.GetCheckedField("autoPath");
-			autoTurnPerc = type.GetCheckedField("autoTurnPerc");
-			autoTurnSpdFactor = type.GetCheckedField("autoTurnSpdFactor");
-			autoTurnStartAltitude = type.GetCheckedProperty("autoTurnStartAltitude");
-			autoTurnStartVelocity = type.GetCheckedProperty("autoTurnStartVelocity");
-			autoTurnEndAltitude = type.GetCheckedProperty("autoTurnEndAltitude");
+			// type = MuMech.MechJebModuleAscentSettings (called by AscentAutopilot.InitType)
+			turnStartAltitudeField = type.GetField("TurnStartAltitude");
+			turnStartVelocityField = type.GetField("TurnStartVelocity");
+			turnEndAltitudeField = type.GetField("TurnEndAltitude");
+			turnEndAngleField = type.GetField("TurnEndAngle");
+			turnShapeExponentField = type.GetField("TurnShapeExponent");
+			autoPath = type.GetField("AutoPath");
+			autoTurnPerc = type.GetField("AutoTurnPerc");
+			autoTurnSpdFactor = type.GetField("AutoTurnSpdFactor");
 		}
 
 		protected internal override void InitInstance(object instance) {
@@ -128,13 +124,7 @@ namespace KRPC.MechJeb {
 			set => autoTurnSpdFactor.SetValue(this.instance, value);
 		}
 
-		[KRPCProperty]
-		public double AutoTurnStartAltitude => EditableDouble.Get(autoTurnStartAltitude);
-
-		[KRPCProperty]
-		public double AutoTurnStartVelocity => EditableDouble.Get(autoTurnStartVelocity);
-
-		[KRPCProperty]
-		public double AutoTurnEndAltitude => EditableDouble.Get(autoTurnEndAltitude);
+		// AutoTurnStartAltitude, AutoTurnStartVelocity, AutoTurnEndAltitude were computed properties
+		// in MechJebModuleAscentClassic; they no longer exist in MechJeb 2.15.x AscentSettings.
 	}
 }

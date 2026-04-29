@@ -23,9 +23,9 @@ namespace KRPC.MechJeb {
 		private object tolerance;
 
 		internal static new void InitType(Type type) {
-			autowarp = type.GetCheckedField("autowarp");
-			leadTimeField = type.GetCheckedField("leadTime");
-			toleranceField = type.GetCheckedField("tolerance");
+			autowarp = type.GetCheckedField("Autowarp");
+			leadTimeField = type.GetField("LeadTime") ?? type.GetField("leadTime");
+			toleranceField = type.GetField("Tolerance") ?? type.GetField("tolerance");
 
 			executeOneNode = type.GetCheckedMethod("ExecuteOneNode");
 			executeAllNodes = type.GetCheckedMethod("ExecuteAllNodes");

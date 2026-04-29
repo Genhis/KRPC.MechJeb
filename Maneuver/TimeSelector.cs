@@ -97,13 +97,15 @@ namespace KRPC.MechJeb.Maneuver {
 
 		internal static void InitType(Type type) {
 			allowedTimeRefField = type.GetCheckedField("_allowedTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
-			currentTimeRef = type.GetCheckedField("_currentTimeRef", BindingFlags.NonPublic | BindingFlags.Instance);
+			currentTimeRef = type.GetCheckedField("_currentTimeRef", BindingFlags.Public | BindingFlags.Instance);
 			leadTimeField = type.GetCheckedField("LeadTime");
 			circularizeAltitudeField = type.GetCheckedField("CircularizeAltitude");
 		}
 
 		protected internal void InitInstance(object instance) {
 			this.instance = instance;
+			if(instance == null)
+				return;
 
 			this.allowedTimeRef = (int[])allowedTimeRefField.GetInstanceValue(instance);
 			this.leadTime = leadTimeField.GetInstanceValue(instance);

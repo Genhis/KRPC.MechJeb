@@ -38,23 +38,28 @@ namespace KRPC.MechJeb {
 		}
 
 		internal static void InitType(Type type) {
-			operationsField = type.GetCheckedField("_operation", BindingFlags.NonPublic | BindingFlags.Instance);
+			// In MechJeb 2.15.x, _operations moved out of MechJebModuleManeuverPlanner.
+			// Use GetField (non-throwing) so missing field doesn't abort initialisation.
+			operationsField = type.GetField("_operations", BindingFlags.NonPublic | BindingFlags.Instance);
 		}
 
 		protected internal override void InitInstance(object instance) {
-			Dictionary<string, object> operations = instance != null ? ((object[])operationsField.GetValue(instance)).ToDictionary(el => el.GetType().FullName, el => el) : new Dictionary<string, object>();
+			Dictionary<string, object> operations = new Dictionary<string, object>();
+			if(instance != null && operationsField != null) {
+				var raw = operationsField.GetValue(instance);
+				if(raw is object[] arr)
+					operations = arr.ToDictionary(el => el.GetType().FullName, el => el);
+				else if(raw is System.Collections.IEnumerable list)
+					foreach(var el in list)
+						operations[el.GetType().FullName] = el;
+			}
 
 			foreach(KeyValuePair<string, Operation> p in this.operations) {
 				string operationType = "MuMech." + p.Key;
-				if(instance == null)
+				if(instance == null || !operations.TryGetValue(operationType, out object operationInstance))
 					p.Value.InitInstance(null);
-				else if(operations.TryGetValue(operationType, out object operationInstance))
+				else
 					p.Value.InitInstance(operationInstance);
-				else {
-					string error = "Operation " + p.Value.GetType().Name + " cannot be initialized";
-					Logger.Severe(error + ": " + operationType + " not found");
-					MechJeb.errors.Add(error);
-				}
 			}
 		}
 
