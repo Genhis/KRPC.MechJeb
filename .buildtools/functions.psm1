@@ -1,7 +1,25 @@
+$env:PYTHONWARNINGS = "ignore"
+
+$kspDirectory = $env:KSP_DIR
+if(!$kspDirectory) {
+	$kspDirectory = "C:/Program Files (x86)/Kerbal Space Program Dev"
+}
+$krpcDirectory = Join-Path $kspDirectory "GameData/kRPC"
+
 function BuildDefinitions() {
 	Echo "Building definitions"
 	$null = New-Item -ItemType Directory -Force -Path "output"
-	krpc-servicedefs "C:/Steam/steamapps/common/Kerbal Space Program" MechJeb ../bin/Release/KRPC.MechJeb.dll ../lib/KRPC.SpaceCenter.dll -o output/KRPC.MechJeb.json
+
+	# The krpctools 0.7.0 package ships a Linux launcher. Run its .NET DLL on Windows.
+	$serviceDefinitions = python -c "from importlib.resources import files; print(files('krpctools').joinpath('bin', 'ServiceDefinitions.dll'))"
+	if($LASTEXITCODE -ne 0) {
+		throw "Could not locate the kRPC service definition tool."
+	}
+	$managedDirectory = Join-Path $kspDirectory "KSP_x64_Data/Managed"
+	dotnet $serviceDefinitions "--reference-dir=$managedDirectory" "--reference-dir=$krpcDirectory" -o output/KRPC.MechJeb.json MechJeb ../bin/Release/KRPC.MechJeb.dll "$krpcDirectory/KRPC.SpaceCenter.dll"
+	if($LASTEXITCODE -ne 0) {
+		throw "Could not generate the MechJeb service definition."
+	}
 }
 
 function BuildClients() {
@@ -17,6 +35,11 @@ function BuildClients() {
 		cpp = "C++"
 		csharp = "C#"
 		java = "Java"
+	}
+
+	$includes = @{
+		cnano = "SpaceCenter=krpc_cnano/services/space_center.h"
+		cpp = "SpaceCenter=krpc/services/space_center.hpp"
 	}
 	
 	BuildDefinitions
@@ -36,7 +59,14 @@ function BuildClients() {
 		$null = New-Item -ItemType Directory -Force -Path $directory
 		
 		$value = $directory + "/MechJeb." + $extensions[$key]
-		krpc-clientgen $key MechJeb output/KRPC.MechJeb.json -o $value
+		$includeArguments = @()
+		if($includes.ContainsKey($key)) {
+			$includeArguments = @("--include", $includes[$key])
+		}
+		krpc-clientgen $key MechJeb output/KRPC.MechJeb.json "$krpcDirectory/KRPC.SpaceCenter.json" @includeArguments -o $value
+		if($LASTEXITCODE -ne 0) {
+			throw "Could not generate the $($names[$key]) client binding."
+		}
 	}
 	Copy-Item output/KRPC.MechJeb.json output/clients
 }
@@ -108,6 +138,7 @@ function BuildRelease() {
 	Echo "Building release archive"
 	$source = "output/clients"
 	Copy-Item ../bin/Release/KRPC.MechJeb.dll $source
+	Copy-Item ../bin/Release/KRPC.MechJeb.xml $source
 	Copy-Item ../CHANGELOG.md $source
 	Copy-Item ../LICENSE $source
 	Copy-Item ../README.md $source

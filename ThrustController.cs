@@ -13,8 +13,6 @@ namespace KRPC.MechJeb {
 		private static FieldInfo limitDynamicPressure;
 		private static FieldInfo maxDynamicPressureField;
 		private static FieldInfo limitToPreventOverheats;
-		private static FieldInfo smoothThrottle;
-		private static FieldInfo throttleSmoothingTime;
 		private static FieldInfo limitToPreventFlameout;
 		//private static FieldInfo limitToPreventUnstableIgnition;
 		//private static FieldInfo autoRCSUllaging;
@@ -47,30 +45,28 @@ namespace KRPC.MechJeb {
 		private object electricThrottleHi;
 
 		internal static new void InitType(Type type) {
-			limitDynamicPressure = type.GetCheckedField("limitDynamicPressure");
-			maxDynamicPressureField = type.GetCheckedField("maxDynamicPressure");
-			limitToPreventOverheats = type.GetCheckedField("limitToPreventOverheats");
-			smoothThrottle = type.GetCheckedField("smoothThrottle");
-			throttleSmoothingTime = type.GetCheckedField("throttleSmoothingTime");
-			limitToPreventFlameout = type.GetCheckedField("limitToPreventFlameout");
-			flameoutSafetyPctField = type.GetCheckedField("flameoutSafetyPct");
-			manageIntakes = type.GetCheckedField("manageIntakes");
-			limitAcceleration = type.GetCheckedField("limitAcceleration");
-			maxAccelerationField = type.GetCheckedField("maxAcceleration");
-			limitThrottle = type.GetCheckedField("limitThrottle");
-			maxThrottleField = type.GetCheckedField("maxThrottle");
-			limiterMinThrottle = type.GetCheckedField("limiterMinThrottle");
-			minThrottleField = type.GetCheckedField("minThrottle");
-			differentialThrottle = type.GetCheckedField("differentialThrottle");
-			differentialThrottleSuccess = type.GetCheckedField("differentialThrottleSuccess");
-			electricThrottle = type.GetCheckedField("electricThrottle");
-			electricThrottleLoField = type.GetCheckedField("electricThrottleLo");
-			electricThrottleHiField = type.GetCheckedField("electricThrottleHi");
+			limitDynamicPressure = type.GetCheckedField("LimitDynamicPressure");
+			maxDynamicPressureField = type.GetCheckedField("MaxDynamicPressure");
+			limitToPreventOverheats = type.GetCheckedField("LimitToPreventOverheats");
+			limitToPreventFlameout = type.GetCheckedField("LimitToPreventFlameout");
+			flameoutSafetyPctField = type.GetCheckedField("FlameoutSafetyPct");
+			manageIntakes = type.GetCheckedField("ManageIntakes");
+			limitAcceleration = type.GetCheckedField("LimitAcceleration");
+			maxAccelerationField = type.GetCheckedField("MaxAcceleration");
+			limitThrottle = type.GetCheckedField("LimitThrottle");
+			maxThrottleField = type.GetCheckedField("MaxThrottle");
+			limiterMinThrottle = type.GetCheckedField("LimiterMinThrottle");
+			minThrottleField = type.GetCheckedField("MinThrottle");
+			differentialThrottle = type.GetCheckedField("DifferentialThrottle");
+			differentialThrottleSuccess = type.GetCheckedField("DifferentialThrottleSuccess");
+			electricThrottle = type.GetCheckedField("ElectricThrottle");
+			electricThrottleLoField = type.GetCheckedField("ElectricThrottleLo");
+			electricThrottleHiField = type.GetCheckedField("ElectricThrottleHi");
 
 			// Translatron fields
-			tMode = type.GetCheckedProperty("tmode");
-			transSpdAct = type.GetCheckedField("trans_spd_act");
-			transKillH = type.GetCheckedField("trans_kill_h");
+			tMode = type.GetCheckedProperty("Tmode");
+			transSpdAct = type.GetCheckedField("TransSpdAct");
+			transKillH = type.GetCheckedField("TransKillH");
 		}
 
 		protected internal override void InitInstance(object instance) {
@@ -157,18 +153,6 @@ namespace KRPC.MechJeb {
 		public double MinThrottle {
 			get => EditableDouble.Get(this.minThrottle);
 			set => EditableDouble.Set(this.minThrottle, value);
-		}
-
-		[KRPCProperty]
-		public bool SmoothThrottle {
-			get => (bool)smoothThrottle.GetValue(this.instance);
-			set => smoothThrottle.SetValue(this.instance, value);
-		}
-
-		[KRPCProperty]
-		public double ThrottleSmoothingTime {
-			get => (double)throttleSmoothingTime.GetValue(this.instance);
-			set => throttleSmoothingTime.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]

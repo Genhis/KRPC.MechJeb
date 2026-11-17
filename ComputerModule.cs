@@ -27,8 +27,8 @@ namespace KRPC.MechJeb {
 		internal static void InitType(Type type) {
 			onFixedUpdate = type.GetCheckedMethod("OnFixedUpdate");
 
-			enabled = type.GetCheckedProperty("enabled");
-			usersField = type.GetCheckedField("users");
+			enabled = type.GetCheckedProperty("Enabled");
+			usersField = type.GetCheckedField("Users");
 		}
 
 		protected internal override void InitInstance(object instance) {
@@ -49,6 +49,20 @@ namespace KRPC.MechJeb {
 
 		internal void OnFixedUpdate() {
 			onFixedUpdate.Invoke(this.instance, null);
+		}
+
+		internal static bool IsEnabled(object moduleInstance) {
+			return moduleInstance != null && (bool)enabled.GetValue(moduleInstance, null);
+		}
+
+		internal static void SetEnabled(object moduleInstance, object caller, bool value) {
+			if(moduleInstance == null)
+				return;
+			object usersObj = usersField.GetValue(moduleInstance);
+			if(value)
+				UserPool.usersAdd.Invoke(usersObj, new object[] { caller });
+			else
+				UserPool.usersRemove.Invoke(usersObj, new object[] { caller });
 		}
 
 		private static class UserPool {
@@ -82,7 +96,7 @@ namespace KRPC.MechJeb {
 		public string Status => (string)status.GetValue(this.instance, null);
 
 		internal static new void InitType(Type type) {
-			status = type.GetCheckedProperty("status");
+			status = type.GetCheckedProperty("Status");
 		}
 	}
 

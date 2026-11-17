@@ -14,14 +14,13 @@ ascent.force_roll = True
 ascent.vertical_roll = 90
 ascent.turn_roll = 90
 
-ascent.ascent_path_index = 0 #use AscentClassic as the ascent path
+ascent.ascent_type = 0 #use the Classic ascent profile
 
-path = ascent.ascent_path_classic
-path.turn_shape_exponent = 0.5 #set the turn shape to 50%
-path.auto_path = False #don't use autopath
-path.turn_start_altitude = 3000
-path.turn_start_velocity = 120
-path.turn_end_altitude = 65000
+ascent.turn_shape_exponent = 0.5 #set the turn shape to 50%
+ascent.auto_path = False #don't use autopath
+ascent.turn_start_altitude = 3000
+ascent.turn_start_velocity = 120
+ascent.turn_end_altitude = 65000
 
 ascent.autostage = True
 ascent.enabled = True

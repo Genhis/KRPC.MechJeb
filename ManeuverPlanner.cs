@@ -38,7 +38,7 @@ namespace KRPC.MechJeb {
 		}
 
 		internal static void InitType(Type type) {
-			operationsField = type.GetCheckedField("operation", BindingFlags.NonPublic | BindingFlags.Instance);
+			operationsField = type.GetCheckedField("_operation", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
 		}
 
 		protected internal override void InitInstance(object instance) {

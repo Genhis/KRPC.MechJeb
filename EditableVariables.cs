@@ -11,7 +11,7 @@ namespace KRPC.MechJeb {
 		private static PropertyInfo value;
 
 		internal static void InitType(Type type) {
-			value = type.GetCheckedProperty("val");
+			value = type.GetCheckedProperty("Val");
 		}
 
 		public static double Get(object instance) {
@@ -40,8 +40,8 @@ namespace KRPC.MechJeb {
 		private static FieldInfo text;
 
 		internal static void InitType(Type type) {
-			value = type.GetCheckedField("val");
-			text = type.GetCheckedField("_text");
+			value = type.GetCheckedField("ValConfig");
+			text = type.GetCheckedField("TextConfig");
 		}
 
 		public static int Get(object instance) {
@@ -61,7 +61,7 @@ namespace KRPC.MechJeb {
 		private static PropertyInfo value;
 
 		internal static void InitType(Type type) {
-			value = type.GetCheckedProperty("value");
+			value = type.GetCheckedProperty("Value");
 		}
 
 		public static double Get(object instance) {

@@ -5,13 +5,13 @@ using KRPC.MechJeb.ExtensionMethods;
 
 namespace KRPC.MechJeb.Util {
 	internal static class LaunchTiming {
-		internal const string MechJebType = "MuMech.LaunchTiming";
+		internal const string MechJebType = "MuMech.MechJebModuleAscentMenu";
 
 		// Fields and methods
 		private static MethodInfo timeToPhaseAngle;
 
 		internal static void InitType(Type type) {
-			timeToPhaseAngle = type.GetCheckedMethod("TimeToPhaseAngle");
+			timeToPhaseAngle = type.GetCheckedMethod("TimeToPhaseAngle", BindingFlags.NonPublic | BindingFlags.Static);
 		}
 
 		public static double TimeToPhaseAngle(double launchPhaseAngle) {
@@ -20,7 +20,7 @@ namespace KRPC.MechJeb.Util {
 	}
 
 	internal static class MathFunctions {
-		internal const string MechJebType = "MechJebLib.Maths.Functions";
+		internal const string MechJebType = "MechJebLib.Functions.Astro";
 
 		// Fields and methods
 		private static MethodInfo timeToPlane;

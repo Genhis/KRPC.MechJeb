@@ -12,7 +12,6 @@ namespace KRPC.MechJeb {
 		// Fields and methods
 		private static FieldInfo autowarp;
 		private static FieldInfo leadTimeField;
-		private static FieldInfo toleranceField;
 
 		private static MethodInfo executeOneNode;
 		private static MethodInfo executeAllNodes;
@@ -23,9 +22,8 @@ namespace KRPC.MechJeb {
 		private object tolerance;
 
 		internal static new void InitType(Type type) {
-			autowarp = type.GetCheckedField("autowarp");
-			leadTimeField = type.GetCheckedField("leadTime");
-			toleranceField = type.GetCheckedField("tolerance");
+			autowarp = type.GetCheckedField("Autowarp");
+			leadTimeField = type.GetCheckedField("LeadTime");
 
 			executeOneNode = type.GetCheckedMethod("ExecuteOneNode");
 			executeAllNodes = type.GetCheckedMethod("ExecuteAllNodes");
@@ -36,7 +34,6 @@ namespace KRPC.MechJeb {
 			base.InitInstance(instance);
 
 			this.leadTime = leadTimeField.GetInstanceValue(instance);
-			this.tolerance = toleranceField.GetInstanceValue(instance);
 		}
 
 		[KRPCProperty]

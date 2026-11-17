@@ -3,7 +3,32 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.9.0]
+### Changed
+- Built for KSP 1.12.5, kRPC 0.7.0 and MechJeb 2.15.4
+- Regenerated client bindings with the kRPC 0.7.0 tools
+
+### Removed
+- `SmoothThrottle` and `ThrottleSmoothingTime` from **ThrustController** because MechJeb removed throttle smoothing
+
+## [0.8.1]
+### Fixed
+- `Enabled` property on **AscentAutopilot** was not exposed through kRPC after the 0.8.0 refactor
+- Updated documentation to bring it in line with 0.8.0 refactor
+- Wrapper instances became disconnected from the active vessel after a quicksave reload because the re-init trigger only watched for `FlightGlobals.ActiveVessel` reference changes; it now also re-inits when the cached `MasterMechJeb` PartModule has been destroyed
+
+## [0.8.0]
+### Added
+- Refactored **AscentAutopilot** for MechJeb 2.15.x; rebuilt against the new `MechJebModuleAscentSettings` / `MechJebModuleAscentBaseAutopilot` split
+- `DesiredLan`, `OverrideWarpToPlane`, `RollAltitude`, `LimitingAoA`, `LimitQa`, `LimitQaEnabled`, `CurrentMaxAoA` to **AscentAutopilot**
+- `DesiredAttachAltFixed`, `DesiredFPA`, `CoastBeforeFlag`, `MinDeltaV`, `LastStage`, `OptimizeStage`, `OptimizeStageFlag`, `CoastStage`, `CoastStageFlag`, `SpinupStage`, `SpinupStageFlag`, `SpinupAngularVelocity`, `SpinupLeadTime`, `UnguidedStages`, `UnguidedStagesFlag` to **AscentAutopilot** (PVG)
+- `LaunchToLan(double)` and `LaunchToMatchLan()` methods to **AscentAutopilot**, plus `Lan` and `MatchLan` variants on `AscentLaunchMode`
+- `Roll` property to **SmartASS** exposing the roll target (MechJeb's `rol` field) used by the orbital (`Prograde`, `Retrograde`, `NormalPlus`, `NormalMinus`, `RadialPlus`, `RadialMinus`), target (`TargetPlus`, `TargetMinus`, `RelativePlus`, `RelativeMinus`, `ParallelPlus`, `ParallelMinus`), kill rotation (`KillRot`) and node (`Node`) modes when `ForceRoll` is enabled
+### Changed
+- **AscentAutopilot** is now flat — all path-specific settings live directly on the autopilot instead of on `AscentPathClassic` / `AscentPathPVG` sub-properties
+- `AscentType` is now a two-valued selector (`0` Classic, `1` PVG); the gravity-turn path was removed in MechJeb 2.15
+### Removed
+- `AscentPathClassic` and `AscentPathPVG` sub-properties on **AscentAutopilot** — their fields now live on **AscentAutopilot** directly
 
 ## [0.7.1] - 2024-12-23
 ### Changed
@@ -135,7 +160,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **StagingController**
 - **TargetController** to get information about the current target
 
-[Unreleased]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.7.1...HEAD
+[Unreleased]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.8.1...v0.9.0
+[0.8.1]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.8.0...v0.8.1
+[0.8.0]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.6.1...v0.7.0
 [0.6.1]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.6.0...v0.6.1

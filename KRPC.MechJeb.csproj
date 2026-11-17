@@ -91,9 +91,6 @@
     <Compile Include="Util\Vector6.cs" />
     <Compile Include="AirplaneAutopilot.cs" />
     <Compile Include="AscentAutopilot.cs" />
-    <Compile Include="AscentClassic.cs" />
-    <Compile Include="AscentGT.cs" />
-    <Compile Include="AscentPVG.cs" />
     <Compile Include="ComputerModule.cs" />
     <Compile Include="DeployableController.cs" />
     <Compile Include="DockingAutopilot.cs" />

@@ -18,7 +18,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private object moonReturnAltitude;
 
 		internal static new void InitType(Type type) {
-			moonReturnAltitudeField = type.GetCheckedField("moonReturnAltitude");
+			moonReturnAltitudeField = type.GetCheckedField("MoonReturnAltitude");
 		}
 
 		protected internal override void InitInstance(object instance) {

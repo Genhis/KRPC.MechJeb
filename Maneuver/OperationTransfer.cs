@@ -16,44 +16,66 @@ namespace KRPC.MechJeb.Maneuver {
 		internal new const string MechJebType = "MuMech.OperationGeneric";
 
 		// Fields and methods
-		private static FieldInfo interceptOnly;
-		private static FieldInfo periodOffsetField;
-		private static FieldInfo simpleTransfer;
+		private static FieldInfo capture;
+		private static FieldInfo planCapture;
+		private static FieldInfo rendezvous;
+		private static FieldInfo lagTimeField;
+		private static FieldInfo coplanar;
 		private static FieldInfo timeSelector;
 
 		// Instance objects
-		private object periodOffset;
+		private object lagTime;
 
 		internal static new void InitType(Type type) {
-			interceptOnly = type.GetCheckedField("intercept_only");
-			periodOffsetField = type.GetCheckedField("periodOffset");
-			simpleTransfer = type.GetCheckedField("simpleTransfer");
+			capture = type.GetCheckedField("Capture");
+			planCapture = type.GetCheckedField("PlanCapture");
+			rendezvous = type.GetCheckedField("Rendezvous");
+			lagTimeField = type.GetCheckedField("LagTime");
+			coplanar = type.GetCheckedField("Coplanar");
 			timeSelector = GetTimeSelectorField(type);
 		}
 
 		protected internal override void InitInstance(object instance) {
 			base.InitInstance(instance);
 
-			this.periodOffset = periodOffsetField.GetInstanceValue(instance);
+			this.lagTime = lagTimeField.GetInstanceValue(instance);
 			this.InitTimeSelector(timeSelector);
 		}
 
 		/// <summary>
-		/// Intercept only, no capture burn (impact/flyby)
+		/// Perform capture burn
 		/// </summary>
 		[KRPCProperty]
-		public bool InterceptOnly {
-			get => (bool)interceptOnly.GetValue(this.instance);
-			set => interceptOnly.SetValue(this.instance, value);
+		public bool Capture {
+			get => (bool)capture.GetValue(this.instance);
+			set => capture.SetValue(this.instance, value);
+		}
+
+		/// <summary>
+		/// Plan insertion burn
+		/// </summary>
+		[KRPCProperty]
+		public bool PlanCapture {
+			get => (bool)planCapture.GetValue(this.instance);
+			set => planCapture.SetValue(this.instance, value);
+		}
+
+		/// <summary>
+		/// Perform rendezvous, vs simple transfer
+		/// </summary>
+		[KRPCProperty]
+		public bool Rendezvous {
+			get => (bool)rendezvous.GetValue(this.instance);
+			set => rendezvous.SetValue(this.instance, value);
 		}
 
 		/// <summary>
 		/// Fractional target period offset
 		/// </summary>
 		[KRPCProperty]
-		public double PeriodOffset {
-			get => EditableDouble.Get(this.periodOffset);
-			set => EditableDouble.Set(this.periodOffset, value);
+		public double LagTime {
+			get => EditableDouble.Get(this.lagTime);
+			set => EditableDouble.Set(this.lagTime, value);
 		}
 
 		/// <summary>
@@ -62,9 +84,9 @@ namespace KRPC.MechJeb.Maneuver {
 		/// </summary>
 		/// <remarks>If set to true, TimeSelector property is ignored.</remarks>
 		[KRPCProperty]
-		public bool SimpleTransfer {
-			get => (bool)simpleTransfer.GetValue(this.instance);
-			set => simpleTransfer.SetValue(this.instance, value);
+		public bool Coplanar {
+			get => (bool)coplanar.GetValue(this.instance);
+			set => coplanar.SetValue(this.instance, value);
 		}
 	}
 }

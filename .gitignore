@@ -1,4 +1,7 @@
 .buildtools/output
+.vs
 bin
 lib
 obj
+*.sln
+.claude

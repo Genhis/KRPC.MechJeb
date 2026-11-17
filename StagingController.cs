@@ -35,18 +35,18 @@ namespace KRPC.MechJeb {
 		private object hotStagingLeadTime;
 
 		internal static new void InitType(Type type) {
-			autostagePreDelayField = type.GetCheckedField("autostagePreDelay");
-			autostagePostDelayField = type.GetCheckedField("autostagePostDelay");
-			autostageLimitField = type.GetCheckedField("autostageLimit");
-			fairingMaxDynamicPressureField = type.GetCheckedField("fairingMaxDynamicPressure");
-			fairingMinAltitudeField = type.GetCheckedField("fairingMinAltitude");
-			clampAutoStageThrustPctField = type.GetCheckedField("clampAutoStageThrustPct");
-			fairingMaxAerothermalFluxField = type.GetCheckedField("fairingMaxAerothermalFlux");
+			autostagePreDelayField = type.GetCheckedField("AutostagePreDelay");
+			autostagePostDelayField = type.GetCheckedField("AutostagePostDelay");
+			autostageLimitField = type.GetCheckedField("AutostageLimit");
+			fairingMaxDynamicPressureField = type.GetCheckedField("FairingMaxDynamicPressure");
+			fairingMinAltitudeField = type.GetCheckedField("FairingMinAltitude");
+			clampAutoStageThrustPctField = type.GetCheckedField("ClampAutoStageThrustPct");
+			fairingMaxAerothermalFluxField = type.GetCheckedField("FairingMaxAerothermalFlux");
 
-			hotStaging = type.GetCheckedField("hotStaging");
-			hotStagingLeadTimeField = type.GetCheckedField("hotStagingLeadTime");
+			hotStaging = type.GetCheckedField("HotStaging");
+			hotStagingLeadTimeField = type.GetCheckedField("HotStagingLeadTime");
 
-			autostagingOnce = type.GetCheckedField("autostagingOnce");
+			autostagingOnce = type.GetCheckedField("AutostagingOnce");
 		}
 
 		protected internal override void InitInstance(object instance) {

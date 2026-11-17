@@ -72,12 +72,12 @@ namespace KRPC.MechJeb {
 
 		internal static void InitType(Type t) {
 			type = t;
-			vesselStateField = t.GetCheckedField("vesselState");
+			vesselStateField = t.GetCheckedField("VesselState");
 			getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
 
 			// MechJeb found, create module instances
 			modules.Add("AirplaneAutopilot", new AirplaneAutopilot());
-			modules.Add("AscentAutopilot", new AscentAutopilot());
+			modules.Add("AscentSettings", new AscentAutopilot());
 			modules.Add("DockingAutopilot", new DockingAutopilot());
 			modules.Add("LandingAutopilot", new LandingAutopilot());
 			modules.Add("RendezvousAutopilot", new RendezvousAutopilot());
@@ -165,7 +165,7 @@ namespace KRPC.MechJeb {
 		public static AirplaneAutopilot AirplaneAutopilot => (AirplaneAutopilot)modules["AirplaneAutopilot"];
 
 		[KRPCProperty]
-		public static AscentAutopilot AscentAutopilot => (AscentAutopilot)modules["AscentAutopilot"];
+		public static AscentAutopilot AscentAutopilot => (AscentAutopilot)modules["AscentSettings"];
 
 		[KRPCProperty]
 		public static DockingAutopilot DockingAutopilot => (DockingAutopilot)modules["DockingAutopilot"];

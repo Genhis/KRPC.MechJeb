@@ -29,6 +29,8 @@ namespace KRPC.MechJeb {
 		private static FieldInfo srfVelPit;
 		private static FieldInfo srfVelRol;
 
+		private static FieldInfo rol;
+
 		private static FieldInfo advReference;
 		private static FieldInfo advDirection;
 
@@ -49,6 +51,8 @@ namespace KRPC.MechJeb {
 			srfVelYaw = type.GetCheckedField("srfVelYaw");
 			srfVelPit = type.GetCheckedField("srfVelPit");
 			srfVelRol = type.GetCheckedField("srfVelRol");
+
+			rol = type.GetCheckedField("rol");
 
 			advReference = type.GetCheckedField("advReference");
 			advDirection = type.GetCheckedField("advDirection");
@@ -109,6 +113,25 @@ namespace KRPC.MechJeb {
 		public bool ForceRoll {
 			get => (bool)forceRol.GetValue(this.instance);
 			set => forceRol.SetValue(this.instance, value);
+		}
+
+		/// <summary>
+		/// Roll; 0 is top side up. Applied when <see cref="ForceRoll" /> is enabled.
+		/// </summary>
+		/// <remarks>
+		/// Works in the orbital modes (<see cref="SmartASSAutopilotMode.Prograde" />, <see cref="SmartASSAutopilotMode.Retrograde" />,
+		/// <see cref="SmartASSAutopilotMode.NormalPlus" />, <see cref="SmartASSAutopilotMode.NormalMinus" />,
+		/// <see cref="SmartASSAutopilotMode.RadialPlus" />, <see cref="SmartASSAutopilotMode.RadialMinus" />), the target modes
+		/// (<see cref="SmartASSAutopilotMode.TargetPlus" />, <see cref="SmartASSAutopilotMode.TargetMinus" />,
+		/// <see cref="SmartASSAutopilotMode.RelativePlus" />, <see cref="SmartASSAutopilotMode.RelativeMinus" />,
+		/// <see cref="SmartASSAutopilotMode.ParallelPlus" />, <see cref="SmartASSAutopilotMode.ParallelMinus" />), the kill rotation
+		/// mode (<see cref="SmartASSAutopilotMode.KillRot" />), and the maneuver node mode (<see cref="SmartASSAutopilotMode.Node" />).
+		/// For the Surface-family modes use <see cref="SurfaceRoll" /> or <see cref="SurfaceVelRoll" /> instead.
+		/// </remarks>
+		[KRPCProperty]
+		public double Roll {
+			get => EditableDouble.Get(rol, this.instance);
+			set => EditableDouble.Set(rol, this.instance, value);
 		}
 
 		/// <summary>

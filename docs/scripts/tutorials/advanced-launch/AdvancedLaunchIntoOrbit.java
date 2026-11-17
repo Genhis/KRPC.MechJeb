@@ -6,7 +6,6 @@ import krpc.client.Stream;
 import krpc.client.StreamException;
 import krpc.client.services.MechJeb;
 import krpc.client.services.MechJeb.AscentAutopilot;
-import krpc.client.services.MechJeb.AscentClassic;
 import krpc.client.services.SpaceCenter;
 
 public class AdvancedLaunchIntoOrbit {
@@ -24,14 +23,13 @@ public class AdvancedLaunchIntoOrbit {
 			ascent.setVerticalRoll(90);
 			ascent.setTurnRoll(90);
 
-			ascent.setAscentPathIndex(0); //use AscentClassic as the ascent path
+			ascent.setAscentType(0); //use the Classic ascent profile
 
-			AscentClassic path = ascent.getAscentPathClassic();
-			path.setTurnShapeExponent(0.5); //set the turn shape to 50%
-			path.setAutoPath(false); //don't use autopath
-			path.setTurnStartAltitude(3000);
-			path.setTurnStartVelocity(120);
-			path.setTurnEndAltitude(65000);
+			ascent.setTurnShapeExponent(0.5); //set the turn shape to 50%
+			ascent.setAutoPath(false); //don't use autopath
+			ascent.setTurnStartAltitude(3000);
+			ascent.setTurnStartVelocity(120);
+			ascent.setTurnEndAltitude(65000);
 
 			ascent.setAutostage(true);
 			ascent.setEnabled(true);
