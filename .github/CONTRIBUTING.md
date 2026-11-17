@@ -20,8 +20,10 @@ If you encounter any problems with kRPC.MechJeb, please [open a new issue](https
 ## Working from source
 
 Besides general Visual Studio setup, you need to create lib folder in the root project directory and copy these DLLs to the folder:
-- **Assembly-CSharp.dll**, **UnityEngine.dll** and **UnityEngine.CoreModule.dll** (found in `Kerbal Space Program\KSP_x64_Data\Managed`)
-- **KRPC.dll**, **KRPC.Core.dll** and **KRPC.SpaceCenter.dll** (found in kRPC distribution package or `Kerbal Space Program\GameData\kRPC` if you have the mod installed)
+- **Assembly-CSharp.dll**, **UnityEngine.dll** and **UnityEngine.CoreModule.dll** (from KSP 1.12.5 in `Kerbal Space Program\KSP_x64_Data\Managed`)
+- **KRPC.dll**, **KRPC.Core.dll** and **KRPC.SpaceCenter.dll** (from the kRPC 0.7.0 server distribution in `GameData\kRPC`)
+
+Build the project in Release configuration, for example with `dotnet msbuild KRPC.MechJeb.csproj -p:Configuration=Release` with the .NET Framework 4.5.2 targeting pack installed. Packaging also requires the .NET 10 runtime, Python 3.10 or newer, and `pip install krpc==0.7.0 krpctools==0.7.0`. Set `KSP_DIR` to the KSP 1.12.5 installation containing kRPC 0.7.0, then run `build-release.ps1` from `.buildtools`. The archive is written to `.buildtools/output`.
 
 ## Creating pull requests
 

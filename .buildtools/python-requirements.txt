@@ -1,4 +1,5 @@
-krpctools
+krpc==0.7.0
+krpctools==0.7.0
 Sphinx==6.2.0
 sphinx-csharp
 git+https://github.com/mathijs81/javasphinx

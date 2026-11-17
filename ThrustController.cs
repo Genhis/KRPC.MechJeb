@@ -13,8 +13,6 @@ namespace KRPC.MechJeb {
 		private static FieldInfo limitDynamicPressure;
 		private static FieldInfo maxDynamicPressureField;
 		private static FieldInfo limitToPreventOverheats;
-		private static FieldInfo smoothThrottle;
-		private static FieldInfo throttleSmoothingTime;
 		private static FieldInfo limitToPreventFlameout;
 		//private static FieldInfo limitToPreventUnstableIgnition;
 		//private static FieldInfo autoRCSUllaging;
@@ -50,8 +48,6 @@ namespace KRPC.MechJeb {
 			limitDynamicPressure = type.GetCheckedField("LimitDynamicPressure");
 			maxDynamicPressureField = type.GetCheckedField("MaxDynamicPressure");
 			limitToPreventOverheats = type.GetCheckedField("LimitToPreventOverheats");
-			smoothThrottle = type.GetCheckedField("SmoothThrottle");
-			throttleSmoothingTime = type.GetCheckedField("ThrottleSmoothingTime");
 			limitToPreventFlameout = type.GetCheckedField("LimitToPreventFlameout");
 			flameoutSafetyPctField = type.GetCheckedField("FlameoutSafetyPct");
 			manageIntakes = type.GetCheckedField("ManageIntakes");
@@ -157,18 +153,6 @@ namespace KRPC.MechJeb {
 		public double MinThrottle {
 			get => EditableDouble.Get(this.minThrottle);
 			set => EditableDouble.Set(this.minThrottle, value);
-		}
-
-		[KRPCProperty]
-		public bool SmoothThrottle {
-			get => (bool)smoothThrottle.GetValue(this.instance);
-			set => smoothThrottle.SetValue(this.instance, value);
-		}
-
-		[KRPCProperty]
-		public double ThrottleSmoothingTime {
-			get => (double)throttleSmoothingTime.GetValue(this.instance);
-			set => throttleSmoothingTime.SetValue(this.instance, value);
 		}
 
 		[KRPCProperty]

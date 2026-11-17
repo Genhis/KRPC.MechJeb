@@ -427,8 +427,6 @@ MechJeb.ThrustController.MaxAcceleration
 MechJeb.ThrustController.MaxDynamicPressure
 MechJeb.ThrustController.MaxThrottle
 MechJeb.ThrustController.MinThrottle
-MechJeb.ThrustController.SmoothThrottle
-MechJeb.ThrustController.ThrottleSmoothingTime
 
 MechJeb.Translatron.Mode
 MechJeb.Translatron.TranslationSpeed

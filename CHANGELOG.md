@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0]
+### Changed
+- Built for KSP 1.12.5, kRPC 0.7.0 and MechJeb 2.15.4
+- Regenerated client bindings with the kRPC 0.7.0 tools
+
+### Removed
+- `SmoothThrottle` and `ThrottleSmoothingTime` from **ThrustController** because MechJeb removed throttle smoothing
+
 ## [0.8.1]
 ### Fixed
 - `Enabled` property on **AscentAutopilot** was not exposed through kRPC after the 0.8.0 refactor
@@ -152,7 +160,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **StagingController**
 - **TargetController** to get information about the current target
 
-[Unreleased]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.8.1...HEAD
+[Unreleased]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.8.1...v0.9.0
 [0.8.1]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/darchambault/KRPC.MechJeb/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/Genhis/KRPC.MechJeb/compare/v0.7.0...v0.7.1
