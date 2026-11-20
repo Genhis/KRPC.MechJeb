@@ -1,5 +1,8 @@
 # kRPC.MechJeb Service
 
+> [!IMPORTANT]  
+> This service was updated for MechJeb v2.15 and merged into the [main kRPC repository](https://github.com/krpc/krpc/) as of kRPC v0.8.0. Please report any issues there.
+
 Are you tired of manually giving commands to your rockets? Do you want to automate tourist transportation? Do you know basics of programming but don't want to bother with calculating precise steering yourself? Do you like to use MechJeb for controlling your rockets but want more automation? If all of this is true, then this KSP mod is just for you!
 
 **This addon to [kRPC] provides remote procedures to interact with [MechJeb 2].** With [a simple script](https://genhis.github.io/KRPC.MechJeb/tutorials/launch-into-orbit.html), you can configure MechJeb autopilots and remotely control your rocket.
