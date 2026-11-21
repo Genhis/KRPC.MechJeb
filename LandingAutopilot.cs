@@ -30,12 +30,12 @@ namespace KRPC.MechJeb {
 		private object limitChutesStage;
 
 		internal static new void InitType(Type type) {
-			touchdownSpeedField = type.GetCheckedField("touchdownSpeed");
-			deployGears = type.GetCheckedField("deployGears");
-			limitGearsStageField = type.GetCheckedField("limitGearsStage");
-			deployChutes = type.GetCheckedField("deployChutes");
-			limitChutesStageField = type.GetCheckedField("limitChutesStage");
-			rcsAdjustment = type.GetCheckedField("rcsAdjustment");
+			touchdownSpeedField = type.GetCheckedField("TouchdownSpeed");
+			deployGears = type.GetCheckedField("DeployGears");
+			limitGearsStageField = type.GetCheckedField("LimitGearsStage");
+			deployChutes = type.GetCheckedField("DeployChutes");
+			limitChutesStageField = type.GetCheckedField("LimitChutesStage");
+			rcsAdjustment = type.GetCheckedField("RCSAdjustment");
 
 			landAtPositionTarget = type.GetCheckedMethod("LandAtPositionTarget");
 			landUntargeted = type.GetCheckedMethod("LandUntargeted");

@@ -21,8 +21,8 @@ namespace KRPC.MechJeb.Maneuver {
 		private object interceptDistance;
 
 		internal static new void InitType(Type type) {
-			courseCorrectFinalPeAField = type.GetCheckedField("courseCorrectFinalPeA");
-			interceptDistanceField = type.GetCheckedField("interceptDistance");
+			courseCorrectFinalPeAField = type.GetCheckedField("CourseCorrectFinalPeA");
+			interceptDistanceField = type.GetCheckedField("InterceptDistance");
 		}
 
 		protected internal override void InitInstance(object instance) {

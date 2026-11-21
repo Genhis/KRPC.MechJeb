@@ -10,9 +10,10 @@ namespace KRPC.MechJeb {
 	/// </summary>
 	[KRPCClass(Service = "MechJeb")]
 	public class AscentPVG : AscentBase {
-		internal new const string MechJebType = "MuMech.MechJebModuleAscentPVG";
+		// In MechJeb 2.15.x, MechJebModuleAscentPVG was removed.
+		// Settings now live in MechJebModuleAscentSettings (initialized by AscentAutopilot.InitType).
 
-		// Fields and methods
+		// Fields (looked up against MechJebModuleAscentSettings)
 		private static FieldInfo pitchStartVelocityField;
 		private static FieldInfo pitchRateField;
 		private static FieldInfo desiredApoapsisField;
@@ -34,6 +35,7 @@ namespace KRPC.MechJeb {
 		private object fixedCoastLength;
 
 		internal static new void InitType(Type type) {
+			// type = MuMech.MechJebModuleAscentSettings (called by AscentAutopilot.InitType)
 			pitchStartVelocityField = type.GetCheckedField("PitchStartVelocity");
 			pitchRateField = type.GetCheckedField("PitchRate");
 			desiredApoapsisField = type.GetCheckedField("DesiredApoapsis");

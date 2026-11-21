@@ -51,7 +51,7 @@ namespace KRPC.MechJeb {
 		/// </summary>
 		[KRPCProperty]
 		public TranslatronMode Mode {
-			get => (TranslatronMode)ThrustController.tMode.GetValue(MechJeb.ThrustController.instance, null);
+			get => (TranslatronMode)ThrustController.tMode.GetValue(MechJeb.ThrustController.instance);
 			set {
 				if(value == TranslatronMode.KeepRelative || value == TranslatronMode.Direct)
 					throw new MJServiceException("Cannot set TranslatronMode to internal values");

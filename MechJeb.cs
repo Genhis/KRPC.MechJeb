@@ -72,12 +72,12 @@ namespace KRPC.MechJeb {
 
 		internal static void InitType(Type t) {
 			type = t;
-			vesselStateField = t.GetCheckedField("vesselState");
+			vesselStateField = t.GetCheckedField("VesselState");
 			getComputerModule = t.GetCheckedMethod("GetComputerModule", new Type[] { typeof(string) });
 
 			// MechJeb found, create module instances
 			modules.Add("AirplaneAutopilot", new AirplaneAutopilot());
-			modules.Add("AscentAutopilot", new AscentAutopilot());
+			modules.Add("AscentBaseAutopilot", new AscentAutopilot());
 			modules.Add("DockingAutopilot", new DockingAutopilot());
 			modules.Add("LandingAutopilot", new LandingAutopilot());
 			modules.Add("RendezvousAutopilot", new RendezvousAutopilot());
@@ -115,7 +115,7 @@ namespace KRPC.MechJeb {
 						if(moduleInstance != null)
 							p.Value.InitInstance(moduleInstance);
 						else
-							errors.Add(error);
+							Logger.Warning("MechJeb module " + p.Key + " not available for this vessel - skipping");
 					}
 					catch(Exception ex) {
 						Logger.Severe(error, ex);
@@ -143,8 +143,15 @@ namespace KRPC.MechJeb {
 
 		internal static object GetComputerModule(string moduleType) {
 			object module = getComputerModule.Invoke(MasterInstance, new object[] { "MechJebModule" + moduleType });
+
+			// AscentBaseAutopilot is abstract in MechJeb 2.15.x; fall back to concrete implementations
+			if(module == null && moduleType == "AscentBaseAutopilot") {
+				module = getComputerModule.Invoke(MasterInstance, new object[] { "MechJebModuleAscentClassicAutopilot" })
+				      ?? getComputerModule.Invoke(MasterInstance, new object[] { "MechJebModuleAscentPVGAutopilot" });
+			}
+
 			if(module == null)
-				Logger.Severe("MechJeb module " + moduleType + " not found");
+				Logger.Warning("MechJeb module " + moduleType + " not found");
 
 			return module;
 		}
@@ -165,7 +172,7 @@ namespace KRPC.MechJeb {
 		public static AirplaneAutopilot AirplaneAutopilot => (AirplaneAutopilot)modules["AirplaneAutopilot"];
 
 		[KRPCProperty]
-		public static AscentAutopilot AscentAutopilot => (AscentAutopilot)modules["AscentAutopilot"];
+		public static AscentAutopilot AscentAutopilot => (AscentAutopilot)modules["AscentBaseAutopilot"];
 
 		[KRPCProperty]
 		public static DockingAutopilot DockingAutopilot => (DockingAutopilot)modules["DockingAutopilot"];

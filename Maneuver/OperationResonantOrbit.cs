@@ -23,8 +23,8 @@ namespace KRPC.MechJeb.Maneuver {
 		private object resonanceDenominator;
 
 		internal static new void InitType(Type type) {
-			resonanceNumeratorField = type.GetCheckedField("resonanceNumerator");
-			resonanceDenominatorField = type.GetCheckedField("resonanceDenominator");
+			resonanceNumeratorField = type.GetCheckedField("ResonanceNumerator");
+			resonanceDenominatorField = type.GetCheckedField("ResonanceDenominator");
 			timeSelector = GetTimeSelectorField(type);
 		}
 

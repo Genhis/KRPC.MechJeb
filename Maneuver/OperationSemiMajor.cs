@@ -20,7 +20,7 @@ namespace KRPC.MechJeb.Maneuver {
 		private object newSMA;
 
 		internal static new void InitType(Type type) {
-			newSMAField = type.GetCheckedField("newSMA");
+			newSMAField = type.GetCheckedField("NewSma");
 			timeSelector = GetTimeSelectorField(type);
 		}
 
